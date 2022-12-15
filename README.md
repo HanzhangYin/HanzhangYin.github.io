@@ -106,7 +106,7 @@ Han(zhang) Yin
 <div id="myDIV1">
 
 <p>
-<img src="avatar2.png" alt="me" width="125" height=187.5"> 
+<img src="avatar2.png" alt="me" width="133" height=187.5"> 
 </p>
 
 <p>
@@ -119,7 +119,7 @@ I am currently pursuing a Bachelor degree of Mathematics at  <a href="https://uc
 
 <div id="myDIV2">
 <h3>
-<a href="DRP.html">DRP (Direct Reading Program)</a>
+<a href="DRP.html">Combinatorics </a>
 </h3>
 
 <h3>
