@@ -115,7 +115,7 @@ I am currently pursuing a Bachelor degree of Mathematics at  <a href="https://uc
 
 </div>
 
-<button onclick="myFunction2()">My Project</button>
+<button onclick="myFunction2()">My Research</button>
 
 <div id="myDIV2">
 <h3>
