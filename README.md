@@ -119,7 +119,7 @@ I am currently pursuing a Bachelor degree of Mathematics at  <a href="https://uc
 
 <div id="myDIV2">
 <h3>
-<a href="DRP.html">Combinatorics </a>
+<a href="Combinatorics.html">Combinatorics </a>
 </h3>
 
 <h3>
