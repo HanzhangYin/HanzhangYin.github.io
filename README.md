@@ -125,11 +125,13 @@ I am currently pursuing a Bachelor degree of Mathematics at  <a href="https://uc
 <h3>
 <a href="REU.html">REU (Research Experience for Undergraduate Students)</a>
 </h3>
-</div>
 		  
 <h3>
 <a href="Combinatorics.html">Toggling on a Path Graph </a>
 </h3>
+</div>
+		  
+
 
 
 <h4>
