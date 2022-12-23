@@ -106,7 +106,7 @@ Han(zhang) Yin
 <div id="myDIV1">
 
 <p>
-<img src="avatar2.png" alt="me" width="133" height=187.5"> 
+<img src="avatar2.png" alt="me" width="120" height=150.5"> 
 </p>
 
 <p>
