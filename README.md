@@ -137,7 +137,7 @@ I am currently pursuing a Bachelor degree of Mathematics at  <a href="https://uc
 </h4>
 			     
 <h4>
-<a href="https://github.com/HanzhangYin">Github.</a>
+<a href="https://github.com/HanzhangYin">Visit my Github.</a>
 </h4>
 
 <h4>
