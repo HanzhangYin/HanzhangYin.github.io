@@ -127,7 +127,7 @@ I am currently pursuing a Bachelor degree of Mathematics at  <a href="https://uc
 </h3>
 		  
 <h3>
-<a href="Combinatorics.html">Toggling on a Path Graph </a>
+<a href="toggling_on_dominating_sets_of_path_graphs.html">Toggling on a Path Graph </a>
 </h3>
 </div>
 		  
