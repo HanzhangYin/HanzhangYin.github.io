@@ -115,7 +115,7 @@ Han(zhang) Yin
 
 </div>
 
-<button onclick="myFunction2()">My Research</button>
+<button onclick="myFunction2()">Research & Interests</button>
 
 <div id="myDIV2">
 <h3>
