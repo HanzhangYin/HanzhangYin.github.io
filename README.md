@@ -110,7 +110,7 @@ a:hover {
 </head>
 
 <h1>
-Han(zhang) Yin
+Hanzhang Yin
 </h1>
 
 <button class="cool-button" onclick="myFunction1()">
