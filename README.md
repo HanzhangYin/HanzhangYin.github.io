@@ -1,5 +1,3 @@
-
-
 <html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
 <head>
 
@@ -60,22 +58,36 @@ a:hover {
   text-decoration: none;
 }
 
-button {
-  font-family: Courier;
-  border: none;
-  color: #565656;
-  background-color: #ededed;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: left;
-  font-size: 1.5em;}
-
-button:hover {
-  background-color: #ededed;
-  color: pink;
+.cool-button {
+  background-color: #F3CFC6; /* Pink background */
+  border: none; /* Remove border */
+  color: black; /* White text color */
+  padding: 15px 26px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the button an inline element */
+  font-size: 13px; /* Increase font size */
+  margin: 4px 2px; /* Add some margin */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Add a transition effect on hover */
 }
+
+/* Change the background color on hover */
+.cool-button:hover {
+  background-color: #F89880;
+}
+
+/* Add a hover effect on the text */
+.cool-button span {
+  display: inline-block; /* Make the text an inline element */
+  transition: transform 0.3s ease; /* Add a transition effect on hover */
+}
+
+/* Scale up the text on hover */
+.cool-button:hover span {
+  transform: scale(1.2);
+}
+
 
 #myDIV1 {
   width: 100%;
@@ -101,7 +113,10 @@ button:hover {
 Han(zhang) Yin
 </h1>
 
-<button onclick="myFunction1()">About Me</button>
+<button class="cool-button" onclick="myFunction1()">
+  <span>About Me!</span>
+</button>
+
 
 <div id="myDIV1">
 
@@ -115,7 +130,9 @@ Han(zhang) Yin
 
 </div>
 
-<button onclick="myFunction2()">Research & Interests</button>
+<button class="cool-button" onclick="myFunction2()">
+  <span>Research & Interests</span>
+</button>
 
 <div id="myDIV2">
 <h3>
