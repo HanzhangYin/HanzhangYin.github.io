@@ -69,6 +69,7 @@ a:hover {
   text-align: center; /* Center text */
   text-decoration: none; /* Remove underline */
   display: inline-block; /* Make the button an inline element */
+  font-family: 'Spectral', serif;
   font-size: 13px; /* Increase font size */
   margin: 4px 2px; /* Add some margin */
   cursor: pointer; /* Add a pointer cursor on hover */
