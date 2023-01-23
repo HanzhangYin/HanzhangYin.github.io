@@ -11,7 +11,7 @@ margin: 0 15%;
 font-family: Courier; }
 h1 {
 text-align: right; 
-font-family: Courier; 
+font-family: 'Spectral', serif; 
 font-weight: bold; 
 %text-transform: uppercase;
 border-bottom: 1px solid #646060;
