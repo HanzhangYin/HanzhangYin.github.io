@@ -1,13 +1,22 @@
 <html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!--link for the icon-->
 
 <meta charset="UTF-8/">
 	
 <title> siteHan </title> 
 <style>
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48}
 body {
 background-color: #ededed ;
 margin: 0 15%; 
@@ -116,6 +125,7 @@ a:hover {
 <h1>
 Hanzhang Yin
 </h1>
+
 
 <button class="cool-button" onclick="myFunction1()">
   <span>About Me!</span>
