@@ -1,5 +1,8 @@
 <html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
 
 <meta charset="UTF-8/">
 	
@@ -11,7 +14,7 @@ margin: 0 15%;
 font-family: Courier; }
 h1 {
 text-align: right; 
-font-family: 'Spectral', serif; 
+font-family: 'Spectral', serif;
 font-weight: bold; 
 %text-transform: uppercase;
 border-bottom: 1px solid #646060;
