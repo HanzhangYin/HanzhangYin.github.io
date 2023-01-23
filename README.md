@@ -29,7 +29,7 @@ font-family: 'Spectral', serif;
 color: #565656;
 font-size: 1em; }
 h4 {
-font-family:  'Spectral', serif;;
+font-family:  'Spectral', serif;
 text-align: right;
 color: #565656;
 font-size: 0.9em; }
@@ -39,7 +39,7 @@ float: left;
 margin-right: 30px}
 
 p {
-font-family: Comic Sans MS;
+font-family: 'Spectral', serif;
 color: #565656;
 font-size: 1.2em;}
 
@@ -154,7 +154,7 @@ Hanzhang Yin
 		  
 
 <h4>
-<a href="cv_hanzhang_yin.pdf">C.V.</a>
+<a href="cv_hanzhang_yin.pdf">Curriculum vitae (C.V.)</a>
 </h4>
 			     
 <h4>
