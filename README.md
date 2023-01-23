@@ -20,12 +20,12 @@ font-weight: bold;
 border-bottom: 1px solid #646060;
 margin-top: 50px; }
 h2 {
-font-family: Courier;
+font-family: 'Spectral', serif;
 color: #565656;
 font-size: 1.5em; 
 margin-bottom: 30px;}
 h3 {
-font-family: Courier;
+font-family: 'Spectral', serif;
 color: #565656;
 font-size: 1em; }
 h4 {
