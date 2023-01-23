@@ -158,14 +158,14 @@ Hanzhang Yin
 </h4>
 			     
 <h4>
-Visit my<a href="https://github.com/HanzhangYin">Github.</a>
+Visit my <a href="https://github.com/HanzhangYin">Github.</a>
 </h4>
 
 <h4>
 Email me: <a href="mailto:hanzhang.yin@uconn.edu">hanzhang.yin@uconn.edu</a>
 </h4>
 <h4>
-Call me:<a href="tel:+19599295263">(959) 929-5263</a>
+Call me: <a href="tel:+19599295263">(959) 929-5263</a>
 </h4>
 <h4>
 Connect me: <a href="https://www.linkedin.com/in/hanzhang-yin/" class="social-icon si-rounded si-small si-linkedin">
