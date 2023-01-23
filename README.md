@@ -11,7 +11,7 @@
 body {
 background-color: #ededed ;
 margin: 0 15%; 
-font-family: Courier; }
+font-family:  'Spectral', serif; }
 h1 {
 text-align: right; 
 font-family: 'Spectral', serif;
@@ -29,7 +29,7 @@ font-family: 'Spectral', serif;
 color: #565656;
 font-size: 1em; }
 h4 {
-font-family: Bradley Hand;
+font-family:  'Spectral', serif;;
 text-align: right;
 color: #565656;
 font-size: 0.9em; }
