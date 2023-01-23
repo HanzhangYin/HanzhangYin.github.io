@@ -158,7 +158,7 @@ Hanzhang Yin
 </h4>
 			     
 <h4>
-<a href="https://github.com/HanzhangYin">Visit my Github.</a>
+Visit my<a href="https://github.com/HanzhangYin">Github.</a>
 </h4>
 
 <h4>
