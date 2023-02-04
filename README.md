@@ -170,6 +170,7 @@ Hanzhang Yin
 <h3>
 <a href="smithnormalform.md">Smith Normal Form </a>
 </h3>
+
 </div>
 		  
 
