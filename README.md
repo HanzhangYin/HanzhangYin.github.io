@@ -168,7 +168,7 @@ Hanzhang Yin
 
 <div id="myDIV3">
 <h3>
-<a href="smithnormalform.md">Smith Normal Form </a>
+<a href="smithnormalform.html">Smith Normal Form </a>
 </h3>
 
 </div>
