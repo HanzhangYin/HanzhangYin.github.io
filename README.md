@@ -161,6 +161,16 @@ Hanzhang Yin
 <a href="toggling_on_dominating_sets_of_path_graphs.html">Toggling on Path Graphs </a>
 </h3>
 </div>
+
+<button class="cool-button" onclick="myFunction3()">
+  <span>Other</span>
+</button>
+
+<div id="myDIV3">
+<h3>
+<a href="smithnormalform.md">Smith Normal Form </a>
+</h3>
+</div>
 		  
 
 <h4>
@@ -199,6 +209,17 @@ function myFunction1() {
 <script>
 function myFunction2() {
   var x = document.getElementById("myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function myFunction3() {
+  var x = document.getElementById("myDIV3");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
