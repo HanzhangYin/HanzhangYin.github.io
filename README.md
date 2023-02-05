@@ -171,6 +171,9 @@ Hanzhang Yin
 <a href="smithnormalform.html">Smith Normal Form </a>
 </h3>
 
+<a href="pandoc.html">pandoc </a>
+</h3>
+
 </div>
 		  
 
