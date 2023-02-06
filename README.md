@@ -172,7 +172,11 @@ Hanzhang Yin
 </h3>
 
 <h3>
-<a href="pandoc.html">pandoc </a>
+<a href="pandoc.html">Pandoc </a>
+</h3>
+
+<h3>
+<a href="path.html">Path Variables </a>
 </h3>
 
 </div>
