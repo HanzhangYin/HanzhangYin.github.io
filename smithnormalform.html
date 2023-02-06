@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
-  
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -39,7 +34,6 @@
       }
       h1 {
         font-size: 1.8em;
-        font-family:  'Spectral', serif;
       }
     }
     @media print {
@@ -50,7 +44,6 @@
         background-color: transparent;
         color: black;
         font-size: 12pt;
-        font-family:  'Spectral', serif;
       }
       p, h2, h3 {
         orphans: 3;
@@ -96,7 +89,7 @@
       color: #606060;
     }
     code {
-      font-family: 'Fira Code', monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
       hyphens: manual;
@@ -176,7 +169,6 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-<!--<span class="material-symbols-outlined"><a href="https://sitehan.com">arrow_back_ios_new</span>-->
 </head>
 <body>
 <header id="title-block-header">
@@ -184,10 +176,13 @@
 </header>
 <p>There already exists packages built for python to transform matrices
 into Smith Normal Form. There are two packages can be used:
-<strong>sympy</strong> and <strong>smithnormalform</strong>. 
-<h2 id="sympy">sympy</h2>
-To install it, just copy and paste the following code to the terminal (Unix only,
-windows is a little different).</p>
+<strong>sympy</strong> and <strong>smithnormalform</strong>. For both
+packages, I chose <span class="math inline">ℤ</span> as the integral
+domain.</p>
+<h2>sympy </h2>
+<p>
+To install it, just copy and paste the following code
+to the terminal (Unix only, windows is a little different).</p>
 <pre><code>% python3 -m pip install sympy</code></pre>
 <p>If you are using python2, you probably could simply replace code
 python3 to python2.</p>
@@ -217,9 +212,9 @@ here for more information</a></p>
 “0.6.0”. To install the package, copy and paste the follwoing code in
 terminal (Unix only).</p>
 <pre><code>% python3 -m pip install smithnormalform</code></pre>
-<p>We will use <strong >matrix</strong>, <strong >snfporblem</strong> and
-<strong >z</strong> from <strong>smithnormaform</strong>. Use the following code
-to import them.</p>
+<p>We will use <strong>matrix</strong>, <strong>snfporblem</strong> and
+<strong>z</strong> from <strong>smithnormaform</strong>. Use the
+following code to import them.</p>
 <pre class="python3"><code>&gt;&gt;&gt; from smithnormalform import matrix, snfproblem, z</code></pre>
 <p>The way to denote a matrix here is different from using numpy. The
 first two entries should be used to determine the size of the matrix.
@@ -242,14 +237,35 @@ not unqiue</strong>. But it is unique up to signs.</p>
 <p>The good thing about package smithnormalform is we can get <span
 class="math inline"><em>U</em></span> and <span
 class="math inline"><em>V</em></span> such that <span
-class="math display"><em>U</em> ⋅ <em>D</em> ⋅ <em>V</em> = <em>A</em>.</span></p>
-<pre><code>&gt;&gt;&gt; print(prob.S)
-[ 1 2 ]
-[ 3 4 ]
-&gt;&gt;&gt; print(prob.J)
-[ -2 1 ]
-[ 3 -1 ]
-&gt;&gt;&gt; print(prob.S * prob.A * prob.T == prob.J)
-True</code></pre>
+class="math display"><em>U</em> ⋅ <em>A</em> ⋅ <em>V</em> = <em>D</em>.</span></p>
+
+<pre class="python3"><code>&gt;&gt;&gt; print(prob.S)
+[-3 1]
+[-4 1]
+&gt;&gt;&gt; print(prob.T)
+[-1 1 1]
+[0 1 -2]
+[0 0 1]</code></pre>
+<p>Here <span class="math inline"><em>U</em></span> is ‘prob.S’ and
+<span class="math inline"><em>V</em></span> is ‘prob.T’. <span
+class="math display">
+<!--$$
+\begin{bmatrix}
+-3 &amp; 1\\
+-4 &amp; 1\\
+\end{bmatrix}\begin{bmatrix}
+1 &amp; 2 &amp; 3\\
+4 &amp; 5 &amp; 6\\
+\end{bmatrix}\begin{bmatrix}
+-1 &amp; 1 &amp; 1\\
+0 &amp; 1 &amp; -2\\
+0 &amp; 0 &amp; 1\\
+\end{bmatrix}=\begin{bmatrix}
+-1 &amp; 0 &amp; 0\\
+0 &amp; -3 &amp; 0\\
+\end{bmatrix}.
+$$-->
+</span> <a href="https://pypi.org/project/smithnormalform/">Click here
+for more information</a></p>
 </body>
 </html>
