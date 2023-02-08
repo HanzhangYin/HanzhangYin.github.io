@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <!--Add MathJax-->
 <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!--Japanese-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--Japanese-->
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet"><!--Japanese-->
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Smith Normal Form</title>
   <style>
+    .second-font {
+      font-family: 'Noto Serif JP', serif;
+      }
+
     html {
       color: #1a1a1a;
-      background-color: #fdfdfd;
+      background-color: #ededed;
     }
     body {
       margin: 0 auto;
@@ -95,7 +103,7 @@
       hyphens: manual;
     }
     pre {
-      background-color: #F5F5F5;
+      background-color: #d9d9d9;
       margin: 1em 0;
       overflow: auto;
     }
@@ -179,7 +187,7 @@ into Smith Normal Form. There are two packages can be used:
 <strong>sympy</strong> and <strong>smithnormalform</strong>. For both
 packages, I chose <span class="math inline">ℤ</span> as the integral
 domain.</p>
-<h2>sympy  (せんぱい)</h2>
+<h2>sympy  <span lang = "--Japanese--" class ="second-font"> (せんぱい)</span> </h2>
 <p>
 To install it, just copy and paste the following code
 to the terminal (Unix only, windows is a little different).</p>
@@ -249,7 +257,7 @@ class="math display"><em>U</em> ⋅ <em>A</em> ⋅ <em>V</em> = <em>
 <p>Here <span class="math inline"><em>U</em></span> is ‘prob.S’ and
 <span class="math inline"><em>V</em></span> is ‘prob.T’. <span
 class="math display">
-<!--$$
+$$
 \begin{bmatrix}
 -3 &amp; 1\\
 -4 &amp; 1\\
@@ -264,7 +272,7 @@ class="math display">
 -1 &amp; 0 &amp; 0\\
 0 &amp; -3 &amp; 0\\
 \end{bmatrix}.
-$$-->
+$$
 </span> <a href="https://pypi.org/project/smithnormalform/">Click here
 for more information</a></p>
 </body>
