@@ -163,7 +163,7 @@ Hanzhang Yin
 </div>
 
 <button class="cool-button" onclick="myFunction3()">
-  <span>Other</span>
+  <span>Elseworlds</span>
 </button>
 
 <div id="myDIV3">
