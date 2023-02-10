@@ -1,4 +1,105 @@
 <!DOCTYPE html>
+<script>
+  function copyCode1() {
+    var code = document.getElementById("code-block1");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode2() {
+    var code = document.getElementById("code-block2");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode3() {
+    var code = document.getElementById("code-block3");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode4() {
+    var code = document.getElementById("code-block4");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode5() {
+    var code = document.getElementById("code-block5");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script><script>
+  function copyCode6() {
+    var code = document.getElementById("code-block6");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script><script>
+  function copyCode7() {
+    var code = document.getElementById("code-block7");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+<script>
+  function copyCode8() {
+    var code = document.getElementById("code-block8");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+<script>
+  function copyCode9() {
+    var code = document.getElementById("code-block9");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <!--Add MathJax-->
@@ -191,27 +292,31 @@ domain.</p>
 <p>
 To install it, just copy and paste the following code
 to the terminal (Unix only, windows is a little different).</p>
-<pre><code>% python3 -m pip install sympy</code></pre>
+<pre><code id="code-block1">% python3 -m pip install sympy</code></pre>
+<button onclick="copyCode1()">Copy</button>
 <p>If you are using python2, you probably could simply replace code
 python3 to python2.</p>
 <p>(The package will be installed through pip. If your python was
 installed via Homebrew, pip should be already included. Use the
 following code to check the pip version.)</p>
-<pre><code>% python3 -m pip --version</code></pre>
+<pre><code id="code-block2">% python3 -m pip --version</code></pre>
+<button onclick="copyCode2()">Copy</button>
 <p>We will use <strong>Matrix, ZZ</strong> form <strong>sympy</strong>,
 and <strong>smith_normal_form</strong> from
 <strong>sympy.matrices.normalforms</strong>.</p>
-<pre class="python3"><code>&gt;&gt;&gt; from sympy import Matrix, ZZ
+<pre class="python3"><code id="code-block3">&gt;&gt;&gt; from sympy import Matrix, ZZ
 &gt;&gt;&gt; from sympy.matrices.normalforms import smith_normal_form</code></pre>
+<button onclick="copyCode3()">Copy</button>
 <p>For instance, to get the smith normal form of a <span
 class="math inline">2 × 3</span> matrix <span
 class="math inline"><em>A</em></span> with entries <span
 class="math inline">1, 2, 3, 4, 5, 6</span>.</p>
-<pre class="python3"><code>&gt;&gt;&gt; A = Matrix([[1, 2, 3], [4, 5, 6]])
+<pre class="python3"><code id="code-block4">&gt;&gt;&gt; A = Matrix([[1, 2, 3], [4, 5, 6]])
 &gt;&gt;&gt; smith.normal_form(A)
 Matrix([
 [1,  0, 0],
 [0, -3, 0]])</code></pre>
+<button onclick="copyCode4()">Copy</button>
 <p><a
 href="https://docs.sympy.org/latest/modules/matrices/normalforms.html">Click
 here for more information</a></p>
@@ -219,27 +324,31 @@ here for more information</a></p>
 <p>Another package is “smithnormalform” and the latest version should be
 “0.6.0”. To install the package, copy and paste the follwoing code in
 terminal (Unix only).</p>
-<pre><code>% python3 -m pip install smithnormalform</code></pre>
+<pre><code id="code-block5">% python3 -m pip install smithnormalform</code></pre>
+<button onclick="copyCode5()">Copy</button>
 <p>We will use <strong>matrix</strong>, <strong>snfporblem</strong> and
 <strong>z</strong> from <strong>smithnormaform</strong>. Use the
 following code to import them.</p>
-<pre class="python3"><code>&gt;&gt;&gt; from smithnormalform import matrix, snfproblem, z</code></pre>
+<pre class="python3"><code id="code-block6">&gt;&gt;&gt; from smithnormalform import matrix, snfproblem, z</code></pre>
+<button onclick="copyCode6()">Copy</button>
 <p>The way to denote a matrix here is different from using numpy. The
 first two entries should be used to determine the size of the matrix.
 The numbers in the [ ] are the entries of the matrix. We can denote a
 <span class="math inline">2 × 3</span> matrix <span
 class="math inline"><em>A</em></span> by following code,</p>
-<pre class="python3"><code>&gt;&gt;&gt;  A = matrix.Matrix(2, 3, [z.Z(1), z.Z(2), z.Z(3), z.Z(4), z.Z(5), z.Z(6)])
+<pre class="python3"><code id="code-block7">&gt;&gt;&gt;  A = matrix.Matrix(2, 3, [z.Z(1), z.Z(2), z.Z(3), z.Z(4), z.Z(5), z.Z(6)])
 &gt;&gt;&gt; print(A)
 [1 2 3]
 [4 5 6]</code></pre>
+<button onclick="copyCode7()">Copy</button>
 <p>To compute the smith normal form, <span
 class="math inline"><em>D</em></span>,</p>
-<pre class="python3"><code>&gt;&gt;&gt; prob = snfproblem.SNFProblem(A)
+<pre class="python3"><code id="code-block8">&gt;&gt;&gt; prob = snfproblem.SNFProblem(A)
 &gt;&gt;&gt; prob.computeSNF()
 &gt;&gt;&gt; print(prob.J)
 [-1 0 0]
 [0 -3 0]</code></pre>
+<button onclick="copyCode8()">Copy</button>
 <p>Now, we can tell that <strong>the smith normal form of a matrix is
 not unqiue</strong>. But it is unique up to signs.</p>
 <p>The good thing about package smithnormalform is we can get <span
@@ -247,13 +356,14 @@ class="math inline"><em>U</em></span> and <span
 class="math inline"><em>V</em></span> such that <span
 class="math display"><em>U</em> ⋅ <em>A</em> ⋅ <em>V</em> = <em>D</em>.</span></p>
 
-<pre class="python3"><code>&gt;&gt;&gt; print(prob.S)
+<pre class="python3"><code id="code-block9">&gt;&gt;&gt; print(prob.S)
 [-3 1]
 [-4 1]
 &gt;&gt;&gt; print(prob.T)
 [-1 1 1]
 [0 1 -2]
 [0 0 1]</code></pre>
+<button onclick="copyCode9()">Copy</button>
 <p>Here <span class="math inline"><em>U</em></span> is ‘prob.S’ and
 <span class="math inline"><em>V</em></span> is ‘prob.T’. <span
 class="math display">
