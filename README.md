@@ -168,6 +168,10 @@ Hanzhang Yin
 
 <div id="myDIV3">
 <h3>
+<a href="add_exsisting_directory_to_github.html">Add Exsisting Directory to Github</a>
+</h3>
+
+<h3>
 <a href="smithnormalform.html">Smith Normal Form </a>
 </h3>
 
