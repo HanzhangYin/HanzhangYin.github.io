@@ -1,4 +1,70 @@
 <!DOCTYPE html>
+<script>
+  function copyCode1() {
+    var code = document.getElementById("code-block1");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+<script>
+  function copyCode2() {
+    var code = document.getElementById("code-block2");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+<script>
+  function copyCode3() {
+    var code = document.getElementById("code-block3");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+<script>
+  function copyCode4() {
+    var code = document.getElementById("code-block4");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+<script>
+  function copyCode5() {
+    var code = document.getElementById("code-block5");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+<script>
+  function copyCode6() {
+    var code = document.getElementById("code-block6");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <!--Add MathJax-->
@@ -202,7 +268,8 @@ existing directories to GitHub using terminal. </p>
 <pre><code>cd /path/to/directory</code></pre>
 <h3 id="initialize-git-in-the-directory">2. Initialize Git in the
 directory</h3>
-<pre><code>git init</code></pre>
+<pre><code id = "code-block1">git init</code></pre>
+<button onclick="copyCode1()">Copy</button>
 <h3 id="create-a-new-repository-on-github.">3. Create a new repository
 on GitHub.</h3>
 <ul>
@@ -215,20 +282,25 @@ file, since you already have existing files to add.</li>
 </ul>
 <h3 id="add-the-remote-repository-as-the-origin.">4. Add the remote
 repository as the origin.</h3>
-<pre><code>git remote add origin https://github.com/username/repository.git</code></pre>
+<pre><code id = "code-block2">git remote add origin https://github.com/username/repository.git</code></pre>
+<button onclick="copyCode2()">Copy</button>
 <p>Replace username with your GitHub username and repository with the
 name of the repository you just created.</p>
 <h3 id="add-all-the-files-to-the-staging-area.">5. Add all the files to
 the staging area.</h3>
-<pre><code>git add --all</code></pre>
+<pre><code id = "code-block3">git add --all</code></pre>
+<button onclick="copyCode3()">Copy</button>
 <h3 id="commit-the-changes.">6. Commit the changes.</h3>
-<pre><code>git commit -m &quot;First commit&quot;</code></pre>
+<pre><code id = "code-block4">git commit -m &quot;First commit&quot;</code></pre>
+<button onclick="copyCode4()">Copy</button>
 <h3 id="choose-the-branch.">7. Choose the branch.</h3>
 <p>Here I chosed the branch named “main” and some people would choose
 the name such as “master”.</p>
-<pre><code>git branch -M main</code></pre>
+<pre><code id = "code-block5">git branch -M main</code></pre>
+<button onclick="copyCode5()">Copy</button>
 <h3 id="section">8. Push the changes to GitHub.</h3>
-<pre><code>git push -u origin main</code></pre>
+<pre><code id = "code-block6">git push -u origin main</code></pre>
+<button onclick="copyCode6()">Copy</button>
 <p>Note: If your branch name is “master” or something else, change
 “main” to your branch name.</p>
 </body>
