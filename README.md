@@ -168,6 +168,10 @@ Hanzhang Yin
 
 <div id="myDIV3">
 <h3>
+<a href="fine_tune.html">Fine Tune GPT</a>
+</h3>
+
+<h3>
 <a href="add_exsisting_directory_to_github.html">Add Exsisting Directory to Github</a>
 </h3>
 
