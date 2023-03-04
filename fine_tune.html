@@ -72,6 +72,7 @@
       color: #1a1a1a;
       background-color: #ededed;
     }
+    <!--change the color-->
     body {
       margin: 0 auto;
       max-width: 36em;
@@ -233,14 +234,17 @@
 <header id="title-block-header">
 <h1 class="title">Fine Tune GPT</h1>
 </header>
+
 <p>GPT-3 is a powerful language model developed by OpenAI that can
 generate high-quality text in a variety of styles and domains. However,
 to use GPT-3 effectively for specific tasks, it may be necessary to
 fine-tune the model on a specific dataset.</p>
 <p>In this guide, we’ll cover the basic steps for fine-tuning GPT-3 and
 provide some tips and best practices along the way.</p>
+
 <h2 id="step-1.-gather-and-prepare-your-data">Step 1. Gather and Prepare
 Your Data</h2>
+
 <p>The first step in fine-tuning GPT-3 is to gather and prepare your
 data. Depending on the task you’re trying to accomplish, this may
 involve collecting a dataset of text documents, creating a set of
@@ -248,43 +252,55 @@ labeled examples for a classification task, or curating a set of
 conversational exchanges for a chatbot. The data can be in the form of
 <strong>CSV</strong>, <strong>TSV</strong>, <strong>XLSX</strong>,
 <strong>JSON</strong> or <strong>JSONL</strong> file</p>
+
 <h2 id="step-2.-tranform-the-formats-of-files">Step 2. Tranform the
 Formats of Files</h2>
+
 <p>GPT will be trained by using the data collected in the
 <strong>JSONL</strong> files. However, Open AI has tools to tranform
 <strong>CSV</strong>, <strong>TSV</strong>, <strong>XLSX</strong>,
 <strong>JSON</strong> files to JSONL format.</p>
 <p>Firstly, you have to type in the folloing code to initialize it.</p>
+
 <pre><code id = "code-block1">pip install --upgrade openai</code></pre>
 <button onclick="copyCode1()">Copy</button>
+
 <p>If you are using <strong>python</strong>, <strong>pandas</strong>
 package is mandatory. And the Open AI API key is inevitable as well,</p>
+
 <pre><code id = "code-block2">export OPENAI_API_KEY=&quot;&lt;OPENAI_API_KEY&gt;&quot;</code></pre>
 <button onclick="copyCode2()">Copy</button>
+
 <p><strong>OPENAI_API_KEY</strong> can be checked in your personal
 account of Open AI.</p>
 <p>After that, we can use the following code to transform the
 <strong>CSV</strong>, <strong>TSV</strong>, <strong>XLSX</strong>,
 <strong>JSON</strong> files to JSONL format.</p>
+
 <pre><code id = "code-block3">openai tools fine_tunes.prepare_data -f &lt;LOCAL_FILE&gt;</code></pre>
 <button onclick="copyCode3()">Copy</button>
+
 <p>For instance if your data is stored in a <strong>CSV</strong> file
 named &lt;LOCAL_FILE.CSV&gt;, after using the code above, it will
 generate a file named &lt;LOCAL_FILE_prepared.jsonl&gt;. </p>
 
-<h2 id="step-3.-train-gpt-3-on-your-dataset">Step 3.
-  Train GPT-3 on Your Dataset</h2>
-<p>If we get our <strong>JSONL</strong> file, then we can start training
+<h2 id="step-3.-train-gpt-3-on-your-dataset">Step 3. Train GPT-3 on Your Dataset</h2>
+
+ <p>If we get our <strong>JSONL</strong> file, then we can start training
 the model by using the following code.</p>
+
 <pre><code id = "code-block4">openai api fine_tunes.create -t &lt;TRAIN_FILE_ID_OR_PATH&gt; -m &lt;BASE_MODEL&gt;</code></pre>
 <button onclick="copyCode4()">Copy</button>
+
 <p>In this case, <TRAIN_FILE_ID_OR_PATH> should be
 &lt;LOCAL_FILE_prepared.jsonl&gt;. There are only four models you can
 choose to fine tune: <strong>ada</strong>, <strong>babbage</strong>,
 <strong>curie</strong>, <strong>davinci</strong>. Following is one
 example you can use:</p>
+
 <pre><code id = "code-block5">openai api fine_tunes.create -t LOCAL_FILE_prepared.jsonl -m davinci</code></pre>
 <button onclick="copyCode5()">Copy</button>
+
 <p>You have to wait for several minutes to generate the new model. If
 you data sample is very small, the performance of the new model will not
 be ideal.</p>
