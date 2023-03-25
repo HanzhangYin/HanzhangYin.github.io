@@ -172,6 +172,12 @@ Hanzhang Yin
 </h3>
 
 <h3>
+<a href="group_ring.html">Group Algebra in SageMath</a>
+</h3>
+
+
+
+<h3>
 <a href="add_exsisting_directory_to_github.html">Add Exsisting Directory to Github</a>
 </h3>
 
