@@ -1,4 +1,111 @@
 <!DOCTYPE html>
+<script>
+  function copyCode1() {
+    var code = document.getElementById("code-block1");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode2() {
+    var code = document.getElementById("code-block2");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode3() {
+    var code = document.getElementById("code-block3");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode4() {
+    var code = document.getElementById("code-block4");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode5() {
+    var code = document.getElementById("code-block5");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode6() {
+    var code = document.getElementById("code-block6");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode7() {
+    var code = document.getElementById("code-block7");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode8() {
+    var code = document.getElementById("code-block8");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode9() {
+    var code = document.getElementById("code-block9");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <!--Add MathJax-->
@@ -190,7 +297,7 @@ class="math inline"><em>g</em><sub>1</sub>, …, <em>g</em><sub><em>n</em></
 as a basis, and we call this vector space <span
 class="math inline"><em>F</em><em>G</em></span>. Take as the elements of
 <span class="math inline"><em>F</em><em>G</em></span> all expressions of
-the form <span class="math inline">$\sum_{i=1}^n a_i g_i$</span> (all
+the form <span class="math inline">\sum_{i=1}^n a_i g_i</span> (all
 <span
 class="math inline"><em>a</em><sub><em>i</em></sub> ∈ <em>F</em></span>).
 The rules for addition and scalar multiplication in <span
@@ -241,36 +348,45 @@ SageMath web-based interface (Jupyter Notebook, SageMathCell, or
 Cocalc).</p></li>
 <li><p>Import the required modules:</p></li>
 </ol>
-<pre><code>from sage.groups.perm_gps.permgroup import PermutationGroup</code></pre>
-<pre><code>from sage.algebras.group_algebra import GroupAlgebra</code></pre>
+<pre><code id="code-block1">from sage.groups.perm_gps.permgroup import PermutationGroup</code></pre>
+<button onclick="copyCode1()">Copy</button>
+<pre><code id="code-block2">from sage.algebras.group_algebra import GroupAlgebra</code></pre>
+<button onclick="copyCode2()">Copy</button>
 <h2 id="example">Example</h2>
 <p>If we want to do addition and multiplication in <span
 class="math inline">ℂ[𝔖<sub>4</sub>]</span>, we have to set up <span
 class="math inline">𝔖<sub>4</sub></span> and <span
 class="math inline">ℂ</span> first.</p>
-<pre><code>G = PermutationGroup([(1, 2, 3, 4), (1, 2)])</code></pre>
-<pre><code>R = CC</code></pre>
+<pre><code id="code-block3">G = PermutationGroup([(1, 2, 3, 4), (1, 2)])</code></pre>
+<button onclick="copyCode3()">Copy</button>
+<pre><code id="code-block4">R = CC</code></pre>
+<button onclick="copyCode4()">Copy</button>
 <p>Here <span class="math inline"><em>G</em> = 𝔖<sub>4</sub></span> and
 <span class="math inline"><em>R</em> = ℂ</span>.</p>
 <p>Now we will create the symmetric group algebra using the
 GroupAlgebra() constructor:</p>
-<pre><code>A = GroupAlgebra(G, R)</code></pre>
+<pre><code id="code-block5">A = GroupAlgebra(G, R)</code></pre>
+<button onclick="copyCode5()">Copy</button>
 <p>To denote an element in <span
 class="math inline"><em>A</em> = ℂ[𝔖<sub>4</sub>]</span>, for instance,
 we want <span class="math inline"><em>x</em> = <em>e</em> + (1,2)</span>
 and <span class="math inline"><em>y</em> = <em>e</em> − (1,3)</span>, we
 will use the following construction:</p>
-<pre><code>x = A([()])+A([(1,2)])</code></pre>
-<pre><code>y = A([()])-A([(1,3)])</code></pre>
+<pre><code id="code-block6">x = A([()])+A([(1,2)])</code></pre>
+<button onclick="copyCode6()">Copy</button>
+<pre><code id="code-block7">y = A([()])-A([(1,3)])</code></pre>
+<button onclick="copyCode7()">Copy</button>
 <p><strong>Note</strong> In sage, when we do (1,2)*(1,3), actually sage
 calculates <span class="math inline">(1,3)(1,2) = (1,2,3)</span>. So we
 have to reverse the order in order to get the result we want. In that
 case, if we want to calculate <span
 class="math inline"><em>x</em> ⋅ <em>y</em></span>, we have to type
 <span class="math inline"><em>y</em> * <em>x</em></span>.</p>
-<pre><code>y*x</code></pre>
+<pre><code id="code-block8">y*x</code></pre>
+<button onclick="copyCode8()">Copy</button>
 <pre><code>1.00000000000000*() + 1.00000000000000*(1,2) - 1.00000000000000*(1,3,2) - 1.00000000000000*(1,3)</code></pre>
-<pre><code>x+y</code></pre>
+<pre><code id="code-block9">x+y</code></pre>
+<button onclick="copyCode9()">Copy</button>
 <pre><code>2.00000000000000*() + 1.00000000000000*(1,2) - 1.00000000000000*(1,3)</code></pre>
 </body>
 </html>
