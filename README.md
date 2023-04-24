@@ -180,19 +180,19 @@ Hanzhang Yin
 </h3>
 
 <h3>
-<a href="smithnormalform.html">Smith Normal Form </a>
+<a href="elseworlds/smithnormalform.html">Smith Normal Form </a>
 </h3>
 
 <h3>
-<a href="pandoc.html">Pandoc </a>
+<a href="elseworlds/pandoc.html">Pandoc </a>
 </h3>
 
 <h3>
-<a href="path.html">Path Variables </a>
+<a href="elseworlds/path.html">Path Variables </a>
 </h3>
 
 <h3>
-<a href="R.html">R </a>
+<a href="elseworlds/R.html">R </a>
 </h3>
 
 </div>
