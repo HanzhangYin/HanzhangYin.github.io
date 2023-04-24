@@ -1,4 +1,39 @@
 <!DOCTYPE html>
+<script>
+  function copyCode1() {
+    var code = document.getElementById("code-block1");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode2() {
+    var code = document.getElementById("code-block2");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode3() {
+    var code = document.getElementById("code-block3");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <!--Add MathJax-->
@@ -13,9 +48,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>R</title>
   <style>
+    .second-font {
+      font-family: 'Noto Serif JP', serif;
+      }
+
     html {
       color: #1a1a1a;
-      background-color: #fdfdfd;
+      background-color: #ededed;
     }
     body {
       margin: 0 auto;
@@ -179,13 +218,16 @@
 <li>Go to https://cloud.r-project.org/ and download it through package.
 Or use homebrew</li>
 </ol>
-<pre><code>brew install r</code></pre>
+<pre><code id="code-block1">brew install r</code></pre>
+<button onclick="copyCode1()">Copy</button>
 <ol start="2" type="1">
 <li>Install pakcage languageserver in R. (It will go forever in
 terminal)</li>
 </ol>
-<pre><code>R #go to R in terminal</code></pre>
-<pre><code>install.packages(&quot;languageserver&quot;)</code></pre>
+<pre><code id="code-block2">R #go to R in terminal</code></pre>
+<button onclick="copyCode2()">Copy</button>
+<pre><code id="code-block3">install.packages(&quot;languageserver&quot;)</code></pre>
+<button onclick="copyCode3()">Copy</button>
 <ol start="3" type="1">
 <li>Install radian (requires R and Python3)</li>
 </ol>
