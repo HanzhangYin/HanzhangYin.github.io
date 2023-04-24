@@ -172,7 +172,7 @@ Hanzhang Yin
 </h3>
 
 <h3>
-<a href="group_ring.html">Group Algebra in SageMath</a>
+<a href="elseworlds/group_ring.html">Group Algebra in SageMath</a>
 </h3>
 
 <h3>
