@@ -53,13 +53,13 @@ color: #565656;
 font-size: 1.2em;}
 
 a:link {
-  color: #929292; /* Grey color */
+  color: #34495E; /* Grey color */
   background-color: transparent;
   text-decoration: none;
 }
 
 a:visited {
-  color: #929292; /* Grey color */
+  color: #34495E; /* Grey color */
   background-color: transparent;
   text-decoration: none;
 }
