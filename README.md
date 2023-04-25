@@ -53,7 +53,7 @@ color: #565656;
 font-size: 1.2em;}
 
 a:link {
-  color: blue;
+  color: #929292;
   background-color: transparent;
   text-decoration: none;
 }
