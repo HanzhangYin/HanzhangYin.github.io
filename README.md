@@ -71,7 +71,7 @@ a:hover {
 }
 
 .cool-button {
-  background-color: #F3CFC6; /* Pink background */
+  background-color: #999999; /* Grey background */
   border: none; /* Remove border */
   color: black; /* White text color */
   padding: 15px 26px; /* Padding */
