@@ -34,6 +34,67 @@
     textarea.remove();
   }
 </script>
+
+<script>
+  function copyCode4() {
+    var code = document.getElementById("code-block4");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode5() {
+    var code = document.getElementById("code-block5");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode6() {
+    var code = document.getElementById("code-block6");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode7() {
+    var code = document.getElementById("code-block7");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
+<script>
+  function copyCode8() {
+    var code = document.getElementById("code-block8");
+    var textarea = document.createElement("textarea");
+    textarea.value = code.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+</script>
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <!--Add MathJax-->
@@ -232,20 +293,25 @@ terminal)</li>
 <ol start="3" type="1">
 <li>Install radian (requires R and Python3)</li>
 </ol>
-<pre><code>pip3 install -U radian #install radian</code></pre>
+<pre><code id="code-block4">pip3 install -U radian</code></pre>
+<button onclick="copyCode4()">Copy</button>
 <p>(You probably need to add a new path)</p>
 <h1 id="some-commands">Some commands</h1>
 <p>To know your current directory you can use</p>
-<pre><code>getwd()</code></pre>
+<pre><code id="copyCode5">getwd()</code></pre>
+<button onclick="copyCode5()">Copy</button>
 <p>In order to go to the sepecific directory, use the following
 code:</p>
-<pre><code>setwd(&quot;path&quot;)</code></pre>
+<pre><code id="code-block6">setwd(&quot;path&quot;)</code></pre>
+<button onclick="copyCode6()">Copy</button>
 <p>To install a package:</p>
-<pre><code>install.packages(&quot;package_name&quot;)</code></pre>
+<pre><code id="code-block7">install.packages(&quot;package_name&quot;)</code></pre>
+<button onclick="copyCode7()">Copy</button>
 <p>To load a package:</p>
 <pre><code>library(package_name)</code></pre>
 <p>To see all installed packages</p>
-<pre><code>installed.packages()[, "Package"]</code></pre>
+<pre><code id="code-block8">installed.packages()[, "Package"]</code></pre>
+<button onclick="copyCode8()">Copy</button>
 <p>To read a CSV file, you have to use the following command:</p>
 <pre><code>read_csv(&quot;file_name.csv&quot;)</code></pre>
 </body>
