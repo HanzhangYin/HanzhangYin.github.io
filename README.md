@@ -192,6 +192,10 @@ Hanzhang Yin
 </h3>
 
 <h3>
+<a href="elseworlds/brew.html">Homebrew </a>
+</h3>
+
+<h3>
 <a href="elseworlds/R.html">R (Data)</a>
 </h3>
 
