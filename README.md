@@ -200,6 +200,10 @@ Hanzhang Yin
 </h3>
 
 <h3>
+<a href="elseworlds/sqlite.html">R (Data)</a>
+</h3>
+
+<h3>
 <a href="https://htmlcolorcodes.com">Colors for HTML</a>
 </h3>
 
