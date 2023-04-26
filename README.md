@@ -200,7 +200,7 @@ Hanzhang Yin
 </h3>
 
 <h3>
-<a href="elseworlds/sqlite.html">R (Data)</a>
+<a href="elseworlds/sqlite.html">SQLite</a>
 </h3>
 
 <h3>
