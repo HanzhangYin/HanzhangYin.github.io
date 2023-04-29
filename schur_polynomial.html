@@ -176,9 +176,49 @@
 A monomial is a polynomial which has only one term. (i.e. \(xy, x^2y^3z^4\))
 
 <h2>Partition</h2>
-A partition \(\lambda\) is a (finite or infinite) sequence 
+<p><strong>Definition</strong> A partition \(\lambda\) is a (finite or infinite) sequence 
 $$\lambda = (\lambda_1, \lambda_2, \dots , \lambda_l,\dots)$$
-of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lambda_l\geq \dots\) and containing only finitely many non-zero terms.
+of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lambda_l\geq \dots\) and containing only finitely many non-zero terms.</p>
+
+<h3>
+  Parts of \(\lambda\)
+</h3>
+<p>
+  <strong>Definition:</strong> The non-zero terms of a partition \(\lambda\) are called the parts of \(\lambda\).
+</p>
+<p>
+  <strong>Example:</strong> The parts of \(\lambda = (5,4,1,0,0)\) are \(5,4,1\).
+</p>
+
+<h3>
+  Length of \(\lambda\)
+</h3>
+<p>
+  <strong>Definition:</strong> The length of a partition \(\lambda\) is the number of its parts. It is denoted by \(l(\lambda)\).
+</p>
+<p>
+  <strong>Example:</strong> The length of \(\lambda = (5,4,1,0,0)\) is \(3\), (i.e, \(l(\lambda) = 3\)).
+</p>
+
+<h3>
+  Weight of \(\lambda\)
+</h3>
+<p>
+  <strong>Definition:</strong> The weight of a partition \(\lambda\) is the sum of its parts. It is denoted by \(|\lambda|\):
+  $$|\lambda| = \lambda_1 + \lambda_2 + \dots + \lambda_l + \dots$$
+  If \(|\lambda|=n\), we say that \(\lambda\) is a partiton of \(n\).
+</p>
+
+<h2>
+  Symmetric Polynomials
+</h2>
+<p>
+  <strong>Definition:</strong> Let \(P[x_1, x_2, \dots, x_n]\in\mathbb{Z}[x_1, x_2, \dots, x_n]\) and if \(\sigma\in \mathfrak{S}_n\)(i.e. Symmetric group).  \(P[x_1, x_2, \dots, x_n]\) is symmetric if 
+  $$P[x_1, x_2, \dots, x_n] = P[x_{\sigma(1)}, x_{\sigma(2)}, \dots, x_{\sigma(n)}].$$
+</p>
+<p>
+  <strong>Example:</strong> \(P[x_1, x_2] = x_1^4 + 5x_1^3x_2 + 10x_1^2x_2^2 + 5x_1x_2^3 + x_2^4\) is symmetric under action of \(\mathfrak{S}_2\).
+</p>
 
 <h3>Kostka number</h3>
 Kostka number, \(K_{\lambda\mu}\), is equal to the number of Young tableaux of shape \(\lambda\)  and weight \(\mu\).
