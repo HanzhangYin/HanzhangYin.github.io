@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
-<title>Coxeter Groups</title>
+<title>Symmetric Polynomial</title>
 <style>
   html {
     color: #1a1a1a;
@@ -167,7 +167,7 @@
   }
   .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
-<h1>Schur Polynomial</h1>
+<h1>Symmetric Polynomial</h1>
 </head>
 <body>
 <h2>
@@ -213,19 +213,43 @@ of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lam
   Symmetric Polynomials
 </h2>
 <p>
-  <strong>Definition:</strong> Let \(P[x_1, x_2, \dots, x_n]\in\mathbb{Z}[x_1, x_2, \dots, x_n]\) and if \(\sigma\in \mathfrak{S}_n\)(i.e. Symmetric group).  \(P[x_1, x_2, \dots, x_n]\) is symmetric if 
-  $$P[x_1, x_2, \dots, x_n] = P[x_{\sigma(1)}, x_{\sigma(2)}, \dots, x_{\sigma(n)}].$$
+  <strong>Definition:</strong> Let \(p(x_1, x_2, \dots, x_n)\in\mathbb{Z}[x_1, x_2, \dots, x_n]\) and if \(\sigma\in \mathfrak{S}_n\)(i.e. Symmetric group).  \(P[x_1, x_2, \dots, x_n]\) is symmetric if 
+  $$p(x_1, x_2, \dots, x_n) = p(x_{\sigma(1)}, x_{\sigma(2)}, \dots, x_{\sigma(n)}).$$
 </p>
 <p>
-  <strong>Example:</strong> \(P[x_1, x_2] = x_1^4 + 5x_1^3x_2 + 10x_1^2x_2^2 + 5x_1x_2^3 + x_2^4\) is symmetric under action of \(\mathfrak{S}_2\).
+  <strong>Example:</strong> \(p(x_1, x_2) = x_1^4 + 5x_1^3x_2 + 10x_1^2x_2^2 + 5x_1x_2^3 + x_2^4\) is symmetric under action of \(\mathfrak{S}_2\).
 </p>
 
-<h3>Kostka number</h3>
+<h3>
+  Elementary Symmetric Polynomials
+</h3>
+<p>
+  <strong>Definiton:</strong> For each \(\alpha = (\alpha_1, \dots, \alpha_n)\in\mathbb{N}^n\) we denote by \(x^\alpha\) the monomial 
+  $$
+    x^\alpha = x_1^{\alpha_1}x_2^{\alpha_2}\dots x_n^{\alpha_n}.
+  $$
+  Let \(\lambda\) be any partition of length less than \(n\) (i.e. \(l(\lambda)\leq n\)). The polynomail \(m_\lambda(x_1, \dots, x_n)\) is defined as below:
+  $$
+    m_\lambda(x_1, \dots, x_n) = \sum_{\alpha\in A} x^\alpha,
+  $$
+  where \(A=\{\alpha\;|\;\alpha = \sigma\cdot \lambda\text{ for }\sigma\in\mathfrak{S}_n\}\) and each \(\alpha\) is dinstinct. \(m_\lambda(x_1, \dots, x_n)\) is called the monomial symmetric polynomial.
+</p>
+<p>
+  <strong>Example:</strong> Let \(\lambda = (5, 3, 0)\). Then 
+  $$
+  \begin{align*}
+  m_\lambda(x_1, x_2, x_3) &= x_1^5x_2^3x_3^0 + x_1^5x_2^0x_3^3 + x_1^3x_2^5x_3^0 + x_1^0x_2^5x_3^3 + x_1^3x_2^0x_3^5 + x_1^0x_2^3x_3^5\\
+  &= x_1^5x_2^3 + x_1^5x_3^3 + x_1^3x_2^5 + x_2^5x_3^3 + x_1^3x_3^5 + x_2^3x_3^5
+  \end{align*}
+  $$
+</p>
+
+<!-- <h3>Kostka number</h3>
 Kostka number, \(K_{\lambda\mu}\), is equal to the number of Young tableaux of shape \(\lambda\)  and weight \(\mu\).
 
 Let \(S\) be a set. A matrix \(m : S\times S\to \{1,2, \dots ,\infty\}\) is called a Coxeter matrix if it satisfies
 $$m(x,y) = m(y,x)$$
-$$m(x,y) = 1\text{ implies }x=y$$
+$$m(x,y) = 1\text{ implies }x=y$$ -->
 
 <h2>References</h2>
   <ul>
