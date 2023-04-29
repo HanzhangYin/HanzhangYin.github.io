@@ -158,7 +158,8 @@ Hanzhang Yin
 </h3>
 
 <h3>
-<a href=>
+<a href="symmetric_polynomial.html">Symmetric Polynomial</a>
+</h3>
 		  
 <h3>
 <a href="toggling_on_dominating_sets_of_path_graphs.html">Toggling on Path Graphs </a>
