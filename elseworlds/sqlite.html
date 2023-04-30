@@ -371,14 +371,13 @@ terminal)</li>
 <pre><code>SELECT * FROM data;</code></pre>
 <p>To know how many rows of data in your database:</p>
 <pre><code>SELECT COUNT(*) FROM data;</code></pre>
-<h2>Export data as CSV file</h2>
+<h2 id="Export data as CSV file">Export data as CSV file</h2>
 <p>Open the database using SQlite</p>
 <pre><code id="code-block10">sqlite3 data.db</code></pre>
 <button onclick="copyCode10()">Copy</button>
-<p>If you want to see more information for each package installed on your computer:</p>
-<pre><code id="code-block11">installed.packages()</code></pre>
+<p>The following code allows you to explort the data as csv:</p>
+<pre><code id="code-block11">.mode csv</code></pre>
 <button onclick="copyCode11()">Copy</button>
-<h2 id="read-csv-file">Read CSV file</h2>
 <p>To read a CSV file, you have to use the following command:</p>
 <pre><code>read_csv(&quot;file_name.csv&quot;)</code></pre>
 <p>To quit R, use the following code:</p>
