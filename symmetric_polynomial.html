@@ -173,7 +173,7 @@
 <h2>
   Monomial
 </h2>
-A monomial is a polynomial which has only one term. (i.e. \(xy, x^2y^3z^4\))
+A monomial is a polynomial which has only one term. (e.g. \(xy, x^2y^3z^4\))
 
 <h2>Partition</h2>
 <p><strong>Definition</strong> A partition \(\lambda\) is a (finite or infinite) sequence 
@@ -248,7 +248,7 @@ of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lam
   Elementary Symmetric Polynomials
 </h3>
 <p>
-  <strong>Definition:</strong> For each integer \(r\geq 0\) the \(r\)th elementary symmetric polynomial \(e_r\) is defined as below:
+  <strong>Definition:</strong> For each integer \(0\leq r\leq n\) the \(r\)th elementary symmetric polynomial \(e_r\) is defined as below:
   $$
     e_0(x_1, x_2, \dots, x_n)=1,
   $$
@@ -261,6 +261,13 @@ of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lam
   $$
   e_2(x_1, x_2, x_3, x_4)= x_1x_2+x_1x_3+ x_1x_4+x_2x_3+x_2x_4+x_3x_4.
   $$
+</p>
+<p>
+  <strong>Oberservation: </strong> When \(r=n\), we have
+  $$
+    e_n(x_1, x_2, \dots, x_n) = x_1x_2\dots x_n = m_{(1^n)}(x_1, x_2, \dots, x_n),
+  $$
+  where \((1^n)\) is a partition with length \(n\) and all parts are equal to \(1\) (e.g. \((1^4) = (1,1,1,1)\)).
 </p>
 
 <!-- <h3>Kostka number</h3>
