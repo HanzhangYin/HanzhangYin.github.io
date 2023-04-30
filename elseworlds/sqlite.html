@@ -378,19 +378,12 @@ terminal)</li>
 <p>The following code allows you to explort the data as csv:</p>
 <pre><code id="code-block11">.mode csv</code></pre>
 <button onclick="copyCode11()">Copy</button>
-<p>To read a CSV file, you have to use the following command:</p>
-<pre><code>read_csv(&quot;file_name.csv&quot;)</code></pre>
-<p>To quit R, use the following code:</p>
-<p>To store data into a variable named "data":</p>
-<pre><code>data &lt;- read_csv(&quot;file_name.csv&quot;)</code></pre>
-<p>To show i number of rows of "data": </p>
-<pre><code>print(data, n=i)</code></pre>
-<p>For example, if you only want to show 11 rows of data:</p>
-<pre><code>print(data, n=11)</code></pre>
-<p>To select columns from column 2 to column 4:</p>
-<pre><code>data[2:4]</code></pre>
-<p>To quit R, use the following code:</p>
-<pre><code id="code-block12">q()</code></pre>
+<p>To create a empty csv file:</p>
+<pre><code>.output your_exported_data.csv</code></pre>
+<p>If you want to export all data in database(this process just select data):</p>
+<pre><code>SELECT * FROM your_table_name;</code></pre>
+<p>Now export the selected data to your csv file:</p>
+<pre><code id="code-block12">.output stdout</code></pre>
 <button onclick="copyCode12()">Copy</button>
 </body>
 </html>
