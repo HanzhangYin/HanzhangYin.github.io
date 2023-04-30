@@ -273,8 +273,23 @@ of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lam
 <p>
   <strong>Definition: </strong> The generating function for the \(e_r\):
   $$
-    E(t) =  \prod_{i=1}^n (1+x_it)=\sum_{r=0}^n e_r(x_1, x_2, \dots, x_n)t^r.
+    E(r) =  \prod_{i=1}^n (1+x_ir)=\sum_{i=0}^n e_i(x_1, x_2, \dots, x_n)r^i.
   $$
+</p>
+
+<h3>
+  Complete Symmetric Polynomials
+</h3>
+<p><strong>Definition: </strong>For each \(r\geq 0\) the \(r\)th complete symetric function \(h_r\), is the sum of all monomials of total degree \(r\) in the variables \(x_1, x_2, \dots,\) so that
+$$
+h_0=0.
+$$
+$$
+h_1 = 1.
+$$
+$$
+  h_r(x_1, x_2, \dots) = \sum_{|\lambda|=r} m_\lambda.
+$$
 </p>
 
 <!-- <h3>Kostka number</h3>
