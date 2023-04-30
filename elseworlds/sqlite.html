@@ -371,8 +371,9 @@ terminal)</li>
 <pre><code>SELECT * FROM data;</code></pre>
 <p>To know how many rows of data in your database:</p>
 <pre><code>SELECT COUNT(*) FROM data;</code></pre>
-<p>To list all installed packages:</p>
-<pre><code id="code-block10">installed.packages()[, "Package"]</code></pre>
+<h2>Export data as CSV file</h2>
+<p>Open the database using SQlite</p>
+<pre><code id="code-block10">sqlite3 data.db</code></pre>
 <button onclick="copyCode10()">Copy</button>
 <p>If you want to see more information for each package installed on your computer:</p>
 <pre><code id="code-block11">installed.packages()</code></pre>
