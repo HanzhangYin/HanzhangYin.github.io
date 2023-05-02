@@ -273,7 +273,7 @@ of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lam
 <p>
   <strong>Definition: </strong> The generating function for the \(e_r\):
   $$
-    E(r) =  \prod_{i=1}^n (1+x_ir)=\sum_{i=0}^n e_i(x_1, x_2, \dots, x_n)r^i.
+    E(r) =  \prod_{i=1}^\infty (1+x_ir)=\sum_{i=0}^\infty e_i(x_1, x_2, \dots, x_n)r^i.
   $$
 </p>
 
@@ -282,15 +282,34 @@ of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lam
 </h3>
 <p><strong>Definition: </strong>For each \(r\geq 0\) the \(r\)th complete symetric function \(h_r\), is the sum of all monomials of total degree \(r\) in the variables \(x_1, x_2, \dots,\) so that
 $$
-h_0=0.
+h_0(x_1, x_2, \dots, x_n)=0.
 $$
 $$
-h_1 = 1.
+h_1(x_1, x_2, \dots, x_n) = 1.
 $$
 $$
-  h_r(x_1, x_2, \dots) = \sum_{|\lambda|=r} m_\lambda.
+  h_r(x_1, x_2, \dots, x_n) = \sum_{|\lambda|=r} m_\lambda(x_1, x_2, \dots, x_n).
 $$
 </p>
+<p>
+  <strong>Example:</strong> 
+  We want to know \(h_2(x_1, x_2, x_3, x_4)\). There are only two partition which has weight \(2\): \(\{(2, 0, 0, 0), (1, 1, 0, 0)\}\).
+  $$
+  \begin{align*}
+  h_2(x_1, x_2, x_3, x_4)&= m_{(2, 0, 0, 0)}(x_1, x_2, x_3, x_4) + m_{(1, 1, 0, 0)}(x_1, x_2, x_3, x_4)\\
+  &= x_1^2 + x_2^2 + x_3^2 + x_4^2 + x_1x_2 + x_1x_3 + \\
+  &\phantom=x_1x_4 + x_2x_3 + x_2x_4 + x_3x_4.
+  \end{align*}
+  $$
+</p>
+
+<p>
+  <strong>Definition: </strong> The generating function for the \(h_r\):
+  $$
+    H(r) =  \prod_{i=1}^\infty (1-x_ir)^{-1}=\sum_{i=0}^\infty h_i(x_1, x_2, \dots, x_n)r^i.
+  $$
+</p> 
+
 
 <!-- <h3>Kostka number</h3>
 Kostka number, \(K_{\lambda\mu}\), is equal to the number of Young tableaux of shape \(\lambda\)  and weight \(\mu\).
