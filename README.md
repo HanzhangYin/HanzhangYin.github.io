@@ -12,39 +12,39 @@
 <style>
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48}
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 48}
 body {
 background-color: #ededed ;
-margin: 0 15%; 
-font-family:  'Spectral', serif; }
+margin: 0 15%;
+font-family: 'Spectral', serif; }
 h1 {
-text-align: right; 
+text-align: right;
 font-family: 'Spectral', serif;
-font-weight: bold; 
+font-weight: bold;
 %text-transform: uppercase;
 border-bottom: 1px solid #646060;
 margin-top: 50px; }
 h2 {
 font-family: 'Spectral', serif;
 color: #565656;
-font-size: 1.5em; 
+font-size: 1.5em;
 margin-bottom: 30px;}
 h3 {
 font-family: 'Spectral', serif;
 color: #565656;
 font-size: 1em; }
 h4 {
-font-family:  'Spectral', serif;
+font-family: 'Spectral', serif;
 text-align: right;
 color: #565656;
 font-size: 0.9em; }
 
 img {
-float: left; 
+float: left;
 margin-right: 30px}
 
 p {
@@ -53,71 +53,69 @@ color: #565656;
 font-size: 1.2em;}
 
 a:link {
-  color: #3498DB; /* Grey color */
-  background-color: transparent;
-  text-decoration: none;
+color: #3498DB; /_ Grey color _/
+background-color: transparent;
+text-decoration: none;
 }
 
 a:visited {
-  color: #3498DB; /* Grey color */
-  background-color: transparent;
-  text-decoration: none;
+color: #3498DB; /_ Grey color _/
+background-color: transparent;
+text-decoration: none;
 }
 
 a:hover {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
+color: pink;
+background-color: transparent;
+text-decoration: none;
 }
 
 .cool-button {
-  background-color: #999999; /* Grey background */
-  border: none; /* Remove border */
-  color: black; /* White text color */
-  padding: 15px 26px; /* Padding */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make the button an inline element */
-  font-family: 'Spectral', serif;
-  font-size: 13px; /* Increase font size */
-  margin: 4px 2px; /* Add some margin */
-  cursor: pointer; /* Add a pointer cursor on hover */
-  transition: background-color 0.3s ease; /* Add a transition effect on hover */
+background-color: #999999; /_ Grey background _/
+border: none; /_ Remove border _/
+color: black; /_ White text color _/
+padding: 15px 26px; /_ Padding _/
+text-align: center; /_ Center text _/
+text-decoration: none; /_ Remove underline _/
+display: inline-block; /_ Make the button an inline element _/
+font-family: 'Spectral', serif;
+font-size: 13px; /_ Increase font size _/
+margin: 4px 2px; /_ Add some margin _/
+cursor: pointer; /_ Add a pointer cursor on hover _/
+transition: background-color 0.3s ease; /_ Add a transition effect on hover _/
 }
 
-/* Change the background color on hover */
+/_ Change the background color on hover _/
 .cool-button:hover {
-  background-color: #F89880;
+background-color: #F89880;
 }
 
-/* Add a hover effect on the text */
+/_ Add a hover effect on the text _/
 .cool-button span {
-  display: inline-block; /* Make the text an inline element */
-  transition: transform 0.3s ease; /* Add a transition effect on hover */
+display: inline-block; /_ Make the text an inline element _/
+transition: transform 0.3s ease; /_ Add a transition effect on hover _/
 }
 
-/* Scale up the text on hover */
+/_ Scale up the text on hover _/
 .cool-button:hover span {
-  transform: scale(1.2);
+transform: scale(1.2);
 }
-
 
 #myDIV1 {
-  width: 100%;
-  padding: 20px 0;
-  text-align: left;
-  %background-color: lightblue;
-  margin-top: 10px;
+width: 100%;
+padding: 20px 0;
+text-align: left;
+%background-color: lightblue;
+margin-top: 10px;
 }
 
 #myDIV2 {
-  width: 100%;
-  padding: 50px 0;
-  text-align: left;
-  %background-color: lightblue;
-  margin-top: 20px;
+width: 100%;
+padding: 50px 0;
+text-align: left;
+%background-color: lightblue;
+margin-top: 20px;
 }
-
 
 </style>
 </head>
@@ -126,11 +124,9 @@ a:hover {
 Hanzhang Yin
 </h1>
 
-
 <button class="cool-button" onclick="myFunction1()">
   <span>About Me!</span>
 </button>
-
 
 <div id="myDIV1">
 
@@ -208,11 +204,15 @@ Hanzhang Yin
 </h3>
 
 <h3>
+<a href="elseworlds/nvim.html">Neovim</a>
+</h3>
+
+<h3>
 <a href="https://htmlcolorcodes.com">Colors for HTML</a>
 </h3>
 
 </div>
-		  
+
 
 <h4>
 <a href="cv_hanzhang_yin.pdf">Curriculum vitae (C.V.)</a>
