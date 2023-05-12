@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+<title>Symmetric Polynomial</title>
+<style>
+  html {
+    color: #1a1a1a;
+    background-color: #ededed;
+  }
+  body {
+    margin: 0 auto;
+    max-width: 36em;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-family:  'Spectral', serif;
+  }
+  @media (max-width: 600px) {
+    body {
+      font-size: 0.9em;
+      padding: 12px;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+  @media print {
+    html {
+      background-color: white;
+    }
+    body {
+      background-color: transparent;
+      color: black;
+      font-size: 12pt;
+    }
+    p, h2, h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2, h3, h4 {
+      page-break-after: avoid;
+    }
+  }
+  p {
+    margin: 1em 0;
+  }
+  a {
+    color: #1a1a1a;
+  }
+  a:visited {
+    color: #1a1a1a;
+  }
+  img {
+    max-width: 100%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.4em;
+  }
+  h5, h6 {
+    font-size: 1em;
+    font-style: italic;
+  }
+  h6 {
+    font-weight: normal;
+  }
+  ol, ul {
+    padding-left: 1.7em;
+    margin-top: 1em;
+  }
+  li > ol, li > ul {
+    margin-top: 0;
+  }
+  blockquote {
+    margin: 1em 0 1em 1.7em;
+    padding-left: 1em;
+    border-left: 2px solid #e6e6e6;
+    color: #606060;
+  }
+  code {
+    font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+    font-size: 85%;
+    margin: 0;
+    hyphens: manual;
+  }
+  pre {
+    background-color: #d9d9d9; 
+    margin: 1em 0;
+    overflow: auto;
+  }
+  <!--add new color-->
+  pre code {
+    padding: 0;
+    overflow: visible;
+    overflow-wrap: normal;
+  }
+  .sourceCode {
+   background-color: transparent;
+   overflow: visible;
+  }
+  hr {
+    background-color: #1a1a1a;
+    border: none;
+    height: 1px;
+    margin: 1em 0;
+  }
+  table {
+    margin: 1em 0;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+  table caption {
+    margin-bottom: 0.75em;
+  }
+  tbody {
+    margin-top: 0.5em;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  th {
+    border-top: 1px solid #1a1a1a;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+  }
+  td {
+    padding: 0.125em 0.5em 0.25em 0.5em;
+  }
+  header {
+    margin-bottom: 4em;
+    text-align: center;
+  }
+  #TOC li {
+    list-style: none;
+  }
+  #TOC ul {
+    padding-left: 1.3em;
+  }
+  #TOC > ul {
+    padding-left: 0;
+  }
+  #TOC a:not(:hover) {
+    text-decoration: none;
+  }
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  div.columns{display: flex; gap: min(4vw, 1.5em);}
+  div.column{flex: auto; overflow-x: auto;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+  ul.task-list li input[type="checkbox"] {
+    width: 0.8em;
+    margin: 0 0.8em 0.2em -1.6em;
+    vertical-align: middle;
+  }
+  .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+<h1>Euclid's Algorithm</h1>
+</head>
+<body>
+<h2>
+  Monomial
+</h2>
+A monomial is a polynomial which has only one term. (e.g. \(xy, x^2y^3z^4\))
+
+<h2>Partition</h2>
+<p><strong>Definition</strong> A partition \(\lambda\) is a (finite or infinite) sequence 
+$$\lambda = (\lambda_1, \lambda_2, \dots , \lambda_l,\dots)$$
+of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lambda_l\geq \dots\) and containing only finitely many non-zero terms.</p>
+
+<h3>
+  Parts of \(\lambda\)
+</h3>
+<p>
+  <strong>Definition:</strong> The non-zero terms of a partition \(\lambda\) are called the parts of \(\lambda\).
+</p>
+<p>
+  <strong>Example:</strong> The parts of \(\lambda = (5,4,1,0,0)\) are \(5,4,1\).
+</p>
+
+<h3>
+  Length of \(\lambda\)
+</h3>
+<p>
+  <strong>Definition:</strong> The length of a partition \(\lambda\) is the number of its parts. It is denoted by \(l(\lambda)\).
+</p>
+<p>
+  <strong>Example:</strong> The length of \(\lambda = (5,4,1,0,0)\) is \(3\), (i.e, \(l(\lambda) = 3\)).
+</p>
+
+<h3>
+  Weight of \(\lambda\)
+</h3>
+<p>
+  <strong>Definition:</strong> The weight of a partition \(\lambda\) is the sum of its parts. It is denoted by \(|\lambda|\):
+  $$|\lambda| = \lambda_1 + \lambda_2 + \dots + \lambda_l + \dots$$
+  If \(|\lambda|=n\), we say that \(\lambda\) is a partiton of \(n\).
+</p>
+
+<h2>
+  Symmetric Polynomials
+</h2>
+<p>
+  <strong>Definition:</strong> Let \(p(x_1, x_2, \dots, x_n)\in\mathbb{Z}[x_1, x_2, \dots, x_n]\) and \(\sigma\in \mathfrak{S}_n\)(i.e. Symmetric group).  \(p(x_1, x_2, \dots, x_n)\) is symmetric if 
+  $$p(x_1, x_2, \dots, x_n) = p(x_{\sigma(1)}, x_{\sigma(2)}, \dots, x_{\sigma(n)}).$$
+</p>
+<p>
+  <strong>Example:</strong> \(p(x_1, x_2) = x_1^4 + 5x_1^3x_2 + 10x_1^2x_2^2 + 5x_1x_2^3 + x_2^4\) is symmetric under action of \(\mathfrak{S}_2\).
+</p>
+
+<h3>
+  Monomial Symmetric Polynomials
+</h3>
+<p>
+  <strong>Definiton:</strong> For each \(\alpha = (\alpha_1, \dots, \alpha_n)\in\mathbb{N}^n\) we denote by \(x^\alpha\) the monomial 
+  $$
+    x^\alpha = x_1^{\alpha_1}x_2^{\alpha_2}\dots x_n^{\alpha_n}.
+  $$
+  Let \(\lambda\) be any partition of length less than \(n\) (i.e. \(l(\lambda)\leq n\)). The polynomial \(m_\lambda(x_1, \dots, x_n)\) is defined as below:
+  $$
+    m_\lambda(x_1, \dots, x_n) = \sum_{\alpha\in A} x^\alpha,
+  $$
+  where \(A=\{\alpha\;|\;\alpha = \sigma\cdot \lambda\text{ for }\sigma\in\mathfrak{S}_n\}\). \(m_\lambda(x_1, \dots, x_n)\) is called the monomial symmetric polynomial.
+</p>
+<p>
+  <strong>Example:</strong> Let \(\lambda = (5, 3, 0)\). Since \(A = \{(5,3,0),(3,5,0), (0,3,5), (5,0,3), (0,5,3), (3,0,5)\}\), we can get 
+  $$
+  \begin{align*}
+  m_\lambda(x_1, x_2, x_3) &= x_1^5x_2^3x_3^0 + x_1^5x_2^0x_3^3 + x_1^3x_2^5x_3^0 + x_1^0x_2^5x_3^3 + x_1^3x_2^0x_3^5 + x_1^0x_2^3x_3^5\\
+  &= x_1^5x_2^3 + x_1^5x_3^3 + x_1^3x_2^5 + x_2^5x_3^3 + x_1^3x_3^5 + x_2^3x_3^5
+  \end{align*}
+  $$
+</p>
+
+<h3>
+  Elementary Symmetric Polynomials
+</h3>
+<p>
+  <strong>Definition:</strong> For each integer \(0\leq r\leq n\) the \(r\)th elementary symmetric polynomial \(e_r\) is defined as below:
+  $$
+    e_0(x_1, x_2, \dots, x_n)=1,
+  $$
+  $$
+    e_r(x_1, x_2, \dots, x_n) = \sum_{1\leq i_1 < i_2 < \dots < i_r\leq n} x_{i_1}x_{i_2}\dots x_{i_r}.
+  $$
+</p>
+<p>
+  <strong>Example:</strong> 
+  $$
+  e_2(x_1, x_2, x_3, x_4)= x_1x_2+x_1x_3+ x_1x_4+x_2x_3+x_2x_4+x_3x_4.
+  $$
+</p>
+<p>
+  <strong>Oberservation: </strong> When \(r=n\), we have
+  $$
+    e_n(x_1, x_2, \dots, x_n) = x_1x_2\dots x_n = m_{(1^n)}(x_1, x_2, \dots, x_n),
+  $$
+  where \((1^n)\) is a partition with length \(n\) and all parts are equal to \(1\) (e.g. \((1^4) = (1,1,1,1)\)).
+</p>
+
+<p>
+  <strong>Definition: </strong> The generating function for the \(e_r\):
+  $$
+    E(r) =  \prod_{i=1}^\infty (1+x_ir)=\sum_{i=0}^\infty e_i(x_1, x_2, \dots, x_n)r^i.
+  $$
+</p>
+
+<h3>
+  Complete Symmetric Polynomials
+</h3>
+<p><strong>Definition: </strong>For each \(r\geq 0\) the \(r\)th complete symetric function \(h_r\), is the sum of all monomials of total degree \(r\) in the variables \(x_1, x_2, \dots,\) so that
+$$
+h_0(x_1, x_2, \dots, x_n)=0.
+$$
+$$
+h_1(x_1, x_2, \dots, x_n) = 1.
+$$
+$$
+  h_r(x_1, x_2, \dots, x_n) = \sum_{|\lambda|=r} m_\lambda(x_1, x_2, \dots, x_n).
+$$
+</p>
+<p>
+  <strong>Example:</strong> 
+  We want to know \(h_2(x_1, x_2, x_3, x_4)\). There are only two partition which has weight \(2\): \((2, 0, 0, 0), (1, 1, 0, 0)\).
+  $$
+  \begin{align*}
+  h_2(x_1, x_2, x_3, x_4)&= m_{(2, 0, 0, 0)}(x_1, x_2, x_3, x_4) + m_{(1, 1, 0, 0)}(x_1, x_2, x_3, x_4)\\
+  &= x_1^2 + x_2^2 + x_3^2 + x_4^2 + x_1x_2 + x_1x_3 + \\
+  &\phantom=x_1x_4 + x_2x_3 + x_2x_4 + x_3x_4.
+  \end{align*}
+  $$
+</p>
+
+<p>
+  <strong>Definition: </strong> The generating function for the \(h_r\):
+  $$
+    H(r) =  \prod_{i=1}^\infty (1-x_ir)^{-1}=\sum_{i=0}^\infty h_i(x_1, x_2, \dots, x_n)r^i.
+  $$
+</p> 
+
+
+<!-- <h3>Kostka number</h3>
+Kostka number, \(K_{\lambda\mu}\), is equal to the number of Young tableaux of shape \(\lambda\)  and weight \(\mu\).
+
+Let \(S\) be a set. A matrix \(m : S\times S\to \{1,2, \dots ,\infty\}\) is called a Coxeter matrix if it satisfies
+$$m(x,y) = m(y,x)$$
+$$m(x,y) = 1\text{ implies }x=y$$ -->
+
+<h2>References</h2>
+  <ul>
+    <li>I. G. Macdonald, "Symmetric Functions and Hall Polynomials", Oxford Science Publication, Second Edition, 1995.</li>
+  </ul>
+</body>
+</html>
+
