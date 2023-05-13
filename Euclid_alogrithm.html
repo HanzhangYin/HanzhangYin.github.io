@@ -170,6 +170,14 @@
 <h1>Euclid's Algorithm</h1>
 </head>
 <body>
+  <h2>Two Principles of Integers</h2>
+  <p>
+    <strong>Least-integer principle: </strong>a nonempty set of integers that is bounded below contains a smallest element.
+  </p>
+  <p>
+    <strong>Greatest-integer principle: </strong>a nonempty set of integers that is bounded above contains a largest element.
+  </p>
+
 <h2>
   Greatest Common Divisor
 </h2>
@@ -181,9 +189,17 @@
     <li>if \(c\;|\;a\) and \(c\;|\;b\), then \(c\leq d\).</li>
   </ul>
   </p>
-<h2>
-Linear Diophantine Equations
-</h2>
+<p><strong>Theorem 1: </strong> If \((a, b) = d\), then \((a\;|\;d, b\;|\;d) = 1\).</p>
+<p><strong>Proof. </strong>Suppose that \((a, b) = d\) and \(c= (a\;|\;d, b\;|\;d\)\), and our goal is to show that \(c= 1\). 
+<p><strong>Step 1. </strong> We show that \(c\leq 1\)</p>
+We use the facts that \(c\;|\;(a\;|\;d)\) and \(c\;|\;(b\;|\;d)\). We then know that there are integers \(q\) and \(r\) such that \(cq = a\;|\;d\) and \(cr = b\;|\;d\). 
+That is,
+  $$
+  (cd)q= a\text{ and }(cd)r = b.
+  $$
+  These equations show that cd is a common divisor ofa and b. It is thus no greater than the greatest common divisor of a and b, and this is d.</p>
+  
+<h2>Linear Diophantine Equations</h2>
 <p>
   <strong>Definition:</strong> Linear Diophantine equation in two unkown variables \(x, y\)takes the form of \(ax+by=c\),
   where \(x, y\in \mathbb{Z}\) and \(a, b, c\) are integer constants.
@@ -195,11 +211,14 @@ Linear Diophantine Equations
 <h2>Unique Factorization of \(\mathbb{Z}\)</h2>
 <p>
   <strong>Lemma: </strong>Every integer \(n, n > 1\), is divisible by a prime.
+</p>
+<p>
   <strong>Proof: </strong>Consider the set of divisors of \(n\) which are greater than \(1\) and less than \(n\). It is either empty or nonempty. 
   If it is empty, then \(n\) is prime by definition, and thus has a prime divisor, which is itself. 
   If it is nonempty, then the least-integer principle says that it has a smallest element, call it \(d\). 
   If \(d\) had a divisor greater than \(1\) and less than \(d\), then so would \(n\), but this is impossible because \(d\) was the smallest such
   divisor. Thus \(d\) is prime, and \(n\) has a prime divisor, namely \(d\).
+</p>
 
 
 
