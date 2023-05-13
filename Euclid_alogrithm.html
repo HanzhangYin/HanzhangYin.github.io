@@ -172,36 +172,40 @@
 <body>
   <h2>Two Principles of Integers</h2>
   <p>
-    <strong>Least-integer principle: </strong>a nonempty set of integers that is bounded below contains a smallest element.
+    \(\textbf{Least-integer principle: }\)a nonempty set of integers that is bounded below contains a smallest element.
   </p>
   <p>
-    <strong>Greatest-integer principle: </strong>a nonempty set of integers that is bounded above contains a largest element.
+    \(\textbf{Greatest-integer principle: }\)a nonempty set of integers that is bounded above contains a largest element.
   </p>
 
 <h2>
   Greatest Common Divisor
 </h2>
-<p><strong>Definition: </strong> We say \(a\) divides \(b\) (written \(a\;|\; b\)) if and only if there is an integer \(k\) such that \(b = ka\).</p>
+<p>\(\textbf{Definition: }\) We say \(a\) divides \(b\) (written \(a\;|\; b\)) if and only if there is an integer \(k\) such that \(b = ka\).</p>
 
-<p><strong>Definition: </strong> We say \(d\) is the greatest common divisor of \(a\) and \(b\) (written \(d = (a, b)\)) if and only if
+<p>\(\textbf{Definition: }\) We say \(d\) is the greatest common divisor of \(a\) and \(b\) (written \(d = (a, b)\text{ or }d=\gcd(a, b)\)) if and only if
   <ul>
     <li>\(d\;|\;a\) and \(d\;|\;b\),</li>
     <li>if \(c\;|\;a\) and \(c\;|\;b\), then \(c\leq d\).</li>
   </ul>
   </p>
-<p><strong>Theorem 1: </strong> If \((a, b) = d\), then \((a\;|\;d, b\;|\;d) = 1\).</p>
-<p><strong>Proof. </strong>Suppose that \((a, b) = d\) and \(c= (a\;|\;d, b\;|\;d\)\), and our goal is to show that \(c= 1\). 
-<p><strong>Step 1. </strong> We show that \(c\leq 1\)</p>
-We use the facts that \(c\;|\;(a\;|\;d)\) and \(c\;|\;(b\;|\;d)\). We then know that there are integers \(q\) and \(r\) such that \(cq = a\;|\;d\) and \(cr = b\;|\;d\). 
+<p>\(\textbf{Theorem 1: }\)</strong> If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</p>
+<p>\(\textbf{Proof. }\)Suppose that \((a, b) = d\) and \(c= (\frac{a}{d}, \frac{b}{d})\), and our goal is to show that \(c= 1\). 
+<p>\(\textit{Step 1. We show that \(c\geq 1\).}\)</p>
+<p>We can get \(c\geq 1\) since \(c\) is the greatest common divisor of two integers and every greatest common divisor is greater than or equal to 1.</p>
+<p>\(\textit{Step 2. We show that \(c\leq 1\).}\)</p>
+<p>We use the facts that \(c\;|\;\frac{a}{d}\) and \(c\;|\;\frac{b}{d}\). We then know that there are integers \(q\) and \(r\) such that \(cq = \frac{a}{d}\) and \(cr = \frac{b}{d}\). 
 That is,
   $$
   (cd)q= a\text{ and }(cd)r = b.
   $$
-  These equations show that cd is a common divisor ofa and b. It is thus no greater than the greatest common divisor of a and b, and this is d.</p>
+Then we can get that \(cd\;|\;a\) and \(cd\;|\;b\), which implies that \(cd\) is a common divisor of \(a\) and \(b\). 
+Since \(d\) is the greatest commond divisor of \(a\) and \(b\), we can get that \(cd\leq d\). Since \(d\) is positive, then we can get that \(c\leq 1\).
+Since we have \(c\leq 1\) and \(c\geq 1\), we can get \(c=1\).</p>
   
 <h2>Linear Diophantine Equations</h2>
 <p>
-  <strong>Definition:</strong> Linear Diophantine equation in two unkown variables \(x, y\)takes the form of \(ax+by=c\),
+  \(\textbf{Definition: }\) Linear Diophantine equation in two unkown variables \(x, y\)takes the form of \(ax+by=c\),
   where \(x, y\in \mathbb{Z}\) and \(a, b, c\) are integer constants.
 </p>
 <p>
