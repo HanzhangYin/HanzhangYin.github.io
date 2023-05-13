@@ -210,6 +210,42 @@ Since we have \(c\leq 1\) and \(c\geq 1\), we can get \(c=1\).\[ \tag*{$\square$
   a= bq+r.
   $$
 </p>
+<p>\(\textbf{Proof. }\)Consider the set of integers \(\{a,a-b,a-2b,a-3b, \dots \}\). Since \(a\geq 0\), it contains a subset of nonnegative integers which is nonempty and bounded below by 0.
+   According the least-integer principle, it contains a smallest element. Let be \(r = a - qb\) be the smallest integer which is larger than or equal to 0. </p>
+<p> \(\textit{Step 1. We show that \(r\) is less than \(b\)}\)</p>
+<p>We will prove it with mathematical contradcition. Suppose that \(r\geq b\). Then we can get
+$$
+r = a-qb\geq b,
+$$
+$$
+a-qb-b\geq 0,
+$$
+$$
+a-(q+1)b\geq 0.
+$$
+Since \(0\leq a-(q+1)b < r\), \(r\) is not the smallest non-negative integer in the set. This contradicts the fact that \(r\) is the smallest non-negative integer in the set.
+</p>
+<p>\(\textit{Step 2. We show that \(r\) and \(q\) are unique}\) (i.e. \((q, r)\) is an unique pair)</p>
+<p>Suppose there is another pair \((q', r')\) such that 
+  $$
+  a= bq +r = bq'+r',
+  $$
+with \(0\leq r< b\) and \(0\leq r'< b\). Hence, we can get that 
+$$
+b(q-q') = r'-r.
+$$
+Since \(q-q'\) is an integer and \(r'-r\) is an integer, we can get that \(b\) divides \(r'-r\) (i.e. \(b\;|\;(r'-r)\)). 
+Since  \(0\leq r< b\) and \(0\leq r'< b\), we can get
+$$
+-b<-r\leq 0.
+$$
+Thus, 
+$$
+-b< r'-r< b.
+$$
+Since \(r'-r\) is a multiple of \(b\), the only multiple of \(b\) between \(-b\) and \(b\) is \(0\). Hence, we can get that \(r'-r=0\), which implies that \(r'=r\).
+Since we know that \(b(q-q') = r'-r\), we can get \(b(q-q') = 0\). Since \(b\neq 0\), we can get that \(q-q'=0\), which implies that \(q=q'\). \[ \tag*{$\square$} \]
+</p>
 
 <h2>Linear Diophantine Equations</h2>
 <p>
