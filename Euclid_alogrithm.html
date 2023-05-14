@@ -247,18 +247,69 @@ Since \(r'-r\) is a multiple of \(b\), the only multiple of \(b\) between \(-b\)
 Since we know that \(b(q-q') = r'-r\), we can get \(b(q-q') = 0\). Since \(b\neq 0\), we can get that \(q-q'=0\), which implies that \(q=q'\). \[ \tag*{$\square$} \]
 </p>
 <br>
+<p>\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</p> 
+<p>\(\textbf{Proof. }\)Based on the definition, there are integers \(q_1, q_2, \dots, q_n\) such that \(a_1=dq_1,a_2=dq_2, \dots, a_n=dq_n\). Thus,
+$$
+\begin{align*}
+c_1a_1+c_2a_2+\dots+c_na_n &= c_1dq_1+c_2dq_2+\dots+c_ndq_n\\
+&= d(c_1q_1+c_2q_2+\dots+c_nq_n).
+\end{align*}
+$$
+Thus, we can get that \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\). \[ \tag*{$\square$} \]
+</p>
+<br>
 <p>
-  \(\textbf{Lemma 3. }\) If \(a=bq+r\), then \((a,b)=(b,r)\).
+  \(\textbf{Lemma 2. }\) If \(a=bq+r\), then \((a,b)=(b,r)\).
 </p>
-<p>\(\textbf{Proof. }\)Let \(d= (a, b)\). We know that since \(d\;|\;a\) and \(d\;|\;b\), it follows from
-  a =bq+rthatdI
-  c is any common divisor of b and
-  r.
-  Thus d is a common divisor of b and r. Suppose that
-  We know that c I b and c I
-  b q +r thatc Ia. Thusc isacommondivisorofa andb, and hence c :S d. Both parts of the
+<p>\(\textbf{Proof. }\)Let \(d= (a, b)\). Since  \(a=bq+r\), we can write \(r = a+(-b)q\). 
+Since \(d\;|\;a\), \(d\;|\;b\), and \(q\) is an integer, we can get \(d\;|\;r\) according to \(\textbf{Lemma 1}\). Thus, \(d\) is a common divisor of \(b\) and \(r\). 
+Suppose that \(c\) is any common divisor of \(b\) and \(r\). 
+Since \(c\;|\;b\) and \(c\;|\;r\), we can get \(c\;|\;a\) according to \(\textbf{Lemma 1}\). 
+Thus, \(c\) is a common divisor of \(a\) and \(b\). 
+Since \(d\) is the greatest common divisor of \(a\) and \(b\), we can get that \(c\leq d\) (i.e. any common divisor of \(b\) and \(r\) is less than or equal to \(d\)). 
+Therefore, \(d=(b,r)\). \[ \tag*{$\square$} \]
+</p>
+<br>
+<p>
+  \(\textbf{Theorem 3. Euclid's Algorithm. }\) If \(a\) and \(b\) are positive integers, \(b\neq 0\), and
+  $$
+  a=bq+r,\qquad 0\leq r < b,
+  $$
+  $$
+  b = rq_1+r_1, \qquad 0\leq r_1 < r,
+  $$
+  $$
+  r =r_1q_2+r_2, \qquad 0\leq r_2 < r_1,
+  $$
+  $$
+  r_1 = r_2q_3+r_3, \qquad 0\leq r_3 < r_2,
+  $$
+  $$
+  \vdots
+  $$
+  $$
+  r_k = r_{k+1}q_{k+2}+r_{k+2}, \qquad 0\leq r_{k+2} < r_{k+1},
+  $$
+  then for \(k\) large enough, say \(k=t\), we have
+  $$
+  r_{t-1} = r_tq_{t+1},
+  $$
+  and \((a, b) = r_t\).
+</p>
+<p>\(\textbf{Proof. }\)The sequence of nonnegative integers 
+  $$
+  b>r>r_1>r_2>\dots, 
+  $$
+  must come to an end. Eventually, one of the remainders will be zero. Suppose that it is \(r_{t+1}\). 
+  Then \(r_{t-1} = r_tq_{t+1}+r_{t+1}=r_tq_{t+1}\) and we can get \(r_t\;|\;r_{t-1}\). 
+  Thus, we can get \((r_{t-1},r_{t})=r_t\).
+ We apply \(\textbf{Lemma 2}\) over and over, and can get
+ $$
+  (a, b) = (b, r) = (r, r_1) = (r_1, r_2) = \dots =(r_{t-1}, r_t) =r_t.
+$$
+  If either \(a\) or \(b\) is negative, we can use the fact that \((a, b) = (-a, b)=(a,-b)=(-a, -b)\). \[ \tag*{$\square$} \]
+</p>
 
-</p>
 
 <h2>Linear Diophantine Equations</h2>
 <p>
