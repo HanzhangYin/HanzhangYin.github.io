@@ -327,22 +327,29 @@ $$
   \(\textbf{Lemma 1. }\) Every integer \(n, n > 1\), is divisible by a prime.
 </p>
 <p>
-  <strong>Proof: </strong>Consider the set of divisors of \(n\) which are greater than \(1\) and less than \(n\). It is either empty or nonempty. 
+  \(\textbf{Proof. }\)Consider the set of divisors of \(n\) which are greater than \(1\) and less than \(n\). It is either empty or nonempty. 
   If it is empty, then \(n\) is prime by definition, and thus has a prime divisor, which is itself. 
-  If it is nonempty, then the least-integer principle says that it has a smallest element, call it \(d\). 
-  If \(d\) had a divisor greater than \(1\) and less than \(d\), then so would \(n\), but this is impossible because \(d\) was the smallest such
-  divisor. Thus \(d\) is prime, and \(n\) has a prime divisor, namely \(d\).
+  If it is nonempty, then the least-integer principle says that it has a smallest element, call it \(d\). Now we have to show that \(d\) is a prime by contradcition.
+  If \(d\) had a divisor greater than \(1\) and less than \(d\) (d is not a prime), then so would \(n\). However, this is impossible because \(d\) was the smallest such
+  divisor. Thus \(d\) is prime. \[ \tag*{$\square$} \]
 </p>
 <br>
 <p>
   \(\textbf{Lemma 2. }\)  Every integer \(n,n > 1\), can be written as a product of primes.
 </p>
+<p>
+\(\textbf{Proof}\). From \(\textbf{Lemma 1}\), we know that there is a prime \(p_1\) such that \(p_1\;|\; n\). Hence there exists \(n_1\) where \(1\leq n_1< n\) such that \(n = p_1n_1\).If \(n_1= 1\), then we are done: \(n =p_1\) is an expression of n as a product of primes. 
+If \(n_1 > 1\), then from \(\textbf{Lemma 1}\) again, there is a prime that divides \(n_1\). That is, \(n_1 = p_2n_2\),
+where \(p_2\) is a prime and \(1\leq n_2 < n_1\).
+If \(n_2 =1\), again we are done: \(n = p_1p_2\) is written as a product of primes. 
+But if \(n_2 > 1\), then we apply \(\textbf{Lemma 1}\) once again and get that \(n_2 = p_3n_3'\) with \(p_3\) a prime and \(1\leq  n_3 < n_2\). If \(n_3=1\), we are done. 
+If not, we continue the same process. We will sooner or later come to \(n_i = 1\) since \(n > n_1 > n_2 >\dots\)
+and each \(n_i\) is positive; such a sequence cannot continue forever. For some \(k\), we will have \(n_k = 1\), in which case \(n = p_1p_2\cdots p_k\) is the desired expression of \(n\) as a product of primes. \[ \tag*{$\square$} \]
+</p>
+<p>
+\(\textbf{Note.}\) each \(p_i\) may not be in unique.
+</p>
 
-Proof. From Lemma 1, we knowthat there is a prime \(p_1\) such that \(P_1\;|\; n\). That is there exists \(n_1\), where1:S nl< n.If nl= 1,thenwearedone:n =PI is an expression of n as a product of primes. If nl > 1, then from Lemma 1 again, there is a prime that divides nl. That is, nl = P2nZ,
-wherepz is a prime and 1:S/12 < n
-I.
-If /12 =
-1, again we are done
 
 
 
