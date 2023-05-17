@@ -1,6 +1,5 @@
 <html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Allow the horizontal bar works-->
 <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
@@ -11,6 +10,7 @@
 	
 <title> siteHan </title> 
 <style>
+
 .material-symbols-outlined {
 font-variation-settings:
 'FILL' 0,
@@ -21,38 +21,6 @@ body {
 background-color: #ededed ;
 margin: 0 15%;
 font-family: 'Spectral', serif; }
-header {
-background-color: #ededed;
-padding: 20px;
-text-align: center;
-font-family: 'Spectral', serif; }
-.navbar {
-            overflow: hidden;
-            background-color: transparent;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: #ededed;
-            text-align: center;
-            padding: 11px 10px;
-            text-decoration: none;
-        }
-        .navbar a:hover {
-            background-color: #565656;
-            color: white;
-        }
-        header {
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            margin: 20px;
-            display: none;
-        }
-        #about-me {
-            display: block;
-        }
 h1 {
 text-align: right;
 font-family: 'Spectral', serif;
@@ -102,8 +70,8 @@ background-color: transparent;
 text-decoration: none;
 }
 
-/* .cool-button {
-background-color: #999999; <!--Grey background-->
+.cool-button {
+background-color: #999999; /_ Grey background _/
 border: none; /_ Remove border _/
 color: black; /_ White text color _/
 padding: 15px 26px; /_ Padding _/
@@ -115,9 +83,9 @@ font-size: 13px; /_ Increase font size _/
 margin: 4px 2px; /_ Add some margin _/
 cursor: pointer; /_ Add a pointer cursor on hover _/
 transition: background-color 0.3s ease; /_ Add a transition effect on hover _/
-} */
+}
 
-/* Change the background color on hover */
+/_ Change the background color on hover _/
 .cool-button:hover {
 background-color: #F89880;
 }
@@ -152,26 +120,15 @@ margin-top: 20px;
 </style>
 </head>
 
-<header>
-<h1>
-Hanzhang Yin
-</h1>
-</header>
+<h1>Hanzhang Yin</h1>
 
-<div class="navbar">
-  <a href="#about-me">About Me</a>
-  <a href="#research">Research & Interests</a>
-  <a href="#tutoring">Tutoring</a>
-  <a href="#elseworlds">Elseworlds</a>
-  <a href="#contact">Contact</a>
-</div>
 
-<!-- <button class="cool-button" onclick="myFunction1()">
+<button class="cool-button" onclick="myFunction1()">
   <span>About Me!</span>
-</button> -->
+</button>
 
-<section id = "about-me">
-<!-- <div id="myDIV1"> -->
+<div id="myDIV1">
+
 <p>
 <img src="avatar2.png" alt="me" width="125" height="150.5"> 
 </p>
@@ -179,13 +136,13 @@ Hanzhang Yin
 <p>
   I am pursuing a Bachelor degree at the <a href="https://uconn.edu/"> University of Connecticut</a>. I realized my interest in mathematics in my sophomore year and have taken several advanced math classes such as abstract algebra, real analysis, and topology. My research interests include, <a href="https://en.wikipedia.org/wiki/Algebraic_combinatorics"> Algebraic Combinatorics</a>, and <a href="https://en.wikipedia.org/wiki/Graph_theory"> Graph Theory</a>. In my junior year, I worked on two reading projects about combinatorics, which discussed counting walks and young tableaux. It is exciting for me to look for patterns and use multiple aspects of mathematics to solve problems. For example, I am using dominos to construct Fibonacci numbers. My research projects are usually focusing on dominating sets of graphs. My passion drives me to be a tutor assisting non-math degree students in learning calculus and differential equations. After graduation, I plan to continue my research in graduate school and keep discovering the connections between different areas of mathematics.
 </p>
-<!-- </div> -->
-</section>
 
-<!-- <button class="cool-button" onclick="myFunction2()">
+</div>
+
+<button class="cool-button" onclick="myFunction2()">
   <span>Research & Interests</span>
-</button> -->
-<section id = "research">
+</button>
+
 <div id="myDIV2">
 <h3>
 <a href="Combinatorics.html">Combinatorics </a>
@@ -203,20 +160,25 @@ Hanzhang Yin
 <a href="toggling_on_dominating_sets_of_path_graphs.html">Toggling on Path Graphs </a>
 </h3>
 </div>
-</section>
 
-<!-- <button class="cool-button" onclick="myFunction3()">
+<button class="cool-button" onclick="myFunction3()">
+  <span>Tutoring</span>
+</button>
+
+<div id="myDIV3">
+<h3>
+<a href="tutoring/Euclid_alogrithm">Euclid's Algorithm</a>
+</h3>
+
+</div>
+
+
+
+<button class="cool-button" onclick="myFunction4()">
   <span>Elseworlds</span>
-</button> -->
+</button>
 
-<section id="tutoring">
-  <h3>
-  <a href="tutoring/Euclid_alogrithm">Euclid's Algorithm</a>
-  </h3>
-  
-</section>
-
-<section id="elseworlds">
+<div id="myDIV4">
 <h3>
 <a href="elseworlds/fine_tune.html">Fine Tune GPT</a>
 </h3>
@@ -261,9 +223,9 @@ Hanzhang Yin
 <a href="https://htmlcolorcodes.com">Colors for HTML</a>
 </h3>
 
-</section>
+</div>
 
-<section id = "contact">
+
 <h4>
 <a href="cv_hanzhang_yin.pdf">Curriculum vitae (C.V.)</a>
 </h4>
@@ -285,20 +247,8 @@ Connect me: <a href="https://www.linkedin.com/in/hanzhang-yin/" class="social-ic
 	linkedin
  </a>
 </h4>
-</section>
 
 <script>
-  $(document).ready(function(){
-      $(".navbar a").click(function(event){
-          event.preventDefault();
-          var sectionToDisplay = $(this).attr('href');
-          $("section").hide();
-          $(sectionToDisplay).show();
-      });
-  });
-</script>
-
-<!-- <script>
 function myFunction1() {
   var x = document.getElementById("myDIV1");
   if (x.style.display === "none") {
@@ -329,6 +279,17 @@ function myFunction3() {
     x.style.display = "none";
   }
 }
-</script> -->
+</script>
+
+<script>
+function myFunction4() {
+  var x = document.getElementById("myDIV4");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 </html>
