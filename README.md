@@ -51,7 +51,7 @@ font-family: 'Spectral', serif; }
             display: none;
         }
         #about-me {
-            display: block;
+            display: block; /*Let about me section automatically show up when the page loads*/
         }
 h1 {
 text-align: right;
