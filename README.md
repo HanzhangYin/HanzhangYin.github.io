@@ -178,7 +178,7 @@ margin-top: 20px;
   <span>Elseworlds</span>
 </button>
 
-<div id="myDIV3">
+<div id="myDIV4">
 <h3>
 <a href="elseworlds/fine_tune.html">Fine Tune GPT</a>
 </h3>
@@ -273,6 +273,17 @@ function myFunction2() {
 <script>
 function myFunction3() {
   var x = document.getElementById("myDIV3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function myFunction4() {
+  var x = document.getElementById("myDIV4");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
