@@ -162,6 +162,19 @@ margin-top: 20px;
 </div>
 
 <button class="cool-button" onclick="myFunction3()">
+  <span>Tutoring</span>
+</button>
+
+<div id="myDIV3">
+<h3>
+<a href="tutoring/Euclid_alogrithm">Euclid's Algorithm</a>
+</h3>
+
+</div>
+
+
+
+<button class="cool-button" onclick="myFunction4()">
   <span>Elseworlds</span>
 </button>
 
