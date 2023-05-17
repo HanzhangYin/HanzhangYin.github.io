@@ -29,8 +29,10 @@ font-family: 'Spectral', serif; }
 .navbar {
             overflow: hidden;
             background-color: transparent;
+            font-family: 'Spectral', serif;
         }
         .navbar a {
+            font-family: 'Spectral', serif;
             float: left;
             display: block;
             color: #ededed;
