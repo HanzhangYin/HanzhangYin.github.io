@@ -263,6 +263,10 @@ Hanzhang Yin
 <a href="https://htmlcolorcodes.com">Colors for HTML</a>
 </h3>
 
+<h3>
+<a href="https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/graph_generators.html">Common Graphs for SageMath</a>
+</h3>
+
 </section>
 
 <section id = "contact">
