@@ -263,6 +263,10 @@ Hanzhang Yin
 <a href="https://htmlcolorcodes.com">Colors for HTML</a>
 </h3>
 
+<h3>
+<a href="https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/graph_generators.html">Common Graphs for SageMath</a>
+</h3>
+
 </section>
 
 <section id = "contact">
@@ -275,7 +279,7 @@ Visit my <a href="https://github.com/HanzhangYin">GitHub</a>
 </h4>
 
 <h4>
-Email me: <a href="mailto:hanzhang.yin@uconn.edu">hanzhang.yin@uconn.edu</a>
+Email me: <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a>
 </h4>
 <h4>
 Call me: <a href="tel:+19599295263">(959) 929-5263</a>
