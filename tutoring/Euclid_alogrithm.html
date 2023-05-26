@@ -247,7 +247,7 @@ Since \(r'-r\) is a multiple of \(b\), the only multiple of \(b\) between \(-b\)
 Since we know that \(b(q-q') = r'-r\), we can get \(b(q-q') = 0\). Since \(b\neq 0\), we can get that \(q-q'=0\), which implies that \(q=q'\). \[ \tag*{$\square$} \]
 </p>
 <br>
-<p>\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</p> 
+<p>\(\textbf{Lemma 1 }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</p> 
 <p>\(\textbf{Proof. }\)Based on the definition, there are integers \(q_1, q_2, \dots, q_n\) such that \(a_1=dq_1,a_2=dq_2, \dots, a_n=dq_n\). Thus,
 $$
 \begin{align*}
@@ -259,7 +259,7 @@ Thus, we can get that \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\). \[ \tag*{$\square$
 </p>
 <br>
 <p>
-  \(\textbf{Lemma 2. }\) If \(a=bq+r\), then \((a,b)=(b,r)\).
+  \(\textbf{Lemma 2 }\) If \(a=bq+r\), then \((a,b)=(b,r)\).
 </p>
 <p>\(\textbf{Proof. }\)Let \(d= (a, b)\). Since  \(a=bq+r\), we can write \(r = a+(-b)q\). 
 Since \(d\;|\;a\), \(d\;|\;b\), and \(q\) is an integer, we can get \(d\;|\;r\) according to \(\textbf{Lemma 1}\). Thus, \(d\) is a common divisor of \(b\) and \(r\). 
@@ -324,7 +324,7 @@ $$
 
 <h2>Unique Factorization of \(\mathbb{Z}\)</h2>
 <p>
-  \(\textbf{Lemma 1. }\) Every integer \(n, n > 1\), is divisible by a prime.
+  \(\textbf{Lemma 4. }\) Every integer \(n, n > 1\), is divisible by a prime.
 </p>
 <p>
   \(\textbf{Proof. }\)Consider the set of divisors of \(n\) which are greater than \(1\) and less than \(n\). It is either empty or nonempty. 
@@ -335,7 +335,7 @@ $$
 </p>
 <br>
 <p>
-  \(\textbf{Lemma 2. }\)  Every integer \(n,n > 1\), can be written as a product of primes.
+  \(\textbf{Lemma 5. }\)  Every integer \(n,n > 1\), can be written as a product of primes.
 </p>
 <p>
 \(\textbf{Proof}\). From \(\textbf{Lemma 1}\), we know that there is a prime \(p_1\) such that \(p_1\;|\; n\). Hence there exists \(n_1\) where \(1\leq n_1< n\) such that \(n = p_1n_1\).If \(n_1= 1\), then we are done: \(n =p_1\) is an expression of n as a product of primes. 
@@ -351,7 +351,7 @@ and each \(n_i\) is positive; such a sequence cannot continue forever. For some 
 </p>
 <br>
 <p>
-  \(\textbf{Theorem 1. }\) (Euclid). There are infinitely many primes.
+  \(\textbf{Theorem 6. }\) (Euclid). There are infinitely many primes.
 </p>
 <p>
 \(\textbf{Proof}\). We will prove it with mathematical contradiction. Suppose there are finite primes \(p_1, p_2, \dots, p_r\). 
@@ -359,11 +359,16 @@ Consider the integer
 $$
 n = p_1p_2\cdots p_r+1.
 $$
-According to \(\textbf{Lemma 1}\), we know that there is a prime \(p'\) such that \(p'\;|\;n\). Since there are finitly many primes, \(p'\) must be one of \(p_1, p_2, \dots, p_r\).
+According to \(\textbf{Lemma 4}\), we know that there is a prime \(p'\) such that \(p'\;|\;n\). Since there are finitly many primes, \(p'\) must be one of \(p_1, p_2, \dots, p_r\).
 Hence, we can get
 $$
 p'\;|\;p_1p_2\cdots p_r+1.\qquad p'\;|\;p_1p_2\cdots p_r.
 $$
+According to \(\textbf{Lemma 1}\), we can get 
+$$
+p'\;|\;(p_1p_2\cdots p_r+1)-(p_1p_2\cdots p_r)=1.
+$$
+No primes divide \(1\) because all are greater than \(1\). Thus, contradiction exists. \[ \tag*{$\square$} \]
 </p>
 
 
