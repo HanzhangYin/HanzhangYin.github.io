@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+<title>Symmetric Polynomial</title>
+<style>
+  html {
+    color: #1a1a1a;
+    background-color: #ededed;
+  }
+  body {
+    margin: 0 auto;
+    max-width: 50em;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-family:  'Spectral', serif;
+  }
+  @media (max-width: 600px) {
+    body {
+      font-size: 0.9em;
+      padding: 12px;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+  @media print {
+    html {
+      background-color: white;
+    }
+    body {
+      background-color: transparent;
+      color: black;
+      font-size: 12pt;
+    }
+    p, h2, h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2, h3, h4 {
+      page-break-after: avoid;
+    }
+  }
+  p {
+    margin: 1em 0;
+  }
+  a {
+    color: #1a1a1a;
+  }
+  a:visited {
+    color: #1a1a1a;
+  }
+  img {
+    max-width: 100%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.4em;
+  }
+  h5, h6 {
+    font-size: 1em;
+    font-style: italic;
+  }
+  h6 {
+    font-weight: normal;
+  }
+  ol, ul {
+    padding-left: 1.7em;
+    margin-top: 1em;
+  }
+  li > ol, li > ul {
+    margin-top: 0;
+  }
+  blockquote {
+    margin: 1em 0 1em 1.7em;
+    padding-left: 1em;
+    border-left: 2px solid #e6e6e6;
+    color: #606060;
+  }
+  code {
+    font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+    font-size: 85%;
+    margin: 0;
+    hyphens: manual;
+  }
+  pre {
+    background-color: #d9d9d9; 
+    margin: 1em 0;
+    overflow: auto;
+  }
+  <!--add new color-->
+  pre code {
+    padding: 0;
+    overflow: visible;
+    overflow-wrap: normal;
+  }
+  .sourceCode {
+   background-color: transparent;
+   overflow: visible;
+  }
+  hr {
+    background-color: #1a1a1a;
+    border: none;
+    height: 1px;
+    margin: 1em 0;
+  }
+  table {
+    margin: 1em 0;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+  table caption {
+    margin-bottom: 0.75em;
+  }
+  tbody {
+    margin-top: 0.5em;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  th {
+    border-top: 1px solid #1a1a1a;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+  }
+  td {
+    padding: 0.125em 0.5em 0.25em 0.5em;
+  }
+  header {
+    margin-bottom: 4em;
+    text-align: center;
+  }
+  #TOC li {
+    list-style: none;
+  }
+  #TOC ul {
+    padding-left: 1.3em;
+  }
+  #TOC > ul {
+    padding-left: 0;
+  }
+  #TOC a:not(:hover) {
+    text-decoration: none;
+  }
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  div.columns{display: flex; gap: min(4vw, 1.5em);}
+  div.column{flex: auto; overflow-x: auto;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+  ul.task-list li input[type="checkbox"] {
+    width: 0.8em;
+    margin: 0 0.8em 0.2em -1.6em;
+    vertical-align: middle;
+  }
+  .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+<h1>Euclid's Algorithm</h1>
+</head>
+<body>
+  <h2>Two Principles of Integers</h2>
+  <p>
+    \(\textbf{Least-integer principle: }\)a nonempty set of integers that is bounded below contains a smallest element.
+  </p>
+  <p>
+    \(\textbf{Greatest-integer principle: }\)a nonempty set of integers that is bounded above contains a largest element.
+  </p>
+
+<h2>
+  Greatest Common Divisor
+</h2>
+<p>\(\textbf{Definition: }\) We say \(a\) divides \(b\) (written \(a\;|\; b\)) if and only if there is an integer \(k\) such that \(b = ka\).</p>
+<br>
+<p>\(\textbf{Definition: }\) We say \(d\) is the greatest common divisor of \(a\) and \(b\) (written \(d = (a, b)\text{ or }d=\gcd(a, b)\)) if and only if
+  <ul>
+    <li>\(d\;|\;a\) and \(d\;|\;b\),</li>
+    <li>if \(c\;|\;a\) and \(c\;|\;b\), then \(c\leq d\).</li>
+  </ul>
+  </p>
+<br>
+<p>\(\textbf{Theorem 1: }\)</strong> If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</p>
+<p>\(\textbf{Proof. }\)Suppose that \((a, b) = d\) and \(c= (\frac{a}{d}, \frac{b}{d})\), and our goal is to show that \(c= 1\). 
+<p>\(\textit{Step 1. We show that \(c\geq 1\).}\)</p>
+<p>We can get \(c\geq 1\) since \(c\) is the greatest common divisor of two integers and every greatest common divisor is greater than or equal to 1.</p>
+<p>\(\textit{Step 2. We show that \(c\leq 1\).}\)</p>
+<p>We use the facts that \(c\;|\;\frac{a}{d}\) and \(c\;|\;\frac{b}{d}\). We then know that there are integers \(q\) and \(r\) such that \(cq = \frac{a}{d}\) and \(cr = \frac{b}{d}\). 
+That is,
+  $$
+  (cd)q= a\text{ and }(cd)r = b.
+  $$
+Then we can get that \(cd\;|\;a\) and \(cd\;|\;b\), which implies that \(cd\) is a common divisor of \(a\) and \(b\). 
+Since \(d\) is the greatest commond divisor of \(a\) and \(b\), we can get that \(cd\leq d\). Since \(d\) is positive, then we can get that \(c\leq 1\).
+Since we have \(c\leq 1\) and \(c\geq 1\), we can get \(c=1\).\[ \tag*{$\square$} \]
+</p>
+<br>
+<p>\(\textbf{Theorem 2. The Division Algorithm.}\) Given positive integers \(a\) and \(b\), \(b\neq  0\), there exist unique integers \(q\) and \(r\), with \(0 \leq  r < b\) such that
+  $$
+  a= bq+r.
+  $$
+</p>
+<p>\(\textbf{Proof. }\)Consider the set of integers \(\{a,a-b,a-2b,a-3b, \dots \}\). Since \(a\geq 0\), it contains a subset of nonnegative integers which is nonempty and bounded below by 0.
+   According the least-integer principle, it contains a smallest element. Let be \(r = a - qb\) be the smallest integer which is larger than or equal to 0. </p>
+<p> \(\textit{Step 1. We show that \(r\) is less than \(b\)}\)</p>
+<p>We will prove it with mathematical contradcition. Suppose that \(r\geq b\). Then we can get
+$$
+r = a-qb\geq b,
+$$
+$$
+a-qb-b\geq 0,
+$$
+$$
+a-(q+1)b\geq 0.
+$$
+Since \(0\leq a-(q+1)b < r\), \(r\) is not the smallest non-negative integer in the set. This contradicts the fact that \(r\) is the smallest non-negative integer in the set.
+</p>
+<p>\(\textit{Step 2. We show that \(r\) and \(q\) are unique}\) (i.e. \((q, r)\) is an unique pair)</p>
+<p>Suppose there is another pair \((q', r')\) such that 
+  $$
+  a= bq +r = bq'+r',
+  $$
+with \(0\leq r< b\) and \(0\leq r'< b\). Hence, we can get that 
+$$
+b(q-q') = r'-r.
+$$
+Since \(q-q'\) is an integer and \(r'-r\) is an integer, we can get that \(b\) divides \(r'-r\) (i.e. \(b\;|\;(r'-r)\)). 
+Since  \(0\leq r< b\) and \(0\leq r'< b\), we can get
+$$
+-b<-r\leq 0.
+$$
+Thus, 
+$$
+-b< r'-r< b.
+$$
+Since \(r'-r\) is a multiple of \(b\), the only multiple of \(b\) between \(-b\) and \(b\) is \(0\). Hence, we can get that \(r'-r=0\), which implies that \(r'=r\).
+Since we know that \(b(q-q') = r'-r\), we can get \(b(q-q') = 0\). Since \(b\neq 0\), we can get that \(q-q'=0\), which implies that \(q=q'\). \[ \tag*{$\square$} \]
+</p>
+<br>
+<p>\(\textbf{Lemma 1 }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</p> 
+<p>\(\textbf{Proof. }\)Based on the definition, there are integers \(q_1, q_2, \dots, q_n\) such that \(a_1=dq_1,a_2=dq_2, \dots, a_n=dq_n\). Thus,
+$$
+\begin{align*}
+c_1a_1+c_2a_2+\dots+c_na_n &= c_1dq_1+c_2dq_2+\dots+c_ndq_n\\
+&= d(c_1q_1+c_2q_2+\dots+c_nq_n).
+\end{align*}
+$$
+Thus, we can get that \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\). \[ \tag*{$\square$} \]
+</p>
+<br>
+<p>
+  \(\textbf{Lemma 2 }\) If \(a=bq+r\), then \((a,b)=(b,r)\).
+</p>
+<p>\(\textbf{Proof. }\)Let \(d= (a, b)\). Since  \(a=bq+r\), we can write \(r = a+(-b)q\). 
+Since \(d\;|\;a\), \(d\;|\;b\), and \(q\) is an integer, we can get \(d\;|\;r\) according to \(\textbf{Lemma 1}\). Thus, \(d\) is a common divisor of \(b\) and \(r\). 
+Suppose that \(c\) is any common divisor of \(b\) and \(r\). 
+Since \(c\;|\;b\) and \(c\;|\;r\), we can get \(c\;|\;a\) according to \(\textbf{Lemma 1}\). 
+Thus, \(c\) is a common divisor of \(a\) and \(b\). 
+Since \(d\) is the greatest common divisor of \(a\) and \(b\), we can get that \(c\leq d\) (i.e. any common divisor of \(b\) and \(r\) is less than or equal to \(d\)). 
+Therefore, \(d=(b,r)\). \[ \tag*{$\square$} \]
+</p>
+<br>
+<p>
+  \(\textbf{Theorem 3. Euclid's Algorithm. }\) If \(a\) and \(b\) are positive integers, \(b\neq 0\), and
+  $$
+  a=bq+r,\qquad 0\leq r < b,
+  $$
+  $$
+  b = rq_1+r_1, \qquad 0\leq r_1 < r,
+  $$
+  $$
+  r =r_1q_2+r_2, \qquad 0\leq r_2 < r_1,
+  $$
+  $$
+  r_1 = r_2q_3+r_3, \qquad 0\leq r_3 < r_2,
+  $$
+  $$
+  \vdots
+  $$
+  $$
+  r_k = r_{k+1}q_{k+2}+r_{k+2}, \qquad 0\leq r_{k+2} < r_{k+1},
+  $$
+  then for \(k\) large enough, say \(k=t\), we have
+  $$
+  r_{t-1} = r_tq_{t+1},
+  $$
+  and \((a, b) = r_t\).
+</p>
+<p>\(\textbf{Proof. }\)The sequence of nonnegative integers 
+  $$
+  b>r>r_1>r_2>\dots, 
+  $$
+  must come to an end. Eventually, one of the remainders will be zero. Suppose that it is \(r_{t+1}\). 
+  Then \(r_{t-1} = r_tq_{t+1}+r_{t+1}=r_tq_{t+1}\) and we can get \(r_t\;|\;r_{t-1}\). 
+  Thus, we can get \((r_{t-1},r_{t})=r_t\).
+ We apply \(\textbf{Lemma 2}\) over and over, and can get
+ $$
+  (a, b) = (b, r) = (r, r_1) = (r_1, r_2) = \dots =(r_{t-1}, r_t) =r_t.
+$$
+  If either \(a\) or \(b\) is negative, we can use the fact that \((a, b) = (-a, b)=(a,-b)=(-a, -b)\). \[ \tag*{$\square$} \]
+</p>
+
+
+<h2>Linear Diophantine Equations</h2>
+<p>
+  \(\textbf{Definition: }\) Linear Diophantine equation in two unkown variables \(x, y\)takes the form of \(ax+by=c\),
+  where \(x, y\in \mathbb{Z}\) and \(a, b, c\) are integer constants.
+</p>
+<p>
+  <strong>Example:</strong> \(3x+5y=7\) is a linear Diophantine equation.
+</p>
+
+
+
+<h2>Unique Factorization of \(\mathbb{Z}\)</h2>
+<p>
+  \(\textbf{Lemma 4. }\) Every integer \(n, n > 1\), is divisible by a prime.
+</p>
+<p>
+  \(\textbf{Proof. }\)Consider the set of divisors of \(n\) which are greater than \(1\) and less than \(n\). It is either empty or nonempty. 
+  If it is empty, then \(n\) is prime by definition, and thus has a prime divisor, which is itself. 
+  If it is nonempty, then the least-integer principle says that it has a smallest element, call it \(d\). Now we have to show that \(d\) is a prime by contradcition.
+  If \(d\) had a divisor greater than \(1\) and less than \(d\) (d is not a prime), then so would \(n\). However, this is impossible because \(d\) was the smallest such
+  divisor. Thus \(d\) is prime. \[ \tag*{$\square$} \]
+</p>
+<br>
+<p>
+  \(\textbf{Lemma 5. }\)  Every integer \(n,n > 1\), can be written as a product of primes.
+</p>
+<p>
+\(\textbf{Proof}\). From \(\textbf{Lemma 1}\), we know that there is a prime \(p_1\) such that \(p_1\;|\; n\). Hence there exists \(n_1\) where \(1\leq n_1< n\) such that \(n = p_1n_1\).If \(n_1= 1\), then we are done: \(n =p_1\) is an expression of n as a product of primes. 
+If \(n_1 > 1\), then from \(\textbf{Lemma 1}\) again, there is a prime that divides \(n_1\). That is, \(n_1 = p_2n_2\),
+where \(p_2\) is a prime and \(1\leq n_2 < n_1\).
+If \(n_2 =1\), again we are done: \(n = p_1p_2\) is written as a product of primes. 
+But if \(n_2 > 1\), then we apply \(\textbf{Lemma 1}\) once again and get that \(n_2 = p_3n_3'\) with \(p_3\) a prime and \(1\leq  n_3 < n_2\). If \(n_3=1\), we are done. 
+If not, we continue the same process. We will sooner or later come to \(n_i = 1\) since \(n > n_1 > n_2 >\dots\)
+and each \(n_i\) is positive; such a sequence cannot continue forever. For some \(k\), we will have \(n_k = 1\), in which case \(n = p_1p_2\cdots p_k\) is the desired expression of \(n\) as a product of primes. \[ \tag*{$\square$} \]
+</p>
+<p>
+\(\textbf{Note.}\) each \(p_i\) may not be in unique.
+</p>
+<br>
+<p>
+  \(\textbf{Theorem 6. }\) (Euclid). There are infinitely many primes.
+</p>
+<p>
+\(\textbf{Proof}\). We will prove it with mathematical contradiction. Suppose there are finite primes \(p_1, p_2, \dots, p_r\). 
+Consider the integer 
+$$
+n = p_1p_2\cdots p_r+1.
+$$
+According to \(\textbf{Lemma 4}\), we know that there is a prime \(p'\) such that \(p'\;|\;n\). Since there are finitly many primes, \(p'\) must be one of \(p_1, p_2, \dots, p_r\).
+Hence, we can get
+$$
+p'\;|\;p_1p_2\cdots p_r+1\qquad\text{and}\qquad p'\;|\;p_1p_2\cdots p_r.
+$$
+According to \(\textbf{Lemma 1}\), we can get 
+$$
+p'\;|\;(p_1p_2\cdots p_r+1)-(p_1p_2\cdots p_r)=1.
+$$
+No primes divide \(1\) because all are greater than \(1\). Thus, contradiction exists. \[ \tag*{$\square$} \]
+</p>
+<br>
+<p>
+  \(\textbf{Lemma 7. }\) If \(n\) is composite, then it has a divisor \(d\) such that \(1 < d \leq \sqrt{n} \). 
+</p>
+<p>
+  \(\textbf{Proof}\). Suppose that \(n\) is composite. Then \(n = ab\) for some integers \(a\) and \(b\) with \(1 < a < n, 1< b < n\).
+  If \(a\) and \(b\) are both larger than \(\sqrt{n}\), then
+  $$
+  n = ab > \sqrt{n}\sqrt{n} = n,
+  $$
+which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to \(n\). \[ \tag*{$\square$} \]
+</p>
+
+
+
+<h2>References</h2>
+  <ul>
+    <li>U. Dudley , "Elementary Number Theory", Dover Publications, Second Edition, 2008.</li>
+  </ul>
+</body>
+</html>
+
