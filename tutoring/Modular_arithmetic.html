@@ -172,35 +172,32 @@
 <body>
   <h2>Congruence</h2>
   <p>
-    \(\textbf{Definition: }\)We say that \(a\) is congruent to \(b\) modulo \(m\) (in symbols , \(a\equiv b (\text{mod }m)\)) 
-    if and only if \(m\;|\; (a - b)\), where \(m > O\).
+    \(\textbf{Definition: }\)We say that \(a\) is congruent to \(b\) modulo \(m\) (in symbols , \(a\equiv b\; (\text{mod }m)\)) 
+    if and only if \(m\;|\; (a - b)\), where \(m > 0\).
   </p>
 
-<h2>
-  Greatest Common Divisor
-</h2>
-<p>\(\textbf{Definition: }\) We say \(a\) divides \(b\) (written \(a\;|\; b\)) if and only if there is an integer \(k\) such that \(b = ka\).</p>
 <br>
-<p>\(\textbf{Definition: }\) We say \(d\) is the greatest common divisor of \(a\) and \(b\) (written \(d = (a, b)\text{ or }d=\gcd(a, b)\)) if and only if
-  <ul>
-    <li>\(d\;|\;a\) and \(d\;|\;b\),</li>
-    <li>if \(c\;|\;a\) and \(c\;|\;b\), then \(c\leq d\).</li>
-  </ul>
-  </p>
+
+<p>
+  \(\textbf{Theorem 1. }\) \(a\equiv b\; (\text{mod }m)\) if and only if there is an integer \(k\) such that \(a =b+km\).
+</p>
+<p>
+  \(\textbf{Proof. }\)Suppose that \(a\equiv b\; (\text{mod }m)\). Then \(m\;|\;(a-b)\). Hence, there is an integer \(k\) such that \(a-b=km\). 
+  Thus, we can get \(a=b+km\). 
+  For the other direction, suppose that there is an integer \(k\) such that \(a=b+km\). Then we can get \(a-b=km\). 
+  Since \(k\) is an integer, we can get \(m\;|\;(a-b)\). Thus, we can get \(a\equiv b\; (\text{mod }m)\). \[ \tag*{$\square$} \]
+</p>
+<p>
+  \(\textbf{Note. }\)Theorem 1 can be used as the definition of congruence as well.
+</p>
 <br>
-<p>\(\textbf{Theorem 1: }\)</strong> If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</p>
-<p>\(\textbf{Proof. }\)Suppose that \((a, b) = d\) and \(c= (\frac{a}{d}, \frac{b}{d})\), and our goal is to show that \(c= 1\). 
-<p>\(\textit{Step 1. We show that \(c\geq 1\).}\)</p>
-<p>We can get \(c\geq 1\) since \(c\) is the greatest common divisor of two integers and every greatest common divisor is greater than or equal to 1.</p>
-<p>\(\textit{Step 2. We show that \(c\leq 1\).}\)</p>
-<p>We use the facts that \(c\;|\;\frac{a}{d}\) and \(c\;|\;\frac{b}{d}\). We then know that there are integers \(q\) and \(r\) such that \(cq = \frac{a}{d}\) and \(cr = \frac{b}{d}\). 
-That is,
-  $$
-  (cd)q= a\text{ and }(cd)r = b.
-  $$
-Then we can get that \(cd\;|\;a\) and \(cd\;|\;b\), which implies that \(cd\) is a common divisor of \(a\) and \(b\). 
-Since \(d\) is the greatest commond divisor of \(a\) and \(b\), we can get that \(cd\leq d\). Since \(d\) is positive, then we can get that \(c\leq 1\).
-Since we have \(c\leq 1\) and \(c\geq 1\), we can get \(c=1\).\[ \tag*{$\square$} \]
+<br>
+<p>
+  \(\textbf{Theorem 2. }\)  Every integer is congruent \((\text{mod }m)\) to exactly one of \(0, 1 , \dots, m-1\).
+</p>
+<p>
+  \(\textbf{Proof. }\) 
+  \[ \tag*{$\square$} \]
 </p>
 <br>
 <p>\(\textbf{Theorem 2. The Division Algorithm.}\) Given positive integers \(a\) and \(b\), \(b\neq  0\), there exist unique integers \(q\) and \(r\), with \(0 \leq  r < b\) such that
