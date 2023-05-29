@@ -1,14 +1,19 @@
 .back-button {
-    font-family: 'Roboto', sans-serif; /* Your preferred font for the button text */
-    display: inline-flex; /* To align the icon and text */
-    align-items: center; /* To align the icon and text */
+    font-family: 'Roboto', sans-serif;
+    display: inline-flex;
+    align-items: center;
     padding: 10px;
     cursor: pointer;
+    border: none; /* Removes border */
   }
   
+  /* .back-button:focus {
+    outline: none; /* Removes focus outline  } */
+  
   .back-button .material-symbols-outlined {
-    font-family: 'Material Symbols Outlined'; /* Use the Material Symbols Outlined font */
-    margin-right: 5px; /* Space between icon and text */
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48; /* OpenType font variations */
+    font-family: 'Material Symbols Outlined';
+    margin-right: 5px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
   }
+  
   
