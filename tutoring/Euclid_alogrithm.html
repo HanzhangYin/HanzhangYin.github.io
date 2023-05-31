@@ -152,6 +152,32 @@ $$
   If either \(a\) or \(b\) is negative, we can use the fact that \((a, b) = (-a, b)=(a,-b)=(-a, -b)\). \[ \tag*{$\square$} \]
 </p>
 
+<br>
+
+<p>
+    \(\textbf{Corollary 1. }\) If \(a\) and \(b\) are positive integers, \(b\neq 0\), then there exist integers \(x\) and \(y\) such that 
+    $$
+    ax+by=(a, b).
+    $$
+</p>
+<p>
+  \(\textbf{Proof. }\)Work the Euclidean Algorithm backward. The details are omitted. \[ \tag*{$\square$} \]
+</p>
+
+<br>
+
+<p>
+  \(\textbf{Corollary 2. }\) If \(d\;|\;ab\) and \((d, a) = 1\), then \(d\;|\;b\).
+</p>
+<p>
+    \(\(textbf{Proof. })\)Since \((d, a) = 1\), by \(\textbf{Corollary 1}\), there exist integers \(x\) and \(y\) such that \(dx+ay=1\).
+  Multiplying this by \(b\), we have
+  $$
+    d(bx ) + (ab)y = b.
+  $$
+  Since \(d\;|\;ab\) by assumption and \(d\;|\;db\), we can get \(d\;|\;aby\) and \(d\;|\;dbx\).
+  Hence, we can get \(d\;|\;dbx+aby=b\).\[ \tag*{$\square$} \]
+</p>
 
 <h2>Linear Diophantine Equations</h2>
 <p>
@@ -232,7 +258,15 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
     \(\textbf{Proof}\). Suppose that \(n\) is composite. Accroding to \(\textbf{Lemma 7}\), we can know that \(n\) has a divisor \(d\) such that \(1 \lt d \leq \sqrt{n} \).
     Accroding to \(\textbf{Lemma 4}\), we can know that \(d\) has a prime divisor \(p\). Since \(p\;|\;d\), we can get \(p\;|\;n\) and \(p\leq d\leq \sqrt{n}\). \[ \tag*{$\square$} \]
 </p>
-
+<br>
+<p>
+    \(\textbf{Lemma 9.}\) If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).
+</p>
+<p>
+    \(\textbf{Proof}\). Suppose that \(p\) is prime and \(p\;|\;ab\). Since \(p\) is prime, the only positive integer divisors of \(p\) are \(1\) and \(p\).
+    Hence, \((p, a)=1\) or \((p, a)=p\). If \(p\;|\;a\) (i.e. \((p, a)=p\)), then we are done. If not, then \(p\) and \(a\) are relatively prime (i.e. \((p, a)=1\)). 
+    Accroding to \(\textbf{Corollary 2}\), we can get \(p\;|\;b\). \[ \tag*{$\square$} \]
+</p>
 <h2>References</h2>
   <ul>
     <li>U. Dudley , "Elementary Number Theory", Dover Publications, Second Edition, 2008.</li>
