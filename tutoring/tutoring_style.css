@@ -157,6 +157,35 @@
     margin: 0 0.8em 0.2em -1.6em;
     vertical-align: middle;
   }
-  .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  .tooltip-link {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade-in effect */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip-link:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
 </style>
 
