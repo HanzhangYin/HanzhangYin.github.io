@@ -157,6 +157,7 @@
     margin: 0 0.8em 0.2em -1.6em;
     vertical-align: middle;
   }
+  
   .tooltip-link {
     position: relative;
     display: inline-block;
@@ -164,12 +165,12 @@
   
   .tooltip-text {
     visibility: hidden;
-    width: 120px;
+    width: 400px; /* Width of the tooltip(Box) */
     background-color: #555;
     color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px 10px;
   
     /* Position the tooltip */
     position: absolute;
@@ -179,8 +180,8 @@
     margin-left: -60px;
   
     /* Fade-in effect */
-    opacity: 0;
-    transition: opacity 0.3s;
+    opacity: 1;
+    transition: opacity 0.2s;
   }
   
   .tooltip-link:hover .tooltip-text {
