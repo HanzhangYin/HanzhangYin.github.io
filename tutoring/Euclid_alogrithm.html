@@ -318,21 +318,35 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
 <br>
 
 <p>
-    \(\textbf{Theorem 10. }\)If \(p\;|\;a_1, a_2, \dots, a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).
+    \(\textbf{Theorem 10. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).
 </p>
 <p>
     \(\textbf{Proof}\). We will prove it with mathematical induction. It is true by inspection if \(k = 1\), and 
     <a href="#" class="tooltip-link">\(\textbf{Lemma 9}\)
       <span class="tooltip-text">\(\textbf{Lemma 9. }\)If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\). </span>
     </a>
-    <script src="position_adjust.js"></script> showsthat it is true if \(k = 2\) . We will proceed by induction. Suppose that it is true for \(k=r\). 
-    Suppose that \(p\;|\;a_1a_2\cdots a_{r+1}\), then \(p\;|\;(a_1a_2\cdots a_r)a_{r+1}\). According to 
+    <script src="position_adjust.js"></script> shows that it is true if \(k = 2\) . Now, suppose that it is true for \(k=r\). 
+    Assume that \(p\;|\;a_1a_2\cdots a_{r+1}\), then \(p\;|\;(a_1a_2\cdots a_r)a_{r+1}\). According to 
      <a href="#" class="tooltip-link">\(\textbf{Lemma 9}\)
       <span class="tooltip-text">\(\textbf{Lemma 9. }\)If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).</span>
       </a>
     <script src="position_adjust.js"></script>, we can get \(p\;|\;a_1a_2\cdots a_r\) or \(p\;|\;a_{r+1}\). 
-    If \(p\;|\;a_1a_2\cdots a_r\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,r\).
+    If \(p\;|\;a_1a_2\cdots a_r\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,r\). If \(p\;|\;a_{r+1}\), then it is still true that 
+    \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,r+1\). \[ \tag*{$\square$} \]
     </p>
+
+<br>
+
+<p>
+    \(\textbf{Theorem 11. }\)If \(q_1, q_2, \dots ,q_n\) are primes, and \(p\;|\; q_1q_2\cdots q_n\),then \(p = q_k) for some \(k\).
+</p>
+<p>
+    \(\textbf{Proof. }i\)According to  <a href="#" class="tooltip-link">\(\textbf{Theorem 10}\)
+      <span class="tooltip-text">\(\textbf{Theorem 10. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).</span>
+    </a>
+    <script src="position_adjust.js"></script>, we can know that \(p\;|\;q_k\) for some \(k\). 
+    Since \(q_k\) and \(p\) are both prime, we can get \(p = q_k\). \[ \tag*{$\square$} \]
+</p>
 <h2>References</h2>
   <ul>
     <li>U. Dudley , "Elementary Number Theory", Dover Publications, Second Edition, 2008.</li>
