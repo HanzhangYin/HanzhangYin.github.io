@@ -353,6 +353,36 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
 <p>
     \(\textbf{Theorem 3. }\)Every integer \(n, n > 1\), can be written as a product of primes in an unique way.
 </p>
+<p>
+  \(\textbf{Proof. }\)According to <a href="#" class="tooltip-link">\(\textbf{Lemma 4}\)
+    <span class="tooltip-text">\(\textbf{Lemma 4. }\)Every integer \(n,n > 1\), can be written as a product of primes.</span>
+  </a>,  
+  <script src="position_adjust.js"></script>, that any integer \(n, n > 1\) can be written as a product of primes. 
+  Hence, we need to show that \(n\) cannot have two such representations of products of primes.
+  Suppose that 
+  $$
+  \(n=p_1p_2\cdots p_m\)\quad\text{and}\quad \(n=q_1q_2\cdots q_r\),
+  $$
+  where \(p_1, p_2, \dots, p_m\) and \(q_1, q_2, \dots, q_r\) are primes.
+  we have to show that the integers \(p_1, p_2, \dots, p_m\) are just a rearrangement of the integers \(q_1, q_2, \dots, q_r\).
+  Since \(p_1\;|\; n\), we can know that 
+  $$
+  p_1\;|\;q_1q_2\cdots q_r.
+  $$
+  According to 
+  <a href="#" class="tooltip-link">\(\textbf{Lemma 10} \)
+    <span class="tooltip-text">\(\textbf{Lemma 10. }\)If \(q_1, q_2, \dots ,q_n\) are primes, and \(p\;|\; q_1q_2\cdots q_n\),then \(p = q_k\) for some \(k\).</span>
+  </a>
+  <script src="position_adjust.js"></script>, we can get \(p_1 = q_k\) for some \(k\). Hence, we can rewrite \(n\) as
+  $$
+  n=q_1q_2\cdots q_{k-1}q_k q_{k+1}\cdots q_r,
+  $$
+  and 
+  $$
+  p_1p_2\cdots p_m=q_1q_2\cdots q_{k-1}q_k q_{k+1}\cdots q_r.
+  $$
+
+</p>
 <h2>References</h2>
   <ul>
     <li>U. Dudley , "Elementary Number Theory", Dover Publications, Second Edition, 2008.</li>
