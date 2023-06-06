@@ -381,7 +381,13 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
   $$
   p_1p_2\cdots p_m=q_1q_2\cdots q_{k-1}q_k q_{k+1}\cdots q_r.
   $$
-
+  Since \(p_1=q_k\), we can get
+  $$
+  p_2\cdots p_m=q_1q_2\cdots q_{k-1}q_{k+1}\cdots q_r.
+  $$
+  We can repeat this process and get that \(p_2=q_{k_1}\), \(p_3=q_{k_2}\), \(\dots\), \(p_m=q_{k_{m-1}}\). 
+  We cannot run out of \(q\)'s before all the \(p's\) are gone, because there would be a product of primes equal to \(1\), which is impossible. 
+  Thus, we can get that \(m=r\) and \(p_1, p_2, \dots, p_m\) are just a rearrangement of the primes \(q_1, q_2, \dots, q_r\). \[ \tag*{$\square$} \]
 </p>
 <h2>References</h2>
   <ul>
