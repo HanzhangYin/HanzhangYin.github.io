@@ -213,7 +213,7 @@ $$
 
 <h2>Unique Factorization of \(\mathbb{Z}\)</h2>
 <p>
-  \(\textbf{Lemma 4. }\) Every integer \(n, n > 1\), is divisible by a prime.
+  \(\textbf{Lemma 3. }\) Every integer \(n, n > 1\), is divisible by a prime.
 </p>
 <p>
   \(\textbf{Proof. }\)Consider the set of divisors of \(n\) which are greater than \(1\) and less than \(n\). It is either empty or nonempty. 
@@ -224,7 +224,7 @@ $$
 </p>
 <br>
 <p>
-  \(\textbf{Lemma 5. }\)  Every integer \(n,n > 1\), can be written as a product of primes.
+  \(\textbf{Lemma 4. }\)  Every integer \(n,n > 1\), can be written as a product of primes.
 </p>
 <p>
 \(\textbf{Proof}\). From <a href="#" class="tooltip-link">\(\textbf{Lemma 1}\)
@@ -263,8 +263,8 @@ $$
 n = p_1p_2\cdots p_r+1.
 $$
 According to 
-<a href="#" class="tooltip-link">\(\textbf{Lemma 4}\)
-  <span class="tooltip-text">\(\textbf{Lemma 4. }\)Every integer \(n, n > 1\), is divisible by a prime.</span>
+<a href="#" class="tooltip-link">\(\textbf{Lemma 3}\)
+  <span class="tooltip-text">\(\textbf{Lemma 3. }\)Every integer \(n, n > 1\), is divisible by a prime.</span>
 </a>, 
 we know that there is a prime \(p'\) such that \(p'\;|\;n\). Since there are finitly many primes, \(p'\) must be one of \(p_1, p_2, \dots, p_r\).
 Hence, we can get
@@ -283,7 +283,7 @@ No primes divide \(1\) because all are greater than \(1\). Thus, contradiction e
 </p>
 <br>
 <p>
-  \(\textbf{Lemma 7. }\) If \(n\) is composite, then it has a divisor \(d\) such that \(1 < d \leq \sqrt{n} \). 
+  \(\textbf{Lemma 6. }\) If \(n\) is composite, then it has a divisor \(d\) such that \(1 < d \leq \sqrt{n} \). 
 </p>
 <p>
   \(\textbf{Proof}\). Suppose that \(n\) is composite. Then \(n = ab\) for some integers \(a\) and \(b\) with \(1 \lt a \lt n, 1 \lt b \lt n\).
@@ -295,7 +295,7 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
 </p>
 <br>
 <p>
-  \(\textbf{Lemma 8. }\)If \(n\) is composite, then it has a prime divisor, \(p\), where \(p\leq \sqrt{n}\).
+  \(\textbf{Lemma 7. }\)If \(n\) is composite, then it has a prime divisor, \(p\), where \(p\leq \sqrt{n}\).
 </p>
 <p>
     \(\textbf{Proof}\). Suppose that \(n\) is composite. Accroding to \(\textbf{Lemma 7}\), we can know that \(n\) has a divisor \(d\) such that \(1 \lt d \leq \sqrt{n} \).
@@ -303,7 +303,7 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
 </p>
 <br>
 <p>
-    \(\textbf{Lemma 9.}\) If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).
+    \(\textbf{Lemma 8.}\) If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).
 </p>
 <p>
     \(\textbf{Proof}\). Suppose that \(p\) is prime and \(p\;|\;ab\). Since \(p\) is prime, the only positive integer divisors of \(p\) are \(1\) and \(p\).
@@ -318,17 +318,17 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
 <br>
 
 <p>
-    \(\textbf{Theorem 10. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).
+    \(\textbf{Lemma 9. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).
 </p>
 <p>
     \(\textbf{Proof}\). We will prove it with mathematical induction. It is true by inspection if \(k = 1\), and 
-    <a href="#" class="tooltip-link">\(\textbf{Lemma 9}\)
-      <span class="tooltip-text">\(\textbf{Lemma 9. }\)If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\). </span>
+    <a href="#" class="tooltip-link">\(\textbf{Lemma 8}\)
+      <span class="tooltip-text">\(\textbf{Lemma 8. }\)If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\). </span>
     </a>
     <script src="position_adjust.js"></script> shows that it is true if \(k = 2\) . Now, suppose that it is true for \(k=r\). 
     Assume that \(p\;|\;a_1a_2\cdots a_{r+1}\), then \(p\;|\;(a_1a_2\cdots a_r)a_{r+1}\). According to 
-     <a href="#" class="tooltip-link">\(\textbf{Lemma 9}\)
-      <span class="tooltip-text">\(\textbf{Lemma 9. }\)If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).</span>
+     <a href="#" class="tooltip-link">\(\textbf{Lemma 8}\)
+      <span class="tooltip-text">\(\textbf{Lemma 8. }\)If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).</span>
       </a>
     <script src="position_adjust.js"></script>, we can get \(p\;|\;a_1a_2\cdots a_r\) or \(p\;|\;a_{r+1}\). 
     If \(p\;|\;a_1a_2\cdots a_r\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,r\). If \(p\;|\;a_{r+1}\), then it is still true that 
@@ -338,14 +338,20 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
 <br>
 
 <p>
-    \(\textbf{Theorem 11. }\)If \(q_1, q_2, \dots ,q_n\) are primes, and \(p\;|\; q_1q_2\cdots q_n\),then \(p = q_k\) for some \(k\).
+    \(\textbf{Lemma 10. }\)If \(q_1, q_2, \dots ,q_n\) are primes, and \(p\;|\; q_1q_2\cdots q_n\),then \(p = q_k\) for some \(k\).
 </p>
 <p>
-    \(\textbf{Proof. }\)According to  <a href="#" class="tooltip-link">\(\textbf{Theorem 10}\)
-      <span class="tooltip-text">\(\textbf{Theorem 10. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).</span>
+    \(\textbf{Proof. }\)According to  <a href="#" class="tooltip-link">\(\textbf{Lemma 9}\)
+      <span class="tooltip-text">\(\textbf{Lemma 9. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).</span>
     </a>
     <script src="position_adjust.js"></script>, we can know that \(p\;|\;q_k\) for some \(k\). 
     Since \(q_k\) and \(p\) are both prime, we can get \(p = q_k\). \[ \tag*{$\square$} \]
+</p>
+
+<br>
+
+<p>
+    \(\textbf{Theorem 3. }\)Every integer \(n, n > 1\), can be written as a product of primes in an unique way.
 </p>
 <h2>References</h2>
   <ul>
