@@ -354,7 +354,7 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
     \(\textbf{Theorem 3. }\)Every integer \(n, n > 1\), can be written as a product of primes in an unique way.
 </p>
 <p>
-  \(\textbf{Proof. }\)According to <a href="#" class="tooltip-link">\(\textbf{Lemma 4}\)
+  \(\textbf{Proof(1). }\)According to <a href="#" class="tooltip-link">\(\textbf{Lemma 4}\)
     <span class="tooltip-text">\(\textbf{Lemma 4. }\)Every integer \(n,n > 1\), can be written as a product of primes.</span>
   </a>,  
   <script src="position_adjust.js"></script>, that any integer \(n, n > 1\) can be written as a product of primes. 
@@ -388,6 +388,25 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
   We can repeat this process and get that \(p_2=q_{k_1}\), \(p_3=q_{k_2}\), \(\dots\), \(p_m=q_{k_{m-1}}\). 
   We cannot run out of \(q\)'s before all the \(p's\) are gone, because there would be a product of primes equal to \(1\), which is impossible. 
   Thus, we can get that \(m=r\) and \(p_1, p_2, \dots, p_m\) are just a rearrangement of the primes \(q_1, q_2, \dots, q_r\). \[ \tag*{$\square$} \]
+</p>
+<p>
+  \(\textbf{Proof(2). }\)We will prove it with mathematical induction. It is true by inspection if \(n = 2\), and we assume that it is true for \(n = k\).
+  We will show that it is true for \(n = k+1\). Suppose that 
+  $$
+  k+1 = p_1p_2\cdots p_m\quad\text{and}\quad k+1 = q_1q_2\cdots q_r,
+  $$
+  where \(p_1, p_2, \dots, p_m\) and \(q_1, q_2, \dots, q_r\) are primes. Similar to \(\textbf{Proof(1)}\), we know that \(p_1=q_i\) for some \(i\leq r\).
+  Hence, we can get
+  $$
+  p_1p_2\cdots p_m=q_1q_2\cdots q_{i-1}q_i q_{i+1}\cdots q_r.
+  $$
+  Thus, we know that 
+  $$
+  p_2\cdots p_m=q_1q_2\cdots q_{i-1}q_{i+1}\cdots q_r.
+  $$
+  And we can know that \(p_2\cdots p_m=q_1q_2\cdots q_{i-1}q_{i+1}\cdots q_r\leq k+1\). 
+  By assumeption, we know that any integer less than $k+1$ can be written as a product of primes in an unique way. 
+  Therefore, we show that \(k+1\) can be written as a product of primes in an unique way. \[ \tag*{$\square$} \]
 </p>
 <h2>References</h2>
   <ul>
