@@ -9,9 +9,34 @@
 <title>Euclid's Algorithm and Unique Factorization of Integers</title>
 </head>
 <body>
+  <div class="navbar">
+    <a href="#Two_Principles_of_Integers">Two Principles of Integers</a>
+    <a href="#Greatest_Common_Divisor">Greatest Common Divisor</a>
+    <a href="#Theorem_1">Theorem 1</a>
+    <a href="#Theorem_2">Theorem 2</a>
+    <a href="#Lemma_1">Lemma 1</a>
+    <a href="#Lemma_2">Lemma 2</a>
+    <a href="#Theorem_3_Euclid's_Algorithm">Theorem 3: Euclid's Algorithm</a>
+    <a href="#Corollary_1">Corollary 1</a>
+    <a href="#Corollary_2">Corollary 2</a>
+    <a href="#Lemma_3">Lemma 3</a>
+    <a href="#Lemma_4">Lemma 4</a>
+    <a href="#Theorem_4">Theorem 4</a>
+    <a href="#Lemma_5">Lemma 5</a>
+    <a href="#Lemma_6">Lemma 6</a>
+    <a href="#Lemma_7">Lemma 7</a>
+    <a href="#Lemma_8">Lemma 8</a>
+    <a href="#Lemma_9">Lemma 9</a>
+    <a href="#Lemma_10">Lemma 10</a>
+    <a href="#Theorem_5">Theorem 5</a>
+    <a href="#References">References</a>
+  </div>
+
   <header id="title-block-header">
     <h1 class="title">Euclid's Algorithm and Unique Factorization of Integers</h1>
   </header>
+
+<section id = "Two_Principles_of_Integers">
   <h2>Two Principles of Integers</h2>
   <p>
     \(\textbf{Least-integer principle: }\)a nonempty set of integers that is bounded below contains a smallest element.
@@ -19,7 +44,11 @@
   <p>
     \(\textbf{Greatest-integer principle: }\)a nonempty set of integers that is bounded above contains a largest element.
   </p>
+</section>
 
+<br>
+
+<section id = "Greatest_Common_Divisor">
 <h2>
   Greatest Common Divisor
 </h2>
@@ -31,8 +60,12 @@
     <li>if \(c\;|\;a\) and \(c\;|\;b\), then \(c\leq d\).</li>
   </ul>
   </p>
+</section>
+
 <br>
-<p>\(\textbf{Theorem 1: }\)</strong> If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</p>
+
+<section id = "Theorem_1">
+<p>\(\textbf{Theorem 1: }\) If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</p>
 <p>\(\textbf{Proof. }\)Suppose that \((a, b) = d\) and \(c= (\frac{a}{d}, \frac{b}{d})\), and our goal is to show that \(c= 1\). 
 <p>\(\textit{Step 1. We show that \(c\geq 1\).}\)</p>
 <p>We can get \(c\geq 1\) since \(c\) is the greatest common divisor of two integers and every greatest common divisor is greater than or equal to 1.</p>
@@ -46,7 +79,11 @@ Then we can get that \(cd\;|\;a\) and \(cd\;|\;b\), which implies that \(cd\) is
 Since \(d\) is the greatest commond divisor of \(a\) and \(b\), we can get that \(cd\leq d\). Since \(d\) is positive, then we can get that \(c\leq 1\).
 Since we have \(c\leq 1\) and \(c\geq 1\), we can get \(c=1\).\[ \tag*{$\square$} \]
 </p>
+</section>
+
 <br>
+
+<section id = "Theorem_2">
 <p>\(\textbf{Theorem 2. The Division Algorithm.}\) Given positive integers \(a\) and \(b\), \(b\neq  0\), there exist unique integers \(q\) and \(r\), with \(0 \leq  r < b\) such that
   $$
   a= bq+r.
@@ -88,7 +125,11 @@ $$
 Since \(r'-r\) is a multiple of \(b\), the only multiple of \(b\) between \(-b\) and \(b\) is \(0\). Hence, we can get that \(r'-r=0\), which implies that \(r'=r\).
 Since we know that \(b(q-q') = r'-r\), we can get \(b(q-q') = 0\). Since \(b\neq 0\), we can get that \(q-q'=0\), which implies that \(q=q'\). \[ \tag*{$\square$} \]
 </p>
+</section>
+
 <br>
+
+<section id = "Lemma_1">
 <p>\(\textbf{Lemma 1 }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</p> 
 <p>\(\textbf{Proof. }\)Based on the definition, there are integers \(q_1, q_2, \dots, q_n\) such that \(a_1=dq_1,a_2=dq_2, \dots, a_n=dq_n\). Thus,
 $$
@@ -99,7 +140,11 @@ c_1a_1+c_2a_2+\dots+c_na_n &= c_1dq_1+c_2dq_2+\dots+c_ndq_n\\
 $$
 Thus, we can get that \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\). \[ \tag*{$\square$} \]
 </p>
+</section>
+
 <br>
+
+<section id = "Lemma_2">
 <p>
   \(\textbf{Lemma 2. }\) If \(a=bq+r\), then \((a,b)=(b,r)\).
 </p>
@@ -121,7 +166,11 @@ Thus, \(c\) is a common divisor of \(a\) and \(b\).
 Since \(d\) is the greatest common divisor of \(a\) and \(b\), we can get that \(c\leq d\) (i.e. any common divisor of \(b\) and \(r\) is less than or equal to \(d\)). 
 Therefore, \(d=(b,r)\). \[ \tag*{$\square$} \]
 </p>
+</section>
+
 <br>
+
+<section id = "Theorem_3_Euclid's_Algorithm">
 <p>
   \(\textbf{Theorem 3. Euclid's Algorithm. }\) If \(a\) and \(b\) are positive integers, \(b\neq 0\), and
   $$
@@ -165,9 +214,11 @@ Therefore, \(d=(b,r)\). \[ \tag*{$\square$} \]
 $$
   If either \(a\) or \(b\) is negative, we can use the fact that \((a, b) = (-a, b)=(a,-b)=(-a, -b)\). \[ \tag*{$\square$} \]
 </p>
+</section>
 
 <br>
 
+<section id = "Corollary_1">
 <p>
     \(\textbf{Corollary 1. }\) If \(a\) and \(b\) are positive integers, \(b\neq 0\), then there exist integers \(x\) and \(y\) such that 
     $$
@@ -177,9 +228,11 @@ $$
 <p>
   \(\textbf{Proof. }\)Work the Euclidean Algorithm backward. The details are omitted. \[ \tag*{$\square$} \]
 </p>
+</section>
 
 <br>
 
+<section id = "Corollary_2">
 <p>
   \(\textbf{Corollary 2. }\) If \(d\;|\;ab\) and \((d, a) = 1\), then \(d\;|\;b\).
 </p>
@@ -199,19 +252,11 @@ $$
   Since \(d\;|\;ab\) by assumption and \(d\;|\;db\), we can get \(d\;|\;aby\) and \(d\;|\;dbx\).
   Hence, we can get \(d\;|\;dbx+aby=b\).\[ \tag*{$\square$} \]
 </p>
+</section>
 
-<h2>Linear Diophantine Equations</h2>
-<p>
-  \(\textbf{Definition: }\) Linear Diophantine equation in two unkown variables \(x, y\)takes the form of \(ax+by=c\),
-  where \(x, y\in \mathbb{Z}\) and \(a, b, c\) are integer constants.
-</p>
-<p>
-  <strong>Example:</strong> \(3x+5y=7\) is a linear Diophantine equation.
-</p>
+<br>
 
-
-
-<h2>Unique Factorization of \(\mathbb{Z}\)</h2>
+<section id = "Lemma_3">
 <p>
   \(\textbf{Lemma 3. }\) Every integer \(n, n > 1\), is divisible by a prime.
 </p>
@@ -222,7 +267,11 @@ $$
   If \(d\) had a divisor greater than \(1\) and less than \(d\) (d is not a prime), then so would \(n\). However, this is impossible because \(d\) was the smallest such
   divisor. Thus \(d\) is prime. \[ \tag*{$\square$} \]
 </p>
+</section>
+
 <br>
+
+<section id = "Lemma_4">
 <p>
   \(\textbf{Lemma 4. }\)  Every integer \(n,n > 1\), can be written as a product of primes.
 </p>
@@ -252,7 +301,11 @@ and each \(n_i\) is positive; such a sequence cannot continue forever. For some 
 <p>
 \(\textbf{Note.}\) each \(p_i\) may not be in unique.
 </p>
+</section>
+
 <br>
+
+<section id = "Theorem_4">
 <p>
   \(\textbf{Theorem 4. }\) (Euclid). There are infinitely many primes.
 </p>
@@ -281,7 +334,11 @@ p'\;|\;(p_1p_2\cdots p_r+1)-(p_1p_2\cdots p_r)=1.
 $$
 No primes divide \(1\) because all are greater than \(1\). Thus, contradiction exists. \[ \tag*{$\square$} \]
 </p>
+</section>
+
 <br>
+
+<section id = "Lemma_5">
 <p>
   \(\textbf{Lemma 5. }\) If \(n\) is composite, then it has a divisor \(d\) such that \(1 < d \leq \sqrt{n} \). 
 </p>
@@ -293,7 +350,11 @@ No primes divide \(1\) because all are greater than \(1\). Thus, contradiction e
   $$
 which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to \(n\). \[ \tag*{$\square$} \]
 </p>
+</section>
+
 <br>
+
+<section id = "Lemma_6">
 <p>
   \(\textbf{Lemma 6. }\)If \(n\) is composite, then it has a prime divisor, \(p\), where \(p\leq \sqrt{n}\).
 </p>
@@ -307,7 +368,11 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
     </a>,  
     <script src="position_adjust.js"></script>, we can know that \(d\) has a prime divisor \(p\). Since \(p\;|\;d\), we can get \(p\;|\;n\) and \(p\leq d\leq \sqrt{n}\). \[ \tag*{$\square$} \]
 </p>
+</section>
+
 <br>
+
+<section id = "Lemma_7">
 <p>
     \(\textbf{Lemma 7.}\) If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).
 </p>
@@ -320,9 +385,11 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
     </a>. 
     <script src="position_adjust.js"></script>, we can get \(p\;|\;b\). \[ \tag*{$\square$} \]
 </p>
+</section>
 
 <br>
 
+<section id = "Lemma_8">
 <p>
     \(\textbf{Lemma 8. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).
 </p>
@@ -339,10 +406,12 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
     <script src="position_adjust.js"></script>, we can get \(p\;|\;a_1a_2\cdots a_r\) or \(p\;|\;a_{r+1}\). 
     If \(p\;|\;a_1a_2\cdots a_r\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,r\). If \(p\;|\;a_{r+1}\), then it is still true that 
     \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,r+1\). \[ \tag*{$\square$} \]
-    </p>
+</p>
+</section>
 
 <br>
 
+<section id = "Lemma_9">
 <p>
     \(\textbf{Lemma 9. }\)If \(q_1, q_2, \dots ,q_n\) are primes, and \(p\;|\; q_1q_2\cdots q_n\),then \(p = q_k\) for some \(k\).
 </p>
@@ -353,9 +422,11 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
     <script src="position_adjust.js"></script>, we can know that \(p\;|\;q_k\) for some \(k\). 
     Since \(q_k\) and \(p\) are both prime, we can get \(p = q_k\). \[ \tag*{$\square$} \]
 </p>
+</section>
 
 <br>
 
+<section id = "Theorem_5">
 <p>
     \(\textbf{Theorem 5. }\)Every integer \(n, n > 1\), can be written as a product of primes in an unique way.
 </p>
@@ -414,10 +485,13 @@ which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to 
   By assumeption, we know that any integer less than \(k+1\) can be written as a product of primes in an unique way. 
   Therefore, we show that \(k+1\) can be written as a product of primes in an unique way. \[ \tag*{$\square$} \]
 </p>
+</section>
+<section id = "References">
 <h2>References</h2>
   <ul>
     <li>U. Dudley , "Elementary Number Theory", Dover Publications, Second Edition, 2008.</li>
   </ul>
+</section>
 </body>
 </html>
 
