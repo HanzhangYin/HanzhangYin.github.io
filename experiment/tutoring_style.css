@@ -9,7 +9,7 @@
   body {
     margin: 0 auto;
     max-width: 50em;
-    padding-left: 30px;
+    padding-left: 200px; /* push all body content to the right by the width of the navbar */
     padding-right: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -193,17 +193,19 @@
     overflow: hidden;
     background-color: transparent;
     font-family: 'Spectral', serif;
-    width: 200px; /* set a fixed width for your navbar */
+    left: 0; /* set the navbar to the left side of the screen */
+    width: 150px; /* set a fixed width for your navbar */
     height: 100%; /* make it full height */
     position: fixed; /* Enable the navbar to remain in view when scrolling */
-    display: flex; /* Add this */
-    flex-direction: column; /* Add this */
+    display: flex; 
+    flex-direction: column; 
+    overflow-y: auto; /* make the navbar scrollable */
   }
   
   .navbar a {
     font-family: 'Spectral', serif;
     color: black;
-    text-align: center;
+    text-align: left;
     padding: 11px 10px;
     text-decoration: none;
   }
@@ -216,13 +218,14 @@
   header {
     padding: 20px;
     text-align: center;
-    margin-left: 210px; /* Add a left margin to the header equal to the width of the navbar plus a little extra */
+    margin-left: 100px; /* Add a left margin to the header equal to the width of the navbar plus a little extra */
   }
   
   section {
-    margin: 20px;
-    display: none;
-    margin-left: 210px; /* Add a left margin to the sections equal to the width of the navbar plus a little extra */
+  width: 80%; /* Adjust this value to change the width of the section */
+  /*height: 100vh;  Set the height to 100% of the viewport height */
+  /*position: fixed;  This positions the element relative to the browser window */
+  margin-left: 200px; /* Add a left margin to the sections equal to the width of the navbar plus a little extra */
   }
   
 </style>

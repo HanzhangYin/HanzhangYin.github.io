@@ -215,6 +215,11 @@ Hanzhang Yin
   <h3>
   <a href="tutoring/Euclid_alogrithm">Euclid's Algorithm and Unique Factorization of Integers</a>
   </h3>
+
+  <h3>
+  <a href="experiment/Euclid_alogrithm_test.html">Euclid's Algorithm (Beta)</a>
+  </h3>
+  
   
 </section>
 
