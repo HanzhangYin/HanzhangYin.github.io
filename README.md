@@ -213,7 +213,7 @@ Hanzhang Yin
 
 <section id="tutoring">
   <h3>
-  <a href="tutoring/Euclid_alogrithm">Euclid's Algorithm</a>
+  <a href="tutoring/Euclid_alogrithm">Euclid's Algorithm and Unique Factorization of Integers</a>
   </h3>
   
 </section>
