@@ -190,15 +190,15 @@
   }
 
   .navbar {
-    overflow: hidden;
+    overflow: hidden; 
     background-color: transparent;
     font-family: 'Spectral', serif;
-    left: 0; /* set the navbar to the left side of the screen */
+    left: 10px; /* set the navbar to the left side of the screen */
     width: 150px; /* set a fixed width for your navbar */
-    height: 100%; /* make it full height */
+    height: 80%; /* make it 80% height */
     position: fixed; /* Enable the navbar to remain in view when scrolling */
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column; /* make the navbar elements appear in a column */
     overflow-y: auto; /* make the navbar scrollable */
   }
   
