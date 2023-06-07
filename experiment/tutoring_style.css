@@ -218,7 +218,7 @@
   header {
     padding: 20px;
     text-align: center;
-    margin-left: 100px; /* Add a left margin to the header equal to the width of the navbar plus a little extra */
+    margin-left: 10px; /* Add a left margin to the header equal to the width of the navbar plus a little extra */
   }
   
   section {
