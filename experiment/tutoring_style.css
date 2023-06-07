@@ -225,7 +225,7 @@
   width: 80%; /* Adjust this value to change the width of the section */
   /*height: 100vh;  Set the height to 100% of the viewport height */
   /*position: fixed;  This positions the element relative to the browser window */
-  margin-left: 200px; /* Add a left margin to the sections equal to the width of the navbar plus a little extra */
+  margin-left: 100px; /* Add a left margin to the sections equal to the width of the navbar plus a little extra */
   }
   
 </style>
