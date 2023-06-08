@@ -7,23 +7,34 @@
 </script>
 <link rel="stylesheet" type="text/css" href="research_style.css"><!--It is a link for css structure-->
 <title>Symmetric Polynomial</title>
+
 <header id="title-block-header">
   <h1 class="title">Symmetric Polynomial</h1>
 </header>
+
 </head>
 <body>
+    <div class="navbar">
+      <a href="#Partition">Partition</a>
+      <a href="#Monomial">Monomial</a>
+      <a href="#Symmetric_Polynomial">Symmetric Polynomial</a>
+      <a href="#References">References</a>
+    </div>
+
+<section id = "Monomial">
 <h2>
   Monomial
 </h2>
 A monomial is a polynomial which has only one term. (e.g. \(xy, x^2y^3z^4\))
+</section>
 
 <br>
 
+<section id = "Partition">
 <h2>Partition</h2>
 <p>\(\textbf{Definition: }\)A partition \(\lambda\) is a (finite or infinite) sequence 
 $$\lambda = (\lambda_1, \lambda_2, \dots , \lambda_l,\dots)$$
 of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lambda_l\geq \dots\) and containing only finitely many non-zero terms.</p>
-
 <h3>
   Parts of \(\lambda\)
 </h3>
@@ -56,9 +67,11 @@ of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lam
   $$|\lambda| = \lambda_1 + \lambda_2 + \dots + \lambda_l + \dots$$
   If \(|\lambda|=n\), we say that \(\lambda\) is a partiton of \(n\).
 </p>
+</section>
 
 <br>
 
+<section id = "Symmetric_Polynomial">
 <h2>
   Symmetric Polynomials
 </h2>
@@ -165,6 +178,7 @@ $$
     H(r) =  \prod_{i=1}^\infty (1-x_ir)^{-1}=\sum_{i=0}^\infty h_i(x_1, x_2, \dots, x_n)r^i.
   $$
 </p> 
+</section>
 
 
 <!-- <h3>Kostka number</h3>
@@ -174,10 +188,14 @@ Let \(S\) be a set. A matrix \(m : S\times S\to \{1,2, \dots ,\infty\}\) is call
 $$m(x,y) = m(y,x)$$
 $$m(x,y) = 1\text{ implies }x=y$$ -->
 
+<br>
+
+<section id = "References">
 <h2>References</h2>
   <ul>
     <li>I. G. Macdonald, "Symmetric Functions and Hall Polynomials", Oxford Science Publication, Second Edition, 1995.</li>
   </ul>
+</section>
 </body>
 </html>
 
