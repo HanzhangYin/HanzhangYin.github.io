@@ -217,7 +217,7 @@ Hanzhang Yin
   </h3>
 
   <h3>
-  <a href="Modular_arithmetic.html">Modular Arithmetics</a>
+  <a href="tutoring/Modular_arithmetic.html">Modular Arithmetics</a>
   </h3>
   
   
