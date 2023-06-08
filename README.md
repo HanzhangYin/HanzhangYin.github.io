@@ -104,22 +104,22 @@ background-color: transparent;
 text-decoration: none;
 }
 
-/* .cool-button {
+/_ .cool-button {
 background-color: #999999; <!--Grey background-->
-border: none; /_ Remove border _/
-color: black; /_ White text color _/
-padding: 15px 26px; /_ Padding _/
-text-align: center; /_ Center text _/
-text-decoration: none; /_ Remove underline _/
-display: inline-block; /_ Make the button an inline element _/
+border: none; /* Remove border */
+color: black; /* White text color */
+padding: 15px 26px; /* Padding */
+text-align: center; /* Center text */
+text-decoration: none; /* Remove underline */
+display: inline-block; /* Make the button an inline element */
 font-family: 'Spectral', serif;
-font-size: 13px; /_ Increase font size _/
-margin: 4px 2px; /_ Add some margin _/
-cursor: pointer; /_ Add a pointer cursor on hover _/
-transition: background-color 0.3s ease; /_ Add a transition effect on hover _/
-} */
+font-size: 13px; /* Increase font size */
+margin: 4px 2px; /* Add some margin */
+cursor: pointer; /* Add a pointer cursor on hover */
+transition: background-color 0.3s ease; /* Add a transition effect on hover */
+} _/
 
-/* Change the background color on hover */
+/_ Change the background color on hover _/
 .cool-button:hover {
 background-color: #F89880;
 }
@@ -198,7 +198,7 @@ Hanzhang Yin
 </h3>
 
 <h3>
-<a href="research_interest/symmetric_polynomial.html">Symmetric Polynomial</a>
+<a href="research_interests/symmetric_polynomial.html">Symmetric Polynomial</a>
 </h3>
 		  
 <h3>
