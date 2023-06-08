@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<link rel="stylesheet" type="text/css" href="research_style.css"><!--It is a link for css structure-->
+<title>Order Ideal</title>
+
+<header id="title-block-header">
+  <h1 class="title">Order Ideal</h1>
+</header>
+
+</head>
+<body>
+    <div class="navbar">
+      <a href="#References">References</a>
+    </div>
+
+<section id = "Monomial">
+<h2>
+  Monomial
+</h2>
+A monomial is a polynomial which has only one term. (e.g. \(xy, x^2y^3z^4\))
+</section>
+
+<br>
+
+<section id = "Partition">
+<h2>Partition</h2>
+<p>\(\textbf{Definition: }\)A partition \(\lambda\) is a (finite or infinite) sequence 
+$$\lambda = (\lambda_1, \lambda_2, \dots , \lambda_l,\dots)$$
+of non-negative integers such that \(\lambda_1\geq \lambda_2\geq \dots \geq \lambda_l\geq \dots\) and containing only finitely many non-zero terms.</p>
+<h3>
+  Parts of \(\lambda\)
+</h3>
+<p>
+  \(\textbf{Definition: }\)The non-zero terms of a partition \(\lambda\) are called the parts of \(\lambda\).
+</p>
+<p>
+  \(\textbf{Example: }\)The parts of \(\lambda = (5,4,1,0,0)\) are \(5,4,1\).
+</p>
+
+<br>
+
+<h3>
+  Length of \(\lambda\)
+</h3>
+<p>
+  \(\textbf{Definition: }\)The length of a partition \(\lambda\) is the number of its parts. It is denoted by \(l(\lambda)\).
+</p>
+<p>
+  \(\textbf{Example: }\)The length of \(\lambda = (5,4,1,0,0)\) is \(3\), (i.e, \(l(\lambda) = 3\)).
+</p>
+
+<br>
+
+<h3>
+  Weight of \(\lambda\)
+</h3>
+<p>
+  \(\textbf{Definition: }\)The weight of a partition \(\lambda\) is the sum of its parts. It is denoted by \(|\lambda|\):
+  $$|\lambda| = \lambda_1 + \lambda_2 + \dots + \lambda_l + \dots$$
+  If \(|\lambda|=n\), we say that \(\lambda\) is a partiton of \(n\).
+</p>
+</section>
+
+<br>
+
+<section id = "Symmetric_Polynomial">
+<h2>
+  Symmetric Polynomials
+</h2>
+<p>
+  \(\textbf{Definition: }\)Let \(p(x_1, x_2, \dots, x_n)\in\mathbb{Z}[x_1, x_2, \dots, x_n]\) and \(\sigma\in \mathfrak{S}_n\)(i.e. Symmetric group).  \(p(x_1, x_2, \dots, x_n)\) is symmetric if 
+  $$p(x_1, x_2, \dots, x_n) = p(x_{\sigma(1)}, x_{\sigma(2)}, \dots, x_{\sigma(n)}).$$
+</p>
+<p>
+  \(\textbf{Example: }\)\(p(x_1, x_2) = x_1^4 + 5x_1^3x_2 + 10x_1^2x_2^2 + 5x_1x_2^3 + x_2^4\) is symmetric under action of \(\mathfrak{S}_2\).
+</p>
+
+<br>
+
+<h3>
+  Monomial Symmetric Polynomials
+</h3>
+<p>
+  <strong>Definiton:</strong> For each \(\alpha = (\alpha_1, \dots, \alpha_n)\in\mathbb{N}^n\) we denote by \(x^\alpha\) the monomial 
+  $$
+    x^\alpha = x_1^{\alpha_1}x_2^{\alpha_2}\dots x_n^{\alpha_n}.
+  $$
+  Let \(\lambda\) be any partition of length less than \(n\) (i.e. \(l(\lambda)\leq n\)). The polynomial \(m_\lambda(x_1, \dots, x_n)\) is defined as below:
+  $$
+    m_\lambda(x_1, \dots, x_n) = \sum_{\alpha\in A} x^\alpha,
+  $$
+  where \(A=\{\alpha\;|\;\alpha = \sigma\cdot \lambda\text{ for }\sigma\in\mathfrak{S}_n\}\). \(m_\lambda(x_1, \dots, x_n)\) is called the monomial symmetric polynomial.
+</p>
+<p>
+  \(\textbf{Example: }\)Let \(\lambda = (5, 3, 0)\). Since \(A = \{(5,3,0),(3,5,0), (0,3,5), (5,0,3), (0,5,3), (3,0,5)\}\), we can get 
+  $$
+  \begin{align*}
+  m_\lambda(x_1, x_2, x_3) &= x_1^5x_2^3x_3^0 + x_1^5x_2^0x_3^3 + x_1^3x_2^5x_3^0 + x_1^0x_2^5x_3^3 + x_1^3x_2^0x_3^5 + x_1^0x_2^3x_3^5\\
+  &= x_1^5x_2^3 + x_1^5x_3^3 + x_1^3x_2^5 + x_2^5x_3^3 + x_1^3x_3^5 + x_2^3x_3^5
+  \end{align*}
+  $$
+</p>
+
+<br>
+
+<h3>
+  Elementary Symmetric Polynomials
+</h3>
+<p>
+  \(\textbf{Definition: }\)For each integer \(0\leq r\leq n\) the \(r\)th elementary symmetric polynomial \(e_r\) is defined as below:
+  $$
+    e_0(x_1, x_2, \dots, x_n)=1,
+  $$
+  $$
+    e_r(x_1, x_2, \dots, x_n) = \sum_{1\leq i_1 < i_2 < \dots < i_r\leq n} x_{i_1}x_{i_2}\dots x_{i_r}.
+  $$
+</p>
+<p>
+  \(\textbf{Example: }\)
+  $$
+  e_2(x_1, x_2, x_3, x_4)= x_1x_2+x_1x_3+ x_1x_4+x_2x_3+x_2x_4+x_3x_4.
+  $$
+</p>
+<p>
+  <strong>Oberservation: </strong> When \(r=n\), we have
+  $$
+    e_n(x_1, x_2, \dots, x_n) = x_1x_2\dots x_n = m_{(1^n)}(x_1, x_2, \dots, x_n),
+  $$
+  where \((1^n)\) is a partition with length \(n\) and all parts are equal to \(1\) (e.g. \((1^4) = (1,1,1,1)\)).
+</p>
+
+<p>
+  \(\textbf{Definition: }\)The generating function for the \(e_r\):
+  $$
+    E(r) =  \prod_{i=1}^\infty (1+x_ir)=\sum_{i=0}^\infty e_i(x_1, x_2, \dots, x_n)r^i.
+  $$
+</p>
+
+<br>
+
+<h3>
+  Complete Symmetric Polynomials
+</h3>
+<p><strong>Definition: </strong>For each \(r\geq 0\) the \(r\)th complete symetric function \(h_r\), is the sum of all monomials of total degree \(r\) in the variables \(x_1, x_2, \dots,\) so that
+$$
+h_0(x_1, x_2, \dots, x_n)=0.
+$$
+$$
+h_1(x_1, x_2, \dots, x_n) = 1.
+$$
+$$
+  h_r(x_1, x_2, \dots, x_n) = \sum_{|\lambda|=r} m_\lambda(x_1, x_2, \dots, x_n).
+$$
+</p>
+<p>
+  \(\textbf{Example: }\)
+  We want to know \(h_2(x_1, x_2, x_3, x_4)\). There are only two partition which has weight \(2\): \((2, 0, 0, 0), (1, 1, 0, 0)\).
+  $$
+  \begin{align*}
+  h_2(x_1, x_2, x_3, x_4)&= m_{(2, 0, 0, 0)}(x_1, x_2, x_3, x_4) + m_{(1, 1, 0, 0)}(x_1, x_2, x_3, x_4)\\
+  &= x_1^2 + x_2^2 + x_3^2 + x_4^2 + x_1x_2 + x_1x_3 + \\
+  &\phantom=x_1x_4 + x_2x_3 + x_2x_4 + x_3x_4.
+  \end{align*}
+  $$
+</p>
+
+<p>
+  \(\textbf{Definition: }\)The generating function for the \(h_r\):
+  $$
+    H(r) =  \prod_{i=1}^\infty (1-x_ir)^{-1}=\sum_{i=0}^\infty h_i(x_1, x_2, \dots, x_n)r^i.
+  $$
+</p> 
+</section>
+
+
+<!-- <h3>Kostka number</h3>
+Kostka number, \(K_{\lambda\mu}\), is equal to the number of Young tableaux of shape \(\lambda\)  and weight \(\mu\).
+
+Let \(S\) be a set. A matrix \(m : S\times S\to \{1,2, \dots ,\infty\}\) is called a Coxeter matrix if it satisfies
+$$m(x,y) = m(y,x)$$
+$$m(x,y) = 1\text{ implies }x=y$$ -->
+
+<br>
+
+<section id = "References">
+<h2>References</h2>
+  <ul>
+    <li>B. A. Earnshaw, "COMBINATORIAL ASPECTS OF PARTIALLY ORDERED SETS"</li>
+  </ul>
+</section>
+</body>
+</html>
+
