@@ -213,11 +213,11 @@ Hanzhang Yin
 
 <section id="tutoring">
   <h3>
-  <a href="tutoring/Euclid_alogrithm.html">Euclid's Algorithm and Unique Factorization of Integers</a>
+  <a href="tutoring/euclid_algorithm.html">Euclid's Algorithm and Unique Factorization of Integers</a>
   </h3>
 
   <h3>
-  <a href="tutoring/Modular_arithmetic.html">Modular Arithmetics</a>
+  <a href="tutoring/modular_arithmetic.html">Modular Arithmetics</a>
   </h3>
   
   
