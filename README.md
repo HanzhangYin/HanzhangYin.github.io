@@ -198,7 +198,7 @@ Hanzhang Yin
 </h3>
 
 <h3>
-<a href="symmetric_polynomial.html">Symmetric Polynomial</a>
+<a href="research_interest/symmetric_polynomial.html">Symmetric Polynomial</a>
 </h3>
 		  
 <h3>
