@@ -214,6 +214,22 @@
     background-color: #565656;
     color: white;
   }
+
+  .navbar-submenu {
+    position: relative;
+  }
+
+  .navbar-submenu:hover .navbar {
+    display: flex;
+  }
+  
+  .navbar-submenu .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+  }
   
   header {
     padding: 20px;
