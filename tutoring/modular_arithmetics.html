@@ -206,13 +206,20 @@
         \(\textbf{Theorem 6. }\)Every integer is congruent \((\text{mod}\; 9)\) to the sum of its digits.
       </p>
       <p>
-        \(textbf{Example(1). }\) \(1234\equiv 1+2+3+4\; (\text{mod}\; 9)\).
+        \(textbf{Example(1). }\) \(1234\equiv 1+2+3+4\; (\text{mod}\; 9)\) for \(1234-(1+2+3+4)=1224=9\times 136\).
       </p>
       <p>
-        \(textbf{Example(2). }\) \(573\equiv 5+7+3\; (\text{mod}\; 9)\).
+        \(textbf{Example(2). }\) \(573\equiv 5+7+3\; (\text{mod}\; 9)\) for \(573-(5+7+3)=558=9\times 62\).
       </p>      
       <p>
-        \(\textbf{Proof. }\)
+        \(\textbf{Proof. }\) Let \(n\) be an integer, and let \(a\) be the sum of the digits of \(n\). 
+        Then we can write \(n\) as \(n=a_0+a_1\times 10+a_2\times 10^2+\dots+a_k\times 10^k\), where \(a_0, a_1, \dots, a_k\) are integers and \(0\leq a_i\leq 9\) for \(i=0,1,\dots,k\).
+        Then we can get
+        $$
+        n-a = (a_0+a_1\times 10+a_2\times 10^2+\dots+a_k\times 10^k) - (a_0+a_1+a_2+\dots+a_k) = a_1\times 9 + a_2\times 99 + \dots + a_k\times 10^k\times 9.
+        $$
+        Since \(a_1, a_2, \dots, a_k\) are integers and \(0\leq a_i\leq 9\) for \(i=0,1,\dots,k\), we can get \(n-a = 9(a_1+ a_2\times 11 + \dots + a_k\times 10^k)\), which implies that \(9\;|\;(n-a)\).
+        Thus, we can get \(n\equiv a\; (\text{mod}\; 9)\). \[ \tag*{$\square$} \]
       </p>
     </section>
         
