@@ -160,8 +160,43 @@
 
     <section id = "Theorem_4">
       <p>
-        \(\textbf{Theorem 4. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=1\), then \(a\equiv b (\text{mod}\; m)\).
+        \(\textbf{Theorem 4. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=1\) where \(m\neq 1\), then \(a\equiv b (\text{mod}\; m)\).
       </p>
+      <p>
+        \(\textbf{Proof. }\)Since \(ac\equiv bc\; (\text{mod}\; m)\), we can get \(m\;|\;(ac-bc)\), which implies that \(m\;|\;(a-b)c\).
+        Since \((c,m)=1\), by <a href="#" class="tooltip-link">\(\textbf{Corollary 2 from previous Section}\)
+          <span class="tooltip-text">\(\textbf{Corollary 2. }\) If \(d\;|\;ab\) and \((d, a) = 1\), then \(d\;|\;b\).</span>
+        </a>. 
+        <script src="position_adjust.js"></script>, we can get \(m\;|\;(a-b)\), which implies that \(a\equiv b (\text{mod}\; m)\). \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Theorem_5">
+      <p>
+        \(\textbf{Theorem 5. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=d\) where \(d\neq 1\), then \(a\equiv b (\text{mod}\; \frac{m}{d})\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Since \(ac\equiv bc\; (\text{mod}\; m)\), we can get \(m\;|\;(ac-bc)\), which implies that \(m\;|\;(a-b)c\).
+        Since \((c,m)=d\), we can get \(c = de\) and \(m = df\) for some integers \(e\) and \(f\).
+        Then we can get 
+        $$
+        (a-b)c = (a-b)de = (a-b)df\frac{e}{f}.
+        $$
+        Since \(m\;|\;(a-b)c\), we can get \(df\;|\;(a-b)df\frac{e}{f}\), which implies that \(f\;|\;(a-b)e\).
+        According to <a href="#" class="tooltip-link">\(\textbf{Theorem 1 form the previous Section}\)
+          <span class="tooltip-text">\(\textbf{Theorem 1: }\) If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</span>
+        </a>.
+        <script src="position_adjust.js"></script>, we can get \((e,f)=1\).
+        By <a href="#" class="tooltip-link">\(\textbf{Corollary 2 from previous Section}\)
+          <span class="tooltip-text">\(\textbf{Corollary 2. }\) If \(d\;|\;ab\) and \((d, a) = 1\), then \(d\;|\;b\).</span>
+        </a>. 
+        <script src="position_adjust.js"></script>, we can get \(f\;|\;(a-b)\), which implies that \(a\equiv b (\text{mod}\; \frac{m}{d})\) (note: \(f=\frac{m}{d}\)). \[ \tag*{$\square$} \]
+      </p>
+
+    </section>
+        
 
     <section id = "References">
     <h2>References</h2>
