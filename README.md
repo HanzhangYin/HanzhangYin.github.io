@@ -1,6 +1,6 @@
 <html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
 <head>
-<link rel="shortcut icon" type="image/x-icon" href="favicon_io/favicon.ico"> 
+<link rel="shortcut icon" type="image/x-icon" href="favicon_io/favicon.ico"><!--Add a favicon-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Allow the horizontal bar works-->
 <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
