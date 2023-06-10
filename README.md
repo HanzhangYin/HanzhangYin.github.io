@@ -10,7 +10,7 @@
 
 <meta charset="UTF-8/">
 	
-<title> siteHan </title> 
+<title>siteHan</title> 
 <style>
 .material-symbols-outlined {
 font-variation-settings:
