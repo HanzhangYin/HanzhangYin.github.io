@@ -102,10 +102,10 @@ text-decoration: none;
 }
 footer {
     margin-top: auto;
-    background-color: #565656;
+    background-color: #EAEDED;
     color: #fff;
     text-align: left;
-    padding: 10px;
+    padding: 5px;
 }
 
 
