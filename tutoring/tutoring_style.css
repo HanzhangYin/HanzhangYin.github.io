@@ -233,5 +233,9 @@
   /*position: fixed;  This positions the element relative to the browser window */
   margin-left: 10px; /* Add a left margin to the sections equal to the width of the navbar plus a little extra */
   }
+
+  .highlight {
+    background-color: yellow;
+  }
   
 </style>
