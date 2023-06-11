@@ -27,6 +27,12 @@
     h1 {
       font-size: 1.8em;
     }
+    .nav {
+      display: none;
+    }
+    .hamburger-menu {
+      display: block;
+    }
   }
   @media print {
     html {
@@ -217,7 +223,16 @@
 
   .navbar-submenu {
     padding: 11px 10px;
-    position: relative;
+    position: relative; /* Set the navbar-submenu to relative position */
+    overflow: hidden; 
+    background-color: transparent;
+    font-family: 'Spectral', serif;
+    left: 10px; /* set the navbar to the left side of the screen */
+    width: 150px; /* set a fixed width for your navbar */
+    height: 80%; /* make it 80% height */
+    display: flex; 
+    flex-direction: column; /* make the navbar elements appear in a column */
+    overflow-y: auto; /* make the navbar scrollable */
   }
 
   .navbar-submenu:hover .navbar {
@@ -225,10 +240,19 @@
   }
   
   .navbar-submenu .navbar {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px; /* Add some margin to the left for indentation */
+    overflow: hidden; 
+    background-color: transparent;
+    font-family: 'Spectral', serif;
+    left: 10px; /* set the navbar to the left side of the screen */
+    width: 150px; /* set a fixed width for your navbar */
+    height: 80%; /* make it 80% height */
+    position: fixed; /* Enable the navbar to remain in view when scrolling */
+    display: flex; 
+    flex-direction: column; /* make the navbar elements appear in a column */
+    overflow-y: auto; /* make the navbar scrollable */
   }
+
+  
   
   header {
     padding: 20px;
