@@ -26,6 +26,8 @@ padding: 20px;
 text-align: center;
 font-family: 'Spectral', serif; }
 .navbar {
+            display: flex;
+            justify-content: space-around;
             overflow: hidden;
             position: fixed;
             top: 0;
