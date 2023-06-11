@@ -204,14 +204,14 @@
   
   .navbar a {
     font-family: 'Spectral', serif;
-    color: black;
+    color: #565656;
     text-align: left;
     padding: 11px 10px;
     text-decoration: none;
   }
   
   .navbar a:hover {
-    background-color: #565656;
+    background-color: #33D1FF;
     color: white;
   }
   
