@@ -312,10 +312,8 @@ Connect me: <a href="https://www.linkedin.com/in/hanzhang-yin/" class="social-ic
   });
 </script>
 
-  <footer class="fixed-bottom">
-      <div class="container mt-0">
-        © Copyright 2023 Hanzhang Yin. 
-      </div>
+  <footer>
+      <p>&copy; Copyright 2023 Hanzhang Yin.</p>
   </footer>
 
 <!-- <script>
