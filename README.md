@@ -105,6 +105,15 @@ background-color: transparent;
 text-decoration: none;
 }
 
+footer {
+    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+
 /_ .cool-button {
 background-color: #999999; <!--Grey background-->
 border: none; /* Remove border */
