@@ -27,7 +27,7 @@ text-align: center;
 font-family: 'Spectral', serif; }
 .navbar {
             display: flex;
-            justify-content: space-around;
+            /* justify-content: space-around; */
             overflow: hidden;
             position: fixed;
             width: 100%;
