@@ -79,37 +79,31 @@ font-family: 'Spectral', serif;
 text-align: right;
 color: #565656;
 font-size: 0.9em; }
-
 img {
 float: left;
 margin-right: 30px}
-
 p {
 font-family: 'Spectral', serif;
 color: #565656;
 font-size: 1.2em;}
-
 a:link {
-color: #3498DB; /_ Grey color _/
+color: #3498DB; /* Grey color */
 background-color: transparent;
 text-decoration: none;
 }
-
 a:visited {
-color: #3498DB; /_ Grey color _/
+color: #3498DB; /* Grey color */
 background-color: transparent;
 text-decoration: none;
 }
-
 a:hover {
 color: pink;
 background-color: transparent;
 text-decoration: none;
 }
-
 footer {
     margin-top: auto;
-    background-color: #000;
+    background-color: #565656;
     color: #fff;
     text-align: left;
     padding: 10px;
