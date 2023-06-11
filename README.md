@@ -29,8 +29,10 @@ text-align: center;
 font-family: 'Spectral', serif; }
 .navbar {
             overflow: hidden;
+            top: 0;
             background-color: transparent;
             font-family: 'Spectral', serif;
+            z-index: 1; /* make the navigation bar always on top of the content  */
         }
         .navbar a {
             font-family: 'Spectral', serif;
