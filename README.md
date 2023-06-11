@@ -1,5 +1,6 @@
 <html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
 <head>
+<meta charset="UTF-8/">
 <link rel="shortcut icon" type="image/x-icon" href="favicon_io/favicon.ico"><!--Add a favicon-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Allow the horizontal bar works-->
 <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
@@ -8,9 +9,6 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!--link for the icon-->
 
-<meta charset="UTF-8/">
-	
-<title>siteHan</title> 
 <style>
 .material-symbols-outlined {
 font-variation-settings:
@@ -29,6 +27,7 @@ text-align: center;
 font-family: 'Spectral', serif; }
 .navbar {
             overflow: hidden;
+            position: fixed;
             top: 0;
             background-color: transparent;
             font-family: 'Spectral', serif;
