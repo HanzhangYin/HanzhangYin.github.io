@@ -187,6 +187,7 @@
   .tooltip-link:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+    color: #33D1FF;
   }
 
   .navbar {
@@ -211,7 +212,7 @@
   }
   
   .navbar a:hover {
-    background-color: #33D1FF;
+    background-color: #565656;
     color: white;
   }
   
