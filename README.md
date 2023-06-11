@@ -30,6 +30,7 @@ font-family: 'Spectral', serif; }
             justify-content: space-around;
             overflow: hidden;
             position: fixed;
+            width: 100%;
             top: 0;
             background-color: #ededed;
             font-family: 'Spectral', serif;
