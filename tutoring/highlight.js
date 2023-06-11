@@ -12,6 +12,12 @@ window.addEventListener('hashchange', function() {
     let section = document.querySelector(hash);
     if (section) {
         section.classList.add('highlight');
+
+        // Remove the highlight after 2 seconds
+        setTimeout(function() {
+            section.classList.remove('highlight');
+        }, 2000);  // 2000 milliseconds = 2 seconds
     }
 });
+
 
