@@ -16,7 +16,7 @@ window.addEventListener('hashchange', function() {
         // Remove the highlight after 2 seconds
         setTimeout(function() {
             section.classList.remove('highlight');
-        }, 2000);  // 2000 milliseconds = 2 seconds
+        }, 1000);  // 1000 milliseconds = 1 seconds
     }
 });
 
