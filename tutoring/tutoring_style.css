@@ -190,6 +190,11 @@
     opacity: 1;
   }
 
+  .tooltip-link:hover {
+    color: orange;
+  }
+  
+
   .navbar {
     overflow: hidden; 
     background-color: transparent;
