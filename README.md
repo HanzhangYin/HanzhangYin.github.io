@@ -103,8 +103,9 @@ background-color: transparent;
 text-decoration: none;
 }
 footer {
+    bottom: 0;
     margin-top: auto;
-    background-color: #EAEDED;
+    background-color: transparent;
     color: #fff;
     text-align: left;
     padding: 5px;
