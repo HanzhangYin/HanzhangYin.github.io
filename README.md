@@ -159,12 +159,6 @@ margin-top: 20px;
 </style>
 </head>
 
-<header>
-<h1>
-Hanzhang Yin
-</h1>
-</header>
-
 <div class="navbar">
   <a href="#about-me">About Me</a>
   <a href="#research">Research & Interests</a>
@@ -172,6 +166,12 @@ Hanzhang Yin
   <a href="#elseworlds">Elseworlds</a>
   <a href="#contact">Contact</a>
 </div>
+
+<header>
+<h1>
+Hanzhang Yin
+</h1>
+</header>
 
 <!-- <button class="cool-button" onclick="myFunction1()">
   <span>About Me!</span>
