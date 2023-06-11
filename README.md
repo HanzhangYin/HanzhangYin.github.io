@@ -109,8 +109,8 @@ footer {
     margin-top: auto;
     background-color: #000;
     color: #fff;
-    text-align: center;
-    padding: 20px;
+    text-align: left;
+    padding: 10px;
 }
 
 
