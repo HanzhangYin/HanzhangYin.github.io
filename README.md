@@ -29,7 +29,7 @@ font-family: 'Spectral', serif; }
             overflow: hidden;
             position: fixed;
             top: 0;
-            background-color: #565656;
+            background-color: white;
             font-family: 'Spectral', serif;
             z-index: 1; /* make the navigation bar always on top of the content  */
         }
