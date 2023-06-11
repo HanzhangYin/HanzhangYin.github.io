@@ -28,6 +28,7 @@ font-family: 'Spectral', serif; }
 .navbar {
             display: flex;
             /* justify-content: space-around; */
+            ustify-content: space-between;
             overflow: hidden;
             position: fixed;
             width: 100%;
