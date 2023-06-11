@@ -9,6 +9,7 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script><!--It is a link for MathJax-->
     <link rel="stylesheet" type="text/css" href="tutoring_style.css"><!--It is a link for css structure-->
+    <script src="highlight.js"></script><!--It is a link for highlight.js-->
     <title>Modular Arithmetic</title>
   </head>
   <body>
@@ -294,11 +295,11 @@
         $$
         ax\equiv b\; (\text{mod }m) \qquad\text{and}\qquad ay\equiv b\; (\text{mod }m),
         $$
-        According to <a href="#" class="tooltip-link">\(\textbf{Theorem 3}\)
+        According to <a href="#Theorem_3" class="tooltip-link">\(\textbf{Theorem 3}\)
           <span class="tooltip-text">\(\textbf{Theorem 3. }\) \(a\equiv b\; (\text{mod }m)\) if and only if
             \(a\) and \(b\) leave the same remainder on division by \(m\).</span>
         </a>
-        <script src="position_adjust.js"></script>, we can get \(m\;|\;(ax-ay)\). Because of <a href="#" class="tooltip-link">\(\textbf{Theorem 3}\)
+        <script src="position_adjust.js"></script>, we can get \(m\;|\;(ax-ay)\). Because of <a href="#Theorem_3" class="tooltip-link">\(\textbf{Theorem 3}\)
           <span class="tooltip-text">\(\textbf{Theorem 4. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=1\) where \(m\neq 1\), then \(a\equiv b (\text{mod}\; m)\).</span>
         </a>
         <script src="position_adjust.js"></script> and \((a, m)=1\), we can get \(x\equiv y\; (\text{mod }m)\), which implies that \(m\;|\;(x-y)\). 
@@ -324,7 +325,7 @@
         where \(a', m'\) and \(b'\) are integers. Since \((a, m)=d\), we can get \((a', m')=1\) by <a href="#" class="tooltip-link">\(\textbf{Theorem 1 form the previous Section}\)
           <span class="tooltip-text">\(\textbf{Theorem 1. }\) If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</span>
         </a>
-        <script src="position_adjust.js"></script>. Thus, we know that \(a'x\equiv b'\; (\text{mod }m')\) has only one solution by <a href="#" class="tooltip-link">\(\textbf{Lemma 3}\)
+        <script src="position_adjust.js"></script>. Thus, we know that \(a'x\equiv b'\; (\text{mod }m')\) has only one solution by <a href="#Lemma_3" class="tooltip-link">\(\textbf{Lemma 3}\)
           <span class="tooltip-text">\(\textbf{Lemma 3. }\)If \((a, m) = 1\), then \(ax\equiv b\; (\text{mod }m)\) has only one solution.</span>
         </a>
         <script src="position_adjust.js"></script>. Let \(x_0\) be the solution of \(a'x\equiv b'\; (\text{mod }m')\) and let \(x'\) be any solution of \(ax\equiv b\; (\text{mod }m)\).
@@ -341,12 +342,12 @@
         $$
         ax_0\equiv b\; (\text{mod }m) \qquad\text{and}\qquad ax'\equiv b\; (\text{mod }m).
         $$
-        According to <a href="#" class="tooltip-link">\(\textbf{Theorem 3}\)
+        According to <a href="#Theorem_3" class="tooltip-link">\(\textbf{Theorem 3}\)
           <span class="tooltip-text">\(\textbf{Theorem 3. }\) \(a\equiv b\; (\text{mod }m)\) if and only if
             \(a\) and \(b\) leave the same remainder on division by \(m\).</span>
         </a>
         <script src="position_adjust.js"></script>, we can get \(m\;|\;(ax_0-ax')\), which implies that \(ax_0\equiv ax'\; (\text{mod }m)\).
-        According to  <a href="#" class="tooltip-link">\(\textbf{Theorem 5}\)
+        According to  <a href="#Theorem_5" class="tooltip-link">\(\textbf{Theorem 5}\)
           <span class="tooltip-text">\(\textbf{Theorem 5. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=d\) where \(d\neq 1\), then \(a\equiv b\; (\text{mod}\; \frac{m}{d})\).</span>
         </a>
         <script src="position_adjust.js"></script>, since  \(ax_0\equiv ax'\; (\text{mod }m)\) and \((a, m)=d\), we can get \(x_0\equiv x'\; (\text{mod}\; \frac{m}{d})\).
@@ -364,19 +365,19 @@
         \(\textbf{Theorem 7. }\)\(ax\equiv b (\text{mod }m)\) has no solutions if \((a, m)\nmid b\). If \((a. m)\;|\;b\), then there are exactly \((a, m)\) solutions.
       </p>
       <p>
-        \(\textbf{Proof. }\)If \((a, m)\nmid b\), then \(ax\equiv b (\text{mod }m)\) has no solutions by <a href="#" class="tooltip-link">\(\textbf{Lemma 2}\)
+        \(\textbf{Proof. }\)If \((a, m)\nmid b\), then \(ax\equiv b (\text{mod }m)\) has no solutions by <a href="#Lemma_2" class="tooltip-link">\(\textbf{Lemma 2}\)
           <span class="tooltip-text">\(\textbf{Lemma 2. }\)If \((a, m)\;\nmid\;b\), then \(ax\equiv b\; (\text{mod }m)\) has no solutions.</span>
         </a>
-        <script src="position_adjust.js"></script>. If \((a. m)\;|\;b\), then there are exactly \((a, m)\) solutions by <a href="#" class="tooltip-link">\(\textbf{Lemma 4}\)
+        <script src="position_adjust.js"></script>. If \((a. m)\;|\;b\), then there are exactly \((a, m)\) solutions by <a href="#Lemma_4" class="tooltip-link">\(\textbf{Lemma 4}\)
           <span class="tooltip-text">\(\textbf{Lemma 4. }\)Let \(d=(a,m)\). If \(d\;|\;b\), then \(ax\equiv b\; (\text{mod }m)\) has exactly \(d\) solutions.</span>
         </a>
         <script src="position_adjust.js"></script>. \[ \tag*{$\square$} \]
       </p>
       <p>
-        \(\textbf{Note. }\)This is just a summary of <a href="#" class="tooltip-link">\(\textbf{Lemma 2}\)
+        \(\textbf{Note. }\)This is just a summary of <a href="#Lemma_2" class="tooltip-link">\(\textbf{Lemma 2}\)
           <span class="tooltip-text">\(\textbf{Lemma 2. }\)If \((a, m)\;\nmid\;b\), then \(ax\equiv b\; (\text{mod }m)\) has no solutions.</span>
         </a>
-        <script src="position_adjust.js"></script> and <a href="#" class="tooltip-link">\(\textbf{Lemma 4}\)
+        <script src="position_adjust.js"></script> and <a href="#Lemma_4" class="tooltip-link">\(\textbf{Lemma 4}\)
           <span class="tooltip-text">\(\textbf{Lemma 4. }\)Let \(d=(a,m)\). If \(d\;|\;b\), then \(ax\equiv b\; (\text{mod }m)\) has exactly \(d\) solutions.</span>
         </a>
         <script src="position_adjust.js"></script>.
