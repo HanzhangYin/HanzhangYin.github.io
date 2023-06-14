@@ -80,6 +80,7 @@
   
     body {
       margin: 0 auto;
+      width: 80%;
       font-size: 1em;
       padding: 12px;
       hyphens: auto;
@@ -94,6 +95,42 @@
     h1 {
       font-size: 1.8em;
     }
+
+    .tooltip-link {
+      position: center;
+      display: inline-block;
+      color: #33D1FF;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      width: 80%; /* Width of the tooltip(Box) */
+      background-color: #555;
+      color: #fff;
+      text-align: left;
+      border-radius: 10px;
+      padding: 10px 10px;
+
+      /* Position the tooltip */
+      position: fixed; /* Changed from absolute to fixed */
+      z-index: 1;
+      top: 50%; /* Position at the vertical center of the screen */
+      left: 50%; /* Position at the horizontal center of the screen */
+      transform: translate(-50%, -50%); /* Center the tooltip box */
+    
+      /* Fade-in effect */
+      opacity: 1;
+      transition: opacity 0.2s;
+    }
+
+     .tooltip-link:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltip-link:hover {
+      color: orange;
+    }  
   }
 
   /* define styles for larger screens */
@@ -252,19 +289,13 @@
   div.column{flex: auto; overflow-x: auto;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-}
-  /* ul.task-list li input[type="checkbox"] {
-    width: 0.8em;
-    margin: 0 0.8em 0.2em -1.6em;
-    vertical-align: middle;
-  } */
   
   .tooltip-link {
     position: relative;
     display: inline-block;
     color: #33D1FF;
   }
-  
+
   .tooltip-text {
     visibility: hidden;
     width: 400px; /* Width of the tooltip(Box) */
@@ -294,6 +325,12 @@
   .tooltip-link:hover {
     color: orange;
   }
+}
+  /* ul.task-list li input[type="checkbox"] {
+    width: 0.8em;
+    margin: 0 0.8em 0.2em -1.6em;
+    vertical-align: middle;
+  } */
   
   header {
     padding: 20px;
