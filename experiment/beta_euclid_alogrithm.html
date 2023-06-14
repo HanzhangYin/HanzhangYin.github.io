@@ -53,10 +53,10 @@
         tooltip.forEach((tip) => {
           tip.previousElementSibling.addEventListener('click', function(event) {
             event.preventDefault();
-            if (tip.style.visibility === 'visible') {
-              tip.style.visibility = 'hidden';
+            if (text.style.visibility === 'visible') {
+              text.style.visibility = 'hidden';
             } else {
-              tip.style.visibility = 'visible';
+              text.style.visibility = 'visible';
             }
           });
         });
