@@ -1,33 +1,86 @@
-<link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
-<style>
-  html {
-    color: #1a1a1a;
-    background-color: #ededed;
-  }
-  body {
-    margin: 0 auto;
-    max-width: 50em;
-    padding-left: 200px; /* push all body content to the right by the width of the navbar */
-    padding-right: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    text-rendering: optimizeLegibility;
-    font-kerning: normal;
-    font-family:  'Spectral', serif;
-  }
-  @media screen and (max-width: 600px) {
-    .navbar a {
-      display: block; /* Stacks the links on top of each other */
-      text-align: left;
+/* define styles for smaller screens */
+@media screen and (max-width: 600px) {
+    html {
+      color: #1a1a1a;
+      background-color: #ededed;
     }
+    
+    .navbar {
+      overflow: hidden;  
+      background-color: #ededed;
+      padding-top: 60px; /* Height of the hamburger menu */
+      font-family: 'Spectral', serif;
+      left: 0; /* set the navbar to the left side of the screen */
+      width: 100%; /* set a full width  */
+      height: 100%; /* make it full height */
+      position: fixed; /* Enable the navbar to remain in view when scrolling */
+      box-sizing: border-box;
+      display: flex;  
+      flex-direction: column; /* make the navbar elements appear in a column */
+      overflow: auto; /* make the navbar scrollable */
+      z-index: 1;
+      transform: translateX(-100%);  /* Initially move the navbar off the screen. */
+      transition: transform 0.2s ease-in-out;  /* Animate the movement. */
+    }
+
+    .navbar a {
+      font-family: 'Spectral', serif;
+      color: #565656;
+      text-align: center;
+      padding: 11px 10px;
+      text-decoration: none;
+    }
+
+    .nav-toggle:checked ~ .navbar {
+      transform: translateX(0);  /* When checkbox is checked, move navbar back on screen. */
+    }
+
+    .nav-toggle {
+      display: none;
+    }
+    
+    
+    .navbar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .navbar ul li a {
+      font-family: 'Spectral', serif;
+      color: #565656;
+      text-align: center;
+      padding: 11px 10px;
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+    }
+    
+    .navbar ul li a:hover {
+      background: #565656;
+    }
+    
+
+    .nav-toggle:checked + .icon-burger,
+    .icon-burger {
+      display: block;
+      cursor: pointer;
+      position: fixed;
+      left: 20px;
+      top: 20px;
+      z-index: 2;
+    }
+
+    .icon-burger .line {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin: 6px 0;
+    }
+
   
     body {
       margin: 0 auto;
-      font-size: 0.9em;
+      font-size: 1em;
       padding: 12px;
       hyphens: auto;
       overflow-wrap: break-word;
@@ -42,23 +95,57 @@
       font-size: 1.8em;
     }
   }
-  @media print {
-    html {
-      background-color: white;
-    }
-    body {
-      background-color: transparent;
-      color: black;
-      font-size: 12pt;
-    }
-    p, h2, h3 {
-      orphans: 3;
-      widows: 3;
-    }
-    h2, h3, h4 {
-      page-break-after: avoid;
-    }
+
+  /* define styles for larger screens */
+
+@media screen and (min-width: 600px) {
+  .nav-toggle {
+    display: none; /* hide the checkbox */
   }
+
+  html {
+    color: #1a1a1a;
+    background-color: #ededed;
+  }
+  body {
+    margin: 0 auto;
+    max-width: 50em;
+    padding-left: 200px;  /* push all body content to the right by the width of the navbar */
+    padding-right: 30px;  
+    padding-top: 30px;
+    padding-bottom: 30px;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-family:  'Spectral', serif;
+  }
+  .navbar {
+    overflow: hidden; 
+    background-color: transparent;
+    font-family: 'Spectral', serif;
+    left: 10px; /* set the navbar to the left side of the screen */
+    width: 150px; /* set a fixed width for your navbar */
+    height: 80%; /* make it 80% height */
+    position: fixed; /* Enable the navbar to remain in view when scrolling */
+    display: flex; 
+    flex-direction: column; /* make the navbar elements appear in a column */
+    overflow-y: auto; /* make the navbar scrollable */
+  }
+  
+  .navbar a {
+    font-family: 'Spectral', serif;
+    color: #565656;
+    text-align: left;
+    padding: 11px 10px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #565656;
+    color: white;
+  }
+
   p {
     margin: 1em 0;
   }
@@ -165,11 +252,12 @@
   div.column{flex: auto; overflow-x: auto;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-  ul.task-list li input[type="checkbox"] {
+}
+  /* ul.task-list li input[type="checkbox"] {
     width: 0.8em;
     margin: 0 0.8em 0.2em -1.6em;
     vertical-align: middle;
-  }
+  } */
   
   .tooltip-link {
     position: relative;
@@ -207,49 +295,20 @@
     color: orange;
   }
   
-
-  .navbar {
-    overflow: hidden; 
-    background-color: transparent;
-    font-family: 'Spectral', serif;
-    left: 10px; /* set the navbar to the left side of the screen */
-    width: 150px; /* set a fixed width for your navbar */
-    height: 80%; /* make it 80% height */
-    position: fixed; /* Enable the navbar to remain in view when scrolling */
-    display: flex; 
-    flex-direction: column; /* make the navbar elements appear in a column */
-    overflow-y: auto; /* make the navbar scrollable */
-  }
-  
-  .navbar a {
-    font-family: 'Spectral', serif;
-    color: #565656;
-    text-align: left;
-    padding: 11px 10px;
-    text-decoration: none;
-  }
-  
-  .navbar a:hover {
-    background-color: #565656;
-    color: white;
-  }
-  
   header {
     padding: 20px;
     text-align: center;
-    margin-left: 10px; /* Add a left margin to the header equal to the width of the navbar plus a little extra */
+    /* margin-left: 10px;  Add a left margin to the header equal to the width of the navbar plus a little extra */
   }
   
   section {
-  width: 80%; /* Adjust this value to change the width of the section */
+  width: 100%; /* Adjust this value to change the width of the section */
   /*height: 100vh;  Set the height to 100% of the viewport height */
   /*position: fixed;  This positions the element relative to the browser window */
-  margin-left: 10px; /* Add a left margin to the sections equal to the width of the navbar plus a little extra */
+  /* margin-left: 10px;  Add a left margin to the sections equal to the width of the navbar plus a little extra */
   transition: background-color 1s; /* make the transition of the color */
   }
 
   .highlight {
     background-color: yellow;
   }
-  
-</style>
