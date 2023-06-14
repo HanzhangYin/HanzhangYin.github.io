@@ -104,7 +104,7 @@
 
     .tooltip-text {
       visibility: hidden;
-      width: 400px; /* Width of the tooltip(Box) */
+      width: 80%; /* Width of the tooltip(Box) */
       background-color: #555;
       color: #fff;
       text-align: left;
@@ -130,14 +130,14 @@
       transition: opacity 0.2s;
     }
 
-    .tooltip-link:hover .tooltip-text {
+    /* .tooltip-link:hover .tooltip-text {
       visibility: visible;
       opacity: 1;
     }
 
     .tooltip-link:hover {
       color: orange;
-    }
+    } */
   }
 
   /* define styles for larger screens */

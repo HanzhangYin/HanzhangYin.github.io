@@ -45,6 +45,33 @@
     <a href="#References">References</a>
   </nav>
   <script src="lick.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+  <script>
+    var mediaQueryList = window.matchMedia('(max-width: 600px)');
+    if (mediaQueryList.matches) {
+        // The viewport is 600px or less, add the JavaScript you want to apply
+        const tooltip = document.querySelectorAll('.tooltip-text');
+        tooltip.forEach((tip) => {
+          tip.previousElementSibling.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (tip.style.visibility === 'visible') {
+              tip.style.visibility = 'hidden';
+            } else {
+              tip.style.visibility = 'visible';
+            }
+          });
+        });
+
+        // const navLinks = document.querySelectorAll('.navbar a');
+        // navLinks.forEach((link) => {
+        //   link.addEventListener('click', function() {
+        //     const checkBox = document.querySelector('.nav-toggle');
+        //     if (checkBox.checked) {
+        //       checkBox.checked = false;
+        //     }
+        //   });
+        // });
+    }
+</script>
   <header id="title-block-header">
     <h1 class="title">Euclid's Algorithm and Unique Factorization of Integers</h1>
   </header>
