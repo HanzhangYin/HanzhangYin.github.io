@@ -80,6 +80,7 @@
   
     body {
       margin: 0 auto;
+      width: 100%;
       font-size: 1em;
       padding: 12px;
       hyphens: auto;
@@ -93,6 +94,12 @@
     }
     h1 {
       font-size: 1.8em;
+    }
+
+    .tooltip-link {
+      position: center;
+      display: inline-block;
+      color: #33D1FF;
     }
   }
 
@@ -252,6 +259,12 @@
   div.column{flex: auto; overflow-x: auto;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
+  
+  .tooltip-link {
+    position: relative;
+    display: inline-block;
+    color: #33D1FF;
+  }
 }
   /* ul.task-list li input[type="checkbox"] {
     width: 0.8em;
@@ -259,11 +272,6 @@
     vertical-align: middle;
   } */
   
-  .tooltip-link {
-    position: relative;
-    display: inline-block;
-    color: #33D1FF;
-  }
   
   .tooltip-text {
     visibility: hidden;
