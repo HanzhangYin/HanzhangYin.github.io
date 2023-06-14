@@ -21,6 +21,7 @@
   }
   @media screen and (max-width: 600px) {
     body {
+      margin: 0 auto;
       font-size: 0.9em;
       padding: 12px;
       hyphens: auto;
@@ -28,6 +29,9 @@
       text-rendering: optimizeLegibility;
       font-kerning: normal;
       font-family:  'Spectral', serif;
+    }
+    p {
+      margin: 1em 0;
     }
     h1 {
       font-size: 1.8em;
