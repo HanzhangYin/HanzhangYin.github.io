@@ -15,6 +15,18 @@
 <link rel="stylesheet" type="text/css" href="beta_tutoring_style.css"><!--It is a link for css structure-->
 <script src="beta_highlight.js"></script><!--It is a link for highlight.js-->
 <title>Euclid's Algorithm and Unique Factorization of Integers</title>
+<script>
+  // Select all the links in the navbar
+  var navLinks = document.querySelectorAll('.navbar a');
+
+  // For each link, add a click event
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      // When a link is clicked, uncheck the checkbox
+      document.getElementById('nav-toggle').checked = false;
+    });
+  });
+</script>
 </head>
 <body>
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
