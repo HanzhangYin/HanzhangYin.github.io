@@ -20,6 +20,11 @@
     font-family:  'Spectral', serif;
   }
   @media screen and (max-width: 600px) {
+    .navbar a {
+      display: block; /* Stacks the links on top of each other */
+      text-align: left;
+    }
+  
     body {
       margin: 0 auto;
       font-size: 0.9em;

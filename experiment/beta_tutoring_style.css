@@ -19,69 +19,27 @@
     font-kerning: normal;
     font-family:  'Spectral', serif;
   }
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
+    .navbar a {
+      display: block; /* Stacks the links on top of each other */
+      text-align: left;
+    }
+  
     body {
+      margin: 0 auto;
       font-size: 0.9em;
       padding: 12px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+      font-family:  'Spectral', serif;
+    }
+    p {
+      margin: 1em 0;
     }
     h1 {
       font-size: 1.8em;
-    }
-    .navbar {
-      display: none;
-    }
-    .hamburger-menu {
-      display: block;
-    }
-    #menuToggle input {
-      display: block;
-      width: 40px;
-      height: 32px;
-      position: absolute;
-      top: -7px;
-      left: -5px;
-      cursor: pointer;
-      opacity: 0;
-      z-index: 2;
-      -webkit-touch-callout: none;
-    }
-    
-    #menuToggle span {
-      display: block;
-      width: 33px;
-      height: 4px;
-      margin-bottom: 5px;
-      position: relative;
-      background: #cdcdcd;
-      border-radius: 3px;
-      z-index: 1;
-      transform-origin: 4px 0px;
-      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                  opacity 0.55s ease;
-    }
-    
-    #menu {
-      position: absolute;
-      width: 300px;
-      margin: -100px 0 0 -50px;
-      padding: 50px;
-      padding-top: 125px;
-      background: #ededed;
-      list-style-type: none;
-      -webkit-font-smoothing: antialiased;
-      transform-origin: 0% 0%;
-      transform: translate(-100%, 0);
-      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    }
-    
-    #menu li {
-      padding: 10px 0;
-      font-size: 22px;
-    }
-    
-    #menuToggle input:checked ~ ul {
-      transform: none;
     }
   }
   @media print {
@@ -147,7 +105,6 @@
     margin: 1em 0;
     overflow: auto;
   }
-  <!--add new color-->
   pre code {
     padding: 0;
     overflow: visible;
@@ -217,6 +174,7 @@
   .tooltip-link {
     position: relative;
     display: inline-block;
+    color: #33D1FF;
   }
   
   .tooltip-text {
@@ -245,6 +203,11 @@
     opacity: 1;
   }
 
+  .tooltip-link:hover {
+    color: orange;
+  }
+  
+
   .navbar {
     overflow: hidden; 
     background-color: transparent;
@@ -260,7 +223,7 @@
   
   .navbar a {
     font-family: 'Spectral', serif;
-    color: black;
+    color: #565656;
     text-align: left;
     padding: 11px 10px;
     text-decoration: none;
@@ -270,39 +233,6 @@
     background-color: #565656;
     color: white;
   }
-
-  .navbar-submenu {
-    padding: 11px 10px;
-    position: relative; /* Set the navbar-submenu to relative position */
-    overflow: hidden; 
-    background-color: transparent;
-    font-family: 'Spectral', serif;
-    left: 10px; /* set the navbar to the left side of the screen */
-    width: 150px; /* set a fixed width for your navbar */
-    height: 80%; /* make it 80% height */
-    display: flex; 
-    flex-direction: column; /* make the navbar elements appear in a column */
-    overflow-y: auto; /* make the navbar scrollable */
-  }
-
-  .navbar-submenu:hover .navbar {
-    display: flex;
-  }
-  
-  .navbar-submenu .navbar {
-    overflow: hidden; 
-    background-color: transparent;
-    font-family: 'Spectral', serif;
-    left: 10px; /* set the navbar to the left side of the screen */
-    width: 150px; /* set a fixed width for your navbar */
-    height: 80%; /* make it 80% height */
-    position: fixed; /* Enable the navbar to remain in view when scrolling */
-    display: flex; 
-    flex-direction: column; /* make the navbar elements appear in a column */
-    overflow-y: auto; /* make the navbar scrollable */
-  }
-
-  
   
   header {
     padding: 20px;
@@ -315,7 +245,11 @@
   /*height: 100vh;  Set the height to 100% of the viewport height */
   /*position: fixed;  This positions the element relative to the browser window */
   margin-left: 10px; /* Add a left margin to the sections equal to the width of the navbar plus a little extra */
+  transition: background-color 1s; /* make the transition of the color */
+  }
+
+  .highlight {
+    background-color: yellow;
   }
   
 </style>
-
