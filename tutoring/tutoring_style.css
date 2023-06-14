@@ -101,6 +101,27 @@
       display: inline-block;
       color: #33D1FF;
     }
+
+    .tooltip-text {
+      visibility: hidden;
+      width: 400px; /* Width of the tooltip(Box) */
+      background-color: #555;
+      color: #fff;
+      text-align: left;
+      border-radius: 10px;
+      padding: 10px 10px;
+    
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -60px;
+    
+      /* Fade-in effect */
+      opacity: 1;
+      transition: opacity 0.2s;
+    }
   }
 
   /* define styles for larger screens */
