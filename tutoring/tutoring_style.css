@@ -122,6 +122,15 @@
       opacity: 1;
       transition: opacity 0.2s;
     }
+
+    .tooltip-link:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltip-link:hover {
+      color: orange;
+    }
   }
 
   /* define styles for larger screens */
