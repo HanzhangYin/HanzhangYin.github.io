@@ -45,33 +45,21 @@
     <a href="#References">References</a>
   </nav>
   <script src="lick.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
-  <script>
-    var mediaQueryList = window.matchMedia('(max-width: 600px)');
-    if (mediaQueryList.matches) {
-        // The viewport is 600px or less, add the JavaScript you want to apply
-        const tooltip = document.querySelectorAll('.tooltip-text');
-        tooltip.forEach((tip) => {
-          tip.previousElementSibling.addEventListener('click', function(event) {
-            event.preventDefault();
-            if (text.style.visibility === 'visible') {
-              text.style.visibility = 'hidden';
-            } else {
-              text.style.visibility = 'visible';
-            }
-          });
-        });
+  <!-- <script>
+    let pressTimer;
+    let tooltip = document.querySelector('.tooltip-text');
 
-        // const navLinks = document.querySelectorAll('.navbar a');
-        // navLinks.forEach((link) => {
-        //   link.addEventListener('click', function() {
-        //     const checkBox = document.querySelector('.nav-toggle');
-        //     if (checkBox.checked) {
-        //       checkBox.checked = false;
-        //     }
-        //   });
-        // });
-    }
-</script>
+    document.querySelector('.tooltip-link').addEventListener('touchstart', function(e) {
+        pressTimer = window.setTimeout(function() {
+            tooltip.style.visibility = 'visible';
+        }, 1000) // Show the tooltip-text after 1 second of long press
+    });
+
+    document.querySelector('.tooltip-link').addEventListener('touchend', function(e) {
+        clearTimeout(pressTimer); // If the finger is removed from the screen before the timer finishes, cancel the long press event.
+        tooltip.style.visibility = 'hidden'; // Hide the tooltip-text when the touch ends.
+    });
+  </script> -->
   <header id="title-block-header">
     <h1 class="title">Euclid's Algorithm and Unique Factorization of Integers</h1>
   </header>
