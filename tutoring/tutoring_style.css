@@ -131,7 +131,7 @@
     .tooltip-link:hover {
       color: orange;
     }
-  }
+}
 
   /* define styles for larger screens */
 
@@ -311,13 +311,14 @@
     text-align: left;
     border-radius: 10px;
     padding: 10px 10px;
-  
+
     /* Position the tooltip */
-    position: absolute;
+    position: fixed; /* Changed from absolute to fixed */
     z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
+    top: 50%; /* Position at the vertical center of the screen */
+    left: 50%; /* Position at the horizontal center of the screen */
+    transform: translate(-50%, -50%); /* Center the tooltip box */
+
   
     /* Fade-in effect */
     opacity: 1;
