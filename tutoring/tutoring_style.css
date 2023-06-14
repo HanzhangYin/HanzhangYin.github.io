@@ -116,7 +116,7 @@
       z-index: 1;
       bottom: 100%;
       left: 50%;
-      margin-left: -60px;
+      /* margin-left: -60px; */
     
       /* Fade-in effect */
       opacity: 1;
