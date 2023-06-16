@@ -126,7 +126,7 @@
     font-kerning: normal;
     font-family:  'Spectral', serif;
   }
-
+  /* make sure that not all sections are displayed at the same time */
   section {
     margin: 20px;
     display: none;
