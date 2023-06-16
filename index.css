@@ -127,9 +127,9 @@
     font-family:  'Spectral', serif;
   }
     
-    .navbar {
-      overflow: hidden;  
-      background-color: #ededed;
+  .navbar {
+    overflow: hidden;  
+    background-color: #ededed;
       padding-top: 60px; /* Height of the hamburger menu */
       font-family: 'Spectral', serif;
       left: 0; /* set the navbar to the left side of the screen */
@@ -142,8 +142,8 @@
       overflow: hidden; /* (was auto previously) make the navbar scrollable */
       z-index: 1;
       transform: translateX(-100%);  /* Initially move the navbar off the screen. */
-      transition: transform 0.2s ease-in-out;  /* Animate the movement. */
-    }
+      transition: transform 0.2s ease-in-out;  /* Animate the movement. */  
+  }  
 
     .navbar a {
       font-family: 'Spectral', serif;
@@ -199,8 +199,9 @@
       margin: 6px 0;
     }
 
-    p {
-      margin: 1em 0;
+  p {
+    font-family: 'Spectral', serif;
+    margin: 1em 0;
     }
 
     h1 {
