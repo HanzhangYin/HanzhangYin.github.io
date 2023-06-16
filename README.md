@@ -19,6 +19,7 @@
   <a href="#elseworlds">Elseworlds</a>
   <a href="#contact">Contact</a>
 </nav>
+<script src="lick.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
 
 <header>
 <h1>
