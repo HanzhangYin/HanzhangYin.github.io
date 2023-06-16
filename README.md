@@ -12,13 +12,13 @@
 <link rel="stylesheet" type="text/css" href="index.css"><!--It is a link for css structure for style-->
 </head>
 
-<div class="navbar">
+<nav class="navbar">
   <a href="#about-me">About Me</a>
   <a href="#research">Research & Interests</a>
   <a href="#tutoring">Tutoring</a>
   <a href="#elseworlds">Elseworlds</a>
   <a href="#contact">Contact</a>
-</div>
+</nav>
 
 <header>
 <h1>
