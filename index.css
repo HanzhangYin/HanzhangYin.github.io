@@ -1,3 +1,4 @@
+/* define styles for larger screens */
 @media screen and (min-width: 600px) {
     .material-symbols-outlined {
         font-variation-settings:
