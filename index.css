@@ -99,17 +99,17 @@
         text-decoration: none;
     }
     a:hover {
-        color: pink;
-        background-color: transparent;
-        text-decoration: none;
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
     }
     footer {
-            bottom: 0;
-            margin-top: auto;
-            background-color: transparent;
-            color: #fff;
-            text-align: left;
-            padding: 5px;
+      bottom: 0;
+      margin-top: auto;
+      background-color: transparent;
+      color: #fff;
+      text-align: left;
+      padding: 5px;
     }
 }
 
@@ -202,6 +202,10 @@
       height: 3px;
       background-color: #333;
       margin: 6px 0;
+    }
+
+  #about-me {
+      display: block; /*Let about me section automatically show up when the page loads*/
     }
 
   p {
