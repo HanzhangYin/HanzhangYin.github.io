@@ -126,31 +126,36 @@
     font-kerning: normal;
     font-family:  'Spectral', serif;
   }
+
+  section {
+    margin: 20px;
+    display: none;
+  }
     
   .navbar {
     overflow: hidden;  
     background-color: #ededed;
-      padding-top: 60px; /* Height of the hamburger menu */
-      font-family: 'Spectral', serif;
-      left: 0; /* set the navbar to the left side of the screen */
-      width: 100%; /* set a full width  */
-      height: 100%; /* make it full height */
-      position: fixed; /* Enable the navbar to remain in view when scrolling */
-      box-sizing: border-box;
-      display: flex;  
-      flex-direction: column; /* make the navbar elements appear in a column */
-      overflow: hidden; /* (was auto previously) make the navbar scrollable */
-      z-index: 1;
-      transform: translateX(-100%);  /* Initially move the navbar off the screen. */
-      transition: transform 0.2s ease-in-out;  /* Animate the movement. */  
+    padding-top: 60px; /* Height of the hamburger menu */
+    font-family: 'Spectral', serif;
+    left: 0; /* set the navbar to the left side of the screen */
+    width: 100%; /* set a full width  */
+    height: 100%; /* make it full height */
+    position: fixed; /* Enable the navbar to remain in view when scrolling */
+    box-sizing: border-box;
+    display: flex;  
+    flex-direction: column; /* make the navbar elements appear in a column */
+    overflow: hidden; /* (was auto previously) make the navbar scrollable */
+    z-index: 1;
+    transform: translateX(-100%);  /* Initially move the navbar off the screen. */
+    transition: transform 0.2s ease-in-out;  /* Animate the movement. */  
   }  
 
-    .navbar a {
-      font-family: 'Spectral', serif;
-      color: #565656;
-      text-align: center;
-      padding: 11px 10px;
-      text-decoration: none;
+  .navbar a {
+    font-family: 'Spectral', serif;
+    color: #565656;
+    text-align: center;
+    padding: 11px 10px;
+    text-decoration: none;
     }
 
     .nav-toggle:checked ~ .navbar {
