@@ -1,113 +1,115 @@
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-}
-body {
-    background-color: #ededed ;
-    margin: 0 15%;
-    font-family: 'Spectral', serif; 
-}
-header {
-    background-color: #ededed;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Spectral', serif; 
-}
-.navbar {
-    display: flex;
-    /* justify-content: space-around; */
-    justify-content: space-between;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: #ededed;
-    font-family: 'Spectral', serif;
-    z-index: 1; /* make the navigation bar always on top of the content  */
-}
-.navbar a {
-    font-family: 'Spectral', serif;
-    float: left;
-    display: block;
-    color: #ededed;
-    text-align: center;
-    padding: 11px 10px;
-    text-decoration: none;
-}
-.navbar a:hover {
-    background-color: #565656;
-    color: white;
-}
-header {
-    padding: 20px;
-    text-align: center;
-}
-section {
-    margin: 20px;
-    display: none;
-}                        
-#about-me {
-    display: block; /*Let about me section automatically show up when the page loads*/
-}
-h1 {
-    text-align: right;
-    font-family: 'Spectral', serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 1px solid #646060;
-    margin-top: 50px; 
-}
-h2 {
-    font-family: 'Spectral', serif;
-    color: #565656;
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-h3 {
-    font-family: 'Spectral', serif;
-    color: #565656;
-    font-size: 1em; 
-}
-h4 {
-    font-family: 'Spectral', serif;
-    text-align: right;
-    color: #565656;
-    font-size: 0.9em; 
-}
-img {
-    float: left;
-    margin-right: 30px
-}
-p {
-    font-family: 'Spectral', serif;
-    color: #565656;
-    font-size: 1.2em;
-}
-a:link {
-    color: #3498DB; /* Grey color */
-    background-color: transparent;
-    text-decoration: none;
-}
-a:visited {
-    color: #3498DB; /* Grey color */
-    background-color: transparent;
-    text-decoration: none;
-}
-a:hover {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
-}
-footer {
-        bottom: 0;
-        margin-top: auto;
+@media screen and (min-width: 600px) {
+    .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+    body {
+        background-color: #ededed ;
+        margin: 0 15%;
+        font-family: 'Spectral', serif; 
+    }
+    header {
+        background-color: #ededed;
+        padding: 20px;
+        text-align: center;
+        font-family: 'Spectral', serif; 
+    }
+    .navbar {
+        display: flex;
+        /* justify-content: space-around; */
+        justify-content: space-between;
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: #ededed;
+        font-family: 'Spectral', serif;
+        z-index: 1; /* make the navigation bar always on top of the content  */
+    }
+    .navbar a {
+        font-family: 'Spectral', serif;
+        float: left;
+        display: block;
+        color: #ededed;
+        text-align: center;
+        padding: 11px 10px;
+        text-decoration: none;
+    }
+    .navbar a:hover {
+        background-color: #565656;
+        color: white;
+    }
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+    section {
+        margin: 20px;
+        display: none;
+    }                        
+    #about-me {
+        display: block; /*Let about me section automatically show up when the page loads*/
+    }
+    h1 {
+        text-align: right;
+        font-family: 'Spectral', serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1px solid #646060;
+        margin-top: 50px; 
+    }
+    h2 {
+        font-family: 'Spectral', serif;
+        color: #565656;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+    h3 {
+        font-family: 'Spectral', serif;
+        color: #565656;
+        font-size: 1em; 
+    }
+    h4 {
+        font-family: 'Spectral', serif;
+        text-align: right;
+        color: #565656;
+        font-size: 0.9em; 
+    }
+    img {
+        float: left;
+        margin-right: 30px
+    }
+    p {
+        font-family: 'Spectral', serif;
+        color: #565656;
+        font-size: 1.2em;
+    }
+    a:link {
+        color: #3498DB; /* Grey color */
         background-color: transparent;
-        color: #fff;
-        text-align: left;
-        padding: 5px;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #3498DB; /* Grey color */
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    footer {
+            bottom: 0;
+            margin-top: auto;
+            background-color: transparent;
+            color: #fff;
+            text-align: left;
+            padding: 5px;
+    }
 }
     
     
