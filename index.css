@@ -115,10 +115,11 @@
 
 /* define styles for smaller screens */
 @media screen and (max-width: 600px) {
-    /* html {
-      color: #1a1a1a;
-      background-color: #ededed;
-    } */
+  body {
+    background-color: #ededed ;
+    margin: 0 15%;
+    font-family: 'Spectral', serif;
+  }
     
     .navbar {
       overflow: hidden;  

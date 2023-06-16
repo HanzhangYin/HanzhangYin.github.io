@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<link rel="stylesheet" type="text/css" href="research_style.css"><!--It is a link for css structure-->
+  </script><!--It is a link for MathJax-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+  <link rel="stylesheet" type="text/css" href="research_style.css"><!--It is a link for css structure-->
 <title>Symmetric Polynomial</title>
 
 <header id="title-block-header">
@@ -14,12 +19,18 @@
 
 </head>
 <body>
-    <div class="navbar">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
+    <nav class="navbar">
       <a href="#Partition">Partition</a>
       <a href="#Monomial">Monomial</a>
       <a href="#Symmetric_Polynomial">Symmetric Polynomial</a>
       <a href="#References">References</a>
-    </div>
+    </nav>
 
 <section id = "Monomial">
 <h2>
