@@ -116,9 +116,15 @@
 /* define styles for smaller screens (phone screen)*/
 @media screen and (max-width: 600px) {
   body {
-    background-color: #ededed ;
-    margin: 0 15%;
-    font-family: 'Spectral', serif;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1em;
+    padding: 12px;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-family:  'Spectral', serif;
   }
     
     .navbar {
@@ -193,21 +199,10 @@
       margin: 6px 0;
     }
 
-  
-    body {
-      margin: 0 auto;
-      width: 100%;
-      font-size: 1em;
-      padding: 12px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-      font-family:  'Spectral', serif;
-    }
     p {
       margin: 1em 0;
     }
+
     h1 {
       font-size: 1.8em;
     }
