@@ -115,10 +115,10 @@
 
 /* define styles for smaller screens */
 @media screen and (max-width: 600px) {
-    html {
+    /* html {
       color: #1a1a1a;
       background-color: #ededed;
-    }
+    } */
     
     .navbar {
       overflow: hidden;  
