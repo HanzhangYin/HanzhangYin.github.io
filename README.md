@@ -12,6 +12,12 @@
 <link rel="stylesheet" type="text/css" href="index.css"><!--It is a link for css structure for style-->
 </head>
 <body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
 <nav class="navbar">
   <a href="#about-me">About Me</a>
   <a href="#research">Research & Interests</a>
