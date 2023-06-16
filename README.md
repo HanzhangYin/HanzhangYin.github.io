@@ -159,7 +159,7 @@ padding: 50px 0;
 text-align: left;
 %background-color: lightblue;
 margin-top: 20px;
-}
+} 
 
 </style>
 </head>
