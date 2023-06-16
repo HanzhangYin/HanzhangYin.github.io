@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" type="text/css" href="index.css"><!--It is a link for css structure for style-->
 </head>
-
+<body>
 <nav class="navbar">
   <a href="#about-me">About Me</a>
   <a href="#research">Research & Interests</a>
@@ -202,5 +202,5 @@ function myFunction3() {
   }
 }
 </script> -->
-
+</body>
 </html>
