@@ -69,7 +69,7 @@
         text-decoration: none;
     }
     .navbar a:hover {
-        background-color: #3498DB; /* light blue color */
+        background-color: #565656; /* grey color */
         color: white;
     }
     header {
