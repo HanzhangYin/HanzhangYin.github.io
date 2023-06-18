@@ -103,7 +103,7 @@
         font-size: 1.2em;
     }
     a:link {
-        color: white; /* Grey color */
+        color: blueviolet; /* Grey color */
         background-color: transparent;
         text-decoration: none;
     }
