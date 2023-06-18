@@ -4,6 +4,16 @@
       color: #1a1a1a;
       background-color: #ededed;
     }
+
+    .top-bar {
+      background: yellow;  /* Change this to your desired color */
+      height: 20px;  /* Adjust this to change the height of the bar */
+      width: 100%;
+      position: fixed;
+      top: 20px;
+      z-index: 1;  /* This ensures the bar stays on top of other elements */
+    }
+
     
     .navbar {
       overflow: hidden;  
@@ -75,6 +85,7 @@
       height: 3px;
       background-color: #333;
       margin: 6px 0;
+      z-index: 2;
     }
 
   
@@ -136,6 +147,7 @@
   /* define styles for larger screens */
 
 @media screen and (min-width: 600px) {
+
   .nav-toggle {
     display: none; /* hide the checkbox */
   }
