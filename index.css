@@ -46,7 +46,8 @@
         font-family: 'Spectral', serif;
         float: left;
         display: block;
-        color: #ededed;
+        /* color: #ededed; */
+        color: transparent;
         text-align: center;
         padding: 11px 10px;
         text-decoration: none;
