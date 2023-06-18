@@ -68,7 +68,7 @@ Hanzhang Yin
 </h3>
 
 <h3>
-<a href="order_ideal.html">Order Ideal</a>
+<a href="research_interests/order_ideal.html">Order Ideal</a>
 </h3>
 		  
 <h3>
