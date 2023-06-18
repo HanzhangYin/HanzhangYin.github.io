@@ -130,6 +130,7 @@
 /* define styles for smaller screens (phone screen)*/
 @media screen and (max-width: 600px) {
   body {
+    background-color: #ededed;
     margin: 0 auto;
     width: 100%;
     font-size: 1em;
