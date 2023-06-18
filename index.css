@@ -147,7 +147,7 @@
   }
 
   .top-bar {
-    background: #565656;  /* Change this to grey color */
+    background: #ededed;  /* Change this to grey color */
     height: 20px;  /* Adjust this to change the height of the bar */
     width: 100%;
     position: fixed;
