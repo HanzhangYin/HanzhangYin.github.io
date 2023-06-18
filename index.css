@@ -40,7 +40,7 @@
         top: 0;
         background-color: #ededed;
         font-family: 'Spectral', serif;
-        z-index: 1; /* make the navigation bar always on top of the content  */
+        z-index: 2; /* make the navigation bar always on top of the content  */
     }
     .navbar a {
         font-family: 'Spectral', serif;
