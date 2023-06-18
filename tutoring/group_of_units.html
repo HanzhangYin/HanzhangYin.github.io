@@ -115,56 +115,52 @@
       </p>
     </section>
 
-    <br>
+    <br />
 
     <h2>Congruence class / residue class</h2>
-    <section id = "Congruence_class">
+    <section id="Congruence_class">
       <p>
-        \(\textbf{Definition. }\)Congruence class or residue class of \(a\;\text{mod }n\): 
-        $$
-        \bar{a}=\{a + kn\;|\;k\in\mathbb{Z}\}=\{\dots, a-n, a, a+n, a+2n, \dots}.
-        $$
+        \(\textbf{Definition. }\)Congruence class or residue class of
+        \(a\;\text{mod }n\): $$ \bar{a}=\{a + kn\;|\;k\in\mathbb{Z}\}=\{\dots,
+        a-n, a, a+n, a+2n, \dots}. $$
       </p>
     </section>
 
-    <br>
+    <br />
 
     <h2>\((\mathbb{Z}/n\mathbb{Z})^\times\)</h2>
     <section>
       <p>
         \(\textbf{Definition. }\)The collection of residue classes of
-        \(\mathbb{Z}/n\mathbb{Z}\): 
-        $$ 
-        \mathbb{Z}/n\mathbb{Z}^\times = \{\bar{a}\in \mathbb{Z}/n\mathbb{Z}\; |\; \text{there exists }\bar{c} \in
-        \mathbb{Z}/n\mathbb{Z} with \bar{a}\cdot \bar{c}= \bar{1} (\text{i.e. }ac\equiv 1\;\text{mod }n)\}.
-        $$
+        \(\mathbb{Z}/n\mathbb{Z}\): $$ \mathbb{Z}/n\mathbb{Z}^\times =
+        \{\bar{a}\in \mathbb{Z}/n\mathbb{Z}\; |\; \text{there exists }\bar{c}
+        \in \mathbb{Z}/n\mathbb{Z} with \bar{a}\cdot \bar{c}= \bar{1}
+        (\text{i.e. }ac\equiv 1\;\text{mod }n)\}. $$
       </p>
     </section>
 
-    <section id = "Proposition_1">
+    <section id="Proposition_1">
       <p>
-        \(\textbf{Proposition 1. }\)\(\mathbb{Z}/n\mathbb{Z}^\times = \{\bar{a}\in\mathbb{Z}/n\mathbb{Z}\;|\;(a, n)=1\}\).
+        \(\textbf{Proposition 1. }\)\(\mathbb{Z}/n\mathbb{Z}^\times =
+        \{\bar{a}\in\mathbb{Z}/n\mathbb{Z}\;|\;(a, n)=1\}\).
       </p>
       <p>
-        \(\textbf{Proof. }\) Let \(A:=\{\bar{a}\in\mathbb{Z}/n\mathbb{Z}\;|\;(a, n)=1\}\). Suppose \(a\in A\). 
-        Hence, we can know that \((a, n)=1\). According to <a href="#" class="tooltip-link">\(\textbf{Corollary 1 of previous section}\)
-          <span class="tooltip-text">\(\textbf{Corollary 1. }\)If \(a\) and \(b\) are positive integers, \(b\neq 0\), then there exist integers \(x\) and \(y\) such that 
-            $$
-            ax+by=(a, b).
-            $$</span>
+        \(\textbf{Proof. }\) Let \(A:=\{\bar{a}\in\mathbb{Z}/n\mathbb{Z}\;|\;(a,
+        n)=1\}\). Suppose \(a\in A\). Hence, we can know that \((a, n)=1\).
+        According to
+        <a href="#" class="tooltip-link"
+          >\(\textbf{Corollary 1 of previous section}\)
+          <span class="tooltip-text"
+            >\(\textbf{Corollary 1. }\)If \(a\) and \(b\) are positive integers,
+            \(b\neq 0\), then there exist integers \(x\) and \(y\) such that $$
+            ax+by=(a, b). $$</span
+          >
         </a>
-        <script src="position_adjust.js"></script>, we can get that 
-        $$
-        ax+ny = 1,
-        $$
-        for some integers \(x, y\).
-        Thus, we can know that 
-        $$
-          ax - 1 = -ny,
-        $$
-        $$
-          ax\equiv 1\;\text{mod }n. 
-        $$
+        <script src="position_adjust.js"></script>
+        , we can get that $$ ax+ny = 1, $$ for some integers \(x, y\). Thus, we
+        can know that $$ ax - 1 = -ny, $$ $$ ax\equiv 1\;\text{mod }n. $$ Thus,
+        \(x\) can be the integer such that $$ \bar{a}\cdot \bar{x} = \bar 1, $$
+        and we can get \(A\subset \mathbb{Z}/n\mathbb{Z}^\times\).
       </p>
     </section>
 
