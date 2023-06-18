@@ -39,6 +39,7 @@
         width: 100%;
         top: 0;
         background-color: transparent;
+        left: 0;
         /* background-color: transparent; */
         font-family: 'Spectral', serif;
         z-index: 2; /* make the navigation bar always on top of the content  */
