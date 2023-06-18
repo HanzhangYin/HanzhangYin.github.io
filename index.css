@@ -18,6 +18,21 @@
         text-align: center;
         font-family: 'Spectral', serif; 
     }
+    a:link {
+      color: #7FB3D5 ; /* light blue color */
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #7FB3D5 ; /* light blue color */
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+    }
 
     .top-bar {
       background: #565656;  /* Change this to grey color */
@@ -101,21 +116,6 @@
         font-family: 'Spectral', serif;
         color: #565656;
         font-size: 1.2em;
-    }
-    a:link {
-        color: blueviolet; /* Grey color */
-        background-color: transparent;
-        text-decoration: none;
-    }
-    a:visited {
-        color: white; /* Grey color */
-        background-color: transparent;
-        text-decoration: none;
-    }
-    a:hover {
-      color: pink;
-      background-color: transparent;
-      text-decoration: none;
     }
     footer {
       bottom: 0;
