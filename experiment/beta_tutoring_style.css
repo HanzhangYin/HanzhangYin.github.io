@@ -6,11 +6,13 @@
     }
 
     .top-bar {
-      background: yellow;  /* Change this to your desired color */
+      background: #ededed;  /* Change this to grey color */
       height: 20px;  /* Adjust this to change the height of the bar */
       width: 100%;
       position: fixed;
-      top: 20px;
+      top: 0;
+      height: 50px;
+      left: 0;
       z-index: 1;  /* This ensures the bar stays on top of other elements */
     }
 
@@ -75,7 +77,7 @@
       display: block;
       cursor: pointer;
       position: fixed;
-      left: 20px;
+      left: 15px;
       top: 20px;
       z-index: 2;
     }
