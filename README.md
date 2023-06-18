@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="index.css"><!--It is a link for css structure for style-->
 </head>
 <body>
+  <div class="top-bar"></div>
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <label for="nav-toggle" class="icon-burger">
     <div class="line"></div>
