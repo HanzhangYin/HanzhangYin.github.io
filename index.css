@@ -29,7 +29,7 @@
       text-decoration: none;
     }
     a:hover {
-    color: pink;
+    color: #EB984E;
     background-color: transparent;
     text-decoration: none;
     }
@@ -209,7 +209,7 @@
     }
     
     .navbar ul li a:hover {
-      background: #565656;
+      background: #EB984E;
     }
     
 
