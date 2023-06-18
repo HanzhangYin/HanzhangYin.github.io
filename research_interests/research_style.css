@@ -4,6 +4,17 @@
       color: #1a1a1a;
       background-color: #ededed;
     }
+
+    .top-bar {
+      background: #ededed;  /* Change this to grey color */
+      height: 20px;  /* Adjust this to change the height of the bar */
+      width: 100%;
+      position: fixed;
+      top: 0;
+      height: 50px;
+      left: 0;
+      z-index: 1;  /* This ensures the bar stays on top of other elements */
+    }
     
     .navbar {
       overflow: hidden;  
