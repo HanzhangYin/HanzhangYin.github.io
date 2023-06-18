@@ -38,7 +38,8 @@
         position: fixed;
         width: 100%;
         top: 0;
-        background-color: #ededed;
+        background-color: transparent;
+        /* background-color: transparent; */
         font-family: 'Spectral', serif;
         z-index: 2; /* make the navigation bar always on top of the content  */
     }
@@ -46,8 +47,7 @@
         font-family: 'Spectral', serif;
         float: left;
         display: block;
-        /* color: #ededed; */
-        color: transparent;
+        color: #ededed; /* Grey color */
         text-align: center;
         padding: 11px 10px;
         text-decoration: none;
