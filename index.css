@@ -181,9 +181,9 @@
     text-align: center;
     padding: 11px 10px;
     text-decoration: none;
-    }
+  }
 
-    .nav-toggle:checked ~ .navbar {
+  .nav-toggle:checked ~ .navbar {
       transform: translateX(0);  /* When checkbox is checked, move navbar back on screen. */
     }
 
@@ -238,7 +238,7 @@
     margin: 1em 0;
     }
 
-    h1 {
+  h1 {
       font-size: 1.8em;
       font-family: 'Spectral', serif;
     }
