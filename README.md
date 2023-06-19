@@ -83,6 +83,10 @@ Hanzhang Yin
 
 <section id="tutoring">
   <h3>
+  <a href="tutoring/integer.html">Integer</a>
+  <h3>
+
+  <h3>
   <a href="tutoring/euclid_algorithm.html">Euclid's Algorithm and Unique Factorization of Integers</a>
   </h3>
 
