@@ -26,7 +26,7 @@
   <a href="#elseworlds">Elseworlds</a>
   <a href="#contact">Contact</a>
 </nav>
-<script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+<script src="click.js"></script><!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
 
 <header>
 <h1>
