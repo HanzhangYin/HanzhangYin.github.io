@@ -96,54 +96,53 @@ Hanzhang Yin
 </section>
 
 <section id="elseworlds">
-<h3>
-<a href="elseworlds/fine_tune.html">Fine Tune GPT</a>
-</h3>
+  <h3>
+  <a href="elseworlds/fine_tune.html">Fine Tune GPT</a>
+  </h3>
 
-<h3>
-<a href="elseworlds/group_ring.html">Group Algebra in SageMath</a>
-</h3>
+  <h3>
+  <a href="elseworlds/group_ring.html">Group Algebra in SageMath</a>
+  </h3>
 
-<h3>
-<a href="elseworlds/add_exsisting_directory_to_github.html">Add Exsisting Directory to Github</a>
-</h3>
+  <h3>
+  <a href="elseworlds/add_exsisting_directory_to_github.html">Add Exsisting Directory to Github</a>
+  </h3>
 
-<h3>
-<a href="elseworlds/smithnormalform.html">Smith Normal Form </a>
-</h3>
+  <h3>
+  <a href="elseworlds/smithnormalform.html">Smith Normal Form </a>
+  </h3>
 
-<h3>
-<a href="elseworlds/pandoc.html">Pandoc </a>
-</h3>
+  <h3>
+  <a href="elseworlds/pandoc.html">Pandoc </a>
+  </h3>
 
-<h3>
-<a href="elseworlds/path.html">Path Variables </a>
-</h3>
+  <h3>
+  <a href="elseworlds/path.html">Path Variables </a>
+  </h3>
 
-<h3>
-<a href="elseworlds/brew.html">Homebrew </a>
-</h3>
+  <h3>
+  <a href="elseworlds/brew.html">Homebrew </a>
+  </h3>
 
-<h3>
-<a href="elseworlds/R.html">R (Data)</a>
-</h3>
+  <h3>
+  <a href="elseworlds/R.html">R (Data)</a>
+  </h3>
 
-<h3>
-<a href="elseworlds/sqlite.html">SQLite</a>
-</h3>
+  <h3>
+  <a href="elseworlds/sqlite.html">SQLite</a>
+  </h3>
 
-<h3>
-<a href="elseworlds/nvim.html">Neovim</a>
-</h3>
+  <h3>
+  <a href="elseworlds/nvim.html">Neovim</a>
+  </h3>
 
-<h3>
-<a href="https://htmlcolorcodes.com">Colors for HTML</a>
-</h3>
+  <h3>
+  <a href="https://htmlcolorcodes.com">Colors for HTML</a>
+  </h3>
 
-<h3>
-<a href="https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/graph_generators.html">Common Graphs for SageMath</a>
-</h3>
-
+  <h3>
+  <a href="https://doc.sagemath.org/html/en/reference/graphs/sage/graphs/graph_generators.html">Common Graphs for SageMath</a>
+  </h3>
 </section>
 
 <section id = "contact">
