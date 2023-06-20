@@ -1,6 +1,9 @@
-<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+<!DOCTYPE html>
+<html lang="en">
+<!-- <html data-n-head-ssr lang="en"> -->
 <head>
-<meta charset="UTF-8/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!--It is for the responsive website-->
 <link rel="shortcut icon" type="image/x-icon" href="favicon_io/favicon.ico"><!--Add a favicon-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Allow the horizontal bar works-->
 <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
@@ -10,6 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!--link for the icon-->
 
 <link rel="stylesheet" type="text/css" href="index.css"><!--It is a link for css structure for style-->
+<title>Hanzhang Yin</title>
 </head>
 <body>
   <div class="top-bar"></div>
