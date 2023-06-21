@@ -27,6 +27,7 @@
   <a href="#about-me">About Me</a>
   <a href="#research">Research & Interests</a>
   <a href="#tutoring">Tutoring</a>
+  <a href="#note">Note</a>
   <a href="#elseworlds">Elseworlds</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -98,6 +99,19 @@ Hanzhang Yin
   <h3>
   <a href="tutoring/modular_arithmetics.html">Modular Arithmetics</a>
   </h3> 
+
+</section>
+
+<section id = "note">
+
+  <h3>
+  <a href="note/curve.html">Elliptic Curve</a>
+  <h3>
+
+  <h3>
+  <a href="note/ehrhart_theory.html">Euclid's Algorithm and Unique Factorization of Integers</a>
+  </h3>
+
 
 </section>
 
