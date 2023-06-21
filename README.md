@@ -102,6 +102,7 @@ Hanzhang Yin
 
 </section>
 
+<!-- Note section -->
 <section id = "note">
 
   <h3>
