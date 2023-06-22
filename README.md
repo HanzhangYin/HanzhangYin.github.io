@@ -113,6 +113,10 @@ Hanzhang Yin
   <a href="note/ehrhart_theory.html">Ehrhart Theory & Convex Polytope</a>
   </h3>
 
+    <h3>
+  <a href="note/quadratic_form.html">Quadratic Form</a>
+  </h3>
+
 
 </section>
 
