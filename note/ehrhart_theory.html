@@ -159,7 +159,51 @@
         \[
         x_1+x_2+\cdots+x_n+x_{n+1} = t.
         \]
-        Then the number of solutions is \(\binom{t+n}{n}\).
+        \(x_{n+1}\) is the integer to force equality. 
+      </p>
+      <h2>Dots and Dividors argument</h2>
+      <p>
+        \(t\) dots and \(n\) dividers.
+        Then the number of solutions is \(\binom{t+n}{n}\). Therefore, the lattice point enumerator of \(\Delta_n\) is
+        \[
+        L_{\Delta_n}(t) = \binom{t+n}{n} = \frac{(t+1)(t+2)\cdots(t+n)}{n!}.
+        \]
+        Note. This is a polynomial of degree \(n\).
+      </p>
+      <p>
+        \(\textbf{Exerice. }\)The lattice point enumerator of interior of \(\Delta_n\) is
+        \[
+        L_{\Delta^\circ_n}(t) = (-1)^nL_{\Delta^\circ_n}(-t).
+        \]
+        Note. \(\Delta^\circ_n\) is the interior of \(\Delta_n\).
+      </p>
+      <p>
+        \(\textbf{Exerice. }\)If \(P\) is a lattice polygon, then
+        \[
+        L_P(t) = A\cdot t^2 + \frac{B}{2}\cdot t + 1.
+        \]
+        where \(A\) is the area of \(P\) and \(B\) is the number of lattice points on the boundary of \(P\).
+        Note. 
+        \[
+        L_P(1) = A + \frac{B}{2} + 1 = 
+        \]
+      </p>
+      <p>
+        \(\textbf{Exerice. }\)If \(P\) is a lattice polytope, then
+        \[
+        L_P(t) = \sum_{i=0}^n(-1)^iL_{\Delta^\circ_i}(t).
+        \]
+      </p>
+    </section>
+
+    <section id = "Generating_functions">
+      <h2>Generating Functions</h2>
+      <p>
+        \(\textbf{Definition. }\)The generating function of a sequence \(a_0, a_1, a_2, \cdots\) is the formal power series
+        \[
+        f(x) = \sum_{i=0}^\infty a_ix^i.
+        \]
+        Note. Formal power series is a power series which convergence doesn't matter.
       </p>
     </section>
 
