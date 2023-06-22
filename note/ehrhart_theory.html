@@ -205,6 +205,64 @@
         \]
         Note. Formal power series is a power series which convergence doesn't matter.
       </p>
+      <p>
+        \(\textbf{Example. Fibonacci numbers}\) \((f_n)^\infty_{n=0}\)
+        \[
+        f_0 = 0, f_1 = 1, f_{n+2} = f_{n+1} + f_n.
+        \]
+        The generating function of \(f_n\) is
+        \[
+        F(x) = \sum_{i=0}^\infty f_ix^i = x + x^2 + 2x^3 + 3x^4 + 5x^5 + \cdots.
+        \]
+        \[
+        F(x) = x + \sum_{i=2}^\infty f_ix^i,
+        \]
+        \[
+        F(x) = x + \sum_{i=2}^\infty (f_{i-1}+f_{i-2})x^i,
+        \]
+        \[
+        F(x) = x + \sum_{i=2}^\infty f_{i-1}x^i + \sum_{i=2}^\infty f_{i-2}x^i,
+        \]
+        \[
+        F(x) = x + x\sum_{i=1}^\infty f_{i}x^{i-1} + x^2\sum_{i=0}^\infty f_{i}x^{i-2},
+        \]
+        \[
+        F(x) = x + xF(x) + x^2F(x),
+        \]
+        \[
+        F(x) = \frac{x}{1-x-x^2}.
+        \]
+        Note. \(1 - x - x^2 = (1-\varphi x)(1-\phi x)\) where
+        \[
+        \varphi = \frac{1+\sqrt{5}}{2},
+        \]
+        \[
+        \phi = \frac{1-\sqrt{5}}{2}.
+        \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Ehrhart_series">
+      <h2>Ehrhart Series</h2>
+      <p>
+        \(\textbf{Definition. }\)The Ehrhart series of a convex polytope \(P\) is the generating function
+        \[
+        Ehr_P(x) = 1+ \sum_{i=1}^\infty L_P(i)x^i.
+        \]
+      </p>
+      <p>
+        \(\textbf{Example. }\)The Ehrhart series of \(\Delta_2\) is
+        \[
+        Ehr_{\Delta_2}(x) = 1 + \sum_{i=1}^\infty L_{\Delta_2}(i)x^i,
+        \]
+        \[
+        Ehr_{\Delta_2}(x) = 1 + \sum_{i=1}^\infty \binom{i+2}{2}x^i =  \sum_{i=0}^\infty \binom{i+2}{2}x^i,
+        \]
+        \[
+        Ehr_{\Delta_2}(x) = \sum_{i=0}^\infty (\frac{t^2}{2}+\frac{3}{2}t+1)x^i
+      </p>
     </section>
 
 
