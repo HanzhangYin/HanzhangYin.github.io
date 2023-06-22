@@ -155,6 +155,11 @@
         \[
         t\cdot \Delta_n\cap \mathbb{Z}^n = \{\text{non negative integer solutions to }x_1+x_2+\cdots+x_n \leq t\}.
         \]
+        To count this, we need to add a slack variable \(x_{n+1}\) such that
+        \[
+        x_1+x_2+\cdots+x_n+x_{n+1} = t.
+        \]
+        Then the number of solutions is \(\binom{t+n}{n}\).
       </p>
     </section>
 
