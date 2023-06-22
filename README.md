@@ -110,7 +110,7 @@ Hanzhang Yin
   <h3>
 
   <h3>
-  <a href="note/ehrhart_theory.html">Euclid's Algorithm and Unique Factorization of Integers</a>
+  <a href="note/ehrhart_theory.html">Ehrhart Theory & Convex Polytope</a>
   </h3>
 
 
