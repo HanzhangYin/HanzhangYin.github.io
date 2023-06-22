@@ -377,7 +377,7 @@
     <section id = "induction">
       <h2>Mathematical Induction</h2>
       <p>
-        \(\textbf{Definition: }\)Let \(S\) be a subset of \(\mathbb{Z}^+\). Suppose that
+        \(\textbf{Theorem. }\)Let \(S\) be a set of positive integers with the following properties:
         <ul>
           <li>
             \(1\in S\), and
@@ -400,11 +400,10 @@
         </ul>
         Let \(S\) be the set of integers \(k\) such that \(P(k)\) is false. 
         Suppose \(S\) is nonempty and let \(k\) be its least element. 
-        Since \(P(1)\) is true, \(1 \notin S\), \(1 \in \overline{S}\), so \(k \neq 1\). 
-        Also, \(k-1\) is a positive integer, and by minimality, \(k-1 \notin S\). 
+        Since \(P(1)\) is true, \(1 \notin S\), \(1 \notin S\), so \(k \neq 1\). 
+        Also, \(k-1\) is a positive integer, and \(k-1\lt k\), so \(k-1 \notin S\) for \(k\) is the least element of \(S\).
         So by definition, \(P(k-1)\) is true, but then by the property of \(P\) given above, \(P(k-1)\) being true implies that \(P(k)\) is true. 
         Thus, \(k \notin S\), yielding a contradiction. Therefore, \(S\) is empty, and \(P(k)\) is true for all \(k\). \[ \tag*{$\square$} \]
-
       </p>
 
     </section>
