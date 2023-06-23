@@ -37,10 +37,9 @@
       <a href="#References">References</a>
     </nav>
     <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
-    <h1>Title</h1>
+    <h1>Integer</h1>
 
     <section id = "Integer">
-    <h2>Integer</h2>
     <p>
       \(\textbf{Definition: }\)
       \[
@@ -512,12 +511,64 @@
         Then \(N(\alpha\beta) = N(\alpha)N(\beta)\).
       </p>
       <p>
-        \(\textbf{Proof. }\)
+        \(\textbf{Proof. }\)Let \(\alpha\) and \(\beta\) be in \(\mathbb{Z}[i]\). 
+        Then
         \[
         N(\alpha\beta) = (\alpha\beta)(\overline{\alpha\beta}) = (\alpha\beta)(\overline{\alpha}\overline{\beta}) = (\alpha\overline{\alpha})(\beta\overline{\beta}) = N(\alpha)N(\beta).
         \]
         \[ \tag*{$\square$} \]
       </p>
+    </section>
+
+    <br>
+
+    <section id = "Proposition_8">
+      <p>
+        \(\textbf{Proposition 8. }\)There are only 4 units in \(\mathbb{Z}[i]\), which are 
+        \[
+        \pm 1, \pm i.
+        \]
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Suppose that \(\alpha\) is a unit in \(\mathbb{Z}[i]\). 
+        Then there exists a Gaussian integer \(\beta\) such that
+        \[
+        \alpha\beta = 1.
+        \]
+        Then
+        \[
+        N(\alpha\beta) = N(1) = 1.
+        \]
+        By <span class="tooltip-text">\(\textbf{Proposition 7. }\)Let \(\alpha\) and \(\beta\) be in \(\mathbb{Z}[i]\). 
+        Then \(N(\alpha\beta) = N(\alpha)N(\beta)\).</span>
+      </a>
+      <script src="position_adjust.js"></script>,
+        \[
+        N(\alpha)N(\beta) = 1.
+        \]
+        Since \(N(\alpha)\) and \(N(\beta)\) are non-negative integers, we have \(N(\alpha) = N(\beta) = 1\).
+        \[ \tag*{$\square$} \]
+      </p>
+
+    </section>
+
+    <br>
+
+    <section id = "Gussian_prime">
+      <h2>Gussian Prime</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \(\pi\) be a Gaussian integer. 
+        We say that \(\pi\) is a Gaussian prime 
+        <ul>
+          <li>
+            if \(\pi\) is not a unit, and
+          </li>
+          <li>
+            if \(\pi=\alpha\beta\) for some \(\alpha, \beta\in\mathbb{Z}[i]\), then \(\alpha\) is a unit or \(\beta\) is a unit.
+          </li>
+        </ul>
+      </p>
+    </section>
 
 
       
