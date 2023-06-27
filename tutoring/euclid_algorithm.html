@@ -83,6 +83,41 @@
 
 <br>
 
+<section id = "Least_Common_Multiple">
+<h2>
+  Least Common Multiple
+</h2>
+<p>
+  \(\textbf{Definition: }\) We say \(m\) is the least common multiple of \(a\) and \(b\) (written \(m = \text{lcm}(a, b)\)) if and only if
+  <ul>
+    <li>\(a\;|\;m\) and \(b\;|\;m\),</li>
+    <li>if \(a\;|\;c\) and \(b\;|\;c\), then \(m\leq c\).</li>
+  </ul>
+</p>
+<p>
+  Note. \([0, 0]\) is not defined since there is no least common multiple of \(0\) and \(0\). 
+  \([a, b]\) exists if and only if \(a\) and \(b\) are not both zero.
+</p>
+</section>
+
+<br>
+
+<section id = "Proposition_1">
+  <p>\(\textbf{Proposition 1: }\) If \(a, b, c\in \mathbb{Z}^+\), 
+    \[
+    \text{lcm}(ca, cb) = c\text{lcm}(a, b).
+    \]
+  </p>
+  <p>
+    \(textbf{Proof. }\)Let \(m = \text{lcm}(a, b)\). Then \(a\;|\;m\) and \(b\;|\;m\), which implies
+    \[
+    ca\;|\;cm\qquad\text{and}\qquad cb\;|\;cm.
+    \]
+    Hence, \(cm\) is a common multiple of \(ca\) and \(cb\). According to the definition, we can get that \(cm\geq \text{lcm}(ca, cb)\).
+    Suppose that \(m'\) is the least common multiple of \(ca\) and \(cb\). Then \(ca\;|\;m'\) and \(cb\;|\;m'\).
+  </p>
+
+
 <section id = "Theorem_1">
 <p>\(\textbf{Theorem 1: }\) If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</p>
 <p>\(\textbf{Proof. }\)Suppose that \((a, b) = d\) and \(c= (\frac{a}{d}, \frac{b}{d})\), and our goal is to show that \(c= 1\). 
