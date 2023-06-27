@@ -348,6 +348,54 @@
       </p>
     </section>
 
+    <br>
+
+    <section id = "triangulation">
+      <h2>Triangulation</h2>
+      <p>
+        \(\textbf{Definition. }\)Given a polytope \(P\subset \mathbb{R}^n\), a triangulation of \(P\) is a set \(T\) such that
+        <ul>
+          <li>
+            \(\Delta\in T\) is simplex.
+          </li>
+          <li>
+            \(P = \bigcup_{\Delta\in T}\Delta\\).
+          </li>
+          <li>
+            For every \(\Delta_1, \Delta_2\in T\), \(\Delta_1\cap \Delta_2\) is a common face of \(\Delta_1\) and \(\Delta_2\).
+          </li>
+        </ul> 
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Theorem_1">
+      <p>
+        \(Theorem 1. \)Every convex polytope can be triangulated using no new vertices.  
+      </p>
+      <p>
+        \(\textbf{Idea. }\)Take convex \(P\subset \mathbb{R}^n\) with vertex set 
+        \[
+        \{v_1, v_2, \dots, v_m\}.
+        \]
+        Choose randomly \(\{h_1, h_2, \dots, h_m}\) in \(\mathbb{R}\). (Choose generally)
+        Consider a new polytope \(Q\subset\mathbb{R}^{n+1}\) where
+        \[
+        Q = \text{conv}\{(v_1, h_1), (v_2, h_2), \dots, (v_m, h_m)\}.
+        \]
+        The lower hull of \(Q\) is all points "visible from below".
+        (i.e.) for all \(\epsilon > 0\), \((x_1, x_2, \dots, x_n, x_{n+1}-\epsilon)\notin Q\).
+        Faces of the lower hull are called lower faces.  
+        Define \(\Pi\) to be the projection from \(\mathbb{R}^{n+1}\) to \(\mathbb{R}^n\) by
+        \[
+        \Pi(x_1, x_2, \dots, x_n, x_{n+1}) = (x_1, x_2, \dots, x_n).
+        \]
+        Claim: If \(F\) is a simplex, then \(\Pi(F)\) is a simplex.
+        And \(\{\Pi}: F \text{ is a lower face of }Q\}\) is a triangulation of \(P\).
+      </p>
+    </section>
+
 
       
     <section id = "References">
