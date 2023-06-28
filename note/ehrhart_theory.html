@@ -428,6 +428,28 @@
         P^\circ \subset \bigcup_{\Delta\in T}\Delta.
         \]
         Choose \(x_0\in P^\circ\). We will find a lower face \(F\) of \(Q\) such that \(x_0\in\Pi(F)\).
+        Define a line
+        \[
+        \mathbb{L} = \{x_0 + \lambda(e_{n+1}):\;\lambda\in\mathbb{R}\}.
+        \]
+        And we can know that \(\mathbb{L}\cap Q \neq \emptyset\) since \(x_0\in P^\circ\).
+        And \(\mathbb{L}\cap Q\) is a line segment through \((x, y)\) and \((x, z)\) with \(y\lt z\) and \((x, y)\) and 
+        \((x, z)\) are on the boundary of \(Q\).
+        It is contained in some face \(F\) of \(Q\). Let \(F\) have supporting hyperplane
+        \[
+        \overline{H} = \{p\in\mathbb{R}^{n+1}:\;\alpha\cdot p = \beta\},
+        \]
+        where \(\alpha\in\mathbb{R}^{n+1}\) and \(\beta\in\mathbb{R}\).
+        \(\overline{H}\) defines a face \(F\) such that 
+        \[
+        Q\subset \{p\in\mathbb{R}^{n+1}:\;\alpha\cdot p \geq \beta\}.
+        \]
+        Since \((x, z)\) does not lie of \(\overline{H}\), we have 
+        \[
+        \alpha\cdot (x, y) = \beta,\text{and} \alpha\cdot (x, y) > \beta.
+        \]
+        This simplies that \(a_{n+1}(z-y) > 0\). So \(a_{n+1}> 0\). 
+        This means that \(F\) is a lower face of \(Q\). 
       </p>
     </section>
 
