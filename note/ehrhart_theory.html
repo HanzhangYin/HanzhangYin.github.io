@@ -412,7 +412,13 @@
           h_1 & h_2 & \cdots & h_{n+1} x_{n+1}\\
         \end{bmatrix} = 0,
         \]
-        where \(x = (x_1, x_2, \dots, x_n, x_{n+1})\in\mathbb{R}^n\).
+        where \(x = (x_1, x_2, \dots, x_n, x_{n+1})\in\mathbb{R}^n\). 
+        If we specialize \((x, x_{n+1})\) to \((v_i, h_i)\) (substituting \(x_k = v_k\)) for some \(k>n+1\) then the determinant is nonzero, 
+        beause the \(h_1, h_2, \dots, h_k\) are chosen randomly.
+        So every facet of \(Q\) is a \(n\)-simplex. Thus, every lower face of \(Q\) is a simplex.
+        \[
+        T = \{\Pi(F):\;F\text{ is a lower face of }Q\}.
+        \]
       </p>
     </section>
 
