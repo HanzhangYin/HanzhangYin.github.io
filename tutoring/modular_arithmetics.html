@@ -601,6 +601,38 @@
       </p>
     </section>
 
+    <br>
+
+    <section id = "Chinese_remainder_theorem">
+    <p>
+      \(\textbf{Chinese Remainder Theorem. }\)Let \(m, n\in\mathbb{Z}^+\) and \(\gcd(m, n)=1\). Let \(a, b\in\mathbb{Z}\).
+      Then the system of congruences
+      \[
+      x\equiv a\; (\text{mod }m) \qquad x\equiv b\; (\text{mod }n)
+      \]
+      has a solution, and any two solutions are congruent modulo \(mn\).
+    </p>
+    <p>
+      \(\textbf{Rephrasing. }\)Let \(m, n\in\mathbb{Z}^+\) and \(\gcd(m, n)=1\). 
+      Let \(a\in\mathbb{Z}/m\mathbb{Z}\) and \(b\in\mathbb{Z}/n\mathbb{Z}\), then there exists \(x\in\mathbb{Z}\) such that 
+      \[
+      x = a\; (\text{mod }m) \qquad x = b\; (\text{mod }n).
+      \]
+      Any two solutions are the same in \(\mathbb{Z}/mn\mathbb{Z}\).
+    </p>
+    <p>
+      Given function \(L_{m, n}:\mathbb{Z}/n\mathbb{Z}\times \mathbb{Z}/m\mathbb{Z}\rightarrow \mathbb{Z}/mn\mathbb{Z}\) defined by
+      \[
+      L_{m, n}(a, b) = x,
+      \]
+      where \(x\) is the solution of the system of congruences. 
+      Then we can get 
+      \[
+      L_{20, 29}(5, 8) = -775\equiv 385\; (\text{mod }20\cdot 29).
+      \] 
+    </p>
+    </section>
+
     <section id = "References">
     <h2>References</h2>
     <ul>
