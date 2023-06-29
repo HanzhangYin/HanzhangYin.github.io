@@ -533,6 +533,74 @@
       </p>
     </section>
 
+    <br>
+
+    <section id = "solution">
+      <p>
+        Given a system of congruences 
+        \[
+        x\equiv a_1\; (\text{mod }m) \qquad x\equiv a_2\; (\text{mod }n), 
+        \]
+        we look at the modulo of \(\gcd(m, n)\) to see if we can find a solution.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Fundamental_goal">
+      <h2>Fundamental Goal</h2>
+      <p>
+        Suppose that \(m, n\in\mathbb{Z}^+\) and \(\gcd(m, n)=1\). Let \(a, b\in\mathbb{Z}\).
+        We want to find all solutions of the system of congruences
+      </p>
+      <p>
+        Suppose that we can solve the system of congruences
+        \[
+        x\equiv 1\; (\text{mod }m) \qquad x\equiv 0\; (\text{mod }n),
+        \]
+        and 
+        \[
+        x\equiv 0\; (\text{mod }m) \qquad x\equiv 1\; (\text{mod }n).
+        \]
+        Then we can solve the system of congruences where \(x = e_1\) for the first one and \(x = e_2\) for the second one.
+        Then we try \(x = ae_1+be_2\) where 
+        \[
+        x\equiv a\; (\text{mod }m) \qquad x\equiv b\; (\text{mod }n).
+        \]
+        We will use Bezout's Identity: there exist integers \(s\) and \(t\) such that \(ms+nt=1\) because of \(\gcd(m, n)=1\).
+        Then we can get if \(e_1 = nt\), then \(e_1\equiv 1\; (\text{mod }m)\) and \(e_1\equiv 0\; (\text{mod }n)\).
+        Similarly, we can get if \(e_2 = ms\), then \(e_2\equiv 0\; (\text{mod }m)\) and \(e_2\equiv 1\; (\text{mod }n)\).
+        Therefore, we can get \(x = ae_1+be_2 = ant + bms\).
+      </p>
+      <p>
+        \(\textbf{Example. }\)Try to solve 
+        \[
+        x\equiv 5\; (\text{mod }20) \qquad x\equiv 8\; (\text{mod }29).
+        \]
+        We can know that \(\gcd(20, 29)=1\). Thus, we can get \(20s+29t=1\) for some integers \(s\) and \(t\) by using Euclidean Algorithm.
+        Thus, we can get \(s=-13\) and \(t=9\). So we can take 
+        \[
+        x = 5\cdot 29\cdot 9 + 8\cdot 20\cdot (-13) = -775.
+        \]
+        However, it is not the only one. We can get \(x = -775 + 20\cdot 29\cdot k\) for any integer \(k\).
+      </p>
+      <p>
+        \(\textbf{Question. }\)Are these the only solutions?
+      </p>
+      <p>
+        \(\textbf{Answer. }\)Yes. Suppose that \(x\) and \(y\) are solutions of the system of congruences.
+        Then we can get
+        \[
+        x\equiv y \; (\text{mod }20) \qquad x\equiv y \; (\text{mod }29).
+        \]
+        So both \(20\) and \(29\) divide \(x-y\). Thus, \(20\cdot 29\) divides \(x-y\) because of \(\gcd(20, 29)=1\).
+        Hence, we can get \(x\equiv y \; (\text{mod }20\cdot 29)\).
+        Since \(-775\) is a solution of the system of congruences, we can get \(x\equiv -775 \; (\text{mod }20\cdot 29)\).
+        Thus, we can get \(x\equiv -775 \; (\text{mod }20\cdot 29)\) and \(x = -775 + 20\cdot 29\cdot k\) for any integer \(k\).
+        To sum up, we can get \(x = -775 + 20\cdot 29\cdot k\) for any integer \(k\).
+      </p>
+    </section>
+
     <section id = "References">
     <h2>References</h2>
     <ul>
