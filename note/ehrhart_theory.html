@@ -565,7 +565,7 @@
       Laurant monomials. (Monomials where we allow negative exponents).
     </p>
     <p>
-      \(\textbf{Example. }\)The lattice point of 
+      \(\textbf{Example 1. }\)The lattice point of 
       \[
       K = [0, \intify)
       \]
@@ -581,6 +581,24 @@
       \[
       \sigma_K(x) = 1 + x + x^2 + x^3 + \dots = \frac{1}{1-x}.
       \]
+    </p>
+    <p>
+      \(\textbf{Example 2. }\)Let 
+      \[
+      K = \{(1, 1)\lambda_1 + (-2, 3)\lambda_2, \lambda_1, \lambda_2\geq 0\}.
+      \]
+      Then 
+      \[
+      \Prod = \{(1, 1)\lambda_1 + (-2, 3)\lambda_2, 0\leq\lambda_1, \lambda_2\leq 1\}.
+      \]
+      This tiles the cone counts each lattice point only once. 
+      First, we count all the combinations of 
+      \[
+      \{(1, 1)\lambda_1 + (-2, 3)\lambda_2, \lambda_1, \lambda_2\geq 1\},
+      \]
+      which is
+      \[
+      \sum_{m = (1, 1)\lambda_1+(-2, 3)\lambda_2} = \sum_{\lambda_1 = 0}^\infty\sum_{\lambda_2 = 0}^\infty x_1^{\lambda_1-2\lambda_2}x_2^{\lambda_1+3\lambda_2}.
     </p>
     </section>
 
