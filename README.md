@@ -97,6 +97,10 @@ Hanzhang Yin
   </h3>
 
   <h3>
+  <a href = "tutoring/legendre_formula.html">Legendre's Formula</a>
+  </h3>
+
+  <h3>
   <a href="tutoring/modular_arithmetics.html">Modular Arithmetics</a>
   </h3> 
 
