@@ -22,16 +22,17 @@
       <div class="line"></div>
     </label>
     <nav class="navbar">
-      <a href="#Definition">Definition</a>
+      <a href="#formula">Formula</a>
+      <a href="#Example">Example</a>
       <a href="#References">References</a>
     </nav>
     <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
     <h1>Legendre's Formula</h1>
 
-    <section id = "Definition">
+    <section id = "Formula">
     <h2>Formula</h2>
     <p>For any prime number \( p \) and any positive integer \( n\in\mathbb{Z}^+ \), 
-      let \( \nu_p(n) \) be the exponent of the largest power of \( p \) that divides \( n \) (that is, the \( p \)-adic valuation of \( n \)). 
+      let \( \nu_p(n) \) be the exponent of the largest power of \( p \) that divides \( n \).
       Then
       \[
       \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \frac{n}{p^i} \right\rfloor ,
@@ -47,7 +48,22 @@
       \[
       \nu_2(10!) = \left\lfloor \frac{10}{2} \right\rfloor + \left\lfloor \frac{10}{2^2} \right\rfloor + \left\lfloor \frac{10}{2^3} \right\rfloor + \left\lfloor \frac{10}{2^4} \right\rfloor = 5 + 2 + 1 + 0 = 8.
       \]
-      </p>
+    We know that \(10!\) is 
+    \[
+    10! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6 \cdot 7 \cdot 8 \cdot 9 \cdot 10 = 2^8 \cdot 3^4 \cdot 5^2 \cdot 7.
+    \]
+    And we see now the exponent of \(2\) in \(10!\) is \(8\).</p>
+    </p>
+
+    <section id = "Proof">
+    <h2>Proof</h2>
+    <p>
+      \(\textbf{Proof. }\)
+        Since \(n!\) is the product of the integers 1 through \(n\), we obtain at least one factor of \(p\) in \(n!\) for each multiple of \(p\) in \(\{1, 2, \ldots, n\}\), of which there are \(\left\lfloor \frac{n}{p} \right\rfloor\). 
+        Each multiple of \(p^2\) contributes an additional factor of \(p\), each multiple of \(p^3\) contributes yet another factor of \(p\), etc. 
+        Adding up the number of these factors gives the infinite sum for \(\nu _{p}(n!)\).
+        
+    </p>
 
       
     <section id = "References">
