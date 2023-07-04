@@ -635,10 +635,60 @@
     <br>
 
     <section id = "lemma">
-      <h2>Lemma</h2>
+      <h2>Key Lemma</h2>
       <p>
         \(\textbf{Lemma. }\)If \(\sum_{t = 0}^\infty f(t)z^t = \frac{g(z)}{(1-z)^{d+1}}\), then \(f(t)\) is a polynomial of degree \(d\)
         if and only if \(g(z)\) is a polynomial of degree less than or equal to \(d\) and \(g(1)\neq 0\).
+    </section>
+
+    <br>
+
+    <section id = "observation">
+      \(\textbf{Definition. }\)Let \(P\subset \mathbb{R}^n\) be a convex polytope, 
+      \[
+      \text{cone}(P) = \mathbb{R}^{n+1}
+      \] 
+      \[
+      \#((\text{cone}(P)\cap \{x_{n+1} = t\})\cap \mathbb{Z}^{n+1}) = \#[tP\cap \mathbb{Z}^n].
+      \]
+      So 
+      \[
+      \sigma_{\text{cone}(P)}(1, 1, \dots, 1, z_{n+1}) = \sum_{m\in\text{cone}(P)\cap\mathbb{Z}^{n+1}}1^{m_1}1^{m_2}\cdots 1^{m_n}z_{n+1}^{m_{n+1}}.
+      \]
+      \[
+      \sigma_{\text{cone}(P)}(1, 1, \dots, 1, z_{n+1}) = 1 + \sum_{t=1}^\infty \#[tP\cap\mathbb{Z}^n]z_{n+1}^t. = \text{Ehr}_P(z_{n+1}).
+      \]
+    </section>
+
+    <br>
+
+    <section id = "proof_of_ehrhart_theorem">
+      <h2>Proof of Ehrhart's Theorem</h2>
+      <p>
+        \(\textbf{Proof. }\)Note: It is sufficient to prove this for full dimensional simplex (\(d = n\)).
+        Every polytope can be trangulated using non new verties. All lower dimensional faces of these simplices are also simplices.
+        By Key Lemma, it is sufficient to show that \(d\)-simplex \(\Delta\)
+        \[
+        \mathrm{Ehr}_\Delta(z) = \frac{g(z)}{(1-z)^{d+1}},
+        ]
+        where \(g(z)\) is a polynomial of degree less than or equal to \(d\) and \(g(1)\neq 0\).
+        Since \(\Delta\) is a simplex, \(\text{cone}(\Delta)\) is a simplicial cone with apex of origin, and generators
+        \[
+        w = (v, 1), w_2 = (v_2, 1), \dots, w_{d+1} = (v_{d+1}, 1),
+        \]
+        where \(\{v_1, v_2, \dots, v_{d+1}\}\) are the vertices of \(\Delta\).
+        Integer point transform is 
+        \[
+        \sigma_{\text{cone}(\Delta)}(x_1, x_2, \dots, x_{n+1}) = \frac{\sigma_\Pi(x_1, x_2, \dots, x_{n+1})}{(1-x^{w_1})(1-x^{w_2})\cdots(1-x^{w_{d+1}})},
+        \]
+        where \(\Pi = \{\sum_{i=1}^{d+1}\lambda_i w_i: 0\leq \lambda_i\lt 1\}\).
+        Since \(\Pi\) is buonded, \(\sigma_\Pi(x)\) is a laurant polynomial. 
+        (Note. the \(\{z_{d+1}}\)-degree of \(\sigma_\Pi(x)\) is at most \(d\) and non-negative)
+        Since \(w_k = (v_k, 1)\), so if \(x\in \Pi\), \(x_{d+1} = \sum_{i=1}^{d+1}\lambda_i\) where \(0\leq \lambda_i\lt 1\).
+        So \(x_{d+1}\lt d+1\) if \(x_{d+1}\in\mathbb{Z}\), \(0\leq x_{d+1}\lt d\).
+        (Note. \(g(z) = \Sigma_\Pi(1, 1, \dots, 1, z) which has degree at most \(d\)\))
+        Also \(g(1) = \#(\Pi\cap\mathbb{Z}^{d+1}) = \sigma_\Pi(1, 1, \dots, 1) \neq 0\) since \(0\in \Pi\).
+      </p>
     </section>
 
 
