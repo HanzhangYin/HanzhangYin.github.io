@@ -94,7 +94,7 @@
       width: 80%;
       font-size: 1em;
       padding: 12px;
-      hyphens: auto;
+      /* hyphens: auto; */
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
@@ -105,6 +105,7 @@
     }
     h1 {
       font-size: 1.8em;
+      padding-top: 75px; /* Adjust this value to move h1 below the top-bar */
     }
 
     .tooltip-link {
@@ -162,7 +163,7 @@
     padding-right: 30px;  
     padding-top: 30px;
     padding-bottom: 30px;
-    hyphens: auto;
+    /* hyphens: auto; */
     overflow-wrap: break-word;
     text-rendering: optimizeLegibility;
     font-kerning: normal;
@@ -233,7 +234,7 @@
     font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
     font-size: 85%;
     margin: 0;
-    hyphens: manual;
+    /* hyphens: manual; */
   }
   pre {
     background-color: #d9d9d9; 
