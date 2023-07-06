@@ -7,7 +7,7 @@
 
     .top-bar {
       background: #ededed;  /* Change this to grey color */
-      height: 65px;  /* Adjust this to change the height of the bar */
+      height: 55px;  /* Adjust this to change the height of the bar */
       width: 100%;
       position: fixed;
       top: 0;
