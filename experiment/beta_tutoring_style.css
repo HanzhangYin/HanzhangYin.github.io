@@ -96,7 +96,6 @@
       width: 80%;
       font-size: 1em;
       padding: 12px;
-      hyphens: auto;
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
@@ -165,7 +164,6 @@
     padding-right: 30px;  
     padding-top: 30px;
     padding-bottom: 30px;
-    hyphens: auto;
     overflow-wrap: break-word;
     text-rendering: optimizeLegibility;
     font-kerning: normal;
@@ -236,7 +234,6 @@
     font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
     font-size: 85%;
     margin: 0;
-    hyphens: manual;
   }
   pre {
     background-color: #d9d9d9; 
@@ -303,7 +300,18 @@
   div.column{flex: auto; overflow-x: auto;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-  
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
   .tooltip-link {
     position: relative;
     display: inline-block;

@@ -18,6 +18,7 @@
     <div class="top-bar"></div>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label for="nav-toggle" class="icon-burger">
+      <span class="visually-hidden">Navigation menu toggle</span>
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
@@ -458,8 +459,8 @@ Most important for us:
       <li>
         Then \(P+Q = R\oplus O\)
       </li>
-      Then \(D(\mathbb{Q})\) is an abelian group under \(+\).
     </ul>
+    Then \(D(\mathbb{Q})\) is an abelian group under \(+\).
   </p>
 </section>
 
@@ -554,7 +555,114 @@ Most important for us:
   </p>
 </section>
 
+<br>
 
+<section id = "additional_formula">
+<p>
+  \(\textbf{Addition formulas. }\)Let \( P = (x_1, y_1) \) and \( Q = (x_2, y_2) \) be (affine) points on \( E: y^2 = x^3 + ax^2 + bx + c \).
+</p>
+<ul>
+  <li>Say \( P \neq -Q \). Let the line joining \( P \) and \( Q \) have equation \( y = \lambda x + \nu \). Then \( P + Q = (x_3, y_3) \) where</li>
+</ul>
+\[ 
+x_3 = \lambda^2 - a - x_1 - x_2, \quad y_3 = -\lambda x_3 - \nu. 
+\]
+<ul>
+  <li>Say \( P \neq -P \). The x-coordinate of \( P + P \) is</li>
+</ul>
+\[
+ x_4 = \frac{{1 - 2bx_1 - 8cx_1^2 + b^2 - 4ac}}{{4x_1^3 + 4ax_1^2 + 4bx_1 + 4c}}. 
+\]
+<p>(This is called the duplication formula.)</p>
+<ul>
+  <li>Let \( A \) be an abelian group. An element \( x \in A \) has order \( n \), denoted \( \text{{ord}}(x) = n \), if \( n \) is the smallest positive integer such that \( nx = 0 \).</li>
+  <li>Define \( A[n] = \{ x \in A \,|\, nx = 0 \} \).</li>
+  <li>Any element of \( A \) of finite order is called a torsion element. The set of torsion elements of \( A \) is a subgroup of \( A \), denoted \( A_{\text{{tors}}} \).</li>
+  <li>Let \( E \) be an elliptic curve (over \( \mathbb{Q} \)).</li>
+  <li>Questions for us:</li>
+</ul>
+  <ul>
+    <li>What is \( E(\mathbb{Q})_{\text{{tors}}} \)? Is it finite? Can we find all the points? What is the group structure?</li>
+    <li>Today: Points of order 2 and 3</li>
+  </ul>
+</ul>
+<ul>
+  <li>A point \( P \) on the elliptic curve \( E: y^2 = f(x) \) has order 2 if and only if \( P = (x_0, 0) \). In particular, \( E(\mathbb{Q})[2] \) has 1, 2, or 4 elements, corresponding to whether \( f(x) \) has 0, 1, or 3 rational roots, respectively.</li>
+  <li>What about order 3?</li>
+</ul>
+<p>The polynomial \( \psi_3(x) = 3x^4 + 4ax^3 + 6bx^2 + 12cx + 4ac - b^2 \) is the 3-division polynomial for \( E \).</p>
+<p>Theorem:</p>
+<ol>
+  <li>The nonidentity point \( P \in E(\mathbb{Q}) \) has order 3 if and only if \( \psi_3(x(P)) = 0 \).</li>
+  <li>\( \psi_3 \) has no repeated roots.</li>
+  <li>E has exactly eight points of order 3 with complex coordinates.</li>
+</ol>
+</section>
+
+<br>
+
+<section id = "Discriminant">
+  <h2>Discriminant</h2>
+  <p>
+    \(\textbf{Definition. }\)Let \(E\) be an elliptic curve in Weierstrass:
+    \[
+    f(x) = x^3 + Ax^2 + Bx + C.
+    \]
+    The discriminant of \(E\) is
+    \[
+    \Delta = -4A^3C + A^2B^2 + 18ABC - 4B^3 - 27C^2.
+    \]
+  </p>
+  <p>
+    \(\textbf{Theorem. }\)Set 
+    \[
+    f(x) = x^3 + Ax^2 + Bx + C,
+    \]
+    with \(A, B, C\in\mathbb{Z}\), set 
+    \[
+    E: y^2 = f(x),
+    \]
+    and let \(D\) be the discriminant of \(f(x)\). Suppose 
+    \(P = (x_0, y_0)\in E(\mathbb{Q})\) has finite order. Then 
+    <ul>
+      <li>\(x_0, y_0\in\mathbb{Z})</li>
+      <li>Either \(y_0 = 0\) or \(y_0\;|\;D\)</li>
+    </ul>
+  </p>
+  <p>
+    \(\textbf{Corollary: }\)\(E(\mathbb{Q})\) is finite.
+  </p>
+  <p>
+    \(\textbf{Example. }\)Find all points of finite order on
+    \[
+    E: y^2 = x^3 + x^2 +3x - 1. 
+    \]
+    We first calculate the discriminant of \(E\):
+    \[
+    D = -171.
+    \]
+    Are there points with \(y_0 = 0\)? No. 
+  </p>
+</section>
+
+<br>
+
+<section id = "mazur">
+  <h2>Mazur's Theorem</h2>
+  <p>
+    \(\textbf{Theorem. }\)Let \(E\) be an elliptic curve over \(\mathbb{Q}\).
+    Then \(E(\mathbb{Q})_{\text{{tors}}}\) is isomorphic to one of the following fifteen groups:
+    \[
+    \text{Trivial }(E(\mathbb{Q})_{\text{{tors}}}\cong\{O\}),
+    \]
+    \[
+    \mathbb{Z}/N\mathbb{Z}\text{ for some }\mathbb{N}\text{ with }2\leq N \leq 12\text{ except }N = 11
+    \]
+    \[
+  \mathbb{Z}/2\mathbb{Z}\oplus\mathbb{Z}/2N\mathbb{Z}\text{ for some }N\text{ with }1\leq N \leq 4.
+    \]
+  </p>
+</section>
 
       
     <section id = "References">
