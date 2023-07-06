@@ -105,6 +105,7 @@
     }
     h1 {
       font-size: 1.8em;
+      padding-top: 75px; /* Adjust this value to move h1 below the top-bar */
     }
 
     .tooltip-link {
