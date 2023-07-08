@@ -176,6 +176,10 @@ Hanzhang Yin
   <h3>
   <a href="https://leanprover-community.github.io/install/project.html">Lean Projects</a>
   </h3>
+
+  <h3>
+  <a href="https://leanprover-community.github.io/">Lean Community</a>
+  </h3>
 </section>
 
 <section id = "contact">
