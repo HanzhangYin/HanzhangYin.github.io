@@ -622,16 +622,22 @@
     </section>
 
     <section id = "divison_algorithm_gaussian">
-        <p>\textbf{Proof. }We have \(\alpha, \beta \in \mathbb{Z}[i]\) with \(\beta \neq 0\) and we want to construct \(\gamma, \rho \in \mathbb{Z}[i]\)
+        <p>\(\textbf{Proof. }\)We have \(\alpha, \beta \in \mathbb{Z}[i]\) with \(\beta \neq 0\) and we want to construct \(\gamma, \rho \in \mathbb{Z}[i]\)
           such that \(\alpha = \beta\gamma + \rho\) where \(N(\rho) \leq \frac{1}{2} N(\beta)\).</p>
           
           <p>Write
-          \(\frac{\alpha}{\beta} = \frac{\alpha\beta}{\beta\beta} = \frac{\alpha\beta}{N(\beta)} = \frac{m + ni}{N(\beta)}\),
-          where we set \(\alpha\beta = m + ni\). Divide \(m\) and \(n\) by \(N(\beta)\) using the modified division theorem
+          \[
+          \frac{\alpha}{\beta} = \frac{\alpha\overline{\beta}}{\beta\overline{\beta}} = \frac{\alpha\overline{\beta}}{N(\beta)} = \frac{m + ni}{N(\beta)},
+          \]
+          where we set \(\alpha\overline{\beta} = m + ni\). Divide \(m\) and \(n\) by \(N(\beta)\) using the division algorithm
           in \(\mathbb{Z}\):
-          \(m = N(\beta)q1 + r1\), \(n = N(\beta)q2 + r2\),
-          where \(q1\) and \(q2\) are in \(\mathbb{Z}\) and \(0 \leq |r1|, |r2| \leq \frac{1}{2} N(\beta)\). Then
-          \(\frac{\alpha}{\beta} = \frac{N(\beta)q1 + r1 + (N(\beta)q2 + r2)i}{N(\beta)} = q1 + q2i + \frac{r1 + r2i}{N(\beta)}\).</p>
+          \[
+          m = N(\beta)q_1 + r_1, n = N(\beta)q_2 + r_2,
+          \]
+          where \(q_1\) and \(q_2\) are in \(\mathbb{Z}\) and \(0 \leq |r_1|, |r_2| \leq \frac{1}{2} N(\beta)\). Then
+          \[
+          \frac{\alpha}{\beta} = \frac{N(\beta)q_1 + r_1 + (N(\beta)q_2 + r_2)i}{N(\beta)} = q_1 + q_2i + \frac{r_1 + r_2i}{N(\beta)}.
+          \]</p>
           
           <p>Set \(\gamma = q1 + q2i\) (this will be our desired quotient), so after a little algebra the above
           equation becomes
