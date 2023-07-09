@@ -626,6 +626,14 @@
 
     <section id = "divison_algorithm_gaussian">
       <h2>Division Algorithm for Gaussian Integers</h2>
+      <p>
+        \(\textbf{Theorem. }\)Let \(\alpha\) and \(\beta\) be in \(\mathbb{Z}[i]\) with \(\beta\neq 0\). 
+        Then there exist Gaussian integers \(\gamma\) and \(\rho\) such that
+        \[
+        \alpha = \beta\gamma + \rho
+        \]
+        where \(N(\rho) \leq \frac{1}{2} N(\beta)\).
+      </p>
         <p>\(\textbf{Proof. }\)We have \(\alpha, \beta \in \mathbb{Z}[i]\) with \(\beta \neq 0\) and we want to construct \(\gamma, \rho \in \mathbb{Z}[i]\)
           such that \(\alpha = \beta\gamma + \rho\) where \(N(\rho) \leq \frac{1}{2} N(\beta)\).</p>
           
@@ -675,7 +683,15 @@
           Since we know that \(0 \leq |r_1|, |r_2| \leq \frac{1}{2} N(\beta)\) by using the divison algorithm in \(\mathbb{Z}\), we have
           \(N(\alpha - \beta\gamma) \leq \frac{(\frac{1}{4} N(\beta))^2 + (\frac{1}{4} N(\beta))^2}{N(\beta)} = \frac{1}{2} N(\beta)\). \[ \tag*{$\square$} \]
         </p>
-        
+        <h2>General Case</h2>
+        <p>
+          \(\textbf{Corollary. }\)Let \(\alpha\) and \(\beta\) be in \(\mathbb{Z}[i]\) with \(\beta\neq 0\). 
+          Then there exist Gaussian integers \(\gamma\) and \(\rho\) such that
+          \[
+          \alpha = \beta\gamma + \rho
+          \]
+          where \(N(\rho) \leq N(\beta)\).
+        </p>       
     </section>
         
 
