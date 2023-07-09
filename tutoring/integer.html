@@ -644,13 +644,18 @@
           Let \(\gamma = q_1 + q_2i\) (this will be our desired quotient), so after a little algebra the above
           equation becomes
           \[
-          \alpha - \beta\gamma = \frac{r1 + r2i}{\beta}.
+          \alpha - \beta\gamma = \frac{r_1 + r_2i}{\beta}.
           \]
           We will show \(N(\alpha - \beta\gamma) \leq \frac{1}{2} N(\beta)\), so using \(\rho = \alpha - \beta\gamma\) will settle the division
-          theorem. Take norms of both sides of \(\alpha - \beta\gamma = \frac{r1 + r2i}{\beta}\), where on the right side we use the norm
+          theorem. Take norms of both sides of \(\alpha - \beta\gamma = \frac{r_1 + r_2i}{\beta}\), where on the right side we use the norm
           on complex numbers and its multiplicativity (Remark 1.3). Letting \(z = \frac{r_1 + r_2i}{\beta}\), so
-          \(z\beta = r_1 + r_2i\), \(N(z) N(\beta) = N(r1 + r2i) = r_1^2 + r_2^2\). Since \(N(\beta) = N(\beta)\),
-          \(N(\alpha - \beta\gamma) = \frac{r_1^2 + r_2^2}{N(\beta)}\).
+          \[
+            z\beta = r_1 + r_2i, \(N(z) N(\beta) = N(r_1 + r_2i) = r_1^2 + r_2^2.
+          \]
+          Since \(N(\beta) = N(\beta)\),
+          \[
+          N(\alpha - \beta\gamma) = \frac{r_1^2 + r_2^2}{N(\beta)}.
+          \]
           Feeding the estimates \(0 \leq |r_1|, |r_2| \leq \frac{1}{2} N(\beta)\) into the right side,
           \(N(\alpha - \beta\gamma) \leq \frac{(\frac{1}{4} N(\beta))^2 + (\frac{1}{4} N(\beta))^2}{N(\beta)} = \frac{1}{2} N(\beta)\).
         </p>
