@@ -174,7 +174,7 @@ Hanzhang Yin
   </h3>
 
   <h3>
-  <a href="https://leanprover-community.github.io/install/project.html">Lean Projects</a>
+  <a href="https://leanprover-community.github.io/install/project.html">Lean Projects for Installation</a>
   </h3>
 
   <h3>
