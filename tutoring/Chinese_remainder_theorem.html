@@ -46,6 +46,36 @@
       R/(A_1 \cap A_2 \cap \ldots \cap A_x) = R/(A_1 A_2 \ldots A_x) = R/A_1 \times R/A_2 \times \ldots \times R/A_x.
       \]
     </p>
+    <p>
+      \(\textbf{Proof. }\)We first prove this for \(k = 2\); the general case will follow by induction.
+    </p>
+    <p>
+      Let \(A = A_1\) and \(B = A_2\). 
+      Consider the map \(\phi: R \to R/A \times R/B\) defined by \(\phi(r) = (r \mod A, r \mod B)\), where \(\mod A\) means the class in \(R/A\) containing \(r\) (that is, \(r + A\)). 
+      This map is a ring homomorphism because \(\phi\) is just the natural projection of \(R\) into \(R/A\) and \(R/B\) for the two components. 
+      The kernel of \(\phi\) consists of all the elements \(r \in R\) that are in \(A\) and in \(B\), i.e., \(A \cap B\). 
+      To complete the proof in this case it remains to show that when \(A\) and \(B\) are comaximal, \(\phi\) is surjective and \(A \cap B = AB\).
+    </p>
+    <p>
+      Since \(A + B = R\), there are elements \(x \in A\) and \(y \in B\) such that \(x + y = 1\). 
+      This equation shows that \(\phi(x) = (0, 1)\) and \(\phi(y) = (1, 0)\) since, for example, \(x\) is an element of \(A\) and \(x = 1 - y \in 1 + B\). 
+      If now \((r_1 \mod A, r_2 \mod B)\) is an arbitrary element in \(R/A \times R/B\), then the element \(r_2x + r_1y\) maps to this element since
+      
+      \[
+      \phi(r_2x + r_1y) = \phi(r_2)\phi(x) + \phi(r_1)\phi(y) = (r_2 \mod A, r_2 \mod B) (0, 1) + (r_1 \mod A, r_1 \mod B) (1, 0) = (0, r_2 \mod B) + (r_1 \mod A, 0) = (r_1 \mod A, r_2 \mod B).
+      \]
+      This shows that \(\phi\) is indeed surjective. 
+      Finally, the ideal \(AB\) is always contained in \(A \cap B\). 
+      If \(A\) and \(B\) are comaximal and \(x\) and \(y\) are as above, then for any \(c \in A \cap B\), \(c = c1 = cx + cy \in AB\). 
+      This establishes the reverse inclusion \(A \cap B \subseteq AB\) and completes the proof when \(k = 2\).
+    </p>
+    <p>
+      The general case follows easily by induction from the case of two ideals using \(A = A_1\) and \(B = A_2 \cdots A_x\) once we show that \(A_1\) and \(A_2 \cdots A_x\) are comaximal. 
+      By hypothesis, for each \(i \in \{2, 3, \ldots, k\}\) there are elements \(x_i \in A_1\) and \(y_i \in A_i\) such that \(x_i + y_i = 1\). 
+      Since \(x_i + y_i = y_i \mod A_s\), it follows that \(1 = (x_2 + y_2) \cdots (x_k + y_k)\) is an element in \(A_s + (A_2 \cdots A_x)\). \[ \tag*{$\square$} \]
+    </p>
+      
+    </p>
     </section>
 
     <br>
