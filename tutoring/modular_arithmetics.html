@@ -91,8 +91,29 @@
     <section id = "equivalence_class">
     <h2>Equivalence Class</h2>
     <p>
-      \(\textbf{Definition: }\)Let \(R\) be an equivalence relation on a set \(A\). 
+      \(\textbf{Definition. }\)Let \(R\) be an equivalence relation on a set \(A\). 
       For each \(a\in A\), the equivalence class of \(a\) is the set \([a]=\{y\in A:\;x\; R\; a\}\).
+    </p>
+    <br>
+    <p>
+      \(\textbf{Theorem. }\)Suppose \(R\) is an equivalence relation on a set \(A\). 
+      Suppose that \(a,b\in A\). Then \([a]=[b]\) if and only if \(a\;R\;b\).
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Suppose \([a] = [b]\). Note that \(aRa\) by the reflexive property of \(R\), so \(a \in \{x \in A : xRa\} = [a] = [b] = \{x \in A : xRb\}\). 
+      But \(a\) belonging to \(\{x \in A : xRb\}\) means \(aRb\). This completes the first part: if \([a]=[b]\) then \(a\;R\;b\).</p>
+
+      <p>For the other directon, suppose \(aRb\). We need to show \([a] = [b]\). We will do this by showing \([a] \subseteq [b]\) and \([b] \subseteq [a]\).</p>
+      
+      <p>First we show \([a] \subseteq [b]\). Suppose \(c \in [a]\). As \(c \in [a] = \{x \in A : xRa\}\), we get \(cRa\). Now we have \(cRa\) and \(aRb\), so \(cRb\) because \(R\) is transitive. But \(cRb\) implies \(c \in \{x \in A : xRb\} = [b]\). 
+        We can get that \(c \in [a]\) implies \(c \in [b]\), so \([a] \subseteq [b]\).</p>
+      
+      <p>Next we show \([b] \subseteq [a]\). Suppose \(c \in [b]\). As \(c \in [b] = \{x \in A : xRb\}\), we get \(cRb\). Remember that we are assuming \(aRb\), so \(bRa\) because \(R\) is symmetric. 
+        Now we have  \(cRa\) since \(cRb\) and \(bRa\) and \(R\) is transitive. 
+        But \(cRa\) implies \(c \in \{x \in A : xRa\} = [a]\). This shows that \(c \in [b]\) implies \(c \in [a]\); hence \([b] \subseteq [a]\).</p>
+      
+      <p>Therefore, we can get \([a] = [b]\). \[ \tag*{$\square$} \]</p>
+      
     </p>
     </section>
 
