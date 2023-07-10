@@ -692,6 +692,48 @@
 
     <br>
 
+    <section id = "z_p">
+      <p>
+        \(\textbf{Lemma. }\)\(x^2\equiv 1\text{ mod }p\) if and only if \(x\equiv 1\text{ mod }p\) or \(x\equiv -1\text{ mod }p\) where \(p\) is a prime.
+      </p>
+    </section>
+
+    <section id = "flt">
+      <p>
+        \(\textbf{Fermat's Little Theorem. }\)If \(p\) is a prime and \(a\) is an integer not divisible by \(p\), then
+        $$
+        a^{p-1}\equiv 1\; (\text{mod }p).
+        $$
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(u\in\mathbb{U}_p\) witch \(u^{-1}\) (within a simple copy of \(\mathbb{U}_p\)).
+        Example. \(p=7\), \(\mathbb{U}_7 = \{1, 2, 3, 4, 5, 6\}\). And 
+        \[
+        (7-1)! = 1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6 = 1\cdot (2\cdot 4)\cdot (3\cdot 5)\cdot 6 = 1\cdot 1\cdot 1\cdot 6 = 6\equiv -1\; (\text{mod }7).
+        \]
+        In general, we can get
+        \[
+        (p-1)! = 1\cdot \Prod_{u = u^{-1}}u 
+        \]
+      </p>
+    </section>
+
+    <br>
+
+    <section>
+      <p>
+        \(\textbf{Definition. }\)Let \(p\) be a prime. Let \(a\in\mathbb{Z}\), we define
+        \[
+        \left(\frac{a}{p}\right) = 1 \qquad\text{if}\qquad a\text{ is a square }\in\mathbb{U}_p,
+        \]
+        \[
+        \left(\frac{a}{p}\right) = -1 \qquad\text{if}\qquad a\text{ is not a square }\in\mathbb{U}_p,
+        \]
+        \[
+        \left(\frac{a}{p}\right) = 0 \qquad\text{if}\qquad a\text{ is }0\in\mathbb{Z}/p\mathbb{Z}.
+        \]
+    </section>
+
     <section id = "Chinese_remainder_theorem">
     <p>
       \(\textbf{Chinese Remainder Theorem. }\)Let \(m, n\in\mathbb{Z}^+\) and \(\gcd(m, n)=1\). Let \(a, b\in\mathbb{Z}\).
