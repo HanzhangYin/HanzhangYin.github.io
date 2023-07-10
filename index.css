@@ -224,7 +224,7 @@
     }
 
     .icon-burger .line {
-      width: 30px;
+      width: 40px;
       height: 3px;
       background-color: #333;
       margin: 6px 0;
@@ -243,6 +243,18 @@
       font-size: 1.8em;
       font-family: 'Spectral', serif;
     }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
 }
     
     
