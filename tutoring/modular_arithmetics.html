@@ -144,9 +144,33 @@
     <p>
       \(\textbf{Proof. }\)Let \(R\) be an equivalence relation on a set \(A\). 
       To show that \(\{[a] : a \in A\}\) is a partition of \(A\) we need to show two things: 
-      We need to show that the union of all the sets \([a]\) equals \(A\), and we need to show that if \([a] \neq [b]\), then \([a] \cap [b] = \emptyset\).
-
+      We need to show that the union of all the sets \([a]\) equals \(A\), 
+      and we need to show that if \([a] \neq [b]\), then \([a] \cap [b] = \emptyset\).
     </p>
+    <p>
+    The union of all the sets \([a]\) is \(\bigcup_{a \in A}[a]\), so we need to prove \(\bigcup_{a \in A}[a] = A\). 
+    Suppose \(x \in \bigcup_{a \in A}[a]\). This means \(x \in [a]\) for some \(a \in A\). Since \([a] \subseteq A\), it then follows that \(x \in A\). 
+    Hence, \(\bigcup_{a \in A}[a] \subseteq A\). 
+    On the other hand, suppose \(x \in A\). As \(x \in [x]\), we know \(x \in [a]\) for some \(a \in A\) (namely \(a = x\)). 
+    Therefore, \(x \in \bigcup_{a \in A}[a]\), and this shows \(A \subseteq \bigcup_{a \in A}[a]\). 
+    Since \(\bigcup_{a \in A}[a] \subseteq A\) and \(A \subseteq \bigcup_{a \in A}[a]\), it follows that \(\bigcup_{a \in A}[a] = A\).
+    </p>
+    <p>
+      Next we need to show that if \([a] \neq [b]\) then \([a] \cap [b] = \emptyset\). We will prove it with contrapositive. 
+      Suppose it is not the case that \([a] \cap [b] = \emptyset\), so there is some element \(c\) with \(c \in [a] \cap [b]\). 
+      Thus \(c \in [a]\) and \(c \in [b]\). Now, \(c \in [a]\) means \(cRa\), and then \(aRc\) since \(R\) is symmetric. 
+      Also \(c \in [b]\) means \(cRb\). Now we have \(aRc\) and \(cRb\), so \(aRb\) (because \(R\) is transitive). 
+      According to <a href="#" class="tooltip-link">\(\textbf{Theorem from equivalence class}\)
+        <span class="tooltip-text">\(\textbf{Theorem. }\) Suppose \(R\) is an equivalence relation on a set \(A\). 
+          Suppose that \(a,b\in A\). Then \([a]=[b]\) if and only if \(a\;R\;b\).</span>
+      </a>
+      <script src="position_adjust.js"></script>, \(aRb\) implies \([a] = [b]\). Thus \([a] \neq [b]\) is not true.
+    </p>
+    <p>
+      we showed that the union of all the equivalence classes is \(A\), and the intersection of two different equivalence classes is \(\emptyset\). 
+      Therefore the set of equivalence classes is a partition of \(A\). \[ \tag*{$\square$} \]
+    </p>
+
     </section>
 
 
