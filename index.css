@@ -147,6 +147,12 @@
     display: none;
   }
 
+  header {
+    padding: 20px;
+    padding-top: 60px;
+    text-align: center;
+  }
+
   .top-bar {
     background: #ededed;  /* Change this to grey color */
     height: 65px;  /* Adjust this to change the height of the bar */
