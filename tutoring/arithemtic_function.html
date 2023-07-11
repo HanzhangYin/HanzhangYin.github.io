@@ -95,6 +95,29 @@
 
     <br>
 
+    <section id = "proposition_1">
+      <p>
+        \(\textbf{Proposition 1. }\)Let \(a, b, n\in\mathbb{Z}^+\) where \(n = ab\). 
+        Suppose that \(d\mid n\) where \(d\in\mathbb{Z}^+\). Then \(d = d_1d_2\) where \(d_1\mid a\) and \(d_2\mid b\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(d_1 = \gcd(a, d)\) and \(d_2 = d/\gcd(a, d)\). 
+        Since \(d\mid ab\), we can get \(ab = dk) for some \(k\in\mathbb{Z}\). Since \(d = d_1d_2\), we have
+        \[
+        ab = d_1d_2k.
+        \]
+        Hence, we can get 
+        \[
+        \frac{ab}{d_1} = d_2k.
+        \]
+        We let \(\frac{a}{d_1} = l\). Then
+        \[
+        bl = d_2k.
+        \]
+        Thus, \(d_2\mid bl).  
+      </p>
+    </section>
+
     <section id = "euler_function">
       <h2>Euler Function</h2>
       <p>
@@ -115,6 +138,25 @@
       </p>
       <p>
         \(\textbf{Note. }\)If \(p\) is a prime number, then \(\varphi(p^k) = p^k - p^{k-1}\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "multiplicative">
+      <h2>Multiplicative Function</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(f:\mathbb{Z}^+\to\mathbb{C}\) be an arithmetic function. 
+        We say that \(f\) is multiplicative if \(f(1) = 1\) and \(f(ab) = f(a)f(b)\) for all \(a, b\in\mathbb{Z}^+\) where \(\gcd(a, b) = 1\).
+      </p>
+      <p>
+        \(\textbf{Example. }\)The Tao function \(\tao(n)\) is multiplicative.
+      </p>
+      <p>
+        \(\textbf{Example. }\)The \(\sigma\) function \(\sigma(n)\) is multiplicative.
+      </p>
+      <p>
+        \(\textbf{Example. }\)The Euler function \(\varphi(n)\) is multiplicative.
       </p>
     </section>
 
