@@ -256,19 +256,6 @@ body.dark-mode {
   color: #e0e0e0; /* Light text */
 }
 
-body.dark-mode header, body.dark-mode .top-bar, body.dark-mode .navbar {
-  background-color: #121212; /* Slightly lighter than body */
-}
-
-body.dark-mode a, body.dark-mode .navbar a {
-  color: #e0e0e0; /* Light text */
-}
-
-body.dark-mode a:hover, body.dark-mode .navbar a:hover {
-  background-color: #e0e0e0; /* Light blue background */
-  color: #121212; /* Dark text */
-}
-
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
   color: #e0e0e0; /* Light text */
 }
@@ -310,6 +297,21 @@ body.dark-mode a:hover {
   color: #EB9D6E; /* light orange color for hover state in dark mode */
   background-color: transparent;
   text-decoration: none;
+}
+
+/* we place the following code here is for it will not be influenced by link styles above */
+
+body.dark-mode header, body.dark-mode .top-bar, body.dark-mode .navbar {
+  background-color: #121212; /* Slightly lighter than body */
+}
+
+body.dark-mode a, body.dark-mode .navbar a {
+  color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode a:hover, body.dark-mode .navbar a:hover {
+  background-color: #e0e0e0; /* Light blue background */
+  color: #121212; /* Dark text */
 }
 
 
