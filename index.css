@@ -13,7 +13,6 @@
         font-family: 'Spectral', serif; 
     }
     header {
-        background-color: #ededed;
         padding-top: 30px;
         padding: 20px;
         text-align: center;
@@ -25,7 +24,7 @@
       text-decoration: none;
     }
     a:visited {
-      color: #3498DB ; /* light blue color */
+      color: blueviolet ; /* light blue color */
       background-color: transparent;
       text-decoration: none;
     }
@@ -258,7 +257,7 @@ body.dark-mode {
 }
 
 body.dark-mode header, body.dark-mode .top-bar, body.dark-mode .navbar {
-  background-color: #1f1f1f; /* Slightly lighter than body */
+  background-color: #121212; /* Slightly lighter than body */
 }
 
 body.dark-mode a, body.dark-mode .navbar a {
@@ -266,7 +265,7 @@ body.dark-mode a, body.dark-mode .navbar a {
 }
 
 body.dark-mode a:hover, body.dark-mode .navbar a:hover {
-  background-color: #e0e0e0; /* Light background */
+  background-color: #e0e0e0; /* Light blue background */
   color: #121212; /* Dark text */
 }
 
@@ -294,6 +293,26 @@ body.dark-mode .material-symbols-outlined {
 body.dark-mode #dark-mode-label {
   content: "🌙";
 }
+
+body.dark-mode a:link {
+  color: #81CCEC; /* light blue color for dark mode */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+body.dark-mode a:visited {
+  color: #a365ec; /* purple-ish color for visited links in dark mode */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+body.dark-mode a:hover {
+  color: #EB9D6E; /* light orange color for hover state in dark mode */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
 
 .visually-hidden {
   position: absolute;
