@@ -46,78 +46,7 @@
 
     <br>
 
-    <section id = "arithmetic_function">
-      <h2>Arithmetic Function</h2>
-      <p>
-        \(\textbf{Definition. }\)An Arithmetic function is a function\(f:\mathbb{Z}^+\to\mathbb{C}\). 
-      </p>
-    </section>
 
-    <br>
-
-    <section id = "tao_function">
-      <h2>Tao Function</h2>
-      <p>
-        \(\textbf{Definition. }\)Let \(n\in\mathbb{Z}^+\), 
-        we define the Tao function \(\tau(n)\) as the number of positive divisors of \(n\).
-        \[
-        \tao(n) = \#\{d\mid n, d>0\}
-        \]
-      </p>
-      <p>
-        \(\textbf{Example. }\)Since \(n = 101\) is a prime number, we have \(\tao(101) = 2\).
-      </p>
-      <p>
-        \(\textbf{Example. }\)Let \(n = 101^7\). We have 
-        \[
-        \tao(n) = \tao(101^7) = \#\(1, 101, 101^2, \dots, 101^7) = 7 + 1 = 8.
-        \]
-      </p>
-    </section>
-
-    <br>
-
-    <section id = "sigma_function">
-      <h2>\(\sigma\) Function</h2>
-      <p>
-        \(\textbf{Definition. }\)Let \(n\in\mathbb{Z}^+\), 
-        we define the \(\sigma\) function \(\sigma(n)\) as the sum of the positive divisors of \(n\).
-        \[
-        \sigma(n) = \sum_{d\mid n, d>0}d.
-        \]
-      </p>
-      <p>
-        \(\textbf{Example. }\)Since \(n = 101\) is a prime number, we have \(\sigma(101) = 101 + 1 = 102\).
-      </p>
-      <p>
-        \(\textbf{Example. }\)Let \(n = 101^7\). We have
-        \[
-        \sigma(n) = \sigma(101^7) = \sum_{i = 0}^7 101^i = \frac{101^8 - 1}{101 - 1} = \frac{101^8 - 1}{100}.
-        \]
-        We use geometric series to calculate the sum here. 
-      </p>
-    </section>
-
-    <br>
-
-    <section id = "euler_function">
-      <h2>Euler Function</h2>
-      <p>
-        \(\textbf{Definition. }\)Let \(n\in\mathbb{Z}^+\), 
-        we define the Euler function \(\varphi(n)\) as the number of positive integers less than or equal to \(n\) that are relatively prime to \(n\).
-      </p>
-      <p>
-        \(\textbf{Example. }\)Since \(n = 101\) is a prime number, we have \(\varphi(101) = 101 - 1 = 100\).
-      </p>
-      <p>
-        \(\textbf{Example. }\)Let \(n = 101^7\). We have
-        \[
-        \varphi(n) = \varphi(101^7) = 101^7 - 101^6 = 101^6(101 - 1) = 101^6\cdot 100.
-        \]
-      </p>
-    </section>
-
-    <br>
 
       
     <section id = "References">
