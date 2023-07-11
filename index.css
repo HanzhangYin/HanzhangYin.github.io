@@ -249,18 +249,64 @@
       font-family: 'Spectral', serif;
     }
 
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-
 }
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode header, body.dark-mode .top-bar, body.dark-mode .navbar {
+  background-color: #1f1f1f; /* Slightly lighter than body */
+}
+
+body.dark-mode a, body.dark-mode .navbar a {
+  color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode a:hover, body.dark-mode .navbar a:hover {
+  background-color: #e0e0e0; /* Light background */
+  color: #121212; /* Dark text */
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
+  color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode p {
+  color: #bdbdbd; /* Not too light text */
+}
+
+body.dark-mode img {
+  filter: brightness(0.8); /* Decrease brightness of images */
+}
+
+body.dark-mode .material-symbols-outlined {
+  font-variation-settings: 'FILL' 100, 'wght' 400, 'GRAD' 100, 'opsz' 48;
+}
+
+#dark-mode-label {
+  cursor: pointer;
+  font-size: 2em;
+}
+
+body.dark-mode #dark-mode-label {
+  content: "🌙";
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
     
     
     /* .cool-button {
