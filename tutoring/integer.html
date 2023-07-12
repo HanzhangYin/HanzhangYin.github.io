@@ -327,6 +327,57 @@
 
     <br>
 
+    <section id = "proposition_6">
+      <p>
+        \(\textbf{Proposition 6. }\)For \(a, b\in\mathbb{Z}^+\), if \(a\mid b\), then \(a\leq b\).
+      </p>
+      <p>
+        \(\textbf{Proof: }\)Suppose \(a\mid b\) where \(a, b\in\mathbb{Z}^+\).
+        Then there exists an integer \(k\) such that
+        \[
+        ak=b.
+        \]
+        First, we have to show that \(k\in\mathbb{Z}^+\) by contradiction.
+        Suppose that \(k\in\mathbb{Z}^-\cup \{0\}\). If \(k = 0\), then
+        \[
+        ak = 0 \neq b,
+        \]
+        since \(b\in\mathbb{Z}^+\). If \(k\in\mathbb{Z}^-\), then \(-k\in\mathbb{Z}^+\).
+        \[
+        a\cdot(-k) = -ak = -b\in\mathbb{Z}^+,
+        \]
+        because of the Closure of Multiplication in \(\mathbb{Z}^+\). 
+        According to <a href="#order" class="tooltip-link">\(\textbf{Trichotomy Law}\)
+          <span class="tooltip-text">\(\textbf{Trichotomy Law. }\)For every integer \(a\), exactly one of the following statement is true: 
+          \[
+          a\in\mathbb{Z}^+,
+          \]
+          \[
+          a=0,
+          \]
+          \[
+          -a\in\mathbb{Z}^+.
+          \]</span>
+        </a>
+        <script src="position_adjust.js"></script>, we can know that if \(-b\in\mathbb{Z}^+\), then \(b\notin\mathbb{Z}^+\), which is a contradiction. 
+        Thus, we can know that \(k\in\mathbb{Z}^+\).
+        Since \(1\) is the least element of \(\mathbb{Z}^+\), then \(k\geq 1\). If \(k=1\), then
+        \[
+        a\cdot 1 = a = b.
+        \]
+        If  \(k\gt 1\), then
+        \[
+        k - 1\in\mathbb{Z}^+.
+        \]
+        And we can get 
+        \[
+        a(k-1) = ak-a = b-a\in\mathbb{Z}^+,
+        \]
+        because of the Closure of Multiplication in \(\mathbb{Z}^+\). Hence, \(a\lt b\).
+        Therefore, we can get \(a\leq b\). \[ \tag*{$\square$} \]
+        </p>
+    </section>
+
     <section id = "even">
       <p>
         \(\textbf{Definition. }\)An integer \(a\) is called even if there exists an integer \(b\) such that
@@ -350,7 +401,7 @@
 
     <br>
 
-    <section id = "Proposition_6">
+    <section id = "Proposition_7">
       <p>
         \(\textbf{Proposition 5. }\)Every \(n\in\mathbb{Z}\) is even or odd.
       </p> 
