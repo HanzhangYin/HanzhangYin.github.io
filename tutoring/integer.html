@@ -297,6 +297,7 @@
         \[
         l\leq s\;\text{for all}\;s\in S.
         \]
+      </p>
     </section>
 
     <br>
@@ -415,15 +416,60 @@
       </p>
       <p>
         We will prove it with mathematical contradiction. Let \(S=\{n\in\mathbb{Z}^+|n\;\text{is neither even nor odd}\}\).
+        Since \(1 = 2\cdot 0 +1\), we can know that \(1\) is odd. In that case, we can get that \(1\notin S\). 
+        According to <a href="#wop" class="tooltip-link">\(\textbf{Well-ordering Principle}\)
+          <span class="tooltip-text">\(\textbf{Well-ordering Principle. }\)Every nonempty subset of \(\mathbb{Z}^+\) has a least element. 
+          That is, if \(S\subset\mathbb{Z}^+\) and \(S\neq\emptyset\), then there exists an integer \(l\in S\) such that 
+          \[
+          l\leq s\;\text{for all}\;s\in S.
+          \]</span>
+        </a>
+        <script src="position_adjust.js"></script>, we can know that \(S\) has a least element \(l\).
         According to <span class="tooltip-text">\(\textbf{Proposition_5. }\)\(1\) is the least element of \(\mathbb{Z}^+\). </span>
       </a>
-      <script src="position_adjust.js"></script>, 
+      <script src="position_adjust.js"></script>, we can know that \(l\gt 1\) since \(1\notin S\). 
+        Thus, we can get \(l-1\in\mathbb{Z}^+\) for \(l-1\lt l\). Then we can get that \(l-1\) is even or odd.
+        If \(l-1\) is even, then there exists an integer \(t\) such that
+        \[
+        l-1=2t.
+        \]
+        Then we can get
+        \[
+        l=2t+1,
+        \]
+        which means that \(l\) is odd. It is a contradiction. If \(l-1\) is odd, then there exists an integer \(t\) such that
+        \[
+        l-1=2t+1.
+        \]
+        Then we can get
+        \[
+        l=2t+2=2(t+1),
+        \]
+        which means that \(l\) is even. It is a contradiction. Therefore, we can get that every integer \(n\in\mathbb{Z}^+\) is even or odd.
       </p>
-          <ul>
-          <li>
-            \(\textbf{Step 2. }\)If \(n\) is even and odd, then \(n\) is odd. 
-          </li>
-        </ul>
+      <p>
+        \(\textbf{Step 2. }\)There is no integer \(n\in\mathbb{Z}^+\) such that \(n\) is both even and odd.
+      </p>
+      <p>
+        I will prove it with mathematical contradiction. Suppose that there exists an integer \(n\in\mathbb{Z}^+\) such that \(n\) is both even and odd.
+        Then there exists an integer \(k, l\) such that
+        \[
+        n=2k=2l+1.
+        \]
+        Then we can get
+        \[
+        2k-2l=1,
+        \]
+        \[
+        2(k-l)=1.
+        \]
+        Since \(k-l\in\mathbb{Z}\), we can get \(2\mid 1\). 
+        According to <a href="#wop" class="tooltip-link">\(\textbf{Proposition 6}\)
+        <span class="tooltip-text">\(\textbf{Proposition 6. }\)For \(a, b\in\mathbb{Z}^+\), if \(a\mid b\), then \(a\leq b\).</span>
+        </a>
+        <script src="position_adjust.js"></script>, we can know that \(2\leq 1\). It is a contradiction. 
+        Thus, we can get that there is no integer \(n\in\mathbb{Z}^+\) such that \(n\) is both even and odd. 
+        Therefore, we can get that every integer \(n\in\mathbb{Z}\) is either even or odd. \[ \tag*{$\square$} \]
       </p>
     </section>
     
