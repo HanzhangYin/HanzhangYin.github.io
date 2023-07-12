@@ -786,6 +786,38 @@
       </p>
     </section>
 
+    <br>
+
+    <section id = "regular_version">
+      <h2>Regular Version of Ehrhart-MacDonald Reciprocity</h2>
+      <p>
+        \(\textbf{Theorem 5. }\)Let \(P\subset \mathbb{R}^n\) be a convex rational polytope. Then
+        \[
+        L_P(-t) = (-1)^{d+1}L_{P^\circ}(t).
+        \]
+      </p>
+      <p>
+        \(\textbf{Proof. }\)By series version: 
+        \[
+        \mathrm{Ehr}_P\left(\frac{1}{z}\right) = \sum_{t=0}^\infty L_P(t)\left(\frac{1}{z}\right)^t
+        \]
+        \[
+        = \sum_{t\leq 0}L_P(-t)z^t
+        \]
+        \[
+        = -\sum_{t\geq 1}L_P(-t)z^{t}.
+        \]
+        Then 
+        \[
+        \sum_{t\geq 1}L_P^circ (t)z^t = (-1)^{d+1}\mathrm{Ehr}_P\left(\frac{1}{z}\right)
+        \]
+        \[
+        = (-1)^{d}\sum_{t\geq 1}L_P(-t)z^t.
+        \]
+        Comparing coefficients of \(z^t\) gives the result. \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
 
 
 
