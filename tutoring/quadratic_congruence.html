@@ -49,12 +49,12 @@
     <section id = "a_1">
       <h2>When \(a = -1\)</h2>
       <p>
-        \(\textbf{Definition. }\)Let \(p\) be a prime. Let \(a=-1\in\mathbb{Z}\), we have
+        \(\textbf{Theorem. }\)Let \(p\) be a prime. Let \(a=-1\in\mathbb{Z}\), we have
         \[
         \left(\frac{-1}{p}\right) = 
         \begin{cases} 
-        1 \qquad\text{if } p\equiv \pm 1\mathrm{mod }8\\
-        -1 \qquad\text{if } p\equiv \pm 3\mathrm{mod }8\\
+        1 \qquad\text{if } p\equiv 1\mathrm{mod }4\\
+        -1 \qquad\text{if } p\equiv 3\mathrm{mod }4\\
         \end{cases}
         \]
       </p>
@@ -65,14 +65,66 @@
     <section id = "a_2">
       <h2>When \(a = 2\)</h2>
       <p>
-        \(\textbf{Definition. }\)Let \(p\) be a prime. Let \(a=2\in\mathbb{Z}\), we have
+        \(\textbf{Theorem. }\)Let \(p\) be a prime. Let \(a=2\in\mathbb{Z}\), we have
         \[
         \left(\frac{2}{p}\right) = 
         \begin{cases} 
-        1 \qquad\text{if } p\equiv 1\mathrm{mod }4\\
-        -1 \qquad\text{if } p\equiv 3\mathrm{mod }4\\
+        1 \qquad\text{if } p\equiv \pm 1\mathrm{mod }8\\
+        -1 \qquad\text{if } p\equiv \pm 3\mathrm{mod }8\\
         \end{cases}
         \]
+      </p>
+      <p>
+        \(\textbf{Proposition. }\)If \(p\equiv \pm 3\mathrm{mod }8\), then \(\left(\frac{2}{p}\right) = -1\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Suppose otherwise. By Wop, 
+        there is a smallest prime \(p\) such that \(\left(\frac{2}{q}\right) = 1\). 
+        We can choose \(x\in\mathbb{Z}\) with 
+        \[
+        x^2\equiv 2\mathrm{mod }p.
+        \]
+        We can assume that \(0\lt x\lt p\) and \(x\) is odd. 
+        We have \(p\mid x^2-2\), which means there exists \(k\in\mathbb{Z}\) such that
+        \[
+        x^2-2 = kp.
+        \]
+        Then, 
+        \[
+        0\lt pk = x^2 -2 \lt p^2.
+        \]
+        Thus, 
+        \[
+        0\lt k\lt p.
+        \]
+        We investigate \(k\mathrm{mod }8\).
+        \[
+        pk = x^2-2
+        \]
+        \[
+        \pm3 k\equiv -1\mathrm{mod }8.
+        \]
+        So 
+        \[
+        k = \pm 3\mathrm{mod }8.
+        \]
+        Let \(q\) be a prime divisor of \(k\). 
+        Then,
+        \[
+        q\leq k\lt p, so q\lt p.
+        \]
+        We have choose \(q\equiv \pm 3\mathrm{mod }8\).
+        Otherwise, every prime dividing \(k\) is congruent to \(\pm 1\mathrm{mod }8\).
+        Then, it force \(k\equiv \pm 1\mathrm{mod }8\), which is a contradiction.
+        Since \(q\mid k\) and \(x^2-2=pk\), we have
+        \[
+        x^2\equiv 2\mathrm{mod }q.
+        \]
+        Thus,
+        \[
+        \left(\frac{2}{q}\right) = 1.
+        \]
+        This is a contradiction. \(\blacksquare\)
       </p>
     </section>
 
