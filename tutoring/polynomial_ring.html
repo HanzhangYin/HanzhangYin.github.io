@@ -181,6 +181,41 @@
       </p>
     </section>
 
+    <br>
+
+    <section id = "root_theorem">
+      <h2>Root Theorem</h2>
+      <p>
+        \(\textbf{Theorem. }\)Let \(R\) be any ring. 
+        Suppose \(f(x)\in R[x]\) and \(f(c)=0\), where \(c\in K\). 
+        Then we can factor \(f(x)\) as
+        \[
+          f(x)=(x-c)q(x)
+        \]
+        where \(q(x)\in R[x]\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Since the coeffcient of \((x-c)\) is a unit, by the Division Algorithm, we can write
+        \[
+          f(x)=(x-c)q(x)+r(x),
+        \]
+        where \(\mathrm{deg}r(x)\lt\mathrm{deg}(x-c)=1\). 
+        Since a polynomial of degree \(0\) is a constant, we have \(r(x)=r\), where \(r\in R\).
+        Thus, we have
+        \[
+          f(c)=(c-c)q(c)+r.
+        \]
+        Now, we plug in \(c\) into the equation, we have
+        \[
+          0=0\cdot q(c)+r = r.
+        \]
+        Therefore, we have
+        \[
+          f(x)=(x-c)q(x)+0=(x-c)q(x).
+        \]
+      </p>
+    </section>
+
       
     <section id = "References">
     <h2>References</h2>
