@@ -245,6 +245,22 @@
         \(\textbf{Theorem . }\)Let \(p\) be a prime number in \(\mathbb{Z}\).
         Then \(\mathbb{Z}/p\mathbb{Z}\) is a field.
       </p>
+      <P>
+        \(\textbf{Proof. }\)A field, \(K\), is a commutative ring with a multiplicative inverse for every non-zero element in \(K\).
+        Since we know that \(\mathbb{Z}/p\mathbb{Z}\) is a commutative ring, we only need to show that every non-zero element in \(\mathbb{Z}/p\mathbb{Z}\) has a multiplicative inverse.
+        Let \(a\in\mathbb{Z}/p\mathbb{Z}\) be a non-zero element. 
+        Then we have \(\gcd(a, p)=1\) for \(p\) is a prime number.
+        According to Bezout's Identity, we can find \(x, y\in\mathbb{Z}\) such that
+        \[
+          ax+py=1.
+        \]
+        Thus, we have
+        \[
+          ax=1-py.
+        \]
+        Since \(p\) divides \(py\), we have \(ax\equiv 1\pmod{p}\).
+        Therefore, \(x\) is the multiplicative inverse of \(a\) in \(\mathbb{Z}/p\mathbb{Z}\).
+      </P>
     </section>
 
     <section id = "proposition_1">
