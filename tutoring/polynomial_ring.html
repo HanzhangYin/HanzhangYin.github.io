@@ -385,7 +385,13 @@
         with \(r(x) = 0\) or degree \(r(x) \lt degree b(x)\).
       </p>
       <p>
-        \(\textbf{Proof. }\)When \(a(x) = 0\), we have
+        \(\textbf{Proof. }\)We firstly show the exsistence and then we show the uniqueness. 
+      </p>
+      <p>
+        \textit{Step 1.} We show the existence.
+      </p>
+      <p>
+        When \(a(x) = 0\), we have
         \[
         0 = q(x)b(x) + r(x). 
         \]
@@ -402,8 +408,34 @@
         \[
         b(x) = b_mx^m + b_{m-1}x^{m-1} + \dots + b_1x + b_0.
         \]
-      
-
+        Since \(n\geq m\), we let \(a'(x)\) such as 
+        \[
+        \begin{align}
+        a'(x) &= a(x) - \frac{a_n}{b_m}x^{n-m}b(x)\\
+        & = a(x) - \left(a_nx^n + \frac{a_nb_{m-1}}{b_m}x^{n-1}+\dots+\frac{a_nb_0}{b_m}x^{n-m}\right) \\
+        & = \left(a_n - \frac{a_nb_{m-1}}{b_m}\right)x^n + \dots + \left(a_{n-m} - \frac{a_nb_0}{b_m}\right)x^{n-m} + \dots + a_0.
+        \end{align}
+        \]
+        Since \(\mathrm{deg}a'(x) \lt \mathrm{deg}a(x)\), we can use induction hypothesis to get
+        \[
+        a'(x) = q'(x)b(x) + r'(x),
+        \]
+        where \(r'(x) = 0\) or \(\mathrm{deg}r'(x) \lt \mathrm{deg}b(x)\).
+        Thus, we have
+        \[
+        \begin{align}
+        a(x) &= a'(x) + \frac{a_n}{b_m}x^{n-m}b(x)\\
+        & = q'(x)b(x) + r'(x) + \frac{a_n}{b_m}x^{n-m}b(x)\\
+        & = \left(q'(x) + \frac{a_n}{b_m}x^{n-m}\right)b(x) + r'(x).
+        \end{align}
+        \]
+        Thus, we can take \(q(x) = q'(x) + \frac{a_n}{b_m}x^{n-m}\) and \(r(x) = r'(x)\).
+      </p>
+      <p>
+        \textit{Step 2.} We show the uniqueness.
+      </p>
+      <p>
+        Suppose that 
       </p>
       </section>  
 
