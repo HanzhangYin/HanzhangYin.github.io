@@ -388,7 +388,7 @@
         \(\textbf{Proof. }\)We firstly show the exsistence and then we show the uniqueness. 
       </p>
       <p>
-        \textit{Step 1.} We show the existence.
+        \(\textit{Step 1. We show the existence.}\)
       </p>
       <p>
         When \(a(x) = 0\), we have
@@ -432,10 +432,23 @@
         Thus, we can take \(q(x) = q'(x) + \frac{a_n}{b_m}x^{n-m}\) and \(r(x) = r'(x)\).
       </p>
       <p>
-        \textit{Step 2.} We show the uniqueness.
+        \(\textit{Step 2. We show the uniqueness.}\)
       </p>
       <p>
-        Suppose that 
+        We will prove it with mathematical contradiction. Suppose that there exists \(q_1(x), q_2(x), r_1(x), r_2(x)\) such that
+        \[
+        a(x) = q_1(x)b(x) + r_1(x) = q_2(x)b(x) + r_2(x),
+        \]
+        where \(r_1(x) = 0\) or \(\mathrm{deg}r_1(x) \lt \mathrm{deg}b(x)\) and \(r_2(x) = 0\) or \(\mathrm{deg}r_2(x) \lt \mathrm{deg}b(x)\)
+        and \(q_1(x) \neq q_2(x)\) or \(r_1(x) \neq r_2(x)\).
+        Then we have 
+        \[
+        (q_1(x) - q_2(x))b(x) = r_2(x) - r_1(x).
+        \]
+        We can know that \(\mathrm{deg}(r_2(x) - r_1(x)) \lt \mathrm{deg}b(x)\) since \(\mathrm{deg}r_1(x) \lt \mathrm{deg}b(x)\) and \(\mathrm{deg}r_2(x) \lt \mathrm{deg}b(x)\).
+        Since \(q_1(x)\neq q_2(x)\), we have \(\mathrm{deg}(q_1(x) - q_2(x)) \geq 0\).
+        Thus, we have \(\mathrm{deg}((q_1(x) - q_2(x))b(x)) \geq \mathrm{deg}b(x)\).
+        It shows that \(\mathrm{deg}((q_1(x) - q_2(x))b(x)) \geq \mathrm{deg}(r_2(x) - r_1(x))\), which is a contradiction.
       </p>
       </section>  
 
