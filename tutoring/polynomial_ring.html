@@ -398,7 +398,7 @@
         One solution is \(q(x) = 0\) and \(r(x) = 0\).
       </p>
       <p>
-        When \(a(x) \neq 0\), we can use induction on the degree of \(a(x)\) where \(\mathrm{deg}a(x) = n\).
+        When \(a(x) \neq 0\), we can use induction on the degree of \(a(x)\) where \(\mathrm{deg}(a(x)) = n\).
         Suppose that \(b(x)\) have degree \(m\). If \(n \lt m\), we can take \(q(x) = 0\) and \(r(x) = a(x)\).
         If \(n\geq m\), we can write \(a(x)\) as
         \[
@@ -416,11 +416,11 @@
         & = \left(a_n - \frac{a_nb_{m-1}}{b_m}\right)x^n + \dots + \left(a_{n-m} - \frac{a_nb_0}{b_m}\right)x^{n-m} + \dots + a_0.
         \end{align}
         \]
-        Since \(\mathrm{deg}a'(x) \lt \mathrm{deg}a(x)\), we can use induction hypothesis to get
+        Since \(\mathrm{deg}(a'(x)) \lt \mathrm{deg}(a(x))\), we can use induction hypothesis to get
         \[
         a'(x) = q'(x)b(x) + r'(x),
         \]
-        where \(r'(x) = 0\) or \(\mathrm{deg}r'(x) \lt \mathrm{deg}b(x)\).
+        where \(r'(x) = 0\) or \(\mathrm{deg}(r'(x)) \lt \mathrm{deg}(b(x))\).
         Thus, we have
         \[
         \begin{align}
