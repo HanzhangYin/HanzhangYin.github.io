@@ -476,9 +476,44 @@
 
       <br>
 
+      <section id = "gcd_polynomial">
+      <h2>Greatest Common Divisor of Polynomials</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(R\) be a commutative ring. 
+        Suppose \(a(x)\) and \(b(x)\) are two nonzero polynomials in \(R[x]\). 
+        Then a polynomial \(d(x)\) is called a greatest common divisor of \(a(x)\) and \(b(x)\) if
+        <ul>
+          <li>
+            \(d(x)\) divides both \(a(x)\) and \(b(x)\).
+          </li>
+          <li>
+            if \(c(x)\) divides both \(a(x)\) and \(b(x)\), then \(c(x)\) divides \(d(x)\).
+          </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Note. }\)In \(\mathbb{Z}/p\mathbb{Z}[x]\), greatest common divisor of \(a(x)\) and \(b(x)\) is unique up to a unit.
+        Remainder: any nonzero element in \(\mathbb{Z}/p\mathbb{Z}[x]\) is a unit.
+      </p>
+      </section>
+
       <section id = "proposition_3">
       <p>
         \(\textbf{Proposition. }\)\(\mathbb{Z}/p\mathbb{Z}[x]_{\pi(x)}\) is a field where \(p\) is a prime and \(\pi(x)\) is an irreducible polynomial in \(\mathbb{Z}/p\mathbb{Z}[x]\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(a(x)\) be a nonzero element in \(\mathbb{Z}/p\mathbb{Z}[x]_{\pi(x)}\). 
+        (i.e. \(a(x)\) is not divisible by \(\pi(x)\).)
+        Then we have \(\gcd(a(x), \pi(x)) = 1\). Since \(\pi(x)\) is irreducible, we have \(\gcd(a(x), \pi(x)) = 1\). 
+        According to Bezout's Identity, we can find \(b(x), c(x)\) such that
+        \[
+        a(x)b(x) + \pi(x)c(x) = 1.
+        \]
+        Thus, we have
+        \[
+        a(x)b(x) \quiv 1 \pmod{\pi(x)}.
+        \]
+        Therefore, every \(a(x)\) is a unit in \(\mathbb{Z}/p\mathbb{Z}[x]_{\pi(x)}\).
       </p>
       </section>
 
