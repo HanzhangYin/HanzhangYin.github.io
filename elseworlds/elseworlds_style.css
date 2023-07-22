@@ -1,7 +1,4 @@
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <style>
+
     .second-font {
       font-family: 'Noto Serif JP', serif;
       }
@@ -88,7 +85,7 @@
       font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
-      hyphens: manual;
+      /* hyphens: manual; */
     }
     pre {
       background-color: #d9d9d9;
@@ -161,4 +158,3 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
