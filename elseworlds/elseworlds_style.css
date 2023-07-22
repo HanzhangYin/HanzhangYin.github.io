@@ -1,11 +1,3 @@
-<link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
-<link rel="preconnect" href="https://fonts.googleapis.com"> <!--Japanese-->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--Japanese-->
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet"><!--Japanese-->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" /> <!--link for the code block-->
-
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
