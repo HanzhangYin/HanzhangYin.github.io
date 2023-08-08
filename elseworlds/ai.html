@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
+<!-- <script>
   function copyCode1() {
     var code = document.getElementById("code-block1");
     var textarea = document.createElement("textarea");
@@ -142,12 +142,10 @@
     document.execCommand("copy");
     textarea.remove();
   }
-</script>
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+</script> -->
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
@@ -155,7 +153,7 @@
   <link rel="stylesheet" type="text/css" href="elseworlds_style.css"><!--It is a link for css structure-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /><!--It is a link for material symbols-->
   <link rel="stylesheet" href="back_button.css"><!--It is a link for back button-->
-  <title>R</title>
+  <title>Generative Artificial Intelligence</title>
   </head>
   <body>
     <button class="back-button" onclick="goBack()">
@@ -164,16 +162,54 @@
     </button>
     <script src="back_button.js"></script>
     <header id="title-block-header">
-      <h1 class="title">R</h1>
+    <h1>Generative Artificial Intelligence</h1>
     </header>
-    <h2 id="how-to-install-r-on-mac">How to install R in Terminal</h2>
-    <ol type="1">
-      <li>
-        Go to
-        <a href="https://cloud.r-project.org/">https://cloud.r-project.org/</a>
-        and download it through package. Or use homebrew
-      </li>
-    </ol>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="#generative_ai">Generative AI</a>
+      <a href="#discriminative_ai">Discriminative AI</a>
+      <a href="#foundation_models">Foundation Models</a>
+      <a href="#References">References</a>
+    </nav>
+    <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+    <section id = "generative_ai">
+    <h2>What is Generative Artificial Intelligence (AI)</h2>
+    <p>
+      Generative Al is a type of artificial intelligence (Al) that can create new content, 
+      such as text, images, audio, and video. 
+      It does this by learning from existing data and then using that knowledge to generate new and unique outputs.
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "discriminative_ai">
+    <h2>Difference between Generative AI and Discriminative AI</h2>
+    <p>
+      A generative Al model could be trained on a dataset of images of cats and then used to generate new images of cats. 
+      A discriminative Al model could be trained on a dataset of images of cats and dogs and then used to classify new images as either cats or dogs.
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "foundation_models">
+    <h2>Foundation Models</h2>
+    <p>
+      A foundation model is a large Al model pretrained on a vast quantity of data that was "designed to be adapted" (or fine-tuned) to a wide range of downstream tasks, such as sentiment analysis, image captioning, and object recognition.
+    </p>
+    </section>
+
+    <!-- <br>
+
+
     <pre><code id="code-block1">brew install r</code></pre>
     <button onclick="copyCode1()">Copy</button>
     <ol start="2" type="1">
@@ -253,6 +289,6 @@
     <pre><code>data[2:4]</code></pre>
     <p>To quit R, use the following code:</p>
     <pre><code id="code-block12">q()</code></pre>
-    <button onclick="copyCode12()">Copy</button>
+    <button onclick="copyCode12()">Copy</button> -->
   </body>
 </html>
