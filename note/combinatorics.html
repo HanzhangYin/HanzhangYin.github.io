@@ -24,22 +24,25 @@
       <span class="visually-hidden">Menu</span>
     </label>
     <nav class="navbar">
-      <a href="#Definition">Definition</a>
+      <a href="#Pigeon-hole_Principle">Pigeon-hole Principle</a>
       <a href="#References">References</a>
     </nav>
     <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
     <h1>Combinatorics</h1>
 
-    <section id = "pigonhole_principle">
+    <section id = "Pigeon-hole_Principle">
     <h2>Definition</h2>
-    <p>
-      \(\textbf{Theorem 1.1. (Pigeon-hole Principle).}\) Let \(n\) and \(k\) be positive integers, 
-      and let \(n > k\). Suppose we have to place \(n\) identical balls into k identical boxes. 
-      Then there will be at least one box in which we place at least two balls.
-    </p>
     <p>
       \(\textbf{Theorem 1.1. (Pigeon-hole Principle).}\) Let \(A\) and \(B\) be two finite sets and \(f\) be a function from \(A\) to \(B\).
       If \(|A| > |B|\), then \(f\) is not one-to-one. (i.e. there exists \(a_1, a_2 \in A\) such that \(a_1 \neq a_2\) and \(f(a_1) = f(a_2)\)).
+    </p>
+    <p>
+      \(\textbf{Theorem 1.1. (Pigeon-hole Principle, general version).}\) Let \(A\) and \(B\) be two finite sets with \(|A| = n\) and \(|B| = m\).
+      Let \(r\) be a positive integer and let \(f\) be a function from \(A\) to \(B\). If \(n > rm\), then there exists \(b \in B\) such that
+      \[
+      \(|f^{-1}(b)| \geq r+1\),
+      \]
+      where \(f^{-1}(b) = \{a \in A : f(a) = b\}\).
     </p>
     </section>
 
