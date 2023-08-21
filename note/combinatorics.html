@@ -37,6 +37,12 @@
       If \(|A| > |B|\), then \(f\) is not one-to-one. (i.e. there exists \(a_1, a_2 \in A\) such that \(a_1 \neq a_2\) and \(f(a_1) = f(a_2)\)).
     </p>
     <p>
+      \(\textbf{Proof. }\)We will prove it with mathematical contrapositive. 
+      We need to show that if \(f\) is one-to-one, then \(|A| \leq |B|\).
+      Suppose that \(f\) is one-to-one. Let \(A = \{a_1, a_2, \dots, a_n\}\), which implies that \(|A| = n\).
+      Then \(f(A) = \{f(a_1), f(a_2), \dots, f(a_n)\}\) and \(|f(A)| = n\). Hence, \(A\subset B\). 
+    </p>
+    <p>
       \(\textbf{Theorem 1.1. (Pigeon-hole Principle, general version).}\) Let \(A\) and \(B\) be two finite sets with \(|A| = n\) and \(|B| = m\).
       Let \(r\) be a positive integer and let \(f\) be a function from \(A\) to \(B\). If \(n > rm\), then there exists \(b \in B\) such that
       \[
