@@ -46,13 +46,21 @@
       \(\textbf{Theorem 1.1. (Pigeon-hole Principle, general version).}\) Let \(A\) and \(B\) be two finite sets with \(|A| = n\) and \(|B| = m\).
       Let \(r\) be a positive integer and let \(f\) be a function from \(A\) to \(B\). If \(n > rm\), then there exists \(b \in B\) such that
       \[
-      \(|f^{-1}(b)| \geq r+1\),
+      |f^{-1}(b)| \geq r+1,
       \]
       where \(f^{-1}(b) = \{a \in A : f(a) = b\}\).
     </p>
     <p>
       \(\textbf{Proof. }\)We will prove it with mathematical contrapositive. 
       We need to show that if \(|f^{-1}(b)| \leq r\) for all \(b \in B\), then \(n \leq rm\).
+      Suppose that \(|f^{-1}(b)| \leq r\) for all \(b \in B\). We define
+      \[
+      S = \bigcup_{b \in B} f^{-1}(b).
+      \]
+      Then
+      \[
+      |S| = \sum_{b \in B} |f^{-1}(b)| \leq r\cdot m.
+      \]
     </p>
     </section>
 
