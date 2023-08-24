@@ -55,8 +55,15 @@
         Now, suppose that \(k\in \{1, \dots, m\}\) and \(v_k \in \text{span}(v_1, \ldots, v_{k-1})\). 
         Let \(u\in \text{span}(v_1, \ldots, v_m)\). Then there exist \(b_1, \dots, b_m \in \mathbb{F}\) such that
         \[
-        u = b_1v_1 + \dots b_kv_k + \dots + b_mv_m.
+        u = b_1v_1 + \dots + b_kv_k + \dots + b_mv_m.
         \]
+        Since \(v_k \in \text{span}(v_1, \ldots, v_{k-1})\), we have
+        \[
+        v_k = c_1v_1 + \dots + c_{k-1}v_{k-1}
+        \]
+        for some \(c_1, \dots, c_{k-1} \in \mathbb{F}\). Therefore, we can rewrite \(u\) as
+        \[
+        u = b_1v_1 + \dots + b_k(c_1v_1 + \dots + c_{k-1}v_{k-1}) + \dots + b_mv_m.
       </p>
     </section>
 
