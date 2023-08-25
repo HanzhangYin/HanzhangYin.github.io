@@ -79,7 +79,8 @@
         (e.g. Let \(L = \{3, 2, 1, 5, 6, 7, 5, 11\}\). We can see that \(7\in L\) which has the longest monotonically increasing subsequence ending with \(7\): \(1, 5, 6, 7\), \(2, 5, 6, 7\), \(3, 4, 6, 7). 
         We can also see the longest monotonically decreasing subsequence ending with \(7\) is just \(7\) since every number before \(7\) on the sequence is less than \(7\). Thus, \(7\) has the pair \((4, 1)\).)
         Each two numbers in the sequence are labeled with a different pair: if \( i \lt j \) and \( n_i \leq n_j \) then \( a_i \lt a_j \), and on the other hand if \( n_i \geq n_j \) then \( b_i \lt b_j \).
-        But there are only \( (r - 1)(s - 1) \) possible labels if \( a_i \) is at most \( r - 1 \) and \( b_i \) is at most \( s - 1 \), so by the pigeonhole principle there must exist a value of \( i \) for which \( a_i \) or \( b_i \) is outside this range. If \( a_i \) is out of range then \( n_i \) is part of an increasing sequence of length at least \( r \), and if \( b_i \) is out of range then \( n_i \) is part of a decreasing sequence of length at least \( s \).
+        But there are only \( (r - 1)(s - 1) \) possible labels if \( a_i \) is at most \( r - 1 \) and \( b_i \) is at most \( s - 1 \), so by the pigeonhole principle there must exist a value of \( i \) for which \( a_i \) or \( b_i \) is outside this range. 
+        If \( a_i \) is out of range then \( n_i \) is part of an increasing sequence of length at least \( r \), and if \( b_i \) is out of range then \( n_i \) is part of a decreasing sequence of length at least \( s \).
       </p>
     </section>
 
