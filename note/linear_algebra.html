@@ -100,9 +100,38 @@
           v = \frac{\langle v, v_1 \rangle}{\langle v_1, v_1 \rangle}v_1 + \dots + \frac{\langle v, v_n \rangle}{\langle v_n, v_n \rangle}v_n.
           \]
         </p>
+        <p>
+          \(\textbf{Proof. }\)Let \(v\in V\). Since \(S\) is an orthogonal list and has \(n\) vectors, we can know that
+          \(S\) is a basis. 
+        </p>
       </section>
-          
+      
+    <br>
 
+    <section id = "Gram_Schmidt_orthogonalization_process">
+      <h2>Gram-Schmidt orthogonalization process</h2>
+      <p>
+        \(\textbf{Theorem. }\)Let \(V\) be an inner product space and let \(S = \{v_1, \dots\}\) be a basis in \(V\).
+        And the set \(V_k = \text{span}\{v_1, \dots, v_k\}\) for \(k\geq 1\). 
+        Then there exists an orthogonal list \(\{w_1, \dots, w_k\}\) such that for each \(k\geq 1\),
+        \[
+        V_k = \text{span}\{w_1, \dots, w_k\}.
+        \]
+        and \(w_k\) is orthogonal to every vector in \(V_{k-1}\).\\
+        Furthermore, this sequence is unique up to multiplying the elements by nonzero scalars.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We construct the sequence \(\{w_1, \dots, w_k\}\) recursively.
+        We start with the simple choice \(w_1 = v_1\). Now, suppose that \(w_1, \dots, w_{k-1}\) have been constructed and 
+        \(\text{span}(w_1, \dots, w_{k-1}) = V_{k-1}\). We define \(w_k\) by
+        \[
+        w_k = v_k - \frac{\langle v_k, w_1 \rangle}{\langle w_1, w_1 \rangle}w_1 - \dots - \frac{\langle v_k, w_{k-1} \rangle}{\langle w_{k-1}, w_{k-1} \rangle}w_{k-1}.
+        \]
+        Then \(w_k\) is orthogonal to \(w_1, \dots, w_{k-1}\).
+      </p>
+    </section>
+
+    <br>
       
     <section id = "References">
     <h2>References</h2>
