@@ -128,6 +128,14 @@
         w_k = v_k - \frac{\langle v_k, w_1 \rangle}{\langle w_1, w_1 \rangle}w_1 - \dots - \frac{\langle v_k, w_{k-1} \rangle}{\langle w_{k-1}, w_{k-1} \rangle}w_{k-1}.
         \]
         By the construction, we can see that each of \(w_1, \dots, w_k\) is a linear combination of \(v_1, \dots, v_k\).
+        Then 
+        \[
+        \begin{align*}
+        \langle w_i, w_j \rangle &= \langle v_k - a_1w_1 - \dots - a_{k-1}w_{k-1}, w_j\\
+        &= \langle v_k, w_j \rangle - a_1\langle w_1, w_j \rangle - \dots - a_{k-1}\langle w_{k-1}, w_j \rangle\\
+        &= \langle v_k, w_j \rangle - a_j\langle w_j, w_j \rangle\\
+        \end{align*}
+        \]
         Then \(w_k\) is orthogonal to \(w_1, \dots, w_{k-1}\).
       </p>
     </section>
