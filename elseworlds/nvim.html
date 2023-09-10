@@ -373,7 +373,7 @@
     <![endif]-->
   </head>
   <body>
-    <h1 id="how-to-install-r-on-mac">How to install Neovim in Terminal</h1>
+    <h1 id="how-to-install-neovim-on-mac">How to install Neovim in Terminal</h1>
     <ol type="1">
       <li>
         Firstly, for more information you can go to
@@ -389,12 +389,13 @@
     <p>"node" is necessary for some plugins in Neovim.</p>
     <pre><code id="code-block2">brew install node</code></pre>
     <button onclick="copyCode2()">Copy</button>
-    <pre><code id="code-block3">install.packages(&quot;languageserver&quot;)</code></pre>
+    <p>
+      We probability need to use nerd font in order to make some packages works
+      later!
+    </p>
+    <pre><code id="code-block3">brew tap homebrew/cask-fonts</code></pre>
     <button onclick="copyCode3()">Copy</button>
-    <ol start="3" type="1">
-      <li>Install radian (requires R and Python3)</li>
-    </ol>
-    <pre><code id="code-block4">pip3 install -U radian</code></pre>
+    <pre><code id="code-block4">brew install font-hack-nerd-font</code></pre>
     <button onclick="copyCode4()">Copy</button>
     <p>(You probably need to add a new path)</p>
     <h1 id="some-commands">Some commands</h1>
