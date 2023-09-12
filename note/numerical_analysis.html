@@ -114,5 +114,21 @@
         </li>
       </ul>
     </section>
+
+    <br />
+
+    <section id="pseudo-code">
+      <h2>Pseudo Code</h2>
+      <p>
+        Input \(a, b, f(x), \varepsilon_1, \varepsilon_2, \varepsilon_3, N\)\\
+        Output: \(\alpha\)\\ 1. \(f_a = f(a), f_b = f(b)\) \\ 2. for n = 1 to N
+        do \\ 3. \(\quad\) \(c = \frac{a + b}{2}\) \\ 4. \(\quad\) if \(b -
+        a\leq \varepsilon_1\) then \(\alpha = c\) and got to 8. \\ 5. \(\quad\)
+        if \(\left|\frac{b - a}{a}\right|\leq \varepsilon_2\) then \(\alpha =
+        c\) and got to 8. \\ 6. \(\quad\) if \(|f(c)|\leq \varepsilon_3\) 7.
+        \(\quad\) if \(f_a\cdot f_c \lt 0\) then \(b = c\) else \(f_b = f_c\) \\
+        8. \(\quad\) return \(\alpha\)
+      </p>
+    </section>
   </body>
 </html>
