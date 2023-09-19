@@ -192,6 +192,45 @@
           \(E_\lambda \) is at least 1 and at most \(k\). 
         </p>
       </section>
+    
+    <br>
+
+    <section>
+    <p>
+    \(\textbf{Theorem. }\)If \(\lambda\) is an eigenvalue of the matrix \(A\) which appears \(k\) times as a root of the 
+    characteristic polynomial, then the dimension of the eigenspace \(E_\lambda\) is at least 1 and at most \(k\).
+    </p>
+    <p>
+    The statement that the \(E_\lambda\) has dimension at least 1 is equivalent to the statement that the equation
+    \[
+    (A - \lambda I)x = 0
+    \]
+    For the other statement, \(E_\lambda\) has dimension at most \(k\) is the solution space that 
+    \[
+    (A - \lambda I)x = 0
+    \]
+    or \(E_\lambda\) is the null space of \(A - \lambda I\).
+    If \(\lambda\) appears \(k\) times as a root of the characteristic polynomial,
+    then let \(B\) be the reduced row-echelon form of \(\lambda I - A\). Then \(B\) has at most \(k\) zero rows,
+    because otherwise, the matrix \(N\) would have \(0\) as an eigen value more than \(k\) times (Since \(B\) is upper triangluar).
+
+    Then the dimension of the null space of \(B\) is at least \(n - k\). Since the null space of \(B\) is the same as the null space of \(A - \lambda I\
+    then the dimension of the null space of \(A - \lambda I\) is at least \(n - k\).
+    </p>
+    </section>
+
+    <br>
+
+    <section>
+    <p>
+    A linear operator \(T: V\to V\) on a finite dimensional vector space \(V\) is diagonalizable if there exists a basis 
+    \(\beta\) on \(V\) such that 
+    \[
+    [T]_\beta^\beta
+    \]
+    is a diagonal matrix.
+  
+
     <section id = "References">
     <h2>References</h2>
     <ul>
