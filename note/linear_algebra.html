@@ -298,8 +298,72 @@
     <section>
     <h2>Independence of eigenvector</h2>
     <p>
-    \(\textbf{Theorem. }\)If 
+    \(\textbf{Theorem. }\)If \(v_1, v_2, \dots, v_n\) are eigenvectors of \(T\) conssited to distinct eigenvalues 
+    \(\lambda_1, \lambda_2, \dots, \lambda_n\), then \(v_1, v_2, \dots, v_n\) are linearly independent.
+    </p>
+    <p>
+    We induct on \(n\). It is true that \(n = 1\). Suppose that \(n-1\geq 2\) case is true, and we have
+    \[
+    a_1v_1 + a_2v_2 + \dots + a_nv_n = 0
+    \]
+    We apply \(T\) to both sides of the equation, and we get
+    \[
+    a_1\lambda_1v_1 + a_2\lambda_2v_2 + \dots + a_n\lambda_nv_n = 0
+    \]
+    \[
+    a_1\lambda_1v_1 + a_2\lambda_1v_2 + \dots + a_{n-1}\lambda_{1}v_{n-1} = 0
+    \]
+    based on the first equation.
+    Then we get
+    \[
+
+
+    </p>
     </section>
+
+    <br>
+
+    <section>
+    <h2>Split Completely over \(\mathbb{F}\)</h2>
+    <p>
+    \(\textbf{Definition. }\)A polynomial \(f(x)\) splits completely over a field \(\mathbb{F}\) if
+    \[
+    f(x) = a(x - \lambda_1)(x - \lambda_2)\dots(x - \lambda_n)
+    \]
+    where \(a, \lambda_1, \lambda_2, \dots, \lambda_n \in \mathbb{F}\).
+    </p>
+    </section>
+
+    <br>
+
+    <section>
+    <h2>Diagonlization criterion</h2>
+    <p>
+    \(\textbf{Theorem. }\) A matrix \(A\in M_n(\mathbb{F})\) is 
+    diagonalizable if and only if \(A\) has all it s eigenvalues in \(\mathbb{F}\) and
+    for each eigenvalue \(\lambda\) of \(A\), the dimension of the eigenspace \(E_\lambda\) equals the multiplicity of \(\lambda\) as a root of the characteristic polynomial of \(A\).
+    </p>
+    <p>
+    \(\textbf{Proof. }\)Suppose that \(A\) is diagonalizable.
+    Then the diagonal entries of its diagnolized matrix are eigenvalues of \(A\), 
+    so they all lies in \(\mathbb{F}\).
+    By our pervous theorme on diagonalizability, 
+    \(V\) has a basis \(\beta\) of eigenvectors of \(A\). 
+    For any eigenvalues \(\lambda_i\) of \(A\),
+    let \(b_i\) be the number of elements of \(\beta\) 
+    having eigenvalues \(\lambda_i\). 
+    and let \(d_i\) be the multiplicity of \(\lambda_i\) as a root of the characteristic polynomial of \(A\).
+    Then: \(\sum_i b_i = n\) since \(\beta\) is a basis for \(V\), and 
+    \(\sum_{i}d_i = n\) since the characteristic polynomial of \(A\) has degree \(n\).
+    Since the characteristic polynomial of \(A\) is the product of the linear factors \((x - \lambda_i)^{d_i}\),
+    Thus, \(b_i \leq d_i\) for each \(i\). Since \(\sum_i b_i = \sum_i d_i\), we have \(b_i = d_i\) for each \(i\).\\
+    For the other direction, suppose that all eigenvalues of \(A\) lie in \(\mathbb{F}\) and for each eigenvalue \(\lambda\) of \(A\), 
+    the dimension of the eigenspace \(E_\lambda\) equal the multiplicity of \(\lambda\) as a root of the characteristic polynomial of \(A\).
+    Then let \(\beta\) be the union of bases for the eigenspaces of \(A\). 
+    By hypothesis, \(\beta\) has \(n\) elements.
+    So to cluce it is a basiss for the \(n\)-dimensional space \(V\), 
+    we need only show it is linearly indepenedent.
+  </p>
 
 
     <section id = "References">
