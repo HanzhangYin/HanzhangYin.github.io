@@ -229,7 +229,78 @@
     [T]_\beta^\beta
     \]
     is a diagonal matrix.
-  
+    </p>
+    </section>
+
+    <br>
+
+    <section>
+    <p>
+    \(\textbf{Proposition. }\)If \(A\) and \(B\) are similar, 
+    then they have the same characteristic polynomial, determinant, trace, and eigenvalues.
+    </p>
+    </section>
+
+
+    <br>
+
+    <section>
+    <p>
+    \(\textbf{Proposition. }\)If \(B = Q^{-1}AQ\), then \(v\) is an eigenvector of \(B\) 
+    with eigenvalue \(\lambda\) if and only if \(Qv\) is an eigenvector of \(A\) with eigenvalue \(\lambda\).
+    </p>
+    <p>
+    \(\textbf{Proof.}\) SInce \(Q\) is invertible, \(v=0\) if and only if \(Qv = 0\).
+    We can assume that \(v\neq 0\). Suppos \(v\) is an eigenvector of \(B\) with eigenvalue \(\lambda\). Then
+    \[
+    A(Qv) = QBQ^{-1}(Qv) = QBv = Q\lambda v = \lambda Qv
+    \]
+    So \(Qv\) is an eigenvector of \(A\) with eigenvalue \(\lambda\). 
+    Conversely, suppose \(Qv\) is an eigenvector of \(A\) with eigenvalue \(\lambda\). Then 
+    \[
+    Bv = Q^{-1}AQv = Q^{-1}\lambda(Qv) = \lambda Q^{-1}(Qv) = \lambda v.
+    \]
+    So \(v\) is an eigenvector of \(B\) with eigenvalue \(\lambda\).
+    Then \(v\) is an eigenvector of \(B\) with eigenvalue \(\lambda\) if and only if \(Qv\) is an eigenvector of \(A\) with eigenvalue \(\lambda\).
+    \(\blacksquare\)
+    </p>
+    </section>
+
+    <br>
+
+    <section>
+    <p>
+    \(\textbf{Theorem. }\)A linear operator \(T: V\to V\) on a finite dimensional vector space \(V\) is diagonalizable if and only if
+    there exists a basis \(\beta\) of \(v\) consisting of eigenvector of \(T\).
+    </p>
+    <p>
+    \(\textbf{Proof. }\)Suppose that \(V\) has a basis of eigenvectors 
+    \(\beta = \{v_1, v_2, \dots, v_n\}\) corresponding eigenvalues \(\lambda_1, \lambda_2, \dots, \lambda_n\).
+    Then by definition, \(T(v_i) = \lambda_i v_i\) for each \(i\). 
+    So the matrix of \(T\) with respect to \(\beta\) is the diagonal matrix
+    \[
+    [T]_\beta^\beta =
+    \begin{bmatrix}
+      \lambda_1 & 0 & \dots & 0\\
+      0 & \lambda_2 & \dots & 0\\
+      \vdots & \vdots & \ddots & \vdots\\
+      0 & 0 & \dots & \lambda_n
+    \end{bmatrix}
+    \]
+    So \(T\) is diagonalizable.
+    Conversely, suppose that \(T\) is diagonalizable. Then there exists a basis \(\beta\) of \(V\) such that 
+    \([T]_beta^beta\) is a diagonal matrix, whose \(\lambda_1, \lambda_2, \dots, \lambda_n\) be the diagonal entries.
+    </p>
+    </section>
+    
+    <br>
+
+    <section>
+    <h2>Independence of eigenvector</h2>
+    <p>
+    \(\textbf{Theorem. }\)If 
+    </section>
+
 
     <section id = "References">
     <h2>References</h2>
@@ -241,4 +312,6 @@
     </ul>
   </section>
   </body>
+
+
 </html>
