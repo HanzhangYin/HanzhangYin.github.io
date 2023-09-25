@@ -155,7 +155,20 @@
         \(\textbf{Theorem. }\)Given \(n\) subsets \(A_1, \dots, A_n\) of a
         finite set \(A\). Then \[ \left|\bigcup_{i=1}^n A_i\right| =
         \sum_{j=1}^n (-1)^{j-1} \sum_{1\leq i_1 < \cdots < i_j \leq n}
-        \left|A_{i_1}\cap\cdots\cap A_{i_j}\right|. \]
+        \left|A_{i_1}\cap\cdots\cap A_{i_j}\right| = \sum_{J\subseteq[n]}
+        (-1)^{|J|-1} \left|\bigcap_{j\in J} A_j\right|. \]
+      </p>
+      <p>
+        \(\textbf{Example. }\)How many numbers \(1\) to \(100\) are divisible by
+        \(2\), \(3\), or \(5\)? We let \[ A_2 = \text{the set of numbers
+        divisible by } 2, \] \[ A_3 = \text{the set of numbers divisible by } 3,
+        \] \[ A_5 = \text{the set of numbers divisible by } 5. \] Then \(|A_i| =
+        \lfloor 100/2\rfloor\). Thus, we can get \[ \begin{aligned} |A_2\cup
+        A_3\cup A_5| &= |A_2| + |A_3| + |A_5| - |A_2\cap A_3| - |A_2\cap A_5| -
+        |A_3\cap A_5| + |A_2\cap A_3\cap A_5| \\ &= \lfloor 100/2\rfloor +
+        \lfloor 100/3\rfloor + \lfloor 100/5\rfloor - \lfloor 100/6\rfloor -
+        \lfloor 100/10\rfloor - \lfloor 100/15\rfloor + \lfloor 100/30\rfloor \\
+        &= 50 + 33 + 20 - 16 - 10 - 6 + 3 \\ &= 74. \end{aligned} \]
       </p>
     </section>
 
