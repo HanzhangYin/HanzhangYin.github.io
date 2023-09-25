@@ -143,6 +143,22 @@
       ;ermutations in which \(n\) is in a \(k\)-cycle.
     </section>
 
+    <br />
+
+    <section>
+      <h2>Inclusion and Exclusion</h2>
+      <p>
+        Given two finite sets \(A\) and \(B\), we define the union of \(A\) and
+        \(B\) as \[ |A\cup B| = |A| + |B| - |A\cap B|. \]
+      </p>
+      <p>
+        \(\textbf{Theorem. }\)Given \(n\) subsets \(A_1, \dots, A_n\) of a
+        finite set \(A\). Then \[ \left|\bigcup_{i=1}^n A_i\right| =
+        \sum_{j=1}^n (-1)^{j-1} \sum_{1\leq i_1 < \cdots < i_j \leq n}
+        \left|A_{i_1}\cap\cdots\cap A_{i_j}\right|. \]
+      </p>
+    </section>
+
     <section id="References">
       <h2>References</h2>
       <ul>
