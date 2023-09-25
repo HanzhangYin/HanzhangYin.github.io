@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script><!--It is a link for MathJax-->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
-    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
-    <script src="highlight.js"></script><!--It is a link for highlight.js-->
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+    <!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--link for the font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css" />
+    <!--It is a link for css structure-->
+    <script src="highlight.js"></script>
+    <!--It is a link for highlight.js-->
     <title>Combinatorics</title>
   </head>
   <body>
     <div class="top-bar"></div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="icon-burger">
       <div class="line"></div>
       <div class="line"></div>
@@ -28,93 +40,117 @@
       <a href="#Erdős-Szekeres_theorem">Erdős-Szekeres theorem</a>
       <a href="#References">References</a>
     </nav>
-    <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+    <script src="click.js"></script>
+    <!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
     <h1>Combinatorics</h1>
 
-    <section id = "Pigeon-hole_Principle">
-    <h2>Pigeon-hole Principle</h2>
-    <p>
-      \(\textbf{Theorem 1.1. (Pigeon-hole Principle).}\) Let \(A\) and \(B\) be two finite sets and \(f\) be a function from \(A\) to \(B\).
-      If \(|A| > |B|\), then \(f\) is not one-to-one. (i.e. there exists \(a_1, a_2 \in A\) such that \(a_1 \neq a_2\) and \(f(a_1) = f(a_2)\)).
-    </p>
-    <p>
-      \(\textbf{Proof. }\)We will prove it with mathematical contrapositive. 
-      We need to show that if \(f\) is one-to-one, then \(|A| \leq |B|\).
-      Suppose that \(f\) is one-to-one. Let \(A = \{a_1, a_2, \dots, a_n\}\), which implies that \(|A| = n\).
-      Then \(f(A) = \{f(a_1), f(a_2), \dots, f(a_n)\}\) and \(|f(A)| = n\). Therefore, \(A\subset B\).   \[ \tag*{$\square$} \]
-    </p>
-    <p>
-      \(\textbf{Theorem 1.2. (Pigeon-hole Principle, general version).}\) Let \(A\) and \(B\) be two finite sets with \(|A| = n\) and \(|B| = m\).
-      Let \(r\) be a positive integer and let \(f\) be a function from \(A\) to \(B\). If \(n > rm\), then there exists \(b \in B\) such that
-      \[
-      |f^{-1}(b)| \geq r+1,
-      \]
-      where \(f^{-1}(b) = \{a \in A : f(a) = b\}\).
-    </p>
-    <p>
-      \(\textbf{Proof. }\)We will prove it with mathematical contrapositive. 
-      We need to show that if \(|f^{-1}(b)| \leq r\) for all \(b \in B\), then \(n \leq rm\).
-      Suppose that \(|f^{-1}(b)| \leq r\) for all \(b \in B\). We define
-      \[
-      S = \bigcup_{b \in B} f^{-1}(b).
-      \]
-      Therefore, 
-      \[
-      n = |A|\leq |S| = \sum_{b \in B} |f^{-1}(b)| \leq r\cdot m.
-      \]
-      Hence, we prove the theorem.  \[ \tag*{$\square$} \]
-    </p>
+    <section id="Pigeon-hole_Principle">
+      <h2>Pigeon-hole Principle</h2>
+      <p>
+        \(\textbf{Theorem 1.1. (Pigeon-hole Principle).}\) Let \(A\) and \(B\)
+        be two finite sets and \(f\) be a function from \(A\) to \(B\). If \(|A|
+        > |B|\), then \(f\) is not one-to-one. (i.e. there exists \(a_1, a_2 \in
+        A\) such that \(a_1 \neq a_2\) and \(f(a_1) = f(a_2)\)).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We will prove it with mathematical contrapositive.
+        We need to show that if \(f\) is one-to-one, then \(|A| \leq |B|\).
+        Suppose that \(f\) is one-to-one. Let \(A = \{a_1, a_2, \dots, a_n\}\),
+        which implies that \(|A| = n\). Then \(f(A) = \{f(a_1), f(a_2), \dots,
+        f(a_n)\}\) and \(|f(A)| = n\). Therefore, \(A\subset B\). \[
+        \tag*{$\square$} \]
+      </p>
+      <p>
+        \(\textbf{Theorem 1.2. (Pigeon-hole Principle, general version).}\) Let
+        \(A\) and \(B\) be two finite sets with \(|A| = n\) and \(|B| = m\). Let
+        \(r\) be a positive integer and let \(f\) be a function from \(A\) to
+        \(B\). If \(n > rm\), then there exists \(b \in B\) such that \[
+        |f^{-1}(b)| \geq r+1, \] where \(f^{-1}(b) = \{a \in A : f(a) = b\}\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We will prove it with mathematical contrapositive.
+        We need to show that if \(|f^{-1}(b)| \leq r\) for all \(b \in B\), then
+        \(n \leq rm\). Suppose that \(|f^{-1}(b)| \leq r\) for all \(b \in B\).
+        We define \[ S = \bigcup_{b \in B} f^{-1}(b). \] Therefore, \[ n =
+        |A|\leq |S| = \sum_{b \in B} |f^{-1}(b)| \leq r\cdot m. \] Hence, we
+        prove the theorem. \[ \tag*{$\square$} \]
+      </p>
     </section>
 
-    <br>
+    <br />
 
-    <section id ="Erdős-Szekeres_theorem">
+    <section id="Erdős-Szekeres_theorem">
       <h2>Erdős-Szekeres theorem</h2>
       <p>
-        \(\textbf{Theorem. }\)Given \(r, s\in\mathbb{N}\), any sequence of distinct real numbers with length at least \((r - 1)(s - 1) + 1\) contains a monotonically increasing subsequence of length \(r\) or a monotonically decreasing subsequence of length \(s\).
+        \(\textbf{Theorem. }\)Given \(r, s\in\mathbb{N}\), any sequence of
+        distinct real numbers with length at least \((r - 1)(s - 1) + 1\)
+        contains a monotonically increasing subsequence of length \(r\) or a
+        monotonically decreasing subsequence of length \(s\).
       </p>
       <p>
-        \(\textbf{Proof. }\)
-        Given a sequence of length \( (r - 1)(s - 1) + 1 \), label each number \( n_i \) in the sequence with the pair \( (a_i, b_i) \), where \( a_i \) is the length of the longest monotonically increasing subsequence ending with \( n_i \) and \( b_i \) is the length of the longest monotonically decreasing subsequence ending with \( n_i \). 
-        (e.g. Let \(L = \{3, 2, 1, 5, 6, 7, 5, 11\}\). We can see that \(7\in L\) which has the longest monotonically increasing subsequence ending with \(7\): \(1, 5, 6, 7\), \(2, 5, 6, 7\), \(3, 4, 6, 7\). 
-        We can also see the longest monotonically decreasing subsequence ending with \(7\) is just \(7\) since every number before \(7\) on the sequence is less than \(7\). Thus, \(7\) has the pair \((4, 1)\).)
-        Each two numbers in the sequence are labeled with a different pair: if \( i \lt j \) and \( n_i \leq n_j \) then \( a_i \lt a_j \), and on the other hand if \( n_i \geq n_j \) then \( b_i \lt b_j \).
-        But there are only \( (r - 1)(s - 1) \) possible labels if \( a_i \) is at most \( r - 1 \) and \( b_i \) is at most \( s - 1 \), so by the pigeonhole principle there must exist a value of \( i \) for which \( a_i \) or \( b_i \) is outside this range. 
-        If \( a_i \) is out of range then \( n_i \) is part of an increasing sequence of length at least \( r \), and if \( b_i \) is out of range then \( n_i \) is part of a decreasing sequence of length at least \( s \).
+        \(\textbf{Proof. }\) Given a sequence of length \( (r - 1)(s - 1) + 1
+        \), label each number \( n_i \) in the sequence with the pair \( (a_i,
+        b_i) \), where \( a_i \) is the length of the longest monotonically
+        increasing subsequence ending with \( n_i \) and \( b_i \) is the length
+        of the longest monotonically decreasing subsequence ending with \( n_i
+        \). (e.g. Let \(L = \{3, 2, 1, 5, 6, 7, 5, 11\}\). We can see that
+        \(7\in L\) which has the longest monotonically increasing subsequence
+        ending with \(7\): \(1, 5, 6, 7\), \(2, 5, 6, 7\), \(3, 4, 6, 7\). We
+        can also see the longest monotonically decreasing subsequence ending
+        with \(7\) is just \(7\) since every number before \(7\) on the sequence
+        is less than \(7\). Thus, \(7\) has the pair \((4, 1)\).) Each two
+        numbers in the sequence are labeled with a different pair: if \( i \lt j
+        \) and \( n_i \leq n_j \) then \( a_i \lt a_j \), and on the other hand
+        if \( n_i \geq n_j \) then \( b_i \lt b_j \). But there are only \( (r -
+        1)(s - 1) \) possible labels if \( a_i \) is at most \( r - 1 \) and \(
+        b_i \) is at most \( s - 1 \), so by the pigeonhole principle there must
+        exist a value of \( i \) for which \( a_i \) or \( b_i \) is outside
+        this range. If \( a_i \) is out of range then \( n_i \) is part of an
+        increasing sequence of length at least \( r \), and if \( b_i \) is out
+        of range then \( n_i \) is part of a decreasing sequence of length at
+        least \( s \).
       </p>
     </section>
 
-    <br>
+    <br />
 
-    <section id = "cardinality_of_power_set">
+    <section id="cardinality_of_power_set">
       <h2>Cardinality of power set of finite sets</h2>
       <p>
-        \(\textbf{Theorem. }\)Let \(A\) be a finite set with \(|A| = n\). Then \(|P(A)| = 2^n\).
+        \(\textbf{Theorem. }\)Let \(A\) be a finite set with \(|A| = n\). Then
+        \(|P(A)| = 2^n\).
       </p>
       <p>
-        \(\textbf{Theorem. }\)Suppose that \(A = \{a_1, \dots, a_n\}) where \(n\in\mathbb{N}\). 
-         For each subset of \(A\), \(S\), we can define a sequence of \(0\) and \(1\) as follows:
-          \[
-          \begin{cases}
-            1 & \text{if } a_i \in S \\
-            0 & \text{if } a_i \notin S
-          \end{cases}
-          \]
-          Then, the sequence is unique for each subset of \(A\). 
+        \(\textbf{Theorem. }\)Suppose that \(A = \{a_1, \dots, a_n\}) where
+        \(n\in\mathbb{N}\). For each subset of \(A\), \(S\), we can define a
+        sequence of \(0\) and \(1\) as follows: \[ \begin{cases} 1 & \text{if }
+        a_i \in S \\ 0 & \text{if } a_i \notin S \end{cases} \] Then, the
+        sequence is unique for each subset of \(A\).
       </p>
     </section>
 
-    <br>
+    <br />
 
-      
-    <section id = "References">
-    <h2>References</h2>
-    <ul>
-      <li>
-        M. Bóna, "A Walk Through Combinatorics", World Scientific, 
-        Fourth Edition, 2017.
-      </li>
-    </ul>
-  </section>
+    <section>
+      AS in the last theorem, can convert from \(i\) to \(n\) by conjugating by
+      \((i, n)\). Use the map that takes one-line permutation to a permutation
+      in canonical cycle form. IN a permutation, \(\pi = g(p)\), \(n\) is in a
+      cycle of length \(k\) if and only if in the one-line permutation \(p\),
+      \(n\) is fllowed by \(k-1\) elements. SO the number of permutations
+      (\g(p)\) with \(n\) in a cycle of length \(k\) is the number of
+      \(p_1p_2\cdots p_n\) where \(p_{n-k+1} = n\). There are \((n-1)!\) ways of
+      ordering the rest of the elements of \([n]\). SO there are \((n-1)!\)
+      ;ermutations in which \(n\) is in a \(k\)-cycle.
+    </section>
+
+    <section id="References">
+      <h2>References</h2>
+      <ul>
+        <li>
+          M. Bóna, "A Walk Through Combinatorics", World Scientific, Fourth
+          Edition, 2017.
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
