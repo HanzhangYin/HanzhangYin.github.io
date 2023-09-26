@@ -170,6 +170,21 @@
         \lfloor 100/10\rfloor - \lfloor 100/15\rfloor + \lfloor 100/30\rfloor \\
         &= 50 + 33 + 20 - 16 - 10 - 6 + 3 \\ &= 74. \end{aligned} \]
       </p>
+      <p>
+        \(\textbf{Proof. }\)We will prove it with mathematical induction. We
+        assume that \(n = 2\). Then \[ \begin{aligned} \left|\bigcup_{i=1}^2
+        A_i\right| &= |A_1| + |A_2| - |A_1\cap A_2| \\\end{aligned} \]. Assume
+        that \(n\geq 2\) and the formula holds for \(n\). Shwo it works for
+        \(n+1\). \[ \begin{aligned} \left|\bigcup_{i=1}^{n+1} A_i\right| &=
+        \left|\left(\bigcup_{i=1}^n A_i\right)\cup A_{n+1}\right| \\ &=
+        \left|\bigcup_{i=1}^n A_i\right| + |A_{n+1}| -
+        \left|\left(\bigcup_{i=1}^n A_i\right)\cap A_{n+1}\right| \\ &=
+        \left|\bigcup_{i=1}^n A_i\right| + |A_{n+1}| -
+        \left|\left(\bigcup_{i=1}^n A_i\cap A_{n+1}\right\right)| \\ &=
+        \sum_{J\subseteq[n]} (-1)^{|J|-1} \left|\bigcap_{j\in J} A_j\right| +
+        |A_{n+1}| - \sum_{J\subseteq[n]} (-1)^{|J|-1} \left|\bigcap_{j\in J}
+        A_j\cap A_{n+1}\right| \\ &=
+      </p>
     </section>
 
     <section id="References">
