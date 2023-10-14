@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ededed;
+  }
+
+.flashcard {
+    width: 1000px;
+    height: 800px;
+    perspective: 2000px;
+  }
+  
+  .card-side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .front {
+    background-color: #fff;
+  }
+  
+  .back {
+    background-color: #f1f1f1;
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .front {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .back {
+    transform: rotateY(0deg);
+  }
+  
+  .flashcard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
