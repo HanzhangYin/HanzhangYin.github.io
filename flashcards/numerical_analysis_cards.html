@@ -1,33 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Math Flashcards</title>
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-  <link rel="stylesheet" href="flashcards.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Math Flashcards</title>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="flashcards.css" />
+  </head>
+  <body>
     <div class="flashcard-container">
       <div class="flashcard" onclick="flipCard(this)">
         <div class="card-side front">
           What is \(\text{ Contractive Mapping Theorem}\)?
         </div>
         <div class="card-side back">
-          
+          \[ \frac{f(b)-f(a)}{b-a}=f'(c),\text{ where }c\in(a,b) \]
         </div>
       </div>
       <div class="flashcard" onclick="flipCard(this)">
         <div class="card-side front">
           What is \(\text{ Mean Value Theorem}\)?
         </div>
-        <div class="card-side back">
-          
-        </div>
+        <div class="card-side back"></div>
       </div>
       <!-- Add more cards here -->
     </div>
-    <script src="flashcards.js"></script>  
-</body>
+    <script src="flashcards.js"></script>
+  </body>
 </html>
