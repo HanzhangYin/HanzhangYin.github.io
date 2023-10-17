@@ -11,6 +11,7 @@ body {
 
 .flashcard {
   perspective: 1000px;
+  overflow: hidden;  /* Hide overflowing content */
 }
 
 .card-side {
@@ -19,31 +20,34 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: calc(16px + 1vw);  /* Dynamic text size */
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 100%;
   height: 100%;
+  overflow-y: auto;  /* Enable vertical scrolling */
+  padding: 20px;     /* Add some padding */
 }
 
-/* define styles for smaller screens */
-@media screen and (max-width: 600px) {
-  body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #ededed;
+/* Bigger screens */
+@media screen and (min-width: 600px) {
+  .flashcard {
+    width: 1000px;
+    height: 800px;
   }
 
-
+/* Smaller screens (phone) */
+@media screen and (max-width: 599px) {
+  .flashcard {
+    width: 90%;
+    height: 70vh;
+  }
 
   .card-side {
-      font-size: 18px;  /* You may want to adjust this */
+    font-size: calc(14px + 1.5vw);  /* Adjust text size */
   }
 }
+
 
   
   .front {
