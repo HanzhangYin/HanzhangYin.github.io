@@ -27,6 +27,13 @@ body {
   height: 100%;
   overflow-y: auto;  /* Enable vertical scrolling */
   padding: 20px;     /* Add some padding */
+  text-align: left; /* Align text to the left */
+  word-wrap: break-word; /* Allow long words to be broken and wrapped onto the next line */
+  padding: 20px;  /* Increase padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 }
 
 /* Bigger screens */
