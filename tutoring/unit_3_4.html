@@ -201,20 +201,6 @@
     </p>
     <br>
     <p>
-      \(\textbf{Note. }\) We can only add rational expression with the same denominator, 
-      and that is why we need to find the common denominator of the rational expression when the denominators are different.
-      In the form of rational expression, 
-      \[
-        \frac{a}{b} + \frac{c}{d}.
-      \]
-      The common denominator of the rational expression is \(bd\) (It is probably not the least common denominator (LCD) of the rational expression.)
-      So we have 
-      \[
-        \frac{a}{b} + \frac{c}{d} = \frac{ad}{bd} + \frac{bc}{bd} = \frac{ad + bc}{bd}.
-      \]
-      The least common denominator (LCD) shows up when we are going to simplify the rational expression \(\frac{ad + bc}{bd}\)(which is the last step of the problem).
-    </p>
-    <p>
       \(\textbf{Solution. }\) We can first factor the numerator and denominator of the rational expression.
       \[
         \begin{align}
@@ -266,6 +252,51 @@
     </section>
 
     <br>
+
+    <section id = "myth">
+      <h2> Myth about Least Common Denominator (LCD)</h2>
+      <p>
+        \(\textbf{Note. }\) We can only add rational expression with the same denominator, 
+        and that is why we need to find the common denominator of the rational expression when the denominators are different.
+        In the form of rational expression, 
+        \[
+          \frac{a}{b} + \frac{c}{d}.
+        \]
+        The common denominator of the rational expression is \(bd\) (It is probably not the least common denominator (LCD) of the rational expression.)
+        So we have 
+        \[
+          \frac{a}{b} + \frac{c}{d} = \frac{ad}{bd} + \frac{bc}{bd} = \frac{ad + bc}{bd}.
+        \]
+        The least common denominator (LCD) shows up when we are going to simplify the rational expression \(\frac{ad + bc}{bd}\)(which is the last step of the problem).
+        In general, using common denominator is good enough to do addition and subtraction. The problem is 
+        the rational expression after addition is not the most simplified version if we only use common denominator instead of the least common denominator, but we can achieve that by simplify it. 
+      </p>
+      <br>
+      <p>
+        \(\textbf{Example.}\)Simplify the following rational expression addition completely:
+        \[
+          \frac{3}{2x-2} + \frac{5}{2x + 2}
+        \]
+      </p>
+      According to the formula:
+      \[
+        \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd},
+      \]
+      we can get 
+      \[
+      \frac{3}{2x-2} + \frac{5}{2x + 2} = \frac{3(2x+2) + 5(2x-2)}{(2x-2)(2x+2)},
+      \]
+      where \(bd = (2x - 2)(2x + 2)\) is the common denominator and it is not a least common denominator. 
+      Now we want to simplify it and the first step is to factor the denominator and numerator 
+      \[
+        \begin{align}
+        \frac{3(2x+2) + 5(2x-2)}{(2x-2)(2x+2)} &= \frac{6x + 6 + 10x - 10}{2(x-1)2(x+1)}\\
+        &= \frac{16x - 4}{2\cdot 2(x - 1)(x + 1)}  \\
+        &= \frac{2(8x - 2)}{2\cdot 2(x - 1)(x + 1)}\\
+        &= \frac{8x - 2}{2(x - 1)(x + 1)}
+        \end{align}
+      \]
+    </section>
 
     <section id = "solve">
     <h2>13. Solve Rational Equation</h2>
