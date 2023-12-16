@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="tutoring_style.css"><!--It is a link for css structure-->
+    <title>Example of Unit 3/4 Exam</title>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="#expand">Expand the Product</a>
+      <a href="#factor_general_form">Factoring</a>
+      <a href="#multiply">Multiply Rational Expression</a>
+      <a href="#divide">Divide Rational Expression</a>
+      <a href="#add">Add Rational Expression</a>
+      <a href="#subtract">Subtract Rational Expression</a>
+      <a href="#myth">Myth about Least Common Denominator (LCD)</a>
+      <a href="#solve">Solve Rational Equation</a>
+      <a href="#rate">Rate Problem</a>
+    </nav>
+    <script src="click.js"></script><!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+    <h1>Example of Unit 3/4 Exam (Except for Multiple-Choice)</h1>
+
+    <section id = "expand">
+    <h2>1. Expand the Product</h2>
+    <p>
+      \(\textbf{Example. }\)
+      \[
+        (2x + y)(3x + 5)
+      \]
+    </p>
+    <p>
+      \(\textbf{Solution. }\) 
+      We can use distribution to expand the product.
+      \[
+        \begin{align}
+          (2x + y)(3x + 5) &= 2x(3x + 5) + y(3x + 5) \\
+          &= 2x(3x) + 2x(5) + y(3x) + y(5) \\
+          &= 6x^2 + 10x + 3xy + 5y
+        \end{align}
+      \]
+      Box method is another way to expand the product.
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "factor_general_form">
+    <h2>2. Factoring</h2>
+    <h3>Version 1</h3>
+    <p>
+      \(\textbf{Example. }\)
+      \[
+        3x^2 - 15x + 18
+      \]
+    </p>  
+    <br>
+    <p>
+      \(\textbf{Solution. }\) 
+      We can first identify the greatest common factor (GCF) of the polynomial, which is 3.
+      \[
+        \begin{align}
+          3x^2 - 15x + 18 &= 3(x^2 - 5x + 6)\\
+        \end{align}
+      \]
+      Then we are going to find \(r, s\) such that
+      \[
+        \begin{align}
+          r + s &= -5 \\
+          rs &= 6
+        \end{align}
+      \]
+      Hence, we have \(r = -3, s = -2\).
+      Therefore, we can factor the polynomial as
+      \[
+        \begin{align}
+          3x^2 - 15x + 18 &= 3(x - 3)(x - 2)
+        \end{align}
+      \]
+    </p>
+    <br>
+    <h3>Version 2</h3>
+    <p>
+      \(\textbf{Example. }\)
+      \[
+        2x^3 + 7x^2 + 3x
+      \]
+    </p>
+    <br>
+    <p>
+      \(\textbf{Solution. }\) Similarly, we can first identify the GCF of the polynomial, which is \(x\).
+      \[
+        \begin{align}
+          2x^3 + 7x^2 + 3x &= x(2x^2 + 7x + 3)
+        \end{align}
+      \]
+      For the quadratic polynomial \(2x^2 + 7x + 3\), we are going to use \(AC\) method to factor it.
+      We can first find \(r, s\) such that
+      \[
+        \begin{align}
+          r + s & =b = 7 \\
+          rs &= ac = 2\cdot 3 = 6
+        \end{align}
+      \]
+      Hence, we have \(r = 6, s = 1\).
+      Therefore, we can replace \(7x\) with \(6x + x\).
+      \[
+        \begin{align}
+          2x^2 + 7x + 3 &= 2x^2 + 6x + x + 3 \\
+          &= 2x(x + 3) + 1(x + 3) \\
+          &= (2x + 1)(x + 3)
+        \end{align}
+      \]
+      Therefore, we can factor the polynomial as
+      \[
+        \begin{align}
+          2x^3 + 7x^2 + 3x &= x(2x + 1)(x + 3)
+        \end{align}
+      \]
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "multiply">
+    <h2>3. Multiply Rational Expression</h2>
+    <p>
+      \(\textbf{Example. }\)
+      \[
+        \frac{x^2 - 2x + 1}{x^2 +2x + 1} \cdot \frac{5x + 5}{2x - 2}
+      \]
+    </p>
+    <p>
+      \(\textbf{Solution. }\) We can first factor the numerator and denominator of the rational expression.
+      \[
+        \begin{align}
+          \frac{x^2 - 2x + 1}{x^2 +2x + 1} \cdot \frac{5x + 5}{2x - 2} &= \frac{(x - 1)^2}{(x + 1)^2} \cdot \frac{5(x + 1)}{2(x - 1)} \\
+          &= \frac{(x - 1)^2}{(x + 1)^2}\frac{5(x + 1)}{2(x - 1)} \\
+          &= \frac{(x - 1)( x - 1 )}{(x + 1)(x + 1)}\frac{5(x + 1)}{2(x - 1)} \\
+          &= \frac{(x - 1)( x - 1 )5(x + 1)}{(x + 1)(x + 1)2(x - 1)} \\
+          &= \frac{5(x - 1)}{2(x + 1)} \\
+          &= \frac{5x - 5}{2x + 2}
+        \end{align}
+      \]
+    </p>
+
+    </section>  
+
+    <br>
+
+    <section id = "divide">
+    <h2>4. Divide Rational Expression</h2>
+    <p>
+      \(\textbf{Example. }\)
+      \[
+        \frac{x^2 - 9}{x^2 + 3x + 2} \div \frac{x + 3}{x + 1}
+      \]
+    </p>
+    <br>
+    <p>
+      \(\textbf{Solution. }\) We can first factor the numerator and denominator of the rational expression.
+      \[
+        \begin{align}
+          \frac{x^2 - 9}{x^2 + 3x + 2} \div \frac{x + 3}{x + 1} &= \frac{(x - 3)(x + 3)}{(x + 2)(x + 1)} \div \frac{x + 3}{x + 1} \\
+        \end{align}
+      \]
+      Then we can flip the second rational expression and multiply it with the first rational expression.
+      \[
+        \begin{align}
+          \frac{(x - 3)(x + 3)}{(x + 2)(x + 1)} \div \frac{x + 3}{x + 1} &= \frac{(x - 3)(x + 3)}{(x + 2)(x + 1)} \cdot \frac{x + 1}{x + 3} \\
+          &= \frac{(x - 3)(x + 3)(x + 1)}{(x + 2)(x + 1)(x + 3)} \\
+          &= \frac{x - 3}{x + 2}
+        \end{align}
+      \]
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "add">
+    <h2>5. Add Rational Expression</h2>
+    <p>
+      \(\textbf{Example. }\)
+      \[
+        \frac{4x}{x^2 - 9} + \frac{3}{x + 3}
+      \]
+    </p>
+    <br>
+    <p>
+      \(\textbf{Solution. }\) We can first factor the numerator and denominator of the rational expression.
+      \[
+        \begin{align}
+          \frac{4x}{x^2 - 9} + \frac{3}{x + 3} &= \frac{4x}{(x - 3)(x + 3)} + \frac{3}{x + 3} \\
+        \end{align}
+      \]
+      Then we can find the common denominator of the rational expression, which is \((x - 3)(x + 3)\).
+      (Here it is the least common denominator (LCD) of the rational expression.)
+      \[
+        \begin{align}
+          \frac{4x}{(x - 3)(x + 3)} + \frac{3}{x + 3} &= \frac{4x}{(x - 3)(x + 3)} + \frac{3(x - 3)}{(x + 3)(x - 3)} \\
+          &= \frac{4x}{(x - 3)(x + 3)} + \frac{3x - 9}{(x + 3)(x - 3)} \\
+          &= \frac{4x + 3x - 9}{(x + 3)(x - 3)} \\
+          &= \frac{7x - 9}{(x + 3)(x - 3)}
+        \end{align}
+      \]
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "subtract">
+    <h2>6. Subtract Rational Expression</h2>
+    <p>
+      \(\textbf{Example. }\)
+      \[
+        \frac{3}{x^2 - 4x + 3} - \frac{2}{x - 1}
+      \]
+    </p>
+    <br>
+    <p>
+      \(\textbf{Solution. }\) We need to first factor the numerator and denominator of the rational expression.
+      \[
+        \begin{align}
+          \frac{3}{x^2 - 4x + 3} - \frac{2}{x - 1} &= \frac{3}{(x - 3)(x - 1)} - \frac{2}{x - 1} \\
+        \end{align}
+      \]
+      Then we can find the common denominator of the rational expression, which is \((x - 3)(x - 1)\).
+      (Here it is the least common denominator (LCD) of the rational expression.)
+      \[
+        \begin{align}
+          \frac{3}{(x - 3)(x - 1)} - \frac{2}{x - 1} &= \frac{3}{(x - 3)(x - 1)} - \frac{2(x - 3)}{(x - 3)(x - 1)} \\
+          &= \frac{3}{(x - 3)(x - 1)} - \frac{2x - 6}{(x - 3)(x - 1)} \\
+          &= \frac{3 - 2x + 6}{(x - 3)(x - 1)} \\
+          &= \frac{-2x + 9}{(x - 3)(x - 1)}
+        \end{align}
+      \]
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "myth">
+      <h2>7. Myth about Least Common Denominator (LCD)</h2>
+      <p>
+        \(\textbf{Note. }\) The first thing is multiplication and division do not need least common denominator.
+        The second thing is we can only add rational expression with the same denominator, 
+        and that is why we need to find the common denominator of the rational expression when the denominators are different.
+        In the form of rational expression, 
+        \[
+          \frac{a}{b} + \frac{c}{d}.
+        \]
+        The common denominator of the rational expression is \(bd\) (It is probably not the least common denominator (LCD) of the rational expression.)
+        So we have 
+        \[
+          \frac{a}{b} + \frac{c}{d} = \frac{ad}{bd} + \frac{bc}{bd} = \frac{ad + bc}{bd}.
+        \]
+        The least common denominator (LCD) shows up when we are going to simplify the rational expression \(\frac{ad + bc}{bd}\)(which is the last step of the problem).
+        In general, using common denominator is good enough to do addition and subtraction. The problem is 
+        the rational expression after addition is not the most simplified version if we only use common denominator instead of the least common denominator, but we can achieve that by simplify it. 
+      </p>
+      <br>
+      <p>
+        \(\textbf{Example.}\)Simplify the following rational expression addition completely:
+        \[
+          \frac{3}{2x-2} + \frac{5}{2x + 2}
+        \]
+      </p>
+      According to the formula:
+      \[
+        \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd},
+      \]
+      we can get 
+      \[
+      \frac{3}{2x-2} + \frac{5}{2x + 2} = \frac{3(2x+2) + 5(2x-2)}{(2x-2)(2x+2)},
+      \]
+      where \(bd = (2x - 2)(2x + 2)\) is the common denominator and it is not a least common denominator. 
+      Now we want to simplify it and the first step is to factor the denominator and numerator 
+      \[
+        \begin{align}
+        \frac{3(2x+2) + 5(2x-2)}{(2x-2)(2x+2)} &= \frac{6x + 6 + 10x - 10}{2(x-1)2(x+1)}\\
+        &= \frac{16x - 4}{2\cdot 2(x - 1)(x + 1)}  \\
+        &= \frac{2(8x - 2)}{2\cdot 2(x - 1)(x + 1)}\\
+        &= \frac{8x - 2}{2(x - 1)(x + 1)}
+        \end{align}
+      \]
+      Now we can see that denominator \(2(x - 1)(x + 1)\) is the least common denominator (LCD) of the rational expression since 
+      it is the multiple of (2(x - 1)) and (2(x + 1)) and it is the smallest one. 
+      And we can keep simplifying the rational expression by dividing the numerator and denominator by \(2\).
+      \[
+        \begin{align}
+          \frac{8x - 2}{2(x - 1)(x + 1)} &= \frac{4x - 1}{(x - 1)(x + 1)}
+        \end{align}
+      \]
+      But through the whole process, we only use the common denominator, which is \(4(x - 1)(x + 1)\). 
+    </section>
+
+    <br>
+
+    <section id = "solve">
+    <h2>8. Solve Rational Equation</h2>
+    <p>
+      \(\textbf{Example. }\)
+      \[
+        \frac{1}{x - 1} + \frac{1}{x + 1} = \frac{2}{x^2 - 1}
+      \]
+    </p>
+    <br>
+    <p>
+      \(\textbf{Solution. }\)
+      <ul>
+        <li>
+      We need to find the common denominator of the rational expression, which is \((x - 1)(x + 1)\).
+      (Here it is the least common denominator (LCD) of the rational expression.)
+        </li>
+        <li>
+      Then we can multiply the common denominator to both sides of the equation.
+      \[
+        \begin{align}
+          \frac{1}{x - 1} + \frac{1}{x + 1} &= \frac{2}{x^2 - 1} \\
+          \left(\frac{1}{x - 1} + \frac{1}{x + 1}\right)\cdot (x-1)(x+1) &= \frac{2}{x^2 - 1}\cdot(x-1)(x+1) \\
+          \frac{1}{x - 1}(x - 1)(x + 1) + \frac{1}{x + 1}(x - 1)(x + 1) &= \frac{2}{x^2 - 1}(x - 1)(x + 1) \\
+          (x + 1) + (x - 1) &= 2 \\
+          2x &= 2 \\
+          x &= 1
+        \end{align}
+      \]
+      \(\textbf{Note. }\) Here we need to check if \(x = 1\) is the solution of the equation.
+        </li>
+        <li>
+        We need to find the Domain restriction of the equation, which is to set the LCD to be \(0\).
+        \[
+          \begin{align}
+            (x - 1)(x + 1) &= 0 \\
+            x - 1 &= 0 \text{ or } x + 1 = 0 \\
+            x &= 1 \text{ or } x = -1
+          \end{align}
+        \]
+       Hence, the Domain restriction of the equation is \(x \neq 1, -1\).
+        </li>
+        <li>
+          Now we need to find the Domain of the equation, which is the number line without the Domain restriction.
+          \[
+            \begin{align}
+              x \neq 1, -1 &\Rightarrow x \lt -1 \text{ or }-1\lt x \lt 1 \text{ or } x > 1 \\
+              &\Rightarrow (-\infty, -1) \cup(-1, 1)\cup (1, \infty)
+            \end{align}
+          \]
+        </li>
+        <li>
+          Now we want to check if our potential solution \(x = 1\) is in the Domain of the equation.
+          Since \(x = 1\) is not in the Domain of the equation, it is not the solution of the equation.
+          Therefore, the equation has \(\textbf{no solution}\).
+        </li>
+      </ul>
+    </p>
+  
+
+  <br>
+
+  <section id = "rate">
+  <h2>9. Rate Problem</h2>
+  <p>
+    \(\textbf{Example. }\)Anna Thompson can bake all the pies for a community event in 4 hours. 
+    Robert Green can do the same job in 6 hours. How long would it take them to bake all the pies if they work together?
+  </p>
+  <br>
+  <p>
+    \(\textbf{Solution. }\)
+    We only need to find the rate of Anna Thompson and Robert Green, and then we can use the formula
+    \[
+      \begin{align}
+        \text{rate = parts of job done in an hour} &= \frac{\text{amount = 1}}{\text{time }} = \frac{1}{\text{time}} \\
+      \end{align}
+    \]
+    to solve the problem.
+    Since Anna Thompson can bake all the pies for a community event in 4 hours, her rate is
+    \[
+      \begin{align}
+        \text{Anna Thompson's rate} &= \frac{1}{4} \\
+      \end{align}
+    \]
+    Similarly, Robert Green's rate is
+    \[
+      \begin{align}
+        \text{Robert Green's rate} &= \frac{1}{6} \\
+      \end{align}
+    \]
+    We need to find the time for Anna Thompson and Robert Green to bake all the pies if they work together, 
+    which is the time for them to bake all the pies together.
+    Assume that the time for them to bake all the pies together is \(t\), then we have the together rate
+    \[
+      \begin{align}
+        \text{together rate} &= \frac{1}{t} \\
+      \end{align}
+    \]
+    Now we can use the formula
+    \[
+      \begin{align}
+        \text{Anna Thompson's rate} + \text{Robert Green's rate} &= \text{together rate} \\
+      \end{align}
+    \]
+    to solve the problem (rest of it is just to solve the rational equation).
+    \[
+      \begin{align}
+        \frac{1}{4} + \frac{1}{6} &= \frac{1}{t} \\
+      \end{align}
+    \]
+    <ul>
+      <li>
+        We need to find the common denominator of the rational expression (does not have to be LCD), which is \(4\cdot 6\cdot t = 24t\).
+      </li>
+      <li>
+        Multiply the common denominator to both sides of the equation.
+        \[
+          \begin{align}
+            \frac{1}{4} + \frac{1}{6} &= \frac{1}{t} \\
+            \left(\frac{1}{4} + \frac{1}{6}\right)\cdot 24t &= \frac{1}{t}\cdot 24t \\
+            \frac{24t}{4} + \frac{24t}{6} &= \frac{24t}{t} \\
+            6t + 4t &= 24 \\
+            10t &= 24 \\
+            t &= \frac{24}{10} \\
+            t &= \frac{12}{5} \\
+            t &= 2.4
+          \end{align}
+        \]
+      </li>
+      <li>
+        We want to check if our potential solution \(t = \frac{12}{5}\) is in the Domain of the equation.
+        We need to find the Domain restriction of the equation, which is to set the CD to be \(0\).
+        \[
+          \begin{align}
+            24t &= 0 \\
+            t &= 0
+          \end{align}
+        \]
+      </li>
+      <li>
+        Now we need to find the Domain of the equation, which is the number line without the Domain restriction.
+        \[
+          \begin{align}
+            t \neq 0 &\Rightarrow t \lt 0 \text{ or } t \gt 0 \\
+            &\Rightarrow (-\infty, 0)\cup (0, \infty)
+          \end{align}
+        \]
+      </li>
+      <li>
+        Now we want to check if our potential solution \(t = \frac{12}{5}\) is in the Domain of the equation.
+        Since \(t = \frac{12}{5}\) is in the Domain of the equation, it is the solution of the equation.
+        Therefore, it will take them \(2.4\) hours to bake all the pies if they work together.
+      </li>
+    </ul>
+  </p>
+  </section>
+
+</body>
+
+</html>

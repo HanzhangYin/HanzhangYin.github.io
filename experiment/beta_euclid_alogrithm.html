@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="favicon_io/favicon.ico">
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png"> -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script><!--It is a link for MathJax-->
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+<link rel="stylesheet" type="text/css" href="beta_tutoring_style.css"><!--It is a link for css structure-->
+<script src="beta_highlight.js"></script><!--It is a link for highlight.js-->
+<title>Euclid's Algorithm and Unique Factorization of Integers</title>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="icon-burger">
+  <span class="visually-hidden">Navigation menu toggle</span>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
+  <nav class="navbar">
+    <a href="#Two_Principles_of_Integers">Two Principles of Integers</a>
+    <a href="#Greatest_Common_Divisor">Greatest Common Divisor</a>
+    <a href="#Theorem_1">Theorem 1</a>
+    <a href="#Theorem_2">Theorem 2</a>
+    <a href="#Lemma_1">Lemma 1</a>
+    <a href="#Lemma_2">Lemma 2</a>
+    <a href="#Theorem_3">Theorem 3: Euclid's Algorithm</a>
+    <a href="#Corollary_1">Corollary 1</a>
+    <a href="#Corollary_2">Corollary 2</a>
+    <a href="#Lemma_3">Lemma 3</a>
+    <a href="#Lemma_4">Lemma 4</a>
+    <a href="#Theorem_4">Theorem 4</a>
+    <a href="#Lemma_5">Lemma 5</a>
+    <a href="#Lemma_6">Lemma 6</a>
+    <a href="#Lemma_7">Lemma 7</a>
+    <a href="#Lemma_8">Lemma 8</a>
+    <a href="#Lemma_9">Lemma 9</a>
+    <a href="#Theorem_5">Theorem 5</a>
+    <a href="#References">References</a>
+  </nav>
+  <script src="beta_click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+  <!-- <script>
+    let pressTimer;
+    let tooltip = document.querySelector('.tooltip-text');
+
+    document.querySelector('.tooltip-link').addEventListener('touchstart', function(e) {
+        pressTimer = window.setTimeout(function() {
+            tooltip.style.visibility = 'visible';
+        }, 1000) // Show the tooltip-text after 1 second of long press
+    });
+
+    document.querySelector('.tooltip-link').addEventListener('touchend', function(e) {
+        clearTimeout(pressTimer); // If the finger is removed from the screen before the timer finishes, cancel the long press event.
+        tooltip.style.visibility = 'hidden'; // Hide the tooltip-text when the touch ends.
+    });
+  </script> -->
+  <header id="title-block-header">
+    <h1 class="title">Euclid's Algorithm and Unique Factorization of Integers</h1>
+  </header>
+
+<section id = "Two_Principles_of_Integers">
+  <h2>Two Principles of Integers</h2>
+  <p>
+    \(\textbf{Least-integer principle: }\)A nonempty set of integers that is bounded below contains a smallest element.
+  </p>
+  <p>
+    \(\textbf{Greatest-integer principle: }\)A nonempty set of integers that is bounded above contains a largest element.
+  </p>
+</section>
+
+<br>
+
+<section id = "Greatest_Common_Divisor">
+<h2>
+  Greatest Common Divisor
+</h2>
+<p>\(\textbf{Definition: }\) We say \(a\) divides \(b\) (written \(a\;|\; b\)) if and only if there is an integer \(k\) such that \(b = ka\).</p>
+<br>
+<p>\(\textbf{Definition: }\) We say \(d\) is the greatest common divisor of \(a\) and \(b\) (written \(d = (a, b)\text{ or }d=\gcd(a, b)\)) if and only if
+  <ul>
+    <li>\(d\;|\;a\) and \(d\;|\;b\),</li>
+    <li>if \(c\;|\;a\) and \(c\;|\;b\), then \(c\leq d\).</li>
+  </ul>
+  </p>
+</section>
+
+<br>
+
+<section id = "Theorem_1">
+<p>\(\textbf{Theorem 1: }\) If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</p>
+<p>\(\textbf{Proof. }\)Suppose that \((a, b) = d\) and \(c= (\frac{a}{d}, \frac{b}{d})\), and our goal is to show that \(c= 1\). 
+<p>\(\textit{Step 1. We show that \(c\geq 1\).}\)</p>
+<p>We can get \(c\geq 1\) since \(c\) is the greatest common divisor of two integers and every greatest common divisor is greater than or equal to 1.</p>
+<p>\(\textit{Step 2. We show that \(c\leq 1\).}\)</p>
+<p>We use the facts that \(c\;|\;\frac{a}{d}\) and \(c\;|\;\frac{b}{d}\). We then know that there are integers \(q\) and \(r\) such that \(cq = \frac{a}{d}\) and \(cr = \frac{b}{d}\). 
+That is,
+  $$
+  (cd)q= a\text{ and }(cd)r = b.
+  $$
+Then we can get that \(cd\;|\;a\) and \(cd\;|\;b\), which implies that \(cd\) is a common divisor of \(a\) and \(b\). 
+Since \(d\) is the greatest commond divisor of \(a\) and \(b\), we can get that \(cd\leq d\). Since \(d\) is positive, then we can get that \(c\leq 1\).
+Since we have \(c\leq 1\) and \(c\geq 1\), we can get \(c=1\).\[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Theorem_2">
+<p>\(\textbf{Theorem 2. The Division Algorithm.}\) Given positive integers \(a\) and \(b\), \(b\neq  0\), there exist unique integers \(q\) and \(r\), with \(0 \leq  r < b\) such that
+  $$
+  a= bq+r.
+  $$
+</p>
+<p>\(\textbf{Proof. }\)Consider the set of integers \(\{a,a-b,a-2b,a-3b, \dots \}\). Since \(a\geq 0\), it contains a subset of nonnegative integers which is nonempty and bounded below by 0.
+   According the least-integer principle, it contains a smallest element. Let be \(r = a - qb\) be the smallest integer which is larger than or equal to 0. </p>
+<p> \(\textit{Step 1. We show that \(r\) is less than \(b\)}\)</p>
+<p>We will prove it with mathematical contradcition. Suppose that \(r\geq b\). Then we can get
+$$
+r = a-qb\geq b,
+$$
+$$
+a-qb-b\geq 0,
+$$
+$$
+a-(q+1)b\geq 0.
+$$
+Since \(0\leq a-(q+1)b \lt r\), \(r\) is not the smallest non-negative integer in the set. This contradicts the fact that \(r\) is the smallest non-negative integer in the set.
+</p>
+<p>\(\textit{Step 2. We show that \(r\) and \(q\) are unique}\) (i.e. \((q, r)\) is an unique pair)</p>
+<p>Suppose there is another pair \((q', r')\) such that 
+  $$
+  a= bq +r = bq'+r',
+  $$
+with \(0\leq r \lt b\) and \(0\leq r'\lt b\). Hence, we can get that 
+$$
+b(q-q') = r'-r.
+$$
+Since \(q-q'\) is an integer and \(r'-r\) is an integer, we can get that \(b\) divides \(r'-r\) (i.e. \(b\;|\;(r'-r)\)). 
+Since  \(0\leq r \lt b\) and \(0\leq r'\lt b\), we can get
+$$
+-b\lt -r\leq 0.
+$$
+Thus, 
+$$
+-b\lt r'-r\lt b.
+$$
+Since \(r'-r\) is a multiple of \(b\), the only multiple of \(b\) between \(-b\) and \(b\) is \(0\). Hence, we can get that \(r'-r=0\), which implies that \(r'=r\).
+Since we know that \(b(q-q') = r'-r\), we can get \(b(q-q') = 0\). Since \(b\neq 0\), we can get that \(q-q'=0\), which implies that \(q=q'\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_1">
+<p>\(\textbf{Lemma 1 }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</p> 
+<p>\(\textbf{Proof. }\)Based on the definition, there are integers \(q_1, q_2, \dots, q_n\) such that \(a_1=dq_1,a_2=dq_2, \dots, a_n=dq_n\). Thus,
+$$
+\begin{align*}
+c_1a_1+c_2a_2+\dots+c_na_n &= c_1dq_1+c_2dq_2+\dots+c_ndq_n\\
+&= d(c_1q_1+c_2q_2+\dots+c_nq_n).
+\end{align*}
+$$
+Thus, we can get that \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_2">
+<p>
+  \(\textbf{Lemma 2. }\) If \(a=bq+r\), then \((a,b)=(b,r)\).
+</p>
+<p>\(\textbf{Proof. }\)Let \(d= (a, b)\). Since  \(a=bq+r\), we can write \(r = a+(-b)q\). 
+Since \(d\;|\;a\), \(d\;|\;b\), and \(q\) is an integer, we can get \(d\;|\;r\) according to 
+<a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
+  <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+</a>. 
+<script src="position_adjust.js"></script>
+
+Thus, \(d\) is a common divisor of \(b\) and \(r\). 
+Suppose that \(c\) is any common divisor of \(b\) and \(r\). 
+Since \(c\;|\;b\) and \(c\;|\;r\), we can get \(c\;|\;a\) according to 
+<a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
+  <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+</a>. 
+<script src="position_adjust.js"></script>
+Thus, \(c\) is a common divisor of \(a\) and \(b\). 
+Since \(d\) is the greatest common divisor of \(a\) and \(b\), we can get that \(c\leq d\) (i.e. any common divisor of \(b\) and \(r\) is less than or equal to \(d\)). 
+Therefore, \(d=(b,r)\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Theorem_3">
+<p>
+  \(\textbf{Theorem 3. Euclid's Algorithm. }\) If \(a\) and \(b\) are positive integers, \(b\neq 0\), and
+  $$
+  a=bq+r,\qquad 0\leq r \lt b,
+  $$
+  $$
+  b = rq_1+r_1, \qquad 0\leq r_1 \lt r,
+  $$
+  $$
+  r =r_1q_2+r_2, \qquad 0\leq r_2 \lt r_1,
+  $$
+  $$
+  r_1 = r_2q_3+r_3, \qquad 0\leq r_3 \lt r_2,
+  $$
+  $$
+  \vdots
+  $$
+  $$
+  r_k = r_{k+1}q_{k+2}+r_{k+2}, \qquad 0\leq r_{k+2} \lt r_{k+1},
+  $$
+  then for \(k\) large enough, say \(k=t\), we have
+  $$
+  r_{t-1} = r_tq_{t+1},
+  $$
+  and \((a, b) = r_t\).
+</p>
+<p>\(\textbf{Proof. }\)The sequence of nonnegative integers 
+  $$
+  b>r>r_1>r_2>\dots, 
+  $$
+  must come to an end. Eventually, one of the remainders will be zero. Suppose that it is \(r_{t+1}\). 
+  Then \(r_{t-1} = r_tq_{t+1}+r_{t+1}=r_tq_{t+1}\) and we can get \(r_t\;|\;r_{t-1}\). 
+  Thus, we can get \((r_{t-1},r_{t})=r_t\).
+ We apply 
+ <a href="#Lemma_2" class="tooltip-link">\(\textbf{Lemma 2}\)
+  <span class="tooltip-text">\(\textbf{Lemma 2. }\)If \(a=bq+r\), then \((a,b)=(b,r)\).</span>
+</a>. 
+<script src="position_adjust.js"></script> over and over, and can get
+ $$
+  (a, b) = (b, r) = (r, r_1) = (r_1, r_2) = \dots =(r_{t-1}, r_t) =r_t.
+$$
+  If either \(a\) or \(b\) is negative, we can use the fact that \((a, b) = (-a, b)=(a,-b)=(-a, -b)\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Corollary_1">
+<p>
+    \(\textbf{Corollary 1. }\) If \(a\) and \(b\) are positive integers, \(b\neq 0\), then there exist integers \(x\) and \(y\) such that 
+    $$
+    ax+by=(a, b).
+    $$
+</p>
+<p>
+  \(\textbf{Proof. }\)Work the Euclidean Algorithm backward. The details are omitted. \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Corollary_2">
+<p>
+  \(\textbf{Corollary 2. }\) If \(d\;|\;ab\) and \((d, a) = 1\), then \(d\;|\;b\).
+</p>
+<p>
+    \(\textbf{Proof. }\)Since \((d, a) = 1\), by 
+    <a href="#Corollary_1" class="tooltip-link">\(\textbf{Corollary 1}\)
+      <span class="tooltip-text">\(\textbf{Corollary 1. }\)If \(a\) and \(b\) are positive integers, \(b\neq 0\), then there exist integers \(x\) and \(y\) such that 
+        $$
+        ax+by=(a, b).
+        $$</span>
+    </a>. 
+    <script src="position_adjust.js"></script>, there exist integers \(x\) and \(y\) such that \(dx+ay=1\).
+  Multiplying this by \(b\), we have
+  $$
+    d(bx ) + (ab)y = b.
+  $$
+  Since \(d\;|\;ab\) by assumption and \(d\;|\;db\), we can get \(d\;|\;aby\) and \(d\;|\;dbx\).
+  Hence, we can get \(d\;|\;dbx+aby=b\).\[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_3">
+<p>
+  \(\textbf{Lemma 3. }\) Every integer \(n, n > 1\), is divisible by a prime.
+</p>
+<p>
+  \(\textbf{Proof. }\)Consider the set of divisors of \(n\) which are greater than \(1\) and less than \(n\). It is either empty or nonempty. 
+  If it is empty, then \(n\) is prime by definition, and thus has a prime divisor, which is itself. 
+  If it is nonempty, then the least-integer principle says that it has a smallest element, call it \(d\). Now we have to show that \(d\) is a prime by contradcition.
+  If \(d\) had a divisor greater than \(1\) and less than \(d\) (d is not a prime), then so would \(n\). However, this is impossible because \(d\) was the smallest such
+  divisor. Thus \(d\) is prime. \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_4">
+<p>
+  \(\textbf{Lemma 4. }\)  Every integer \(n,n > 1\), can be written as a product of primes.
+</p>
+<p>
+\(\textbf{Proof}\). From <a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
+  <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+</a>, 
+<script src="position_adjust.js"></script>
+we know that there is a prime \(p_1\) such that \(p_1\;|\; n\). Hence there exists \(n_1\) where \(1\leq n_1< n\) such that \(n = p_1n_1\).If \(n_1= 1\), then we are done: \(n =p_1\) is an expression of n as a product of primes. 
+If \(n_1 > 1\), then from 
+<a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
+  <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+</a>. 
+<script src="position_adjust.js"></script>
+again, there is a prime that divides \(n_1\). That is, \(n_1 = p_2n_2\),
+where \(p_2\) is a prime and \(1\leq n_2 \lt n_1\).
+If \(n_2 =1\), again we are done: \(n = p_1p_2\) is written as a product of primes. 
+But if \(n_2 > 1\), then we apply
+<a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
+  <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+</a>. 
+<script src="position_adjust.js"></script>
+ once again and get that \(n_2 = p_3n_3'\) with \(p_3\) a prime and \(1\leq  n_3 < n_2\). If \(n_3=1\), we are done. 
+If not, we continue the same process. We will sooner or later come to \(n_i = 1\) since \(n > n_1 > n_2 >\dots\)
+and each \(n_i\) is positive; such a sequence cannot continue forever. For some \(k\), we will have \(n_k = 1\), in which case \(n = p_1p_2\cdots p_k\) is the desired expression of \(n\) as a product of primes. \[ \tag*{$\square$} \]
+</p>
+<p>
+\(\textbf{Note.}\) each \(p_i\) may not be in unique.
+</p>
+</section>
+
+<br>
+
+<section id = "Theorem_4">
+<p>
+  \(\textbf{Theorem 4. }\) (Euclid). There are infinitely many primes.
+</p>
+<p>
+\(\textbf{Proof}\). We will prove it with mathematical contradiction. Suppose there are finite primes \(p_1, p_2, \dots, p_r\). 
+Consider the integer 
+$$
+n = p_1p_2\cdots p_r+1.
+$$
+According to 
+<a href="#Lemma_3" class="tooltip-link">\(\textbf{Lemma 3}\)
+  <span class="tooltip-text">\(\textbf{Lemma 3. }\)Every integer \(n, n > 1\), is divisible by a prime.</span>
+</a>, 
+we know that there is a prime \(p'\) such that \(p'\;|\;n\). Since there are finitly many primes, \(p'\) must be one of \(p_1, p_2, \dots, p_r\).
+Hence, we can get
+$$
+p'\;|\;p_1p_2\cdots p_r+1\qquad\text{and}\qquad p'\;|\;p_1p_2\cdots p_r.
+$$
+According to 
+<a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
+  <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+</a>. 
+<script src="position_adjust.js"></script>, we can get 
+$$
+p'\;|\;(p_1p_2\cdots p_r+1)-(p_1p_2\cdots p_r)=1.
+$$
+No primes divide \(1\) because all are greater than \(1\). Thus, contradiction exists. \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_5">
+<p>
+  \(\textbf{Lemma 5. }\) If \(n\) is composite, then it has a divisor \(d\) such that \(1 \lt d \leq \sqrt{n} \). 
+</p>
+<p>
+  \(\textbf{Proof}\). Suppose that \(n\) is composite. Then \(n = ab\) for some integers \(a\) and \(b\) with \(1 \lt a \lt n, 1 \lt b \lt n\).
+  If \(a\) and \(b\) are both larger than \(\sqrt{n}\), then
+  $$
+  n = ab > \sqrt{n}\sqrt{n} = n,
+  $$
+which is impossible. Thus, one of \(a\) and \(b\) must be less than or equal to \(n\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_6">
+<p>
+  \(\textbf{Lemma 6. }\)If \(n\) is composite, then it has a prime divisor, \(p\), where \(p\leq \sqrt{n}\).
+</p>
+<p>
+    \(\textbf{Proof}\). Suppose that \(n\) is composite. Accroding to <a href="#Lemma_5" class="tooltip-link">\(\textbf{Lemma 5}\)
+      <span class="tooltip-text">\(\textbf{Lemma 5. }\) If \(n\) is composite, then it has a divisor \(d\) such that \(1 \lt d \leq \sqrt{n} \).</span>
+    </a>,
+    <script src="position_adjust.js"></script>, we can know that \(n\) has a divisor \(d\) such that \(1 \lt d \leq \sqrt{n} \).
+    Accroding to <a href="#Lemma_4" class="tooltip-link">\(\textbf{Lemma 4}\)
+      <span class="tooltip-text">\(\textbf{Lemma 4. }\)Every integer \(n,n > 1\), can be written as a product of primes.</span>
+    </a>,  
+    <script src="position_adjust.js"></script>, we can know that \(d\) has a prime divisor \(p\). Since \(p\;|\;d\), we can get \(p\;|\;n\) and \(p\leq d\leq \sqrt{n}\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_7">
+<p>
+    \(\textbf{Lemma 7.}\) If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).
+</p>
+<p>
+    \(\textbf{Proof}\). Suppose that \(p\) is prime and \(p\;|\;ab\). Since \(p\) is prime, the only positive integer divisors of \(p\) are \(1\) and \(p\).
+    Hence, \((p, a)=1\) or \((p, a)=p\). If \(p\;|\;a\) (i.e. \((p, a)=p\)), then we are done. If not, then \(p\) and \(a\) are relatively prime (i.e. \((p, a)=1\)). 
+    Accroding to 
+    <a href="#Corollary_2" class="tooltip-link">\(\textbf{Corollary 2}\)
+      <span class="tooltip-text">\(\textbf{Corollary 2. }\)If \(d\;|\;ab\) and \((d, a) = 1\), then \(d\;|\;b\).</span>
+    </a>. 
+    <script src="position_adjust.js"></script>, we can get \(p\;|\;b\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_8">
+<p>
+    \(\textbf{Lemma 8. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).
+</p>
+<p>
+    \(\textbf{Proof}\). We will prove it with mathematical induction. It is true by inspection if \(k = 1\), and 
+    <a href="#Lemma_7" class="tooltip-link">\(\textbf{Lemma 7}\)
+      <span class="tooltip-text">\(\textbf{Lemma 7. }\)If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\). </span>
+    </a>
+    <script src="position_adjust.js"></script> shows that it is true if \(k = 2\) . Now, suppose that it is true for \(k=r\). 
+    Assume that \(p\;|\;a_1a_2\cdots a_{r+1}\), then \(p\;|\;(a_1a_2\cdots a_r)a_{r+1}\). According to 
+     <a href="#Lemma_7" class="tooltip-link">\(\textbf{Lemma 7}\)
+      <span class="tooltip-text">\(\textbf{Lemma 7. }\)If \(p\) is prime and \(p\;|\;ab\), then \(p\;|\;a\) or \(p\;|\;b\).</span>
+      </a>
+    <script src="position_adjust.js"></script>, we can get \(p\;|\;a_1a_2\cdots a_r\) or \(p\;|\;a_{r+1}\). 
+    If \(p\;|\;a_1a_2\cdots a_r\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,r\). If \(p\;|\;a_{r+1}\), then it is still true that 
+    \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,r+1\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Lemma_9">
+<p>
+    \(\textbf{Lemma 9. }\)If \(q_1, q_2, \dots ,q_n\) are primes, and \(p\;|\; q_1q_2\cdots q_n\),then \(p = q_k\) for some \(k\).
+</p>
+<p>
+    \(\textbf{Proof. }\)According to  <a href="#Lemma_8" class="tooltip-link">\(\textbf{Lemma 8}\)
+      <span class="tooltip-text">\(\textbf{Lemma 8. }\)If \(p\;|\;a_1a_2\cdots a_k\), then \(p\;|\;a_i\) for some \(i, i= 1, 2, \dots ,k\).</span>
+    </a>
+    <script src="position_adjust.js"></script>, we can know that \(p\;|\;q_k\) for some \(k\). 
+    Since \(q_k\) and \(p\) are both prime, we can get \(p = q_k\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "Theorem_5">
+<p>
+    \(\textbf{Theorem 5. }\)Every integer \(n, n > 1\), can be written as a product of primes in an unique way.
+</p>
+<p>
+  \(\textbf{Proof(1). }\)According to <a href="#Lemma_4" class="tooltip-link">\(\textbf{Lemma 4}\)
+    <span class="tooltip-text">\(\textbf{Lemma 4. }\)Every integer \(n,n > 1\), can be written as a product of primes.</span>
+  </a>,  
+  <script src="position_adjust.js"></script>, that any integer \(n, n > 1\) can be written as a product of primes. 
+  Hence, we need to show that \(n\) cannot have two such representations of products of primes.
+  Suppose that 
+  $$
+  n=p_1p_2\cdots p_m\quad\text{and}\quad n=q_1q_2\cdots q_r,
+  $$
+  where \(p_1, p_2, \dots, p_m\) and \(q_1, q_2, \dots, q_r\) are primes.
+  we have to show that the integers \(p_1, p_2, \dots, p_m\) are just a rearrangement of the integers \(q_1, q_2, \dots, q_r\).
+  Since \(p_1\;|\; n\), we can know that 
+  $$
+  p_1\;|\;q_1q_2\cdots q_r.
+  $$
+  According to 
+  <a href="#Lemma_9" class="tooltip-link">\(\textbf{Lemma 9} \)
+    <span class="tooltip-text">\(\textbf{Lemma 9. }\)If \(q_1, q_2, \dots ,q_n\) are primes, and \(p\;|\; q_1q_2\cdots q_n\),then \(p = q_k\) for some \(k\).</span>
+  </a>
+  <script src="position_adjust.js"></script>, we can get \(p_1 = q_k\) for some \(k\). Hence, we can rewrite \(n\) as
+  $$
+  n=q_1q_2\cdots q_{k-1}q_k q_{k+1}\cdots q_r,
+  $$
+  and 
+  $$
+  p_1p_2\cdots p_m=q_1q_2\cdots q_{k-1}q_k q_{k+1}\cdots q_r.
+  $$
+  Since \(p_1=q_k\), we can get
+  $$
+  p_2\cdots p_m=q_1q_2\cdots q_{k-1}q_{k+1}\cdots q_r.
+  $$
+  We can repeat this process and get that \(p_2=q_{k_1}\), \(p_3=q_{k_2}\), \(\dots\), \(p_m=q_{k_{m-1}}\). 
+  We cannot run out of \(q\)'s before all the \(p's\) are gone, because there would be a product of primes equal to \(1\), which is impossible. 
+  Thus, we can get that \(m=r\) and \(p_1, p_2, \dots, p_m\) are just a rearrangement of the primes \(q_1, q_2, \dots, q_r\). \[ \tag*{$\square$} \]
+</p>
+<p>
+  \(\textbf{Proof(2). }\)We will prove it with mathematical induction. It is true by inspection if \(n = 2\), and we assume that it is true for \(n = k\).
+  We will show that it is true for \(n = k+1\). Suppose that 
+  $$
+  k+1 = p_1p_2\cdots p_m\quad\text{and}\quad k+1 = q_1q_2\cdots q_r,
+  $$
+  where \(p_1, p_2, \dots, p_m\) and \(q_1, q_2, \dots, q_r\) are primes. Similar to \(\textbf{Proof(1)}\), we know that \(p_1=q_i\) for some \(i\leq r\).
+  Hence, we can get
+  $$
+  p_1p_2\cdots p_m=q_1q_2\cdots q_{i-1}q_i q_{i+1}\cdots q_r.
+  $$
+  Thus, we know that 
+  $$
+  p_2\cdots p_m=q_1q_2\cdots q_{i-1}q_{i+1}\cdots q_r.
+  $$
+  And we can know that \(p_2\cdots p_m=q_1q_2\cdots q_{i-1}q_{i+1}\cdots q_r\lt k+1\). 
+  By assumeption, we know that any integer less than \(k+1\) can be written as a product of primes in an unique way. 
+  Therefore, we show that \(k+1\) can be written as a product of primes in an unique way. \[ \tag*{$\square$} \]
+</p>
+</section>
+
+<br>
+
+<section id = "References">
+<h2>References</h2>
+  <ul>
+    <li>U. Dudley , "Elementary Number Theory", Dover Publications, Second Edition, 2008.</li>
+  </ul>
+</section>
+
+
+
+</body>
+</html>
+
