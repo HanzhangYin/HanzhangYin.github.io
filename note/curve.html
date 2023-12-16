@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
+    <script src="highlight.js"></script><!--It is a link for highlight.js-->
+    <title>Elliptic Curve</title>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="#Definition">Definition</a>
+      <a href="#Conic">Conic</a>
+      <a href="#unit_circle">Unit Circle</a>
+      <a href="#irreducibility">Irreducibility</a>
+      <a href="#example_1">Example 1</a>
+      <a href="#Legendre's Theorem">Legendre's Theorem</a>
+      <a href="#affine">Affine Space</a>
+      <a href="#projective_space">Projective Space</a>
+      <a href="#general">General</a>
+      <a href="#projective_curve">Projective Curve</a>
+      <a href="#relation">Relationship between Projective Curve and Affine Curve</a>
+      <a href="#homogenization">Homogenization</a>
+      <a href="#singularity">Singularity</a>
+      <a href="#decomposition">Decomposition of Projective Curve</a>
+      <a href="#degree">Degree</a>
+      <a href="#References">References</a>
+    </nav>
+    <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+    <h1>Elliptic Curves</h1>
+
+    <section id = "Conic">
+    <h2>Conic</h2>
+    <p>
+      \(\textbf{Definition: }\)A conic is the solution set to a quadratic euqation in two variables, such as \(x^2+y^2=1\).
+    </p>
+    <p>
+      There is no garantee that there is a cubic is rational.
+    </p>
+    <p>
+      \(\textbf{Example. }\)\(x^3+y^3=1\) has no rational points. (Not obvious)
+    </p>
+    <p>
+      We will focus on the ratioanl points on the unit circle \(x^2+y^2=1\).
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "unit_circle">
+    <p>
+      Give a unit circle \(x^2+y^2=1\), we can find a rational point on the circle, \(P = (-1, 0)\).
+    </p>
+    <p>
+      If \(Q\) is a rational coordinate on the unit circle, then the line \(L\) passing through \(P\) and \(Q\) has rational slope.
+    </p>
+    <p>
+      If a line through \(P\) has rational slope, then the other intersection with unit circle is a rational point.
+    </p>
+    <p>
+      Activity: Find the rational points on the unit circle. The line \(y = t(x+1)\) intersects the unit circle at \(P=(-1, 0)\).
+    </p>
+    <p>
+      \[
+      x^2+y^2=1, 
+      \]
+      \[
+      x^2+t^2(x+1)^2=1,
+      \]
+      \[
+      (1+t^2)x^2+2t^2x+(t^2-1)=0,
+      \]
+      \[
+      x^2 +\frac{2t^2}{1+t^2}x+\frac{t^2-1}{1+t^2}=0,
+      \]
+      \[
+      x^2 +\frac{2t^2}{1+t^2}x+\frac{t^4}{(1+t^2)^2}=-\frac{t^2-1}{1+t^2}+\frac{t^4}{(1+t^2)^2},
+      \]
+    </p>
+
+    </section>
+
+    <br>
+
+    <section id = "irreducibility">
+    <h2>Irreducibility</h2>
+    <p>
+      \(\textbf{Definition: }\)Let \(C: f(x, y)=0\) be a conic. \(C\) is irreducible if \(f(x, y)\) cannot be factored (Over \(\mathbb{C}\)).
+    </p>
+    <p>
+      \(\textbf{Example. }\) \(x^2+y^2=1\) is irreducible. Since \(f(x, y) = x^2+y^2-1\) cannot be factored.
+    </p>
+    <p>
+      \(\textbf{Example. }\) \(x^2+y^2=0\) is reducible. Since \(f(x, y) = x^2+y^2\) can be factored as \(f(x, y) = (x+iy)(x-iy)\).
+    </p>
+    <p>
+      \(\textbf{Theorem 1. }\) Let \(C: f(x, y)=0\) be an irreducible conic with a rational point. 
+      Then there exist rational functions \(x=a(t), y=b(t)\) such that
+      \[
+      \{(a(t), b(t))\;|\;t\in\mathbb{Q}\}
+      \]
+      is the set of all rational points of \(C\) except for one point.
+    </p>
+
+    </section>
+    
+    <section id = "example_1">
+    <h2>Example 1</h2>
+    <p>
+      \(\textbf{Example. }\) \(x^2+y^2=7\) has no rational points. 
+    </p>
+    </p>
+      Suppose hat \(P=(\frac{a}{b}, \frac{c}{d})\) is a rational point on \(x^2+y^2=7\). 
+    </p>
+    </section>
+
+    <section id = "Legendre's Theorem">
+    <h2>Legendre's Theorem</h2>
+    <p>
+      \(\textbf{Theorem 2. }\) Let \(A, B, C\) be square-free integers.
+      \[
+      Ax^2+By^2+CZ^2=0
+      \]
+      has a non-trivial solution in \(\mathbb{Q}\) if and only if 
+      <ul>
+        <li>
+          \(A, B, C\) don't all have the same sign,
+        </li>
+        <li>
+          \(-AB\) is a square module \(|C|\)
+        </li>
+        <li>
+          \(-AC\) is a square module \(|B|\)
+        </li>
+        <li>
+          \(-BC\) is a square module \(|A|\)
+        </li>
+      </ul>
+    </section>
+
+    <section id = "affine">
+      <h2>Affine Space</h2>
+      <p>
+        \(\textbf{Definition: }\)Affine space over \(\mathbb{Q}\), denoted \(\mathbb{A}^n(\mathbb{Q})\), is defined as
+        \(\mathbb{A}^n(\mathbb{Q}) = \{(x_1, \ldots, x_n) \mid x_i \in \mathbb{Q}\}\).
+      </p> 
+    </section>
+
+    <br>
+
+    <section id = "projective_space">
+      <p>
+        \(\textbf{Definition: }\)Projective space over \(\mathbb{Q}\), denoted \(\mathbb{P}^n(\mathbb{Q})\), is defined as
+        \(\mathbb{P}^n(\mathbb{Q}) = \{(x_0, \ldots, x_n) \mid x_i \in \mathbb{Q}\}\).
+      </p>
+    </section>
+      
+    <br>
+
+    <section id = "general">
+      <p>
+      Projective space over \(\mathbb{Q}\), denoted \(\mathbb{P}^n(\mathbb{Q})\), is defined as
+\[
+\mathbb{P}^n(\mathbb{Q}) = (\mathbb{A}^{n+1}(\mathbb{Q}) - \{(0, \ldots, 0)\}) / \sim,
+\]
+where \((x_0, \ldots, x_n) \sim (y_0, \ldots, y_n)\) if and only if there is some \(\lambda \in \mathbb{Q}\) such that \(x_i = \lambda y_i\) for all \(i\), \(0 \leq i \leq n\).
+Projective space points are written with brackets:
+\[
+[x_0, \ldots, x_n] \in \mathbb{P}^n(\mathbb{Q}).
+\]
+This gives homogeneous coordinates for the point.
+Most important for us:
+- \(\mathbb{A}^1\) (affine line (usual line))
+- \(\mathbb{P}^1\) (projective line)
+- \(\mathbb{A}^2\) (affine plane (usual plane))
+- \(\mathbb{P}^2\) (projective plane)
+</p>
+</section>
+
+<br>
+
+<section id = "projective_curve">
+  <h2>Projective Curve</h2>
+  <p>
+    \(\textbf{Definition. }\)The projective curve defined by \(f(x,y,z) = 0\) is the set of points \((x,y,z)\in\mathbb{P}^2\) such that \(f(x,y,z) = 0\).
+  </p>
+  <p>
+    \(\textbf{Example. }\)The projective curve defined by \(y^2z-x^3-z^3 = 0\) is a cubiic projective curve. 
+  </p>
+</section>
+
+<br>
+
+<section id = "relation">
+  <h2>Relationship between Projective Curve and Affine Curve</h2>
+  <p>
+    Fix \(\mathbb{P}^2 = \mathbb{A}^2\cup \mathbb{P}^1\) where
+    \[
+    \mathbb{P}^1 = \{(x,y,0):\;x,y\in\mathbb{Q}\}\qquad \text{and}\qquad \mathbb{A}^2 = \{(x,y,1):\;x,y\in\mathbb{Q}\}.
+    \]
+    The curve 
+    \[
+    D_z = \{(x,y,1)\in\mathbb{A}^2:\;f(x,y,1) = 0\}
+    \]
+    is the affine part of porjective curve \(D\) where
+    \[
+    D = \{(x,y,z)\in\mathbb{P}^2:\;f(x,y,z) = 0\}. 
+    \]
+    The points on \(D\) in \(\mathbb{P}^1=\{[x, y, 0]\}\) are called the points at infinity of \(D\).
+    THe curve \(D_Z:=D\cap\mathbb{A}^2\ with equation f(x,y,1)=0\) is called the affine part or dehomogenization of \(D\).
+  </p>
+</section>
+
+<br>
+
+<section id = "homogenization">
+  <h2>Homogenization</h2>
+  <p>
+    \(\textbf{Definition. }\)If \(C : f(x, y) = 0\) is an affine curve, the projective closure or homogenization of \(C\) is the projective curve \(D : F(X,Y,Z) = 0\) with just enough \(Z\)'s to make \(f\) homogeneous. 
+  </p>
+  <p>
+    \(\textbf{Example. }\)\(f(x, y) = x^3+xy+y+1\) and \(F(X, Y, Z) = X^3+XYZ+YZ^2+Z^3\).
+  </p>
+</section>
+
+<br>
+
+<section id = "singularity">
+  Let \(C: f(x, y) = 0\) be an affine curve. Set
+  \[
+  \alpha = \frac{\partial f}{\partial x}(x_0, y_0), \qquad \beta = \frac{\partial f}{\partial y}(x_0, y_0).
+  \]
+  \(\textbf{Definition. }\)The tangent line to \(C\) at \((x_0, y_0)\) is 
+  \[
+  \alpha(x-x_0)+\beta(y-y_0) = 0.
+  \]
+  provided that at least one of \( \frac{\partial f}{\partial x}(x_0, y_0)\) and \(\frac{\partial f}{\partial y}(x_0, y_0)\) is nonzero.
+  \(\textbf{Definition. }\)If \(\alpha = \beta = 0\), then \((x_0, y_0)\) is a singular point or singularity of \(C\).
+  \(\textbf{Definition. }\)
+  \(\textbf{Example 1. }\)Let \(C\) to be 
+  \[
+  y^2 = 3x^3 - x. 
+  \]
+  Then
+  \[
+  f(x, y) = y^2 - 3x^3 + x.
+  \]
+  \[
+  \frac{\partial f}{\partial x} = -9x^2 + 1, \qquad \frac{\partial f}{\partial y} = 2y.
+  \]
+  For singular points, we have
+  \[
+  \frac{\partial f}{\partial x} = \frac{\partial f}{\partial y} = 0,
+  \]
+  which implies that \(x = \pm\frac{1}{3\sqrt{3}}\) and \(y = 0\).
+  None of two is on \(C\), so \(C\) has no singular points.
+  \(\textbf{Example 2. }\)Let \(C\) to be
+  \[
+  y^2 =x^3.
+  \]
+  Then
+  \[
+  f(x, y) = y^2 - x^3.
+  \]
+  \[
+  \frac{\partial f}{\partial x} = -3x^2, \qquad \frac{\partial f}{\partial y} = 2y.
+  \]
+  For singular points, we have
+  \[
+  \frac{\partial f}{\partial x} = \frac{\partial f}{\partial y} = 0,
+  \]
+  which implies that \(x = y = 0\).
+  \(\textbf{Example 3. }\)Let \(C\) to be
+  \[
+  y^2 =x^3 + x^2.
+  \]
+  Then 
+  \[
+  f(x, y) = y^2 - x^3 - x^2.
+  \]
+  \[
+  \frac{\partial f}{\partial x} = -3x^2 - 2x, \qquad \frac{\partial f}{\partial y} = 2y.
+  \]
+  For singular points, we have
+  \[
+  \frac{\partial f}{\partial x} = \frac{\partial f}{\partial y} = 0,
+  \]
+  which implies that \(x = y = 0\) and \(x = -\frac{2}{3}\). 
+  \((0, 0)\) is a singulairty, but \((-\frac{2}{3}, 0)\) is not since it is not on \(C\).
+  \(\textbf{Example 4. }\)Let \(C\) to be
+  \[
+  x^2 - y^2 = 3.
+  \]
+  We found that \(y = 2x - 3\) was tangent to \(C\) at \((2, 1)\).
+  Then 
+  \[
+  f(x, y) = x^2 - y^2 - 3.
+  \]
+  \[
+  \frac{\partial f}{\partial x} = 2x, \qquad \frac{\partial f}{\partial y} = -2y.
+  \]
+  For singular points, we have
+  \[
+  \frac{\partial f}{\partial x} = \frac{\partial f}{\partial y} = 0,
+  \]
+  which implies that \(x = y = 0\).
+  \(\textbf{Example 5. }\)Let \(C\) to be
+  \[
+  x^2 - y^2 = 0.
+  \]
+  Then
+  \[
+  f(x, y) = x^2 - y^2.
+  \]
+  \[
+  \frac{\partial f}{\partial x} = 2x, \qquad \frac{\partial f}{\partial y} = -2y.
+  \]
+  For singular points, we have
+  \[
+  \frac{\partial f}{\partial x} = \frac{\partial f}{\partial y} = 0,
+  \]
+  which implies that \(x = y = 0\) and \((0, 0)\) is on \(C\). Hence, it is a singularity.
+  \(\textbf{Example 6. }\)Let \(C\) to be
+  \[
+  x^2 - y^2 = 1.
+  \]
+  Then
+  \[
+  f(x, y) = x^2 - y^2 - 1.
+  \]
+  \[
+  \frac{\partial f}{\partial x} = 2x, \qquad \frac{\partial f}{\partial y} = -2y.
+  \]
+  For singular points, we have \((0, 0)\) is not on \(C\). Hence, it is not a singularity.
+</section>
+
+<br>
+
+<section id = "decomposition">
+  <h2>Decomposition of Projective Curve</h2>
+  <p>
+    Let \(D: F(X, Y, Z)=0\) be a projective curve.
+  </p>
+  <p>
+    \(\textbf{Example. }\)Let \(D\) be
+    \[
+    D: Y^2Z - X^3 - XZ^2 = 0.
+    \]
+    Let \(D_Z\) be the affine part of \(D\). Then
+    \[
+    D_Z: y^2 - x^3 - x = 0.
+    \]
+    \[
+    \frac{\partial f}{\partial x} = -3x^2 - 1, \qquad \frac{\partial f}{\partial y} = 2y.
+    \]
+    For singular points, we have
+    \[
+    \frac{\partial f}{\partial x} = \frac{\partial f}{\partial y} = 0,
+    \]
+    which implies that \(x = \pm \sqrt{\frac{1}{3}}\) and \(y = 0\).
+    None of two is on \(D_Z\), so \(D_Z\) has no singular points.
+    For points at infinity, we have
+    \[
+    F(X, Y, 0) = -X^3 = 0,
+    \]
+    which implies that \(X = 0\). Hence, the points at infinity are \([0, 1, 0]\).
+    Thus, we can get a new line \(D_Y\)
+    \[
+    D_Y: Z - X^3 - XZ^2 = 0.
+    \]
+    We can get 
+    \[
+
+    \] 
+  </p>
+</section>
+
+<br>
+
+<section id = "degree">
+  <p>
+    \(\textbf{Lemma. }\)If \(F(X, Y, Z)\) is a homogeneous polynomial, then 
+    \[
+    X\frac{\partial F}{\partial X} + Y\frac{\partial F}{\partial Y} + Z\frac{\partial F}{\partial Z} = \deg F\cdot F(X, Y, Z).
+    \]
+    where \(\deg F\) is the degree of \(F\).
+  </p>
+  <p>
+    \(\textbf{Theorem. }\)Let \(D: F(X, Y, Z) = 0\) be a projective curve with non-singular points \(P\),
+    then the tangent line is given by
+    \[
+    \frac{\partial F}{\partial X}(P)X + \frac{\partial F}{\partial Y}(P)Y + \frac{\partial F}{\partial Z}(P)Z = 0.
+    \]
+  </p>
+  <p>
+    \(\textbf{Proof. }\)Without loss of generality, we can assume that \(P = [x_0, y_0, 1]\).
+    Then
+</section>
+
+<br>
+
+<section id = "Bezout's_Theorem">
+  <h2>Bezout's Theorem</h2>
+  <p>
+    \(\textbf{Theorem. }\)Let \(D_1, D_2\) be two projective curves of degree \(d_1, d_2\) respectively. 
+    If \(D_1\) and \(D_2\) have no common components, then \(D_1\) and \(D_2\) intersect in \(d_1d_2\) points.
+  </p>
+  <p>
+    \(\textbf{Note. }\)Not true in general that a line with rational slope drawn through a rational point on a cubic intersects the cubic in another rational point.
+  </p>
+</section>
+
+<br>
+
+<section id = "operation">
+  <p>
+    Let \(D\) be a projecitive non-singular cubic curve with rational coefficients. Define the operation
+    \[
+    \oplus: D(\mathbb{Q})\times D(\mathbb{Q})\to D(\mathbb{Q})
+    \]
+    as follow:
+    <ul>
+      <li>
+        If \(P\neq Q\), then \(P\oplus Q\) is the third point of intersection of the line through \(P\) and \(Q\) with \(D\).
+      </li>
+      <li>
+        If \(P = Q\), then \(P\oplus Q\) is the tangent line to \(D\) at \(P\) intersected with \(D\) at a third point.
+      </li>
+    </ul>
+  </p>
+  <p>
+    Another version of operation:
+  </p>
+  <p>
+    Let \(D\) be a projective nonsingular cubic curve with rational coefficients and a fixed rational point \(O\). Define the chord-tangent law
+    \[
+    + : D(\mathbb{Q})\times D(\mathbb{Q})\to D(\mathbb{Q})
+    \]
+    as follows: given \(P, Q\in D(\mathbb{Q})\),
+    <ul>
+      <li>
+        Calculate \(R = P\oplus Q\).
+      </li>
+      <li>
+        Then \(P+Q = R\oplus O\)
+      </li>
+    </ul>
+    Then \(D(\mathbb{Q})\) is an abelian group under \(+\).
+  </p>
+</section>
+
+<br>
+
+<section id = "Weierstrass_form">
+  <h2>Weierstrass Form</h2>
+  <p>
+    \(\textbf{Definition. }\)A cubic curve \(D\) is in Weierstrass form if it is of the form
+    \[
+    D: y^2 = x^3 + Ax^2 + Bx + C.
+    \]
+  </p>
+  <p>
+  <ul>
+    <li>
+      Weierstrass form is essetially the form for irreducible cubics with a flex at infinity with tangent line \(Z = 0\). 
+    </li>
+    <li>
+      Every irreducible cubic is birationally equivalent to a cubic in Weierstrass form.
+    </li>
+    <li>
+      There is no always a bijection between the sets of rational points, but missing points can be easily identified.
+    </li>
+  </ul>
+  </p>
+  <p>
+  \(\textbf{Example. }\)
+  \[
+  y^2 = x^3 -4x+4.
+  \]
+  \[
+  y^2 = x^3 
+  \]
+  </p>
+</section>
+
+<br>
+
+<section id = "elliptic_curve">
+  <h2>Elliptic Curve</h2>
+  <p>
+    \(\textbf{Definition. }\)An elliptic curve \(E over \mathbb{Q}\)is a projective nonsingular cubic curve with
+    with a chosen rational point \(O\in E(\mathbb{Q})\).
+  </p>
+  <p>
+    All elliptic durves have at least one rational point.
+  </p>
+</section>
+
+<br>
+
+<section id = "example_2">
+  <p>
+    Let \(E\) be the elliptic curve
+    \[
+    E: y^2 = x^3 - 4x + 4.
+    \]
+    Let's add \(P = (1, 1)\) and \(Q = (2, 2)\).
+  </p>
+  <p>
+    The equation of the line joining \(P\) and \(Q\) is
+    \[
+    y = x.
+    \]
+    Subsititute this line formula in for y in the formula for \(E\), we get
+    \[
+    x^2 = x^3 - 4x + 4.
+    \]
+    \[
+    x^3 - x^2 - 4x + 4 = 0.
+    \]
+    \[
+    (x-1)(x^2-4) = 0.
+    \]
+    \[
+    x = 1, 2, -2.
+    \]
+    \[
+    y = 1, 2, -2.
+    \]
+    \[
+    R = (1, 1), (2, 2), (-2, -2).
+    \]
+    Hence, we can get the third rational point. 
+    Reflect \(R\) in the x-axis, we get
+    \[
+    P + Q = (-2, 2).
+    \]
+
+
+  </p>
+</section>
+
+<br>
+
+<section id = "additional_formula">
+<p>
+  \(\textbf{Addition formulas. }\)Let \( P = (x_1, y_1) \) and \( Q = (x_2, y_2) \) be (affine) points on \( E: y^2 = x^3 + ax^2 + bx + c \).
+</p>
+<ul>
+  <li>Say \( P \neq -Q \). Let the line joining \( P \) and \( Q \) have equation \( y = \lambda x + \nu \). Then \( P + Q = (x_3, y_3) \) where</li>
+</ul>
+\[ 
+x_3 = \lambda^2 - a - x_1 - x_2, \quad y_3 = -\lambda x_3 - \nu. 
+\]
+<ul>
+  <li>Say \( P \neq -P \). The x-coordinate of \( P + P \) is</li>
+</ul>
+\[
+ x_4 = \frac{{1 - 2bx_1 - 8cx_1^2 + b^2 - 4ac}}{{4x_1^3 + 4ax_1^2 + 4bx_1 + 4c}}. 
+\]
+<p>(This is called the duplication formula.)</p>
+<ul>
+  <li>Let \( A \) be an abelian group. An element \( x \in A \) has order \( n \), denoted \( \text{{ord}}(x) = n \), if \( n \) is the smallest positive integer such that \( nx = 0 \).</li>
+  <li>Define \( A[n] = \{ x \in A \,|\, nx = 0 \} \).</li>
+  <li>Any element of \( A \) of finite order is called a torsion element. The set of torsion elements of \( A \) is a subgroup of \( A \), denoted \( A_{\text{{tors}}} \).</li>
+  <li>Let \( E \) be an elliptic curve (over \( \mathbb{Q} \)).</li>
+  <li>Questions for us:</li>
+</ul>
+  <ul>
+    <li>What is \( E(\mathbb{Q})_{\text{{tors}}} \)? Is it finite? Can we find all the points? What is the group structure?</li>
+    <li>Today: Points of order 2 and 3</li>
+  </ul>
+</ul>
+<ul>
+  <li>A point \( P \) on the elliptic curve \( E: y^2 = f(x) \) has order 2 if and only if \( P = (x_0, 0) \). In particular, \( E(\mathbb{Q})[2] \) has 1, 2, or 4 elements, corresponding to whether \( f(x) \) has 0, 1, or 3 rational roots, respectively.</li>
+  <li>What about order 3?</li>
+</ul>
+<p>The polynomial \( \psi_3(x) = 3x^4 + 4ax^3 + 6bx^2 + 12cx + 4ac - b^2 \) is the 3-division polynomial for \( E \).</p>
+<p>Theorem:</p>
+<ol>
+  <li>The nonidentity point \( P \in E(\mathbb{Q}) \) has order 3 if and only if \( \psi_3(x(P)) = 0 \).</li>
+  <li>\( \psi_3 \) has no repeated roots.</li>
+  <li>E has exactly eight points of order 3 with complex coordinates.</li>
+</ol>
+</section>
+
+<br>
+
+<section id = "Discriminant">
+  <h2>Discriminant</h2>
+  <p>
+    \(\textbf{Definition. }\)Let \(E\) be an elliptic curve in Weierstrass:
+    \[
+    f(x) = x^3 + Ax^2 + Bx + C.
+    \]
+    The discriminant of \(E\) is
+    \[
+    \Delta = -4A^3C + A^2B^2 + 18ABC - 4B^3 - 27C^2.
+    \]
+  </p>
+  <p>
+    \(\textbf{Theorem. }\)Set 
+    \[
+    f(x) = x^3 + Ax^2 + Bx + C,
+    \]
+    with \(A, B, C\in\mathbb{Z}\), set 
+    \[
+    E: y^2 = f(x),
+    \]
+    and let \(D\) be the discriminant of \(f(x)\). Suppose 
+    \(P = (x_0, y_0)\in E(\mathbb{Q})\) has finite order. Then 
+    <ul>
+      <li>\(x_0, y_0\in\mathbb{Z})</li>
+      <li>Either \(y_0 = 0\) or \(y_0\;|\;D\)</li>
+    </ul>
+  </p>
+  <p>
+    \(\textbf{Corollary: }\)\(E(\mathbb{Q})\) is finite.
+  </p>
+  <p>
+    \(\textbf{Example. }\)Find all points of finite order on
+    \[
+    E: y^2 = x^3 + x^2 +3x - 1. 
+    \]
+    We first calculate the discriminant of \(E\):
+    \[
+    D = -171.
+    \]
+    Are there points with \(y_0 = 0\)? No. 
+  </p>
+</section>
+
+<br>
+
+<section id = "mazur">
+  <h2>Mazur's Theorem</h2>
+  <p>
+    \(\textbf{Theorem. }\)Let \(E\) be an elliptic curve over \(\mathbb{Q}\).
+    Then \(E(\mathbb{Q})_{\text{{tors}}}\) is isomorphic to one of the following fifteen groups:
+    \[
+    \text{Trivial }(E(\mathbb{Q})_{\text{{tors}}}\cong\{O\}),
+    \]
+    \[
+    \mathbb{Z}/N\mathbb{Z}\text{ for some }\mathbb{N}\text{ with }2\leq N \leq 12\text{ except }N = 11.
+    \]
+    \[
+    \mathbb{Z}/2\mathbb{Z}\oplus\mathbb{Z}/2N\mathbb{Z}\text{ for some }N\text{ with }1\leq N \leq 4.
+    \]
+  </p>
+</section>
+
+<br>
+
+<section id = "p_adic">
+  <h2>\(p\)-adic</h2>
+  <p>
+    \(\textbf{Definition. }\)Let \(p\) be a prime number. The \( p \)-adic valuation is the function 
+    \[
+    \text{ord}_p : \mathbb{Q} \rightarrow \mathbb{Z} \cup \{\infty\} 
+    \]
+     defined as follows:
+    <ul>
+      <li>\(\text{ord}_p(0) = \infty\)</li>
+      <li>For nonzero \(x\in\mathbb{Q}\)
+        \[
+        x = \frac{m}{n}p^\nu
+        \]
+        with \(m, n \in \mathbb{Z}\) and \(p \nmid m, n\). Then 
+        \[
+        \text{ord}_p(x) = \nu. 
+        \]
+      </li>
+      <li>
+        A number with a large negative \( p \)-adic valuation is \( p \)-adically "big" (lots of \( p \)'s in the denominator).
+      </li>
+      <li>
+        A number with a large positive \( p \)-adic valuation is \( p \)-adically "small".
+      </li>
+      <li>
+        \(x \in \mathbb{Q}\) is an integer if and only if \(\text{ord}_p(x) \geq 0 \)for all \(p\).
+      </li>
+    </ul>    
+</section>
+
+      
+    <section id = "References">
+    <h2>References</h2>
+    <ul>
+      <li>
+        First Initial. Last name, "Book name", Publications, 
+        Edition, Year.
+      </li>
+    </ul>
+  </section>
+  </body>
+</html>
