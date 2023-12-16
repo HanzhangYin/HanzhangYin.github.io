@@ -73,14 +73,36 @@
       Now we can get the Jordan canonical form of \(A\), which is
       \[
         J = \begin{pmatrix}
-          -1 & 1 & 0\\
-          0 & -1 & 0\\
+          -1 & 0 & 0\\
+          1 & -1 & 0\\
           0 & 0 & 2
         \end{pmatrix}.
       \]
       Now we need to find the matrix \(P\) such that \(A=PJP^{-1}\). 
-    </p>
-    </section>
+      Firstly, we need to find the maximal vector of \(A\) for the eigenvalue \(-1\), which is \((1, 0, 0)^T\).
+      Then we need to find the maximal vector of \(A\) for the eigenvalue \(2\), which is \((0, 0, 1)^T\).
+      Now we can have the maximal vector of \(A\) as follows:
+      \[
+        v = (1, 0, 0)^T + (0, 0, 1)^T = (1, 0, 1)^T.
+      \]
+      Then we get the columns of \(P\) as \(v, (A-2*I)v, (A-2*I)^2v\). Hence, we have 
+      \[
+        P = \begin{pmatrix}
+          1 & 4 & 9\\
+          0 & 4 & 9\\
+          1 & 3 & 9
+        \end{pmatrix}.
+      \]
+      And we can get \(P^{-1}\) as follows:
+      \[
+        P^{-1} = \begin{pmatrix}
+          3 & -3 & 0\\
+          -3 & 4 & -1\\
+          -1 & 1 & 0
+        \end{pmatrix}.
+      \]
+      </p>
+  </section>
 
     <section id = "k_state_2022_1">
     <h2>K-State 2022(1)</h2>
