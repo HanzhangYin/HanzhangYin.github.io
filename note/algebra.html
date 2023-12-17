@@ -97,18 +97,13 @@
         \end{pmatrix}.
       \]
       Now we need to find the matrix \(P\) such that \(A=PJP^{-1}\). 
-      Firstly, we need to find the maximal vector of \(A\) for the eigenvalue \(-1\), which is \((1, 0, 0)^T\).
-      Then we need to find the maximal vector of \(A\) for the eigenvalue \(2\), which is \((0, 0, 1)^T\).
-      Now we can have the maximal vector of \(A\) as follows:
-      \[
-        v = (1, 0, 0)^T + (0, 0, 1)^T = (1, 0, 1)^T.
-      \]
-      Then we get the columns of \(P\) as \(v, (A-2I)v, (A-2I)^2v\). Hence, we have 
+      Firstly, we need to find the maximal vector of \(A\) for the eigenvalue \(-1\), which is in not in \(\ker(A + I)\).
+      Then we get the columns of \(P\) as \(v, (A-2I)v = (1, 1, 0)^T, v_1\). Hence, we have 
       \[
         P = \begin{pmatrix}
-          1 & 4 & 9\\
-          0 & 4 & 9\\
-          1 & 3 & 9
+          1 & 1 & 1\\
+          0 & 1 & 1\\
+          0 & 0 & 1
         \end{pmatrix}.
       \]
       And we can get \(P^{-1}\) as follows:
