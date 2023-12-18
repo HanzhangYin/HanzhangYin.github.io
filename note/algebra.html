@@ -57,7 +57,18 @@
       Prove that the eigenvalues of \(A\) are either \(0\) or roots of unity. 
       </p>
       <p>
-        \(\textbf{Proof. }\)
+        \(\textbf{Proof. }\) Since we know that \(A\) and \(A^n\) are similar, 
+        we can have the same eigenvalues. Suppose that \(\lambda\) is an eigenvalue of \(A\) and \(v\) is the corresponding eigenvector.
+        Then we have
+        \[
+          \begin{align}
+            A^nv &= A^{n-1}(Av)\\
+            &= A^{n-1}(\lambda v)\\
+            &= \lambda A^{n-1}v\\
+            &= \lambda^n v.
+          \end{align}
+        \]
+        Hence, we can know that \(\lambda^n\) is an eigenvalue of \(A^n\) and its corresponding eigenvector is \(v\).
       </p>
     </section> 
 
