@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+    <!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--link for the font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="tutoring_style.css" />
+    <!--It is a link for css structure-->
+    <title>Integral Domain</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="http://www.sitehan.com">Home</a>
+      <a href="#Norm">Norm</a>
+      <a href="#zero_divisor">Zero Divisor</a>
+      <a href="#integral_domain">Integral Domain</a>
+      <a href="#References">References</a>
+    </nav>
+    <script src="lick.js"></script>
+    <!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+    <h1>Integral Domain</h1>
+
+    <section id="Norm">
+      <h2>Norm</h2>
+      <p>
+        \(\textbf{Definition. }\) Any function \(N: R\to \mathbb{Z}^+ \cup
+        \{0\}\) with \(N(0) = 0\) is called a \(\textit{norm}\) on the integral
+        domain \(R\). If \(N(a) > 0\) for \(a \neq 0\) define \(N\) to be a
+        positive norm.
+      </p>
+    </section>
+
+    <br />
+
+    <section id = "zero_divisor">
+      <h2>Zero Divisor</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(R\) be a ring.
+        An element \(a\) of \(R\) is called a \(\textit{zero divisor}\) if there
+        is a nonzero element \(b\) of \(R\) such that \(ab = 0\) or \(ba = 0\). 
+      </p>
+    </section>
+
+    <br />
+
+    <section id = "integral_domain">
+      <h2>Integral Domain</h2>
+      <p>
+        \(\textbf{Definition. }\)An integral domain is a commutative ring with
+        identity and no zero divisors.
+      </p>
+      <br>
+      <p>
+        \(\textbf{Proposition. }\)Assume that \(a, b\) and \(c\) are elements of any ring
+        with \(a\) not a zero divisor. If \(ab = ac\), then either \(a = 0\) or \(b = c\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)If \(ab = ac\), then we have \(ab - bc = 0\), which implies that 
+        \[
+          a(b - c) = 0.
+        \]
+        Since \(a\) is not a zero divisor, we have either \(b - c = 0\) or \(a = 0\). If 
+        \(b - c = 0\), then we have \(b = c\). \[ \tag*{$\square$} \]
+      </p>
+      <p>
+        \(\textbf{Proposition. }\)Assume that \(a, b\) and \(c\) are elements of an integral domain.  
+        If \(ab = ac\), then either \(a = 0\) or \(b = c\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Since all elements in an integral domain are not zero divisors, we can get the result from the proposition above. \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br />
+
+    <section id = "unit">
+      <h2>Unit</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(R\) be a ring. An element \(a\) of \(R\)
+        is called a \(\textit{unit}\) if there is an element \(b\) of \(R\) such
+        that \(ab = 1 = ba\). The set of all units in \(R\) is denoted by
+        \(R^\times\).
+      </p>
+    </section>
+
+    <br />
+
+    <section id="Euclidean_Domain">
+      <h2>Euclidean Domain</h2>
+      <p>
+        \(\textbf{Definition. }\)The integral domain \(R\) is said to be a
+        Euclidean Domain (or possess a Division Algorithm) if there is a norm
+        \(N\) on \(R\) such that for any two elements \(a\) and \(b\) of \(R\)
+        with \(b \neq 0\) there exist elements \(q\) and \(r\) in \(R\) with $$
+        a=qb+r \qquad \text{with }r = 0\text{ or }N(r) \lt N(b). $$ The element
+        \(q \) is called the \(\textit{quotient}\) and the element \(r\) the
+        \(\textit{remainder}\) of the division.
+      </p>
+    </section>
+
+    <br />
+
+    <section id="prime_ideal">
+      <h2>Prime Ideal</h2>
+      <p>
+        \(\textbf{Definition. }\)Assume a ring \(R\) is commutative, an ideal
+        \(P\) is called a prime ideal if \(P\neq R\) and whenever the product
+        \(ab\) of two elements \(a, b\in R\) is an element in \(P\) (i.e.
+        \(ab\in P\)), then at least one of \(a\) and \(b\) is in \(P\) (i.e.
+        \(a\in P\) or \(b\in P\)).
+      </p>
+      <p>\(\textbf{Definition. }\)It is not either \(a\in P\) or \(b\in P\).</p>
+    </section>
+
+    <section id="integral_domain">
+      <p>Let \(R\) be an integral domain.</p>
+      <h3>Irreducibility</h3>
+      <p>
+        Suppose \(r\in R\) is nonzero and is not a unit. Then \(r\) is called
+        irreducible in \(R\) if whenever \(r = ab\) with \(a, b\in R\), at least
+        one of \(a\) or \(b\) must be a unit in \(R\). Otherwise \(r\) is said
+        to be reducible.
+      </p>
+      <h3>Prime</h3>
+      <p>
+        The nonzero element \(p\in R\) is called prime in \(R\) if the ideal
+        \((p)\) generated by \(p\) is a prime ideal. In other words, a nonzero
+        element \(p\) is a prime if it is not a unit and whenever \(p\mid ab\)
+        for any \(a, b\in R\), then either \(p\mid a\) or \(p\mid b\).
+      </p>
+      <h3>Associate</h3>
+      <p>
+        Two elements \(a\) and \(b\) of \(R\) differing by a unit are said to be
+        associate in \(R\) (i.e., \(a = ub\) for some unit \(u\) in \(R\)).
+      </p>
+    </section>
+
+    <br />
+
+    <section id="proposition_1">
+      <p>
+        \(\textbf{Proposition 1. }\)In an integral domain \(R\), a prime element
+        is always irreducible.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Suppose that \((p)\) is a nonzero prime ideal in
+        \(R\) and \(p = ab\). Since \(p\in (p)\), we can get \(ab\in (p)\).
+      </p>
+    </section>
+
+    <section id="general">
+      <h2>Big Picture</h2>
+      <p>
+        \(\text{fields}\subset \text{Euclidean Domains}\subset
+        \text{P.I.D.s}\subset \text{U.F.D.s}\subset \text{integral domains}\)
+      </p>
+    </section>
+
+    <br />
+
+    <section id="theorem">
+      <p>
+        \(\textbf{Theorem. }\)Every Principal Ideal Domain is a Unique
+        Factorization Domain.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(R\) to be a Principal Ideal Domain and let
+        \(r\) be a nonzero element of R which is not a unit. We must show first
+        that r can be written as a finite product of irreducible elements of
+        \(R\) and then we must verify that this decomposition is unique up to
+        units.
+      </p>
+    </section>
+
+    <section id="References">
+      <h2>References</h2>
+      <ul>
+        <li>
+          First Initial. Last name, "Book name", Publications, Edition, Year.
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

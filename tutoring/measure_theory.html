@@ -1,0 +1,1070 @@
+---
+title: Measure Theory
+---
+***
+\(	ext{Definition 1.0.\}\)
+Let \(X\) be a set. A nonempty family \(\mathcal{A} \subseteq \mathcal{P}(X)\) is called algebra
+on \(X\) if it satisfies the following:
+1. if \(E \in \mathcal{A}\), then \(E^c \in \mathcal{A}\) (\(\mathcal{A}\) is closed under complements),
+2. if \((E_i)_{i \in \mathbb{N}}\) is a finite family of sets which belong to \(\mathcal{A}\), then \(\bigcup\limits_{i=1}^{n} E_i \in \mathcal{A}\) (\(\mathcal{A}\) is closed under finite unions).
+***
+\(\text{Definition 1.1\}\)  Let \(X\) be a set. A nonempty family \(\mathcal{A} \subseteq \mathcal{P}(X)\) is called \(\sigma\)-algebra
+on \(X\) if it satisfies the following:
+1. if \(E \in A\), then \(E^c \in \mathcal{A}\) (\(\mathcal{A}\) is closed under complements),
+2. if \((E_i)_{i \in \mathbb{N}}\) is a family of sets which belong to \(\mathcal{A}\), then \(\bigcup\limits_{i=1}^{\infty} E_i \in \mathcal{A}\) (\(\mathcal{A}\) is closed under countable unions).
+
+# Measure
+
+\(\text{Definition 2.1}\) Let \((X, \mathcal{M})\) be a measurable space. A (positive) measure \(\mu\) is a function \(\mu : \mathcal{M} \to [0, \infty]\) such that
+1. \(\mu(\varnothing) = 0\),
+2. if \((A_i)_{i\in\mathbb{N}}\) is a countable collection of pairwise disjoint sets in \(\mathcal{M}\), then
+$$
+\mu\left(\bigcup_{i=1}^\infty A_i\right) = \sum_{i=1}^\infty \mu(A_i) \quad \text{(countable additivity)}.
+$$
+
+# Outer Measure
+\(\textbf{Definition 3.1}\) Let \(X\) be a set. A set function \(\mu^* : \mathcal{P}(X)\rightarrow [0,\infty]\) is called an outer measure, if it satisfies the following conditions:
+1. \(\mu^*(\varnothing)=0\),
+2. if \(A\subset B\) then \(\mu^*(A)\leq \mu^*(B)\), (monotonicity)
+3. if \((E_i)_{i\in\mathbb{N}}\) is a sequence of subsets of \(X\) then 
+$$
+\mu^* \left(\bigcup_{i=1}^\infty E_i\right) \leq \sum_{i=1}^\infty\mu^*(E_i).\qquad \text{(countable subadditivity)}
+$$
+
+---
+
+\(\textbf{Definition 3.2}\) Let \(X\) be a set, and let \(\mu^*\) be an outer measure on \(X\). A set \(E \subseteq X\) is called \(\mu^*-measurable\) if for every \(A \subseteq X\),
+\(\(\mu^*(A) = \mu^*(A \cap E) + \mu^*(A \setminus E).\)\)
+
+---
+
+\(\textbf{Proposition 3.4}\) Let \(\mu^*\) be an outer measure on \(X\). If \(E\subset X\) and \(\mu^*(E) = 0\) then
+\(E\) is \(\mu^*\)-measurable.
+
+
+***
+\(\textbf{Theorem}\): A measure space \((X,M,\mu)\) is \(\sigma\)-finite if \(X\) can be written as a countable union of measurable sets, each with finite measure.
+
+\(\textbf{Definition 6.1}\) If \((X,\mathcal{A})\) and \((Y,\mathcal{N})\) are measurable spaces, a mapping \(f: X \rightarrow Y\) is \((A,\mathcal{N})\)-measurable if \(f^{-1}(E) \in A\) for all \(E \in \mathcal{N}\).
+
+
+---
+
+\(\textbf{Theorem 6.10.}\) Let \((X, \mathcal{A})\) be a measurable space and let \((f_n)_{n\in\mathbb{N}}, f_n:X\to\mathbb{R}\), be a sequence of measurable functions. Then:
+1. \(\sup\limits_{n\in\mathbb{N}} f_n\) is measurable,
+2. \(\inf\limits_{n\in\mathbb{N}} f_n\) is measurable,
+3. \(\limsup\limits_{n\to\infty} f_n\) is measurable,
+4. \(\liminf\limits_{n\to\infty} f_n\) is measurable.
+
+
+
+\(\textbf{Corollary 6.11}\) Let \((X,\mathcal{A})\) be a measurable space. If \((f_n)_{n \in \mathbb{N}}, f: X \to \overline{\mathbb{R}}\) is a sequence of measurable functions such that \(f_n \to f\) pointwise, then \(f\) is measurable.
+
+
+
+
+
+
+\(\textbf{Theorem 6.14 (Lusin)}\) Let \(X\) be a metric space and let \(\mu\) be a measure on \(\mathcal{B}(X)\). Assume also that \(X = \bigcup_{j=1}^\infty O_j\) where the sets \(O_j\) are open and \(\mu(O_j) t \infty\) for all \(j \in \mathbb{N}\). Let \(Y\) be a separable metric space and let \(f:X\rightarrow Y\) be a Borel function. Then for all \(\varepsilon > 0\), there exists a closed set \(F_\epsilon \subset X\) such that \(f|_{F_\epsilon}\) is continuous and \(\mu(X\setminus F_\epsilon) t \varepsilon\).
+
+
+
+\(\textbf{Remark 6.16}\) Recall that if \(E \subseteq X\), \(\chi_E\) denotes the characteristic function of \(E\),
+$$
+\chi_E (x) = \begin{cases}
+1, & \text{if } x \in E, \\
+0, & \text{otherwise}.
+\end{cases}
+$$
+We record that if \((X, \mathcal{A})\) is a measurable space, then \(E \in \mathcal{A} \iff \chi_E\) is measurable. (6.8)
+
+First notice that if \(U \subseteq \mathbb{R}\) is open, then
+$$
+\chi_E^{-1}(U) = \{x : \chi_E(x) \in U\} = \begin{cases}
+\varnothing, & \text{if } 0,1 \notin U, \\
+E, & \text{if } 0 \in U, 1 \in U, \\
+X \setminus E, & \text{if } 0 \notin U, 1 \in U, \\
+X, & \text{if } 0 \in U, 1 \notin U.
+\end{cases}
+$$
+Therefore, if \(E \in \mathcal{A}\), then \(\chi_E\) is measurable.
+
+On the other hand, if \(\chi_E\) is measurable, then \(E = \chi_E^{-1}(\{1\}) \in \mathcal{A}\).
+
+\(\textbf{Definition 6.17}\) Let \((X,\mathcal{A})\) be a measurable space. A function \(s : X \rightarrow \mathbb{C}\) is called simple in \((X,\mathcal{A})\) if it is a finite linear combination of characteristic functions of sets in \(\mathcal{A}\). Equivalently, \(f\) is simple if it is measurable and its range is a finite subset of \(\mathbb{C}\). Indeed, if \(\text{range}(f) = \{z_i\}_{i=1}^n\), then
+$$
+f(x) = \sum_{i=1}^n z_i \chi_{E_i}(x),
+$$
+where \(E_i = f^{-1}(z_i)\). We will say that a simple function \(s : X \rightarrow [0,\infty)\) is in standard form if
+$$
+s = \sum_{i=1}^n a_i \chi_{A_i},
+$$
+where the following conditions hold:
+
+1.  \(a_i, a_j \in \mathbb{R}\) for \(i,j = 1,2,\ldots,n\),
+2.  the sets \(A_i \in \mathcal{A}\) are pairwise disjoint,
+3.  \(X = \bigcup_{i=1}^n A_i\).
+
+Observe that every simple function can be written in a standard form.
+
+
+
+
+\(\textbf{Definition 7.2.}\) Let 
+$$
+L^+(\mu) = \{f: X \to [0, \infty]: f \text{ is measurable}\}.
+$$ 
+
+Very often, when the underlying measure \(\mu\) is fixed, we will use the simpler notation \(L^+ = L^+(\mu)\). 
+
+\(\textbf{Definition 7.3.}\) Let \(f \in L^+\) and \(E \in \mathcal{A}\). The integral of \(f\) with respect to \(\mu\) on \(E\) is
+$$
+\int_E f(x) \, d\mu(x) = \sup\left\{\int_E s(x) \, d\mu(x): 0 \leq s \leq f \right\}.
+$$
+
+\(\textbf{Proposition 7.4.}\) Let \(f, g \in L^+\) and \(A, B \in \mathcal{A}\). Then:
+1. If \(0 \leq f \leq g\), then \(\displaystyle \int_A f \, d\mu \leq \int_A g \, d\mu\).
+2. If \(A \subseteq B\), then \(\displaystyle \int_A f \, d\mu \leq \int_B f \, d\mu\).
+3. If \(c \in [0, \infty)\), then \(\displaystyle \int_A cf \, d\mu = c \int_A f \, d\mu\).
+4. If \(\mu(A) = 0\), then \(\displaystyle \int_A f \, d\mu = 0\).
+
+\(\textbf{Corollary 7.8}\) If \(f,g \in L^+\) then 
+$$
+\int (f+g) d\mu = \int f d\mu + \int g d\mu.
+$$
+
+---
+
+\(\textbf{Theorem 7.9 (Beppo-Levi)}\) Let \(\{f_n\}_{n\in\mathbb{N}}\subseteq L^+\). Then
+$$
+f(x) := \sum_{n=1}^\infty f_n(x) \in L^+
+$$
+ and
+ $$
+\int f\,d\mu = \sum_{n=1}^\infty \int f_n\,d\mu.
+$$
+
+---
+
+\(\textbf{Theorem 7.11 (Fatou's Lemma)}\) Let \(\{f_n\}_{n\in \mathbb{N}} \subseteq L^+\). Then,
+$$
+\int \left(\liminf_{n\to \infty} f_n\right) d\mu \leq \liminf_{n\to \infty} \int f_n d\mu.
+$$ 
+
+\(\textbf{Definition 7.13.0}\)
+If \(f:X\rightarrow \overline{\mathbb R}\), we define
+$$
+f^+(x) = \max\{f(x),0\}\text{ and }f^-(x) = \max\{-f(x),0\}.
+$$ 
+Then \(f = f^+ - f^-\). Notice that if \(f\) is measurable, then both \(f^+\) and \(f^-\) belong to \(L^+\).
+
+---
+
+\(\textbf{Definition 7.15}\) If \(f: X\rightarrow \mathbb{R}\) is a measurable function and \(f\in L^1(\mu)\), we call \(f\in \widetilde{L}^1(\mu)\).
+
+---
+
+\(\textbf{Theorem 7.16.}\) Let \(f, g \in \widetilde{L}^1(\mu)\) and let \(a, b \in \mathbb{R}\). Then \(af + bg \in \widetilde{L}^1(\mu)\) and
+$$
+\int (af + bg) \, d\mu = a \int f \, d\mu + b \int g \, d\mu. \quad (7.22)
+$$
+
+\(\textbf{Proof.}\) First we can see that \(|af(x) + bg(x)| \leq |a||f(x)| + |b||g(x)|\) for all \(x \in X\). According to Corollary 6.8, since \(f\) and \(g\) are measurable, we can get \(|f|\) and \(|g|\) are in measurable. Moreover, 
+constant function is measurable, (i.e, \(|a|\) and \(|b|\) are measurable), by Corollary 6.8 (3), we can get \(|a||f(x)|\) is measurable and \(|b||g(x)|\) are measurable, which implies that \(|a||f(x)| + |b||g(x)|\) is measurable. Since \(|a||f(x)| + |b||g(x)|\), we can get \(|a||f(x)| + |b||g(x)|\in L^+\). By corollary 7.8., since  \(|a||f(x)| + |b||g(x)|\in L^+\), we can get
+$$
+\int |a||f(x)| + |b||g(x)| d\mu = \int|a||f(x)|d\mu + \int|b||g(x)|d\mu= |a|\int|f(x)|d\mu + |b|\int|g(x)|d\mu
+$$
+Since \(f, g \in \widetilde{L}^1(\mu)\), we can get
+$$
+\int|f|d\mu\lt\infty,
+$$
+and 
+$$
+\int|g|d\mu\lt\infty.
+$$
+It shows that 
+$$
+|a|\int|f|d\mu\lt\infty,
+$$
+and 
+$$
+|b|\int|g|d\mu \lt\infty.
+$$
+for \(a, b\) are finite. 
+Thus, 
+$$
+ |a|\int|f(x)|d\mu + |b|\int|g(x)|d\mu\lt\infty,
+$$
+which implies that 
+$$
+\int |a||f(x)| + |b||g(x)| d\mu = |a|\int|f(x)|d\mu + |b|\int|g(x)|d\mu\lt\infty.
+$$
+By proposition 7.4, since \(|af(x) + bg(x)| \leq |a||f(x)| + |b||g(x)|\), we can get 
+$$
+\int |af(x) + bg(x)|d\mu\leq \int |a||f(x)| + |b||g(x)| d\mu\lt\infty. 
+$$
+
+Follow the similar pattern, we can know that \(af\) is measurable and \(bg\) is measurable. Then we can get \(af+bg\) is measurable. Thus, we can get 
+$$
+af + bg\in \widetilde{L}^1(\mu).
+$$
+Let 
+$$
+h := f+g.
+$$
+We decompose \(f = f^+ - f^-\), \(g = g^+ - g^-\), and \(h = h^+ - h^-\). Therefore, 
+$$
+f^+ + g^+ - (f^- + g^-) = f+g = h = h^+ - h^-, 
+$$
+$$
+f^+ + g^+ - (f^- + g^-)=h^+ - h^-,
+$$
+$$
+f^+ + g^+ + h^- = h^+ + f^- + g^-.
+$$
+Since \(f\) is measurable and \(g\) is measurable, we can get \(h=f+g\) is measurable. By Definition 7.13.0, we can get 
+
+$$
+f^+ , g^+ , h^-, h^+ , f^- , g^-\in L^+
+$$
+Therefore, Corollary 7.8 implies that
+
+$$
+\int f^+ \, d\mu + \int g^+ \, d\mu + \int h^- \, d\mu = \int h^+ \, d\mu + \int f^- \, d\mu + \int g^- \, d\mu. \quad (7.23)
+$$
+Since \(f, g, h \in \widetilde{L}^1(\mu)\), all the integrals in \((7.23)\) are finite. Thus,
+$$
+\begin{align*}
+\int (f+g) \, d\mu &= \int h^+ \, d\mu - \int h^- \, d\mu && \text{(by definition of \(h\))} \\
+&= \int f^+ \, d\mu + \int g^+ \, d\mu - \int f^- \, d\mu - \int g^- \, d\mu && \text{(by \((7.23)\))} \\
+&= \int f \, d\mu + \int g \, d\mu.
+\end{align*}
+$$
+Thus, we get 
+$$
+\int (f+g)d\mu = \int fd\mu + \int gd\mu\qquad (1)
+$$
+If \(a=0\),
+$$
+\int afd\mu=a\int fd\mu=0.
+$$
+
+So we can assume that \(a \neq 0\). We can get \(af = (af)^+ - (af)^-\). If \(a > 0\), \((af)^+ = af^+, (af)^- = af^-\). Therefore, Proposition 7.4 (3), implies that
+$$
+\begin{align*}
+\int af \, d\mu &= \int (af)^+ \, d\mu - \int (af)^- \, d\mu \\
+&= a\int f^+ \, d\mu - a\int f^- \, d\mu && \text{(by Proposition 7.4(3))} \\
+&=a(\int f^+ \, d\mu - \int f^- \, d\mu)\\
+&= a\int f \, d\mu.
+\end{align*}
+$$
+If \(a \lt 0\), since 
+$$
+(-f)^+=\max\{-f(x), 0\} = f^-,
+$$
+$$
+(-f)^-=\max\{f(x), 0\} = f^+,
+$$
+we can get
+$$
+\begin{align*}
+\int af \, d\mu &= \int (af)^+ \, d\mu - \int (af)^- \, d\mu \\
+&=\int ((-a)(-f))^+ \, d\mu - \int ((-a)(-f))^- \, d\mu \\
+&= -a\int (-f)^+ \, d\mu - (-a)\int (-f)^- \, d\mu & \text{(by Proposition 7.4(3)) and }-a>0 \\
+&= -a\int f^- \, d\mu + a\int f^+ \, d\mu \\
+&=a(\int f^+ \, d\mu - \int f^- \, d\mu)\\
+&= a\int f \, d\mu.
+\end{align*}
+$$
+In general, we show that 
+$$
+\int af\ d\mu = a\int f\ d\mu.\qquad (2)
+$$
+Becasuse of (1) and (2), we can get
+$$
+\int (af + bg) \, d\mu = a \int f \, d\mu + b \int g \, d\mu.
+$$
+ In the case of \(\widetilde{L}^1(\mu, \mathbb{C})\) or \(\widetilde{L}^1(\mu, \mathbb{R}^n)\), we decompose the function into its real and imaginary parts (or coordinates) and apply what we just proved for real-valued functions. This completes the proof.
+
+ ---
+
+\(\textbf{Proposition 7.18}\) If \(f \in \tilde{L}^1(\mu)\), then 
+$$
+\left| \int f d\mu \right| \leq \int \left|f\right| d\mu.
+$$
+\(\textbf{Proof.}\) If \(f\) is real-valued, then
+$$
+\begin{align*}
+\left|\int f d\mu \right|&= \left|\int f^+ d\mu - \int f^- d\mu\right| \\
+&\leq \left|\int f^+ d\mu \right|+ \left|\int f^- d\mu\right| = \int f^+ d\mu + \int f^- d\mu = \int \left|f\right|d\mu.
+\end{align*}
+$$
+If \(f\) is complex-valued, we know that  
+$$
+\int f d\mu = \int u d\mu + i \int v d\mu \in \mathbb{C}.
+$$
+Since for any \(z\in\mathbb{C}\), \(z = re^{i\theta}\).
+
+ Hence, there exists some \(\theta \in [0, 2\pi)\) such that
+$$
+\int f d\mu = e^{i\theta} \left|\int f d\mu \right|,
+$$ 
+$$
+e^{-i\theta}\int f d\mu =e^{-i\theta} \cdot e^{i\theta} \left|\int f d\mu \right|,
+$$
+$$
+e^{-i\theta}\int f d\mu = \left|\int f d\mu \right|,
+$$
+$$
+\int e^{-i\theta}f d\mu = \left|\int f d\mu \right|\in\mathbb{R}.
+$$
+Since \(e^{-i\theta}=e^{i\cdot (-\theta)}=\cos(-\theta)+\sin(-\theta)i=\cos(\theta)-\sin(\theta)i\), we have
+$$
+e^{-i\theta} f = (\cos(\theta)-\sin(\theta)i)(u+vi) = \cos(\theta)u+\sin(\theta)v+i(\cos(\theta)v-\sin(\theta)u). 
+$$
+Hence 
+$$
+\int e^{-i\theta} f d\mu = \int (\cos(\theta)u+\sin(\theta)v)d\mu+i\int (\cos(\theta)v-\sin(\theta)u)d\mu.
+$$
+Since \(\left| \int f d\mu \right| =  \int e^{-i\theta} f d\mu\in\mathbb{R}\), we can get 
+$$
+ \int (\cos(\theta)u+\sin(\theta)v)d\mu+i\int (\cos(\theta)v-\sin(\theta)u)d\mu\in\mathbb{R},
+$$
+which implies that \(i\int (\cos(\theta)v-\sin(\theta)u)d\mu=0\). 
+
+Therefore, 
+$$
+\begin{align*}
+\left| \int f d\mu \right| &=  \int e^{-i\theta} f d\mu  =  \int \text{Re} \left( e^{-i\theta} f \right) d\mu =\int (\cos(\theta)u+\sin(\theta)v)d\mu \\
+&\leq \int \left|(\cos(\theta)u+\sin(\theta)v)\right|d\mu\leq \int \left| e^{-i\theta} f \right| d\mu. 
+\end{align*}
+$$
+Since 
+$$
+\begin{align*}
+ \left| e^{-i\theta} f \right|&= |\cos(\theta)u+\sin(\theta)v+i(\cos(\theta)v-\sin(\theta)u)|\\
+ &=\sqrt{(\cos(\theta)u+\sin(\theta)v)^2+(\cos(\theta)v-\sin(\theta)u)^2}\\
+ &=\sqrt{\cos^2(\theta)u^2+\sin^2(\theta)v^2+\cos(\theta)^2v^2+\sin^2(\theta)u^2}\\
+ &=\sqrt{u^2+v^2}\\
+ &=|f|,
+ \end{align*}
+$$
+we can know that 
+$$
+\left| \int f d\mu \right| =  \int e^{-i\theta} f d\mu\leq \int \left| e^{-i\theta} f \right| d\mu=\int \left| f \right| d\mu.
+$$
+The proof is complete.
+
+
+\(\textbf{Proposition 7.20}\). Let \(f \in L^+\) and \(t > 0\). Then,
+\(\mu(\{x : f(x) \geq t\}) \leq \frac{1}{t} \int f d\mu.\)
+
+\(\textbf{Proof}\) Let \(A_t = \{ x : f(x) \geq t \}\). Then \(A_t \in \mathcal{A}\) and for every \(x \in A_t\), \(f(x) \geq t\). Then
+\[
+ \frac{1}{\mu(A_t)} \int_{A_t} t \, d\mu(x) \leq \int_{A_t} f \, d\mu \leq \frac{1}{t} \int f \, d\mu. 
+\]
+
+
+---
+
+\(\textbf{Theorem 7.22 (Dominated Convergence Theorem)}\) 
+
+Let \(\{f_n\}_{n \in \mathbb{N}}, f : X \rightarrow \mathbb{R}\) be measurable functions and let \(g \in L^1(\mu) \cap L^+(\mu)\) such that
+1.  \(f(x) = \lim_{n \rightarrow \infty} f_n(x)\) for \(\mu\)-a.e. \(x \in X\),
+2. \(|f_n(x)| \leq g(x)\) for \(\mu\)-a.e. \(x \in X\) and every \(n \in \mathbb{N}\).
+
+Then \(f \in L^1(\mu)\), \(\displaystyle \int_X |f-f_n| d\mu = 0\), and \(\displaystyle \lim_{n \rightarrow \infty} \int f_n d\mu = \int f d\mu\).
+
+\(\textbf{Proof}\) Assume that \(f(x) = \lim_{n \rightarrow \infty} f_n(x)\) for \(\mu\)-a.e. \(x \in X\), and  \(|f_n(x)| \leq g(x)\) for \(\mu\)-a.e. \(x \in X\) and every \(n \in \mathbb{N}\). According to **Corollary 6.11}\), we can know that \(f\) is measurable. Inaddition, \(|f|\leq g\) on \(X\). Hence, for all \(n\in \mathbb{N}\),
+$$
+|f_n -f |\leq |f_n| + |f |\leq 2g. (\text{Triangle inequality}),
+$$
+$$
+0\leq 2g-|f_n| - |f |. 
+$$
+Since \(2g - |f_n - f | \geq 0\), according to Fatou's Lemma,
+$$
+\begin{align*}
+\int 2g d\mu &= \int \liminf_{n\to \infty} (2g - |f_n - f |) d\mu \leq \liminf_{n\to \infty} \int (2g - |f_n - f |) d\mu\\
+&= \int2gd\mu+\lim_{n\to\infty} \inf\left( - \int|f_n-f|dμ\right) = \int 2gd\mu - \lim_{n\to\infty} \sup \int|f_n-f|d\mu.
+\end{align*}
+$$
+Since \(g\in L^{1}(\mu)\cap L^+\), we know that \(\int gd\mu\lt\infty\). Hence, \(\int 2g d\mu=2\int g d\mu\lt\infty\). 
+Since  
+$$
+\int 2g d\mu=\int 2gd\mu - \lim_{n\to\infty} \sup \int|f_n-f|d\mu,
+$$
+we can now that 
+$$
+\lim_{n\to\infty} \sup \int|f_n-f|d\mu\leq 0,
+$$
+which implies that 
+$$
+0\leq\lim_{n\to\infty} \int|f_n-f|d\mu\leq\lim_{n\to\infty} \sup \int|f_n-f|d\mu\leq 0.
+$$
+Hence, 
+$$
+\lim_{n\to\infty} \int|f_n-f|d\mu=0.
+$$
+Since \(f_n\) is measurable and \(f\) is measurable, \(f_n-f\) is measurable. 
+
+# Modes of convergence
+\(\textbf{Definition 6.12}\) Given a measure space \((X,\mathcal{A},\mu)\), we say that a property \(P(x)\) is satisfied \(\mu\)-almost everywhere (\(\mu\)-a.e.) if there exists \(N \in A\) with \(\mu(N) = 0\) such that \(P(x)\) holds in \(X \setminus N\).
+
+---
+
+\(\textbf{Definition 8.0 (Uniformly Convergence)}\) 
+
+A sequence of functions \(\{f_n\}\) with domain \(D\) converges uniformly to a function \(f\) if given any \(\varepsilon > 0\), there is a positive integer \(N\) such that \(|f_n(x) - f(x)| \lt \varepsilon\) for all \(x \in D\) whenever \(n \geq N\). 
+
+\(\textbf{NOTE}\) The above inequality must hold for all \(x\) in the domain, and that the integer \(N\) depends only on \(\varepsilon\).
+
+---
+
+\(\textbf{Definition 8.1 (Modes of Convergence)}\)
+
+ Let \((X,\mathcal{A},\mu)\) be a measure space and let \(\{f_n\}_{n \in \mathbb{N}}, f : X \rightarrow \mathbb{R}\) be measurable functions. We say that:
+    
+1. \(\{f_n\}_{n \in \mathbb{N}}\) converges \(\mu\)-almost everywhere to \(f\) if there exists a set \(N \in A\) with \(\mu(N) = 0\) such that \(f_n(x) \rightarrow f(x)\) for all \(x \in X \setminus N\) (see also Definition 6.12). We denote \(\mu\)-almost everywhere convergence by 
+$$
+f_n \xrightarrow{\text{a.e.}} f.
+$$
+
+2. \(\{f_n\}_{n \in \mathbb{N}}\) converges almost uniformly to \(f\) if for every \(\varepsilon > 0\) there exists some \(B \in \mathcal{A}\) such that \(\mu(B) \lt \varepsilon\) and \(f_n \rightarrow f\) uniformly on \(X \setminus B\). We will denote almost uniform convergence by 
+$$
+f_n \xrightarrow{\text{a.u.}} f.
+$$
+3. \(\{f_n\}_{n \in \mathbb{N}}\) converges in measure to \(f\) if for all \(\epsilon > 0\),
+    $$
+    \lim_{n \rightarrow \infty} \mu(\{x \in X : |f_n(x) - f(x)| > \varepsilon\}) = 0.
+    $$
+    Convergence in measure is denoted by 
+    $$
+    f_n \xrightarrow{\mu} f.
+    $$
+4. \(\{f_n\}_{n \in \mathbb{N}}\) converges in \(L^p(\mu)\) to \(f\), for \(p \in (0,\infty)\), if 
+    $$
+    \lim_{n \rightarrow \infty} \int_X |f-f_n|^p d\mu\ = 0.
+    $$
+    We denote \(L^p(\mu)\)-convergence by 
+    $$
+    f_n \xrightarrow{L^p} f.
+    $$.
+
+***
+
+\(\textbf{Theorem 8.3.}\) Let \((X, \mathcal{A}, \mu)\) be a measure space. Let \(\{f_n\}_{n\in\mathbb{N}}, f:X\to\mathbb{R}\) be measurable functions. Then
+1. \(f_n \xrightarrow{\text{a.u.}} f \Rightarrow f_n \xrightarrow{\text{a.e.}} f\),
+2. \(f_n \xrightarrow{\text{a.u.}} f \Rightarrow f_n \xrightarrow{\mu} f\).
+
+\(\textbf{Proof (1)}\) Since \(f_n\xrightarrow{\text{a.u.}} f\) for all \(k\in \mathbb{N}\) there exists \(B_k\in \mathcal{A}\) such that \(\mu(B_k)\lt\frac{1}{k}\) and \(f_n\rightarrow f\) for \(x\in X\setminus B_k\) uniformly. (It is just the definition) Let 
+$$
+B = \bigcap_{k=1}^\infty B_k. 
+$$
+Since \(B\subset B_k\) for any \(k\in\mathbb{N}\), we can know that
+$$
+\mu(B)\leq \mu(B_k)\lt\frac{1}{k},
+$$
+for all \(k\in\mathbb{N}\). Thus, we can conclude that \(\mu(B)=0\). Since \(f_n\rightarrow f\) uniformly for all \(x\in X\setminus B_k\), we can get that \(f_n\rightarrow f\) uniformly for all \(x\in \bigcup_{k=1}^\infty (X\setminus B_k)\).
+
+Since 
+$$
+\bigcup_{k=1}^\infty (X\setminus B_k)=(X\setminus B_1)\bigcup(X\setminus B_2)\bigcup\dots = X\setminus \bigcap_{k=1}^\infty B_k=X\setminus B,
+$$
+we can say that \(f_n\rightarrow f\) uniformly for all \(x\in X\setminus B\) and \(\mu(B)=0\), which implies that \(f_n\xrightarrow{\text{a.e.}} f\) (Definition). 
+
+\(\textbf{Proof (2)}\) Suppose that \(f_n\xrightarrow{\text{a.u.}} f\). Let \(\varepsilon > 0\), \(n\in \mathbb{N}\), and define
+$$
+A^{\varepsilon}_n =\{x:|f_n(x)-f(x)|\geq \varepsilon\}.
+$$
+Since \(f_n\xrightarrow{\text{a.u.}} f\), for every \(\frac{1}{k}\), there exists \(B_k\) such that \(\mu(B_k)\lt\frac{1}{k}\) and \(f_n\rightarrow f\) uniformly for all \(x\in X\setminus B_k\). Thus, 
+$$
+\lim_{k\to\infty}\mu(B_k)\lt\lim_{k\to\infty}\frac{1}{k}=0,
+$$
+which implies that \(\lim_{n\to\infty}\mu(B_k)=0\). Fix \(\delta>0\). There exists \(k_0\) such that \(\frac{1}{k_0}\lt\delta\). Hence, \(\mu(B_{k_0})\lt\delta\) and, for all \(k'>k_0\), we have \(\mu(B_{k'})\lt\frac{1}{k'}\lt\frac{1}{k_0}\lt\delta\). Given \(\varepsilon>0\) (defined earlier), since \(f_n\rightarrow f\) uniformly on \(X\setminus B_{k_0}\), there exists \(N\in\mathbb{N}\) such that 
+$$
+|f_n(x)-f(x)|\lt\varepsilon,
+$$
+for all \(n>N\) and for all \(x\in X\setminus B_{k_0}\). 
+Since
+$$
+A^{\varepsilon}_n =\{x:|f_n(x)-f(x)|\geq \varepsilon\},
+$$
+we can get that \(A_n^{\varepsilon}\cap (X\setminus B_{k_0})=\emptyset\) for all \(n\geq N\). Hence, we have 
+$$
+A_n^{\varepsilon}\subset B_{k_0},
+$$
+for \(n\geq N\). Thus, 
+$$
+\mu(A_n^{\varepsilon})\leq \mu(B_{k_0})\lt\delta,
+$$
+for all \(n\geq N\). Since \(\delta>0\) and \(\delta\) is arbitary, we can get
+$$
+\lim_{n\to \infty}\mu(A_n^{\varepsilon}) = \lim_{n\to \infty}\mu(\{x\in X: |f_n(x)-f(x)|\geq \varepsilon\})=0\lt\delta.
+$$
+Therefore, \(f_n\xrightarrow{\mu} f\) by the definition. \(\Box\)
+
+***
+\(\textbf{Theorem 8.4 (Egorov)}\) Let \((X, \mathcal{A}, \mu)\) be a finite measure space and let \((Y, d)\) be a separable metric space. Let \(\{f_n\}_{n\in\mathbb{N}}, f:X\to Y\) be measurable functions. If \(f_n \xrightarrow{\text{a.e.}} f\) \(\mu\)-a.e., then \(f_n \xrightarrow{\text{a.u.}} f\); i.e., for every \(\epsilon > 0\), there exists \(E \in A\) such that \(\mu(E) \lt \epsilon\) and \(f_n \rightarrow f\) uniformly on \(X\setminus E\).
+
+\(\textbf{Proof.}\) Let \(\{f_n\}_{n\in\mathbb{N}}, f:X\to Y\) be measurable functions and \(f_n \xrightarrow{\text{a.e.}} f\) \(\mu\)-a.e. Define 
+$$
+C_{i,j} = \bigcup_{n=j}^\infty\left\{x : d(f_n(x),f (x))\geq 2^{-i}\right\}.
+$$
+Define that 
+$$
+F_n := (f_n, f): X\to Y\times Y. 
+$$
+Let \((U_m\times U_k)_{m,k\in\mathbb{N}}\) be a countable open base of \(Y\times Y\).
+$$
+\begin{align*}
+F_n^{-1}(U_m \times U_k) &= \{x \in X: F_n(x) \in U_m \times U_k\}\\
+& = \{x \in X: f_n(x) \in U_m \text{ and } f(x) \in U_k\} \\
+&= f_n^{-1}(U_m) \cap f^{-1}(U_k).
+\end{align*}
+$$ 
+Since \(f_n\) and \(f\) are measurable, we can see that \(f_n^{-1}(U_m)\in\mathcal{A}\) and \(f^{-1}(U_k)\in\mathcal{A}\). Hence, 
+$$
+F_n^{-1}(U_m \times U_k)=f_n^{-1}(U_m) \cap f^{-1}(U_k)\in\mathcal{A}.
+$$
+Therefore, \(F_n\) is measurable. Define a distance function \(d\) such that 
+$$
+d: Y\times Y \to\mathbb{R}. 
+$$
+Since \(d\) is continuous (It is a property of distance function), \(d\circ F_n : X\to \mathbb{R}\) is measurable. Thus, 
+$$
+\{x : d\circ F_n(x)\geq 2^{-i} \} = (d\circ F_n)^{-1}([2^{-i} , +∞))\in\mathcal A.
+$$
+In that case, we can get 
+$$
+\left\{x : d(f_n(x),f (x))\geq 2^{-i}\right\}=\{x : d\circ F_n(x)\geq 2^{-i} \} = (d\circ F_n)^{-1}([2^{-i} , +∞)).
+$$
+Since \(C_{i, j}=\bigcup_{n=j}^\infty\left\{x : d(f_n(x),f (x))\geq 2^{-i}\right\},\) we can see that 
+$$
+C_{i,1}\supset C_{i,2}\supset C_{i, 3}\supset \dots.
+$$
+Hence, the sequence \((C_{i,j})^\infty_{j=1}\) is decreasing. Since 
+$$
+\left\{x : d(f_n(x),f (x))\geq 2^{-i}\right\}=(d\circ F_n)^{-1}([2^{-i} , +\infty))\in\mathcal A,
+$$
+we can know that 
+$$
+C_{i, j}=\bigcup_{n=j}^\infty\left\{x : d(f_n(x),f (x))\geq 2^{-i}\right\}=\bigcup_{n=j}^\infty(d\circ F_n)^{-1}([2^{-i} , +\infty))\in\mathcal{A}. 
+$$
+Since \((X, \mathcal A, \mu)\) is a finite measure space, 
+$$
+\mu(C_{i, j})\leq \mu(X)\lt\infty. 
+$$
+
+Since \((C_{i,j})^\infty_{j=1}\) is a decreasing sequence of sets in \(\mathcal A\), and \(\mu(C_{i, j})\lt\infty\), according to Proposition 2.3 (6), 
+$$
+\mu\left(\bigcap_{j=1}^\infty C_{i, j}\right) = \lim_{j\to\infty}(C_{i, j}). 
+$$
+Let \(x\in\bigcap^\infty_{j=1}C_{i,j}\). Then \(x\in C_{i,j}= \bigcup^\infty_{n=j}\{x : d(f_n(x),f (x))\geq 2^{-i}\}\) for all \(j\in\mathbb{N}\). Fix the \(x\in \bigcap^\infty_{j=1}C_{i,j}\), we can know now that 
+$$
+d(f_n(x)-f(x))\geq 2^{-i}>0. 
+$$
+Thus, \(f_n\not\to f\) uniformly and \(f_n(x)\not\to f(x)\) when \(x\in  \bigcap^\infty_{j=1}C_{i,j}\). Since \(f_n\xrightarrow{\text{a.e.}} f\), we know that \(f_n\to f\) for all \(x\in X\setminus N\) where \(\mu(N)=0\). Hence, we can know that 
+$$
+\mu\left(\bigcap^\infty_{j=1}C_{i,j}\right)=0.
+$$
+And  
+$$
+\lim_{j\to\infty}(C_{i, j}) =\mu\left(\bigcap^\infty_{j=1}C_{i,j}\right)=0.
+$$
+Since \((C_{i, j})_{j=1}^\infty\) is a decreasing sequence, and \(\mu(C_{i, j})\lt\infty\). For any \(\epsilon>0\) and \(i\in\mathbb{N}\) there exists \(j_i\) such that 
+$$
+\mu(C_{i, j_i})\lt\varepsilon 2^{-i}.
+$$
+Since 
+$$
+C_{i,j_i} = \bigcup_{n=j_i}^\infty\left\{x : d(f_n(x),f (x))\geq 2^{-i}\right\},
+$$
+then we can know that 
+$$
+\begin{align*}
+C_{i,j_i}^c &=X\setminus C_{i,j_i} \\
+&= X\setminus \bigcup_{n=j_i}^\infty\left\{x : d(f_n(x),f (x)\geq 2^{-i}\right\}\\
+&=\bigcap_{n=j_i}^\infty \left(X\setminus \left\{x : d(f_n(x),f (x)\geq 2^{-i}\right\}\right)\\
+&=\bigcap_{n=j_i}^\infty \left(\left\{x : d(f_n(x),f (x)\lt 2^{-i}\right\}\right).
+\end{align*}
+$$
+Hence, if \(x\in \bigcap_{i=1}^\infty C^c_{i, j_i}\), then for all \(i\in\mathbb{N}\),
+$$
+d(f_n(x),f(x)) \lt 2^{-i},
+$$
+for all \(n\geq j_i\).
+Fix \(\delta>0\), there always exists \(i'\in\mathbb{N}\) such that 
+$$
+2^{-i'}\lt\delta.
+$$
+Fix this \(i'\), we know that 
+$$
+|f_n(x)-f(x)| = d(f_n(x),f(x)) \lt 2^{-i'}\lt\delta,
+$$
+for all \(n\geq j_{i'}\). Thus, it shows that \(f_n\rightarrow f\) uniformly for all \(x\in \bigcap_{i=1}^\infty C^c_{i, j_i}=\bigcap_{i=1}^\infty (X\setminus C_{i, j_i})=X\setminus \bigcup_{i=1}^\infty C_{i, j_i}\) (By definition).
+$$
+\mu\left( \bigcup_{i=1}^\infty C_{i, j_i}\right)\leq \sum_{i=1}^\infty \mu(C_{i, j_i})\lt \sum_{i=1}^\infty \varepsilon\cdot 2^{-i}= \varepsilon\sum_{i=1}^\infty  2^{-i}=\varepsilon
+$$
+Thereofore, we show that \(f_n\xrightarrow{\text{a.u.}} f\) by the definition. 
+
+
+***
+\(\textbf{Theorem 8.6 (Lebesgue).}\) Let \((X,\mathcal{A},\mu)\) be a measure space such that \(\mu(X) \lt \infty\). Let \(\{f_n\}_{n \in \mathbb{N}}, f : X \to \mathbb{R}\) be measurable functions. Then,
+$$
+f_n\xrightarrow{\text{a.e.}} f\Rightarrow f_n\xrightarrow{\mu}f.
+$$.
+\(\textbf{Proof}\) Suppose that \(f_n\xrightarrow{\text{a.e.}} f\). Let \(\varepsilon > 0\). We set
+$$
+E_i=\{x:|f_i(x)-f(x)|\geq \varepsilon\},
+$$
+for \(i\in\mathbb{N}\) Let \(F_n:= \bigcup_{i=n}^\infty E_i\) where \(n\in\mathbb{N}\).
+We can see that 
+$$
+F_1\supset F_2\supset \dots,
+$$
+so \((F_n)_{n=1}^\infty\) is a decreasing sequence. Define \(d: \mathbb{R}\times \mathbb{R}\to\mathbb{R}\) as a continuous function and \(K_n: X\rightarrow \mathbb{R}\times\mathbb{R}\) such that
+$$
+K_n = (f_n, f). 
+$$
+Since we know that \(d\) is continuous, and \(K_n\) is measurable, we can get the map \(d\circ K_n\) is measurable. 
+
+Since \((X, \mathcal A, \mu)\) is a finite measure, according to proposition 2.3 (6), we have
+$$
+\mu\left(\bigcap_{n=1}^\infty F_n\right)=\lim_{n\to\infty}\mu(F_n).
+$$
+Since 
+$$
+\mu\left(\bigcap_{n=1}^\infty F_n\right)=\mu\left(\bigcap_{n=1}^\infty \bigcup_{i=n}^\infty E_i\right),
+$$
+if \(x\in \bigcap_{n=1}^\infty \bigcup_{i=n}^\infty E_i\), 
+$$
+|f_n(x)-f(x)|>\varepsilon,
+$$
+for all \(\varepsilon>0\) and \(i\in\mathbb{N}\). Hence, 
+\(f_n\not\to f\) for all \(x\in  \bigcap_{n=1}^\infty \bigcup_{i=n}^\infty E_i\). Since \(f_n\xrightarrow{\text{a.e.}} f\), we can know that 
+$$
+\mu\left(\bigcap_{n=1}^\infty \bigcup_{i=n}^\infty E_i\right)=\mu\left(\bigcap_{n=1}^\infty F_n\right)=\lim_{n\to\infty}\mu(F_n)=0. (\text{By definition of almost convergences everywhere})
+$$
+Thus, 
+$$
+\mu(\{x : |f_n(x) - f (x)|\geq\varepsilon\}) = \mu(E_n)\leq \mu.(F_n)
+$$
+Since 
+$$
+\lim_{n\to\infty}\mu(F_n)=0,
+$$
+we can get
+$$
+\lim_{n\to\infty}\mu(\{x : |f_n(x) - f (x)|\geq\varepsilon\}) )\leq \lim_{n\to\infty}\mu(F_n)=0,
+$$
+which implies that
+$$
+\lim_{n\to\infty}\mu(\{x : |f_n(x) - f (x)|\geq\varepsilon\})=0.
+$$
+By the definition of Convergence in measure, we proved that 
+$$
+f_n\xrightarrow{\mu} f. 
+$$
+
+
+
+***
+\(\textbf{Proposition 8.9.}\) Let \((X,\mathcal{A},\mu)\) be a measure space. Let \(\{f_n\}_{n \in \mathbb{N}}, f : X \to \mathbb{R}\) be measurable functions. Then,
+$$
+ f_n \xrightarrow\mu f \quad \Rightarrow \quad \text{there exists } (n_i)_{i \in \mathbb{N}} \text{ such that } f_{n_i} \xrightarrow{\text{a.u.}} f.
+$$ 
+
+\(\textbf{Proof}\). Suppose that \(f_n\xrightarrow{\mu} f\). Hence, we know that for any \(i\in\mathbb{N}\setminus\{0\}\), we can get
+$$
+\lim_{n\rightarrow \infty}\mu\left(x: X: |f_n-f|>\frac{1}{i}\right)=0.
+$$
+Thus, there exists \(n_i\in\mathbb{N}\) such that 
+$$
+\mu\left(x: X: |f_n-f|>\frac{1}{i}\right)\lt 2^{-i},
+$$
+for all \(n\geq n_i\). We assume that \((n_i)_{i\in\mathbb{N}}\) is strictly increasing. Define that 
+$$
+B_k:=\bigcup_{i=k}^\infty \left\{x\in X: |f_{n_i}(x)-f(x)|\geq \frac{1}{i}\right\},
+$$
+and 
+$$
+F_k :=X\setminus \bigcup_{i=k}^\infty\left\{x\in X: |f_{n_i}(x)-f(x)|\geq \frac{1}{i}\right\}\:=X\setminus B_k.
+$$
+Since 
+$$
+X\setminus F_k = X\setminus (X\setminus B_k) = B_k,
+$$
+we can get 
+$$
+\begin{align*}
+\mu(X\setminus F_k)&=\mu(B_k)\\
+& = \mu\left(\bigcup_{i=k}^\infty \left\{x\in X: |f_{n_i}(x)-f(x)|\geq \frac{1}{i}\right\}\right)\\
+&\leq \sum_{i=k}^\infty μ\left(\left\{x\in X: |f_{n_i}(x)-f(x)|\geq \frac{1}{i}\right\}\right)\lt\sum_{i=k}^\infty 2^{-i}=2^{-k+1}.
+\end{align*}
+$$
+Now let \(\varepsilon > 0\) and choose \(k'\in\mathbb{N}\) such that \(2^{-k'+1} \lt \varepsilon\). Since we got
+$$
+\mu(B_k)=\mu(X\setminus F_k)\lt 2^{-k+1},
+$$
+from above. Then we can get 
+$$
+\mu(B_{k'})=\mu(X\setminus F_{k'})\lt2^{-k'+1}\lt\varepsilon.
+$$
+Since 
+$$
+F_k :=X\setminus \bigcup_{i=k}^\infty\left\{x\in X: |f_{n_i}(x)-f(x)|\geq \frac{1}{i}\right\},
+$$
+we can get 
+$$
+\begin{align*}
+F_k &=\bigcap_{i=k}^\infty \left(X\setminus \left\{x\in X: |f_{n_i}(x)-f(x)|\geq \frac{1}{i}\right\}\right)\\
+&=\bigcap_{i=k}^\infty \left( \left\{x\in X: |f_{n_i}(x)-f(x)|\lt \frac{1}{i}\right\}\right).
+\end{align*}
+$$
+
+Let \(\delta>0\) and choose some \(i\in\mathbb{N}\) such that \(i^{-1} \lt\delta\). 
+Let \(x\in F_k\), we can know that when \(j\geq \max\{k, i\}\), if \(x\in F_k\), then we can get
+$$
+|f_{n_j} (x) - f (x)| \lt 1/j ≤ 1/i=1/k \lt \delta.
+$$
+Thus, for any \(\varepsilon>0\), we can know that there exists \(F_k\in\mathcal{A}\) such that \(f_n\rightarrow f\) uniformly on \(F_k\) and \(\mu(X\setminus F_k)\lt\epsilon\). \(\Box\)
+
+***
+
+\(\textbf{Corollary 8.10}\) Let \((X,\mathcal{A},\mu)\) be a measure space. Let \(\{f_n\}_{n \in \mathbb{N}},f : X \to \mathbb{R}\) be measurable functions. Then,
+$$
+f_n\xrightarrow{\mu} f\quad \Rightarrow \quad \text{there exists} (n_i)_{i\in\mathbb{N}} \text{ such that } f_{n_i} \xrightarrow{\text{a.e.}} f.
+$$
+
+
+
+# Product measures, Tonelli and Fubini
+
+\(\textbf{Definition 9.1.}\) Let \((X, \mathcal{A})\) and \((Y, \mathcal{B})\) be two measurable spaces. Any set of the form 
+$$
+A \times B \subseteq X \times Y
+$$
+such that \(A \in \mathcal{A}\) and \(B \in \mathcal{B}\) will be called a measurable rectangle. Let also 
+$$
+\mathcal{R} = \{A \times B: A \in \mathcal{A}, B \in \mathcal{B}\}.
+$$ 
+We will denote by \(\mathcal{A} \times \mathcal{B}\) the \(\sigma\)-algebra generated by \(\mathcal{R}\), i.e., \(M(\mathcal{R}) = \mathcal{A} \times \mathcal{B}\). The \(\sigma\)-algebra \(\mathcal{A} \times \mathcal{B}\) will be called the product \(\sigma\)-algebra of \(\mathcal{A}\) and \(\mathcal{B}\).
+***
+
+\(\textbf{Definition 9.3.}\) If \(E \subseteq X \times Y\), \(x \in X\), \(y \in Y\), let
+$$
+E_x = \{y \in Y: (x,y) \in E\}, \text{the  }x\text{-section of }E 
+$$
+$$
+E_y = \{x \in X: (x,y) \in E\}, \text{the  }y\text{-section of }E 
+$$
+be the \(x\)-section and \(y\)-section of \(E\), respectively. We leave the proof as an exercise.
+
+Moreover, if \(f\) is a function on \(X \times Y\), we define
+$\(f_x(y) = f(x,y), \quad f_x \text{ is a function on } Y,\)$
+and
+$\(f_y(x) = f(x,y), \quad f_y \text{ is a function on } X.\)$
+\(\textbf{Note:}\) For \(E_x\) and \(E_y\), \(x\) and \(y\) is are fixed points. 
+***
+\(\textbf{Proposition 9.4.}\) Let \((X, A), (Y, B)\) be measurable spaces.
+1. If \(E \in \mathcal{A} \times \mathcal{B}\), then \(E_x \in \mathcal{B}\) and \(E_y \in \mathcal{A}\).
+2. If \(f\) is \((\mathcal{A} \times \mathcal{B})\)-measurable, then \(f_x\) is \(\mathcal{B}\)-measurable for all \(x \in X\) and \(f_y\) is \(\mathcal{A}\)-measurable for all \(y \in Y\).
+
+\(\textbf{Proof (1).}\)
+Let 
+$$
+\mathcal{F} = \{E \subseteq X \times Y: E_x \in \mathcal{B} \text{ for all } x \in X\}.
+$$
+Let \(A\subset X\) and \(B\subset Y\), by definition, 
+$$
+(A\times B)_x = \{y\in Y: (x, y)\in A\times B\}
+$$
+Observe that \(A\times B\) has a rectangle shape (Probably not a whole rectangle). If \(x \in A\), we have \((A \times B)_x = B\). If \(x \notin A\), then we have \((A \times B)_x = \emptyset\). In general,
+$$
+(A\times B)_x = \{y\in Y: (x, y)\in A\times B\}=
+\begin{cases}
+B, & \text{if } x\in A\\
+\emptyset, &\text{if } x\notin A
+\end{cases}
+$$
+
+Hence, if \(B \in \mathcal{B}\), then \((A \times B)_x \in \mathcal{B}\) for all \(x \in X\) since \(B\in \mathcal{B}\) and \(\emptyset\in \mathcal{B}\) (And there are only possibilities). In particular, if \(A \times B\) is a measurable rectangle (i.e, \(A\in \mathcal{A}\) and \(B\in\mathcal{B}\)), we have \(A \times B \in \mathcal{F}\) (defined at the very beginning). 
+
+For any \(E \subseteq X \times Y\), fix \(x\in X\),
+$$
+(E^c)_x =\{y\in Y: (x, y)\in E^c=(X\times Y)\setminus E\}=Y\setminus\{y\in Y: (x, y)\in E\}=Y \setminus E_x,
+$$
+then we can get
+$\((E^c)_x = (E_x)^c.\)$
+(a) Thus, if \(E\in \mathcal{F}\), which implies that \(E_x\in\mathcal{B}\). If \(E_x\in\mathcal{B}\), then \((E_x)^c\in \mathcal{B}\). Since \((E_x)^c=(E^c)_x\), which implies that \((E^c)_x\in\mathcal{B}\), it shows that \(E^c\in\mathcal{F}\). 
+
+Let \((E_n)_{n\in\mathbb{N}}\) be a sequence of subsets of \(X\times Y\). Then we can get
+$$
+\left(\bigcup_{n=1}^\infty E_n\right)_x =\left\{y\in Y :(x,y)\in\left(\bigcup_{n=1}^\infty E_n\right)\right\}=\bigcup_{n=1}^\infty\{y∈Y :(x,y)\in E_n \}=\bigcup_{n=1}^\infty(E_n)_x. 
+$$
+(b) If \((E_n)_{n\in\mathbb{N}}\) is a sequence in \(\mathcal{F}\), then, for each \(n\in\mathbb{N}\), we have \((E_n)_x\in\mathcal{B}\). Since \(\mathcal{B}\) is \(\sigma\)-algebra, 
+$$
+\bigcup_{n=1}^\infty(E_n)_x\in\mathcal{B}. 
+$$
+Since \(\left(\bigcup_{n=1}^\infty E_n\right)_x=\bigcup_{n=1}^\infty(E_n)_x\), we can get
+$$
+\left(\bigcup_{n=1}^\infty E_n\right)_x\in\mathcal{B},
+$$
+which implies that 
+$$
+\bigcup_{n=1}^\infty E_n\in\mathcal{F}. 
+$$
+Because of (a) and (b), we can say that \(\mathcal{F}\) is \(\sigma\)-algebra. 
+
+SInce \(\mathcal{A}\times\mathcal{B}\) is \(\sigma\)-algebra generated by \(\{A\times B: A\in\mathcal{A}, B\in\mathcal{B}\}\), and, for any \(A\times B\in\mathcal{A}\times\mathcal{B}\), we can get \(A\times B\in\mathcal{F}\), which implies that 
+$$
+\mathcal{A}\times\mathcal{B}\subset \mathcal{F}.
+$$
+Hence, if \(E\in\mathcal{A}\times\mathcal{B}\), we know that \(E\in \mathcal{F}\). If \(E\in \mathcal{F}\), then \(E_x\in\mathcal{B}\). An identical argument shows that if \(E\in \mathcal{A}\times\mathcal{B}\) then \(E_y\in \mathcal{A}\) for all \(y\in Y\). 
+\(\Box\)
+
+\(\textbf{Proof (2).}\)
+
+Let \(f:X\times Y \to \mathbb{C}\) be an \(\mathcal{A} \times \mathcal{B}\)-measurable function. For \(x \in X\) and \(C \subseteq \mathbb{C}\),
+$$
+\begin{align*}
+(f^{-1}(C))_x &= \{y \in Y: (x,y) \in f^{-1}(C)\} \\
+&= \{y \in Y: f((x,y)) \in C\} \\
+\end{align*}
+$$
+ Since \(f_x(y)=f((x, y))\) by definition, we can get
+$$
+\begin{align*}
+(f^{-1}(C))_x &= \{y \in Y: (x,y) \in f^{-1}(C)\} \\
+&= \{y \in Y: f((x,y)) \in C\} \\
+&= \{y \in Y: f_x(y) \in C\}\\
+&=\{y\in Y: y\in f_x^{-1}(C)\}\\
+& = f_x^{-1}(C). 
+\end{align*}
+$$
+Since \(f\) is an \(\mathcal{A}\times\mathcal{B}\)-measurable function, Therefore, \(f^{-1}(C) \in A \times B\), if \(C\subset \mathcal{B}(\mathbb{C})\), then \(f^{-1}(C)\subset \mathcal{A}\times\mathcal{B}\). 
+By the previous proof, we know that if \(E\in \mathcal{A}\times\mathcal{B}\), then \(E_x\in \mathcal{B}\) and \(E_y\in \mathcal{A}\). Hence \((f^{-1}(C))_x \in \mathcal{B}\) for \(C \in \mathcal{B}(\mathbb{C})\). Since 
+$$
+(f^{-1}(C))_x=f_x^{-1}(C),
+$$
+we can get \(f_x^{-1}(C)\in\mathcal{B}\)
+
+ Hence, for all \(x \in X\), the functions \(f_x\) are \(\mathcal{B}\)-measurable. An identical argument shows that the functions \(f_y\) are \(\mathcal{A}\)-measurable for all \(y \in Y\). The proof of (2) is complete. \(\Box\).
+****
+ \(\textbf{Definition 9.5.}\) Let \(X\) be a set and let \(\mathcal{C} \subseteq \mathcal{P}(X)\). The collection \(\mathcal{C}\) will be called a monotone class if:
+1. For every increasing sequence \((E_j)_{j \in \mathbb{N}}\) with \(E_j \in \mathcal{C}\), we have 
+$$
+\bigcup_{j=1}^\infty E_j \in \mathcal{C}.
+$$
+2. For every decreasing sequence \((E_j)_{j \in \mathbb{N}}\) with \(E_j \in \mathcal{C}\), we have 
+$$
+\bigcap_{j=1}^\infty E_j \in \mathcal{C}.
+$$
+***
+\(\textbf{Remark 9.6.}\) Every \(\sigma\)-algebra is a monotone class. Obviously, there exist all kinds of monotone classes \(M\) that are not \(\sigma\)-algebras. For example, if \(X = \{1, 2, 3\}\), then \(M = \{\emptyset,\{1\}, \{2\},\{3\},X\}\) is a monotone class but it's not an algebra because it is not closed under finite unions.
+
+***
+\(\textbf{Remark 9.7.}\) Arbitrary intersection of monotone classes is a monotone class. In particular, if \(\mathcal{E} \subseteq \mathcal{P}(X)\), we denote
+$\(\mathrm{Mon}(\mathcal{E}) = \bigcap \{\mathcal{C} \subseteq \mathcal{P}(X) : \mathcal{C} \text{ is a monotone class and } \mathcal{E} \subseteq \mathcal{C}\}\)$
+\(\mathrm{Mon}(\mathcal{E})\) is the smallest monotone class containing \(\mathcal{E}\) and it is called the monotone class generated by \(\mathcal{E}\).
+***
+\(\textbf{Theorem 9.8 (Monotone Class Lemma).}\) Let \(\mathcal{A}\) be an algebra on a set \(X\). Then 
+$$
+\mathrm{Mon}(\mathcal{A}) = \mathcal{M}(\mathcal{A}),
+$$
+i.e. the monotone class generated by \(\mathcal{A}\) coincides with the \(\sigma\)-algebra generated by \(\mathcal{A}\).
+
+
+
+\(\textbf{Proof}\). By \(\textbf{Remark 9.6}\) \(\mathcal{M}(\mathcal{A})\) is a monotone class hence \(\mathrm{Mon}(\mathcal{A})\subset \mathcal{M}(\mathcal{A})\). Therefore we only have to show that
+$$
+\mathrm{Mon}(\mathcal{A})\supset \mathcal{M}(\mathcal{A})
+$$
+For every \(\mathcal{P}\subset \mathcal{P}(X)\), define
+$$
+\widetilde{\mathcal{P}} = \{A ⊂ X : A\setminus E, E\setminus A, A\cap E \in \mathrm{Mon(\mathcal{A})}\text{ for all }E\in \mathcal{P} \}.
+$$
+\(\textbf{Step 1. \(\widetilde{\mathcal{P}}\) is a monotone class.}\)
+
+Let \((F_i)i\in{\mathbb{N}}\) be an increasing sequence in \(\widetilde{\mathcal{P}}\) and let \(E\in \mathcal{P}\) for any \(E\). Since \(F_i\in \widetilde{\mathcal{P}}\), according to the definition of \(\widetilde{\mathcal{P}}\), \(F_i\setminus E\in\mathrm{Mon}(\mathcal{A})\). Since
+
+$$
+F_1\subset F_2\subset F_3\subset \dots,
+$$
+we can get
+
+$$
+(F_1\setminus E) \subset (F_2\setminus E)\subset (F_3\setminus E)\subset \dots,
+$$
+
+which implies that \((F_i\setminus E)_{i\in\mathbb{N}}\) is an increasing sequence. According to the definition of monotone class, we can know that 
+$$
+\bigcup_{i\in\mathbb{N}}(F_i\setminus E)\in\mathrm{Mon}(\mathcal{A}).
+$$
+
+For the same reason, we can get 
+$$
+\bigcup_{i\in\mathbb{N}}(F_i\cap E)\in \mathrm{Mon}(\mathcal{A}).
+$$
+Since 
+$$
+E\setminus \bigcup_{i\in\mathbb{N}} F_i =\bigcap_{i\in\mathbb{N}} E\setminus F_i
+$$
+Since \((F_i)\) is increasing, we can know that \( (E\setminus F_i)_{i\in\mathbb{N}}\) is decreasing. By the definition of \(\widetilde{\mathcal{P}}\), \(E \setminus F_i \in \mathrm{Mon}(\mathcal{A})\) for all \(i\), which implies that 
+$$
+E\setminus \bigcup_{i\in\mathbb{N}} F_i =\bigcap_{i\in\mathbb{N}} E\setminus F_i\in\widetilde{\mathcal{P}}.
+$$
+Hence we can get 
+$$
+ \bigcup_{i\in\mathbb{N}} F_i\in\widetilde{\mathcal{P}}.
+$$
+In the same manner one can show 
+$$
+ \bigcap_{i\in\mathbb{N}} F_i\in\widetilde{\mathcal{P}}.
+$$
+We have show that \(\widetilde{\mathcal{P}}\) is a monotone class. 
+
+\(\textbf{Step 2: \(\mathcal{A}\subset \widetilde{\mathcal{A}}\)}\)
+
+Since \(\mathcal{A}\) is an algebra, using de Morgan's laws,if \(A, E\in \mathcal{A}\), then we can get \(A\setminus E=A\cap E^c\in\mathcal{A}\).  For the same reason, we can know that \(E\setminus A = E\cap A^c\in \mathcal{A}\).  And it is straightforward that \(A\cap E\in\mathcal{A}\). In general, if \(E\in\mathcal{A}\), we can get 
+$$
+A\setminus E, E\setminus A, E\cap A\in\mathcal{A}.
+$$
+However, for any \(E\in \mathcal{P}\), 
+
+---
+\(\textbf{Proposition 9.9.}\) Let \((X,\mathcal{A},\mu)\) and \((Y,\mathcal{B},\nu)\) be \(\sigma\)-finite measure spaces. If \(E \in \mathcal{A} \times \mathcal{B}\), then the maps
+$$
+x \mapsto \nu(E_x) \quad \text{and} \quad y \mapsto \mu(E^y)
+$$
+are measurable, where \(E_x = \{ y \in Y : (x,y) \in E\}\) and \(E_y = \{ x \in X : (x,y) \in E\}\).
+
+\(\textbf{Proof}\) First suppose that \(\nu\) is a finite measure. Let
+$$
+\mathcal{F} =\{E\in\mathcal{A}\times\mathcal{B}: x\mapsto \nu(E_x)\text{ is }\mathcal{A}-\text{measurable}\}.
+$$
+
+\(\textbf{Step 1}\): If \(A\in \mathcal{A}\) and \(B\in \mathcal{B}\) then \(A\times B \in \mathcal{F}\) .
+
+Since 
+$$
+(A\times B)_x =\{y\in Y :(x,y)\in A\times B\}=
+\begin{cases}
+B & \text{if }x\in A\\
+\emptyset & \text{if }x\notin A
+\end{cases}
+$$
+(i.e. very similar to the proof of Proposition 9.4.), we can get
+$$
+\nu((A\times B)_x) = \nu(B)\chi_A(x).
+$$
+Therefore, the function x 7→ ν((A×B)x) is A-measurable, and consequently A×B ∈ F .
+
+---
+\(\textbf{Lemma 9.10.}\) Let \((X,\mathcal{A})\) be a measurable space. Let \(\mathcal{F} \subseteq \mathcal{A}\) be an algebra such that \(\mathcal{M}(\mathcal{F}) = \mathcal{A}\). Let \(\mu,\nu\) be two measures on \(\mathcal{A}\) such that \(\mu(\mathcal{A}) = \nu(\mathcal{A})\) for all \(A \in \mathcal{F}\).
+1. If \(\mu(X) = \nu(X) \lt \infty\), then \(\mu = \nu\).
+2. If there exists an increasing sequence \((E_n)_{n \geq 1} \subseteq \mathcal{F}\) such that \(\bigcup\limits_{n=1}^{\infty} E_n = X\)
+    and \(\mu(E_n) = \nu(E_n) \lt +\infty\), then \(\mu = \nu\).
+
+---
+
+\(\textbf{Theorem 9.11.}\) Let \((X,\mathcal{A},\mu)\) and \((Y,\mathcal{B},\nu)\) be \(\sigma\)-finite measure spaces. Then there exists a unique measure on \(\mathcal{A} \times \mathcal{B}\), denoted by \(\mu \times \nu\), such that
+$$
+\mu \times \nu(A \times B) = \mu(A) \nu(B) \quad \text{for all } A \in \mathcal{A}, B \in \mathcal{B}.
+$$
+Moreover, for all \(E \in \mathcal{A} \times \mathcal{B}\),
+$$
+\mu \times \nu(E) = \int_X \nu(E_x) d\mu(x) = \int_Y \mu(E_y) d\nu(y).
+$$
+
+\(\textbf{Proof.}\) We define a set function \(\phi : \mathcal{A} \times \mathcal{B} \to [0,\infty]\) such that
+$$
+\phi(E) = \int\nu(E_x) d\mu(x) \quad \text{for } E \in \mathcal{A} \times \mathcal{B}.
+$$
+
+---
+\(\textbf{Theorem 9.12}\) Let \((X, \mathcal{A}, \mu)\), \((Y, \mathcal{B}, \nu)\) be two \(\sigma\)-finite measure spaces.
+
+1. (Tonelli) If \(f \in L^+(X \times Y)\) then the functions \(g:X\to[0,+\infty]\) and \(h:Y\to[0,+\infty]\) defined by
+$\(g(x) = \int_Y f(x,y) d\nu(y) \qquad \text{and} \qquad h(y) = \int_X f(x,y) d\mu(x)\)$
+are \(\mathcal{A}\)- and \(\mathcal{B}\)-measurable respectively, and
+$$
+\begin{align*}
+\int_{X \times Y} f(x,y) d(\mu \times \nu) &= \int_X \int_Y f(x,y) d\nu(y) d\mu(x)=\int_X g(x) d\mu(x)\\
+& = \int_Y \int_X f(x,y) d\mu(x) d\nu(y) =\int_Y h(y) d\nu(y)
+\end{align*}
+$$
+
+2. (Fubini) Let \(f \in L^1(\mu \times \nu)\) and set
+$$
+\widetilde{g}(x) =
+\begin{cases} 
+\int_Y f(x,y) d\nu(y) &\text{ if } f_x\in L^1(\nu)\\
+0 & \text{ otherwise }
+\end{cases},
+$$
+and 
+$$ 
+\widetilde{h}(y) = 
+\begin{cases}
+\int_X f(x,y) d\mu(x) &\text{ if } f_y\in L^1(\mu)\\
+0 & \text{ otherwise }
+\end{cases}.
+$$
+Then,
+
+(a). \(f_x \in L^1(\nu)\) for \(\mu\)-a.e. \(x \in X\),
+
+(b). \(f_y \in L^1(\mu)\) for \(\nu\)-a.e. \(y \in Y\),
+
+(c). \(g \in L^1(\mu)\),
+
+(d). \(h \in L^1(\nu)\),
+
+(e). \(\int_{X \times Y} f(x,y) d(\mu \times \nu) = \int_X \widetilde{g} d\mu = \int_Y \widetilde{h} d\nu\).
+
+---
+
+\(\textbf{Proposition 9.17}\) Let \((X,\mathcal{A},\mu)\) be a \(\sigma\)-finite space and let \(f : X\rightarrow [0,\infty)\) be an \(\mathcal{A}\)-measurable function. Then
+$$
+\int_X f(x)d\mu(x) = \int_{[0, \infty)}μ(\{x\in X : f (x) > y\})d\mathcal{L}^1(y).
+$$
+
+# \(L^p\) spaces
+\(\textbf{Definition 11.1}\) For \(p \in (0,\infty)\), we denote by \(\widetilde{L}^p(\mu)\) the class of all measurable functions such that
+$$
+\|f\|_p := \left(\int |f|^p d\mu\right)^{1/p} \lt \infty.$$
+As in the case of \(L^p(\mu)\), where 
+$$
+{L}^p(\mu) =\widetilde{L}^p(\mu)/\sim
+$$, 
+where
+$$
+f\sim g\quad\text{ if and only if }\quad f=g\quad\mu-\text{a.e.}
+$$
+
+---
+
+\(\textbf{Definition 11.2}\) If \(f\) is measurable, let
+$$
+||f||_\infty = \inf\{a \geq 0 : \mu(\{x\in X : |f(x)| > a\}) = 0\}. (\inf(\emptyset) = \infty)
+$$
+Let
+$\(\widetilde{L}^\infty(\mu) = \{f \text{ measurable such that } \|f\|_{\infty} \lt \infty\}\)$
+and as usual,
+$$
+L^\infty(\mu) = \widetilde{L}^\infty(\mu)/\sim.
+$$
+
+
+
+
+
+
+
+
+
+
+
+
