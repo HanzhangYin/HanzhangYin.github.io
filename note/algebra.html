@@ -252,14 +252,16 @@
           \langle TT^*v, v\rangle &= \langle T^*T v, v\rangle\\
         \end{align}.
       \]
-      Now, we have to show that \(TT^*=T^*T\).
+      Now, we have to show that \(TT^*=T^*T\). For all \(v\in V\), we have
       \[
         \begin{align}
           \langle TT^*v, v\rangle &= \langle T^*T v, v\rangle\\
           \langle TT^*v, v\rangle - \langle T^*T v, v\rangle &= 0\\
+          \langle TT^*v - T^*T v, v\rangle &= 0\\
+          \langle (TT^* - T^*T) v, v\rangle &= 0\\
         \end{align}.
       \]
-
+      Since for all \(v\noneq 0\), we have \(\langle (TT^* - T^*T) v, v\rangle = 0\), we can get \(TT^* - T^*T = 0\), which implies that \(TT^*=T^*T\).
     </p>
   </section>
 
