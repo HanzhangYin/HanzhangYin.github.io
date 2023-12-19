@@ -60,11 +60,13 @@
       Prove that the eigenvalues of \(A\) are either \(0\) or roots of unity. 
       </p>
       <p>
-        \(\textbf{Proof. }\) Suppose that \(\lambda\) is an eigenvalue of \(A\) and \(v\) is the corresponding eigenvector.
-        Then we have
+        \(\textbf{Proof. }\) Suppose that \(\lambda\) is an eigenvalue of \(A\) and \(v\) is the corresponding eigenvector, and we
+        want to show that \(\lambda^m\) is an eigenvalue for \(A^m\) for any \(m\in \mathbb{N}\). We can get
         \[
           \begin{align}
-            A^nv_1 &= A^{n-1}(Av)\\
+            A v &= \lambda v\\
+            A^m v &= A^{m-1} A v = A^{m-1}(\lambda v)\\
+            A (A^{m-1} v) &= \lambda A^{m-1} v\\
             &= A^{n-1}(\lambda v)\\
             &= \lambda A^{n-1}v\\
             &= \ldots \\
