@@ -123,9 +123,13 @@
         \[ 
         0 = f(x_n) + f'(x_n)(x_{n+1} - x_n) \quad (2) 
         \]
-        (In fact, we defined \( x_{n+1} \) as the solution of \( 0 = f(x_n) + f'(x_n)(x - x_n) \).) Subtracting (2) from (1).
-        
-        \[ 0 = f'(x_n)(r - x_{n+1}) + \frac{1}{2}f''(c)(r - x_n)^2 \quad \Rightarrow \quad x_{n+1} - r = \frac{f''(c)}{2f'(x_n)}(x_n - r)^2 \]
+        Subtracting (2) from (1).
+        \[
+        \begin{align}
+         0 &= f'(x_n)(r - x_{n+1}) + \frac{1}{2}f''(c)(r - x_n)^2\\
+        x_{n+1} - r &= \frac{f''(c)}{2f'(x_n)}(x_n - r)^2
+        \end{align}
+        \]
         
         \[ \Rightarrow \quad |x_{n+1} - r| = \left| \frac{f''(c)}{2f'(x_n)} \right||x_n - r|^2 \]
         
