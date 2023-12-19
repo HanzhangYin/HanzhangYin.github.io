@@ -60,30 +60,19 @@
       Prove that the eigenvalues of \(A\) are either \(0\) or roots of unity. 
       </p>
       <p>
-        \(\textbf{Proof. }\) Suppose that \(\lambda_1\) is an eigenvalue of \(A\) and \(v_1\) is the corresponding eigenvector.
+        \(\textbf{Proof. }\) Suppose that \(\lambda\) is an eigenvalue of \(A\) and \(v\) is the corresponding eigenvector.
         Then we have
         \[
           \begin{align}
-            A^nv_1 &= A^{n-1}(Av_1)\\
-            &= A^{n-1}(\lambda_1 v_1)\\
-            &= \lambda_1 A^{n-1}v_1\\
+            A^nv_1 &= A^{n-1}(Av)\\
+            &= A^{n-1}(\lambda v)\\
+            &= \lambda A^{n-1}v\\
             &= \ldots \\
-            &= \lambda_1^n v_1.
+            &= \lambda^n v.
           \end{align}
         \]
-        Hence, we can know that \(\lambda_1^n\) is an eigenvalue of \(A^n\) and its corresponding eigenvector is \(v_1\).
-        Since we know that \(A\) and \(A^n\) are similar, we can have the same eigenvalues and we assume it is \(\lambda_2\) and the corresponding eigenvector is \(v_2\) for \(A\).
-        Then we have
-        Now, we have 
-        \[
-        \begin{align}
-          A v_2 &= \lambda_2 v_2 \\
-        P A^n P^{-1} v_2 &= \lambda_2 v_2 \\
-        A^n P^{-1} v_2 &= P^{-1} \lambda_2 v_2 \\
-        A^n P^{-1} v_2 &= \lambda_2 P^{-1} v_2 \\
-        \end{align}
-        \]
-        Then we have the eigenvector for \(A^n\) is \(P^{-1}v_2\). 
+        Hence, we can know that \(\lambda^n\) is an eigenvalue of \(A^n\) and its corresponding eigenvector is \(v\).
+        Since we know that \(A\) and \(A^n\) are similar, we have \(\lambda^n\) is an eigenvalue of \(A\).
       </p>
     </section> 
 
