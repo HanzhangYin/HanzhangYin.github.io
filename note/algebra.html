@@ -75,7 +75,18 @@
           \end{align}
         \]
         If \(A^n\) is similar to \(A\), then there exists an invertible matrix \(P\) such that \(A^n = P^{-1} A P\).
-        We want to show that \(A\) is similar to \(A^{n^m}\) for any \(m\in \mathbb{N}\). 
+        We want to show that \(A\) is similar to \(A^{n^m}\) for any \(m\in \mathbb{N}\).
+        \[
+          \begin{align}
+            A^{n^m} &= A^{n^{m-1}n}\\
+            &= (A^{n^{m-1}})^n\\
+            &= (P^{-1} A^{n^{m-1}} P)^n\\
+            &= P^{-1} A^{n^{m-1}} P P^{-1} A^{n^{m-1}} P \ldots P^{-1} A^{n^{m-1}} P\\
+            &= P^{-1} A^{n^{m-1}} A^{n^{m-1}} \ldots A^{n^{m-1}} P\\
+            &= P^{-1} A^{n^{m-1} + n^{m-1} + \ldots + n^{m-1}} P\\
+            &= P^{-1} A^{n^m} P.
+          \end{align}
+        \]
         Hence, we can know that \(\lambda^n\) is an eigenvalue of \(A^n\) and its corresponding eigenvector is \(v\).
         Since we know that \(A\) and \(A^n\) are similar, we have \(\lambda^n\) is an eigenvalue of \(A\).
       </p>
