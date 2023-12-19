@@ -112,18 +112,17 @@
     <section id = 'error_analysis_netwon'>
       <h2>Error Analysis for Newton's Method</h2>
       <p>
-        Let \( r \) be any solution of \( f(x) = 0 \). Then \( f(r) = 0 \). Suppose that we have already computed \( x_n \). The error in \( x_n \) is \( |x_n - r| \). We now derive a formula that relates the error after the next step, \( |x_{n+1} - r| \), to \( |x_n - r| \). We have seen in class that
-
-        \[ f(x) = f(x_n) + f'(x_n)(x - x_n) + \frac{1}{2}f''(c)(x - x_n)^2 \]
-        
-        for some \( c \) between \( x_n \) and \( x \). In particular, choosing \( x = r \),
-        
-        \[ 0 = f(r) = f(x_n) + f'(x_n)(r - x_n) + \frac{1}{2}f''(c)(r - x_n)^2 \quad (1) \]
-        
-        By the definition of \( x_{n+1} \),
-        
-        \[ 0 = f(x_n) + f'(x_n)(x_{n+1} - x_n) \quad (2) \]
-        
+        Let \( r \) be a solution of \( f(x) = 0 \) (i.e. \( f(r) = 0 \)). 
+        Suppose that we have already computed \( x_n \) and the error in \( x_n \) is \(e_n = |x_n - r| \). 
+        We now derive a formula that relates the error after the next step, \( |x_{n+1} - r| \), to \( |x_n - r| \). 
+        According to Taylor's theorem, there is a \( c \) between \( x_n \) and \( r \) such that        
+        \[
+         0 = f(r) = f(x_n) + f'(x_n)(r - x_n) + \frac{1}{2}f''(c)(r - x_n)^2 \quad (1)
+        \]
+        By the definition of Newton's method, we have 
+        \[ 
+        0 = f(x_n) + f'(x_n)(x_{n+1} - x_n) \quad (2) 
+        \]
         (In fact, we defined \( x_{n+1} \) as the solution of \( 0 = f(x_n) + f'(x_n)(x - x_n) \).) Subtracting (2) from (1).
         
         \[ 0 = f'(x_n)(r - x_{n+1}) + \frac{1}{2}f''(c)(r - x_n)^2 \quad \Rightarrow \quad x_{n+1} - r = \frac{f''(c)}{2f'(x_n)}(x_n - r)^2 \]
