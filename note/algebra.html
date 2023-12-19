@@ -65,7 +65,8 @@
         \[
           \begin{align}
             A v &= \lambda v\\
-        PA^nP^{-1} v &= \lambda v \\
+            A^n v &= \lambda^n v\\
+            A^{n^2} v &= \lambda^{n^2} v\\
             A (A^{m-1} v) &= \lambda A^{m-1} v\\
             &= A^{m-1}(\lambda v)\\
             &= \lambda A^{n-1}v\\
@@ -73,6 +74,8 @@
             &= \lambda^n v.
           \end{align}
         \]
+        If \(A^n\) is similar to \(A\), then there exists an invertible matrix \(P\) such that \(A^n = P^{-1} A P\).
+        We want to show that \(A\) is similar to \(A^{n^m}\) for any \(m\in \mathbb{N}\). 
         Hence, we can know that \(\lambda^n\) is an eigenvalue of \(A^n\) and its corresponding eigenvector is \(v\).
         Since we know that \(A\) and \(A^n\) are similar, we have \(\lambda^n\) is an eigenvalue of \(A\).
       </p>
