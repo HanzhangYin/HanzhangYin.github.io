@@ -51,13 +51,18 @@
       <p>
         \(\textbf{Solution. }\) Firstly, we calculate the characteristic polynomial
         \[
-        \chi_A(x) = \text{det}\left|
+        \begin{align}
+        \chi_A(x) &= \text{det}\left|
         \begin{matrix}
         x - 2 & 2 & 1\\
         0 & x-3 & 0\\
         -1 & x + 2 & x - 4\\
         \end{matrix} 
-        \right|
+        \right|\\
+        &= -(x-3)((x-2)(x-4) + 1)\\
+        &= -(x-3)(x^2 - 6x + 9)\\
+        &= - (x - 3)^3
+        \end{align}
         \]
       </p>
     </section>
