@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon_io/favicon.ico"><!--Add a favicon-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="tutoring_style.css"><!--It is a link for css structure for style-->
+    <script src="highlight.js"></script><!--It is a link for highlight.js-->
+    <title>Modular Arithmetic</title>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="http://www.sitehan.com">Home</a>
+      <a href="#relation">Relation</a>
+      <a href="#equivalence_relation">Equivalence Relation</a>
+      <a href="#Congruence">Definition of Congruence</a>
+      <a href="#Propostion_1">Proposition 1</a>
+      <a href="#Theorem_1">Theorem 1</a>
+      <a href="#Theorem_2">Theorem 2</a>
+      <a href="#The_least_residue">The least residue</a>
+      <a href="#Theorem_3">Theorem 3</a>
+      <a href="#Lemma_1">Lemma 1</a>
+      <a href="#Theorem_4">Theorem 4</a>
+      <a href="#Theorem_5">Theorem 5</a>
+      <a href="#Theorem_6">Theorem 6</a>
+      <a href="#Linear_Congruence">Linear Congruence</a>
+      <a href="#Lemma_2">Lemma 2</a>
+      <a href="#Lemma_3">Lemma 3</a>  
+      <a href="#Lemma_4">Lemma 4</a>
+      <a href="#Theorem_7">Theorem 7</a>
+      <a href="#References">References</a>
+    </nav>
+    <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+    
+    <header id="title-block-header">
+      <h1 class="title">Modular Arithmetic</h1>
+    </header>
+
+    <section id = "relation">
+    <h2>Relation</h2>
+    <p>
+      \(\textbf{Definition: }\)A relation on a set \(A\) is a subset \(R\subset A\times A\). 
+      We often abbreviate the statement \((x, y)\in R\) as \(x\; R\; y\).
+    </p>
+    <p>
+      \(\textbf{Example 1. }\)Let \(A=\{1, 2, 3, 4, 5\}\) and \(R=\{(1, 1), (1, 2), (2, 1), (2, 2), (3, 3), (4, 4), (5, 5)\}\).
+      Then \(R\) is a relation on \(A\).
+    </p>
+    <p>
+      \(\textbf{Example 2. }\)Let \(R=\{(x,y)\in \mathbb{Z}\times\mathbb{Z}:\;x-y\in \mathbb{Z}^+\}\subset\mathbb{Z}\times\mathbb{Z}.\) Then \(R\) is a relation on \(\mathbb{Z}\).
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "equivalence_relation">
+    <h2>Equivalence Relation</h2>
+    <p>
+      \(\textbf{Definition: }\)A relation \(R\) on a set \(A\) is called an equivalence relation if it satisfies the following three properties:
+      <ul>
+        <li>(a) Reflexive: \(x\; R\; x\) for all \(x\in A\).</li>
+        <li>(b) Symmetric: If \(x\; R\; y\), then \(y\; R\; x\) for all \(x, y\in A\).</li>
+        <li>(c) Transitive: If \(x\; R\; y\) and \(y\; R\; z\), then \(x\; R\; z\) for all \(x, y, z\in A\).</li>
+      </ul>
+    </p>
+    <p>
+      \(\textbf{Example. }\) \(=\) is an equivalence relation on \(\mathbb{Z}\).
+    </p>
+    <p>
+      \(\textbf{Counter example. }\) \(\lt, \leq, \neq\) are not equivalence relations on \(\mathbb{Z}\).
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "equivalence_class">
+    <h2>Equivalence Class</h2>
+    <p>
+      \(\textbf{Definition. }\)Let \(R\) be an equivalence relation on a set \(A\). 
+      For each \(a\in A\), the equivalence class of \(a\) is the set \([a]=\{x\in A:\;x\; R\; a\}\).
+    </p>
+    <br>
+    <p>
+      \(\textbf{Theorem. }\)Suppose \(R\) is an equivalence relation on a set \(A\). 
+      Suppose that \(a,b\in A\). Then \([a]=[b]\) if and only if \(a\;R\;b\).
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Suppose \([a] = [b]\). Note that \(aRa\) by the reflexive property of \(R\), so \(a \in \{x \in A : xRa\} = [a] = [b] = \{x \in A : xRb\}\). 
+      But \(a\) belonging to \(\{x \in A : xRb\}\) means \(aRb\). This completes the first part: if \([a]=[b]\) then \(a\;R\;b\).</p>
+
+      <p>For the other directon, suppose \(aRb\). We need to show \([a] = [b]\). We will do this by showing \([a] \subseteq [b]\) and \([b] \subseteq [a]\).</p>
+      
+      <p>First we show \([a] \subseteq [b]\). Suppose \(c \in [a]\). As \(c \in [a] = \{x \in A : xRa\}\), we get \(cRa\). Now we have \(cRa\) and \(aRb\), so \(cRb\) because \(R\) is transitive. But \(cRb\) implies \(c \in \{x \in A : xRb\} = [b]\). 
+        We can get that \(c \in [a]\) implies \(c \in [b]\), so \([a] \subseteq [b]\).</p>
+      
+      <p>Next we show \([b] \subseteq [a]\). Suppose \(c \in [b]\). As \(c \in [b] = \{x \in A : xRb\}\), we get \(cRb\). Remember that we are assuming \(aRb\), so \(bRa\) because \(R\) is symmetric. 
+        Now we have  \(cRa\) since \(cRb\) and \(bRa\) and \(R\) is transitive. 
+        But \(cRa\) implies \(c \in \{x \in A : xRa\} = [a]\). This shows that \(c \in [b]\) implies \(c \in [a]\); hence \([b] \subseteq [a]\).</p>
+      
+      <p>Therefore, we can get \([a] = [b]\). \[ \tag*{$\square$} \]</p>
+      
+    </p>
+    </section>
+
+    <br>
+
+<section id = "partition">
+  <h2>Partition</h2>
+    <p>
+      \(\textbf{Definition. }\)A partition of a set \(A\) is a collection of nonempty subsets of \(A\) such that every element of \(A\) is in exactly one of these subsets.
+    </p>
+    <p>If we try to define in a more mathmatical way: </p>
+    <p>
+      \(\textbf{Definition. }\)A partition of set \(A\) is a set of one or more nonempty subsets of \(A\): \(A_1, A_2, A_3, \ldots\), such that every element of \(A\) is in exactly one set. Symbolically,</p>
+      <ul>
+        <li>
+        \(A_1 \cup A_2 \cup A_3 \cup \ldots = A\)
+        </li>
+        <li>
+        \(A_i \cap A_j = \emptyset\) for all \(i \neq j\).
+        </li>
+      </ul>
+    </p>
+    <br>
+    <p>
+      \(\textbf{Theorem. }\)Let \(R\) be an equivalence relation on a set \(A\). 
+      Then the equivalence classes of \(R\) form a partition of \(A\).
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Let \(R\) be an equivalence relation on a set \(A\). 
+      To show that \(\{[a] : a \in A\}\) is a partition of \(A\) we need to show two things: 
+      We need to show that the union of all the sets \([a]\) equals \(A\), 
+      and we need to show that if \([a] \neq [b]\), then \([a] \cap [b] = \emptyset\).
+    </p>
+    <p>
+    The union of all the sets \([a]\) is \(\bigcup_{a \in A}[a]\), so we need to prove \(\bigcup_{a \in A}[a] = A\). 
+    Suppose \(x \in \bigcup_{a \in A}[a]\). This means \(x \in [a]\) for some \(a \in A\). Since \([a] \subseteq A\), it then follows that \(x \in A\). 
+    Hence, \(\bigcup_{a \in A}[a] \subseteq A\). 
+    On the other hand, suppose \(x \in A\). As \(x \in [x]\), we know \(x \in [a]\) for some \(a \in A\) (namely \(a = x\)). 
+    Therefore, \(x \in \bigcup_{a \in A}[a]\), and this shows \(A \subseteq \bigcup_{a \in A}[a]\). 
+    Since \(\bigcup_{a \in A}[a] \subseteq A\) and \(A \subseteq \bigcup_{a \in A}[a]\), it follows that \(\bigcup_{a \in A}[a] = A\).
+    </p>
+    <p>
+      Next we need to show that if \([a] \neq [b]\) then \([a] \cap [b] = \emptyset\). We will prove it with contrapositive. 
+      Suppose it is not the case that \([a] \cap [b] = \emptyset\), so there is some element \(c\) with \(c \in [a] \cap [b]\). 
+      Thus \(c \in [a]\) and \(c \in [b]\). Now, \(c \in [a]\) means \(cRa\), and then \(aRc\) since \(R\) is symmetric. 
+      Also \(c \in [b]\) means \(cRb\). Now we have \(aRc\) and \(cRb\), so \(aRb\) (because \(R\) is transitive). 
+      According to <a href="#" class="tooltip-link">\(\textbf{Theorem from equivalence class}\)
+        <span class="tooltip-text">\(\textbf{Theorem. }\) Suppose \(R\) is an equivalence relation on a set \(A\). 
+          Suppose that \(a,b\in A\). Then \([a]=[b]\) if and only if \(a\;R\;b\).</span>
+      </a>
+      <script src="position_adjust.js"></script>, \(aRb\) implies \([a] = [b]\). Thus \([a] \neq [b]\) is not true.
+    </p>
+    <p>
+      we showed that the union of all the equivalence classes is \(A\), and the intersection of two different equivalence classes is \(\emptyset\). 
+      Therefore the set of equivalence classes is a partition of \(A\). \[ \tag*{$\square$} \]
+    </p>
+</section>
+
+<br>
+
+
+<section id = "Congruence">
+  <h2>Congruence</h2>
+    <p>
+      \(\textbf{Definition. }\)We say that \(a\) is congruent to \(b\) modulo
+      \(m\) (in symbols , \(a\equiv b\; (\text{mod }m)\)) if and only if
+      \(m\;|\; (a - b)\), where \(m > 0\).
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "Propostion_1">
+    <p>
+      \(\textbf{Proposition. }\)Let \(n \in \mathbb{Z}^+\). The relation \(\equiv (\text{mod }n)\) on the set \(\mathbb{Z}\) is an equivalence relation.
+    </p>
+    <p>
+      \(\textbf{Proof. }\)We have to show that the relation \(\equiv (\text{mod }n)\) on the set \(\mathbb{Z}\) is reflexive, symmetric, and transitive.
+    </p>
+    <p>
+      \(\textit{Step 1. We will show that \(\equiv\) (mod \(n\)) is reflexive.}\) 
+    </p>
+    <p>
+      Take any integer \(x \in \mathbb{Z}\), and observe that \(n \,|\, 0\), so \(n \,|\, (x - x)\). 
+      By definition of congruence modulo \(n\), we have \(x \equiv x\) (mod \(n\)). This shows \(x \equiv x\) (mod \(n\)) for every \(x \in \mathbb{Z}\), so \(\equiv\) (mod \(n\)) is reflexive.
+    </p>
+    <p>
+      \(\textit{Step 2. We will show that \(\equiv\) (mod \(n\)) is symmetric.}\) 
+    </p>
+    <p>
+      For this, we must show that for all \(x, y \in \mathbb{Z}\), the condition \(x \equiv y\) (mod \(n\)) implies that \(y \equiv x\) (mod \(n\)). 
+      We use a direct proof. Suppose \(x \equiv y\) (mod \(n\)). Thus \(n \,|\, (x - y)\) by definition of congruence modulo \(n\). 
+      Then \(x - y = na\) for some \(a \in \mathbb{Z}\) by definition of divisibility. 
+      Multiplying both sides by \(-1\) gives \(y - x = n(-a)\). Therefore, \(n \,|\, (y - x)\), and this means \(y \equiv x\) (mod \(n\)). 
+      We've shown that \(x \equiv y\) (mod \(n\)) implies that \(y \equiv x\) (mod \(n\)), and this means \(\equiv\) (mod \(n\)) is symmetric.
+    </p>
+    <p>
+      \(\textit{Step 3. We will show that \(\equiv\) (mod \(n\)) is transitive.}\) 
+    </p>
+    <p>
+      For this, we must show that if \(x \equiv y\) (mod \(n\)) and \(y \equiv z\) (mod \(n\)), then \(x \equiv z\) (mod \(n\)). 
+      Again, we use a direct proof. Suppose \(x \equiv y\) (mod \(n\)) and \(y \equiv z\) (mod \(n\)). This means \(n \,|\, (x - y)\) and \(n \,|\, (y - z)\). 
+      Therefore, there are integers \(a\) and \(b\) for which \(x - y = na\) and \(y - z = nb\). 
+      Adding these two equations, we obtain \(x - z = na + nb\). 
+      Consequently, \(x - z = n(a + b)\), so \(n \,|\, (x - z)\), hence \(x \equiv z\) (mod \(n\)). 
+      This completes the proof that \(\equiv\) (mod \(n\)) is transitive. \[ \tag*{$\square$} \]
+    </p>      
+    </section>
+
+    <section id = "Theorem_1">
+    <p>
+      \(\textbf{Theorem 1. }\) \(a\equiv b\; (\text{mod }m)\) if and only if
+      there is an integer \(k\) such that \(a =b+km\).
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Suppose that \(a\equiv b\; (\text{mod }m)\). Then
+      \(m\;|\;(a-b)\). Hence, there is an integer \(k\) such that \(a-b=km\).
+      Thus, we can get \(a=b+km\). For the other direction, suppose that there
+      is an integer \(k\) such that \(a=b+km\). Then we can get \(a-b=km\).
+      Since \(k\) is an integer, we can get \(m\;|\;(a-b)\). Thus, we can get
+      \(a\equiv b\; (\text{mod }m)\). \[ \tag*{$\square$} \]
+    </p>
+    <p>
+      \(\textbf{Note. }\)Theorem 1 can be used as the definition of congruence
+      as well.
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "Theorem_2">  
+    <p>
+      \(\textbf{Theorem 2. }\) Every integer is congruent \((\text{mod }m)\) to
+      exactly one of \(0, 1 , \dots, m-1\).
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Write \(a=qm+r\),with \(0\leq r \lt m\). We know from
+      previous theorem in \(\textbf{Euclid's Alogrithm}\) that \(q\) and \(r\)
+      are unique. Since \(a\equiv r\; (\text{mod }m)\). \[ \tag*{$\square$} \]
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "The_least_residue">
+    <p>
+      \(\textbf{Definition: }\)We call the number \(r\) in the last theorem the
+      least residue of \(a\; (\text{mod }m)\).
+    </p>
+    </section>
+
+    <br>
+  
+    <section id = "Theorem_3">
+    <p>
+      \(\textbf{Theorem 3. }\) \(a\equiv b\; (\text{mod }m)\) if and only if
+      \(a\) and \(b\) leave the same remainder on division by \(m\).
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Let \(a\) and \(b\) leave the same remainder \(r\) when divided by \(m\), then 
+      $$
+      a = q_1m + r \qquad\text{and}\qquad b = q_2m + r,
+      $$
+      where \(q_1\) and \(q_2\) are integers. Then we can get
+      $$
+      a - b = q_1m + r - (q_2m + r) = (q_1 - q_2)m,
+      $$
+      which implies that \(m\;|\;(a-b)\). Thus, we can get \(a\equiv b\; (\text{mod }m)\). 
+      For the other direction, suppose that \(a\equiv b\; (\text{mod }m)\). 
+      Suppose that \(a = q_1m + r_1\) and \(b = q_2m + r_2\), where \(q_1\), \(q_2\), \(r_1\) and \(r_2\) are integers.
+      Then we can get
+      $$
+      a - b = q_1m + r_1 - (q_2m + r_2) = (q_1 - q_2)m + (r_1 - r_2).
+      $$
+      Since \(r_1, r_2\) are both positive and \(m\;|\;(a-b)\), we can get \(r_1 - r_2 = 0\), which implies that \(r_1 = r_2\). \[ \tag*{$\square$} \]
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "Lemma_1">
+      <p>
+        \(\textbf{Lemma 1. }\)For integers \(a, b, c\), and \(d\)
+        <ul>
+          <li>(a) \(a\equiv a\; (\text{mod}\; m)\).</li>
+          <li>(b) If \(a\equiv b\; (\text{mod}\; m)\),\(b\equiv a (\text{mod}\; m)\).</li>
+          <li>(c) If \(a\equiv b\; (\text{mod}\; m)\) and \(b\equiv c\; (\text{mod}\; m)\), then \(a\equiv c\; (\text{mod}\; m)\).</li>
+          <li>(d) If \(a\equiv b\; (\text{mod}\; m)\) and \(c\equiv d\; (\text{mod}\; m)\), then \(a+c\equiv b+d\; (\text{mod}\; m)\).</li>
+          <li>(e) If \(a\equiv b\; (\text{mod}\; m)\) and \(c\equiv d\; (\text{mod}\; m)\), then \(ac\equiv bd\; (\text{mod}\; m)\).</li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Proof(a). }\)Since \(a-a=0\), we can get \(m\;|\;(a-a)\). Thus, we can get \(a\equiv a\; (\text{mod}\; m)\).  \[ \tag*{$\square$} \]
+      </p>
+      <p>
+        \(\textbf{Proof(b). }\)If \(a\equiv b\; (\text{mod}\; m)\), then we can get \(m\;|\;(a-b)\) and \(a-b=km\) for some integer \(k\).
+        Thus, we can get 
+        $$
+        b-a = -(a-b) = (-k)m,
+        $$
+        for some integer \(-k\). Hence, we can get \(m\;|\;(b-a)\), which implies that \(b\equiv a (\text{mod}\; m)\). \[ \tag*{$\square$} \]
+      </p>
+      <p>
+        \(\textbf{Proof(c). }\)If \(a\equiv b\; (\text{mod}\; m)\) and \(b\equiv c\; (\text{mod}\; m)\), then we can get \(m\;|\;(a-b)\) and \(m\;|\;(b-c)\).
+        Hence, we get \(a-b=km\) and \(b-c=lm\) for some integers \(k\) and \(l\).
+        Thus, we can get 
+        $$
+        a-c = (a-b) + (b-c) = km + lm = m(k+l).
+        $$
+        Since \(k+l\) is an integer, we can get \(m\;|\;(a-c)\), which implies that \(a\equiv c\; (\text{mod}\; m)\). \[ \tag*{$\square$} \]
+      </p>
+      <p>
+        \(\textbf{Proof(d). }\)If \(a\equiv b\; (\text{mod}\; m)\) and \(c\equiv d\; (\text{mod}\; m)\), then we can get \(m\;|\;(a-b)\) and \(m\;|\;(c-d)\).
+        Hence, we get \(a-b=km\) and \(c-d=lm\) for some integers \(k\) and \(l\).
+        Thus, we can get 
+        $$
+        (a+c) - (b+d) = (a-b) + (c-d) = km + lm = m(k+l).
+        $$
+        Since \(k+l\) is an integer, we can get \(m\;|\;((a+c) - (b+d))\), which implies that \(a+c\equiv b+d\; (\text{mod}\; m)\). \[ \tag*{$\square$} \]
+      </p>
+      <p>
+        \(\textbf{Proof(e). }\)If \(a\equiv b\; (\text{mod}\; m)\) and \(c\equiv d\; (\text{mod}\; m)\), then we can get \(m\;|\;(a-b)\) and \(m\;|\;(c-d)\).
+        Hence, we get \(a-b=km\) and \(c-d=lm\) for some integers \(k\) and \(l\). 
+        We can know that \(a = b+km\) and \(c = d+lm\), then we can get
+        $$
+        ac = (b+km)(d+lm) = bd + (bl+dk+klm)m,
+        $$
+        $$
+        ac - bd = (bl+dk+klm)m.
+        $$
+        Since \(bl+dk+klm\) is an integer, we can get \(m\;|\;(ac - bd)\), which implies that \(ac\equiv bd\; (\text{mod}\; m)\). \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Theorem_4">
+      <p>
+        \(\textbf{Theorem 4. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=1\) where \(m\neq 1\), then \(a\equiv b (\text{mod}\; m)\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Since \(ac\equiv bc\; (\text{mod}\; m)\), we can get \(m\;|\;(ac-bc)\), which implies that \(m\;|\;(a-b)c\).
+        Since \((c,m)=1\), by <a href="#" class="tooltip-link">\(\textbf{Corollary 2 from previous Section}\)
+          <span class="tooltip-text">\(\textbf{Corollary 2. }\) If \(d\;|\;ab\) and \((d, a) = 1\), then \(d\;|\;b\).</span>
+        </a>. 
+        <script src="position_adjust.js"></script>, we can get \(m\;|\;(a-b)\), which implies that \(a\equiv b (\text{mod}\; m)\). \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Theorem_5">
+      <p>
+        \(\textbf{Theorem 5. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=d\) where \(d\neq 1\), then \(a\equiv b (\text{mod}\; \frac{m}{d})\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Since \(ac\equiv bc\; (\text{mod}\; m)\), we can get \(m\;|\;(ac-bc)\), which implies that \(m\;|\;(a-b)c\).
+        Since \((c,m)=d\), we can get \(c = de\) and \(m = df\) for some integers \(e\) and \(f\).
+        Then we can get 
+        $$
+        (a-b)c = (a-b)de.
+        $$
+        Since \(m\;|\;(a-b)c\), we can get \(df\;|\;(a-b)de\), which implies that \(f\;|\;(a-b)e\).
+        According to <a href="#" class="tooltip-link">\(\textbf{Theorem 1 form the previous Section}\)
+          <span class="tooltip-text">\(\textbf{Theorem 1: }\) If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</span>
+        </a>.
+        <script src="position_adjust.js"></script>, we can get \((e,f)=1\).
+        By <a href="#" class="tooltip-link">\(\textbf{Corollary 2 from previous Section}\)
+          <span class="tooltip-text">\(\textbf{Corollary 2. }\) If \(d\;|\;ab\) and \((d, a) = 1\), then \(d\;|\;b\).</span>
+        </a>. 
+        <script src="position_adjust.js"></script>, we can get \(f\;|\;(a-b)\), which implies that \(a\equiv b (\text{mod}\; \frac{m}{d})\) (note: \(f=\frac{m}{d}\)). \[ \tag*{$\square$} \]
+      </p>
+
+    </section>
+
+    <br>
+
+    <section id = "Theorem_6">
+      <p>
+        \(\textbf{Theorem 6. }\)Every integer is congruent \((\text{mod}\; 9)\) to the sum of its digits.
+      </p>
+      <p>
+        \(\textbf{Example(1). }\)\(1234\equiv 1+2+3+4\; (\text{mod}\; 9)\) for \(1234-(1+2+3+4)=1224=9\cdot 136\).
+      </p>
+      <p>
+        \(\textbf{Example(2). }\)\(573\equiv 5+7+3\; (\text{mod}\; 9)\) for \(573-(5+7+3)=558=9\cdot 62\).
+      </p>      
+      <p>
+        \(\textbf{Proof. }\)Let \(n\) be an integer. 
+        Then we can write \(n\) as 
+        $$
+        n=a_0+a_1\cdot 10+a_2\cdot 10^2+\dots+a_k\cdot 10^k,
+        $$ 
+        where \(a_0, a_1, \dots, a_k\) are integers and \(0\leq a_i\leq 9\) for \(i=0,1,\dots,k\).
+        Now let \(a\) be the sum of the digits of \(n\) (i.e. \(a=a_0+a_1+a_2+\dots+a_k\)).
+        Then we can get
+        $$
+        n-a = (a_0+a_1\cdot 10+a_2\cdot 10^2+\dots+a_k\cdot 10^k) - (a_0+a_1+a_2+\dots+a_k) = a_1\cdot 9 + a_2\cdot 99 + \dots + a_k\cdot (10^k-1).
+        $$
+        Since \(a_1, a_2, \dots, a_k\) are integers and \(0\leq a_i\leq 9\) for \(i=0,1,\dots,k\), we can get \(n-a = 9(a_1+ a_2\cdot 11 + \dots + a_k\cdot (1+10+10^2+\dots+10^k))\), which implies that \(9\;|\;(n-a)\).
+        Thus, we can get \(n\equiv a\; (\text{mod}\; 9)\). \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Linear_Congruence">
+      <h2>Linear Congruence</h2>
+      <p>
+        \(\textbf{Definition: }\)A linear congruence is an equation of the form \(ax\equiv b\; (\text{mod}\; m)\), where \(a, b\) and \(m\) are integers and \(m\neq 0\).
+      </p>
+      <p>
+        \(\textbf{Example. }\) \(3x\equiv 2\; (\text{mod}\; 5)\) is a linear congruence.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Lemma_2">
+      <p>
+        \(\textbf{Lemma 2. }\)If \((a, m)\;\nmid\;b\), then \(ax\equiv b\; (\text{mod }m)\) has no solutions.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We will prove it with contrapositive. Suppose that \(ax\equiv b\; (\text{mod }m)\) has a solution \(x_0\).
+        Then we can get \(ax_0-b=km\) for some integer \(k\). Thus, 
+        $$
+        b = ax_0 - km.
+        $$
+        Since \((a, m)\;|\;a\) and \((a, m)\;|\;m\), we can get \((a, m)\;|\;ax_0\) and \((a, m)\;|\;km\).
+        According to <a href="#" class="tooltip-link">\(\textbf{Lemma 1 form the previous Section}\)
+          <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+        </a>
+        <script src="position_adjust.js"></script>, we can get \((a, m)\;|\;(ax_0 - km)\), which implies that \((a, m)\;|\;b\). \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Lemma_3">
+      <p>
+        \(\textbf{Lemma 3. }\)If \((a, m) = 1\), then \(ax\equiv b\; (\text{mod }m)\) has only one solution.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Since \((a, m)=1\), there exists integers \(s\) and \(t\) such that \(as+mt=1\) by <a href="#" class="tooltip-link">\(\textbf{Corollary 1 form the previous Section}\)
+          <span class="tooltip-text">\(\textbf{Corollary 1. }\)If \(a\) and \(b\) are positive integers, \(b\neq 0\), then there exist integers \(x\) and \(y\) such that 
+            $$
+            ax+by=(a, b).
+            $$</span>
+        </a>
+        <script src="position_adjust.js"></script>. Thus, we know That
+        $$
+        (as+mt)b = asb + mtb = b,
+        $$
+        $$
+        asb - b = -mtb,
+        $$
+        which implies that \(m\;|\;(asb - b)\) and \(a(sb)\equiv b\; (\text{mod }m)\). Hence, \(sb\) is a solution of \(ax\equiv b\; (\text{mod }m)\).
+        Now suppose that there are two solutions \(x\) and \(y\) of \(ax\equiv b\; (\text{mod }m)\). Then we know
+        $$
+        ax\equiv b\; (\text{mod }m) \qquad\text{and}\qquad ay\equiv b\; (\text{mod }m),
+        $$
+        According to <a href="#Theorem_3" class="tooltip-link">\(\textbf{Theorem 3}\)
+          <span class="tooltip-text">\(\textbf{Theorem 3. }\) \(a\equiv b\; (\text{mod }m)\) if and only if
+            \(a\) and \(b\) leave the same remainder on division by \(m\).</span>
+        </a>
+        <script src="position_adjust.js"></script>, we can get \(m\;|\;(ax-ay)\). Because of <a href="#Theorem_3" class="tooltip-link">\(\textbf{Theorem 3}\)
+          <span class="tooltip-text">\(\textbf{Theorem 4. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=1\) where \(m\neq 1\), then \(a\equiv b (\text{mod}\; m)\).</span>
+        </a>
+        <script src="position_adjust.js"></script> and \((a, m)=1\), we can get \(x\equiv y\; (\text{mod }m)\), which implies that \(m\;|\;(x-y)\). 
+        Since \(x\) and \(y\) are least residue \(\text{mod}\;m\), we can get
+        $$
+        0\leq x\lt m \qquad\text{and}\qquad 0\leq y\lt m.
+        $$
+        Hence, we can get \(-m\lt x-y\lt m\). Since \(m\;|\;(x-y)\), we can get \(x-y=0\), which implies that \(x=y\). \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Lemma_4">
+      <p>
+      \(\textbf{Lemma 4. }\)Let \(d=(a,m)\). If \(d\;|\;b\), then \(ax\equiv b\; (\text{mod }m)\) has exactly \(d\) solutions.
+      </p>      <p>
+        \(\textbf{Proof. }\)Since  \(d=(a,m)\) and  \(d\;|\;b\), we can get
+        $$
+        a = da' \qquad\text{and}\qquad m = dm' \qquad\text{and}\qquad b = db',
+        $$
+        where \(a', m'\) and \(b'\) are integers. Since \((a, m)=d\), we can get \((a', m')=1\) by <a href="#" class="tooltip-link">\(\textbf{Theorem 1 form the previous Section}\)
+          <span class="tooltip-text">\(\textbf{Theorem 1. }\) If \((a, b) = d\), then \((\frac{a}{d}, \frac{b}{d}) = 1\).</span>
+        </a>
+        <script src="position_adjust.js"></script>. Thus, we know that \(a'x\equiv b'\; (\text{mod }m')\) has only one solution by <a href="#Lemma_3" class="tooltip-link">\(\textbf{Lemma 3}\)
+          <span class="tooltip-text">\(\textbf{Lemma 3. }\)If \((a, m) = 1\), then \(ax\equiv b\; (\text{mod }m)\) has only one solution.</span>
+        </a>
+        <script src="position_adjust.js"></script>. Let \(x_0\) be the solution of \(a'x\equiv b'\; (\text{mod }m')\) and let \(x'\) be any solution of \(ax\equiv b\; (\text{mod }m)\).
+        Hence, we can get
+        $$
+        m'\;|\;(a'x_0-b') \qquad\text{and}\qquad m\;|\;(ax'-b),
+        $$
+        $$
+        m'd\;|\;(a'x_0-b')d \qquad\text{and}\qquad m\;|\;(ax'-b),
+        $$
+        $$
+        m\;|\;ax_0-b \qquad\text{and}\qquad m\;|\;(ax'-b),
+        $$
+        $$
+        ax_0\equiv b\; (\text{mod }m) \qquad\text{and}\qquad ax'\equiv b\; (\text{mod }m).
+        $$
+        According to <a href="#Theorem_3" class="tooltip-link">\(\textbf{Theorem 3}\)
+          <span class="tooltip-text">\(\textbf{Theorem 3. }\) \(a\equiv b\; (\text{mod }m)\) if and only if
+            \(a\) and \(b\) leave the same remainder on division by \(m\).</span>
+        </a>
+        <script src="position_adjust.js"></script>, we can get \(m\;|\;(ax_0-ax')\), which implies that \(ax_0\equiv ax'\; (\text{mod }m)\).
+        According to  <a href="#Theorem_5" class="tooltip-link">\(\textbf{Theorem 5}\)
+          <span class="tooltip-text">\(\textbf{Theorem 5. }\)If \(ac\equiv bc\; (\text{mod}\; m)\) and \((c,m)=d\) where \(d\neq 1\), then \(a\equiv b\; (\text{mod}\; \frac{m}{d})\).</span>
+        </a>
+        <script src="position_adjust.js"></script>, since  \(ax_0\equiv ax'\; (\text{mod }m)\) and \((a, m)=d\), we can get \(x_0\equiv x'\; (\text{mod}\; \frac{m}{d})\).
+        Thus, \(x_0-x' = k\cdot \frac{m}{d}\) for some integer \(k\). 
+        $$
+        x_0=x'+k\cdot \frac{m}{d}\lt 
+        $$
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Theorem_7">
+      <p>
+        \(\textbf{Theorem 7. }\)\(ax\equiv b (\text{mod }m)\) has no solutions if \((a, m)\nmid b\). If \((a. m)\;|\;b\), then there are exactly \((a, m)\) solutions.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)If \((a, m)\nmid b\), then \(ax\equiv b (\text{mod }m)\) has no solutions by <a href="#Lemma_2" class="tooltip-link">\(\textbf{Lemma 2}\)
+          <span class="tooltip-text">\(\textbf{Lemma 2. }\)If \((a, m)\;\nmid\;b\), then \(ax\equiv b\; (\text{mod }m)\) has no solutions.</span>
+        </a>
+        <script src="position_adjust.js"></script>. If \((a. m)\;|\;b\), then there are exactly \((a, m)\) solutions by <a href="#Lemma_4" class="tooltip-link">\(\textbf{Lemma 4}\)
+          <span class="tooltip-text">\(\textbf{Lemma 4. }\)Let \(d=(a,m)\). If \(d\;|\;b\), then \(ax\equiv b\; (\text{mod }m)\) has exactly \(d\) solutions.</span>
+        </a>
+        <script src="position_adjust.js"></script>. \[ \tag*{$\square$} \]
+      </p>
+      <p>
+        \(\textbf{Note. }\)This is just a summary of <a href="#Lemma_2" class="tooltip-link">\(\textbf{Lemma 2}\)
+          <span class="tooltip-text">\(\textbf{Lemma 2. }\)If \((a, m)\;\nmid\;b\), then \(ax\equiv b\; (\text{mod }m)\) has no solutions.</span>
+        </a>
+        <script src="position_adjust.js"></script> and <a href="#Lemma_4" class="tooltip-link">\(\textbf{Lemma 4}\)
+          <span class="tooltip-text">\(\textbf{Lemma 4. }\)Let \(d=(a,m)\). If \(d\;|\;b\), then \(ax\equiv b\; (\text{mod }m)\) has exactly \(d\) solutions.</span>
+        </a>
+        <script src="position_adjust.js"></script>.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Theorem_8">
+      <p>
+        \(\textbf{Theorem 8. The Chinese Remainder Theorem}\) (CRT). Let \(m_1, m_2, \dots, m_k\) be positive integers that are pairwise relatively prime.
+        Then the system of congruences 
+        $$
+        x\equiv a_1\; (\text{mod }m_1) \qquad x\equiv a_2\; (\text{mod }m_2) \qquad \dots \qquad x\equiv a_k\; (\text{mod }m_k)
+        $$
+        has a solution, and any two solutions are congruent modulo \(m_1m_2\dots m_k\).
+      </p>
+    </section>
+
+    <section id  = "Lemma_5">
+      <p>
+        \(\textbf{Lemma 9. }\) If \((a, m) = 1\), then the least residues of    
+        $$  
+        a,2a,3a, \dots, (m-1)a\; (\text{mod }m), 
+        $$ are
+        $$
+        1, 2, 3, \dots , m-1,
+        $$
+        in some order.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(A = \{a\;(\text{mod }m), 2a\;(\text{mod }m), 3a\;(\text{mod }m), \dots, (m-1)a\;(\text{mod }m)\}\) and 
+        \(B=\{1, 2, 3, \dots, m-1\}\). 
+      </p>
+    </section> 
+
+    <br>
+
+    <section id = "Theorem_9">
+      <p>
+        \(\textbf{Theorem 9. (Fermat's Theorem)}\) If \(p\) is prime and \((a, p) = 1\), then
+        $$
+        a^{p-1}\equiv 1 (\text{mod }p).
+        $$
+      </p>
+      <p>
+        \(\textbf{Proof. }\)
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "order">
+      <h2>Order</h2>
+      <p>
+        \(\textbf{Definition: }\)Let \(a\) and \(m\) be integers with \(m\geq 2\). The order of \(a\) modulo \(m\) is the smallest positive integer \(k\) such that
+        $$
+        a^k\equiv 1 (\text{mod }m).
+        $$
+      </p>
+      <p>
+        \(\textbf{Note.}\) When we do \(a^0 = 1, a^1 = a, a^2 = a\cdot a, \dots\), we will eventually 
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "solution">
+      <p>
+        Given a system of congruences 
+        \[
+        x\equiv a_1\; (\text{mod }m) \qquad x\equiv a_2\; (\text{mod }n), 
+        \]
+        we look at the modulo of \(\gcd(m, n)\) to see if we can find a solution.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Fundamental_goal">
+      <h2>Fundamental Goal</h2>
+      <p>
+        Suppose that \(m, n\in\mathbb{Z}^+\) and \(\gcd(m, n)=1\). Let \(a, b\in\mathbb{Z}\).
+        We want to find all solutions of the system of congruences
+      </p>
+      <p>
+        Suppose that we can solve the system of congruences
+        \[
+        x\equiv 1\; (\text{mod }m) \qquad x\equiv 0\; (\text{mod }n),
+        \]
+        and 
+        \[
+        x\equiv 0\; (\text{mod }m) \qquad x\equiv 1\; (\text{mod }n).
+        \]
+        Then we can solve the system of congruences where \(x = e_1\) for the first one and \(x = e_2\) for the second one.
+        Then we try \(x = ae_1+be_2\) where 
+        \[
+        x\equiv a\; (\text{mod }m) \qquad x\equiv b\; (\text{mod }n).
+        \]
+        We will use Bezout's Identity: there exist integers \(s\) and \(t\) such that \(ms+nt=1\) because of \(\gcd(m, n)=1\).
+        Then we can get if \(e_1 = nt\), then \(e_1\equiv 1\; (\text{mod }m)\) and \(e_1\equiv 0\; (\text{mod }n)\).
+        Similarly, we can get if \(e_2 = ms\), then \(e_2\equiv 0\; (\text{mod }m)\) and \(e_2\equiv 1\; (\text{mod }n)\).
+        Therefore, we can get \(x = ae_1+be_2 = ant + bms\).
+      </p>
+      <p>
+        \(\textbf{Example. }\)Try to solve 
+        \[
+        x\equiv 5\; (\text{mod }20) \qquad x\equiv 8\; (\text{mod }29).
+        \]
+        We can know that \(\gcd(20, 29)=1\). Thus, we can get \(20s+29t=1\) for some integers \(s\) and \(t\) by using Euclidean Algorithm.
+        Thus, we can get \(s=-13\) and \(t=9\). So we can take 
+        \[
+        x = 5\cdot 29\cdot 9 + 8\cdot 20\cdot (-13) = -775.
+        \]
+        However, it is not the only one. We can get \(x = -775 + 20\cdot 29\cdot k\) for any integer \(k\).
+      </p>
+      <p>
+        \(\textbf{Question. }\)Are these the only solutions?
+      </p>
+      <p>
+        \(\textbf{Answer. }\)Yes. Suppose that \(x\) and \(y\) are solutions of the system of congruences.
+        Then we can get
+        \[
+        x\equiv y \; (\text{mod }20) \qquad x\equiv y \; (\text{mod }29).
+        \]
+        So both \(20\) and \(29\) divide \(x-y\). Thus, \(20\cdot 29\) divides \(x-y\) because of \(\gcd(20, 29)=1\).
+        Hence, we can get \(x\equiv y \; (\text{mod }20\cdot 29)\).
+        Since \(-775\) is a solution of the system of congruences, we can get \(x\equiv -775 \; (\text{mod }20\cdot 29)\).
+        Thus, we can get \(x\equiv -775 \; (\text{mod }20\cdot 29)\) and \(x = -775 + 20\cdot 29\cdot k\) for any integer \(k\).
+        To sum up, we can get \(x = -775 + 20\cdot 29\cdot k\) for any integer \(k\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "z_p">
+      <p>
+        \(\textbf{Lemma. }\)\(x^2\equiv 1\text{ mod }p\) if and only if \(x\equiv 1\text{ mod }p\) or \(x\equiv -1\text{ mod }p\) where \(p\) is a prime.
+      </p>
+    </section>
+
+    <section id = "flt">
+      <p>
+        \(\textbf{Fermat's Little Theorem. }\)If \(p\) is a prime and \(a\) is an integer not divisible by \(p\), then
+        $$
+        a^{p-1}\equiv 1\; (\text{mod }p).
+        $$
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(u\in\mathbb{U}_p\) witch \(u^{-1}\) (within a simple copy of \(\mathbb{U}_p\)).
+        Example. \(p=7\), \(\mathbb{U}_7 = \{1, 2, 3, 4, 5, 6\}\). And 
+        \[
+        (7-1)! = 1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6 = 1\cdot (2\cdot 4)\cdot (3\cdot 5)\cdot 6 = 1\cdot 1\cdot 1\cdot 6 = 6\equiv -1\; (\text{mod }7).
+        \]
+        In general, we can get
+        \[
+        (p-1)! = 1\cdot \prod_{u = u^{-1}}u 
+        \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "Chinese_remainder_theorem">
+    <p>
+      \(\textbf{Chinese Remainder Theorem. }\)Let \(m, n\in\mathbb{Z}^+\) and \(\gcd(m, n)=1\). Let \(a, b\in\mathbb{Z}\).
+      Then the system of congruences
+      \[
+      x\equiv a\; (\text{mod }m) \qquad x\equiv b\; (\text{mod }n)
+      \]
+      has a solution, and any two solutions are congruent modulo \(mn\).
+    </p>
+    <p>
+      \(\textbf{Rephrasing. }\)Let \(m, n\in\mathbb{Z}^+\) and \(\gcd(m, n)=1\). 
+      Let \(a\in\mathbb{Z}/m\mathbb{Z}\) and \(b\in\mathbb{Z}/n\mathbb{Z}\), then there exists \(x\in\mathbb{Z}\) such that 
+      \[
+      x = a\; (\text{mod }m) \qquad x = b\; (\text{mod }n).
+      \]
+      Any two solutions are the same in \(\mathbb{Z}/mn\mathbb{Z}\).
+    </p>
+    <p>
+      Given function \(L_{m, n}:\mathbb{Z}/n\mathbb{Z}\times \mathbb{Z}/m\mathbb{Z}\rightarrow \mathbb{Z}/mn\mathbb{Z}\) defined by
+      \[
+      L_{m, n}(a, b) = x,
+      \]
+      where \(x\) is the solution of the system of congruences. 
+      Then we can get 
+      \[
+      L_{20, 29}(5, 8) = -775\equiv 385\; (\text{mod }20\cdot 29).
+      \] 
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "crt">
+    <P>
+      \(\textbf{Theorem. }\)Let \(m, n\in\mathbb{Z}^+\) are coprime (i.e. \(\gcd(m, n)=1\)). Then we can get
+      \[
+      \mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z}.
+      \]
+    </P>
+    <p>
+      \(\textbf{Proof. }\)We define a map: \(\varphi:\mathbb{Z}/mn\mathbb{Z}\rightarrow \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z}\) by
+      \[
+      \varphi(x) = (x\; (\text{mod }m), x\; (\text{mod }n)).
+      \]
+      We will show that \(\varphi\) is a bijection. 
+
+    </p>
+    </section>
+
+    <section id = "References">
+    <h2>References</h2>
+    <ul>
+      <li>
+        U. Dudley , "Elementary Number Theory", Dover Publications, Second
+        Edition, 2008.
+      </li>
+    </ul>
+  </section>
+  </body>
+</html>

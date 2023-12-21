@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Math Flashcards</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script><!--It is a link for MathJax-->
+    <link rel="stylesheet" href="flashcards.css" />
+  </head>
+  <body>
+    <div class="flashcard-container">
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-side front">
+          What is \(\text{ Contractive Mapping Theorem}\)?
+        </div>
+        <div class="card-side back"></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-side front">
+          What is \(\text{ Mean Value Theorem}\)?
+        </div>
+        <div class="card-side back">
+          \[ \frac{f(b)-f(a)}{b-a}=f'(c),\text{ where }c\in(a,b) \]
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-side front">
+          What is the condition number of \( f(x)\)?
+        </div>
+        <div class="card-side back">\[ \kappa=\frac{|xf'(x)|}{|f(x)|} \]</div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-side front">
+          What is \(\text{ Theorem оп Derivative and Divided Difference}\)
+        </div>
+        <div class="card-side back">
+          If \( f \) is \( n \) times continuously differentiable on \([a, b]\) and if \(x_0, x_1, \ldots, x_n\) are distinct points in \([a, b]\), then there exists a point \( \xi \) in \((a, b)\) such that
+          \[
+            f[x_0, x_1, \ldots, x_n] = \frac{1}{n!} f^{(n)}(\xi)
+          \]
+        </div>
+      </div>
+      <!-- Add more cards here -->
+    </div>
+    <script src="flashcards.js"></script>
+  </body>
+</html>
