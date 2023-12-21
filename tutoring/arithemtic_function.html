@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="tutoring_style.css"><!--It is a link for css structure-->
+    <title>Arithmetic Function</title>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="#Definition">Definition</a>
+      <a href="#References">References</a>
+    </nav>
+    <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+    <h1>Arithmetic Function</h1>
+
+    <section id = "arithmetic_function">
+      <h2>Arithmetic Function</h2>
+      <p>
+        \(\textbf{Definition. }\)An Arithmetic function is a function\(f:\mathbb{Z}^+\to\mathbb{C}\). 
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "tau_function">
+      <h2>tau Function</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(n\in\mathbb{Z}^+\), 
+        we define the tau function \(\tau(n)\) as the number of positive divisors of \(n\).
+        \[
+        \tau(n) = \#\{d\mid n, d>0\}
+        \]
+      </p>
+      <p>
+        \(\textbf{Example. }\)Since \(n = 101\) is a prime number, we have \(\tau(101) = 2\).
+      </p>
+      <p>
+        \(\textbf{Example. }\)Let \(n = 101^7\). We have 
+        \[
+        \tau(n) = \tau(101^7) = \#(1, 101, 101^2, \dots, 101^7) = 7 + 1 = 8.
+        \]
+      </p>
+      <p>
+        \(\textbf{Note. }\)If \(p\) is a prime number, then \(\sigma(p) = 2\).
+      </p>
+      <p>
+        \(\textbf{Note. }\)If \(p\) is a prime number, then \(\sigma(p^k) =  k + 1\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "sigma_function">
+      <h2>\(\sigma\) Function</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(n\in\mathbb{Z}^+\), 
+        we define the \(\sigma\) function \(\sigma(n)\) as the sum of the positive divisors of \(n\).
+        \[
+        \sigma(n) = \sum_{d\mid n, d>0}d.
+        \]
+      </p>
+      <p>
+        \(\textbf{Example. }\)Since \(n = 101\) is a prime number, we have \(\sigma(101) = 101 + 1 = 102\).
+      </p>
+      <p>
+        \(\textbf{Example. }\)Let \(n = 101^7\). We have
+        \[
+        \sigma(n) = \sigma(101^7) = \sum_{i = 0}^7 101^i = \frac{101^8 - 1}{101 - 1} = \frac{101^8 - 1}{101 - 1}.
+        \]
+        We use geometric series to calculate the sum here. 
+      </p>
+      <p>
+        \(\textbf{Note. }\)If \(p\) is a prime number, then \(\sigma(p) = p + 1\).
+      </p>
+      <p>
+        \(\textbf{Note. }\)If \(p\) is a prime number, then \(\sigma(p^k) =  \frac{p^k - 1}{p - 1}\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "proposition_1">
+      <p>
+        \(\textbf{Proposition 1. }\)Let \(a, b, n\in\mathbb{Z}^+\) where \(n = ab\). 
+        Suppose that \(d\mid n\) where \(d\in\mathbb{Z}^+\). Then \(d = d_1d_2\) where \(d_1\mid a\) and \(d_2\mid b\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(d_1 = \gcd(a, d)\) and \(d_2 = d/\gcd(a, d)\). 
+        Since \(d\mid ab\), we can get \(ab = dk) for some \(k\in\mathbb{Z}\). Since \(d = d_1d_2\), we have
+        \[
+        ab = d_1d_2k.
+        \]
+        Hence, we can get 
+        \[
+        \frac{ab}{d_1} = d_2k.
+        \]
+        We let \(\frac{a}{d_1} = l\). Then
+        \[
+        bl = d_2k.
+        \]
+        Thus, \(d_2\mid bl).  
+      </p>
+    </section>
+
+    <section id = "euler_function">
+      <h2>Euler Function</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(n\in\mathbb{Z}^+\), 
+        we define the Euler function \(\varphi(n)\) as the number of positive integers less than or equal to \(n\) that are relatively prime to \(n\).
+      </p>
+      <p>
+        \(\textbf{Example. }\)Since \(n = 101\) is a prime number, we have \(\varphi(101) = 101 - 1 = 100\).
+      </p>
+      <p>
+        \(\textbf{Example. }\)Let \(n = 101^7\). We have
+        \[
+        \varphi(n) = \varphi(101^7) = 101^7 - 101^6 = 101^6(101 - 1) = 101^6\cdot 100.
+        \]
+      </p>
+      <p>
+        \(\textbf{Note. }\)If \(p\) is a prime number, then \(\varphi(p) = p - 1\).
+      </p>
+      <p>
+        \(\textbf{Note. }\)If \(p\) is a prime number, then \(\varphi(p^k) = p^k - p^{k-1}\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "multiplicative">
+      <h2>Multiplicative Function</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(f:\mathbb{Z}^+\to\mathbb{C}\) be an arithmetic function. 
+        We say that \(f\) is multiplicative if \(f(1) = 1\) and \(f(ab) = f(a)f(b)\) for all \(a, b\in\mathbb{Z}^+\) where \(\gcd(a, b) = 1\).
+      </p>
+      <p>
+        \(\textbf{Example. }\)The tau function \(\tau(n)\) is multiplicative.
+      </p>
+      <p>
+        \(\textbf{Example. }\)The \(\sigma\) function \(\sigma(n)\) is multiplicative.
+      </p>
+      <p>
+        \(\textbf{Example. }\)The Euler function \(\varphi(n)\) is multiplicative.
+      </p>
+      <p>
+        \(\textbf{Example. }\)The legendre formula \(\left(\frac{a}{p}\right)\) is multiplicative.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "proposition_2">
+    <p>
+      \(\textbf{Proposition 2. }\)Let \(f:\mathbb{Z}^+\to\mathbb{C}\) be a multiplicative function. 
+      We define \(g:\mathbb{Z}^+\to\mathbb{C}\) as 
+      \[
+      g(n) = \sum_{d\mid n}f(d).
+      \]
+      Then \(g\) is multiplicative.
+    </p>
+    <p>
+      \(\textbf{Proof. }\)We need to define a bijective map \(\phi:\mathbb{Z}^+\to\mathbb{Z}^+\to\mathbb{Z}^+\) such that \(g(n) = \sum_{d\mid n}f(d) = \sum_{d\mid n}f(\phi(d)) = h(n)\).
+    </p>
+    </section>
+
+
+      
+    <section id = "References">
+    <h2>References</h2>
+    <ul>
+      <li>
+        First Initial. Last name, "Book name", Publications, 
+        Edition, Year.
+      </li>
+    </ul>
+  </section>
+  </body>
+</html>

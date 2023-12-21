@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Math Flashcards</title>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="flashcards.css" />
+  </head>
+  <body>
+    <div class="flashcard-container">
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-side front">
+          What is the definition of a \(\text{ Simple Group}\)?
+        </div>
+        <div class="card-side back">
+          A simple group is a nontrivial group whose only normal subgroups are the trivial group and the group itself 
+          (i.e. \(\{e\}\) and \(G\)).
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-side front">
+          How to tell a subgroup is normal? (Not only one method)
+        </div>
+        <div class="card-side back">
+          <ul>
+            <li>
+              \(N\leq G\) is normal if and only if \(gng^{-1}\in N\) for all \(g\in G\) and \(n\in N\).  
+            </li>
+            <li>
+              A subgroup \(N\) of the group \(G\) is normal if and only if it is the kernel of some homomorphism. 
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-side front">
+        </div>
+        <div class="card-side back">
+
+        </div>
+      </div>
+      <!-- Add more cards here -->
+    </div>
+    <script src="flashcards.js"></script>
+  </body>
+</html>
