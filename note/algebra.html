@@ -123,86 +123,8 @@
     </p>
     </section>
     
-    <section id = 'example'>
-    <h2>Examples</h2>
-    <h3>Integral Domain</h3>
-    <p>
-      <ul>
-        <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is an integral domain.</li>
-        <li>\(\textbf{Example 2. }\) \(\mathbb{Z}[i]\) (Gaussian Integer) is an integral domain.</li>
-        <p>
-          \(\textbf{Proof (2).}\) The major part is to show that there is no zero divisor in \(\mathbb{Z}[i]\).
-          Suppose that there exists zero divisors in \(\mathbb{Z}[i]\).
-          Suppose \(a + bi, c + di\in \mathbb{Z}[i]\) such that \((a + bi)(c + di) = 0\), where 
-          \(a\) or \(b\) is not zero and \(c\) or \(d\) is not zero. Then we have
-          \[
-            \begin{align} 
-            (a + bi)(c + di) &= 0\\
-            ac + adi + bci + bdi^2 &= 0\\
-            ac - bd + (ad + bc)i &= 0\\
-            ac - bd &= 0\\
-            ad + bc &= 0\\
-            ac &= bd\\
-            ad &= -bc\\
-            \end{align}
-          \]
-          Then we have 
-          \[
-          \begin{align}
-            acd & = bd^2\\
-            acd & = -bc^2\\
-            bd^2 &= -bc^2\\
-            d^2 &= -c^2\\
-            d^2 + c^2 &= 0\\
-          \end{align}
-          \]
-          Since \(d, c\in \mathbb{Z}\), we have \(d = c = 0\). However, we assume that \(c\) or \(d\) is not zero, which is a contradiction.
-        </p>
-        <li>\(\textbf{Example 3. }\) Quadratic Integer Ring \(\mathbb{Z}(\sqrt{D})\) is an integral domain</li>
-        <li>\(\textbf{Example 4. }\) All fields are integral domains.</li>
-        <li>\(\textbf{Claim 1. }\)\(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
-          <p>
-            \(\textbf{Proof. }\) suppose that \(2 = (a + b\sqrt{-5})(c + d\sqrt{-5})\) for some \(a, b, c, d\in \mathbb{Z}\).
-            Then we have
-            \[
-            \begin{align}
-              2 &= (a + b\sqrt{-5})(c + d\sqrt{-5})\\
-              2 &= ac - 5bd + (ad + bc)\sqrt{-5}\\
-            \end{align}
-            \]
-            We can see that \(ad + bc = 0\). Then we have 
-            \[
-            \begin{align}
-            2 &= ac - 5bd\\
-            2 &= ac - 5bd - (ad + bc)\sqrt{-5}\\
-            2 &= (a - b\sqrt{-5})(c + d\sqrt{-5})\\
-            \end{align}
-            \]
-            In that case, we have 
-            \[
-            \begin{align}
-            4 &= 2\cdot 2\\
-            4 &= (a + b\sqrt{-5})(c + d\sqrt{-5})(a - b\sqrt{-5})(c + d\sqrt{-5})\\
-            4 &= (a^2 + 5b^2)(c^2 + 5d^2)\\
-            \end{align}
-            \]
-            Thus, we can see that if \(b\neq 0\), then we have \(a^2 + 5b^2 \geq 5\). 
-            Similary, if \(d\neq 0\), then we have \(c^2 + 5d^2 \geq 5\).
-            Hence, we can see that \(b = d = 0\). Then we have \(2 = ac\).
-            Since \(2\) is a prime number, we have \(a = 1\) and \(c = 2\).
-            Therefore, we have \(2 = (2 + 0\sqrt{-5})(1 + 0\sqrt{-5})\), where one of them is a unit.
-            Then, we have \(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\).  \[ \tag*{$\square$} \]
-          </p>
-          <li>\(\textbf{Claim 2.}\) \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\)</li>
-          <p>
-            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example. 
-            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\). 
-            Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
-            Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \[ \tag*{$\square$} \]
-          </p>
-      </ul>
-    </p>
-    <h3>Principal Ideal Domain</h3>
+    <section id = 'principal_ideal_domain'>
+    <h2>Principal Ideal Domain</h2>
     <p>
       <ul>
         <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is a principal ideal domain.</li>
