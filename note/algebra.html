@@ -465,6 +465,26 @@
             \end{align}.
           \]
           Thus, we have \(ac - 11bd = 3\) and \(ad + bc = 0\).
+          Similary, we can have
+          \[
+            \begin{align}
+            3 &= ac - 11bd - (ad + bc)\sqrt{-11}\\
+            3 &= (a - b\sqrt{-11})(c - d\sqrt{-11})\\
+            \end{align}.
+          \]
+          Then, we havve 
+          \[
+            9 = 3\cdot 3 = (a + b\sqrt{-11})(c + d\sqrt{-11})(a - b\sqrt{-11})(c - d\sqrt{-11}) = (a^2 + 11b^2)(c^2 + 11d^2).
+          \]
+          We can know that if \(b\neq 0\), then \(a^2 + 11b^2\geq 11\). Similary, if \(d\neq 0\), then \(c^2 + 11d^2\geq 11\).
+          Now we can conclude that \(b = d = 0\), which implies that \((ac)^2 = 9\). Hence, we have \(ac = \pm 3\).
+          Since \(a, c\in \mathbb{Z}\), we can get that, without loss of generality, \(a = -1\) and \(c = -3\) or \(a = 1\) and \(c = 3\).
+          Then, we show that \(3 = (-1)(-3)\) or \(3 = (1)(3)\), which implies one of the divisors is a unit. 
+          Hence, we can know that \(3\) is irreducible in \(\mathbb{Z}(\sqrt{-11})\). \\
+          Then, we need to show that \(3\) is not prime in \(\mathbb{Z}(\sqrt{-11})\).
+          The first observation is that \(3\mid 12 = (1 + \sqrt{-11})(1 - \sqrt{-11})\).
+          However, we can know that \(3\nmid (1 + \sqrt{-11})\) and \(3\nmid (1 - \sqrt{-11})\).
+          Hence, we can know that \(3\) is not prime in \(\mathbb{Z}(\sqrt{-11})\).
     </p>
     <p>
       \(\textbf{Proof (3). }\) Suppose that \(R\) is an integral domain, and \(p\) is a prime in \(R\). 
