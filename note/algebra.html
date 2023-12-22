@@ -164,7 +164,24 @@
         <li>\(\textbf{Example 3. }\) \(\mathbb{Z}[x]\) is a principal ideal domain.</li>
       </ul>
     </p>
-    </section>  
+    <p>
+        \(\textbf{Theorem. }\) Let \(R\) be a principal ideal domain, then every prime ideal in \(R\) is maximal.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(R\) be a principal ideal domain and \((p)\) be a prime ideal in \(R\).
+        Since \(R\) is a principal ideal domain, we find a ideal containing \((p)\) and assume it is \((m)\) (i.e. \((p)\subset (m)\)).
+        Then we can know that \(p\in (m)\), which implies that \(p = mr\) for some \(r\in R\). 
+        Then we can get \(mr\in (p)\). Since \(p\) is a prime ideal, we have \(m\in (p)\) or \(r\in (p)\).
+        If \(m\in (p)\), then we have \((m)\subset (p)\). Since \((p)\subset (m)\), we have \((p) = (m)\).
+        If \(r\in (p)\), then we have \(r = ps\) for some \(s\in R\). Then we have \(p =mr = psm\), which implies that \(1 = sm\).
+        Hence, we have \(m\) is a unit in \(R\). Thus, we have \((m) = R\). 
+        Therefore, we can see that \((p)\) is maximal. \(\blacksquare\)
+      </p>
+    </section> 
+
+    <br>
+
+    
     
     <h2>KU 2022 (January)</h2>
     <section id = 'ku_2022_1_3'>
