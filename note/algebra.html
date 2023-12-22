@@ -37,6 +37,24 @@
     <script src="highlight.js"></script><!--It is a link for highlight.js-->
     <h1>Algebra</h1>
 
+    <section id = 'ideal'>
+      <p>
+        \(\textbf{Proposition. }\) Let \(R\) be a ring with identity \(1\), and \(I\) is an ideal of \(R\). \(R = I\) if and only if \(I\) contains a unit. 
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Firstly, suppose that \(R = I\). 
+        Since \(R\) is a ring with identity \(1\), then we can know that \(1\) is unit in \(R\).
+        Hence, we can see that \(I\) contains a unit.
+        For the other direction, suppose that \(I\) contains a unit \(u\in R\).
+        Then we can know that there exists an inverse \(u^{-1}\in R\) such that \(u^{-1}u = 1\).
+        Hence, we have for any \(r\in R\), 
+        \[
+          r = r(1) = r(u^{-1}u) = (ru^{-1})(u)\in I.
+        \]
+        Therefore, we have \(R\subset I\). Since \(I\subset R\), we have \(R = I\). \(\blacksquare\)
+      </p>
+    </section>
+
     <section id = 'prime'>
       <p>
         \(\textbf{Theorem. }\) Suppose that \(p\) is in a ring \(R\). Then \(p\) is prime if and only if \((p)\) is a prime ideal. 
