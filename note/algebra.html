@@ -268,7 +268,10 @@
         If \( A^m = I \) for some \( m > 0 \), then we have \( A^{m+1} = A^m\cdot A = I\cdot A = A \), where \(m+1 > 1\).
         For the other direction, without loss of generality, given \(A^m = A^n\) where \(m\gt n\).
         If \(A\) is invertible, then we have \(A^{m-n} = I\) where \(m-n > 0\).
-        If \(A\) is non-invertible, 
+        Firstly, we show that if \(A\) is non-invertible, then we can know that of the eigenvalue is \(0\).  
+        Since \(A\) is non-invertible, we can know that \(\text{det}(A) = 0\). 
+        Then we know the characteristic polynomial of \(A\) is \(\chi_A(x) = \text{det}(A - xI)\). 
+        When we plug in \(x = 0\), then we have \(\chi_A(0) = \text{det}(A - 0I) = \text{det}(A) = 0\).
       </p>
       <p>
         \(\textbf{Solution(2). }\) Let \( A = \begin{pmatrix} \cos(\frac{2\pi}{2022}) &  -\sin(\frac{2\pi}{2022}) \\  \sin(\frac{2\pi}{2022}) &  \cos(\frac{2\pi}{2022}) \end{pmatrix} \).
