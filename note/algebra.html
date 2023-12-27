@@ -379,6 +379,30 @@
         Now we calculate the eigenvectors of \(A\).
         Then we have the eigenvectors of \(A\) are \(v_1 =  (0, 1, 1, -1)^T\) for eigenvalue \(1\), 
         \(v_2 = (0, 0, 1, 0)^T\) for eigenvalue \(1\), \(v_3 = (1, 1, 0, -1)^T\) for eigenvalue \(0\).
+        We need to find another column vector of \(P\). Suppose that it is \((a, b, c, d)^T\) such that 
+        \[
+         A \begin{bmatrix}
+          a \\
+          b \\
+          c \\
+          d \\
+          \end{bmatrix} = v_3 = \begin{bmatrix}
+            1 \\
+            1 \\
+            0 \\
+            -1 \\
+          \end{bmatrix}.
+        \]
+        Then we have \((a, b, c, d)^T = (1, 2, 0, -1)^T\). Hence, we have a matrix such that 
+        \[
+          B = \begin{bmatrix}
+            1 & 1 & 0 & 0 \\
+            2 & 1 & 0 & 1 \\
+            0 & 0 & 1 & 1 \\
+            -1 & -1 & 0 & -1 \\
+          \end{bmatrix}.
+        \]
+        Then, we calculate the determinant of \(B\) and find that it is not zero. Hence, we have \(P = B\), where \(A = P^{-1}JP\).
       </p>
     </section>
 
