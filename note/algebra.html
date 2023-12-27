@@ -41,6 +41,35 @@
     <script src="highlight.js"></script><!--It is a link for highlight.js-->
     <h1>Algebra</h1>
     
+    <section>
+      <h2>Spectral Theorem for Normal Operators</h2>
+      <p>
+        \(\textbf{Theorem. }\)A normal operator \(U\) on a finite-dimensional complex Hilbert space can be diagonalized by a unitary matrix \(V\), meaning that there exists a unitary matrix $V$ and a diagonal matrix $D$ such that $U = VDV^*$.
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Since \(U\) is normal, by the spectral theorem, it has a complete orthonormal set of eigenvectors. 
+        Let \(\{\lambda_1, \lambda_2, \dots, \lambda_n\}\) be the eigenvalues of \(U\), 
+        and \(\{v_1, v_2, \dots, v_n\}\) be the corresponding orthonormal eigenvectors where \(n\) is the dimension of the Hilbert space.
+        Form a matrix \(V\) whose columns are the eigenvectors \(v_1, v_2, \dots, v_n\) of \(U\). 
+        Since the eigenvectors form an orthonormal set, the matrix \(V\) is unitary, i.e., \(V^*V = VV^* = I\), where \(I\) is the identity matrix.
+        Define a diagonal matrix $D$ whose diagonal entries are the eigenvalues of \(U\) corresponding to the eigenvectors in \(V\). 
+        Specifically, \(D = \text{diag}(\lambda_1, \lambda_2, \dots, \lambda_n)\).
+        To show \(U = VDV^*\), consider the action of both sides on an arbitrary eigenvector \(v_i\) of \(U\). 
+        For the left side:
+        \[ 
+          Uv_i = \lambda_i v_i, 
+        \]
+        where $\lambda_i$ is the eigenvalue corresponding to $v_i$.
+        For the right side,
+        \[ 
+          VDV^*v_i = VD(\delta_{ij}v_j) = V(\lambda_i \delta_{ij}e_j) = \lambda_i Vv_i = \lambda_i v_i, 
+        \]
+        where \(\delta_{ij}\) is the Kronecker delta function and \(e_j\) is the standard basis vector with \(1\) at the \(j\)-th position and \(0\) elsewhere.
+        Since both sides have the same action on each eigenvector and eigenvectors form a basis for the Hilbert space, we conclude that \(U = VDV^*\). \(~~\blacksquare\)
+      </p>
+    </section>
+
+    <br>
 
     <section id = 'field'>
       <h2>Field</h2>
