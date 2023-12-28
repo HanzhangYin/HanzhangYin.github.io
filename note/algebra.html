@@ -409,6 +409,52 @@
       </p>
     </section>
 
+    <br>
+    <h2>KU 2021 (January)</h2>
+    <section id = 'ku_2021_1_1'>
+      <p>
+        \(\textbf{Problem 1.}\)
+        <ul>
+          <li>
+            Write down all possible Jordan canonical forms for a \( 5 \times 5 \) matrix \( A \) such that \( A^3 = 0 \) (the blocks should have non-increasing size down the diagonal. We work over complex numbers).
+          </li>
+          <li>
+            Let \(N\) be a nilpotent matrix over any field. Prove that \(I + N\) is diagonalizable if and only if \(N = 0\) (I is the identity matrix of the same size).
+          </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Solution 1.}\)
+      </p>
+      <p>
+        \(\textbf{Proof 2.}\)Suppose that \(I\) is an identity matrix and \(N\) is a nilpotent matrix. 
+        Hence, we know there exists a \(n\in\mathbb{N}\) such that \(N^n = 0\). 
+        If \(N = 0\), then we can know that 
+        \[
+          I + N = I + 0 = I.
+        \]
+        Since \(I\) is a diagonal matrix, we can know that \(I + N\) is diagonalizable. To see that, just pick any inevertible matrix \(P\).
+        Then, we have \(PIP^{-1} = I\). Hence, we have \(I\) is diagonalizable. Now suppose that \((I+N)\) is diagonalizable.
+        Then, there exists a diagonal matrix \(D\) and an invertible matrix \(P\) such that \(D = P^{-1}(I + N)P\).
+        Then, we have 
+        \[
+        \begin{align} 
+        P^{-1}(I + N)P &= D\\
+        P^{-1}IP + P^{-1}NP &= D\\
+        I + P^{-1}NP &= D\\
+        P^{-1}NP &= D - I\\
+        (P^{-1}NP)^n &= (D - I)^n\\
+        P^{-1}N^nP &= (D - I)^n\\
+        P^{-1}0P &= (D - I)^n\\
+        0 &= (D - I)^n\\
+        \end{align}
+        \]
+        Thus, we can see that \(D - I = 0\), which implies that \(D = I\). 
+        Hence, we have \(P^{-1}(I + N)P = D = I\).
+        Then we have \(I + N = PIP^{-1} = I\). Therefore, we have \(N = 0\). \(~~~~~~~~\blacksquare\)
+      </p>
+    </section>
+
   
     
     <h2>KU 2022 (January)</h2>
