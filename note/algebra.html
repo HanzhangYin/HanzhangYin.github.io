@@ -558,7 +558,51 @@
         <p>
           \(\textbf{Proof(1). }\)Suppose that \(A\) and |(B\) are two similar \(n\times n\) matrices. 
           Then we have \(A = PBP^{-1}\) for some invertible \(n\times n\) matrices over \(\mathbb{C}\). 
-          Since we know that two matrices have the same jordan canonical form if they are similar. 
+          Suppose the characteristic polynomial of \(A\) is \(\chi_A(x)\). Then we have
+          Hence, we have 
+          \[
+            \begin{align} 
+            \chi_A(x) &= \text{det}(xI - A)\\
+            &= \text{det}(xI - PBP^{-1})\\
+            &= \text{det}(PxIP^{-1} - PBP^{-1})\\
+            &= \text{det}(P(xI - B)P^{-1})\\
+            &= \text{det}(P)\text{det}(xI - B)\text{det}(P^{-1})\\
+            &= \text{det}{P}\text{det}{P^{-1}}\text{det}(xI - B)\\
+            &= \text{det}(PP^{-1})\text{det}(xI - B)\\
+            &= \text{det}(I)\text{det}(xI - B)\\
+            &= \text{det}(xI - B)\\
+            &= \chi_B(x).
+          \]
+          Thus, we show that the characteristic polynomial of \(A\) and \(B\) are the same. 
+          Now we need to show that the minimal polynomial of \(A\) and \(B\) are the same.
+          Suppose that the minimal polynomial of \(A\) is \(\mu_A(x):=(x-\lambda_1)^{e_1}\cdots(x - \lambda_m)^{e_m}\)
+          and the minimal polynomial of \(B\) is \(\mu_B(x):=(x-\lambda_1)^{f_1}\cdots(x - \lambda_m)^{f_m}\).
+          Then we have 
+          \[
+            \begin{align} 
+            \mu_A(A) &= 0\\
+            \mu_A(PBP^{-1}) &= (\lambda_1I - PBP^{-1})^{e_1}\cdots(\lambda_mI - PBP^{-1})^{e_m}\\
+            &= (P\lambda_1IP^{-1} - PBP^{-1})^{e_1}\cdots(P\lambda_mIP^{-1} - PBP^{-1})^{e_m}\\
+            &= P(\lambda_1I - B)^{e_1}P^{-1}\cdots P(\lambda_mI - B)^{e_m}P^{-1}\\
+            &= P(\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m}P^{-1}\\
+            P(\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m}P^{-1} &= 0\\
+            (\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m} &= P^{-1}0P = 0\\
+            \end{align}
+          \]
+          Thus, we can know that \(e_i\geq f_i\) for \(i = 1, \ldots, m\). Similarly, we can know that 
+          \[
+          \begin{align} 
+            \mu_B(B) &= 0\\
+            \mu_B(P^{-1}AP) &= (\lambda_1I - P^{-1}AP)^{f_1}\cdots(\lambda_mI - P^{-1}AP)^{f_m}\\
+            &= (P^{-1}\lambda_1IP - P^{-1}AP)^{f_1}\cdots(P^{-1}\lambda_mIP - P^{-1}AP)^{f_m}\\
+            &= P^{-1}(\lambda_1I - A)^{f_1}P\cdots P^{-1}(\lambda_mI - A)^{f_m}P\\
+            &= P^{-1}(\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m}P\\
+            P^{-1}(\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m}P &= 0\\
+            (\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m} &= P0P^{-1} = 0\\
+          \end{align}
+          \]
+          Thus, we can know that \(e_i\leq f_i\) for \(i = 1, \ldots, m\). Hence, we have \(e_i = f_i\) for \(i = 1, \ldots, m\).
+          Therefore, we show that they share the same minimal polynomial. \(~~~~\blacksquare\)
         </p>
       </section>
     
