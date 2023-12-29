@@ -335,13 +335,13 @@
         \]
       </p>
       <p>
-        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f \in F[x_1, \ldots, x_n] \) be nonconstant. 
+        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f \in F[x_1, \ldots, x_n] \) be non-constant. 
         Then we say that \(F[X_1, \ldots, x_n]\) is a Unique Factorization Domain.
         Specifically, there are irreducible polynomials \( g_1, \ldots, g_r \in F[x_1, \ldots, x_n] \) such that
         \[ 
           f = g_1 \cdots g_r. 
         \]
-        Furthermore, if there is a second factorization of \( f \) into irreducibles
+        Furthermore, if there is a second factorization of \( f \) into irreducible polynomials
         \[ 
           f = h_1 \cdots h_s, 
         \]
@@ -364,6 +364,20 @@
           f = a_0(x - \alpha_1) \cdots (x - \alpha_n), 
         \]
         where \( \alpha_1, \ldots, \alpha_n \in L \). When this happens, we say that \( f \) splits completely over \( L \).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) If \( F \) is a field and \( f \in F[x] \) is non-constant, then the following are equivalent:
+        <ul>
+          <li>
+            The polynomial \( f \) is irreducible over \( F \).
+          </li>
+          <li>
+            The ideal \( (f) = \{ fg \mid g \in F[x] \} \) is a maximal ideal.
+          </li>
+          <li>
+            The quotient ring \( F[x] / (f) \) is a field.
+          </li>
+        </ul>
       </p>
     </section>
 
