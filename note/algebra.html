@@ -491,6 +491,19 @@
           f'(\alpha) &= h(\alpha) + (\alpha - \alpha)h'(\alpha) = h(\alpha) \neq 0. \\
         \end{align} 
         \]
+        In that case, we can know that \(f\) and \(f'\) do not share the same root, which implies that 
+        they do not have the same factor. Hence, we have \(f\) and \(f'\) are relatively prime.
+        For the other direction, we will prove it with contrapositive. 
+        Suppose that \(f(x)\) is not separable, given the definition of separable, we can know that \(f(x)\) has a repeated roots.
+        Then we have \(f(x) = (x - \alpha)^2h(x)\) for some \(\alpha\) in the extension of \(K\).
+        Hence, we can get 
+        \[
+        \begin{align}
+          f'(x) &= 2(x - \alpha)h(x) + (x - \alpha)^2h'(x)\\
+          f'(\alpha) &= 2(\alpha - \alpha)h(\alpha) + (\alpha - \alpha)^2h'(\alpha) = 0. \\
+        \end{align}
+        \]
+        Therefore, we can know that \(f\) and \(f'\) have some similar factor. Hence, we have \(f\) and \(f'\) are not relatively prime. \(\blacksquare\)
       </p>
     </section>
 
