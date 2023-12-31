@@ -178,7 +178,6 @@
       <a href="#foundation_models">Foundation Models</a>
       <a href="#llm">Large Language Model</a>
     </nav>
-    <script src="copy.js"></script><!--It is a link for copy.js, which is copying the code  -->
     <section id = "generative_ai">
     <h2>What is Generative Artificial Intelligence (AI)</h2>
     <p>
@@ -191,15 +190,16 @@
     <br>
 
     <div class="code-container">
-      <pre id="code"><code>// Your code here
-  function helloWorld() {
-      console.log("Hello, world!");
-  }
-  helloWorld();</code></pre>
-      <button onclick="copyCode()">Copy</button>
-  </div>
+      <pre id="code1"><code>
+        function helloWorld() {
+        console.log("Hello, world!");
+        }
+        helloWorld();</code></pre>
+      <!-- <button onclick="copyCode()">Copy</button> -->
+      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    </div>
 
-  <script src="copy.js"></script>
+    <script src="copy.js"></script>
 
     <section id = "discriminative_ai">
     <h2>Difference between Generative AI and Discriminative AI</h2>
