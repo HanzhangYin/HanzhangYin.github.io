@@ -26,6 +26,7 @@
       <a href="#read_spectral_theorem">Read Spectral Theorem</a>
       <a href="#complex_spectral_theorem">Complex Spectral Theorem</a>
       <a href="#spectral_theorem_for_normal_operator">Spectral Theorem for Normal Operator</a>
+      <a href="#solvable_group">Solvable Group</a>
       <a href="#field">Field</a>
       <a href="#integral_domain">Integral Domain</a>
       <a href="#principal_ideal_domain">Principal Ideal Domain</a>
@@ -125,6 +126,27 @@
         \]
         where \(\delta_{ij}\) is the Kronecker delta function and \(e_j\) is the standard basis vector with \(1\) at the \(j\)-th position and \(0\) elsewhere.
         Since both sides have the same action on each eigenvector and eigenvectors form a basis for the Hilbert space, we conclude that \(U = VDV^*\). \(~~~~~\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'solvable_group'>
+      <h2>Solvable Group</h2>
+      <p>
+        \textbf{Definition 8.1.1} A finite group \( G \) is \textit{solvable} if there are subgroups
+        \[ 
+        \{e\} = G_n \subseteq G_{n-1} \subseteq \cdots \subseteq G_1 \subseteq G_0 = G 
+        \]
+        such that for \( i = 1, \ldots, n \) we have:
+        <ul>
+          <li>
+            (a) \( G_i \) is normal in \( G_{i-1} \).
+          </li>
+          <li>
+            (b) \( [G_{i-1} : G_i] \) is prime.
+          </li>
+        </ul>
       </p>
     </section>
 
