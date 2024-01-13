@@ -237,7 +237,20 @@
       </p>
       <p>
         \(\textbf{Proof. }\)Firstly, we can observe that for all \(x\), they are distinct.
-        Therefore, for arbitrary value of \(f(x)\), we can find a unique polynomial of degree less than or equal to 4 interpolating the table. \( \blacksquare \)
+        Therefore, for arbitrary value of \(f(x)\), we can find a unique polynomial of degree less than or equal to \(3\) interpolating the table. \( \blacksquare \)
+      </p>
+      <p>
+        \(\textbf{Solution.}\)Here we can use Newton's divided difference method to find the interpolation polynomial.
+        \[
+          \begin{array}{c|cccc}
+            x & f[x_0] & f[x_0, x_1] & f[x_0, x_1, x_2] & f[x_0, x_1, x_2, x_3] \\
+            \hline
+            0 & 51 & & & \\
+            1 & 3 & -48 & & \\
+            7 & 201 & 32 & 2 & \\
+            2 & 1 & -50 & 2 & -\frac{1}{2} \\
+          \end{array}
+        \]
       </p>
     </section>
 
