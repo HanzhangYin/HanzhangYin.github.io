@@ -126,6 +126,19 @@
       </p>
     </section>
 
+    <br>
+
+    <section>
+      <h2>Theorem on Polynomial Interpolation Error</h2>
+      <p>
+        \(\textbf{Theorem. }\)Let \( f \) be a function in \( C^{n+1}[a, b] \), and let \( p \) be the polynomial of degree at most \( n \) that interpolates the function \( f \) at \( n + 1 \) distinct points \( x_0, x_1, \ldots, x_n \) in the interval \([a, b]\). 
+        To each \( x \) in \([a, b]\) there corresponds a point \( \xi_x \) in \((a, b)\) such that
+        \[ 
+          f(x) - p(x) = \frac{1}{(n + 1)!} f^{(n+1)}(\xi_x) \prod_{i=0}^{n} (x - x_i) .
+        \]
+      </p>
+    </section>
+
     <section id = 'error_analysis_netwon'>
       <h2>Error Analysis for Newton's Method</h2>
       <p>
