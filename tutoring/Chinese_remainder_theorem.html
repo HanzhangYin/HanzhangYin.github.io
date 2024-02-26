@@ -29,16 +29,59 @@
     <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
     <h1>Chinese Remainder Theorem</h1>
 
-    <section id = "Definition">
       <p>
-        \(\textbf{Lemma 1.}\)Suppose \(I, J \)are two-sided ideals in the ring R. Show that \(I\times J\) and \(I\cap J\) are two-sided
+        \(\textbf{Lemma 1. }\)Suppose \(I, J \)are two-sided ideals in the ring R. Show that \(I\times J\) and \(I\cap J\) are two-sided
         ideals.
       </p>
       <p>
-        
+        \(\textbf{Proof. }\)Since both \(I\) and \(J\) are two-sided ideals, we have 
+        Suppose that \(a\in I\cap J\), then for any \(r\in R\), we have \(ra \in I\) and \(ra \in J\), so \(ra \in I\cap J\). 
+        Similarly, suppose that \(b\in I\cap J\), for any \(r\in R\), we have \(ar \in I\) and \(ar \in J\), so \(ar \in I\cap J\).
+        Thus, we show that \(I\cap J\) is a two-sided ideal.
+        For \(I + J\), for any \(r\in R\), 
+        we have
+        \[
+          r(I + J)r = rIr + rJr = I + J.
+        \]
+        Thus, we show that \(I + J\) is a two-sided ideal.
       </p>
 
       <br>
+
+      <p>
+        \(\textbf{Lemma 2. }\)Suppose \( I, J \) are two-sided ideals in the ring \( R \). There is an injective ring homomorphism \( \phi: R/(I \cap J) \rightarrow R/I \times R/J \). 
+      </p>
+      <p>
+        \(\textbf{Proof. }\)we define the map \(\phi: R/(I \cap J) \rightarrow R/I \times R/J\) by
+        \[
+          \phi((r + I \cap J)) = (r + I, r + J)
+        \]
+        We show that \(\phi\) is a ring homomorphism.
+        For any \(r, s \in R\), we have
+        \[
+          \phi(r + I\cap J) + \phi(s + I\cap J) = (r + I, r + J) + (s + I, s + J) = (r + s + I, r + s + J) = \phi((r + s) + I\cap J).
+        \]
+        \[
+          \phi((r + (I \cap J))(s + (I \cap J))) = \phi(rs + (I \cap J)) = (rs + I, rs + J) = (r + I, r + J)(s + I, s + J)= \phi(r + (I \cap J))\phi(s + (I \cap J)).
+        \]
+        Now we define this map is well defined. 
+        Suppose that \(r_1 + I\cap J = r_2 + I\cap J\).
+        We have \(r_1 - r_2 + I\cap J = I\cap J\), so \(r_1 - r_2 \in I\cap J\).
+        Thus, we have \(r_1 - r_2 \in I\) and \(r_1 - r_2 \in J\).
+        Thus, we have \(r_1 = r_2 + I\) and \(r_1 = r_2 + J\), which implies that \(r_1 + I = r_2 + I\) and \(r_1 + J = r_2 + J\).
+        Thus, we have 
+        \[
+          \phi(r_1 + I\cap J) = (r_1 + I, r_1 + J) = (r_2 + I, r_2 + J) = \phi(r_2 + I\cap J).
+        \]
+        It show that \(\phi\) is well defined.
+        Now we have \(\phi\) is a homomorphism, and we need to show that \(\phi\) is injective.
+        Now suppose that \(\phi(r_1 + I\cap J) = \phi(r_2 + I\cap J)\). 
+        In other words, we have \((r_1 + I, r_1 + J) = (r_2 + I, r_2 + J)\).
+        Thus, we have \(r_1 + I = r_2 + I\) and \(r_1 + J = r_2 + J\).
+        Thus, we have \(r_1 - r_2 \in I\) and \(r_1 - r_2 \in J\).
+        Thus, we have \(r_1 - r_2 \in I\cap J\) which implies that \(r_1 + I\cap J = r_2 + I\cap J\).
+        Thus, we have \(\phi\) is injective.
+      </p>
 
     <h2>General Case</h2>
     <p>
