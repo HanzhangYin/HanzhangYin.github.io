@@ -51,7 +51,7 @@
     <h1 class="title">Unique Factorization of Monic Polynomial over field \(F\)</h1>
   </header>
 
-<section id = "Greatest_Common_Divisor">
+<!-- <section id = "Greatest_Common_Divisor">
 <h2>
   Greatest Common Divisor
 </h2>
@@ -338,7 +338,7 @@ $$
 </p>
 </section>
 
-<br>
+<br> -->
 
 <section id = "Lemma_1">
 <p>
@@ -366,14 +366,16 @@ $$
   <span class="tooltip-text">\(\textbf{Lemma 1. }\)Every monic polynomial over \(F\) with integer degree \(n\) where \(n > 1\), is divisible by an irreducible monic polynomial over \(F\).</span>
 </a>, 
 <script src="position_adjust.js"></script>
-we know that there is an irreducible monic polynomial \(p_1(x)\) such that \(p_1(x)\;|\; p(x)\). Hence there exists a polynomial \(n_1(x)\) where its degree \(0\leq n_1< n\) such that \(p(x) = p_1(x)n_1(x)\).If \(n_1(x)\) is a constant number, then we are done: \(p(x) =p_1(x)\) is an expression of n as a product of primes. 
-If \(n_1 > 1\), then from 
+we know that there is an irreducible monic polynomial \(p_1(x)\) such that \(p_1(x)\;|\; p(x)\). Hence there exists a polynomial \(n_1(x)\) where its degree \(0\leq n_1< n\) such that \(p(x) = p_1(x)n_1(x)\).
+If \(n_1(x)\) is a constant number, then we can know that \(n_1(x) = 1\), or \(p(x)\) will not be a monic polynomial since \(p_1(x)\) is monic as well.
+Then \(p(x) =p_1(x)n_1(x) = p_1(x)\) is a irreducible monic polynomial over \(F\).
+If \(n_1(x)\) has degree larger or equal to \(1\), then from 
 <a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
-  <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+  <span class="tooltip-text">Every monic polynomial over \(F\) with integer degree \(n\) where \(n > 1\), is divisible by an irreducible monic polynomial over \(F\).</span>
 </a>. 
 <script src="position_adjust.js"></script>
-again, there is a prime that divides \(n_1\). That is, \(n_1 = p_2n_2\),
-where \(p_2\) is a prime and \(1\leq n_2 \lt n_1\).
+again, there is an irreducible monic polynomial that divides \(n_1(x)\). That is, \(n_1(x) = p_2(x)n_2(x)\),
+where \(p_2(x)\) is an irreducible monic polynomial and its degree \(0\leq n_2 \lt n_1\).
 If \(n_2 =1\), again we are done: \(n = p_1p_2\) is written as a product of primes. 
 But if \(n_2 > 1\), then we apply
 <a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
