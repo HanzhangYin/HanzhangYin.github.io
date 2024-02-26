@@ -376,18 +376,18 @@ If \(n_1(x)\) has degree larger or equal to \(1\), then from
 <script src="position_adjust.js"></script>
 again, there is an irreducible monic polynomial that divides \(n_1(x)\). That is, \(n_1(x) = p_2(x)n_2(x)\),
 where \(p_2(x)\) is an irreducible monic polynomial and its degree \(0\leq n_2 \lt n_1\).
-If \(n_2 =1\), again we are done: \(n = p_1p_2\) is written as a product of primes. 
-But if \(n_2 > 1\), then we apply
+If \(n_2 =1\), again we are done: \(p(x) = p_1(x)p_(x)\) is written as a product of irreducible monic polynomials over \(F\). 
+But if the degree of \(n_2(x)\) is larger than or equal to one, then we apply
 <a href="#Lemma_1" class="tooltip-link">\(\textbf{Lemma 1}\)
-  <span class="tooltip-text">\(\textbf{Lemma 1. }\)If \(d\;|\;a_1, d\;|\;a_2, \dots, d\;|\;a_n\), then \(d\;|\;(c_1a_1+c_2a_2+\dots+c_na_n)\) for any integers \(c_1, c_2, \dots, c_n\).</span>
+  <span class="tooltip-text">Every monic polynomial over \(F\) with integer degree \(n\) where \(n > 1\), is divisible by an irreducible monic polynomial over \(F\).</span>
 </a>. 
 <script src="position_adjust.js"></script>
- once again and get that \(n_2 = p_3n_3'\) with \(p_3\) a prime and \(1\leq  n_3 \lt n_2\). If \(n_3=1\), we are done. 
-If not, we continue the same process. We will sooner or later come to \(n_i = 1\) since \(n > n_1 > n_2 >\dots\)
-and each \(n_i\) is positive; such a sequence cannot continue forever. For some \(k\), we will have \(n_k = 1\), in which case \(n = p_1p_2\cdots p_k\) is the desired expression of \(n\) as a product of primes. \[ \tag*{$\square$} \]
+ once again and get that \(n_2(x) = p_3(x)n_3(x)'\) with \(p_3(x)\) an irreducible monic polynomial with degree \(0\leq  \text{deg}(n_3(x)) \lt \text{deg}(n_2(x))\). If \(n_3=1\), we are done. 
+If not, we continue the same process. We will sooner or later come to \(n_i = 1\) since \(\text{deg}(p(x)) > \text{deg}(n_1(x)) > \text{deg}(n_2(x)) >\dots\)
+and each \(n_i(x)\) has a positive degree; such a sequence cannot continue forever. For some \(k\), we will have \(n_k(x) = 1\), in which case \(p(x) = p_1(x)p_2(x)\cdots p_k(x)\) is the desired expression of \(p(x)\) as a product of irreducible monic polynomials over \(F\). \[ \tag*{$\square$} \]
 </p>
 <p>
-\(\textbf{Note.}\) each \(p_i\) may not be in unique.
+\(\textbf{Note.}\) each \(p_i(x)\) may not be in unique.
 </p>
 </section>
 
