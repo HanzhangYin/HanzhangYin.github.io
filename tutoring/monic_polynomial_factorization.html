@@ -340,31 +340,18 @@ $$
 
 <br>
 
-<section id = "prime">
-<h2>Definition of Prime</h2>
-<p>
-  \(\textbf{Definition. }\) An integer \(p\in\mathbb{Z}^+\) is called prime if 
-  <ul>
-    <li>whenever \(p=ab\) where \(a, b\in\mathbb{Z}\), either \(a=\pm 1\) or \(b=\pm 1\)</li>
-    <li>\(p\) is not a unit (i.e. \(p\neq \pm 1\))</li>
-    <li>\(p\) is positive</li>
-  </ul>
-</p>
-</section>
-
-<br>
-
 <section id = "Lemma_3">
 <p>
   \(\textbf{Lemma 3. }\) Every monic polynomial over \(F\) with integer degree \(n\) where \(n > 1\), is divisible by an irreducible monic polynomial over \(F\).
 </p>
 <p>
   \(\textbf{Proof. }\)Let \(p(x)\) to be any monic polynomial over \(F\). Consider the set of divisors of \(p(x)\) whose degrees are greater than or equal \(1\) and less than \(n\). It is either empty or nonempty. 
-  If it is empty, then \(p(x)\) is an irreducible polynomial by definition. 
-  If it is nonempty, then the least-integer principle says that it has a smallest element, call it \(d\). Now we have to show that \(d\) is a prime by contradcition.
-  If \(d\) had a divisor greater than \(1\) and less than \(d\) (d is not a prime), then so would \(n\). However, this is impossible because \(d\) was the smallest such
-  divisor. Thus \(d\) is prime. 
-  \[ \tag*{$\square$} \]
+  If it is empty, then \(p(x)\) is an irreducible polynomial by definition and it can be considered as a divisor of itself.
+  If it is nonempty, then the least-integer principle says that some polynomials of its divisors have a smallest degree, and we call one of them as \(d(x)\).
+  Now we have to show that \(d(x)\) is an irreducible monic polynomial by contradcition.
+  If \(d(x)\) had a divisor whose degree is larger than \(1\) and less than \(\text{deg}(d(x))\), then \(d(x)\) is not irreducible and so would \(n\). H
+  However, this is impossible because \(d(x)\) was the monic polynomial with the smallest degree in the set of divisors of \(p(x)\).
+  Thus \(d\) is an irreducible monic polynomial over \(F\). \[ \tag*{$\square$} \]
 </p>
 </section>
 
