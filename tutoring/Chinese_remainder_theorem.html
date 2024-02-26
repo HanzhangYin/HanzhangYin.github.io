@@ -89,6 +89,26 @@
         \(\textbf{Lemma 3. }\)Suppose \( I, J \) are two-sided ideals in the ring \( R \). If \( I + J = R \).
         Then there is an surjective ring homomorphism \( \phi: R/(I \cap J) \rightarrow R/I \times R/J \) 
       </p>
+      <p>
+        \(\textbf{Proof. }\) We already know that \(\phi\) is injective, so we need to show that \(\phi\) is surjective.
+        Since we have \(I + J = R\), and \(1\in R\), which means there exists \(i + j = 1\) for some \(i\in I\) and \(j\in J\).
+        Then we have \(i = i - j\) and 
+        \begin{align*}
+          \phi(i + I\cap J) = (i + I, i + J) = (i + I , 1 + (- j) + J) = (I, 1 + J),\\
+          \phi(j + I\cap J) = (j + I, j + J) = (1 + (- i) + I, j + J) = (1 + I, J).
+        \end{align*}
+        Now for any \((s + I, r + J)\) in \(R/I \times R/J\), we have
+        \[
+        \begin{align}
+          \phi(ri + sj + I\cap J) &= \phi(ri + I\cap J) + \phi(sj + I \cap J)\\
+           &=  \phi(r + I\cap J)\phi(i + I\cap J) + \phi(s + I\cap J)\phi(j + I\cap J)\\
+           &=  (r + I, r + J)(I, 1 + J) + (s + I, s + J)(1 + I, J)\\
+            &= (I, r + J) + (s + I, J)\\
+            &= (r + I, s + J).
+        \end{align}
+        \]
+        Thus, we have \(\phi\) is surjective. \[ \tag*{$\square$} \]
+      </p>
 
     <h2>General Case</h2>
     <p>
