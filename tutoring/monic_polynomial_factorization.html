@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
 <link rel="stylesheet" type="text/css" href="tutoring_style.css"><!--It is a link for css structure-->
 <script src="highlight.js"></script><!--It is a link for highlight.js-->
-<title>Euclid's Algorithm and Unique Factorization of Integers</title>
+<title>Unique Factorization of Monic Polynomials over Field</title>
 </head>
 <body>
   <div class="top-bar"></div>
@@ -356,14 +356,15 @@ $$
 
 <section id = "Lemma_3">
 <p>
-  \(\textbf{Lemma 3. }\) Every integer \(n, n > 1\), is divisible by a prime.
+  \(\textbf{Lemma 3. }\) Every monic polynomial over \(F\) with integer degree \(n\) where \(n > 1\), is divisible by an irreducible monic polynomial over \(F\).
 </p>
 <p>
-  \(\textbf{Proof. }\)Consider the set of divisors of \(n\) which are greater than \(1\) and less than \(n\). It is either empty or nonempty. 
-  If it is empty, then \(n\) is prime by definition, and thus has a prime divisor, which is itself. 
+  \(\textbf{Proof. }\)Let \(p(x)\) to be any monic polynomial over \(F\). Consider the set of divisors of \(p(x)\) whose degrees are greater than or equal \(1\) and less than \(n\). It is either empty or nonempty. 
+  If it is empty, then \(p(x)\) is an irreducible polynomial by definition. 
   If it is nonempty, then the least-integer principle says that it has a smallest element, call it \(d\). Now we have to show that \(d\) is a prime by contradcition.
   If \(d\) had a divisor greater than \(1\) and less than \(d\) (d is not a prime), then so would \(n\). However, this is impossible because \(d\) was the smallest such
-  divisor. Thus \(d\) is prime. \[ \tag*{$\square$} \]
+  divisor. Thus \(d\) is prime. 
+  \[ \tag*{$\square$} \]
 </p>
 </section>
 
