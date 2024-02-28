@@ -221,6 +221,21 @@
         Since \((p)\) is a prime ideal, we have \(a\in (p)\) or \(b\in (p)\). Thus, we have \(p\mid a\) or \(p\mid b\). Therefore, \(p\) is prime. \(\blacksquare\)
       </p>
     </section>
+
+    <section id = 'prime_irreducible'>
+      <p>
+        \(\textbf{Theorem. }\) Let \(R\) be an integral domain with identity \(1\). Then every prime element of \(R\) is irreducible.
+      </p>
+      <p>
+        Suppose that \(p\) is a prime and \(p = ab\) for some \(a, b\in R\). Then we have \(p\mid ab\). Since \(p\) is prime, we have \(p\mid a\) or \(p\mid b\).
+        Without loss of generality, we can assume that \(p\mid a\). Then we have \(a = pc\) for some \(c\in R\). Then we have 
+        \[
+          p = a\cdot b = (pc)\cdot b = p(cb). 
+        \]
+        Then we have \(p(1 - cb) = 0\). Since \(R\) is an integral domain, we can know that \(1 - cb = 0\), which implies that \(cb = 1\).
+        Therefore, we have \(b\) is a unit. Thus, we have \(p\) is irreducible. \(\blacksquare\)
+      </p>
+    </section>
     
     <section id = 'homomorphism'>
       <p>
