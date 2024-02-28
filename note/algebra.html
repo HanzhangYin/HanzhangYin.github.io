@@ -224,23 +224,6 @@
     </section>
 
     <br>
-
-    <section id = 'prime_irreducible'>
-      <p>
-        \(\textbf{Theorem. }\) Let \(R\) be an integral domain with identity \(1\). Then every prime element of \(R\) is irreducible.
-      </p>
-      <p>
-        Suppose that \(p\) is a prime and \(p = ab\) for some \(a, b\in R\). Then we have \(p\mid ab\). Since \(p\) is prime, we have \(p\mid a\) or \(p\mid b\).
-        Without loss of generality, we can assume that \(p\mid a\). Then we have \(a = pc\) for some \(c\in R\). Then we have 
-        \[
-          p = a\cdot b = (pc)\cdot b = p(cb). 
-        \]
-        Then we have \(p(1 - cb) = 0\). Since \(R\) is an integral domain, we can know that \(1 - cb = 0\), which implies that \(cb = 1\).
-        Therefore, we have \(b\) is a unit. Thus, we have \(p\) is irreducible. \(\blacksquare\)
-      </p>
-    </section>
-
-    <br>
     
     <section id = 'homomorphism'>
       <p>
@@ -349,9 +332,34 @@
             Then we have \(3\mid 9\). However, we can see that \(3\nmid (2 + \sqrt{-5})\) and \(3\nmid (2 - \sqrt{-5})\).
             Therefore, we can see that \(3\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
+          <li>\(\textbf{Claim 3.}\) \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\)</li>
+          <p>
+            \(\textbf{Proof. }\)We prove it with contradiction. We know that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\). 
+            Then we have \(3\mid 9\). However, we can see that \(3\nmid (2 + \sqrt{-5})\) and \(3\nmid (2 - \sqrt{-5})\).
+            Therefore, we can see that \(3\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
       </ul>
     </p>
     </section>
+
+    <br>
+
+    <section id = 'prime_irreducible'>
+      <p>
+        \(\textbf{Theorem. }\) Let \(R\) be an integral domain with identity \(1\). Then every prime element of \(R\) is irreducible.
+      </p>
+      <p>
+        Suppose that \(p\) is a prime and \(p = ab\) for some \(a, b\in R\). Then we have \(p\mid ab\). Since \(p\) is prime, we have \(p\mid a\) or \(p\mid b\).
+        Without loss of generality, we can assume that \(p\mid a\). Then we have \(a = pc\) for some \(c\in R\). Then we have 
+        \[
+          p = a\cdot b = (pc)\cdot b = p(cb). 
+        \]
+        Then we have \(p(1 - cb) = 0\). Since \(R\) is an integral domain, we can know that \(1 - cb = 0\), which implies that \(cb = 1\).
+        Therefore, we have \(b\) is a unit. Thus, we have \(p\) is irreducible. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
     
     <section id = 'principal_ideal_domain'>
     <h2>Principal Ideal Domain</h2>
