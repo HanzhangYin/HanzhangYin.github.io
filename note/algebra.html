@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
+    <title>Algebra</title>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="#read_spectral_theorem">Read Spectral Theorem</a>
+      <a href="#complex_spectral_theorem">Complex Spectral Theorem</a>
+      <a href="#spectral_theorem_for_normal_operator">Spectral Theorem for Normal Operator</a>
+      <a href="#normal_subgroup">Normal Subgroup</a>
+      <a href="#simple_group">Simple Group</a>
+      <a href="#solvable_group">Solvable Group</a>
+      <a href="#field">Field</a>
+      <a href="#integral_domain">Integral Domain</a>
+      <a href="#principal_ideal_domain">Principal Ideal Domain</a>
+      <a href="#prime_irreducible">Prime and Irreducible</a>
+      <a href="#adjoining_element">Adjoining Element</a>
+      <a href="#splitting_field">Splitting Field</a>
+      <a href="#separable">Separable</a>
+      <a href="#minimal_polynomial">Minimal Polynomial</a>
+      <a href="#galois_group">Galois Group</a>
+      <a href="#galois_theory">Galois Theory</a>
+      <a href='#ku_2017_8_6'>KU 2017 (August) (6)</a>
+      <a href='#ku_2021_1_1'>KU 2021 (January) (1)</a>
+      <a href='#ku_2022_1_1'>KU 2022 (January) (1)</a>
+      <a href='#ku_2022_1_2'>KU 2022 (January) (2)</a>
+      <a href='#ku_2022_1_1'>KU 2023 (August) (1)</a>
+      <a href="#ku_2023_8_1">KU 2023 (August) (1)</a>
+      <a href="#ku_2023_8_2">KU 2023 (August) (2)</a>
+      <a href="#ku_2023_8_3">KU 2023 (August) (3)</a>
+      <a href="#ku_2023_8_4">KU 2023 (August) (4)</a> 
+      <a href="#ku_2023_8_5">KU 2023 (August) (5)</a> 
+      <a href="#k_state_2022_1">K-State 2022(1)</a>
+      <a href="#References">References</a>
+    </nav>
+    <script src="click.js"></script><!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+    <script src="highlight.js"></script><!--It is a link for highlight.js-->
+    <h1>Algebra</h1>
+
+    <section id = 'schur_theorem'>
+      <h2>Schur's Theorem</h2>
+      <p>
+      \(\textbf{Theorem. }\) Every operator on a finite-dimensional complex inner product space has an upper-triangular matrix with respect to some orthonormal basis.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'read_spectral_theorem'>
+      <h2>Real Spectral Theorem</h2>
+      <p>
+        \(\textbf{Theorem. }\) Suppose \( F = \mathbb{R} \) and \( T \in \mathcal{L}(V) \). Then the following are equivalent.  
+        <ul>
+          <li>
+            \( T \) is self-adjoint.
+          </li>
+          <li>
+            \( T \) has a diagonal matrix with respect to some orthonormal basis of \( V \).
+          </li>
+          <li>
+            \( V \) has an orthonormal basis consisting of eigenvectors of \( T \).
+          </li>
+        </ul>
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'complex_spectral_theorem'>
+      <h2>Complex Spectral Theorem</h2>
+      <p>
+        \(\textbf{Theorem.}\) Suppose \( F = \mathbb{C} \) and \( T \in \mathcal{L}(V) \). Then the following are equivalent.
+        <ul>
+          <li>
+            \( T \) is normal.
+          </li>
+          <li>
+            \(T\) has a diagonal matrix with respect to some orthonormal basis of \( V \).
+          </li>
+          <li>
+            \( V \) has an orthonormal basis consisting of eigenvectors of \( T \).
+          </li>
+        </ul>
+      </p>
+    </section>
+   
+    <br>
+
+    <section id = 'spectral_theorem_for_normal_operator'>
+      <h2>Spectral Theorem for Normal Operators</h2>
+      <p>
+        \(\textbf{Theorem. }\)A normal operator \(U\) on a finite-dimensional complex Hilbert space can be diagonalized by a unitary matrix \(V\), 
+        meaning that there exists a unitary matrix \(V\) and a diagonal matrix \(D\) such that \(U = VDV^*\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Since \(U\) is normal, by the spectral theorem, it has a complete orthonormal set of eigenvectors. 
+        Let \(\{\lambda_1, \lambda_2, \dots, \lambda_n\}\) be the eigenvalues of \(U\), 
+        and \(\{v_1, v_2, \dots, v_n\}\) be the corresponding orthonormal eigenvectors where \(n\) is the dimension of the Hilbert space.
+        Form a matrix \(V\) whose columns are the eigenvectors \(v_1, v_2, \dots, v_n\) of \(U\). 
+        Since the eigenvectors form an orthonormal set, the matrix \(V\) is unitary, i.e., \(V^*V = VV^* = I\), where \(I\) is the identity matrix.
+        Define a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(U\) corresponding to the eigenvectors in \(V\). 
+        Specifically, \(D = \text{diag}(\lambda_1, \lambda_2, \dots, \lambda_n)\).
+        To show \(U = VDV^*\), consider the action of both sides on an arbitrary eigenvector \(v_i\) of \(U\). 
+        For the left side:
+        \[ 
+          Uv_i = \lambda_i v_i, 
+        \]
+        where \(\lambda_i\) is the eigenvalue corresponding to \(v_i\).
+        For the right side,
+        \[ 
+          VDV^*v_i = VD(\delta_{ij}v_j) = V(\lambda_i \delta_{ij}e_j) = \lambda_i Vv_i = \lambda_i v_i, 
+        \]
+        where \(\delta_{ij}\) is the Kronecker delta function and \(e_j\) is the standard basis vector with \(1\) at the \(j\)-th position and \(0\) elsewhere.
+        Since both sides have the same action on each eigenvector and eigenvectors form a basis for the Hilbert space, we conclude that \(U = VDV^*\). \(~~~~~\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'normal_subgroup'>
+      <h2>Normal Subgroup</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \(G\) be a group and \(H\) be a subgroup of \(G\). 
+        We say that \(H\) is a \(\textit{normal subgroup}\) of \(G\) if \(gH = Hg\) for all \(g\in G\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'simple_group'>
+      <h2>Simple Group</h2>
+      <p>
+        \(\textbf{Definition. }\) A group \(G\) is \(\textit{simple}\) if \(G\) is nontrivial and the only normal subgroups of \(G\) are \(\{e\}\) and \(G\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'solvable_group'>
+      <h2>Solvable Group</h2>
+      <p>
+        \(\textbf{Definition. }\) A finite group \( G \) is \textit{solvable} if there are subgroups
+        \[ 
+        \{e\} = G_n \subseteq G_{n-1} \subseteq \cdots \subseteq G_1 \subseteq G_0 = G 
+        \]
+        such that for \( i = 1, \ldots, n \) we have:
+        <ul>
+          <li>
+            (a) \( G_i \) is normal in \( G_{i-1} \).
+          </li>
+          <li>
+            (b) \( [G_{i-1} : G_i] \) is prime.
+          </li>
+        </ul>
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'field'>
+      <h2>Field</h2>
+      <h3>Division Ring</h3>
+      <p>
+        \(\textbf{Definition. }\) A <strong>division ring</strong> is a ring \(R\) with identity \(1\) such that every nonzero element of \(R\) is a unit
+        (i.e. every nonzero element of \(R\) has a multiplicative inverse).
+      </p>
+      <p>
+        \(\textbf{Definition. }\) A <strong>field</strong> is a commutative ring \(R\) with identity \(1\) such that every nonzero element of \(R\) is a unit
+        (i.e. commutative division ring).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'ideal'>
+      <p>
+        \(\textbf{Proposition(1). }\) Let \(R\) be a ring with identity \(1\), and \(I\) is an ideal of \(R\). \(R = I\) if and only if \(I\) contains a unit. 
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Firstly, suppose that \(R = I\). 
+        Since \(R\) is a ring with identity \(1\), then we can know that \(1\) is unit in \(R\).
+        Hence, we can see that \(I\) contains a unit.
+        For the other direction, suppose that \(I\) contains a unit \(u\in R\).
+        Then we can know that there exists an inverse \(u^{-1}\in R\) such that \(u^{-1}u = 1\).
+        Hence, we have for any \(r\in R\), 
+        \[
+          r = r(1) = r(u^{-1}u) = (ru^{-1})(u)\in I.
+        \]
+        Therefore, we have \(R\subset I\). Since \(I\subset R\), we have \(R = I\). \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'prime'>
+      <p>
+        \(\textbf{Theorem. }\) Suppose that \(p\) is in a ring \(R\). Then \(p\) is prime if and only if \((p)\) is a prime ideal. 
+      </p>
+      <p>
+        \(\textbf{Proof. }\) We firstly show that if \(p\) is prime then \((p)\) is a prime ideal. Suppose that \(p\) is prime. 
+        Then we have \(p\neq 0\) and \(p\) is not a unit. If \(p\mid ab\) where \(a, b\in R\), then we have \(ab = pr\) for some \(r\in R\).
+        In other words, \(ab\in (p)\). Since \(p\) is prime, we have \(p\mid a\), which implies that \(a = pu\) for some \(u\in R\) (i.e. \(a\in (p)\)), 
+        or \(p\mid b\), which implies that \(b = pv\) for some \(v\in R\) (i.e. \(b\in (p)\)). Therefore, we have \((p)\) is a prime ideal.
+        For the other direction, we suppose that \((p)\) is a prime ideal. If \(ab\in (p)\) for some \(a, b\in R\), then we have \(ab = pr\) for some \(r\in R\).
+        Since \((p)\) is a prime ideal, we have \(a\in (p)\) or \(b\in (p)\). Thus, we have \(p\mid a\) or \(p\mid b\). Therefore, \(p\) is prime. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+    
+    <section id = 'homomorphism'>
+      <p>
+        \(\textbf{Corollary. }\) If \(R\) is a field then any nonzero ring homomorphism \(\varphi: R\to S\) is injective.
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Given \(R\) is a field, we can know that the only ideals of \(R\) are \(\{0\}\) and \(R\).
+        We know that \(\ker(\varphi)\) is an ideal of \(R\). Thus, we only have two options, \(\ker(\varphi) = \{0\}\) or \(\ker(\varphi) = R\). 
+        Suppose that \(a\in \ker(\varphi)\) where \(a\neq 0\). Since \(R\) is a field, we have \(a^{-1}\in R\). Then we have 
+        \[
+          0 = \varphi(a)\cdot \varphi(a^{-1}) = \varphi(aa^{-1}) = \varphi(1) = 1,
+        \]
+        which is a contradiction. Thus, we have \(\ker(\varphi) = \{0\}\). Therefore, \(\varphi\) is injective. \(\blacksquare\)
+      </p>
+    </section>
+    
+    <br>
+
+    <section id = 'integral_domain'>
+    <h2>Integral Domain</h2>
+    <p>
+      \(\textbf{Definition. }\) An integral domain is a commutative ring \(R\) with identity \(1\neq 0\) such that
+      \[
+        ab = 0 \implies a = 0 \text{ or } b = 0.
+      \]
+      (i.e. there is no zero divisors in \(R\)).
+    </p>
+      <p>
+      <ul>
+        <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is an integral domain.</li>
+        <li>\(\textbf{Example 2. }\) \(\mathbb{Z}[i]\) (Gaussian Integer) is an integral domain.</li>
+        <p>
+          \(\textbf{Proof (2).}\) The major part is to show that there is no zero divisor in \(\mathbb{Z}[i]\).
+          Suppose that there exists zero divisors in \(\mathbb{Z}[i]\).
+          Suppose \(a + bi, c + di\in \mathbb{Z}[i]\) such that \((a + bi)(c + di) = 0\), where 
+          \(a\) or \(b\) is not zero and \(c\) or \(d\) is not zero. Then we have
+          \[
+            \begin{align} 
+            (a + bi)(c + di) &= 0\\
+            ac + adi + bci + bdi^2 &= 0\\
+            ac - bd + (ad + bc)i &= 0\\
+            ac - bd &= 0\\
+            ad + bc &= 0\\
+            ac &= bd\\
+            ad &= -bc\\
+            \end{align}
+          \]
+          Then we have 
+          \[
+          \begin{align}
+            acd & = bd^2\\
+            acd & = -bc^2\\
+            bd^2 &= -bc^2\\
+            d^2 &= -c^2\\
+            d^2 + c^2 &= 0\\
+          \end{align}
+          \]
+          Since \(d, c\in \mathbb{Z}\), we have \(d = c = 0\). However, we assume that \(c\) or \(d\) is not zero, which is a contradiction.
+        </p>
+        <li>\(\textbf{Example 3. }\) Quadratic Integer Ring \(\mathbb{Z}(\sqrt{D})\) is an integral domain</li>
+        <li>\(\textbf{Example 4. }\) All fields are integral domains.</li>
+        <li>\(\textbf{Claim 1. }\)\(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
+          <p>
+            \(\textbf{Proof. }\) suppose that \(2 = (a + b\sqrt{-5})(c + d\sqrt{-5})\) for some \(a, b, c, d\in \mathbb{Z}\).
+            Then we have
+            \[
+            \begin{align}
+              2 &= (a + b\sqrt{-5})(c + d\sqrt{-5})\\
+              2 &= ac - 5bd + (ad + bc)\sqrt{-5}\\
+            \end{align}
+            \]
+            We can see that \(ad + bc = 0\). Then we have 
+            \[
+            \begin{align}
+            2 &= ac - 5bd\\
+            2 &= ac - 5bd - (ad + bc)\sqrt{-5}\\
+            2 &= (a - b\sqrt{-5})(c + d\sqrt{-5})\\
+            \end{align}
+            \]
+            In that case, we have 
+            \[
+            \begin{align}
+            4 &= 2\cdot 2\\
+            4 &= (a + b\sqrt{-5})(c + d\sqrt{-5})(a - b\sqrt{-5})(c + d\sqrt{-5})\\
+            4 &= (a^2 + 5b^2)(c^2 + 5d^2)\\
+            \end{align}
+            \]
+            Thus, we can see that if \(b\neq 0\), then we have \(a^2 + 5b^2 \geq 5\). 
+            Similarly, if \(d\neq 0\), then we have \(c^2 + 5d^2 \geq 5\).
+            Hence, we can see that \(b = d = 0\). Then we have \(2 = ac\).
+            Since \(2\) is a prime number, we have \(a = 1\) and \(c = 2\).
+            Therefore, we have \(2 = (2 + 0\sqrt{-5})(1 + 0\sqrt{-5})\), where one of them is a unit.
+            Then, we have \(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\). \( \blacksquare\) 
+          </p>
+          <li>\(\textbf{Claim 2.}\) \(3\) is irreducible in \(\mathbb{Z}(-\sqrt{5})\)</li>
+          <p>
+            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example. 
+            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\). 
+            Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
+            Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
+          <li>\(\textbf{Claim 2.}\) \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\)</li>
+          <p>
+            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example. 
+            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\). 
+            Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
+            Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
+          <li>\(\textbf{Claim 3.}\) \(3\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\)</li>
+          <p>
+            \(\textbf{Proof. }\) To show that \(3\) is not a prime, we come up with an example. 
+            Firstly, we can see that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\). 
+            Then we have \(3\mid 9\). However, we can see that \(3\nmid (2 + \sqrt{-5})\) and \(3\nmid (2 - \sqrt{-5})\).
+            Therefore, we can see that \(3\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
+          <li>\(\textbf{Claim 3.}\) \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\)</li>
+          <p>
+            \(\textbf{Proof. }\)We prove it with contradiction. Suppose that \(2+\sqrt{-5}\) is a prime. 
+            We know that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\). 
+            Then we have \(2+\sqrt{-5}\mid 9\), which implies that \(2 + \sqrt{-5}\mid 3\).
+            We know that \(3\) is irreducible in \(\mathbb{Z}(-\sqrt{5})\). 
+            Then \(2 + \sqrt{-5}\) is a unit, which is not true, or \(2 + \sqrt{-5}\) multiplied by a unit will be \(3\).
+            There are only two units in \(\mathbb{Z}(-\sqrt{5})\), which are \(\pm 1\).
+            However, \((2 + \sqrt{-5})\cdot 1 \neq 3\) and \(2 + \sqrt{-5}\cdot (-1) \neq 3\). 
+            It is a contradiction. Therefore, we can see that \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
+      </ul>
+    </p>
+    </section>
+
+    <br>
+
+    <section id = 'prime_irreducible'>
+      <p>
+        \(\textbf{Theorem. }\) Let \(R\) be an integral domain with identity \(1\). Then every prime element of \(R\) is irreducible.
+      </p>
+      <p>
+        Suppose that \(p\) is a prime and \(p = ab\) for some \(a, b\in R\). Then we have \(p\mid ab\). Since \(p\) is prime, we have \(p\mid a\) or \(p\mid b\).
+        Without loss of generality, we can assume that \(p\mid a\). Then we have \(a = pc\) for some \(c\in R\). Then we have 
+        \[
+          p = a\cdot b = (pc)\cdot b = p(cb). 
+        \]
+        Then we have \(p(1 - cb) = 0\). Since \(R\) is an integral domain, we can know that \(1 - cb = 0\), which implies that \(cb = 1\).
+        Therefore, we have \(b\) is a unit. Thus, we have \(p\) is irreducible. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+    
+    <section id = 'principal_ideal_domain'>
+    <h2>Principal Ideal Domain</h2>
+      <p>
+        <ul>
+          <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is a principal ideal domain.</li>
+          <li>\(\textbf{Example 2. }\) All fields are principal ideal domains.</li>
+          <li>\(\textbf{Example 3. }\) \(\mathbb{Z}[x]\) is a principal ideal domain.</li>
+          <li>\(\textbf{Example 4. }\) Given \(F\) is a field, we have\(\mathbb{F}[x]\) is a principal ideal domain.</li>
+          <li>\(\textbf{Example 5. }\) All Euclidean domains are principal ideal domains (one of the propositions below)</li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(R\) be a principal ideal domain, then every prime ideal in \(R\) is maximal.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(R\) be a principal ideal domain and \((p)\) be a prime ideal in \(R\).
+        Since \(R\) is a principal ideal domain, we find a ideal containing \((p)\) and assume it is \((m)\) (i.e. \((p)\subset (m)\)).
+        Then we can know that \(p\in (m)\), which implies that \(p = mr\) for some \(r\in R\). 
+        Then we can get \(mr\in (p)\). Since \(p\) is a prime ideal, we have \(m\in (p)\) or \(r\in (p)\).
+        If \(m\in (p)\), then we have \((m)\subset (p)\). Since \((p)\subset (m)\), we have \((p) = (m)\).
+        If \(r\in (p)\), then we have \(r = ps\) for some \(s\in R\). Then we have \(p =mr = psm\), which implies that \(1 = sm\).
+        Hence, we have \(m\) is a unit in \(R\). Thus, we have \((m) = R\). 
+        Therefore, we can see that \((p)\) is maximal. \(\blacksquare\)
+      </p>
+      <p>
+        \(\textbf{Proposition. }\)Any euclidean domain is a principal ideal domain.
+      </p>
+      <p>
+        \(\textbf{Note. }\)If \(R\) is a Euclidean Domain, it means that \(R\) has some form of division algorithm.
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Let \(I\) be an ideal in a Euclidean domain \(R\). We will show that there exists an element \(a \in I\) such that \(I = (a)\).
+        Since the well ordering principle, we can choose \(a \in I\) such that \(a \neq 0\) and \(a\) has the smallest norm among all nonzero elements of \(I\). We claim that \(I = (a)\).
+        Let \(x \in I\). We can write \(x = qa + r\), where \(q, r \in R\) and either \(r = 0\) or \(N(r) \lt N(a)\). 
+        Since \(x \in I\) and \(a \in I\), we have \(qa + r \in I\). Therefore, \(r \in I\).
+        If \(r = 0\), then \(x = qa \in (a)\). If \(r \neq 0\), then \(N(r) \lt N(a)\). 
+        This contradicts the choice of \(a\). Therefore, \(r = 0\) and \(x = qa \in (a)\).
+        Hence, every element of \(I\) can be written as a multiple of \(a\), so \(I = (a)\).
+        Therefore, every ideal in a Euclidean domain is generated by a single element, and hence a Euclidean domain is a principal ideal domain. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'polynomial_ring'>
+      <h2>Polynomial</h2>
+      <p>
+        \(\textbf{Theorem. }\) Let \(F\) be a field. The polynomial ring \(F[x]\) is a \(\textit{Euclidean Domain}\).
+        Specifically, if \(a(x)\) and \(b(x)\) are two polynomials in \(F[x]\) with \(b(x)\) nonzero, then there are unique \(q(x)\) and \(r(x)\) in \(F[x]\) such that
+        \[
+          a(x) =q(x)b(x) +r(x)\qquad \text{with}\qquad r(x) = 0 \text{ or } \deg(r(x)) \lt \deg(b(x)).
+        \]
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f \in F[x_1, \ldots, x_n] \) be non-constant. 
+        Then we say that \(F[X_1, \ldots, x_n]\) is a Unique Factorization Domain.
+        Specifically, there are irreducible polynomials \( g_1, \ldots, g_r \in F[x_1, \ldots, x_n] \) such that
+        \[ 
+          f = g_1 \cdots g_r. 
+        \]
+        Furthermore, if there is a second factorization of \( f \) into irreducible polynomials
+        \[ 
+          f = h_1 \cdots h_s, 
+        \]
+        then \( r = s \) and the \( h_i \)'s can be permuted so that each \( h_i \) is a constant multiple of \( g_i \).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f, g \in F[x] \). Assume that \( g \) is nonzero. 
+        Then there are polynomials \( q, r \in F[x] \) such that
+        \[ 
+          f = qg + r, \quad \text{where } r = 0 \text{ or } \deg(r) \lt \deg(g). 
+        \]
+        Furthermore, \( q \) and \( r \) are unique.
+      </p>
+      <p>
+        \(\textbf{Corollary. }\)Let \(F\) be a field. We have \( \alpha \in F \) is a root of a polynomial \( f \in F[x] \) if and only if \( x - \alpha \) is a factor of \( f \) in \( F[x] \)
+      </p>
+      <p>
+        \(\textbf{Definition. }\)To say that a field \( L \) contains \(\textit{all}\) roots of \( f \) means that \( f \) factors as
+        \[ 
+          f = a_0(x - \alpha_1) \cdots (x - \alpha_n), 
+        \]
+        where \( \alpha_1, \ldots, \alpha_n \in L \). When this happens, we say that \( f \) splits completely over \( L \).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) If \( F \) is a field and \( f \in F[x] \) is non-constant, then the following are equivalent:
+        <ul>
+          <li>
+            The polynomial \( f \) is irreducible over \( F \).
+          </li>
+          <li>
+            The ideal \( (f) = \{ fg \mid g \in F[x] \} \) is a maximal ideal.
+          </li>
+          <li>
+            The quotient ring \( F[x] / (f) \) is a field.
+          </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Proposition. }\)Every nonzero ideal of \(F[x]\) can be written uniquely as \((f)\) where
+        \(f\) is monic.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'adjoining_element'>
+      <h2>Adjoining Element</h2>
+      <p>
+        \(\textbf{Definition.}\) The \(\textit{polynomial ring}\) in the variables \( x_1, x_2, \ldots, x_n \) with coefficients in \( R \), denoted \( R[x_1, x_2, \ldots, x_n] \), is defined inductively by
+        \[ 
+          R[x_1, x_2, \ldots, x_n] = R[x_1, x_2, \ldots, x_{n-1}][x_n].
+        \]
+      </p>
+      <p>
+        \(\textbf{Adjoining Elements.}\) We next show how to describe some interesting subrings and subfields of a given extension \( F \subset L \). 
+        Given \( \alpha_1, \ldots, \alpha_n \in L \), we define
+        \[ 
+          F[\alpha_1, \ldots, \alpha_n] = \{ h(\alpha_1, \ldots, \alpha_n) \mid h \in F[x_1, \ldots, x_n] \}. 
+        \]
+        Hence \( F[\alpha_1, \ldots, \alpha_n] \) consists of all polynomial expressions in \( L \) that can be formed using \( \alpha_1, \ldots, \alpha_n \) with coefficients in \( F \). 
+      </p>
+      <p>
+        \(\textbf{Note. }\)Keep in mind that \(F[\alpha_1, \ldots, \alpha_n]\) is a ring, not necessarily a field.
+      </p>
+      <p>
+        For example let Let \(F = \mathbb{Q}\) and \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\) is not a field. 
+        We know that \(1 + \sqrt{2} + \sqrt{3}\in \mathbb{Q}[\sqrt{2}+\sqrt{3}]\). However, we can see that
+        \(\frac{1}{1 + \sqrt{2} + \sqrt{3}}\) is not in \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\).
+      </p> 
+        Let
+        \[ 
+          F(\alpha_1, \ldots, \alpha_n) = \left\{ \frac{\alpha}{\beta} \mid \alpha, \beta \in F[\alpha_1, \ldots, \alpha_n], \beta \neq 0 \right\}. 
+        \]
+        Thus \( F(\alpha_1, \ldots, \alpha_n) \) is the set of all rational expressions in the \( \alpha_i \) with coefficients in \( F \). 
+      </p>
+      <p>
+        \(\textbf{Lemma. }\)\( F(\alpha_1, \ldots, \alpha_n) \) is the smallest subfield of the field \( L \) containing \( F \) and \( \alpha_1, \ldots, \alpha_n \).
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Let \(L\) be a field containing \(F\) and \(\alpha_1, \ldots, \alpha_n\).
+        Firstly, we show that \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \). 
+
+        Thus, to prove the lemma, we must show that if \( K \) is a subfield of \( L \) containing \( F \) and \( \alpha_1, \ldots, \alpha_n \), then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K \). 
+        This is what "smallest" means in the statement of the lemma.
+        Suppose that \( K \subseteq L \) contains \( F \) and \( \alpha_1, \ldots, \alpha_n \). 
+        Since \( K \) is closed under multiplication and addition, it follows that \( p(\alpha_1, \ldots, \alpha_n) \in K \) for any polynomial \( p \in F[x_1, \ldots, x_n] \). 
+        This shows that \( F[\alpha_1, \ldots, \alpha_n] \subseteq K \). Then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K \) follows immediately, since \( K \) is a field.
+        Since \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \) containing \( F \), we get extensions  
+        \[ 
+          F \subseteq F(\alpha_1, \ldots, \alpha_n) \subseteq L. 
+        \]
+        We say that \( F(\alpha_1, \ldots, \alpha_n) \) is obtained from \( F \) by adjoining \( \alpha_1, \ldots, \alpha_n \in L \). 
+      </p>
+  </section>
+    
+    <br>
+
+    <section id = 'splitting_field'>
+      <h2>Splitting Field</h2>
+      <p>
+        \(\textbf{Definition 5.1.1}\) Let \( f \in F[x] \) have degree \( n > 0 \). Then an extension \( F \subset L \) is a splitting field of \( f \) over \( F \) if
+        <ul>
+          <li>
+            \( f = c(x - \alpha_1) \cdots (x - \alpha_n) \), where \( c \in F \) and \( \alpha_i \in L \), and
+          </li>
+          <li>
+            \( L = F(\alpha_1, \ldots, \alpha_n) \).
+          </li>
+        </ul>
+      </p>
+      <p>
+        In abstract algebra, a splitting field of a polynomial \(p(x)\) over a field \(K\) is an extension field \(L\) of \(K\) such that \(f(x)\) factors into linear factors in \(L[x]\). 
+        \[
+        p(x) = (x - a_1)(x - a_2)\cdots(x - a_n).
+        \]
+        The splitting field of \(p(x)\) is the smallest field that contains all the roots of \(p(x)\). 
+        It is also called the minimal splitting field of \(p(x)\).
+        The existence of a splitting field for every polynomial over a field is a fundamental result in abstract algebra, known as the primitive element theorem. 
+        This theorem states that every finite field extension is generated by a single element, called a primitive element. 
+        It follows that every polynomial over a field has a splitting field, which can be constructed by adjoining a primitive element to the field.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'separable'>
+      <h2>Separable</h2>
+      <p>
+        \(\textbf{Definition. }\)A polynomial \(f\in F [x]\) is separable if it is non-constant and its roots
+        in a splitting field are all simple.
+      </p>
+      <p>
+        \(\textbf{Theorem. }\)A nonzero polynomial in \(K[X]\) is separable if and only if it is relatively
+        prime to its derivative in \(K[X]\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We firstly show that if a nonzero polynomial in \(K[X]\) is separable, then it is relatively prime to its derivative in \(K[X]\).
+        Suppose that \(f(x)\in K[X]\) is separable, then we have \(f(x) = (x - \alpha)h(x)\) for some \(\alpha\) in the extension of \(K\). 
+        Note that \((x - \alpha)\) is the distinct factor of \(f\) because of the definition of separable. 
+        In other words, \(h(\alpha)\neq 0\).
+        Then we have 
+        \[
+        \begin{align}
+          f'(x) &= h(x) + (x - \alpha)h'(x). \\
+          f'(\alpha) &= h(\alpha) + (\alpha - \alpha)h'(\alpha) = h(\alpha) \neq 0. \\
+        \end{align} 
+        \]
+        In that case, we can know that \(f\) and \(f'\) do not share the same root, which implies that 
+        they do not have the same factor. Hence, we have \(f\) and \(f'\) are relatively prime.
+        For the other direction, we will prove it with contrapositive. 
+        Suppose that \(f(x)\) is not separable, given the definition of separable, we can know that \(f(x)\) has a repeated roots.
+        Then we have \(f(x) = (x - \alpha)^2h(x)\) for some \(\alpha\) in the extension of \(K\).
+        Hence, we can get 
+        \[
+        \begin{align}
+          f'(x) &= 2(x - \alpha)h(x) + (x - \alpha)^2h'(x)\\
+          f'(\alpha) &= 2(\alpha - \alpha)h(\alpha) + (\alpha - \alpha)^2h'(\alpha) = 0. \\
+        \end{align}
+        \]
+        Therefore, we can know that \(f\) and \(f'\) have some similar factor. Hence, we have \(f\) and \(f'\) are not relatively prime. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
+
+    <section id='minimal_polynomial'>
+      <h2>Minimal Polynomial</h2>
+      <p>
+        \(\textbf{Proposition. }\) Let \(\alpha \in L\) be algebraic over \(F\), and let \(p \in F[x]\) be its minimal polynomial. If \(f \in F[x]\) is a nonconstant monic polynomial, then
+          \[
+            f = p \Leftrightarrow f \text{ is a polynomial of minimal degree satisfying } f(\alpha) = 0 \Leftrightarrow f \text{ is irreducible over } F \text{ and } f(\alpha) = 0.
+          \]
+      </p>
+    </section>
+
+    <section id = 'galois_group'>
+      <h2>Galois Group</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is the set
+        \[ \{\sigma: L \rightarrow L \mid \sigma \text{ is an automorphism, } \sigma(a) = a \text{ for all } a \in F\}. \]
+        In other words, \( \text{Gal}(L/F) \) consists of all automorphisms of \( L \) that are the identity on \( F \). The basic structure of \( \text{Gal}(L/F) \) is as follows.
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is a group under composition of functions.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We need to check the following properties:
+        <ul>
+          <li>
+            \( \text{Gal}(L/F) \) is closed under composition of functions.
+          </li>
+             <ul>
+              <li>
+                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \). 
+                Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
+              </li>
+             </ul> 
+        </ul> 
+        We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'galois_theory'>
+      <h2>Galois Theory</h2>
+      <p>
+        \(\textbf{Proposition. }\) Let \( F \subset L \) be a finite extension and let \( \sigma \in \text{Gal}(L/F) \). Then:
+        <ul>
+          <li>If \(h \in F[x]\) is a non-constant polynomial with \( \alpha \in L \) as a root, then \( \sigma(\alpha) \) is also a root of \( h \) lying in \( L \).</li>
+          <li>If \(L = F(\alpha_1, \ldots, \alpha_n)\), then \( \sigma \) is uniquely determined by its values on \( \alpha_1, \ldots, \alpha_n \).</li> 
+        </ul>
+      </p>
+    </section>
+
+    <br>
+
+
+    <h2>KU 2017 (August)</h2>
+    <section id = 'ku_2017_8_6'>
+      <p>
+        \(\textbf{Problem 6. }\) Consider the matrix \( A = \begin{bmatrix}
+          0 & 1 & 0 & 1 \\
+          -1 & 1 & 0 & 0 \\
+          -2 & 0 & -1 & -2 \\
+          1 & -1 & 0 & 0 \\
+          \end{bmatrix} \), with entries in \( \mathbb{C} \). 
+        Find \( J \), the Jordan canonical form for \( A \) and an invertible matrix \( P \) such that \( J = P^{-1}AP \).
+      </p>
+      <p>
+        \(\textbf{Solution. }\)We firstly find the characteristic polynomial of \(A\).
+        \[
+          \chi_A(x) = x^4  -x^2 = x^2(x+1)(x-1) = (x - 0)^2(x - 1)(x + 1).
+        \]
+        Now we try to determine the minimal polynomial of \(A\), which leaves us two possibilities: \(x^2(x-1)(x+1)\) and \(x(x-1)(x+1)\).
+        We plug in \(A\) to \(x(x-1)(x+1)\) and find that it is not the zero matrix. Thus, we have the minimal polynomial is the same as the characteristic polynomial.
+        Hence, we have the Jordan canonical form of \(A\) is
+        \[
+          J = \begin{bmatrix}
+            0 & 0 & 0 & 0 \\
+            1 & 0 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & -1 \\
+          \end{bmatrix}.
+        \]
+        Now we calculate the eigenvectors of \(A\).
+        Then we have the eigenvectors of \(A\) are \(v_1 =  (0, 1, 1, -1)^T\) for eigenvalue \(1\), 
+        \(v_2 = (0, 0, 1, 0)^T\) for eigenvalue \(1\), \(v_3 = (1, 1, 0, -1)^T\) for eigenvalue \(0\).
+        We need to find another column vector of \(P\). Suppose that it is \((a, b, c, d)^T\) such that 
+        \[
+         A \begin{bmatrix}
+          a \\
+          b \\
+          c \\
+          d \\
+          \end{bmatrix} = v_3 = \begin{bmatrix}
+            1 \\
+            1 \\
+            0 \\
+            -1 \\
+          \end{bmatrix}.
+        \]
+        Then we have \((a, b, c, d)^T = (1, 2, 0, -1)^T\). Hence, we have a matrix such that 
+        \[
+          B = \begin{bmatrix}
+            1 & 1 & 0 & 0 \\
+            2 & 1 & 0 & 1 \\
+            0 & 0 & 1 & 1 \\
+            -1 & -1 & 0 & -1 \\
+          \end{bmatrix}.
+        \]
+        Then, we calculate the determinant of \(B\) and find that it is not zero. Hence, we have \(P = B\), where \(A = P^{-1}JP\).
+      </p>
+    </section>
+
+    <br>
+    <h2>KU 2021 (January)</h2>
+    <section id = 'ku_2021_1_1'>
+      <p>
+        \(\textbf{Problem 1.}\)
+        <ul>
+          <li>
+            Write down all possible Jordan canonical forms for a \( 5 \times 5 \) matrix \( A \) such that \( A^3 = 0 \) (the blocks should have non-increasing size down the diagonal. We work over complex numbers).
+          </li>
+          <li>
+            Let \(N\) be a nilpotent matrix over any field. Prove that \(I + N\) is diagonalizable if and only if \(N = 0\) (I is the identity matrix of the same size).
+          </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Solution 1.}\)
+      </p>
+      <p>
+        \(\textbf{Proof 2.}\)Suppose that \(I\) is an identity matrix and \(N\) is a nilpotent matrix. 
+        Hence, we know there exists a \(n\in\mathbb{N}\) such that \(N^n = 0\). 
+        If \(N = 0\), then we can know that 
+        \[
+          I + N = I + 0 = I.
+        \]
+        Since \(I\) is a diagonal matrix, we can know that \(I + N\) is diagonalizable. To see that, just pick any invertible matrix \(P\).
+        Then, we have \(PIP^{-1} = I\). Hence, we have \(I\) is diagonalizable. Now suppose that \((I+N)\) is diagonalizable.
+        Then, there exists a diagonal matrix \(D\) and an invertible matrix \(P\) such that \(D = P^{-1}(I + N)P\).
+        Then, we have 
+        \[
+        \begin{align} 
+        P^{-1}(I + N)P &= D\\
+        P^{-1}IP + P^{-1}NP &= D\\
+        I + P^{-1}NP &= D\\
+        P^{-1}NP &= D - I\\
+        (P^{-1}NP)^n &= (D - I)^n\\
+        P^{-1}N^nP &= (D - I)^n\\
+        P^{-1}0P &= (D - I)^n\\
+        0 &= (D - I)^n\\
+        \end{align}
+        \]
+        Thus, we can see that \(D - I = 0\), which implies that \(D = I\). 
+        Hence, we have \(P^{-1}(I + N)P = D = I\).
+        Then we have \(I + N = PIP^{-1} = I\). Therefore, we have \(N = 0\).\(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+    
+    <h2>KU 2022 (January)</h2>
+      <section id = 'ku_2022_1_1'>
+        <p>
+          \(\textbf{Problem 1.}\)A square matrix \( A \) is called \(\textit{aperiodic}\) if \( A^m = A^n \) for some integers \( m > n \geq 0 \) (by convention \( A^0 = I \)).
+        <ul>
+            <li>
+              Prove that a \( 2 \times 2 \) matrix \( A \) over the real numbers is aperiodic if and only if: \( A^2 = \pm A \) or \( A^m = I \) for some \( m > 0 \).
+            </li>
+            <li>
+              Give an example of a \( 2 \times 2 \) matrix \( A \) over the real numbers such that \( A^{2022} = I \) but \( A^m \neq I \) for any positive integer \( m \lt 2022 \).
+          </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Proof(1). }\) Let \( A \) be a \( 2 \times 2 \) matrix over the real numbers.
+        If \( A^2 = \pm A \), then we have \( A^4 = A^2 A^2 = (\pm A)(\pm A) = A^2\). 
+        If \( A^m = I \) for some \( m > 0 \), then we have \( A^{m+1} = A^m\cdot A = I\cdot A = A \), where \(m+1 > 1\).
+        For the other direction, without loss of generality, given \(A^m = A^n\) where \(m\gt n\).
+        If \(A\) is invertible, then we have \(A^{m-n} = I\) where \(m-n > 0\).
+        Firstly, we show that if \(A\) is non-invertible, then we can know that of the eigenvalue is \(0\).  
+        Since \(A\) is non-invertible, we can know that \(\text{det}(A) = 0\). 
+        Then we know the characteristic polynomial of \(A\) is \(\chi_A(x) = \text{det}(A - xI)\). 
+        When we plug in \(x = 0\), then we have \(\chi_A(0) = \text{det}(A - 0I) = \text{det}(A) = 0\).
+        In that case, we have \(0\) is an eigenvalue of \(A\). Now we know one of the eigenvalues is \(0\) and we assume that the other eigenvalue is \(\lambda\).
+        In that case we can denote the \(\chi_A(x) = (x - 0)(x - \lambda) = x(x - \lambda)\). 
+        According to the Cayley-Hamilton theorem, we have \(\chi_A(A) = A(A - \lambda I) = A^2 - \lambda A = 0\).
+        Then we have \(A^2 = \lambda A\), which implies that \(\frac{1}{\lambda}A^2 = A\). Given we have \(A^m = A^n\). 
+        We have 
+        \[
+        \begin{align}
+          A^n &=  (\frac{1}{\lambda}A^2)^n \\
+          &= \frac{1}{\lambda^n}A^{2n} \\
+        A^m &= \frac{1}{\lambda^n}A^{2n} \\
+        \lambda^n A^m &= A^{n}A^n \\
+        \lambda^n A^m &= A^{m}A^m\\
+        \lambda^n A^m &= A^{2m}\\
+        \end{align}
+        \]
+        At the same time, it is not hard to get \(A^{2m} = \lambda^mA^m\). 
+        Then we have \(\lambda^n A^m = \lambda^m A^m\), which implies that 
+        \[
+          A^m(\lambda^m - \lambda^n) = 0.
+        \]
+        Then, we can know that \(A^m = 0\) or \(\lambda^m = \lambda^n\).
+        It \(A^m = 0\), then we can know that \(A\) is nilpotent. 
+        We know that \(A\) is nilpotent, then we can know that \(A\) has only one eigenvalue which is \(0\). (need to be proved.)
+        In that case, we have \(A^2 = 0 \). Then we can get that \(A = 0\) with conditions of \(\text{det}(A) = 0\).
+        If \(\lambda^m = \lambda^n\), then we have \(\lambda^n(\lambda^{m-n} - 1)\). Again, if \(\lambda \neq 0\), then we have 
+        \(\lambda^{m-n} = 1\) where \(\lambda\in \mathbb{R}\). Then we have \(\lambda = \pm 1\). In that case, we have 
+        \(A^2 = \lambda A = \pm A\).\(\blacksquare\) 
+      </p>
+      <p>
+        \(\textbf{Solution(2). }\) Let \( A = \begin{pmatrix} \cos(\frac{2\pi}{2022}) &  -\sin(\frac{2\pi}{2022}) \\  \sin(\frac{2\pi}{2022}) &  \cos(\frac{2\pi}{2022}) \end{pmatrix} \).
+        Then we have \( A^{2022} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I \) and \( A^m \neq I \) for any positive integer \( m \lt 2022 \).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'ku_2022_1_3'>
+      <p>
+        \(\textbf{Problem 3. }\) Find the Jordan canonical form and a Jordan basis for
+        \(
+        A = \begin{pmatrix}
+        2 & 2 & -1 \\
+        0 & 3 & 0 \\
+        1 & -2 & 4
+        \end{pmatrix}.
+        \)
+      </p>
+      <p>
+        \(\textbf{Solution. }\) Firstly, we calculate the characteristic polynomial
+        \[
+        \begin{align}
+        \chi_A(x) &= \text{det}\left|
+        \begin{matrix}
+        x - 2 & 2 & 1\\
+        0 & x-3 & 0\\
+        -1 & x + 2 & x - 4\\
+        \end{matrix} 
+        \right|\\
+        &= -(x-3)((x-2)(x-4) + 1)\\
+        &= -(x-3)(x^2 - 6x + 9)\\
+        &= - (x - 3)^3
+        \end{align}
+        \]
+        Now we try to identity the minimal polynomial, which only have two options for us: \((x - 3)^2\) or \((x - 3)^3\).
+        When we plug in \(A = x\) to \((x - 3)^2\), we have \((A - 3)^2 = 0\).
+        Hence, we have the minimal polynomial which is \((x - 3)^2\).
+        Hence, we have the rational canonical form and Jordan canonical form 
+        \[
+        R = \begin{pmatrix}
+        0 & -9 & 0\\
+        1 & 6 & 0\\
+        0 & 0 & 3\\
+        \end{pmatrix} \qquad
+        J = \begin{pmatrix}
+        3 & 0 & 0\\
+        1 & 3 & 0 \\
+        0 & 0 & 3\\
+        \end{pmatrix} 
+        \]
+      Since the minimal polynomial is \((x - 3)^2\), we want to find a vector \(v\not\in \ker(A - 3)\) as a maximal vector. 
+      We find out that \(v = (1, 0, 0)^T\), and we have the eigenvectors \((1, 0, -1)^T, (0, 1, 2)^T\). 
+      We calculate the \(A\cdot v= (2, 0, 1)^T\). In order to make basis, we will choose \(v, Av\). For the last vector, we will use an 
+      eigenvector which is linearly independent to \(v, Av\), which is \((0, 1, 2)^T\).
+      Thus, the basis for the rational canonical form is 
+      \[
+      P_C = \begin{pmatrix} 
+      1 & 2 & 0\\
+      0 & 0 & 1\\
+      0 & 1 & 2\\
+      \end{pmatrix}
+      \]
+      Similarly, we can find the Jordan basis 
+      \[
+      P_C = \begin{pmatrix} 
+      1 & -1 & 0\\
+      0 & 0 & 1\\
+      0 & 1 & 2\\
+      \end{pmatrix}
+      \]
+    </p>
+
+    <!-- <section id = "ku_2022_8_17_2">
+    <h2>KU 2022(8/17)(2)</h2>
+    <p>
+    \(\textbf{Question 2.}\) For \(a, b \in \mathbb{C}\). Let \(M(a, b)\) be the matrix 
+    \(
+    \begin{pmatrix}
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+    0 & a & b \\
+    \end{pmatrix}.
+    \)
+    Find the Jordan canonical form of \(M(a, b)\) (depending on the values \(a, b\)).
+    </p>
+    <p>
+      \(\textbf{Solution. }\)We can get the characteristic polynomial of \(M(a, b)\) is \(\chi_{M(a, b)}(x)=x^3-bx^2-ax = x(x^2 - bx - a)\).
+    </p>
+    </section> -->
+
+    <h2>KU 2023 (January)</h2>
+
+      <section id = 'ku_2023_1_1'>
+        <p>
+          \(\textbf{Problem 1. }\) Suppose that \( A \) and \( B \) are \( n \times n \) matrices over the complex numbers.
+          <ul>
+            <li>
+              Prove that if \( A \) and \( B \) are similar, then \( A \) and \( B \) have the same minimal and characteristic polynomials.
+            </li>
+            <li>
+              Determine, with justification, whether the converse of (i) holds when \( n = 3 \). What about when \( n = 4 \)?
+            </li>
+          </ul>
+        </p>
+        <p>
+          \(\textbf{Proof(1). }\)Suppose that \(A\) and \(B\) are two similar \(n\times n\) matrices. 
+          Then we have \(A = PBP^{-1}\) for some invertible \(n\times n\) matrices over \(\mathbb{C}\). 
+          Suppose the characteristic polynomial of \(A\) is \(\chi_A(x)\). Then we have
+          Hence, we have 
+          \[
+            \begin{align} 
+            \chi_A(x) &= \text{det}(xI - A)\\
+            &= \text{det}(xI - PBP^{-1})\\
+            &= \text{det}(PxIP^{-1} - PBP^{-1})\\
+            &= \text{det}(P(xI - B)P^{-1})\\
+            &= \text{det}(P)\text{det}(xI - B)\text{det}(P^{-1})\\
+            &= \text{det}{P}\text{det}{P^{-1}}\text{det}(xI - B)\\
+            &= \text{det}(PP^{-1})\text{det}(xI - B)\\
+            &= \text{det}(I)\text{det}(xI - B)\\
+            &= \text{det}(xI - B)\\
+            &= \chi_B(x).
+            \end{align}
+          \]
+          Thus, we show that the characteristic polynomial of \(A\) and \(B\) are the same. 
+          Now we need to show that the minimal polynomial of \(A\) and \(B\) are the same.
+          Suppose that the minimal polynomial of \(A\) is \(\mu_A(x):=(x-\lambda_1)^{e_1}\cdots(x - \lambda_m)^{e_m}\)
+          and the minimal polynomial of \(B\) is \(\mu_B(x):=(x-\lambda_1)^{f_1}\cdots(x - \lambda_m)^{f_m}\).
+          Then we have 
+          \[
+            \begin{align} 
+            \mu_A(A) &= 0\\
+            \mu_A(PBP^{-1}) &= (\lambda_1I - PBP^{-1})^{e_1}\cdots(\lambda_mI - PBP^{-1})^{e_m}\\
+            &= (P\lambda_1IP^{-1} - PBP^{-1})^{e_1}\cdots(P\lambda_mIP^{-1} - PBP^{-1})^{e_m}\\
+            &= P(\lambda_1I - B)^{e_1}P^{-1}\cdots P(\lambda_mI - B)^{e_m}P^{-1}\\
+            &= P(\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m}P^{-1}\\
+            P(\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m}P^{-1} &= 0\\
+            (\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m} &= P^{-1}0P = 0\\
+            \end{align}
+          \]
+          Thus, we can know that \(e_i\geq f_i\) for \(i = 1, \ldots, m\). Similarly, we can know that 
+          \[
+          \begin{align} 
+            \mu_B(B) &= 0\\
+            \mu_B(P^{-1}AP) &= (\lambda_1I - P^{-1}AP)^{f_1}\cdots(\lambda_mI - P^{-1}AP)^{f_m}\\
+            &= (P^{-1}\lambda_1IP - P^{-1}AP)^{f_1}\cdots(P^{-1}\lambda_mIP - P^{-1}AP)^{f_m}\\
+            &= P^{-1}(\lambda_1I - A)^{f_1}P\cdots P^{-1}(\lambda_mI - A)^{f_m}P\\
+            &= P^{-1}(\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m}P\\
+            P^{-1}(\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m}P &= 0\\
+            (\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m} &= P0P^{-1} = 0\\
+          \end{align}
+          \]
+          Thus, we can know that \(e_i\leq f_i\) for \(i = 1, \ldots, m\). Hence, we have \(e_i = f_i\) for \(i = 1, \ldots, m\).
+          Therefore, we show that they share the same minimal polynomial.\(\blacksquare\)
+        </p>
+        <p>
+          \(\textbf{Solution 2. }\)The converse of (i) does hold when \(n = 3\). 
+          The converse of (i) does not hold when \(n = 4\).
+        </p>
+      </section>
+    
+    <h2>KU 2023 (August) </h2>
+
+    <section id = "ku_2023_8_1">
+      <p>
+      \(\textbf{Problem 1.}\) Suppose that \(A\) is a square complex matrix such that \(A\) is similar to \(A^n\), for some \(n>1\).
+      Prove that the eigenvalues of \(A\) are either \(0\) or roots of unity. 
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Suppose that \(\lambda\) is an eigenvalue of \(A\) and \(v\) is the corresponding eigenvector, and we
+        want to show that \(\lambda^m\) is an eigenvalue for \(A^m\) for any \(m\in \mathbb{N}\). We can get
+        \[
+          \begin{align}
+            A v &= \lambda v\\
+            A^n v &= \lambda^n v\\
+            A^{n^2} v &= \lambda^{n^2} v\\
+            A (A^{m-1} v) &= \lambda A^{m-1} v\\
+            &= A^{m-1}(\lambda v)\\
+            &= \lambda A^{n-1}v\\
+            &= \ldots \\
+            &= \lambda^n v.
+          \end{align}
+        \]
+        If \(A^n\) is similar to \(A\), then there exists an invertible matrix \(P\) such that \(A^n = P^{-1} A P\).
+        We want to show that \(A\) is similar to \(A^{n^m}\) for any \(m\in \mathbb{N}\).
+        \[
+          \begin{align}
+        A^{n^m} &= A^{nm}\\
+        &= (P^{-1} A^n P)^{nm}\\
+            &= (A^{n^{m-1}})^n\\
+            &= (P^{-1} A^{n^{m-1}} P)^n\\
+            &= P^{-1} A^{n^{m-1}} P P^{-1} A^{n^{m-1}} P \ldots P^{-1} A^{n^{m-1}} P\\
+            &= P^{-1} A^{n^{m-1}} A^{n^{m-1}} \ldots A^{n^{m-1}} P\\
+            &= P^{-1} A^{n^{m-1} + n^{m-1} + \ldots + n^{m-1}} P\\
+            &= P^{-1} A^{n^m} P.
+          \end{align}
+        \]
+        Hence, we can know that \(\lambda^n\) is an eigenvalue of \(A^n\) and its corresponding eigenvector is \(v\).
+        Since we know that \(A\) and \(A^n\) are similar, we have \(\lambda^n\) is an eigenvalue of \(A\).
+      </p>
+    </section> 
+
+    <section id = "ku_2023_8_2">
+    <p>
+      \(\textbf{Problem 2.}\) Suppose \(A=
+      \begin{pmatrix}
+        0 & -1 & 3\\
+        1 & -2 & 3\\
+        0 & 0 & 2
+        \end{pmatrix}
+        \).  Calculate \(A^{2023}\).
+    </p>
+    <p>
+      \(\textbf{Solution. }\)We can get the characteristic polynomial of \(A\) is \(\chi_A(x)=(x - 2)(x+1)^2\).
+      Now we need to find the minimal polynomial of \(A\). Given the characteristic polynomial of \(A\), we have two options
+      for the minimal polynomial of \(A\), which are \((x-2)(x+1)\) and \((x-2)(x+1)^2\). Firstly, plug \(A\) into \((x-2)(x+1)\) and we have
+      \[
+        \begin{align}
+          (A-2I)(A+I) &=
+          \begin{pmatrix}
+            -2 & -1 & 3\\
+            1 & -4 & 3\\
+            0 & 0 & 0
+          \end{pmatrix}
+          \begin{pmatrix}
+            1 & -1 & 3\\
+            1 & -1 & 3\\
+            0 & 0 & 3
+          \end{pmatrix}\\
+          &=
+          \begin{pmatrix}
+            -3 & 3 & 0\\
+            -3 & 3 & 0\\
+            0 & 0 & 0
+          \end{pmatrix} \\ 
+          &\neq 0.
+        \end{align}
+      \]
+      Then it leaves me the only option, which is \((x-2)(x+1)^2\). And we can know that the minimal polynomial 
+      is the characteristic polynomial, which implies that there is only one Jordan block for the eigenvalue \(-1\).
+      Now we can get the Jordan canonical form of \(A\), which is
+      \[
+        J = \begin{pmatrix}
+          -1 & 0 & 0\\
+          1 & -1 & 0\\
+          0 & 0 & 2
+        \end{pmatrix}.
+      \]
+      Now we need to find the matrix \(P\) such that \(A=PJP^{-1}\). 
+      Firstly, we need to find the maximal vector of \(A\) for the eigenvalue \(-1\), which is in not in \(\ker(A + I)\).
+      Then we get the columns of \(P\) as \(v, (A-2I)v = (1, 1, 0)^T, v_1\), where \(v_1\) is the eigenvector corresponding to the eigenvalue \(2\).
+      Hence, we have 
+      \[
+        P = \begin{pmatrix}
+          1 & 1 & 1\\
+          0 & 1 & 1\\
+          0 & 0 & 1
+        \end{pmatrix}.
+      \]
+      And we can get \(P^{-1}\) as follows:
+      \[
+        P^{-1} = \begin{pmatrix}
+          1 & -1 & 0\\
+          0 & 1 & -1\\
+          0 & 0 & 1
+        \end{pmatrix}.
+      \]
+      Therefore, we have
+      \[
+    \begin{align}
+      J &= P^{-1}AP = \begin{pmatrix}
+        -1 & 0 & 0\\
+        1 & -1 & 0\\
+        0 & 0 & 2
+      \end{pmatrix}. \\
+      A^{2023} &= PJ^{2023}P^{-1}\\
+      &= \begin{pmatrix}
+        1 & 1 & 1\\
+        0 & 1 & 1\\
+        0 & 0 & 1
+      \end{pmatrix}
+      \begin{pmatrix}
+        (-1)^{2023} & 0 & 0\\
+        2023(-1)^{2022} & (-1)^{2023} & 0\\
+        0 & 0 & 2^{2023}
+      \end{pmatrix}
+      \begin{pmatrix}
+        1 & -1 & 0\\
+        0 & 1 & -1\\
+        0 & 0 & 1
+      \end{pmatrix}\\
+      &=\begin{pmatrix}
+      1 & 1 & 1\\
+      0 & 1 & 1\\
+      0 & 0 & 1
+    \end{pmatrix}
+      \begin{pmatrix}
+        -1 & 0 & 0\\
+        2023 & -1 & 0\\
+        0 & 0 & 2^{2023}
+      \end{pmatrix}
+      \begin{pmatrix}
+        1 & -1 & 0\\
+        0 & 1 & -1\\
+        0 & 0 & 1
+      \end{pmatrix}\\
+      &=\begin{pmatrix}
+        2022 & -2023 & 2^{2023}+1\\
+        2023 & -2024 & 2^{2023} + 1\\
+        0 & 0 & 2^{2023}
+      \end{pmatrix} 
+      \end{align} 
+      \]
+      </p>
+  </section>
+
+  <br>
+
+  <section id = "ku_2023_8_3">
+    <p>
+      \(\textbf{Problem 3. }\) Let \( T: V \rightarrow V \) be a linear operator on the finite dimensional inner product space \( V \) defined over the complex numbers.
+    <ul>
+      <li>(i) Define the adjoint of \( T \).</li>
+      <li>(ii) Define what it means for \( T \) to be:
+        <ul>
+            <li>(a) self-adjoint</li>
+            <li>(b) normal.</li>
+        </ul>
+      </li>
+      <li>(iii) Prove \( T \) is normal if and only if \( \|T(v)\| = \|T^*(v)\| \) for all \( v \in V \). Here, \( \|u\| \) denotes the length of the vector \( u \in V \).</li>
+      <li>(iv) Give an example of a normal linear operator that is not self adjoint.</li>
+    </ul>
+    </p>
+    <p>
+      \(\textbf{Solution (1). }\)The adjoint of \(T\) is the function \(T^*: V\to V\) such
+      that
+      \[
+      \langle Tv, w\rangle = \langle v, T^* w\rangle
+      \]
+       for every \(v, w\in V\).
+    </p>
+    <p>
+      \(\textbf{Solution (2). }\)
+      <ul>
+        <li>(a) \(T\) is self-adjoint if \(T^*=T\).</li>
+        <li>(b) \(T\) is normal if \(TT^*=T^*T\).</li>
+      </ul>
+    </p>
+    <p>
+      \(\textbf{Proof (3). }\) Suppose that \(T\) is normal. Then we have \(TT^*=T^*T\).
+      Let \(v\in V\). Then we have
+      \[
+        \begin{align}
+          \langle T^*v, T^*v\rangle &= \langle TT^*v, v\rangle\\
+          &= \langle T^*T v, v\rangle\\
+        \end{align}.
+      \]
+      Since we know that \((T^*)^* = T\), then we can get that \(\langle T^*T v, v\rangle = \langle T v, T v\rangle\).
+      Since we have \(\langle T^*v, T^*v\rangle = \langle T v, T v\rangle\), we can get \(\|T^*v\| = \|T v\|\).
+      For the other direction, suppose that \(\|T^*v\| = \|T v\|\) for all \(v\in V\). Then we have
+      \[
+        \begin{align}
+          \langle T^*v, T^*v\rangle &= \langle T v, T v\rangle\\
+          \langle T^*v, T^*v\rangle &= \langle TT^*v, v\rangle\\
+          \langle T v, T v\rangle &= \langle T^*T v, v\rangle\\
+          \langle TT^*v, v\rangle &= \langle T^*T v, v\rangle\\
+        \end{align}.
+      \]
+      Now, we have to show that \(TT^*=T^*T\). For all \(v\in V\), we have
+      \[
+        \begin{align}
+          \langle TT^*v, v\rangle &= \langle T^*T v, v\rangle\\
+          \langle TT^*v, v\rangle - \langle T^*T v, v\rangle &= 0\\
+          \langle TT^*v - T^*T v, v\rangle &= 0\\
+          \langle (TT^* - T^*T) v, v\rangle &= 0\\
+        \end{align}.
+      \]
+      Since for all \(v\neq 0\), we have \(\langle (TT^* - T^*T) v, v\rangle = 0\), we can get \(TT^* - T^*T = 0\), which implies that \(TT^*=T^*T\). \( \blacksquare \)
+    </p>
+  </section>
+
+  <br>
+
+  <section id = "ku_2023_8_4">
+    <p>
+    \(\textbf{Problem 4.}\) Let \( R \) be an integral domain.
+    <ul>
+      <li>(i) Define what it means for \( p \) in \( R \) to be irreducible and for \( p \) to be prime.</li>
+      <li>(ii) Give an example (with proof) of an integral domain having an irreducible element that is not prime.</li>
+      <li>(iii) Prove that primes are irreducible.</li>
+      <li>(iv) Show that if \( R \) is a PID, then irreducible elements are prime.</li>
+    </ul>
+    </p>
+    <p>
+      \(\textbf{Solution(1). }\) We say that \(p\) is irreducible if \(p = ab\) where \(a, b\in R\), then either \(a\) or \(b\) is a unit.
+      We say that \(p\) is prime if \(p\) is not a unit and \(p\mid ab\) where \(a, b\in R\), then either \(p\mid a\) or \(p\mid b\).
+    </p>
+    <p>
+          \(\textbf{Solution(2). }\)Firstly, we want to show that \(3\) is irreducible in \(\mathbb{Z}(\sqrt{-11})\).
+          Let \(3 = (a + b\sqrt{-11})(c + d\sqrt{-11})\). Then we have
+          \[
+            \begin{align}
+            3 &= (a + b\sqrt{-11})(c + d\sqrt{-11})\\
+            &= ac - 11bd + (ad + bc)\sqrt{-11}\\
+            \end{align}.
+          \]
+          Thus, we have \(ac - 11bd = 3\) and \(ad + bc = 0\).
+          Similarly, we can have
+          \[
+            \begin{align}
+            3 &= ac - 11bd - (ad + bc)\sqrt{-11}\\
+            3 &= (a - b\sqrt{-11})(c - d\sqrt{-11})\\
+            \end{align}.
+          \]
+          Then, we have 
+          \[
+            9 = 3\cdot 3 = (a + b\sqrt{-11})(c + d\sqrt{-11})(a - b\sqrt{-11})(c - d\sqrt{-11}) = (a^2 + 11b^2)(c^2 + 11d^2).
+          \]
+          We can know that if \(b\neq 0\), then \(a^2 + 11b^2\geq 11\). Similarly, if \(d\neq 0\), then \(c^2 + 11d^2\geq 11\).
+          Now we can conclude that \(b = d = 0\), which implies that \((ac)^2 = 9\). Hence, we have \(ac = \pm 3\).
+          Since \(a, c\in \mathbb{Z}\), we can get that, without loss of generality, \(a = -1\) and \(c = -3\) or \(a = 1\) and \(c = 3\).
+          Then, we show that \(3 = (-1)(-3)\) or \(3 = (1)(3)\), which implies one of the divisors is a unit. 
+          Hence, we can know that \(3\) is irreducible in \(\mathbb{Z}(\sqrt{-11})\). \
+          Then, we need to show that \(3\) is not prime in \(\mathbb{Z}(\sqrt{-11})\).
+          The first observation is that \(3\mid 12 = (1 + \sqrt{-11})(1 - \sqrt{-11})\).
+          However, we can know that \(3\nmid (1 + \sqrt{-11})\) and \(3\nmid (1 - \sqrt{-11})\).
+          Hence, we can know that \(3\) is not prime in \(\mathbb{Z}(\sqrt{-11})\).
+    </p>
+    <p>
+      \(\textbf{Proof (3). }\) Suppose that \(R\) is an integral domain, and \(p\) is a prime in \(R\). 
+      Then we can know that \((p)\) is a prime ideal in \(R\).
+      If \((p)\) is a prime ideal, then for any \(a, b\in R\) such that \(p = ab\), we have \(a\in (p)\) or \(b\in (p)\) 
+      according to the definition of prime ideal. Without loss of generality, we assume that \(a\in (p)\). 
+      Then according to the definition of principal ideal, we have \(a = pr\) for some \(r\in R\).
+      THen, we have \(p = ab= prb\), which implies that \(ar = 1\). Hence, we can know that \(a\) is a unit.
+      In that case, we have for any \(ab = p\), either \(a\) or \(b\) is a unit. Therefore, we show that \(p\) is irreducible. \[ \tag*{$\square$} \]
+    </p>
+    <p>
+      \(\textbf{Proof (4). }\) Suppose that \(R\) is an principal ideal domain, and \(p\) is irreducible in \(R\).
+      Let \(I\) to be any ideal containing \((p)\). Firstly, we can know that \(I\) is generated by some \(a\in R\) given 
+      \(R\) is principal ideal domain. Then we have \(I = (a)\) and \((p)\subset (a)\). 
+      Thus, we have \(p = ar\) for some \(r\in R\). Since \(p\) is irreducible, we have either \(a\) or \(r\) is a unit. 
+      If \(a\) is a unit, then \((a)\) is a ideal containing a unit, which implies that \((a) = R\). If \(r\) is a unit, then
+      there exists \(u\in R\) such that \(ru = 1\). Then we have 
+      \[
+      \begin{align} 
+        p &= ar\\
+        pu &= aru\\
+        pu &= a\\
+      \end{align}.
+      \]
+      Thus, we have \(a\in (p)\), which implies that \((a) = (p)\). Thus, we have the only ideals containing \((p)\) are \((p)\) and \(R\).
+      Therefore, we show that \((p)\) is a maximal ideal. Since \(R\) is a principal ideal domain, we know that 
+      \(R\) is an integral domain. Since every maximal domain is a prime ideal in an integral domain, we have \((p)\) is a prime ideal.
+      Therefore, we have \(p\) is a prime in \(R\). \(\blacksquare\)
+    </p>
+  </section>
+
+  <br>
+
+  <section id = "ku_2023_8_5">
+    <p>
+      \(\textbf{Problem 5.}\) For the polynomial \( p(x) = x^4 - 4 \) find, with full justification:
+    <ul>
+      <li>
+        (i) The splitting field \( K \) of \( p(x) \) over \( \mathbb{Q} \) and \( [K : \mathbb{Q}] \).
+      </li>
+      <li>
+        (ii) The Galois group of \( K \) over \( \mathbb{Q} \).
+      </li>
+      <li>
+        (iii) The intermediate fields between \( K \) and \( \mathbb{Q} \).
+      </li>
+    </ul>
+    </p>
+    <p>
+      \(\textbf{Solution(1). }\) Firstly, we need to find the roots of \(p(x)\). We can get the roots of \(p(x)\) as follows:
+      \[
+        \begin{align}
+          p(x) &= x^4 - 4\\
+          &= (x^2 - 2)(x^2 + 2)\\
+          &= (x - \sqrt{2})(x + \sqrt{2})(x - i\sqrt{2})(x + i\sqrt{2}).
+        \end{align}
+      \]
+      Then, we can know that the splitting field \(K\) of \(p(x)\) over \(\mathbb{Q}\) is \(K = \mathbb{Q}(\sqrt{2}, i)\).
+      Firstly, we know that \([\mathbb{Q}(\sqrt{2}): \mathbb{Q}]\) is 2 since \(x^2 - 2\) is irreducible in \(\mathbb{Q}\).
+      \[
+        [K: \mathbb{Q}] = [\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}): \mathbb{Q}]
+      \]
+      Since we can know that \(\mathbb{Q}\subset \mathbb{Q}(\sqrt{2})\), and we can know that \(x^2 + 1\) is irreducible in \(\mathbb{Q}[x]\) 
+      by using the Eisenstein's criterion with \(p = 2\). Thus, we can know that \([\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})] \leq 2\).
+      Thus, we only have two options: the degree is either 1 or 2. If the degree is 1, then we have \(i\in\mathbb{Q}(\sqrt{2})\).
+      Then we have \(i = a + b\sqrt{2}\) for some \(a, b\in\mathbb{Q}\). Then we have \(i^2 = -1 = (a + b\sqrt{2})^2\geq 0\), which is a contradiction.
+      In that case, we can know that \([\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})] = 2\). Therefore, we have 
+      \[
+        [K: \mathbb{Q}] = [\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}): \mathbb{Q}] = 2\cdot 2 = 4.
+      \]
+    </p>
+    <p>
+      \(\textbf{Solution(2). }\)We need to determine \(\text{Gal}(K/\mathbb{Q})\). 
+      Since we know that \(|\text{Gal}(K/\mathbb{Q})|\leq [K: \mathbb{Q}] = 4\). 
+    </p>
+  </section>
+
+  <br>
+
+  <section id = "ku_2023_8_6">
+    <p>
+      \(\textbf{Problem 6.}\) Consider the alternating group \( A_5 \), i.e., the subgroup of the symmetric group \( S_5 \) consisting of even permutations.
+      <ul>
+        <li>
+          What are the possible number of subgroups of order four?
+        </li>
+        <li>
+          Explain why any two subgroups of order four are isomorphic.
+        </li>
+        <li>
+          Describe the structure of subgroups of order four.
+        </li>
+        <li>
+          Find five subgroups of order four.
+        </li>
+        <li>
+          Using the fact that \( A_5 \) has 44 elements of order 3 or 5 explain why the subgroups in (iv) are the only subgroups of order four.
+        </li>
+      </ul>
+    </p>
+      <p>
+        \(\textbf{Solution(1). }\)We firstly need to calculate the order of \(A_5\). 
+        We know that the order of \(S_5\) is \(5!\). Since we know that 
+        \[
+          \frac{S_5}{A_5} = \{-1, 1\} = \mathbb{Z}/2\mathbb{Z},
+        \]
+        we can know that the order of \(A_5\) is \(5!/2 = 60 = 5\cdot 3\cdot 2^2\).
+        Since \(2^2\not\mid 5\cdot 3\), we can know that any group of order \(4\) is a Sylow \(2\)-subgroup.
+        According to the Sylow's theorem, we have the possible number \(n_2\) of Sylow \(2\)-subgroups is in the form of 
+        \[
+          n_2 \equiv 1 \pmod{2} \text{ and } n_2\mid 15.
+        \]
+        Therefore, we have possible number of subgroups of order four is \(n_2 = 1, 3, 5, 15\).
+      </p>
+      <p>
+        \(\textbf{Proof(2). }\)Let \(H_1\) and \(H_2\) be two subgroups of order four. 
+        According to the Sylow's theorem, we have \(H_1\) and \(H_2\) are Sylow \(2\)-subgroups, and they 
+        conjugate to each other since they have the same order. Therefore, we have \(H_1\) and \(H_2\) are isomorphic.
+      </p>
+      <p>
+        \(\textbf{Solution(3). }\) We know there are two possible structures of subgroups of order four, which are
+        \(V_4 \cong \mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\) and \(\mathbb{Z}/4\mathbb{Z}\).
+        We can find one subgroup of order \(4\), which is 
+        \[
+          H = \{e, (12)(34), (13)(24), (14)(23)\}\cong V_4.
+        \]
+        Since all subgroups of order \(4\) are isomorphic, we have all subgroups of order \(4\) are isomorphic to \(V_4\).
+      </p>
+      <p>
+        \(\textbf{Solution(4). }\)We can find five subgroups of order \(4\), which are
+        \[
+        \begin{align*}
+          H_1 &= \{e, (12)(34), (13)(24), (14)(23)\}\\
+          H_2 &= \{e, (12)(35), (13)(25), (15)(23)\}\\
+          H_3 &= \{e, (12)(45), (14)(25), (15)(24)\}\\
+          H_4 &= \{e, (13)(45), (14)(35), (15)(34)\}\\
+          H_5 &= \{e, (23)(45), (24)(35), (25)(34)\}\\
+        \end{align*}
+        \]
+      </p>
+      <p>
+        \(\textbf{Proof(5). }\)We know that \(A_5\) has \(44\) elements of order \(3\) or \(5\).
+        Since we show that every subgroup of order \(4\) is isomorphic to \(V_4\), we can know that the element of order 
+        \(3\) and order \(5\) cannot be in subgroup of order \(4\).
+        Hence, there are \(60 - 44\ = 16\) elements to form subgroup of order \(4\). According to the Sylow's theorem,
+        and we already found out there are \(5\) subgroups of order \(4\). In that case, the number of subgroup of order \(4\)
+        is either \(5\) or \(15\). Now we want to show that for any two subgroups \(H_1, H_2\) of order \(4\), we only have two options: 
+        \[
+          H_1\cap H_2 = \{e\} \text{ or } H_1 = H_2.
+        \]
+        There exists \(g\in G\) such that \(H_1 = gH_2g^{-1}\). 
+        Since \(h_1 \in H_1\), then we know that there exists \(h_2\in H_2\) such that 
+        \[
+          h_1 = gh_2g^{-1}.
+        \]
+      </p>
+  </section>
+    
+  <section id = "k_state_2022_1">
+    <h2>
+      K-State 2022(1)
+    </h2>
+    <p>
+      \(\textbf{K-State 2022(1)}\) Let \( H \) be a subgroup of a group \( G \). Consider the subgroup
+          \[ L = \{ (h, h) \mid h \in H \} \]
+          of \( H \times G \). Prove that \( L \) is a normal subgroup in \( H \times G \) if and only if \( H \) is contained in
+        the center of \( G \).
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Firstly, we show that \( L \) is a normal subgroup in \( H \times G \) if \( H \) is contained in the center of \( G \) (i.e. \(Z(G)\)).
+      Suppose that \(H\subset Z(G)\). Let \((h,g)\in H\times G\) and \((h', h')\in L\). Then
+      \[
+        \begin{align}
+          (h, g)(h', h')(h, g)^{-1} &= (h, g)(h', h')(h^{-1}, g^{-1})\\
+          &= (h, g)(h'h^{-1}, h'g^{-1})\\
+          &= (hh'h^{-1}, g h'g^{-1})\\
+        \end{align}
+      \]
+      Since \(H\subset Z(G)\), we have \(ghg^{-1}=h\) for any \(g\in G\). Thus, we have
+      \[
+        (h, g)(h', h')(h, g)^{-1} = (hh'h^{-1}, hh'h^{-1}) = (h', h')\in L.
+      \]
+      Hence, we show that \(L\) is a normal subgroup in \(H\times G\).
+      Now we show that if \(L\) is a normal subgroup in \(H\times G\), then \(H\subset Z(G)\).
+      Suppose that \(L\) is a normal subgroup in \(H\times G\). Let \(h\in H\) and \(g\in G\). Then
+      \[
+        \begin{align}
+          (h, g)(h_1, h_1)(h, g)^{-1} &= (h_2, h_2)\\
+        \end{align}
+      \]
+      for some \(h_1, h_2\in H\). 
+      Since \((e, g)\in H\times G\), we have
+      \[
+        \begin{align}
+          (e, g)(h_1, h_1)(e, g)^{-1} &= (e, g)(h_1, h_1)(e, g^{-1})\\
+          &= (eh_1e, gh_{1}g^{-1})\\
+          &= (h_1, gh_1g^{-1})\\
+          &= (h_2, h_2)\\
+        \end{align}
+      \]
+      Hence, we can get \(h_1=h_2\). Thus, we have \(gh_1g^{-1}=h_1\) for any \(g\). 
+      Therefore, we show that \(H\subset Z(G)\). \(\blacksquare\) 
+    </p>
+
+    <br>
+
+    <!-- <section id = 'k_state_2022_4'>
+    <h2>K-State 2022(4)</h2>
+    <p>
+      Let \( R \) be a ring and \( M \) be a left \( R \)-module. For each element \( m \in M \), define
+      \[
+      \text{Ann}_R(m) = \{ r \in R \mid rm = 0 \}.
+      \]
+      Prove that \(\text{Ann}_R(m)\) is a left ideal of \( R \). 
+      Give an example of \( R, M, \) and \( m \in M \) such that \(\text{Ann}_R(m)\) is not a right ideal.
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Let \(r\in R \) and \(r'\in \text{Ann}_R(m)\). Then we have \(rr'\in \text{Ann}_R(m)\) since
+      \[
+        (rr')m = r(r'm) = r0 = 0.
+      \]
+      It shows that \(r\text{Ann}_R(m)\subset \text{Ann}_R(m)\) is a left ideal of \(R\).
+    </p>
+    </section> -->
+
+      
+    <section id = "References">
+    <h2>References</h2>
+    <ul>
+      <li>
+        <a href="https://archive.math.ksu.edu/course?course=qe_algebra">Qualifying Exams Kansas State Mathematics Ph.D. Program (Algebra Archive)</a>
+      </li>
+    </ul>
+  </section>
+  </body>
+</html>
