@@ -418,52 +418,5 @@
     </p>
     <pre><code id="code-block7">0</code></pre>
     <button onclick="copyCode7()">Copy</button>
-    <p>
-      Click the link
-      <a href="https://www.tidyverse.org/packages/"
-        >https://www.tidyverse.org/packages/</a
-      >
-      for more information.
-    </p>
-    <p>
-      Note: Packages "harfbuzz", "fribidi", "freetype" and "pkg-config" are
-      necessary to install "tidyverse". If you failed to install tidyverse, you
-      probably never intall these packages and you can easily installed it
-      through homebrew:
-    </p>
-    <pre><code id="code-block8">brew install pkg-config harfbuzz fribidi freetype</code></pre>
-    <button onclick="copyCode8()">Copy</button>
-    <p>
-      If you failed to install a package on R, the source pachage will be stored
-      in a temporary folder. In order to check that, use the following code
-    </p>
-    <pre><code id="code-block9">tempdir()</code></pre>
-    <button onclick="copyCode9()">Copy</button>
-    <p>To load a package:</p>
-    <pre><code>library(package_name)</code></pre>
-    <p>To list all installed packages:</p>
-    <pre><code id="code-block10">installed.packages()[, "Package"]</code></pre>
-    <button onclick="copyCode10()">Copy</button>
-    <p>
-      If you want to see more information for each package installed on your
-      computer:
-    </p>
-    <pre><code id="code-block11">installed.packages()</code></pre>
-    <button onclick="copyCode11()">Copy</button>
-    <h2 id="read-csv-file">Read CSV file</h2>
-    <p>To read a CSV file, you have to use the following command:</p>
-    <pre><code>read_csv(&quot;file_name.csv&quot;)</code></pre>
-    <p>To quit R, use the following code:</p>
-    <p>To store data into a variable named "data":</p>
-    <pre><code>data &lt;- read_csv(&quot;file_name.csv&quot;)</code></pre>
-    <p>To show i number of rows of "data":</p>
-    <pre><code>print(data, n=i)</code></pre>
-    <p>For example, if you only want to show 11 rows of data:</p>
-    <pre><code>print(data, n=11)</code></pre>
-    <p>To select columns from column 2 to column 4:</p>
-    <pre><code>data[2:4]</code></pre>
-    <p>To quit R, use the following code:</p>
-    <pre><code id="code-block12">q()</code></pre>
-    <button onclick="copyCode12()">Copy</button>
   </body>
 </html>
