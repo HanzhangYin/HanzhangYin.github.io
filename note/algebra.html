@@ -33,9 +33,9 @@
       <a href="#prime_irreducible">Prime and Irreducible</a>
       <a href="#adjoining_element">Adjoining Element</a>
       <a href="#splitting_field">Splitting Field</a>
-      <a href="#separable">Separable</a>
       <a href="#minimal_polynomial">Minimal Polynomial</a>
       <a href="#field_extension">Field Extension</a>
+      <a href="#separable">Separable</a>
       <a href="#galois_group">Galois Group</a>
       <a href="#galois_theory">Galois Theory</a>
       <a href='#ku_2017_8_6'>KU 2017 (August) (6)</a>
@@ -557,46 +557,6 @@
 
     <br>
 
-    <section id = 'separable'>
-      <h2>Separable</h2>
-      <p>
-        \(\textbf{Definition. }\)A polynomial \(f\in F [x]\) is separable if it is non-constant and its roots
-        in a splitting field are all simple.
-      </p>
-      <p>
-        \(\textbf{Theorem. }\)A nonzero polynomial in \(K[X]\) is separable if and only if it is relatively
-        prime to its derivative in \(K[X]\).
-      </p>
-      <p>
-        \(\textbf{Proof. }\)We firstly show that if a nonzero polynomial in \(K[X]\) is separable, then it is relatively prime to its derivative in \(K[X]\).
-        Suppose that \(f(x)\in K[X]\) is separable, then we have \(f(x) = (x - \alpha)h(x)\) for some \(\alpha\) in the extension of \(K\). 
-        Note that \((x - \alpha)\) is the distinct factor of \(f\) because of the definition of separable. 
-        In other words, \(h(\alpha)\neq 0\).
-        Then we have 
-        \[
-        \begin{align}
-          f'(x) &= h(x) + (x - \alpha)h'(x). \\
-          f'(\alpha) &= h(\alpha) + (\alpha - \alpha)h'(\alpha) = h(\alpha) \neq 0. \\
-        \end{align} 
-        \]
-        In that case, we can know that \(f\) and \(f'\) do not share the same root, which implies that 
-        they do not have the same factor. Hence, we have \(f\) and \(f'\) are relatively prime.
-        For the other direction, we will prove it with contrapositive. 
-        Suppose that \(f(x)\) is not separable, given the definition of separable, we can know that \(f(x)\) has a repeated roots.
-        Then we have \(f(x) = (x - \alpha)^2h(x)\) for some \(\alpha\) in the extension of \(K\).
-        Hence, we can get 
-        \[
-        \begin{align}
-          f'(x) &= 2(x - \alpha)h(x) + (x - \alpha)^2h'(x)\\
-          f'(\alpha) &= 2(\alpha - \alpha)h(\alpha) + (\alpha - \alpha)^2h'(\alpha) = 0. \\
-        \end{align}
-        \]
-        Therefore, we can know that \(f\) and \(f'\) have some similar factor. Hence, we have \(f\) and \(f'\) are not relatively prime. \(\blacksquare\)
-      </p>
-    </section>
-
-    <br>
-
 
     <section id='minimal_polynomial'>
       <h2>Minimal Polynomial</h2>
@@ -644,6 +604,46 @@
       <p>
       \(\textbf{Proposition. }\)
         Assume that \(F \subset L\) is a field extension, and let \(\alpha \in L\). Then \(\alpha\) is algebraic over \(F\) if and only if \(F[\alpha] = F(\alpha)\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'separable'>
+      <h2>Separable</h2>
+      <p>
+        \(\textbf{Definition. }\)A polynomial \(f\in F [x]\) is separable if it is non-constant and its roots
+        in a splitting field are all simple.
+      </p>
+      <p>
+        \(\textbf{Theorem. }\)A nonzero polynomial in \(K[X]\) is separable if and only if it is relatively
+        prime to its derivative in \(K[X]\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We firstly show that if a nonzero polynomial in \(K[X]\) is separable, then it is relatively prime to its derivative in \(K[X]\).
+        Suppose that \(f(x)\in K[X]\) is separable, then we have \(f(x) = (x - \alpha)h(x)\) for some \(\alpha\) in the extension of \(K\). 
+        Note that \((x - \alpha)\) is the distinct factor of \(f\) because of the definition of separable. 
+        In other words, \(h(\alpha)\neq 0\).
+        Then we have 
+        \[
+        \begin{align}
+          f'(x) &= h(x) + (x - \alpha)h'(x). \\
+          f'(\alpha) &= h(\alpha) + (\alpha - \alpha)h'(\alpha) = h(\alpha) \neq 0. \\
+        \end{align} 
+        \]
+        In that case, we can know that \(f\) and \(f'\) do not share the same root, which implies that 
+        they do not have the same factor. Hence, we have \(f\) and \(f'\) are relatively prime.
+        For the other direction, we will prove it with contrapositive. 
+        Suppose that \(f(x)\) is not separable, given the definition of separable, we can know that \(f(x)\) has a repeated roots.
+        Then we have \(f(x) = (x - \alpha)^2h(x)\) for some \(\alpha\) in the extension of \(K\).
+        Hence, we can get 
+        \[
+        \begin{align}
+          f'(x) &= 2(x - \alpha)h(x) + (x - \alpha)^2h'(x)\\
+          f'(\alpha) &= 2(\alpha - \alpha)h(\alpha) + (\alpha - \alpha)^2h'(\alpha) = 0. \\
+        \end{align}
+        \]
+        Therefore, we can know that \(f\) and \(f'\) have some similar factor. Hence, we have \(f\) and \(f'\) are not relatively prime. \(\blacksquare\)
       </p>
     </section>
 
