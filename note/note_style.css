@@ -198,10 +198,11 @@
     color: #1a1a1a;
     background-color: #ededed;
   }
+
   body {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     max-width: 50em;
-    padding-left: 200px;  /*push all body content to the right by the width of the navbar */
+    padding-left: 350px;  /*push all body content to the right by the width of the navbar */
     padding-right: 30px;  
     padding-top: 30px;
     padding-bottom: 30px; 
@@ -209,11 +210,7 @@
     text-rendering: optimizeLegibility;
     font-kerning: normal;
     font-family:  'Spectral', serif;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0; 
-    } 
+  }
 
   .navbar {
     overflow: hidden; 
