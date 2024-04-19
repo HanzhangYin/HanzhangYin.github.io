@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
     <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-light.css"><!--It is a link for highlight.js-->
     <title>Algebra</title>
   </head>
   <body>
@@ -567,6 +568,22 @@
             f = p \Leftrightarrow f \text{ is a polynomial of minimal degree satisfying } f(\alpha) = 0 \Leftrightarrow f \text{ is irreducible over } F \text{ and } f(\alpha) = 0.
           \]
       </p>
+      <p>
+        Let us briefly talk about how to use sagemath to find the minimal polynomial of an element. Suppose that your \(\alpha = \sqrt{2}\).
+      </p>
+      <div class="code-box">
+        <!-- <button class="copy-button">Copy</button> -->
+        <pre style = 'tab-size: 7;'>
+        <code class="language-python">
+      sage: var('a')
+      sage: a = sqrt(2); a
+      sqrt(2)
+      sage: p = a.minpoly(); p
+      x^2 - 2
+      </code></pre>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
     </section>
 
     <br>
