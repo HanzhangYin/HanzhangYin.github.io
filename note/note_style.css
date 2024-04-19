@@ -237,32 +237,6 @@
   li > ol, li > ul {
     margin-top: 0;
   }
-  blockquote {
-    margin: 1em 0 1em 1.7em;
-    padding-left: 1em;
-    border-left: 2px solid #e6e6e6;
-    color: #606060;
-  }
-  code {
-    font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-    font-size: 85%;
-    margin: 0;
-    /* hyphens: manual; */
-  }
-  pre {
-    background-color: #d9d9d9; 
-    margin: 1em 0;
-    overflow: auto;
-  }
-  pre code {
-    padding: 0;
-    overflow: visible;
-    overflow-wrap: normal;
-  }
-  .sourceCode {
-   background-color: transparent;
-   overflow: visible;
-  }
   hr {
     background-color: #1a1a1a;
     border: none;
@@ -308,7 +282,6 @@
   #TOC a:not(:hover) {
     text-decoration: none;
   }
-  code{white-space: pre-wrap;}
   span.smallcaps{font-variant: small-caps;}
   div.columns{display: flex; gap: min(4vw, 1.5em);}
   div.column{flex: auto; overflow-x: auto;}
@@ -363,23 +336,14 @@
   }
 
 }
-  /* ul.task-list li input[type="checkbox"] {
-    width: 0.8em;
-    margin: 0 0.8em 0.2em -1.6em;
-    vertical-align: middle;
-  } */
   
   header {
     padding: 20px;
     text-align: center;
-    /* margin-left: 10px;  Add a left margin to the header equal to the width of the navbar plus a little extra */
   }
   
   section {
   width: 100%; /* Adjust this value to change the width of the section */
-  /*height: 100vh;  Set the height to 100% of the viewport height */
-  /*position: fixed;  This positions the element relative to the browser window */
-  /* margin-left: 10px;  Add a left margin to the sections equal to the width of the navbar plus a little extra */
   transition: background-color 1s; /* make the transition of the color */
   }
 
@@ -387,23 +351,24 @@
     background-color: yellow;
   }
 
-div[class*=" highlight-"],div[class^=highlight-]{display:flex;margin:1em 0}
-div[class*=" highlight-"] .table-wrapper,div[class^=highlight-] .table-wrapper,pre{margin:0;padding:0}
-pre{overflow:auto}
-article[role=main] .highlight pre{line-height:1.5}
-.highlight pre,pre.literal-block{font-size:var(--code-font-size);padding:.625rem .875rem}
-pre.literal-block{background-color:var(--color-code-background);border-radius:.2rem;color:var(--color-code-foreground);margin-bottom:1rem;margin-top:1rem}
-.highlight{border-radius:.2rem;width:100%}
-.highlight .gp,.highlight span.linenos{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}
-.highlight .hll{display:block;margin-left:-.875rem;margin-right:-.875rem;padding-left:.875rem;padding-right:.875rem}
-.code-block-caption{background-color:var(--color-code-background);border-bottom:1px solid;border-radius:.25rem;border-bottom-left-radius:0;border-bottom-right-radius:0;border-color:var(--color-background-border);color:var(--color-code-foreground);display:flex;font-weight:300;padding:.625rem .875rem}
-.code-block-caption+div[class]{margin-top:0}
-.code-block-caption+div[class] pre{border-top-left-radius:0;border-top-right-radius:0}
-.highlighttable{display:block;width:100%}
-.highlighttable tbody{display:block}
-.highlighttable tr{display:flex}
-.highlighttable td.linenos{background-color:var(--color-code-background);border-bottom-left-radius:.2rem;border-top-left-radius:.2rem;color:var(--color-code-foreground);padding:.625rem 0 .625rem .875rem}
-.highlighttable .linenodiv{box-shadow:-.0625rem 0 var(--color-foreground-border) inset;font-size:var(--code-font-size);padding-right:.875rem}
-.highlighttable td.code{display:block;flex:1;overflow:hidden;padding:0}
-.highlighttable td.code .highlight{border-bottom-left-radius:0;border-top-left-radius:0}
-.highlight span.linenos{box-shadow:-.0625rem 0 var(--color-foreground-border) inset;display:inline-block;margin-right:.875rem;padding-left:0;padding-right:.875rem}
+  .code-box {
+    background-color:    #454545   ; 
+    /* border: 1px solid #ddd; */
+    padding: 10px;
+    width: 70%; /* Adjust the width as needed */
+    max-height: 300px; /* Maximum height before scrolling */
+    overflow: auto;
+    border: 1px solid #ddd;
+    font-family: monospace;
+}
+.code-box code {
+    color: whitesmoke;
+}
+.code-box .keyword { color:  orange ; font-weight: bold; } /* Keywords */
+.code-box .function { color: #0066ff; } /* Functions */
+.code-box .string { color: #a31515; } /* String literals */
+.code-box .comment { color: #008000; font-style: italic; } /* Comments */
+.code-box .number { color: #ff0000; } /* Numbers */
+.code-box .operator { color: #DE3163; } /* Operators */
+.code-box .group { color: #DFFF00; } /* Parentheses and Brackets */
+.code-box .outcome { color:  #40E0D0 ; } /* Outcome */

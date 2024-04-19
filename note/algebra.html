@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
     <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-light.css"><!--It is a link for highlight.js -->
     <title>Algebra</title>
   </head>
   <body>
@@ -580,17 +579,14 @@
       </p>
       <div class="code-box">
         <!-- <button class="copy-button">Copy</button> -->
-        <pre style = 'tab-size: 7;'>
-        <code class="language-python">
-      sage: var('a')
-      sage: a = sqrt(2); a
-      sqrt(2)
-      sage: p = a.minpoly(); p
-      x^2 - 2
+      <pre><code>
+      <span class = 'keyword'>sage:</span> var('a')
+      <span class = 'keyword'>sage:</span> a = sqrt(<span class = 'number'>2</span>); a
+      <span class = 'outcome'>sqrt(2)</span>
+      <span class = 'keyword'>sage:</span>  p = a.minpoly(); p
+      <span class = 'outcome'>x^2 - 2</span>
       </code></pre>
       </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script>
     </section>
 
     <br>
@@ -718,26 +714,23 @@
         We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.
       </p>
       <div class="code-box">
-        <!-- <button class="copy-button">Copy</button> -->
         <pre style = 'tab-size: 7;'>
-        <code class="language-python">
-      sage: R.&ltx&gt = QQ[]
-      sage: K.&lta&gt = NumberField(x^3 + x^2 + 2)
-      sage: G = K.galois_group(); G 
-      Galois group 3T2 (S3) with order 6 of x^3 + x^2 + 2
-      sage: G.easy_order()
-      6
-      sage: G.list()
-      [(),
+      <code>
+      <span class = 'keyword'>sage:</span> R.&ltx&gt = QQ[]
+      <span class = 'keyword'>sage:</span> K.&lta&gt = NumberField(x^3 + x^2 + 2)
+      <span class = 'keyword'>sage:</span> G = K.galois_group(); G 
+      <span class = 'outcome'>Galois group 3T2 (S3) with order 6 of x^3 + x^2 + 2</span>
+      <span class = 'keyword'>sage:</span> G.easy_order()
+      <span class = 'outcome'>6</span>
+      <span class = 'keyword'>sage:</span> G.list()
+      <span class = 'outcome'>[(),
       (1,2,3)(4,5,6),
       (1,3,2)(4,6,5),
       (1,4)(2,6)(3,5),
       (1,5)(2,4)(3,6),
-      (1,6)(2,5)(3,4)]
+      (1,6)(2,5)(3,4)]</span>
       </code></pre>
       </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script>
     </section>
 
     <br>
