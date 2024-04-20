@@ -579,14 +579,20 @@
       </p>
       <div class="code-box-container">
       <div class="code-box">
-        <!-- <button class="copy-button">Copy</button> -->
-      <pre><code>
+      <!-- <pre><code>
       <span class = 'keyword'>sage:</span> var('a')
       <span class = 'keyword'>sage:</span> a = sqrt(<span class = 'number'>2</span>); a
       <span class = 'outcome'>sqrt(2)</span>
       <span class = 'keyword'>sage:</span> p = a.minpoly(); p
       <span class = 'outcome'>x^2 - 2</span>
-      </code></pre>
+      </code></pre> -->
+      <pre><code> 
+      <span class="keyword">sage:</span> <span class="function">var</span>(<span class="string">'a'</span>) 
+      <span class="keyword">sage:</span> a <span class="operator">=</span> <span class="function">sqrt</span><span class="group">(</span><span class="number">2</span><span class="group">)</span>; a 
+      <span class="outcome">sqrt(2)</span> 
+      <span class="keyword">sage:</span> p <span class="operator">=</span> a.minpoly<span class="group">()</span>; p 
+      <span class="outcome">x^2 - 2</span> 
+    </code></pre>
       </div>
       </div>
     </section>
@@ -720,22 +726,25 @@
       </p>
       <div class="code-box-container">
       <div class="code-box">
-        <pre style = 'tab-size: 7;'>
-      <code>
-      <span class = 'keyword'>sage:</span> R.&ltx&gt = QQ[]
-      <span class = 'keyword'>sage:</span> K.&lta&gt = NumberField(x^3 + x^2 + 2)
-      <span class = 'keyword'>sage:</span> G = K.galois_group(); G 
-      <span class = 'outcome'>Galois group 3T2 (S3) with order 6 of x^3 + x^2 + 2</span>
-      <span class = 'keyword'>sage:</span> G.easy_order()
-      <span class = 'outcome'>6</span>
-      <span class = 'keyword'>sage:</span> G.list()
-      <span class = 'outcome'>[(),
-      (1,2,3)(4,5,6),
-      (1,3,2)(4,6,5),
-      (1,4)(2,6)(3,5),
-      (1,5)(2,4)(3,6),
-      (1,6)(2,5)(3,4)]</span>
-      </code></pre>
+      <pre><code> 
+        <span class="keyword">sage:</span> R.<span class="operator">&lt;</span>x<span class="operator">&gt;</span> <span class="operator">=</span> QQ[]
+
+        <span class="keyword">sage:</span> K.<span class="operator"></span>a<span class="operator">></span> <span class="operator">=</span> <span class="function">NumberField</span><span class="group">(</span>x<span class="operator">^</span><span class="number">3</span> <span class="operator">+</span> x<span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="number">2</span><span class="group">)</span>
+        
+        <span class="keyword">sage:</span> G <span class="operator">=</span> K.galois_group<span class="group">()</span>; G
+        <span class="outcome">Galois group 3T2 (S3) with order 6 of x^3 + x^2 + 2</span>
+        
+        <span class="keyword">sage:</span> G.easy_order<span class="group">()</span>
+        <span class="outcome">6</span>
+        
+        <span class="keyword">sage:</span> G.list<span class="group">()</span>
+        <span class="outcome">[(),
+        (1,2,3)(4,5,6),
+        (1,3,2)(4,6,5),
+        (1,4)(2,6)(3,5),
+        (1,5)(2,4)(3,6),
+        (1,6)(2,5)(3,4)]</span>
+        </code></pre>
       </div>
       </div>
     </section>

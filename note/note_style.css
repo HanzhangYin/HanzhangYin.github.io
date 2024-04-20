@@ -159,7 +159,7 @@
       background-color:#D0D0D0   ; 
       padding: 2px 1px;
       width: 80%; /* Adjust the width as needed */
-      max-height: 300px; /* Maximum height before scrolling */ 
+      /* max-height: 300px; Maximum height before scrolling  */
       overflow: auto;
       border: 0.5px solid #ddd;
       font-family: monospace;
@@ -173,14 +173,14 @@
   .code-box code {
       color: black;
   }
-  .code-box .keyword { color:  #FF5F1F ; font-weight: bold; } /* Keywords */
-.code-box .function { color: #0066ff; } /* Functions */
-.code-box .string { color: #a31515; } /* String literals */
-.code-box .comment { color: #008000; font-style: italic; } /* Comments */
-.code-box .number { color: #ff0000; } /* Numbers */
-.code-box .operator { color: #DE3163; } /* Operators */
-.code-box .group { color: #DFFF00; } /* Parentheses and Brackets */
-.code-box .outcome { color:  #0F52BA ; } /* Outcome */
+.code-box .keyword { color:  #FF5F1F ; font-weight: bold; }
+.code-box .function { color: #0066ff; }
+.code-box .string { color: #a31515; }
+.code-box .comment { color: #008000; font-style: italic; }
+.code-box .number { color: #ff0000; }
+.code-box .operator { color: #DE3163; }
+.code-box .group { color: #4CBB17; }
+.code-box .outcome { color:  #0F52BA ; }
   
 
   }
@@ -388,7 +388,7 @@
 .code-box .comment { color: #008000; font-style: italic; } /* Comments */
 .code-box .number { color: #ff0000; } /* Numbers */
 .code-box .operator { color: #DE3163; } /* Operators */
-.code-box .group { color: #DFFF00; } /* Parentheses and Brackets */
+.code-box .group { color: #4CBB17; } /* Parentheses and Brackets */
 .code-box .outcome { color:  #0F52BA ; } /* Outcome */
 
 
