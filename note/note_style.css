@@ -94,7 +94,6 @@
       width: 80%;
       font-size: 1em;
       padding: 12px;
-      /* hyphens: auto; */
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
@@ -367,7 +366,8 @@
   .code-box {
     background-color: #D0D0D0   ; 
     padding: 2px 1px;
-    width: 60%; /* Adjust the width as needed */
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1000px;
     max-height: 300px; /* Maximum height before scrolling */ 
     overflow: auto;
     border: 0.5px solid #ddd;

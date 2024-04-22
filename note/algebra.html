@@ -152,6 +152,30 @@
       </p>
     </section>
 
+    <section id = 'sage_subgroup'>
+      <h2>Sage Subgroup</h2>
+      <p>
+        Now, we try to define some subgroups in sagemath:
+      </p>
+      <p>
+       For example: \(\mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2\). 
+      </p>
+      <div class="code-box-container">
+      <div class="code-box">
+        <pre style="tab-size: 4;">
+            <code class="language-python">
+                <span class="comment"># Define the group Z2 x Z2 x Z2 using AbelianGroup</span>
+                <span class="variable">Z2xZ2xZ2</span> = <span class="function">AbelianGroup</span>(<span class="bracket">[</span><span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span><span class="bracket">]</span>)
+    
+                <span class="comment"># Iterate over all elements of the group and print them</span>
+                <span class="keyword">for</span> <span class="variable">g</span> <span class="keyword">in</span> <span class="variable">Z2xZ2xZ2</span>:
+                    <span class="function">print</span>(<span class="variable">g</span>)
+            </code>
+        </pre>
+    </div>
+  </div>
+    </section>
+
     <br>
 
     <section id = 'simple_group'>
