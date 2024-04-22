@@ -366,8 +366,8 @@
   .code-box {
     background-color: #D0D0D0   ; 
     padding: 2px 1px;
-    width: 80%; /* Adjust the width as needed */
-    max-width: 1000px;
+    width: 100%; /* Adjust the width as needed */
+    max-width: 1500px;
     max-height: 300px; /* Maximum height before scrolling */ 
     overflow: auto;
     border: 0.5px solid #ddd;
