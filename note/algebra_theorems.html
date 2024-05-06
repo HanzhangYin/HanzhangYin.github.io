@@ -27,10 +27,10 @@
       <a href="#centralizer">Centralizer</a>
       <a href="#normalizer">Normalizer</a>
       <a href="#stabilizer">Stabilizer</a>
+      <a href="#orbit">Orbit</a>
       <a href="#p_group">\(p\)-group</a>
       <a href="#sylow_p_subgroup">Sylow \(p\)-Subgroup</a>
       <a href="#sylow_theorem">Sylow's Theorem</a>
-      <a href="#orbit">Orbit</a>
       <a href="#simple_group">Simple Group</a>
       <a href="#solvable_group">Solvable Group</a>
       <a href="#field">Field</a>
@@ -222,6 +222,31 @@
 
     <br>
 
+    <section id="orbit">
+      <h2>Orbit</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \(G\) be a group acting on a set \(X\). The orbit of an element \(x\in X\) is the set
+        \[
+        Gx = \{gx\mid g\in G\}.
+        \]
+      </p>
+      <p>
+        \(\textbf{Lemma. }\)Let \(G\) be a group of order \(p^t\), with \(p\) prime, and assume \(G\) acts on the finite set \(X\). If \(r\) denotes the number of orbits with just one element, then \(|X| \equiv r \pmod{p}\).
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Assume the group \( G \) acts on the set \( X \). Fix \( x \in X \). Then there is a 1-1, onto set map between \(\text{orb}(x)\) and the set of distinct left cosets of \( G_x \) given by \( g \cdot x \mapsto gG_x \). In particular, if \(\text{orb}(x)\) or \([G : G_x]\) is finite, then \(\left|\text{orb}(x)\right| = [G : G_x]\), and it follows that \(\left|\text{orb}(x)\right|\) divides \(\left|G\right|\), if \( G \) is finite.
+      </p>
+      <p>
+        \(\textbf{Class Equation. }\) Let \( G \) be a finite group. Then:
+        \[
+          |G| = |Z(G)| + \sum_{i=1}^r |c(x_i)| = |Z(G)| + \sum_{i=1}^r [G : C_G(x_i)],
+        \]
+        where the sum is taken over the distinct conjugacy classes with more than one element. Here \( Z(G) \) denotes the center of \( G \), where \( Z(G) := \{g \in G \mid gx = xg, \text{ for all } x \in G\} \).
+      </p>
+    </section>
+
+    <br>
+
     <section id = "p_group">
       <h2>\(p\)-group</h2>
       <p>
@@ -272,31 +297,6 @@
         \[ n_p \equiv 1 \mod p .\]
         </li>
       Further, \( n_p \) is the index in \( G \) of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).
-      </p>
-    </section>
-
-    <br>
-
-    <section id="orbit">
-      <h2>Orbit</h2>
-      <p>
-        \(\textbf{Definition. }\) Let \(G\) be a group acting on a set \(X\). The orbit of an element \(x\in X\) is the set
-        \[
-        Gx = \{gx\mid g\in G\}.
-        \]
-      </p>
-      <p>
-        \(\textbf{Lemma. }\)Let \(G\) be a group of order \(p^t\), with \(p\) prime, and assume \(G\) acts on the finite set \(X\). If \(r\) denotes the number of orbits with just one element, then \(|X| \equiv r \pmod{p}\).
-      </p>
-      <p>
-        \(\textbf{Proposition. }\) Assume the group \( G \) acts on the set \( X \). Fix \( x \in X \). Then there is a 1-1, onto set map between \(\text{orb}(x)\) and the set of distinct left cosets of \( G_x \) given by \( g \cdot x \mapsto gG_x \). In particular, if \(\text{orb}(x)\) or \([G : G_x]\) is finite, then \(\left|\text{orb}(x)\right| = [G : G_x]\), and it follows that \(\left|\text{orb}(x)\right|\) divides \(\left|G\right|\), if \( G \) is finite.
-      </p>
-      <p>
-        \(\textbf{Class Equation. }\) Let \( G \) be a finite group. Then:
-        \[
-          |G| = |Z(G)| + \sum_{i=1}^r |c(x_i)| = |Z(G)| + \sum_{i=1}^r [G : C_G(x_i)],
-        \]
-        where the sum is taken over the distinct conjugacy classes with more than one element. Here \( Z(G) \) denotes the center of \( G \), where \( Z(G) := \{g \in G \mid gx = xg, \text{ for all } x \in G\} \).
       </p>
     </section>
 
