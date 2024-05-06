@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
+    <title>Algebra</title>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="#normal_subgroup">Normal Subgroup</a>
+      <a href="#simple_group">Simple Group</a>
+      <a href="#solvable_group">Solvable Group</a>
+      <a href="#field">Field</a>
+      <a href="#integral_domain">Integral Domain</a>
+      <a href="#principal_ideal_domain">Principal Ideal Domain</a>
+      <a href="#prime_irreducible">Prime and Irreducible</a>
+      <a href="#adjoining_element">Adjoining Element</a>
+      <a href="#splitting_field">Splitting Field</a>
+      <a href="#minimal_polynomial">Minimal Polynomial</a>
+      <a href="#field_extension">Field Extension</a>
+      <a href="#separable">Separable</a>
+      <a href="#algebraic_closure">Algebraic Closure</a>
+      <a href="#galois_group">Galois Group</a>
+      <a href="#galois_theory">Galois Theory</a>
+      <a href="#References">References</a>
+    </nav>
+    <script src="click.js"></script><!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+    <script src="highlight.js"></script><!--It is a link for highlight.js-->
+    <h1>Algebra</h1>
+
+    <section>
+      <p>
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts in abstract algebra and it is not fully completed. 
+        Feel free to send me an email at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions for improvement.
+      </p>
+    </section>
+
+
+    <section id = 'normal_subgroup'>
+      <h2>Normal Subgroup</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \(G\) be a group and \(H\) be a subgroup of \(G\). 
+        We say that \(H\) is a \(\textit{normal subgroup}\) of \(G\) if \(gH = Hg\) for all \(g\in G\).
+      </p>
+    </section>
+
+    <section id = 'sage_subgroup'>
+      <h2>Sage Subgroup</h2>
+      <p>
+        Now, we try to define some subgroups in sagemath:
+      </p>
+      <p>
+       For example: \(S_3, \mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2\). 
+      </p>
+      <div class="code-box-container">
+      <div class="code-box">
+        <pre><code class="language-python">
+        <span class="comment"># Define the group S3 using AbelianGroup</span>
+        <span class="keyword">sage:</span> <span class="variable">S3</span> = <span class="function">SymmetricGroup</span>(<span class="number">3</span>)
+
+        <span class="comment"># Define the group Z2 x Z2 x Z2 using AbelianGroup</span>
+        <span class="keyword">sage:</span> <span class="variable">Z2xZ2xZ2</span> = <span class="function">AbelianGroup</span>(<span class="bracket">[</span><span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span><span class="bracket">]</span>)
+            </code>
+        </pre>
+        </div>
+      </div>
+      <p>
+        You can run the following code to show all the elements in the group:
+      </p>
+      <div class="code-box-container">
+        <div class="code-box">
+        <pre><code class="language-python">
+        <span class="comment"># Define the group Z2 x Z2 x Z2 using AbelianGroup</span>
+        <span class="keyword">sage:</span> <span class="variable">Z2xZ2xZ2</span> = <span class="function">AbelianGroup</span>(<span class="bracket">[</span><span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span><span class="bracket">]</span>)
+      
+        <span class="comment"># Iterate over all elements of the group and print them</span>
+        <span class="keyword">sage:</span> <span class="keyword">for</span> <span class="variable">g</span> <span class="keyword">in</span> <span class="variable">Z2xZ2xZ2</span>:
+        <span class="keyword">sage:</span>     <span class="function">print</span>(<span class="variable">g</span>)
+        <span class="outcome">
+        1
+        f2
+        f1
+        f1*f2
+        f0
+        f0*f2
+        f0*f1
+        f0*f1*f2</span>
+              </code>
+          </pre>
+          </div>
+        </div>
+        <p>
+          You can run the following code to show the all subgroups of the group:
+        </p>
+        <div class="code-box-container">
+        <div class="code-box">
+        <pre><code class="language-python">
+        <span class="comment"># Define the group Z2 x Z2 x Z2 using AbelianGroup</span>
+        <span class="keyword">sage:</span> <span class="variable">Z2xZ2xZ2</span> = <span class="function">AbelianGroup</span>(<span class="bracket">[</span><span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span><span class="bracket">]</span>)
+      
+        <span class="comment"># Iterate over all the subgroups and print them</span>
+        <span class="keyword">sage:</span> <span class="variable">subgroups</span> = Z2 x Z2 x Z2.<span class="function">subgroups</span>()
+        <span class="keyword">sage:</span> <span class="keyword">for</span> <span class="variable">H</span> <span class="keyword">in</span> <span class="variable">subgroups</span>:
+        <span class="keyword">sage:</span>     <span class="function">print</span>(<span class="variable">H</span>)
+        <span class="outcome">
+        Multiplicative Abelian subgroup isomorphic to C2 x C2 x C2 generated by {f0, f1, f2}
+        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0, f1}
+        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0, f1*f2}
+        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0*f2, f1}
+        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0*f2, f1*f2}
+        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0, f2}
+        Multiplicative Abelian subgroup isomorphic to C2 generated by {f0}
+        Multiplicative Abelian subgroup isomorphic to C2 generated by {f0*f2}
+        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0*f1, f2}
+        Multiplicative Abelian subgroup isomorphic to C2 generated by {f0*f1}
+        Multiplicative Abelian subgroup isomorphic to C2 generated by {f0*f1*f2}
+        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f1, f2}
+        Multiplicative Abelian subgroup isomorphic to C2 generated by {f1}
+        Multiplicative Abelian subgroup isomorphic to C2 generated by {f1*f2}
+        Multiplicative Abelian subgroup isomorphic to C2 generated by {f2}
+        Trivial Abelian subgroup</span>
+                </code>
+            </pre>
+            </div>
+          </div>
+    </section>
+
+    <br>
+
+    <section id = 'simple_group'>
+      <h2>Simple Group</h2>
+      <p>
+        \(\textbf{Definition. }\) A group \(G\) is \(\textit{simple}\) if \(G\) is nontrivial and the only normal subgroups of \(G\) are \(\{e\}\) and \(G\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'solvable_group'>
+      <h2>Solvable Group</h2>
+      <p>
+        \(\textbf{Definition. }\) A finite group \( G \) is \textit{solvable} if there are subgroups
+        \[ 
+        \{e\} = G_n \subseteq G_{n-1} \subseteq \cdots \subseteq G_1 \subseteq G_0 = G 
+        \]
+        such that for \( i = 1, \ldots, n \) we have:
+        <ul>
+          <li>
+            (a) \( G_i \) is normal in \( G_{i-1} \).
+          </li>
+          <li>
+            (b) \( [G_{i-1} : G_i] \) is prime.
+          </li>
+        </ul>
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'field'>
+      <h2>Field</h2>
+      <h3>Division Ring</h3>
+      <p>
+        \(\textbf{Definition. }\) A <strong>division ring</strong> is a ring \(R\) with identity \(1\) such that every nonzero element of \(R\) is a unit
+        (i.e. every nonzero element of \(R\) has a multiplicative inverse).
+      </p>
+      <p>
+        \(\textbf{Definition. }\) A <strong>field</strong> is a commutative ring \(R\) with identity \(1\) such that every nonzero element of \(R\) is a unit
+        (i.e. commutative division ring).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'ideal'>
+      <p>
+        \(\textbf{Proposition(1). }\) Let \(R\) be a ring with identity \(1\), and \(I\) is an ideal of \(R\). \(R = I\) if and only if \(I\) contains a unit. 
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Firstly, suppose that \(R = I\). 
+        Since \(R\) is a ring with identity \(1\), then we can know that \(1\) is unit in \(R\).
+        Hence, we can see that \(I\) contains a unit.
+        For the other direction, suppose that \(I\) contains a unit \(u\in R\).
+        Then we can know that there exists an inverse \(u^{-1}\in R\) such that \(u^{-1}u = 1\).
+        Hence, we have for any \(r\in R\), 
+        \[
+          r = r(1) = r(u^{-1}u) = (ru^{-1})(u)\in I.
+        \]
+        Therefore, we have \(R\subset I\). Since \(I\subset R\), we have \(R = I\). \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'prime'>
+      <p>
+        \(\textbf{Theorem. }\) Suppose that \(p\) is in a ring \(R\). Then \(p\) is prime if and only if \((p)\) is a prime ideal. 
+      </p>
+      <p>
+        \(\textbf{Proof. }\) We firstly show that if \(p\) is prime then \((p)\) is a prime ideal. Suppose that \(p\) is prime. 
+        Then we have \(p\neq 0\) and \(p\) is not a unit. If \(p\mid ab\) where \(a, b\in R\), then we have \(ab = pr\) for some \(r\in R\).
+        In other words, \(ab\in (p)\). Since \(p\) is prime, we have \(p\mid a\), which implies that \(a = pu\) for some \(u\in R\) (i.e. \(a\in (p)\)), 
+        or \(p\mid b\), which implies that \(b = pv\) for some \(v\in R\) (i.e. \(b\in (p)\)). Therefore, we have \((p)\) is a prime ideal.
+        For the other direction, we suppose that \((p)\) is a prime ideal. If \(ab\in (p)\) for some \(a, b\in R\), then we have \(ab = pr\) for some \(r\in R\).
+        Since \((p)\) is a prime ideal, we have \(a\in (p)\) or \(b\in (p)\). Thus, we have \(p\mid a\) or \(p\mid b\). Therefore, \(p\) is prime. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+    
+    <section id = 'homomorphism'>
+      <p>
+        \(\textbf{Corollary. }\) If \(R\) is a field then any nonzero ring homomorphism \(\varphi: R\to S\) is injective.
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Given \(R\) is a field, we can know that the only ideals of \(R\) are \(\{0\}\) and \(R\).
+        We know that \(\ker(\varphi)\) is an ideal of \(R\). Thus, we only have two options, \(\ker(\varphi) = \{0\}\) or \(\ker(\varphi) = R\). 
+        Suppose that \(a\in \ker(\varphi)\) where \(a\neq 0\). Since \(R\) is a field, we have \(a^{-1}\in R\). Then we have 
+        \[
+          0 = \varphi(a)\cdot \varphi(a^{-1}) = \varphi(aa^{-1}) = \varphi(1) = 1,
+        \]
+        which is a contradiction. Thus, we have \(\ker(\varphi) = \{0\}\). Therefore, \(\varphi\) is injective. \(\blacksquare\)
+      </p>
+    </section>
+    
+    <br>
+
+    <section id = 'integral_domain'>
+    <h2>Integral Domain</h2>
+    <p>
+      \(\textbf{Definition. }\) An integral domain is a commutative ring \(R\) with identity \(1\neq 0\) such that
+      \[
+        ab = 0 \implies a = 0 \text{ or } b = 0.
+      \]
+      (i.e. there is no zero divisors in \(R\)).
+    </p>
+      <p>
+      <ul>
+        <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is an integral domain.</li>
+        <li>\(\textbf{Example 2. }\) \(\mathbb{Z}[i]\) (Gaussian Integer) is an integral domain.</li>
+        <p>
+          \(\textbf{Proof (2).}\) The major part is to show that there is no zero divisor in \(\mathbb{Z}[i]\).
+          Suppose that there exists zero divisors in \(\mathbb{Z}[i]\).
+          Suppose \(a + bi, c + di\in \mathbb{Z}[i]\) such that \((a + bi)(c + di) = 0\), where 
+          \(a\) or \(b\) is not zero and \(c\) or \(d\) is not zero. Then we have
+          \[
+            \begin{align} 
+            (a + bi)(c + di) &= 0\\
+            ac + adi + bci + bdi^2 &= 0\\
+            ac - bd + (ad + bc)i &= 0\\
+            ac - bd &= 0\\
+            ad + bc &= 0\\
+            ac &= bd\\
+            ad &= -bc\\
+            \end{align}
+          \]
+          Then we have 
+          \[
+          \begin{align}
+            acd & = bd^2\\
+            acd & = -bc^2\\
+            bd^2 &= -bc^2\\
+            d^2 &= -c^2\\
+            d^2 + c^2 &= 0\\
+          \end{align}
+          \]
+          Since \(d, c\in \mathbb{Z}\), we have \(d = c = 0\). However, we assume that \(c\) or \(d\) is not zero, which is a contradiction.
+        </p>
+        <li>\(\textbf{Example 3. }\) Quadratic Integer Ring \(\mathbb{Z}(\sqrt{D})\) is an integral domain</li>
+        <li>\(\textbf{Example 4. }\) All fields are integral domains.</li>
+        <li>\(\textbf{Claim 1. }\)\(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
+          <p>
+            \(\textbf{Proof. }\) suppose that \(2 = (a + b\sqrt{-5})(c + d\sqrt{-5})\) for some \(a, b, c, d\in \mathbb{Z}\).
+            Then we have
+            \[
+            \begin{align}
+              2 &= (a + b\sqrt{-5})(c + d\sqrt{-5})\\
+              2 &= ac - 5bd + (ad + bc)\sqrt{-5}\\
+            \end{align}
+            \]
+            We can see that \(ad + bc = 0\). Then we have 
+            \[
+            \begin{align}
+            2 &= ac - 5bd\\
+            2 &= ac - 5bd - (ad + bc)\sqrt{-5}\\
+            2 &= (a - b\sqrt{-5})(c + d\sqrt{-5})\\
+            \end{align}
+            \]
+            In that case, we have 
+            \[
+            \begin{align}
+            4 &= 2\cdot 2\\
+            4 &= (a + b\sqrt{-5})(c + d\sqrt{-5})(a - b\sqrt{-5})(c + d\sqrt{-5})\\
+            4 &= (a^2 + 5b^2)(c^2 + 5d^2)\\
+            \end{align}
+            \]
+            Thus, we can see that if \(b\neq 0\), then we have \(a^2 + 5b^2 \geq 5\). 
+            Similarly, if \(d\neq 0\), then we have \(c^2 + 5d^2 \geq 5\).
+            Hence, we can see that \(b = d = 0\). Then we have \(2 = ac\).
+            Since \(2\) is a prime number, we have \(a = 1\) and \(c = 2\).
+            Therefore, we have \(2 = (2 + 0\sqrt{-5})(1 + 0\sqrt{-5})\), where one of them is a unit.
+            Then, we have \(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\). \( \blacksquare\) 
+          </p>
+          <li>\(\textbf{Claim 2.}\) \(3\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
+          <p>
+            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example. 
+            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\). 
+            Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
+            Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
+          <li>\(\textbf{Claim 2.}\) \(2\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+          <p>
+            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example. 
+            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\). 
+            Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
+            Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
+          <li>\(\textbf{Claim 3.}\) \(3\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+          <p>
+            \(\textbf{Proof. }\) To show that \(3\) is not a prime, we come up with an example. 
+            Firstly, we can see that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\). 
+            Then we have \(3\mid 9\). However, we can see that \(3\nmid (2 + \sqrt{-5})\) and \(3\nmid (2 - \sqrt{-5})\).
+            Therefore, we can see that \(3\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
+          <li>\(\textbf{Claim 3.}\) \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+          <p>
+            \(\textbf{Proof. }\)We prove it with contradiction. Suppose that \(2+\sqrt{-5}\) is a prime. 
+            We know that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\). 
+            Then we have \(2+\sqrt{-5}\mid 9\), which implies that \(2 + \sqrt{-5}\mid 3\).
+            We know that \(3\) is irreducible in \(\mathbb{Z}(-\sqrt{5})\). 
+            Then \(2 + \sqrt{-5}\) is a unit, which is not true, or \(2 + \sqrt{-5}\) multiplied by a unit will be \(3\).
+            There are only two units in \(\mathbb{Z}(-\sqrt{5})\), which are \(\pm 1\).
+            However, \((2 + \sqrt{-5})\cdot 1 \neq 3\) and \(2 + \sqrt{-5}\cdot (-1) \neq 3\). 
+            It is a contradiction. Therefore, we can see that \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+          </p>
+      </ul>
+    </p>
+    </section>
+
+    <br>
+
+    <section id = 'prime_irreducible'>
+      <p>
+        \(\textbf{Theorem. }\) Let \(R\) be an integral domain with identity \(1\). Then every prime element of \(R\) is irreducible.
+      </p>
+      <p>
+        Suppose that \(p\) is a prime and \(p = ab\) for some \(a, b\in R\). Then we have \(p\mid ab\). Since \(p\) is prime, we have \(p\mid a\) or \(p\mid b\).
+        Without loss of generality, we can assume that \(p\mid a\). Then we have \(a = pc\) for some \(c\in R\). Then we have 
+        \[
+          p = a\cdot b = (pc)\cdot b = p(cb). 
+        \]
+        Then we have \(p(1 - cb) = 0\). Since \(R\) is an integral domain, we can know that \(1 - cb = 0\), which implies that \(cb = 1\).
+        Therefore, we have \(b\) is a unit. Thus, we have \(p\) is irreducible. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+    
+    <section id = 'principal_ideal_domain'>
+    <h2>Principal Ideal Domain</h2>
+      <p>
+        <ul>
+          <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is a principal ideal domain.</li>
+          <li>\(\textbf{Example 2. }\) All fields are principal ideal domains.</li>
+          <li>\(\textbf{Example 3. }\) \(\mathbb{Z}[x]\) is a principal ideal domain.</li>
+          <li>\(\textbf{Example 4. }\) Given \(F\) is a field, we have\(\mathbb{F}[x]\) is a principal ideal domain.</li>
+          <li>\(\textbf{Example 5. }\) All Euclidean domains are principal ideal domains (one of the propositions below)</li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(R\) be a principal ideal domain, then every prime ideal in \(R\) is maximal.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Let \(R\) be a principal ideal domain and \((p)\) be a prime ideal in \(R\).
+        Since \(R\) is a principal ideal domain, we find a ideal containing \((p)\) and assume it is \((m)\) (i.e. \((p)\subset (m)\)).
+        Then we can know that \(p\in (m)\), which implies that \(p = mr\) for some \(r\in R\). 
+        Then we can get \(mr\in (p)\). Since \(p\) is a prime ideal, we have \(m\in (p)\) or \(r\in (p)\).
+        If \(m\in (p)\), then we have \((m)\subset (p)\). Since \((p)\subset (m)\), we have \((p) = (m)\).
+        If \(r\in (p)\), then we have \(r = ps\) for some \(s\in R\). Then we have \(p =mr = psm\), which implies that \(1 = sm\).
+        Hence, we have \(m\) is a unit in \(R\). Thus, we have \((m) = R\). 
+        Therefore, we can see that \((p)\) is maximal. \(\blacksquare\)
+      </p>
+      <p>
+        \(\textbf{Proposition. }\)Any euclidean domain is a principal ideal domain.
+      </p>
+      <p>
+        \(\textbf{Note. }\)If \(R\) is a Euclidean Domain, it means that \(R\) has some form of division algorithm.
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Let \(I\) be an ideal in a Euclidean domain \(R\). We will show that there exists an element \(a \in I\) such that \(I = (a)\).
+        Since the well ordering principle, we can choose \(a \in I\) such that \(a \neq 0\) and \(a\) has the smallest norm among all nonzero elements of \(I\). We claim that \(I = (a)\).
+        Let \(x \in I\). We can write \(x = qa + r\), where \(q, r \in R\) and either \(r = 0\) or \(N(r) \lt N(a)\). 
+        Since \(x \in I\) and \(a \in I\), we have \(qa + r \in I\). Therefore, \(r \in I\).
+        If \(r = 0\), then \(x = qa \in (a)\). If \(r \neq 0\), then \(N(r) \lt N(a)\). 
+        This contradicts the choice of \(a\). Therefore, \(r = 0\) and \(x = qa \in (a)\).
+        Hence, every element of \(I\) can be written as a multiple of \(a\), so \(I = (a)\).
+        Therefore, every ideal in a Euclidean domain is generated by a single element, and hence a Euclidean domain is a principal ideal domain. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'polynomial_ring'>
+      <h2>Polynomial</h2>
+      <p>
+        \(\textbf{Theorem. }\) Let \(F\) be a field. The polynomial ring \(F[x]\) is a \(\textit{Euclidean Domain}\).
+        Specifically, if \(a(x)\) and \(b(x)\) are two polynomials in \(F[x]\) with \(b(x)\) nonzero, then there are unique \(q(x)\) and \(r(x)\) in \(F[x]\) such that
+        \[
+          a(x) =q(x)b(x) +r(x)\qquad \text{with}\qquad r(x) = 0 \text{ or } \deg(r(x)) \lt \deg(b(x)).
+        \]
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f \in F[x_1, \ldots, x_n] \) be non-constant. 
+        Then we say that \(F[X_1, \ldots, x_n]\) is a Unique Factorization Domain.
+        Specifically, there are irreducible polynomials \( g_1, \ldots, g_r \in F[x_1, \ldots, x_n] \) such that
+        \[ 
+          f = g_1 \cdots g_r. 
+        \]
+        Furthermore, if there is a second factorization of \( f \) into irreducible polynomials
+        \[ 
+          f = h_1 \cdots h_s, 
+        \]
+        then \( r = s \) and the \( h_i \)'s can be permuted so that each \( h_i \) is a constant multiple of \( g_i \).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f, g \in F[x] \). Assume that \( g \) is nonzero. 
+        Then there are polynomials \( q, r \in F[x] \) such that
+        \[ 
+          f = qg + r, \quad \text{where } r = 0 \text{ or } \deg(r) \lt \deg(g). 
+        \]
+        Furthermore, \( q \) and \( r \) are unique.
+      </p>
+      <p>
+        \(\textbf{Corollary. }\)Let \(F\) be a field. We have \( \alpha \in F \) is a root of a polynomial \( f \in F[x] \) if and only if \( x - \alpha \) is a factor of \( f \) in \( F[x] \)
+      </p>
+      <p>
+        \(\textbf{Definition. }\)To say that a field \( L \) contains \(\textit{all}\) roots of \( f \) means that \( f \) factors as
+        \[ 
+          f = a_0(x - \alpha_1) \cdots (x - \alpha_n), 
+        \]
+        where \( \alpha_1, \ldots, \alpha_n \in L \). When this happens, we say that \( f \) splits completely over \( L \).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) If \( F \) is a field and \( f \in F[x] \) is non-constant, then the following are equivalent:
+        <ul>
+          <li>
+            The polynomial \( f \) is irreducible over \( F \).
+          </li>
+          <li>
+            The ideal \( (f) = \{ fg \mid g \in F[x] \} \) is a maximal ideal.
+          </li>
+          <li>
+            The quotient ring \( F[x] / (f) \) is a field.
+          </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Proposition. }\)Every nonzero ideal of \(F[x]\) can be written uniquely as \((f)\) where
+        \(f\) is monic.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'adjoining_element'>
+      <h2>Adjoining Element</h2>
+      <p>
+        \(\textbf{Definition.}\) The \(\textit{polynomial ring}\) in the variables \( x_1, x_2, \ldots, x_n \) with coefficients in \( R \), denoted \( R[x_1, x_2, \ldots, x_n] \), is defined inductively by
+        \[ 
+          R[x_1, x_2, \ldots, x_n] = R[x_1, x_2, \ldots, x_{n-1}][x_n].
+        \]
+      </p>
+      <p>
+        \(\textbf{Adjoining Elements.}\) We next show how to describe some interesting subrings and subfields of a given extension \( F \subset L \). 
+        Given \( \alpha_1, \ldots, \alpha_n \in L \), we define
+        \[ 
+          F[\alpha_1, \ldots, \alpha_n] = \{ h(\alpha_1, \ldots, \alpha_n) \mid h \in F[x_1, \ldots, x_n] \}. 
+        \]
+        Hence \( F[\alpha_1, \ldots, \alpha_n] \) consists of all polynomial expressions in \( L \) that can be formed using \( \alpha_1, \ldots, \alpha_n \) with coefficients in \( F \). 
+      </p>
+      <p>
+        \(\textbf{Note. }\)Keep in mind that \(F[\alpha_1, \ldots, \alpha_n]\) is a ring, not necessarily a field.
+      </p>
+      <p>
+        For example let Let \(F = \mathbb{Q}\) and \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\) is not a field. 
+        We know that \(1 + \sqrt{2} + \sqrt{3}\in \mathbb{Q}[\sqrt{2}+\sqrt{3}]\). However, we can see that
+        \(\frac{1}{1 + \sqrt{2} + \sqrt{3}}\) is not in \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\).
+      </p> 
+        Let
+        \[ 
+          F(\alpha_1, \ldots, \alpha_n) = \left\{ \frac{\alpha}{\beta} \mid \alpha, \beta \in F[\alpha_1, \ldots, \alpha_n], \beta \neq 0 \right\}. 
+        \]
+        Thus \( F(\alpha_1, \ldots, \alpha_n) \) is the set of all rational expressions in the \( \alpha_i \) with coefficients in \( F \). 
+      </p>
+      <p>
+        \(\textbf{Lemma. }\)\( F(\alpha_1, \ldots, \alpha_n) \) is the smallest subfield of the field \( L \) containing \( F \) and \( \alpha_1, \ldots, \alpha_n \).
+      </p>
+      <p>
+        \(\textbf{Proof. }\) Let \(L\) be a field containing \(F\) and \(\alpha_1, \ldots, \alpha_n\).
+        Firstly, we show that \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \). 
+
+        Thus, to prove the lemma, we must show that if \( K \) is a subfield of \( L \) containing \( F \) and \( \alpha_1, \ldots, \alpha_n \), then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K \). 
+        This is what "smallest" means in the statement of the lemma.
+        Suppose that \( K \subseteq L \) contains \( F \) and \( \alpha_1, \ldots, \alpha_n \). 
+        Since \( K \) is closed under multiplication and addition, it follows that \( p(\alpha_1, \ldots, \alpha_n) \in K \) for any polynomial \( p \in F[x_1, \ldots, x_n] \). 
+        This shows that \( F[\alpha_1, \ldots, \alpha_n] \subseteq K \). Then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K \) follows immediately, since \( K \) is a field.
+        Since \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \) containing \( F \), we get extensions  
+        \[ 
+          F \subseteq F(\alpha_1, \ldots, \alpha_n) \subseteq L. 
+        \]
+        We say that \( F(\alpha_1, \ldots, \alpha_n) \) is obtained from \( F \) by adjoining \( \alpha_1, \ldots, \alpha_n \in L \). 
+      </p>
+  </section>
+    
+    <br>
+
+    <section id = 'splitting_field'>
+      <h2>Splitting Field</h2>
+      <p>
+        \(\textbf{Definition 5.1.1}\) Let \( f \in F[x] \) have degree \( n > 0 \). Then an extension \( F \subset L \) is a splitting field of \( f \) over \( F \) if
+        <ul>
+          <li>
+            \( f = c(x - \alpha_1) \cdots (x - \alpha_n) \), where \( c \in F \) and \( \alpha_i \in L \), and
+          </li>
+          <li>
+            \( L = F(\alpha_1, \ldots, \alpha_n) \).
+          </li>
+        </ul>
+      </p>
+      <p>
+        \textbf{Definition.} Let \( K \) be a field and let \( f(x) \) be a polynomial in \( K[x] \). We say that \( f(x) \) \textit{splits} in \( K \) if there are elements \( \alpha_1, \alpha_2, \ldots, \alpha_n \) of \( K \) such that
+        \[
+        f(x) = \lambda(x - \alpha_1)(x - \alpha_2)\ldots(x - \alpha_n).
+        \]
+        We say that a field extension \( L/K \) is a \textit{splitting field} if \( f(x) \) splits in \( L \) and there is no proper intermediary subfield \( M \) in which \( f(x) \) splits.
+      </p>
+    </section>
+
+    <br>
+
+
+    <section id='minimal_polynomial'>
+      <h2>Minimal Polynomial</h2>
+      <p>
+        \(\textbf{Proposition. }\) Let \(\alpha \in L\) be algebraic over \(F\), and let \(p \in F[x]\) be its minimal polynomial. If \(f \in F[x]\) is a nonconstant monic polynomial, then
+          \[
+            f = p \Leftrightarrow f \text{ is a polynomial of minimal degree satisfying } f(\alpha) = 0 \Leftrightarrow f \text{ is irreducible over } F \text{ and } f(\alpha) = 0.
+          \]
+      </p>
+      <p>
+        Let us briefly talk about how to use sagemath to find the minimal polynomial of an element. Suppose that your \(\alpha = \sqrt{2}\).
+      </p>
+      <div class="code-box-container">
+      <div class="code-box">
+      <!-- <pre><code>
+      <span class = 'keyword'>sage:</span> var('a')
+      <span class = 'keyword'>sage:</span> a = sqrt(<span class = 'number'>2</span>); a
+      <span class = 'outcome'>sqrt(2)</span>
+      <span class = 'keyword'>sage:</span> p = a.minpoly(); p
+      <span class = 'outcome'>x^2 - 2</span>
+      </code></pre> -->
+      <pre><code> 
+      <span class="keyword">sage:</span> <span class="function">var</span>(<span class="string">'a'</span>) 
+      <span class="keyword">sage:</span> a <span class="operator">=</span> <span class="function">sqrt</span><span class="group">(</span><span class="number">2</span><span class="group">)</span>; a 
+      <span class="outcome">sqrt(2)</span> 
+      <span class="keyword">sage:</span> p <span class="operator">=</span> a.minpoly<span class="group">()</span>; p 
+      <span class="outcome">x^2 - 2</span> 
+    </code></pre>
+      </div>
+      </div>
+    </section>
+
+    <br>
+
+    <section id='field_extension'>
+      <h2>Field Extension</h2>
+      <p>
+        \(\textbf{Definition. }\) Suppose that \(F\subset K\) and \([K: F]\lt\infty\). We say that \(\alpha\in K\) is a \(\textit{primitive element}\) for \(F\subset K\) if \(K = F(\alpha)\).
+      </p>
+      <p>
+        \(textbf{Lemma. }\) An extension \(F \subset L\) has degree \([L: F] = 1\) if and only if \(F = L\).
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Let \(F \subset K\) and \([K: F]\lt\infty, |F| = \infty\). 
+        Then there exists a primitive element for \(F\subset K\) if and only if there are only finitely many intermediate fields between \(F\) and \(K\).
+      </p>
+      <p>
+        \(\textbf{Corollary. }\) Suppose that \(\mathbb{Q}\subset F\) and \([K: F]\lt\infty\). 
+        Then there are only finitely many intermediate fields between \(F\) and \(K\).
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Suppose that \([K: F]\lt\infty\). Then every \(\alpha \in K\) is algebraic over \(F\).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Suppose that \(F\subset E\subset K\), and \(E\) is algebraic over \(F\) and \(K\) is algebraic over \(E\). 
+        Then \(K\) is algebraic over \(F\).
+      </p>
+      <p>
+        \(\textbf{Lemma. }\)
+        Assume that \(F \subset L\) is a field extension, and let \(\alpha \in L\) be algebraic over \(F\) with minimal polynomial \(p \in F[x]\). Then there is a unique ring isomorphism
+        \[
+          F[\alpha] \cong F[x]/(p)
+        \]
+        that is the identity on \(F\) and maps \(\alpha\) to the coset \(x + (p)\).
+      </p>
+      <p>
+      \(\textbf{Proposition. }\)
+        Assume that \(F \subset L\) is a field extension, and let \(\alpha \in L\). Then \(\alpha\) is algebraic over \(F\) if and only if \(F[\alpha] = F(\alpha)\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'separable'>
+      <h2>Separable</h2>
+      <p>
+        \(\textbf{Definition. }\)A polynomial \(f\in F [x]\) is separable if it is non-constant and its roots
+        in a splitting field are all simple.
+      </p>
+      <p>
+        \(\textbf{Theorem. }\)A nonzero polynomial in \(K[X]\) is separable if and only if it is relatively
+        prime to its derivative in \(K[X]\).
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We firstly show that if a nonzero polynomial in \(K[X]\) is separable, then it is relatively prime to its derivative in \(K[X]\).
+        Suppose that \(f(x)\in K[X]\) is separable, then we have \(f(x) = (x - \alpha)h(x)\) for some \(\alpha\) in the extension of \(K\). 
+        Note that \((x - \alpha)\) is the distinct factor of \(f\) because of the definition of separable. 
+        In other words, \(h(\alpha)\neq 0\).
+        Then we have 
+        \[
+        \begin{align}
+          f'(x) &= h(x) + (x - \alpha)h'(x). \\
+          f'(\alpha) &= h(\alpha) + (\alpha - \alpha)h'(\alpha) = h(\alpha) \neq 0. \\
+        \end{align} 
+        \]
+        In that case, we can know that \(f\) and \(f'\) do not share the same root, which implies that 
+        they do not have the same factor. Hence, we have \(f\) and \(f'\) are relatively prime.
+        For the other direction, we will prove it with contrapositive. 
+        Suppose that \(f(x)\) is not separable, given the definition of separable, we can know that \(f(x)\) has a repeated roots.
+        Then we have \(f(x) = (x - \alpha)^2h(x)\) for some \(\alpha\) in the extension of \(K\).
+        Hence, we can get 
+        \[
+        \begin{align}
+          f'(x) &= 2(x - \alpha)h(x) + (x - \alpha)^2h'(x)\\
+          f'(\alpha) &= 2(\alpha - \alpha)h(\alpha) + (\alpha - \alpha)^2h'(\alpha) = 0. \\
+        \end{align}
+        \]
+        Therefore, we can know that \(f\) and \(f'\) have some similar factor. Hence, we have \(f\) and \(f'\) are not relatively prime. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'algebraic_closure'>
+      <h2>Algebraic Closure</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(F\) be a field and \(K\) be a subfield of \(F\). An element \(\alpha \in F\) is said to be \(\textbf{algebraic over}\) \(K\) if there exists a non-zero polynomial \(f(x) \in K[x]\) such that \(f(\alpha) = 0\). In other words, \(\alpha\) is a root of a non-zero polynomial with coefficients in \(K\).
+      </p>
+      <p>
+        \(\textbf{Definition. }\)An \(\textbf{algebraic extension}\) \(L\) of a field \(K\) is a field extension such that every element of \(L\) is algebraic over \(K\). In other words, if \(L\) is an algebraic extension of \(K\), then for every \(\alpha \in L\), there exists a non-zero polynomial \(f(x) \in K[x]\) such that \(f(\alpha) = 0\).
+      </p>
+      <p>
+        \(\textbf{Definition. }\)Let \(F\) be a field. The set of all elements in \(F\) that are algebraic over \(K\) is denoted by \(\overline{K}\) and is called the \(\textbf{algebraic closure}\) of \(K\) in \(F\).
+      </p>
+      <p>
+        \(\textbf{Definition. }\)An algebraic closure of a field \(F\) is an algebraic extension \(K\) of \(F\) such that every polynomial in \(F[x]\) splits in \(K\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'galois_group'>
+      <h2>Galois Group</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is the set
+        \[ \{\sigma: L \rightarrow L \mid \sigma \text{ is an automorphism, } \sigma(a) = a \text{ for all } a \in F\}. \]
+        In other words, \( \text{Gal}(L/F) \) consists of all automorphisms of \( L \) that are the identity on \( F \). The basic structure of \( \text{Gal}(L/F) \) is as follows.
+      </p>
+      <p>
+      \(\textbf{Theorem. }\) If \( L \) is the splitting field of a separable polynomial in \( F[x] \), then the Galois group of \( f \) over \( F \) has order \( \left| \text{Gal}(L/F) \right| = [L : F] \).
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is a group under composition of functions.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We need to check the following properties:
+        <ul>
+          <li>
+            \( \text{Gal}(L/F) \) is closed under composition of functions.
+          </li>
+             <ul>
+              <li>
+                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \). 
+                Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
+              </li>
+             </ul> 
+        </ul> 
+        We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'galois_theory'>
+      <h2>Galois Theory</h2>
+      <p>
+        \(\textbf{Proposition. }\) Let \( F \subset L \) be a finite extension and let \( \sigma \in \text{Gal}(L/F) \). Then:
+        <ul>
+          <li>If \(h \in F[x]\) is a non-constant polynomial with \( \alpha \in L \) as a root, then \( \sigma(\alpha) \) is also a root of \( h \) lying in \( L \).</li>
+          <li>If \(L = F(\alpha_1, \ldots, \alpha_n)\), then \( \sigma \) is uniquely determined by its values on \( \alpha_1, \ldots, \alpha_n \).</li> 
+        </ul>
+      </p>
+    </section>
+
+      
+    <section id = "References">
+    <h2>References</h2>
+    <ul>
+      <li>
+        <a href="https://archive.math.ksu.edu/course?course=qe_algebra">Qualifying Exams Kansas State Mathematics Ph.D. Program (Algebra Archive)</a>
+      </li>
+    </ul>
+  </section>
+  </body>
+</html>
