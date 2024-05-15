@@ -184,6 +184,34 @@
       </p>
     </section>
 
+    <section>
+      <p>
+      \textbf{Definition 3.8} (Theta methods) We consider methods of the form
+      \[ y_{n+1} = y_n + h [ \theta f(t_n, y_n) + (1 - \theta) f(t_{n+1}, y_{n+1}) ], \quad n = 0, 1, \ldots, \]
+      where \( \theta \in [0, 1] \) is a parameter:
+      - If \( \theta = 1 \), we recover Euler’s method.
+      - If \( \theta \in (0, 1) \), then the theta method (3.3) is implicit: Each time step requires the solution of \( N \) (in general, nonlinear) algebraic equations for the unknown vector \( y_{n+1} \).
+      - The choices \( \theta = 0 \) and \( \theta = \frac{1}{2} \) are known as
+
+      \textit{Backward Euler}:
+      \[ y_{n+1} = y_n + h f(t_{n+1}, y_{n+1}), \]
+
+      \textit{Trapezoidal rule}:
+      \[ y_{n+1} = y_n + \frac{1}{2} h [ f(t_n, y_n) + f(t_{n+1}, y_{n+1}) ]. \]
+
+      Solution of nonlinear algebraic equations can be done by iteration. For example, for backward Euler, letting \( y_{n+1}^{[0]} = y_n \), we may use
+
+      \textit{Direct iteration}
+      \[ y_{n+1}^{[j+1]} = y_n + h f(t_{n+1}, y_{n+1}^{[j]}); \]
+
+      \textit{Newton–Raphson}:
+      \[ y_{n+1}^{[j+1]} = y_{n+1}^{[j]} - \left[ I - h \frac{\partial f(t_n, y_n)}{\partial y} \right]^{-1} \left[ y_{n+1}^{[j]} - y_n - h f(t_{n+1}, y_{n+1}^{[j]}) \right]; \]
+
+      \textit{Modified Newton–Raphson}:
+      \[ y_{n+1}^{[j+1]} = y_{n+1}^{[j]} - \left[ I - h \frac{\partial f(t_n, y_n)}{\partial y} \right]^{-1} \left[ y_{n+1}^{[j]} - y_n - h f(t_{n+1}, y_{n+1}^{[j]}) \right]. \]
+      </p>
+    </section>
+
     <section id = 'practice'>
       <h2>Qual Problems (January 2022)</h2>
       <p>
