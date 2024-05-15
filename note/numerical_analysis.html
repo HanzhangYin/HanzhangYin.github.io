@@ -272,6 +272,206 @@
       </p>
     </section>
 
+    <section>
+      <p>
+\(\textbf{Problem. }\)Let \( A \in \mathbb{C}^{m \times m} \), and \( A = U\Sigma V^* \) being a singular value decomposition of \( A \), where \( U, V \in \mathbb{C}^{m \times m} \) are unitary and \( \Sigma \) is non-negative diagonal. Define
+\[
+W = \frac{1}{\sqrt{2}}
+\begin{bmatrix}
+U & U \\
+V & -V
+\end{bmatrix}
+\in \mathbb{C}^{2m \times 2m}.
+\]
+<ul>
+  <li>
+  Prove \( W \) is unitary.
+  </li>
+  <li>
+  Let
+  \[
+  B =
+  \begin{bmatrix}
+  0 & A \\
+  A^* & 0
+  \end{bmatrix}
+  \in \mathbb{C}^{2m \times 2m}.
+  \]
+  Prove \( B \) is Hermitian and have the spectral decomposition
+  \[
+  B = W
+  \begin{bmatrix}
+  \Sigma & 0 \\
+  0 & -\Sigma
+  \end{bmatrix}
+  W^*.
+  \]
+  </li>
+  <li>
+  Prove \( \|B\|_2 = \|A\|_2 \).
+  </li>
+</ul>
+</p>
+<p>
+  \(\textbf{Proof(a). }\) Given \(W\), we have with Unitary Matrices \(U, V\), we can get 
+    \[
+        W^* = \frac{1}{\sqrt{2}}
+        \begin{bmatrix}
+            U^* & V^* \\
+            U^* & -V^*
+        \end{bmatrix}
+        \in \mathbb{C}^{2m \times 2m}.
+        \]
+    Then we have
+    \begin{align}
+      W^* W &= \frac{1}{2}  
+        \begin{bmatrix}
+            U^*U + V^*V & U^*U - V^*V \\
+            U^*U - V^*V & U^*U + V^*V
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            I_m + I_m & I_m - I_m \\
+            I_m - I_m & I_m + I_m
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            2I_m & 0_m \\
+            0_m & 2I_m
+        \end{bmatrix}\\
+        &= 
+        \begin{bmatrix}
+            I_m & 0_m \\
+            0_m & I_m
+        \end{bmatrix} \\
+        &= I_{2m}.
+    \end{align}
+    By the similar process, we have 
+    \begin{align}
+        WW^* &= \frac{1}{2}
+        \begin{bmatrix}
+            UU^* + UU^* & UV^* - UV^* \\
+            VU^* - VU^* & VV^* + VV^*
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            I_m + I_m & 0_m \\
+            0_m & I_m + I_m
+        \end{bmatrix}\\
+        &= I_{2m}.
+    \end{align}
+    Therefore, we show that \(W\) is unitary. \[ \tag*{$\square$} \]
+</p>
+<p>
+\(\textbf{Proof(b). }\)Firstly, we have 
+    \[
+      B^* = \begin{bmatrix}
+        0 & A^* \\
+        (A^*)^* & 0
+        \end{bmatrix} = \begin{bmatrix}
+        0 & A^* \\
+        A & 0
+        \end{bmatrix} = B.
+    \]
+    Thus, we have \(B\) is Hermitian. 
+    To show the spectral decomposition, we need to do calculation. 
+    \begin{align}
+        W
+        \begin{bmatrix}
+            \Sigma & 0 \\
+            0 & -\Sigma
+        \end{bmatrix}
+        W^* &= \frac{1}{2}
+        \begin{bmatrix}
+            U & U \\
+            V & -V
+        \end{bmatrix}
+        \begin{bmatrix}
+            \Sigma & 0 \\
+            0 & -\Sigma
+        \end{bmatrix}
+        \begin{bmatrix}
+            U^* & V^* \\
+            U^* & -V^*
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            U\Sigma & -U\Sigma \\
+            V\Sigma & V\Sigma
+        \end{bmatrix}
+        \begin{bmatrix}
+            U^* & V^* \\
+            U^* & -V^*
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            U\Sigma U^* - U\Sigma U^* & U\Sigma V^* + U\Sigma V^* \\
+            V\Sigma U^* + V\Sigma U^* & V\Sigma V^* - V\Sigma V^*
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+            0 & U\Sigma V^*  \\
+            V\Sigma U^*  & 0
+        \end{bmatrix}\\
+    \end{align}
+    Since \(A = U\Sigma V^*\), which is SVD of \(A\), we know all entires of \(\Sigma\) are non-negative. 
+    Thus, we have \(\Sigma = \Sigma^*\). In that case, we have
+    \[
+        W
+        \begin{bmatrix}
+            \Sigma & 0 \\
+            0 & -\Sigma
+        \end{bmatrix}
+        W^* = \begin{bmatrix}
+            0 & U\Sigma V^*  \\
+            V\Sigma U^*  & 0
+        \end{bmatrix}
+        = \begin{bmatrix}
+            0 & U\Sigma V^*  \\
+            V\Sigma^* U^*  & 0
+        \end{bmatrix}
+        = \begin{bmatrix}
+            0 & A  \\
+            A^*  & 0
+        \end{bmatrix} = B.
+    \] \[ \tag*{$\square$} \]
+</p>
+<p>
+    \(\textbf{Proof(c). }\)Since we just show that \(W\) is unitary, and we are given that \(U\) and \(V\) are unitary, we have
+        \begin{align}
+            \|A\|_2 &= \|U\Sigma V^*\|_2 = \|\Sigma\|_2 = \max\sigma_i  \\
+            \|B\|_2 &= \left\|W \begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix} W^*\right\|_2 = \left\|\begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix}\right\|_2.
+        \end{align}
+        Since \(\begin{bmatrix} I_m & 0 \\ 0 & -I_m \end{bmatrix}\) is a unitary matrix, and 
+        \[ \begin{bmatrix} I_m & 0 \\ 0 & -I_m \end{bmatrix}
+            \begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix}
+            = \begin{bmatrix} \Sigma_m & 0 \\ 0 & \Sigma_m \end{bmatrix},
+        \]
+        we have 
+        \[
+            \left\|\begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix}\right\|_2 = \left\|\begin{bmatrix} I_m & 0 \\ 0 & -I_m \end{bmatrix}
+            \begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix}\right\|_2
+            =
+            \left\|\begin{bmatrix} \Sigma_m & 0 \\ 0 & \Sigma_m \end{bmatrix}\right\|_2 = \max\sigma_i.
+        \]
+        Therefore, we have \(\|B\|_2 = \|A\|_2\). \[ \tag*{$\square$} \]
+</p>
+</section>
+
     <section id="References">
       <h2>References</h2>
       <ul>
