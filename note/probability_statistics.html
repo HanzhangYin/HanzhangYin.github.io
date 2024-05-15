@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
+    <title>Some Theorems in Algebra</title>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+    
+      <a href="#References">References</a>
+    </nav>
+    <script src="click.js"></script><!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+    <script src="highlight.js"></script><!--It is a link for highlight.js-->
+    <h1>Probability and Statistics</h1>
+
+    <section>
+      <p>
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts in abstract algebra and it is not fully completed. 
+        Feel free to send me an email at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions for improvement.
+      </p>
+    </section>
+
+
+    <section>
+      <p>
+        \(\textbf{Problem 1. }\) Consider a random sample of size \( n \) from a uniform distribution on \([ \theta, \theta^2 ]\), where \( \theta > 1 \) is a parameter. Find the maximum likelihood estimator of the parameter \( \theta \).
+      </p>
+      <p>
+        \(\textbf{Solution. }\) Given that the random sample is from a uniform distribution on \([ \theta, \theta^2 ]\), the probability density function is
+        \[
+          f(x; \theta) = \begin{cases}
+            \frac{1}{\theta^2 - \theta} & \text{if } \theta \leq x \leq \theta^2, \\
+            0 & \text{otherwise}.
+          \end{cases}
+        \]
+      </p>
+    </section>
+
+      
+    <section id = "References">
+    <h2>References</h2>
+    <ul>
+      <li>
+        <a href="https://archive.math.ksu.edu/course?course=qe_algebra">Qualifying Exams Kansas State Mathematics Ph.D. Program (Algebra Archive)</a>
+      </li>
+    </ul>
+  </section>
+  </body>
+</html>
