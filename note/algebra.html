@@ -1614,6 +1614,18 @@
       For the other direction, we want to show that \(\ker(\phi) \subset \langle x^3 - 2\rangle\). 
       Since \(x^3 - 2\) is irreducible in \(\mathbb{Z}[x]\), and we can know that there is no polynomial with degree less than \(3\) in \(\ker(\phi)\).
       Since \(\mathbb{Z}\) is a Unique Factorization Domain by the Fundamental Theorem of Arithmetic, we can know that \(\mathbb{Z}[x]\) is a Unique Factorization Domain.
+      Let \(f(x)\in \ker(\phi)\). Then we have \(f(x) = (x^3 - 2)g(x) + r(x)\) for some \(g(x), r(x)\in \mathbb{Z}[x]\) such that \(\deg(r(x)) \lt 3\).
+      Hence, we have \(f(\sqrt[3]{2}) = 0 + r(\sqrt[3]{2}) = 0\), which implies that \(r(x) = 0\). Therefore, we have \(f(x) = (x^3 - 2)g(x)\), which implies that \(f(x)\in \langle x^3 - 2\rangle\).
+      Therefore, we have \(\ker(\phi) = \langle x^3 - 2\rangle\). \(\blacksquare\)
+    </p>
+    <p>
+      \(\textbf{Solution 2. }\) We want to find primes \(p, q\in \mathbb{Z}\) such that \(pR\) is a prime ideal and \(qR\) is not a prime ideal.
+      Since \(\mathbb{Z}[\sqrt[3]{2}] = \{a + b\sqrt[3]{2} + c(\sqrt[3]{2})^2 \mid a, b, c\in \mathbb{Z}\}\), we have \(\sqrt[3]{2}, \sqrt[3]{2}^2\in R\).
+      Since \(\sqrt[3]{2}\cdot\sqrt[3]{2}^2 = 2\), and \(2\not\mid \sqrt[3]{2}\) and \(2\not\mid \sqrt[3]{2}^2\), we can know that \(2\) is not prime in \(R\).
+      Since \(pR\) is a prime ideal if and only if \(p\) is a prime in \(R\), we can know that \(2R\) is not a prime ideal in \(R\). 
+      Now, we want to show that \(3\) is still prime in \(R\).
+      Suppose that \(3 = (a + b\sqrt[3]{2} + c\sqrt[3]{2}^2)(d + e\sqrt[3]{2} + f\sqrt[3]{2}^2)\) for some \(a, b, c, d, e, f\in \mathbb{Z}\).
+      Then we have
     </p>
 
   </section>
