@@ -1590,12 +1590,26 @@
   <br>
 
   <section>
-    <p>Consider the ring extension \(\mathbb{Z} \subseteq R\), where \(R := \mathbb{Z}[\sqrt[3]{2}]\) denotes the smallest subring of \(\mathbb{R}\) containing \(\mathbb{Z}\) and the real cube root of 2.
+    <p>
+      \(\textbf{Problem 6. }\)Consider the ring extension \(\mathbb{Z} \subseteq R\), where \(R := \mathbb{Z}[\sqrt[3]{2}]\) denotes the smallest subring of \(\mathbb{R}\) containing \(\mathbb{Z}\) and the real cube root of 2.
     <ul>
       <li>Find, with proof, the kernel of the surjective ring homomorphism \(\phi : \mathbb{Z}[x] \to R\) taking \(f(x)\) in \(\mathbb{Z}[x]\) to \(f(\sqrt[3]{2})\) in \(R\).</li>
       <li>Find primes \(p, q \in \mathbb{Z}\) such that \(pR\) is a prime ideal and \(qR\) is not a prime ideal.</li>
     </ul>
     </p>
+    <p>
+      \(\textbf{Solution 1. }\) We want to find the kernel of the surjective ring homomorphism \(\phi : \mathbb{Z}[x] \to R\).
+      Since \(\ker(\phi)\) is the set of all polynomials \(f(x)\) in \(\mathbb{Z}[x]\) such that \(f(\sqrt[3]{2}) = 0\), we have 
+      \[
+        \ker(\phi) := \{f(x) \in \mathbb{Z}[x] \mid f(\sqrt[3]{2}) = 0\}.
+      \]
+      We know that \(x^3 - 2\) is the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Z}\).
+      Since \(x^3 - 2\) is irreducible in \(\mathbb{Z}[x]\) by using the Eisenstein's criterion with \(p = 2\), we have
+      \[
+        \ker(\phi) = \langle x^3 - 2\rangle.
+      \]
+    </p>
+
   </section>
     
   <section id = "k_state_2022_1">
