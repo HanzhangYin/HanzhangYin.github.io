@@ -928,7 +928,9 @@ A set \(E\) is open if and only if its complement is closed.
 First, suppose \(E^c\) is closed. Choose \(x\in E\). Then \(x\notin E^c\). Since \(E^c\) is closed, which means it contains all its limit points, thus \(x\) is not a limit point of \(E^c\). Hence there exists a neighborhood \(N\) of \(x\) such that \(N\cap E^c\) is empty, that is, \(N\subset E\). Thus \(x\) is an interior point of \(E\), and every \(x\in E\) is an interior point of \(E\), which shows that \(E\) is open.\\
 Next, suppose \(E\) is open. Let \(x\) be a limit point of \(E^c\). Then every neighborhood of \(x\) contains a point of \(E^c\), which means there is no neighborhood \(N\) of \(x\) such that \(N\subset E\), so that \(x\) is not an interior point of \(E\). Since \(E\) is open, this means that \(x\in E^c\). It follows that \(E^c\) is closed for \(E^c\) contains all of its limit points. 
 </p>
-<br>%%%%%%%%%%%%%%
+
+<br>
+
 <p>\(\textbf{Theorem. }\)
 For any collection \(\{G_\alpha\}\) of open sets, \(\bigcup_\alpha G_\alpha\) is open.
 </p>
@@ -937,7 +939,7 @@ Put \(G=\bigcup_\alpha G_\alpha\). If \(x\in G\), then \(x\in G_\alpha\) for som
 </p>
  
 
-%%%%%%%%%%%%%%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 For any collection \(\{F_\alpha\}\) of closed sets, \(\bigcap_\alpha F_\alpha\) is closed. 
 </p>
@@ -973,12 +975,12 @@ Since we know that \[
 and \(F_1^c, F_2^c, \dots, F_n^c\) are all open. Based on the previous theorem, \(\bigcap_{i=1}^n F_i\) is open. Thus, \(\Bigg(\bigcup_{i=1}^n F_i\Bigg)^c\) is open. Therefore, \(\bigcup_{i=1}^n F_i\) is closed.
 </p>
  
-<br>%%%%
+<br>
 <p>\(\textbf{Definition. }\)[Closure]
 If \(X\) is a metric space, if \(E\subset X\), and if \(E'\) denotes the set of all limit points of \(E\) in \(X\), then the closure of \(E\) is the set \(\bar{E} = E\cup E'\).
 </p>
 
-<br>%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\) is closed.
 </p>
@@ -986,7 +988,8 @@ If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\) is closed.
 Since \(\bar{E} = E\cup E'\) where \(E'\) is the set of limit points of \(E\), if \(x\in P\) and \(x\notin \bar{E}\), then \(x\) is not a limit point of \(E\) and \(x\) is not in \(E\). Thus, \(x\in \bar{E}^c\) and there exists a neighborhood \(N\) of \(x\) such that \(N\cap E=\emptyset\). Thus, for any \(x\in \bar{E}^c\), there exists an neighborhood \(N\) such that \(N\subset \bar{E}^c\), which implies that \(\bar{E}^c\) is open. Hence, \(\bar{E}\) is closed.  
 </p>
  
-<br>%%%%%
+<br>
+
 <p>\(\textbf{Theorem. }\)
 If \(X\) is a metric space and \(E\subset X\), then \(\bar{E} =E\) if and only if \(E\) is closed.
 </p>
@@ -994,7 +997,8 @@ If \(X\) is a metric space and \(E\subset X\), then \(\bar{E} =E\) if and only i
 Based on previous theorem, we know that if \(E = \bar{E}\) then \(E\) is closed since \(\bar{E}\) is closed. Conversely, if \(E\) is closed, then \(E\) contains all its limit points (based on the definition of closed sets). Hence, \(E'\subset E\). Since \(\bar{E} = E\cup E'\), \(\bar{E} = E\). 
 </p>
  
-<br>%%%%%
+<br>
+
 <p>\(\textbf{Theorem. }\)
 If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\subset F\) for every closed set \(F\subset X\) such that \(E\subset F\).
 </p>
@@ -1002,7 +1006,8 @@ If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\subset F\) for eve
 Since \(F\) is closed, \(F'\subset F\), which implies that every limit point of \(F\) is a point of \(F\) (based on the definition). Since \(E\subset F\), every limit point of \(E\) is a point of \(F\), which means that \(E'\subset F\). Therefore \(E'\cup E\subset F\), which is \(\bar{E}\subset F\). 
 </p>
  
-<br>%%%%%
+<br>
+
 <p>\(\textbf{Theorem. }\)
 If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\) is the smallest closed subset of \(X\) that contains \(E\). 
 </p>
@@ -1010,7 +1015,8 @@ If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\) is the smallest 
 Since \(\bar{E}=E\cup E'\), \(E\subset \bar{E}\) and \(\bar{E}\) is closed. For any closed set \(F\) containing \(E\), we know that \(\bar{E}\subset F\). Therefore, \(\bar{E}\) is the smallest closed subset of \(X\) that contains \(E\). 
 </p>
  
-<br>%%%%
+<br>
+
 <p>\(\textbf{Theorem. }\)
 Let \(E\) be a nonempty set of real numbers which is bounded above. Let \(y=\sup E\). Then \(y\in \bar{E}\). Hence \(y\in E\) if \(E\) is closed.
 </p>
@@ -1018,7 +1024,8 @@ Let \(E\) be a nonempty set of real numbers which is bounded above. Let \(y=\sup
 If \(y\in E\), then \(y\in\bar{E}\) for \(\bar{E}=E\cup E'\). Assume \(y\notin E\). For every \(h>0\) \(y-h\) will not be an upper bound of \(E\), which means there exists then a point \(x\in E\) such that \(y-h\lt x\lt y\). It shows that any neighborhood of \(y\) contains some points which are not \(y\) in \(E\). Thus \(y\) is a limit point of \(E\). Hence \(y\in \bar{E}\).
 </p>
  
-<br>%%
+<br>
+
 <p>\(\textbf{Definition. }\)[Open relative]
 Suppose \(E\subset Y\subset X\), where \(X\) is a metric space. \(E\) is open relative to \(Y\) if to each \(p\in E\) there is associated an \(r>0\) such that \(q\in E\) whenever \(d(p, q) \lt  r\) and \(q\in Y\).
 </p>
@@ -1039,21 +1046,27 @@ Then \(G\) is an open subset of \(X\), since every neighborhood is an open set a
 Secondly, suppose that \(G\) is open in \(X\) and \(E  = G\cap Y\), every \(p\in E\) has a neighborhood \(V_p\subset  G\). Then \(V_p\cap Y\subset E\), so that \(E\) is open relative to \(Y\). 
 </p>
 </section>
+
 <br>
-<section><h3>Compact set</h3>
+
+<section>
+  <h3>Compact set</h3>
 <p>\(\textbf{Definition. }\)[Open cover]
 By an open  cover  of a  set \(E\) in a metric space \(X\) we mean a collection \({G_\alpha}\) of open subsets of \(X\) such that \(E\subset \bigcup_\alpha G_a\). 
 </p>
 <p>\(\textbf{Definition. }\)[Compact set]
 A subset \(K\) of a metric space \(X\) is said to be compact if every open cover of \(K\) contains a finite subcover. i.e, if \(\{G_\alpha \}\) is an open cover of \(K\), then there are finitely many indices \(\alpha_1, \dots, \alpha_n\) such that \(K\subset G_{a_1}\cup\dots\cup G_{a_n}\).
 </p>
-<section>\(\textbf{Remark. }\)
+<p>\(\textbf{Remark. }\)
 Every finite set is compact. 
+</p>
 
 <p>\(\textbf{Definition. }\)[Compact relative]
 A subset \(K\) of a metric space \(X\) is said to be compact relative to \(K\) if every open cover of \(K\) contains a finite subcover. i.e, if \(\{G_\alpha \}\) is an open cover of \(K\), then there are finitely many indices \(\alpha_1, \dots, \alpha_n\) such that \(K\subset G_{a_1}\cup\dots\cup G_{a_n}\).
 </p>
+
 <br>
+
 <p>\(\textbf{Theorem. }\)
 Suppose \(K\subset Y\subset X\). Then \(K\) is compact relative to \(X\) if and only if \(K\) is compact relative to \(Y\).
 </p>
@@ -1095,7 +1108,7 @@ If \(V=V_{q_1}\cap\dots\cap V_{q_n}\), then \(V\) is a neighborhood  of \(p\) wh
 theorem follows.
 </p>
  
-<br>%
+<br>
 <p>\(\textbf{Theorem. }\)
 Closed subsets of compact sets are compact.
 </p>
@@ -1109,7 +1122,9 @@ Suppose that \(F\subset K\subset X\). \(K\) is compact and \(F\) is closed relat
 <p>\(\textbf{Proof. }\)
 Since \(K\) is compact, \(K\) is closed. Since for any collection \(\{F_\alpha\}\) of closed sets, \(\bigcap_\alpha F_\alpha\) is closed. Hence, \(F\cap K\) is closed. Since \(F\cap K\subset K\), and closed subsets of compact sets are compact, \(F\cap K\) is compact.  
 </p>
+
 <br>
+
 <p>\(\textbf{Theorem. }\)
 If \(\{K_\alpha\}\) is a collection of compact subsets of a metric space \(X\) such that the intersection of every finite subcollection of \(\{K_\alpha\}\) is nonempty, then \(\cap_1^\infty K_\alpha\) is nonempty.
 </p>
@@ -1122,6 +1137,7 @@ Therefore, it shows that \(K_1\cap \bigcap_{i=1}^n K_{\alpha_i}=\emptyset\), whi
 </p>
  
 <br>
+
 <p>\(\textbf{Corollary. }\)
 If \(\{K_n\}\) is a sequence of nonempty compact sets such that \(K_n\supset k_{n+1}\). \((n = 1, 2, 3\dots )\), then \(\cap_1^\infty K_n\)  is not empty.
 </p>
@@ -1146,12 +1162,16 @@ so that \(a_n\leq  b_m\) for each \(m\), which implies that \(b_m\) is a upper b
 </p>
  
 <br>
+
+
 <p>
   \(\textbf{Definition. }\)[\(k\)-cell]
 If \(a_i\lt  b_i\); for \(i =1, \dots, k\) the set of all points \(x =  (x_1, \dots, x_k)\) in \(R^k\) whose coordinates satisfy the  inequalities  \(a_i\leq x_i\leq b_i\); \((1\leq i\leq k)\) is called a \(k\)-cell.
 </p>
 
 <br>
+
+
 <p>\(\textbf{Theorem. }\)
 Let \(k\) be a positive integer. If \(\{I_n\}\) is a sequence of \(k\)-cells such that \(I_n\supset I_{n+1}\) \((n = 1, 2, 3, \dots)\), then \(\bigcap_1^\infty I_n\) is not empty. 
 </p>
@@ -1190,19 +1210,19 @@ At least one of these sets \(Q_i\), call it \(I_1\), cannot be covered  by any f
 We obtain a sequence \({I_n}\)  with  the following 
 properties: 
 \item (a) \(I\supset I_1\supset I_2\supset I_3\supset\dots \).
-\item (b) \(I_n\) is not covered by any finite subcollection of \(\{G_a\}\); 
+\item (b) \(I_n\) is not covered by any finite sub-collection of \(\{G_a\}\); 
 \item (c) If \(x\in I_n\) and \(y\in I_n\), then \(|x-y|\leq \frac{1}{2^n}\delta\).\\ 
 By  (a)  and Theorem 2.39,  there is  a  point x*  which lies  in  every  In. 
 For  some  tx,  x*  e  Ga. Since Ga is open, there  exists r  >  0 such that 
 I y - x* I \lt  r  implies  that ye Ga. If n  is  so  large  that 2-nb  \lt  r  (there  is 
 such  an  n, for  otherwise  2n b/r  for  all positive  integers  n, which  is 
-absurd since  R  is  archimedean),  then ( c)  implies  that In  c Ga,  which  con-
-tradicts (b).
+absurd since  R  is  archimedean),  then ( c)  implies  that In  c Ga,  which  contradicts (b).
 </p>
  
 
 
 <br>
+
 <p>\(\textbf{Theorem. }\)
 If a set \(E\) in \(R^k\) has one of the following three properties,  then it has the other two: 
 \item (a) \(E\) is closed and bounded. 
@@ -1238,7 +1258,10 @@ every point of \(P\) is a limit point of \(P\), there is a neighborhood \(V_{n+1
 By  (iii), \(V_{n+i}\) satisfies our induction hypothesis, and the construction can proceed. Put \(K_n  =  \overline{V_n}\cap  P\). Since \(\overline{V_n}\) is closed and bounded, \(\overline{V_n}\) is  compact. Since \(x_n\notin K_{n+1}\), no point of \(p\) lies in \(\bigcap_1^\infty K_n\). Since \(K_n\subset P\), this implies that \(\bigcap_1^\infty K_n\) is empty. We know from the previous corollary: If \(\{K_n\}\) is a sequence of nonempty compact sets such that \(K_n \supset K_{n+ 1}\) \((n  = 1,  2,  3 , \dots )\),  then \(\bigcap_1^\infty K_n\) is not empty. Since \(K_n\) is nonempty and \(K_n\supset K_{n+1}\), \(\bigcap_1^\infty K_n\) is not empty either. Therefore, contradiction exists. 
 </p>
 </section>
+
 <br>
+
+
 <section><h3>Connected Set</h3>
 <p>\(\textbf{Definition. }\)[Separation]
 Two subsets \(A\) and \(B\) of a metric space \(X\) are said to be separated if both \(A\cap \overline{B}\) and \(\overline{A}\cap B\) are empty,  i.e., if no point of \(A\) lies in the closure of \(B\) and no point of \(B\) lies in the closure of \(A\).
