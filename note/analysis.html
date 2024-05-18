@@ -604,11 +604,12 @@ The terms \(x_1, x_2, x_3, \dots\) of a sequence need not be distinct.
 
 <p>\(\textbf{Theorem. }\)
 Every infinite subset of a countable set \(A\) is countable.
+</p>
 <p>\(\textbf{Proof. }\)
 Suppose \(E\subset A\), and \(E\) is infinite. Arrange the elements \(x\) of \(A\) in a sequence \(\{x_n\}\) of distinct elements. Construct a sequence \(\{n_k\}\) as follows:
 Let \(n_1\) be the smallest positive integer such that \(x_{n_1}\in E\). Having chosen \(n_1, \dots , n_{k-1}\) \((k =2, 3, 4, ...)\), let \(n_k\) be the smallest integer greater than \(n_{k-1}\) such that \(x_{n_k}\in E\).
 Putting \(f(k) = x_{n_k}\) \((k = 1, 2, 3, ...)\), we obtain a 1-1 correspondence between \(E\) and \(J\).
-
+</p>
  
 
 \begin{note}
@@ -683,8 +684,8 @@ or
 x_{11},\; x_{12},\;\dots;\; x_{21},\; x_{22},\dots
 \]
 \item If any two of the sets \(E_n\) have elements in common, these will appear more than once in the new sequence. Hence there is a subset \(T\) of the set of all positive integers such that \(S\sim T\), which shows that \(S\) is at most countable(finite or countable). Since \(E_1\subset S\), and \(E_1\) is infinite, \(S\) is infinite, and thus \(T\) is infinite. Hence, \(T\) is countable for every infinite subset of a countable set is countable. Therefore, \(S\) is countable. 
-\item \centering{\includegraphics[scale=0.7]{analysis_1.png}}
-
+<!-- \item \centering{\includegraphics[scale=0.7]{analysis_1.png}} -->
+</p>
 
  
 <br>
@@ -693,19 +694,21 @@ x_{11},\; x_{12},\;\dots;\; x_{21},\; x_{22},\dots
 <p>\(\textbf{Theorem. }\)
 \label{tuple-countable}
 Let \(A\) be a countable set, and let \(B_n\) be the set of all n-tuples \((a_1,\dots, a_n)\), where \(a_k\in A\) \((k = 1, ... , n)\), and the elements \(a_1,\dots, a_n\) need not be distinct. Then \(B_n\) is countable.
+</p>
 <p>\(\textbf{Proof. }\)
 I will prove it with mathematical induction. Since \(A\) is countable, \(B_1\) is countable for \(B_1 = A\). Suppose \(B_{n-1}\) is countable \((n = 2, 3, 4, \dots)\). Let the element of \(B_n\) to be
 \[
 (b,a)
 \]
 where \(b\in B_n\) and \(a\in A\). Fix \(b\), then \(\{(b, a)\;|\;a\in A\}\) is equivalent to \(A\), which means it is countable. \(B_n\) is the union of a countable set of countable sets, which is countable. 
-
+</p>
  
 <p>\(\textbf{Theorem. }\)
 The set of all rational numbers is countable.
-<se>\(\textbf{Proof. }\)
+</p>
+<p>\(\textbf{Proof. }\)
 Based on \ref{tuple-countable} with n =2, noting that every rational \(r\) is of the form \(b/a\), where \(a\) and \(b\) are integers. The set of pairs \((a, b)\), and therefore the set of fractions \(b/a\), is countable.
-
+</p>
  
 <p>\(\textbf{Theorem. }\)
 Let \(A\) be the set of all sequences whose elements are the digits \(0\) and \(1\). This set \(A\) is uncountable.\\
