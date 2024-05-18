@@ -4,14 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script><!--It is a link for MathJax-->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
     <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
-    <title>Title</title>
+    <title>Analysis</title>
   </head>
   <body>
     <div class="top-bar"></div>
@@ -20,122 +18,1481 @@
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
     </label>
     <nav class="navbar">
-      <a href="#Field">Field</a>
-      <a href="#prob1">Problem 1</a>
+ 
       <a href="#References">References</a>
     </nav>
-    <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+    <script src="click.js"></script><!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
     <script src="highlight.js"></script><!--It is a link for highlight.js-->
-    <h1>Title</h1>
+    <h1>Some Theorems in Algebra</h1>
 
-    <section id = "Field">
-    <h2>Field</h2>
-    <p>
-      \(\textbf{Definition: }\)Any set that satisfies all following axioms is called a field.
-      <ul>
-        <li>
-          \(\textbf{Commutativity of Addition. }\)For all real numbers \(a\) and \(b\),
-          \[
-          a+b=b+a.
-          \]
-        </li>
-        <li>
-          \(\textbf{Associativity of Addition. }\)For all real numbers \(a\), \(b\), and \(c\),
-          \[
-          (a+b)+c=a+(b+c).
-          \]
-        </li>
-        <li>
-          \(\textbf{Additive Identity. }\)There exists a real number \(0\) such that for all real numbers \(a\),
-          \[
-          a+0=0+a=a.
-          \]
-        </li>
-        <li>
-          \(\textbf{Additive Inverse. }\)For every real number $a$, there exists a real number \(-a\) such that
-          \[
-          a+(-a)=(-a)+a=0.
-          \]
-        </li>
-        <li>
-          \(\textbf{Commutativity of Multiplication. }\)For all real numbers \(a\) and \(b\),
-          \[
-          a\cdot b=b\cdot a.
-          \]
-        </li>
-        <li>
-          \(\textbf{Associativity of Multiplication. }\)For all real numbers \(a\), \(b\), and \(c\),
-          \[
-          (a\cdot b)\cdot c=a\cdot (b\cdot c).
-          \]
-        </li>
-        <li>
-          \(\textbf{Multiplicative Identity. }\)There exists a real number \(1\) such that for all real numbers \(a\),
-          \[
-          a\cdot 1=1\cdot a=a.
-          \]
-        </li>
-        <li>
-          \(\textbf{Multiplicative Inverse. }\)For every real number $a\neq 0$, there exists a real number \(a^{-1}\) such that
-          \[
-          a\cdot a^{-1}=a^{-1}\cdot a=1.
-          \]
-        </li>
-        <li>
-          \(\textbf{Distributivity. }\)For all real numbers \(a\), \(b\), and \(c\),
-          \[
-          a\cdot (b+c)=a\cdot b+a\cdot c.
-          \]
-        </li>
-        <li>
-          \(\textbf{Nontriviality Assumption. }\)
-          \[
-          1\neq 0.
-          \]
-        </li>
-      </ul>
-    </p>
+    <section>
+      <p>
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts in abstract algebra and it is not fully completed. 
+        Feel free to send me an email at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions for improvement.
+      </p>
     </section>
 
-    <br>
+     <section><h2>Field</h2>
+Any set that satisfies all following axioms is called a field.
+<p>\(\textbf{Definition. }\)[Commutativity of Addition]
+For all real numbers \(a\) and \(b\),
+\[
+a+b=b+a.
+\]
+</p>
 
-    <section id = "prob1">
-    <h2>Problem 1</h2>
-    <p>
-      \(\textbf{Problem: }\)For \(a\neq 0\) and $b\neq 0$, show that \((ab)^{-1}=a^{-1}b^{-1}\).
-    </p>
-    <p>
-      \(\textbf{Proof. }\)Assume that \(a, b\neq 0\) and are in \(\mathbb{R}\), 
-      \[
-      (ab)(ab)^{-1} = 1,
-      \]
-      \[
-      a a^{-1}bb^{-1} = 1.
-      \]
-      For commutativity of multiplication, 
-      \[
-      a b a^{-1}b^{-1} = 1.
-      \]
-      Thus, 
-      \[
-      ab(ab)^{-1} = a b a^{-1}b^{-1}.
-      \]
-      Therefore, 
-      \[
-      (ab)^{-1} = a^{-1}b^{-1}.
-      \]
-      \[ \tag*{$\square$} \]
-    </p>
+<p>\(\textbf{Definition. }\)[Associativity of Addition]
+For all real numbers \(a\), \(b\), and \(c\),
+\[
+(a+b)+c=a+(b+c).
+\]
+</p>
 
+<p>\(\textbf{Definition. }\)[The Additive Identity]
+There is a real number, denoted by \(0\), such that
+\[
+0+a=a+0=a,
+\]
+for all real numbers \(a\).
+</p>
+
+<p>\(\textbf{Definition. }\)[The Additive Inverse]:
+For each real number \(a\), there is a real number \(b\) such that 
+\[
+a +b =0.
+\]
+</p>
+
+<p>\(\textbf{Definition. }\)[Commutativity of Multiplication]
+For all real numbers \(a\) and \(b\), 
+\[
+ab=ba.
+\]
+</p>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Definition. }\)[Associativity of Multiplication]
+For all real numbers \(a\), \(b\), and \(c\), 
+\[
+(ab)c=a(bc).
+\]
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Definition. }\)[The Multiplicative Identity]
+There is a real number,denoted by \(1\), such that 
+\[
+1a=a1=a,
+\]
+for all real numbers \(a\).
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Definition. }\)[The Multiplicative Inverse]
+For each real number \(a\neq 0\), there is a real number \(b\) such that 
+\[
+ab=1.
+\]
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Definition. }\)[The Distributive Property]
+For all real numbers \(a\), \(b\), and \(c\),
+\[
+a(b+c)=ab+ac.
+\]
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Definition. }\)[The Nontriviality Assumption]
+\[
+1\neq 0
+\]
+</p>
+
+<p>\(\textbf{Exercise. }\)
+For \(a\neq 0\) and \(b\neq 0\), show that \((ab)^{-1}=a^{-1}b^{-1}\).
+</p>
+<p>\(\textbf{Proof. }\)
+Assume that \(a, b\neq 0\) and are in \(\mathbb{R}\), 
+\[
+(ab)(ab)^{-1} = 1,
+\]
+\[
+a a^{-1}bb^{-1} = 1.
+\]
+For commutativity of multiplication, 
+\[
+a b a^{-1}b^{-1} = 1.
+\]
+Thus, 
+\[
+ab(ab)^{-1} = a b a^{-1}b^{-1}.
+\]
+Therefore, 
+\[
+(ab)^{-1} = a^{-1}b^{-1}.
+\]
+</p>
+  </section>
+
+
+<p>\(\textbf{Definition. }\)[Bounded above, Upper bound]
+Suppose \(S\) is an ordered set, and \(E\subset S\). If there exists a
+\(\beta\subset S\) such that \(x\leq \beta\) for every \(x\in E\), we say that \(E\) is bounded above, and call \(\beta\) an upper bound of \(E\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Order]
+Let \(S\) be a set. An order on \(S\) is a relation, denoted by \(\lt\), with the following two properties:
+\item (i) If \(x\in S\) and \(y\in S\) then one and only one of the statements 
+\[
+x\lt y,\; x=y,\; y\lt x
+\]
+is true.
+\item (ii) If \(x,y,z\in S\),if \(x\lt y\) and \(y\lt z\), then \(x\lt z\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Order set]
+An ordered set is a set \(S\) in which an order is defined.
+</p>
+
+<section><h3>Bounded</h3>
+<p>\(\textbf{Definition. }\)[Least upper bound/Supremum]
+Suppose \(S\) is an ordered set, \(E\subset S\), and \(E\) is bounded above. Suppose there exists an \(\alpha\in S\) with the following properties:
+\item (i) \(\alpha\) is an upper bound of \(E\).
+\item (ii) If \(\gamma\lt \alpha\) then \(\gamma\) is not an upper bound of \(E\).
+\\ Then \(\alpha\) is called the least upper bound of \(E\) (that there is at most one such \(\alpha\) is clear from (ii)] or the supremum of \(E\), and we write
+\[
+\alpha= \sup E.
+\]
+</p>
+
+<p>\(\textbf{Definition. }\)[Greatest lower bound/Infimum]
+Suppose \(S\) is an ordered set, \(E\subset S\), and \(E\) is bounded below. Suppose there exists an \(\alpha\in S\) with the following properties:
+\item (i) \(\alpha\) is an lower bound of \(E\).
+\item (ii) If \(\alpha\lt \gamma\) then \(\gamma\) is not an lower bound of \(E\).
+\\ Then \(\alpha\) is called the greatest lower bound of \(E\) or the infimum of \(E\), and we write
+\[
+\alpha= \inf E.
+\]
+</p>
+
+<p>\(\textbf{Definition. }\)[Least-upper-bound property]
+An ordered set \(S\) is said to have the least-upper-bound property if the following is true:
+\item If \(E\subset S\), \(E\) is not empty, and \(E\) is bounded above, then \(\sup E\) exists in \(S\).
+</p>
+
+<p>
+  \(\textbf{Theorem. }\)
+Suppose \(S\) is an ordered set with the least-upper-bound property, \(B\subset S\), \(B\) is not empty, and \(B\) is bounded below. Let \(L\) be the set of all lower bounds of \(B\). Then
+\[
+\alpha = \sup L 
+\]
+exists in \(S\) and \(\alpha = \inf B\).
+In particular, \(\inf B\) exists in \(S\).
+</p>
+<p>\(\textbf{Proof. }\)
+Since \(B\) is bounded below and \(L\) is the set of all lower bounds of \(B\), \(L\neq \emptyset\). Since \(L\) consists of exactly those \(y\in S\) which satisfy the inequality \(y\leq x\) for every \(x\in B\), we see that every \(x\in B\) is an upper bound of \(L\). Thus \(L\) is bounded above. Our hypothesis about \(S\) implies therefore that \(L\) has a supremum in \(S\);
+call it \(\alpha=\sup L\).
+If \(\gamma \lt  \alpha\) then \(\gamma\) is not an upper bound of \(L\) since \(\alpha\) is the least upper bound. Hence \(\gamma\notin B\). If \(x\lt \alpha\) for some \(x\in B\) and we know that \(x\) is the upper bound of \(L\), then the contradiction exists for \(\alpha\) is the least upper bound of \(L\). Hence,  \(\alpha\leq x\) for every \(x\in B\). Thus \(\alpha\in L\) for \(\alpha\) is a lower bound of \(B\). 
+If \(\alpha \lt  \beta\) then \(\beta\notin L\), since \(\alpha\) is an upper bound of \(L\). We have shown that \(\alpha\in L\) but \(\beta\notin L\) if \(\beta>\alpha\). In other words, \(\alpha\)
+is a lower bound of \(B\), but \(\beta\) is not if \(\beta>\alpha\). It shows that \(\alpha=\inf B\).
+</p>
+ 
+
+<p>
+\(\textbf{Definition. }\)[Ordered Field]
+An ordered field is a field \(F\) which is also an ordered set, such that 
+\item i \(x+y\lt x+z\) if \(x, y, z\in F\) and \(y\lt z\).
+\item ii \(xy>0\) if \(x, y\in F\), \(x>0\), \(y>0\). 
+</p>
+
+
+<p>\(\textbf{Theorem. }\)[Archimedean property of \(\mathbb{R}\)]
+\label{Archimedean property}
+If \(x\in \mathbb{R}\), \(y\in \mathbb{R}\), and \(x>0\), then there is a positive integer \(n\) such that 
+\[
+nx > y.
+\]
+</p>
+<p>\(\textbf{Proof. }\)
+I will prove it with mathematical contradiction. Assume there is no \(n\in\mathbb{Z}^+\) such that 
+\[
+nx>y. 
+\]
+In other words, for all \(n\in\mathbb{Z}^+\), 
+\[
+nx\leq y. 
+\]
+Let \(A\) be a set of \(nx\). In that case, \(A\) is bounded above and \(y\) is an upper bound of \(A\). Then \(A\) has an least upper bound and we assume that \(\alpha = \sup A\), and we know that \(nx\leq \alpha\leq y\). Since \(x>0\), 
+\[
+\alpha - x \leq \alpha.
+\]
+Then we know that 
+\[
+\alpha - x \leq mx, 
+\]
+for some \(m\in\mathbb{Z}^+\). 
+\[
+\alpha \leq mx + x, 
+\]
+\[
+\alpha \leq (m + 1)x.
+\]
+We know that \(m+1\) is a positive integer. Therefore, contradiction exists. 
+</p>
+ 
+
+<p>\(\textbf{Theorem. }\)
+Every nonempty set of natural numbers has a smallest member.
+</p>
+
+<p>\(\textbf{Theorem. }\)[\(\mathbb{Q}\) is dense in \(\mathbb{R}\)]
+If \(x\in \mathbb{R}\), \(y\in \mathbb{R}\),and \(x\lt y\),then there exists a \(p\in\mathbb{Q}\) such that \(x\lt p\lt y\).
+</p>
+<p>\(\textbf{Proof. }\)
+Let \(a\) and \(b\) be real numbers with \(a\lt b\). First suppose that \(a>0\).By the \ref{Archimedean property}, there is a natural number \(q\) such that 
+\[
+q(b-a)>1,
+\]
+\[
+b-a>\frac{1}{q}.
+\]
+Again using the \ref{Archimedean property}, the set of natural numbers \(S\) where
+\[
+S=\{n\in \mathbb{N}\; |\; n/q>b\},
+\] 
+is nonempty. 
+According to Theorem 1, \(S\) has a smallest member \(p\). Observe that \(\frac{1}{q}\lt b-a\lt b\lt \frac{n}{q}\) for all \(n\in S\). Since \(\frac{1}{q}\lt \frac{n}{q}\) and \(n\) is a positive integer, \(n>1\), which indicates \(p>1\). Then we can know that \(p-1\) is a natural number (seProblem9) and so, by the minimality of the choice of \(p\), \(\frac{p-1}{q}\lt b\). We also have
+\[
+a=b-(b-a)\lt \frac{p}{q}-\frac{1}{q}=\frac{p-1}{q}. 
+\]
+Therefore the rational number \(r=\frac{p-1}{q}\) lies between \(a\) and \(b\). 
+\item If \(a\lt 0\), by the \ref{Archimedean property}, there is a natural number \(n\) for which \(n\cdot 1>-a\). Hence, \(n+a>0\). Since \(b>a\), \(n+b>n+a\). We infer from the first case considered that there is a rational number \(r\) such that \(n+a\lt r\lt n+b\). Therefore there exists a rational number \(r-n\) such that  \(a\lt r-n\lt b\).
+</p>
+ 
+
+<p>\(\textbf{Theorem. }\)
+There exists an ordered field \(R\) which has the least-upper-bound
+property. Moreover, \(R\) contains \(Q\) as a subfield.
+</p> 
+
+<p>\(\textbf{Theorem. }\)
+For every real \(x > 0\) and every integer \(n > 0\) there is one
+and only one positive real \(y\) such that \(y^n = x\), this number is written as \(\sqrt[n]{x}\) or \(x^{1/n}\).
+</p>
+<p>\(\textbf{Proof. }\)
+Let \(E\) be the set consisting of all positive real numbers \(t\) such that \(t^n\lt x\), \(E = \{t>0\;|\;t^n\lt x\}\). If \(t=\frac{x}{1+x}\), then \(0\lt t\lt 1\). Hence \(t^n\lt t\lt x\). Thus \(t\in E\), and we know that \(E\) is not empty.
+If \(t>1+x\), then \(t^n>t>x\), so that \(t\notin E\). Thus \(1+x\) is an upper
+bound of \(E\). Hence \ref{Order field R} implies the existence of
+\[
+y = \sup E.
+\]
+We know that
+\[
+b^n - a^n=(b-a)(b^{n-1} + b^{n-2}a + \dots + a^{n-1}).
+\]
+When \(0\lt a\lt b\),
+\[
+(b-a)(b^{n-1} + b^{n-2}a + \dots + a^{n-1})\lt (b-a)(b^{n-1} + b^{n-1} + \dots + b^{n-1}) = (b-a)\cdot n\cdot b^{n-1}.
+\]
+Hence, 
+\[
+b^n - a^n \lt  (b-a)\cdot n\cdot b^{n-1}.
+\]
+Now I will prove that \(y^n = x\) with mathematical contradiction. Assume that \(y^n\lt x\). Choose \(h\) such that \(0\lt h\lt 1\) and 
+\[
+h\lt \frac{x-y^n}{n(y+1)^{n-1}}.
+\]
+Thus, \(h\cdot n\cdot (y+1)^{n-1}\lt x- y^n\). Put \(a=y\), \(b=y+h\). Then \(0\lt a\lt b\), and 
+\[
+(y+h)^n-y^n\lt (y+h-y)\cdot n\cdot (y+h)^{n-1}=h\cdot n\cdot (y+h)^{n-1}\lt h\cdot n\cdot (y+1)^{n-1}\lt x- y^n,
+\]
+\[
+(y+h)^n-y^n\lt x- y^n,
+\]
+\[
+(y+h)^n\lt x.
+\]
+Thus, \(y+h\in E\). Since \(y+h>y\), and \(y\) is an upper bound of \(E\), contradiction exists. Hence \(y^n\geq x\).\\
+Now assume \(y^n > x\). Put 
+\[
+k = \frac{y^n-x}{ny^{n-1}}.
+\]
+Then, we know that \(k n y^{n-1} = y^n - x\). Since \(n\) is a positive integer and \(x>0\),
+\[
+y^n-x\lt y^n\leq n y^n.
+\]
+Thus, 
+\[
+0\lt k = \frac{y^n-x}{ny^{n-1}}\lt \frac{y^n}{ny^{n-1}}\leq \frac{n y^n}{ny^{n-1}} = y,
+\]
+\[
+0\lt k\lt y.
+\]
+If \(t\geq y-k\), we conclude that
+\[
+y^n- t^n\leq  y^n- {(y- k)}^n.
+\]
+Since we showed that 
+\[
+b^n - a^n \lt  (b-a)\cdot n\cdot b^{n-1},
+\]
+when \(0\lt a\lt b\). Thus, 
+\[
+y^n- t^n\leq  y^n- {(y- k)}^n\lt  (y - (y-k))\cdot n\cdot y^{n-1} = k n y^{k-1} = y^n - x, 
+\]
+\[
+y^n- t^n\lt  y^n - x,
+\]
+\[
+- t^n\lt  - x,
+\]
+\[
+t^n>x. 
+\]
+Hence, \(t\notin E\). 
+For the same reason, 
+\[
+y^n- {(y- k)}^n\lt  y^n - x, 
+\]
+\[
+- {(y- k)}^n\lt  - x, 
+\]
+\[
+{(y- k)}^n > x. 
+\]
+Hence, \(y-k\) is an upper bound of \(E\). However, \(y=\sup E\) and \(y-k\lt y\) for \(k>0\). Contradiction exists and we can conclude that \(y^n\leq x\). Therefore, \(x\leq y^n\geq y^n\) and \(y^n = x\). 
+</p>
+</section>
+ 
+<br>
+
+<section><h3>Complex Number</h3>
+<p>\(\textbf{Definition. }\)[Complex Number]
+A complex number is an ordered pair \((a, b)\) of real numbers. ''Ordered'' means that \((a, b)\) and \((b, a)\) are regarded as distinct if \(a\neq b\). Let \(x =(a, b)\), \(y =(c, d)\) be two complex numbers. We write \(x=y\) if and only if \(a = c\) and \(b = d\).
+\[
+x+y = (a+c, b+d)
+\]
+\[
+xy = (ac-bd, ad+bc)
+\]
+</p>
+
+<p>\(\textbf{Definition. }\)[\(i\)]
+\[
+i = (0,1)
+\]
+</p>
+
+<p>\(\textbf{Theorem. }\)
+\[
+i^2 = -1
+\]
+</p>
+<p>\(\textbf{Proof. }\)
+\[
+i^2 = (0,1)(0,1) = (-1, 0) = -1
+\]
+</p>
+
+ 
+
+<p>\(\textbf{Theorem. }\)
+If \(a\) and \(b\) are real, then \((a, b)=a+bi\). 
+</p>
+<p>\(\textbf{Proof. }\)
+\[
+a + bi = (a, 0) + (b, 0)(0, 1) = (a, 0) + (0, b) = (a, b)
+\]
+</p>
+
+ 
+
+<p>\(\textbf{Theorem. }\)
+If \((a, b)(x, y) = 1\) where \((x,y)\neq (0, 0)\), then \((a, b) = (\frac{x}{x^2+y^2}, \frac{-y}{x^2+y^2})\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Conjugate]
+If \(a\), \(b\) are real and \(z = a + bi\), then the complex number \(\bar z = a - bi\) is called the conjugate of \(z\). The numbers \(a\) and \(b\) are the real part and the imaginary part of \(z\), respectively. We shall occasionally write
+\[
+a= \Re(z)
+\]
+\[
+b =\Im(z).
+\]
+</p>
+
+<p>\(\textbf{Theorem. }\)
+If \(w\) and \(z\)
+\item (a) \(\overline{z+w}=\bar z+\bar w\),
+\item (b) \(\overline{zw} = \bar{z}\cdot \bar{w}\),
+\item (c) \(z + \bar z=2\Re(z)\), \(z -\bar z=2i\Im(z)\),
+\item (d) \(z\bar z\) is real and positive (except when \(z = 0\)).
+</p>
+<p>\(\textbf{Proof. }\)
+Assume that \(z = a + bi = (a, b)\) and \(w = c + di = (c, d)\). In that case, \(\bar z = a - bi = (a, -b)\) and \(\bar w = c - di = (c, -d)\). 
+\item (a) 
+\[
+\overline{z + w} = \overline{(a, b) + (c, d)} = \overline{(a+c, b+d)} = (a+c, -b-d).
+\]
+\[
+\bar z + \bar w = \overline{(a, b)} + \overline{(c, d)} = (a, -b) + (c, -d) = (a+c, -b-d).
+\]
+Hence, \(\overline{z+w}=\bar z+\bar w\). 
+\item (b)
+\[
+\overline{zw} = \overline{(a, b)(c, d)} = \overline{(ac-bd, ad+bc)} = (ac-bd, -ad-bc).
+\]
+\[
+\bar{z}\cdot\bar{w} = \overline{(a, b)}\overline{(c, d)} = (a, -b)(c, -d) = (ac-bd, -ad-bc).
+\]
+Hence, \(\overline{zw} = \bar{z}\cdot \bar{w}\).
+\item (c)
+\[
+z+\bar z = (a, b) + (a, -b) = (2a, 0) = 2\Re(z). 
+\]
+\[
+z-\bar z = (a, b) + (-a, b) = (0, 2b) = 2i\Im(z). 
+\]
+\item (d). When \(z\neq 0\), 
+\[
+z\cdot\bar z = (a, b)(a, -b) = (a^2+b^2, -ab+ab) = (a^2+b^2, 0).
+\]
+Since \(a, b\in\mathbb{R}\) and \(a, b\neq 0\), \(a^2+b^2>0\). 
+</p>
+ 
+
+<p>\(\textbf{Definition. }\)
+If \(z\) is a complex number, its absolute value \(|z|\) is the non-negative square root of \(z\bar z\); that is, \(|z| =(z\bar z)^\frac{1}{2}\). 
+</p>
+
+<p>\(\textbf{Theorem. }\)
+Let \(z\) and \(w\) be complex numbers. Then \\
+(a) \(|z|>0\) unless \(z=0\), \(|0|=0\),\\
+(b) \(|\bar z|=|z|\),\\
+(c) \(|zw|=|z||w|\),\\
+(d) \(|\Re z|\leq |z|\),\\
+(e) \(|z+w|\leq |z|+|w|\).\\
+</p>
+
+</section>
+
+ 
+
+<br>%%%%%%
+<section>
+  <h3>Euclidean Space</h3>
+<p>\(\textbf{Definition. }\)[Coordinates]
+For each positive integer \(k\), let \(R^k\) be the set of all ordered \(k\)-tuples
+\[
+x =(x_1, x_2,\dots, x_k),
+\]
+where \(x_1,\dots , x_k\) are real numbers, called the coordinates of \(x\). The elements of \(R^k\) are called points, or vectors, especially when \(k > 1\). 
+</p>
+
+<p>\(\textbf{Remark. }\)
+We shall denote vectors by boldfaced letters. If \(\textbf{y} = (y_1,\dots , y_k)\) and if \(\alpha\) is a real number, put
+\[
+\textbf{x} + \textbf{y} = (x_1 + y_1,\dots , x_k + y_k), 
+\]
+\[
+\alpha\textbf{x}= (\alpha x_1,\dots , \alpha x_k).
+\]
+so that \(\textbf{x} + \textbf{y}\in Rk\) and \(\alpha\textbf{x}\in R^k\).
+</p>
+
+<br>%%%%
+<p>\(\textbf{Definition. }\)[Inner-product of vectors]
+We define the inner-product of two vectors by
+\[
+\textbf{x}\cdot\textbf{y} = \sum_{i=1}^k x_i\cdot y_i.
+\]
+</p>
+
+
+
+<br>%%%%
+<p>\(\textbf{Definition. }\)[The norm of \(\textbf{x}\)]
+We define the norm of \(\textbf{x}\) by
+\[
+|\textbf{x}| = (\textbf{x}\cdot \textbf{x})^{1/2} = \Bigg(\sum_1^k x_i^2\Bigg).
+\]
+</p>
+
+
+<section>\(\textbf{Exercise. }\)
+Suppose \(z= a+bi\), \(w= u+iv\), and
+\[
+a = {\Bigg (\frac{|w|+u}{2}\Bigg )}^{1/2},\; b = {\Bigg (\frac{|w|-u}{2}\Bigg )}^{1/2}.
+\]
+Prove that \(z^2 = w\) if \(v\geq 0\) and that \((\bar z)^2 = w\) if \(v\leq 0\). Conclude that every complex number (with one exception!) has two complex square roots.
+<p>\(\textbf{Proof. }\)
+\[
+z^2 = (a, b)(a, b) = (a^2-b^2, 2ab).
+\]
+\[
+a^2 - b^2 = \frac{|w|+u}{2} - \frac{|w|-u}{2}= u.
+\]
+\[
+2ab = 2{\Bigg (\frac{(|w|+u)(|w|-u)}{2}\Bigg )}^{1/2} = 2{\Bigg (\frac{|w|^2-u^2}{4}\Bigg )}^{1/2} = 2{\Bigg (\frac{w\bar w-u^2}{4}\Bigg )}^{1/2} = 2{\Bigg (\frac{u^2+v^2-u^2}{4}\Bigg )}^{1/2} = |v|. 
+\]
+Since \(v\geq 0\), 
+\[
+2ab = |v| = v.
+\]
+Hence, 
+\[
+z^2 = (u, v) = w,
+\]
+for \(v\geq 0\). 
+\[
+{\bar z}^2 = (a, -b)(a, -b) = (a^2-b^2, -2ab).
+\]
+\[
+-2ab = -|v|.
+\]
+In this case, \(v\leq 0\). Thus,
+\[
+-2ab = -(-v) = v. 
+\]
+Hence, 
+\[
+{\bar z}^2 = (u, v) = w, 
+\]
+for \(v\leq 0\). 
+Therefore, for \(w = u +iv\), where \(u\neq 0\) or \(v\neq 0\), it has square roots \({\Bigg (\frac{|w|+u}{2}\Bigg )}^{1/2}+{\Bigg (\frac{|w|-u}{2}\Bigg )}^{1/2}i\) and \(-{\Bigg (\frac{|w|+u}{2}\Bigg )}^{1/2}-{\Bigg (\frac{|w|-u}{2}\Bigg )}^{1/2}i\) for \(v\geq 0\). If \(v\leq 0\), then it has square roots \({\Bigg (\frac{|w|+u}{2}\Bigg )}^{1/2}-{\Bigg (\frac{|w|-u}{2}\Bigg )}^{1/2}i\) and \(-{\Bigg (\frac{|w|+u}{2}\Bigg )}^{1/2}+{\Bigg (\frac{|w|-u}{2}\Bigg )}^{1/2}i\). When \(w = 0\), there only exists one square root, which is \(0\). 
+</p>
+
+</section>
+
+ <section>
+  <h2>Finite, Countable, and Uncountable Sets</h2>
+<p>\(\textbf{Definition. }\)
+Let \(A\) and \(B\) be two sets and let \(f\) be a mapping of \(A\) into \(B\).
+If \(E\subset A\), \(f(E)\) is defined to be the set of all elements \(f(x)\), for \(x\in E\). We call \(f(E)\) the image of \(E\) under \(f\). In this notation, \(f(A)\) is the range of \(f\). It is clear that \(f(A)\subset B\). If \(f(A) = B\), we say that \(f\) maps \(A\) onto \(B\). (Note that, according
+to this usage, onto is more specific than into.)
+</p>
+
+<p>\(\textbf{Definition. }\)[Equivalence Relation]
+If there exists a \(1-1\) mapping of \(A\) onto \(B\), we say that \(A\) and \(B\) can be put in \(1-1\) correspondence, or that \(A\) and \(B\) have the same cardinal number, or, briefly, that A and B are equivalent, and we write \(A\sim B\). This relation clearly has the following properties:\\
+It is reflexive: \(A\sim A\).\\
+It is symmetric: If \(A\sim B\), then \(B\sim A\).\\
+It is transitive: If \(A\sim B\) and \(B\sim C\), then \(A\sim C\).
+</p>
+
+
+<p>\(\textbf{Definition. }\)
+For any positive integer \(n\), let \(J_n\) be the set whose elements are the integers \(1, 2,\dots , n\); let \(J\) be the set consisting of all positive integers. For any set \(A\), we say:\\
+(a) \(A\) is \textbf{finite} if \(A\sim J_n\) for some \(n\) (the empty set is also considered to be finite).\\
+(b) \(A\) is \textbf{infinite} if \(A\) is not finite.\\
+(c) \(A\) is \textbf{countable} if \(A\sim J\).\\
+(d) \(A\) is \textbf{uncountable} if \(A\) is neither finite nor countable. \\
+(e) \(A\) is \textbf{at most countable} if \(A\) is finite or countable.\\
+</p>
+\begin{note}
+Countable sets are sometimes called enumerable, or denumerable.
+\end{note}
+
+
+<p>\(\textbf{Definition. }\)[Sequence]
+By a sequence, we mean a function \(f\) defined on the set \(J\) of all positive integers. If \(f(n)=x_n\), for \(n\in J\),it is customary to denote the sequence \(f\) by the symbol \(\{x_n\}\), or sometimes by \(x_1\), \(x_2\) , \(x_3,\dots\) The values of \(f\), that is, the elements \(x_n\), are called the terms of the sequence. If \(A\) is a set and if \(x_n\in A\)
+for all \(n\in J\), then \(\{x_n\}\) is said to be a sequence in \(A\), or a sequence of elements of \(A\).
+</p>
+\begin{note}
+The terms \(x_1, x_2, x_3, \dots\) of a sequence need not be distinct.
+\end{note}
+
+<p>\(\textbf{Theorem. }\)
+Every infinite subset of a countable set \(A\) is countable.
+<p>\(\textbf{Proof. }\)
+Suppose \(E\subset A\), and \(E\) is infinite. Arrange the elements \(x\) of \(A\) in a sequence \(\{x_n\}\) of distinct elements. Construct a sequence \(\{n_k\}\) as follows:
+Let \(n_1\) be the smallest positive integer such that \(x_{n_1}\in E\). Having chosen \(n_1, \dots , n_{k-1}\) \((k =2, 3, 4, ...)\), let \(n_k\) be the smallest integer greater than \(n_{k-1}\) such that \(x_{n_k}\in E\).
+Putting \(f(k) = x_{n_k}\) \((k = 1, 2, 3, ...)\), we obtain a 1-1 correspondence between \(E\) and \(J\).
+
+ 
+
+\begin{note}
+Countable sets represent the ''smallest'' infinity: No uncountable set can be a subset of a countable
+set.
+\end{note}
+
+<p>\(\textbf{Definition. }\)
+Let \(A\) and \(\Omega\) be sets, and suppose that with each element \(\alpha\) of \(A\) there is associated a subset of \(n\) which we denote by \(E_\alpha\).\\
+The set whose elements are the sets \(E_\alpha\) will be denoted by \(\{E_\alpha\}\). Instead of speaking of sets of sets, we shall sometimes speak of a collection of sets, or a family of sets.\\
+The union of the sets \(E_\alpha\) is defined to be the set \(S\) such that \(x\in S\) if and only if \(x\in E_\alpha\) for at least one \(\alpha\in A\). We use the notation
+\begin{equation} \label{eq:1}
+S = \bigcup_{\alpha\in A} E_\alpha.
+\end{equation}
+If \(A\) consists of the integers \(1, 2, \dots , n\), one usually writes
+\begin{equation} \label{eq:2}
+S = \bigcup_{m=1}^{n} E_m
+\end{equation}
+or
+\begin{equation} \label{eq:3}
+S = E_1\cup E_2\cup\dots\cup E_n.
+\end{equation}
+If \(A\) is the set of all positive integers, the usual notation is
+\begin{equation} \label{eq:4}
+S = \bigcup_{m=1}^{\infty} E_m.
+\end{equation}
+The intersection of the sets \(E_\alpha\) is defined to be the set \(P\) such that \(x\in P\) if and only if \(x\in E_\alpha\) for every \(\alpha\in A\). We use the notation
+\begin{equation} \label{eq:5}
+P = \bigcap_{\alpha\in A} E_\alpha,
+\end{equation}
+or
+\begin{equation} \label{eq:6}
+S =\bigcap_{m=1}^{n} E_m=E_1\cap E_2\cap\dots\cap E_n,
+\end{equation}
+or
+\begin{equation} \label{eq:7}
+S =\bigcap_{m=1}^{\infty} E_m,
+\end{equation}
+as for unions. If \(A\cap B\) is not empty, we say that \(A\) and \(B\) intersect; otherwise they are disjoint. 
+</p>
+
+\begin{eg}
+Let \(A\) be the set of real numbers \(x\) such that \(0\lt x\leq 1\). For every
+\(x\in A\), let \(E_x\) be the set of real numbers \(y\) such that \(0\lt y\lt x\). Then
+\item (a) \(E_x\subset E_z\) if and only if \(0\lt x\leq z\leq 1\). 
+<p>\(\textbf{Proof. }\)
+If \(E_x\subset E_z\), then for every \(a\in E_x\) is in \(E_z\). Since \(E_x = \{u\in\mathbb{R}\;|\;0\lt u\lt x\}\) and \(E_z = \{u\in\mathbb{R}\;|\;0\lt u\lt z\}\), we can know that \(x\leq z\). Thus, \(0\lt x\leq z\leq 1\). 
+
+\item (b) \(\bigcup_{x\in A} E_x = E_1\).
+<p>\(\textbf{Proof. }\)
+Since \(E_1\subset E_1\), \(E_1\subset \bigcup_{x\in A} E_x\). At the same time, \(A\) is the set of real numbers \(x\) such that \(0\lt x\leq 1\), \(\bigcup_{x\in A} E_x\subset E_1\). Therefore, \(\bigcup_{x\in A} E_x = E_1\).
+
+\item (c) \(\bigcap_{x\in A} E_x = \emptyset\).
+<p>\(\textbf{Proof. }\)
+For every \(y > 0\), \(y\notin E_x\) if \(x\lt y\). For every \(0\lt y\leq 1\), there exists \(x\) such that \(0\lt x\lt y\leq 1\), which means for every \(0\lt y\leq 1\) there exists \(E_x\) where \(y\notin E_x\). Therefore, \(\bigcap_{x\in A} E_x = \emptyset\).
+
+\end{eg}
+
+<p>\(\textbf{Theorem. }\)
+Let \(\{E_n\}\), \(n = 1, 2, 3,\dots ,\) be a sequence of countable sets, and put
+\[
+S = \bigcup_{n=1}^{\infty} E_n.
+\]
+Then \(S\) is countable. 
+<p>\(\textbf{Proof. }\)
+Since \(E_n\) is a countable set, let every set \(E_n\) be arranged in a sequence \(\{x_{nk}\}\), \(k = 1, 2, 3,\dots\), and consider the infinite array in which the elements of \(E_n\) form the \(n\)th row. Based on the graph below, the sequence can be arranged such as
+\[
+x_{11};\; x_{21},\; x_{12};\; x_{31},\; x_{22},\; x_{13};\; \dots
+\]
+or 
+\[
+x_{11},\; x_{12},\;\dots;\; x_{21},\; x_{22},\dots
+\]
+\item If any two of the sets \(E_n\) have elements in common, these will appear more than once in the new sequence. Hence there is a subset \(T\) of the set of all positive integers such that \(S\sim T\), which shows that \(S\) is at most countable(finite or countable). Since \(E_1\subset S\), and \(E_1\) is infinite, \(S\) is infinite, and thus \(T\) is infinite. Hence, \(T\) is countable for every infinite subset of a countable set is countable. Therefore, \(S\) is countable. 
+\item \centering{\includegraphics[scale=0.7]{analysis_1.png}}
+
+
+ 
+<br>
+
+
+<p>\(\textbf{Theorem. }\)
+\label{tuple-countable}
+Let \(A\) be a countable set, and let \(B_n\) be the set of all n-tuples \((a_1,\dots, a_n)\), where \(a_k\in A\) \((k = 1, ... , n)\), and the elements \(a_1,\dots, a_n\) need not be distinct. Then \(B_n\) is countable.
+<p>\(\textbf{Proof. }\)
+I will prove it with mathematical induction. Since \(A\) is countable, \(B_1\) is countable for \(B_1 = A\). Suppose \(B_{n-1}\) is countable \((n = 2, 3, 4, \dots)\). Let the element of \(B_n\) to be
+\[
+(b,a)
+\]
+where \(b\in B_n\) and \(a\in A\). Fix \(b\), then \(\{(b, a)\;|\;a\in A\}\) is equivalent to \(A\), which means it is countable. \(B_n\) is the union of a countable set of countable sets, which is countable. 
+
+ 
+<p>\(\textbf{Theorem. }\)
+The set of all rational numbers is countable.
+<se>\(\textbf{Proof. }\)
+Based on \ref{tuple-countable} with n =2, noting that every rational \(r\) is of the form \(b/a\), where \(a\) and \(b\) are integers. The set of pairs \((a, b)\), and therefore the set of fractions \(b/a\), is countable.
+
+ 
+<p>\(\textbf{Theorem. }\)
+Let \(A\) be the set of all sequences whose elements are the digits \(0\) and \(1\). This set \(A\) is uncountable.\\
+The elements of \(A\) are sequences like \(1, 0, 0, 1, 0, 1, 1, 1, \dots\)
+</p>
+<p>\(\textbf{Proof. }\)
+I will prove it with mathematical contradiction. Assume that \(A\) is countable and let \(E\) be a countable subset of \(A\), and let \(E\) consist of the sequences \(s_1, s_2, s_3, \dots\) We construct a sequences as follows. If the \(n\)th digit in \(s_n\) is \(1\), we let the \(n\)th digit of \(s\) be \(0\), and vice versa. Then the sequence \(s\) differs from every member of \(E\) in at least one place; hence \(s\notin E\). But clearly \(s\in A\), so that \(E\) is a proper subset of A. Thus, every countable subset of \(A\) is a proper subset of \(A\). However, \(A\) is countable, which means \(A\) is a proper subset of \(A\). Contradiction exists. 
+</p>
+
+</section>
+
+
+<br>
+
+
+
+<section>
+  <h3>Metric Space</h3>
+<p>\(\textbf{Definition. }\)[Metric spaces]
+A metric space \((X, d)\) is a space \(X\)
+of objects (called points), together with a distance function or metric
+\(d: X\times X \rightarrow [0, +\infty)\), which associates to each pair \(x,y\) of points in \(X\)
+a non-negative real number \(d(x, y) \geq 0\). Furthermore, the metric must
+satisfy the following four axioms:
+\item (a) For any \(x\in X\), we have \(d(x, x) = 0\).
+\item (b) (Positivity) For any distinct \(x, y\in X\), we have \(d(x, y) > 0\).
+\item (c) (Symmetry) For any \(x, y\in X\), we have \(d(x, y) = d(y, x)\).
+\item (d) (Triangle inequality) For any \(x, y, z\in X\), we have $d(x, z) \leq
+d(x, y) + d(y, z)$.
+</p>
+
+<p>
+  \(\textbf{Definition. }\)[Metric Space] A set \(X\), whose elements we shall call points, is said to be a metric space if with any two points \(p\) and \(q\) of \(X\) there is associated a real number \(d(p, q)\), called the distance from \(p\) to \(q\), such that
+\item (a) \(d(p,q)>0\) if \(p\neq q\); \(d(p,p)=0\);
+\item (b) \(d(p, q) = d(q, p)\);
+\item (c) \(d(p,q)\leq d(p,r)+d(r,q)\), for any \(r\in X\).
+Any function with these three properties is called a \textbf{distance function}, or a \textbf{metric}.
+</p>
+
+<p>
+  \(\textbf{Remark. }\)Every subset of a euclidean space is a metric space.
+</p>
+
+<br>
+
+
+<p>\(\textbf{Definition. }\)[Segment]
+By the \textbf{segment} \((a, b)\) we mean the set of all real numbers \(x\) such that \(a\lt x\lt b\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Interval]
+By the interval \([a, b]\) we mean the set of all real numbers \(x\) such that \(a\leq x\leq b\).
+Occasionally we shall also encounter "half-open intervals" \([a, b)\) and \((a, b]\); the first consists of all \(x\) such that \(a\leq x\lt b\), the second of all \(x\) such that \(a\lt x\leq b\).  
+</p>
+
+<p>\(\textbf{Definition. }\)[\(k\)-cell]
+If \(a_i\lt b_i\) for \(i=1,\dots,k,\) the set of all points \(x=(x_1,\dots, x_k)\) in \(R^k\) whose coordinates satisfy the inequalities \(a_i\leq x_i\leq b_i\) \((1\leq i\leq k)\) is called a \(k\)-cell. Thus a \(1\)-cell is an interval, a \(2\)-cell is a rectangle, etc.
+</p>
+
+<p>\(\textbf{Definition. }\)[Open Ball (or Closed Ball)]
+If \(x\in R^k\) and \(r > 0\), the open (or closed) ball \(B\) with center at \(x\) and radius \(r\) is defined to be the set of all \(y\in R^k\) such that \(|y-x|\lt r\) (or \(|y-x|\leq r\)).
+</p>
+
+<p>\(\textbf{Definition. }\)
+We call a set \(E\subset R^k\) convex if 
+\[
+\lambda x+(1-\lambda)y\subset E
+\]
+whenever \(x\in E\), \(y\in E\), and \(0\lt \lambda\lt  1\).
+</p>
+
+<p>
+  \(\textbf{Theorem. }\)Balls are convex. 
+</p>
+<p>
+  \(\textbf{Proof. }\)For if \(|y-x|\lt r\), \(|z-x|\lt r\), and \(0\lt \lambda\lt 1\), we have
+    \[
+    \begin{align*}
+    |\lambda(y-x)+(1-\lambda)(z-x)| & =\lambda|y- x|+(1-\lambda)|z- x|\\
+    &\lt \lambda r+(1-\lambda)r\\
+    &=r\\
+    \end{align*}
+    \]
+</p>
+
+ 
+<p>
+  \(\textbf{Remark. }\)The same proof applies to closed balls. It is also easy to see that \(k\)-cells are convex.
+</p>
+
+<br>
+<p>\(\textbf{Definition. }\)[Neighborhood]
+In a metric \(X\), a neighborhood of \(p\) is a set \(N_r(p)\) consisting of all \(q\) such that \(d(p, q)\lt  r\), for some \(r > 0\), The number \(r\) is called the radius of \(N_r(p)\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Limit Point]
+In a metric \(X\), A point \(p\) is a limit point of the set \(E\) if every neighborhood of \(p\) contains a point \(q\neq p\) such that \(q\in E\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Isolated Point]
+In a metric \(X\), if \(p\in E\) and \(p\) is not a limit point of \(E\), then \(p\) is called an isolated point of \(E\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Closed set]
+In a metric \(X\), \(E\) is closed if every limit point of \(E\) is a point of \(E\). 
+</p>
+
+<p>\(\textbf{Definition. }\)[Interior point]
+A point \(p\) is an interior point of \(E\) if there is a neighborhood \(N\) of \(p\) such that \(N\subset E\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Open set]
+In a metric \(X\), \(E\) is open if every point of \(E\) is an interior point of \(E\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Complement]
+The complement of \(E\) (denoted by \(E^c\)) is the set of all points \(p\in X\) such that \(p\notin E\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Perfect set]
+In a metric \(X\), \(E\) is perfect if \(E\) is closed and if every point of \(E\) is a limit point of \(E\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Bounded]
+In a metric \(X\), \(E\) is bounded if there is a real number \(M\) and a point \(q\in X\) such that \(d(p, q) \lt  M\) for all \(p\in E\).
+</p>
+
+<p>\(\textbf{Definition. }\)[Dense]
+In a metric \(X\), \(E\) is dense in \(X\) if every point of \(X\) is a limit point of \(E\), or a point of \(E\)(or both).
+</p>
+<br>
+
+<p>\(\textbf{Remark. }\)
+In \(R^1\), neighborhoods are segments, whereas in \(R^2\) neighborhoods are interiors of circles.
+</p>
+
+
+<br>
+
+
+<p>\(\textbf{Theorem. }\)Every neighborhood is an open set.</p>
+<p>
+  \(\textbf{Proof. }\)Consider a neighborhood \(E =N_r(p)\), and \(q\in E\). Then there is a \(h>0\) and \(h\in R\) such that \(d(p,q)=r-h\).
+For all points \(s\) such that \(d(q, s) \lt  h\), they form a neighborhood \(N_h(q)\). 
+\[
+d(p,s)\leq d(p,q)+d(q,s)\lt r-h+h=r,
+\]
+so that all \(s\) are in \(E\), which implies that \(N_h(q)\subset N_r(p)=E\). Thus \(q\) is an interior point of \(E\). And every point in \(E\) is an interior point. 
+</p>
+ 
+<br>
+<p>\(\textbf{Theorem. }\)
+If \(p\) is a limit point of a set \(E\), then every neighborhood of \(p\) contains infinitely many points of \(E\).
+</p>
+<p>\(\textbf{Proof. }\)
+I will prove it with mathematical contradiction. Assume that \(p\) is a limit point of \(E\) and there is a neighborhood \(N\) of \(p\) which contains only a finite number of points of \(E\). Let \(q_1,\dots , q_n\) be those points of \(N\cap E\), which are distinct from \(p\), and put
+\[
+r = \min_{1\leq m\leq n} d(p, q_m).
+\]
+[We use this notation to denote the smallest of the numbers \(d(p, q_1),\dots , d(p, q_n)\).] The minimum of a finite set of positive numbers is clearly positive, so that \(r > 0\). The neighborhood \(N_r(p)\) contains no point \(q\) of \(E\) such that \(q\neq p\). Since \(x\) is a limit point of the set \(S\) if every neighborhood of \(x\) contains a point \(y\neq x\) such that \(y\in S\). It shows that \(p\) is not a limit point of \(E\). Contradiction exists. 
+</p>
+<p>\(\textbf{Theorem. }\)
+A finite point set has no limit points.
+</p>
+<p>\(\textbf{Proof. }\)
+I will prove it with mathematical contradiction. If there exists a limit point \(p\) in a finite set \(E\), then the neighborhood \(N\) of \(p\) contains finitely many points, which are in \(E\). However, \(E\) is a finite set, so contradiction exists. 
+</p>
+ 
+
+<p>\(\textbf{Theorem. }\)
+Let \(\{E_\alpha\}\) be a (finite or infinite) collection of sets \(E_\alpha\). Then
+\[
+\Bigg(\bigcup_\alpha E_\alpha\Bigg)^c = \bigcap_\alpha (E_a^c).
+\]
+</p>
+<p>\(\textbf{Proof. }\)
+If \(x\in \Bigg(\bigcup_\alpha E_\alpha\Bigg)^c\), then \(x\notin \bigcup_\alpha E_\alpha\); hence \(x\notin E_\alpha\) for any \(\alpha\), hence \(x\in E_\alpha^c\) for every \(\alpha\), so that \(x\in\bigcap_\alpha (E_a^c)\). Thus, 
+\[
+\Bigg(\bigcup_\alpha E_\alpha\Bigg)^c\subset \bigcap_\alpha (E_a^c).
+\]
+Conversely, if \(x\in\bigcap_\alpha (E_a^c)\), then \(x\in E_a^c\) for every \(\alpha\), hence \(x\notin E_\alpha\) for any \(\alpha\), hence \(x\notin\bigcup_\alpha E_\alpha\), so that \(x\in \Bigg(\bigcup_\alpha E_\alpha\Bigg)^c\). Thus,
+\[
+\bigcap_\alpha (E_a^c)\subset \Bigg(\bigcup_\alpha E_\alpha\Bigg)^c.
+\]
+It follows that 
+\[
+\Bigg(\bigcup_\alpha E_\alpha\Bigg)^c = \bigcap_\alpha (E_a^c).
+\]
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+Let \(\{E_\alpha\}\) be a (finite or infinite) collection of sets \(E_\alpha\). Then
+\[
+\left(\bigcap_\alpha E_\alpha\right)^c = \bigcup_\alpha (E_a^c).
+\]
+</p>
+<p>\(\textbf{Proof. }\)
+If \(x\in \Bigg(\bigcap_\alpha E_\alpha\Bigg)^c\), then \(x\notin \bigcap_\alpha E_\alpha\); hence \(x\notin E_\alpha\) for some \(\alpha\), hence \(x\in E_\alpha^c\) for some \(\alpha\), so that \(x\in\bigcup_\alpha (E_a^c)\). Thus, 
+\[
+\Bigg(\bigcap_\alpha E_\alpha\Bigg)^c\subset \bigcup_\alpha (E_a^c).
+\]
+Conversely, if \(x\in\bigcup_\alpha (E_a^c)\), then \(x\in E_a^c\) for some \(\alpha\), hence \(x\notin E_\alpha\) for some \(\alpha\), hence \(x\notin\bigcap_\alpha E_\alpha\), so that \(x\in \Bigg(\bigcap_\alpha E_\alpha\Bigg)^c\). Thus,
+\[
+\bigcup_\alpha (E_a^c)\subset \Bigg(\bigcap_\alpha E_\alpha\Bigg)^c.
+\]
+It follows that 
+\[
+\left(\bigcap_\alpha E_\alpha\right)^c = \bigcup_\alpha (E_a^c).
+\]
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+A set \(E\) is open if and only if its complement is closed.
+</p>
+<p>\(\textbf{Proof. }\)
+First, suppose \(E^c\) is closed. Choose \(x\in E\). Then \(x\notin E^c\). Since \(E^c\) is closed, which means it contains all its limit points, thus \(x\) is not a limit point of \(E^c\). Hence there exists a neighborhood \(N\) of \(x\) such that \(N\cap E^c\) is empty, that is, \(N\subset E\). Thus \(x\) is an interior point of \(E\), and every \(x\in E\) is an interior point of \(E\), which shows that \(E\) is open.\\
+Next, suppose \(E\) is open. Let \(x\) be a limit point of \(E^c\). Then every neighborhood of \(x\) contains a point of \(E^c\), which means there is no neighborhood \(N\) of \(x\) such that \(N\subset E\), so that \(x\) is not an interior point of \(E\). Since \(E\) is open, this means that \(x\in E^c\). It follows that \(E^c\) is closed for \(E^c\) contains all of its limit points. 
+</p>
+<br>%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+For any collection \(\{G_\alpha\}\) of open sets, \(\bigcup_\alpha G_\alpha\) is open.
+</p>
+<p>\(\textbf{Proof. }\)
+Put \(G=\bigcup_\alpha G_\alpha\). If \(x\in G\), then \(x\in G_\alpha\) for some \(\alpha\). Since \(G_\alpha\) is open, \(x\) is an interior point of \(G_\alpha\), and \(x\) is also an interior point of \(G\). Thus, \(G\) is open.
+</p>
+ 
+
+%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+For any collection \(\{F_\alpha\}\) of closed sets, \(\bigcap_\alpha F_\alpha\) is closed. 
+</p>
+<p>\(\textbf{Proof. }\)
+Since we know that 
+\[
+\Bigg(\bigcap_\alpha F_\alpha\Bigg)^c = \bigcup_\alpha (F_a^c),
+\]
+and \(F_\alpha^c\) is open for \(F_\alpha\) is closed. Based on the previous theorem, we know that \(\bigcup_\alpha (F_a^c)\) is open, which implies that \(\Bigg(\bigcap_\alpha F_\alpha\Bigg)^c\) is open. Therefore, \(\bigcap_\alpha F_\alpha\) is closed. 
+</p>
+
+ 
+<br>
+<p>\(\textbf{Theorem. }\)
+For any finite collection \(G_1,\dots ,G_n\) of open sets, \(\bigcap_{i=1}^n G_i\) is open.
+</p>
+<p>\(\textbf{Proof. }\)
+Assume that \(G = \bigcap_{i=1}^n G_i\). For any \(x\in G\), \(x\in G_i\) for all \(i\in\{1, \dots, n\}\), and there exists an Neighborhood \(N_i\) of \(x\) with radius \(r_i\) such that \(N_i\subset G_i\) where \(i=1, \dots, n\) for \(G_i\) is open. Choose
+\[
+r = \min(r_1, r_2, \dots, r_n). 
+\]
+For any \(x\), let \(N\) be a neighborhood of \(x\) with radius \(r\). Then \(N\subset G_i\) for all \(i\). Therefore, \(N\subset G\) for \(G=\bigcap_{i=1}^n G_i\). It shows that any point in \(G\) is an interior point, and it means that \(G\) is open. 
+</p>
+ 
+<br>
+<p>\(\textbf{Theorem. }\)
+For any finite collection \(F_1, \dots, F_n\) of closed sets, \(\bigcup_{i=1}^n F_n\) is closed.
+</p>
+<p>\(\textbf{Proof. }\)
+Since we know that \[
+\Bigg(\bigcup_\alpha F_\alpha\Bigg)^c = \bigcap_\alpha (F_a^c),
+\]
+and \(F_1^c, F_2^c, \dots, F_n^c\) are all open. Based on the previous theorem, \(\bigcap_{i=1}^n F_i\) is open. Thus, \(\Bigg(\bigcup_{i=1}^n F_i\Bigg)^c\) is open. Therefore, \(\bigcup_{i=1}^n F_i\) is closed.
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Definition. }\)[Closure]
+If \(X\) is a metric space, if \(E\subset X\), and if \(E'\) denotes the set of all limit points of \(E\) in \(X\), then the closure of \(E\) is the set \(\bar{E} = E\cup E'\).
+</p>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\) is closed.
+</p>
+<p>\(\textbf{Proof. }\)
+Since \(\bar{E} = E\cup E'\) where \(E'\) is the set of limit points of \(E\), if \(x\in P\) and \(x\notin \bar{E}\), then \(x\) is not a limit point of \(E\) and \(x\) is not in \(E\). Thus, \(x\in \bar{E}^c\) and there exists a neighborhood \(N\) of \(x\) such that \(N\cap E=\emptyset\). Thus, for any \(x\in \bar{E}^c\), there exists an neighborhood \(N\) such that \(N\subset \bar{E}^c\), which implies that \(\bar{E}^c\) is open. Hence, \(\bar{E}\) is closed.  
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(X\) is a metric space and \(E\subset X\), then \(\bar{E} =E\) if and only if \(E\) is closed.
+</p>
+<p>\(\textbf{Proof. }\)
+Based on previous theorem, we know that if \(E = \bar{E}\) then \(E\) is closed since \(\bar{E}\) is closed. Conversely, if \(E\) is closed, then \(E\) contains all its limit points (based on the definition of closed sets). Hence, \(E'\subset E\). Since \(\bar{E} = E\cup E'\), \(\bar{E} = E\). 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\subset F\) for every closed set \(F\subset X\) such that \(E\subset F\).
+</p>
+<p>\(\textbf{Proof. }\)
+Since \(F\) is closed, \(F'\subset F\), which implies that every limit point of \(F\) is a point of \(F\) (based on the definition). Since \(E\subset F\), every limit point of \(E\) is a point of \(F\), which means that \(E'\subset F\). Therefore \(E'\cup E\subset F\), which is \(\bar{E}\subset F\). 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\) is the smallest closed subset of \(X\) that contains \(E\). 
+</p>
+<p>\(\textbf{Proof. }\)
+Since \(\bar{E}=E\cup E'\), \(E\subset \bar{E}\) and \(\bar{E}\) is closed. For any closed set \(F\) containing \(E\), we know that \(\bar{E}\subset F\). Therefore, \(\bar{E}\) is the smallest closed subset of \(X\) that contains \(E\). 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+Let \(E\) be a nonempty set of real numbers which is bounded above. Let \(y=\sup E\). Then \(y\in \bar{E}\). Hence \(y\in E\) if \(E\) is closed.
+</p>
+<p>\(\textbf{Proof. }\)
+If \(y\in E\), then \(y\in\bar{E}\) for \(\bar{E}=E\cup E'\). Assume \(y\notin E\). For every \(h>0\) \(y-h\) will not be an upper bound of \(E\), which means there exists then a point \(x\in E\) such that \(y-h\lt x\lt y\). It shows that any neighborhood of \(y\) contains some points which are not \(y\) in \(E\). Thus \(y\) is a limit point of \(E\). Hence \(y\in \bar{E}\).
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Definition. }\)[Open relative]
+Suppose \(E\subset Y\subset X\), where \(X\) is a metric space. \(E\) is open relative to \(Y\) if to each \(p\in E\) there is associated an \(r>0\) such that \(q\in E\) whenever \(d(p, q) \lt  r\) and \(q\in Y\).
+</p>
+<p>\(\textbf{Remark. }\)
+\((a, b)\) where \(a\lt b\in R\) is open in \(R\) but it is not open in \(R^2\). 
+</p>
+<p>\(\textbf{Theorem. }\)
+Suppose \(Y\subset  X\). A subset \(E\) of \(Y\) is open relative to \(Y\)  if and only if \(E = Y\cap  G\) for some open subset \(G\) of \(X\). 
+</p>
+<p>\(\textbf{Proof. }\)
+Firstly, suppose \(E\) is open relative to \(Y\). To each \(p\in  E\) there is  a positive number \(r_p\) such that the conditions \(d(p, q)\lt  r_p\), \(q\in Y\) imply that \(q\in E\). 
+Let  \(V_p\) be the set of all \(q\in X\) such that \(d(p, q) \lt  r_p\), and define 
+\[
+G = \bigcup_{p\in E} V_p.
+\]
+Then \(G\) is an open subset of \(X\), since every neighborhood is an open set and, for any collection \(\{G_\alpha\}\) of open sets, \(\bigcup_\alpha G_\alpha\) is open. Since \(p\in V_p\) for all \(p\in E\), \(E\subset G\cap Y\). Since \(V_p\subset E\), we have \(V_p\cap Y\subset E\) for every \(p\in E\). Since \(G =\bigcup_{p\in E} V_p\),
+\(G\cap Y\subset E\). Thus \(E  = G\cap Y\).\\
+Secondly, suppose that \(G\) is open in \(X\) and \(E  = G\cap Y\), every \(p\in E\) has a neighborhood \(V_p\subset  G\). Then \(V_p\cap Y\subset E\), so that \(E\) is open relative to \(Y\). 
+</p>
+</section>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<section><h3>Compact set</h3>
+<p>\(\textbf{Definition. }\)[Open cover]
+By an open  cover  of a  set \(E\) in a metric space \(X\) we mean a collection \({G_\alpha}\) of open subsets of \(X\) such that \(E\subset \bigcup_\alpha G_a\). 
+</p>
+<p>\(\textbf{Definition. }\)[Compact set]
+A subset \(K\) of a metric space \(X\) is said to be compact if every open cover of \(K\) contains a finite subcover. i.e, if \(\{G_\alpha \}\) is an open cover of \(K\), then there are finitely many indices \(\alpha_1, \dots, \alpha_n\) such that \(K\subset G_{a_1}\cup\dots\cup G_{a_n}\).
+</p>
+<section>\(\textbf{Remark. }\)
+Every finite set is compact. 
+
+<p>\(\textbf{Definition. }\)[Compact relative]
+A subset \(K\) of a metric space \(X\) is said to be compact relative to \(K\) if every open cover of \(K\) contains a finite subcover. i.e, if \(\{G_\alpha \}\) is an open cover of \(K\), then there are finitely many indices \(\alpha_1, \dots, \alpha_n\) such that \(K\subset G_{a_1}\cup\dots\cup G_{a_n}\).
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+Suppose \(K\subset Y\subset X\). Then \(K\) is compact relative to \(X\) if and only if \(K\) is compact relative to \(Y\).
+</p>
+<p>\(\textbf{Proof. }\)
+Suppose \(K\) is compact relative to \(X\), and let \(\{V_\alpha\}\) be a collection of sets, open relative to \(Y\), such that \(K\subset U_\alpha V_\alpha\). Since a subset \(E\) of \(Y\) is open relative to \(Y\) if and only if \(E  = Y\cap G\) for some open subset \(G\) of \(X\), for any \(\alpha\), there are sets \(G_\alpha\), open relative to \(X\), such that \(V_\alpha = Y\cap G_\alpha\); and since 
+\(K\) is compact relative to \(X\), open cover of \(K\) contains a finite subcovers. Hence, we  have 
+\[
+K\subset G_{\alpha_1}\cup\cdots\cup G_{\alpha_n}, 
+\]
+for some finitely many indices \(\alpha_1, \dots, \alpha_n\). Since \(K\subset Y\), 
+\[
+K\subset (Y\cap G_{\alpha_1})\cup\dots\cup(Y\cap G_{\alpha_n}), 
+\]
+\[
+K\subset V_{\alpha_1}\cup\cdots\cup V_{\alpha_n}, 
+\]
+This proves that \(K\) is compact relative to \(Y\).\\
+Conversely, suppose \(K\) is compact relative to \(Y\), let \(\{G_\alpha\}\) be a collection of open subsets of \(X\)  which covers \(K\), and put \(V_\alpha = Y\cap  G_\alpha\). Thus, \(V_\alpha\) is open relative to \(Y\) and
+\[
+K\subset V_{\alpha_1}\cup\cdots\cup V_{\alpha_n}, 
+\]
+for some choice of \(\alpha_1, \dots, \alpha_n\). Since \(V_a\subset G_\alpha\), 
+\[
+K\subset G_{\alpha_1}\cup\cdots\cup G_{\alpha_n}.
+\]
+</p>
+ 
+<p>\(\textbf{Theorem. }\)
+Compact subsets of metric spaces are closed.
+</p>
+<p>\(\textbf{Proof. }\)
+Let \(K\) be a compact subset of a metric space \(X\). We shall  prove that \(K^c\) is an open subset of \(X\).\\
+Suppose \(p\in X\),  \(p\notin K\). If \(q\in K\), let  \(V_q\) and \(W_q\) be neighborhoods of \(p\) and \(q\), respectively, of radius less  than \(\frac{1}{2}d(p, q)\). Thus, \(V_q\cap W_q=\emptyset\). 
+Since \(K\) is compact, there are finitely many points \(q_1, \cdots, q_n\) in \(K\) such that 
+\[
+K\subset W_{q_1} \cup\dots\cup  W_{q_n} = W. 
+\]
+If \(V=V_{q_1}\cap\dots\cap V_{q_n}\), then \(V\) is a neighborhood  of \(p\) which does not intersect \(W\). Thus, for any \(p\in X\) and \(p\notin X\), there is a open neighborhood of \(p\) in \(K^c\). Thus, \(K^c\) is open and \(K\) is closed. 
+theorem follows.
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+Closed subsets of compact sets are compact.
+</p>
+<p>\(\textbf{Proof. }\)
+Suppose that \(F\subset K\subset X\). \(K\) is compact and \(F\) is closed relative to \(X\). Let \(\{V_\alpha\}\) be an open cover of \(F\), thus \(F\subset \bigcup_\alpha V_\alpha\). Since \(F\) is closed in \(X\), \(F^c\) is open in \(X\). Since \(F^c\cup F = X\), \(K\subset (F\cup F^c)\subset (\bigcup_\alpha V_\alpha)\cup F^c\). Thus, \(\{V_\alpha, F^c\}\) is an open cover of \(K\). Since \(K\) is compact, \(F\subset K\subset (\bigcup_{i=1}^n V_{\alpha_i} \cup F^c)\). Since \(F\cap F^c=\emptyset\), \(F\subset (\bigcup_{i=1}^n V_{\alpha_i} \cup F^c)\) indicates that \(F\subset \bigcup_{i=1}^n V_{\alpha_i}\) for any \(\{V_\alpha\}\). Therefore, \(F\) is compact. 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<p>\(\textbf{Corollary. }\)If \(F\) is closed and \(K\) is  compact, then \(F\cap  K\) is compact.</p>
+<p>\(\textbf{Proof. }\)
+Since \(K\) is compact, \(K\) is closed. Since for any collection \(\{F_\alpha\}\) of closed sets, \(\bigcap_\alpha F_\alpha\) is closed. Hence, \(F\cap K\) is closed. Since \(F\cap K\subset K\), and closed subsets of compact sets are compact, \(F\cap K\) is compact.  
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(\{K_\alpha\}\) is a collection of compact subsets of a metric space \(X\) such that the intersection of every finite subcollection of \(\{K_\alpha\}\) is nonempty, then \(\cap_1^\infty K_\alpha\) is nonempty.
+</p>
+<p>\(\textbf{Proof. }\)
+I will prove it with mathematical contrapositive. Fix a memebr \(K_1\) of \(\{K_\alpha\}\). Let \(G_\alpha=K_\alpha^c\). Since \(K_\alpha\) is compact, \(K_\alpha\) is closed and \(G_\alpha\) is open. Suppose that no point of \(K_1\) belongs to every \(K_\alpha\), which means \(\bigcap_\alpha K_\alpha\) does not contain any point of \(K_1\). Hence, \(K_1\cap (\bigcap_\alpha K_\alpha)=\emptyset\). Thus, \(K_1\subset (\bigcap_\alpha K_\alpha)^c\). Because of \ref{compliment2}, \(K_1\subset \bigcup_\alpha K_\alpha^c = \bigcup_\alpha G_\alpha\). Since \(K_1\) is compact, there exists \(\alpha_1,\dots, \alpha_n\) such that 
+\[
+K_1\subset \bigcup_{i=1}^n G_{\alpha_i} = \bigcup_{i=1}^n K_{\alpha_i}^c = (\bigcap_{i=1}^n K_{\alpha_i})^c. 
+\]
+Therefore, it shows that \(K_1\cap \bigcap_{i=1}^n K_{\alpha_i}=\emptyset\), which means intersection of every finite subcollection of \(K_\alpha\) is empty. 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Corollary. }\)
+If \(\{K_n\}\) is a sequence of nonempty compact sets such that \(K_n\supset k_{n+1}\). \((n = 1, 2, 3\dots )\), then \(\cap_1^\infty K_n\)  is not empty.
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(E\) is an infinite subset of a compact set \(K\), then \(E\) has a limit point in \(K\).
+</p>
+<p>\(\textbf{Proof. }\)
+I will prove it with contrapositve. If \(K\) does not have a limit point of \(E\), then, for each \(q\in K\), there exists a neighborhood of \(q\), \(V_q\), which contains only \(q\). Hence, there is no finite subcollection  of \({V_q}\) can cover \(E\) since \(E\) is infinite, which implies that \(E\) is not compact relative to \(K\). Based on the previous theorem, suppose \(K\subset Y\subset X\), then \(K\) is compact relative to \(X\) if and only if \(K\) is compact relative to \(Y\). Since \(E\subset K\) and \(E\) is not compact relative to \(K\), then \(K\) is not compact either. 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(\{I_n\}\) is a sequence of intervals in \(R_1\), such that \(I_n\supset I_{n+t}\) \((n  = 1, 2, 3,\dots)\), then \(\bigcap_1^\infty I_n\) is not empty.
+</p>
+<p>\(\textbf{Proof. }\)
+If \(I_n=[a_n, b_n]\), let \(E\) be the set of all \(a_n\). Then \(E\) is nonempty and bounded above by \(b_1\). Let \(x\) be the supremum of \(E\) (i.e, \(a_1\leq a_2\leq a_3\dots \leq x\)). If \(m\) and \(n\) are positive integers, then \([a_{m+n}, b_{m+n}]\subset [a_n, b_n]\) and \([a_{m+n}, b_{m+n}]\subset [a_m, b_m]\).
+\[
+a_n\leq a_{m+n}\leq b_{m+n}\leq b_m, 
+\]
+so that \(a_n\leq  b_m\) for each \(m\), which implies that \(b_m\) is a upper bound of \(E\). Thus, \(x\leq b_m\) for all \(m\). Since  \(a_m\leq x\), we know that \(a_m\leq x\leq b_m\) for all \(m\in R\). Hence, \(x\in I_m\) for all \(m\). Therefore, \(\bigcap_1^\infty I_n\) is not empty. 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>
+  \(\textbf{Definition. }\)[\(k\)-cell]
+If \(a_i\lt  b_i\); for \(i =1, \dots, k\) the set of all points \(x =  (x_1, \dots, x_k)\) in \(R^k\) whose coordinates satisfy the  inequalities  \(a_i\leq x_i\leq b_i\); \((1\leq i\leq k)\) is called a \(k\)-cell.
+</p>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+Let \(k\) be a positive integer. If \(\{I_n\}\) is a sequence of \(k\)-cells such that \(I_n\supset I_{n+1}\) \((n = 1, 2, 3, \dots)\), then \(\bigcap_1^\infty I_n\) is not empty. 
+</p>
+<p>\(\textbf{Proof. }\)
+Let \(I_n\) consist of all points \(x = (x_1, \dots, x_k)\)  such that 
+\[
+a_{n,j}\leq x_j\leq b_{n,j} 
+\]
+\((1\leq j\leq k; n = 1, 2, 3, \dots)\). Fix \(j\), put \(I_{n,j}  = [a_{n,j}, b_{n,j}]\). The sequence \(\{I_{n,j}\}\) satisfies the 
+the previous theorem, and there are real numbers \(x_j^*\) such that 
+\[
+a_{n,j}\leq x_j^*\leq b_{n,j}.
+\]
+For \(1\leq j\leq k\), let \(x^*=\{x_1^*, x_2^*, \dots, x_k^*\}\). Since \(x^*\in  I_n\) for \(n = 1, 2, 3, \dots\). Therefore, \(\bigcap_1^\infty I_n\) is not empty. 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+Every \(k\)-cell is  compact. 
+</p>
+<p>\(\textbf{Proof. }\)
+Let  \(I\) be a \(k\)-cell, consisting of all points \(x = (x_1, \dots, x_k)\) such that \(a_j\leq x_j\leq b_j\) \((1\leq j\leq k)\). Hence, for \(x, y\in I_n\),
+\[
+x-y = (x_1 - y_1, x_2 - y_2, \dots, x_k - y_k). 
+\]
+\[
+|x - y| = (\sum_1^k |x_i - y_i|^2)^\frac{1}{2}.
+\]
+Put 
+\[
+\delta = (\sum_1^k |a_i - b_i|^2)^\frac{1}{2}.
+\]
+Since \(x_i, y_i\in [a_i, b_i]\), \(|x-y|\leq \delta\).\\
+I will prove it with mathematical contradiction. Suppose that \(I\) is not compact, which implies that there exists an open cover \(\{G_\alpha\}\) of \(I\) which contains no finite subcover of \(I\). Put \(c_j = (a_j + b_j)/2\). The intervals \([a_1 ,  c_1]\) and \([c_1, b_1]\) then determine \(2^k\)  \(k\)-cells \(Q_i\) whose union is \(I\) (i.e, imagine a square in \(R^2\), then we divided it into \(4\) small squares whose union is the square, which means each side of the square we cut it in half. A cube in \(R^3\) we divide it into \(8\) small cubes, whose union is the cube, we means each interval of single dimension we cut it in half). 
+At least one of these sets \(Q_i\), call it \(I_1\), cannot be covered  by any finite subcollection of \(\{G_a\}\) (otherwise every \(Q_i\) can be finitely convered and \(I\) can be finitely covered). We  next subdivide \(I_1\) and continue the process. 
+We obtain a sequence \({I_n}\)  with  the following 
+properties: 
+\item (a) \(I\supset I_1\supset I_2\supset I_3\supset\dots \).
+\item (b) \(I_n\) is not covered by any finite subcollection of \(\{G_a\}\); 
+\item (c) If \(x\in I_n\) and \(y\in I_n\), then \(|x-y|\leq \frac{1}{2^n}\delta\).\\ 
+By  (a)  and Theorem 2.39,  there is  a  point x*  which lies  in  every  In. 
+For  some  tx,  x*  e  Ga. Since Ga is open, there  exists r  >  0 such that 
+I y - x* I \lt  r  implies  that ye Ga. If n  is  so  large  that 2-nb  \lt  r  (there  is 
+such  an  n, for  otherwise  2n b/r  for  all positive  integers  n, which  is 
+absurd since  R  is  archimedean),  then ( c)  implies  that In  c Ga,  which  con-
+tradicts (b).
+</p>
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If a set \(E\) in \(R^k\) has one of the following three properties,  then it has the other two: 
+\item (a) \(E\) is closed and bounded. 
+\item (b) \(E\) is compact. 
+\item (c) Every infinite subset of \(E\) has a limit point in \(E\). 
+</p>
+</section>
+
+
+<br>
+
+
+<section>
+  <h3>Perfect Set</h3>
+<p>\(\textbf{Theorem. }\)
+Let \(P\) be a nonempty perfect set in \(R^k\). Then \(P\) is uncountable.
+</p>
+<p>\(\textbf{Proof. }\)
+I will prove it with mathematical contradiction. Since \(P\) is closed and every point of \(P\) is a limit point, \(P\) must be infinite. Suppose \(P\) is countable, and denote the points of \(P\)  by \(x_1, x_2, x_3, \dots\). We shall construct a sequence \(\{V_n\}\) of neighborhoods, as follows.\\
+Let \(V_i\) be any neighborhood of \(x_i\). If \(V_i\) consists of all \(y\in R^k\)  such that  
+\[
+|y  - x_i| \lt   r,  
+\]
+the closure  \(\overline{V_i}\) of \(V_i\) is the set of all \(y\in R^k\) such  that 
+\[
+|y-x_i|\leq r. 
+\]
+Suppose \(V_n\) has been constructed, so that \(V_n\cap P\) is not empty for \(x_n\) is a limit point of \(P\) and every neighborhood of \(x_n\) contains some points of \(P\), which are not \(x_n\).  Since 
+every point of \(P\) is a limit point of \(P\), there is a neighborhood \(V_{n+1}\) such that  
+\item (i) \(\overline{V_{n+1}}\subset V_n\),  
+\item (ii) \(x_n\notin\overline{V_{n+1}}\), 
+\item (iii) \(V_{n+1}\cap P\) is not empty. 
+By  (iii), \(V_{n+i}\) satisfies our induction hypothesis, and the construction can proceed. Put \(K_n  =  \overline{V_n}\cap  P\). Since \(\overline{V_n}\) is closed and bounded, \(\overline{V_n}\) is  compact. Since \(x_n\notin K_{n+1}\), no point of \(p\) lies in \(\bigcap_1^\infty K_n\). Since \(K_n\subset P\), this implies that \(\bigcap_1^\infty K_n\) is empty. We know from the previous corollary: If \(\{K_n\}\) is a sequence of nonempty compact sets such that \(K_n \supset K_{n+ 1}\) \((n  = 1,  2,  3 , \dots )\),  then \(\bigcap_1^\infty K_n\) is not empty. Since \(K_n\) is nonempty and \(K_n\supset K_{n+1}\), \(\bigcap_1^\infty K_n\) is not empty either. Therefore, contradiction exists. 
+</p>
+</section>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<section><h3>Connected Set</h3>
+<p>\(\textbf{Definition. }\)[Separation]
+Two subsets \(A\) and \(B\) of a metric space \(X\) are said to be separated if both \(A\cap \overline{B}\) and \(\overline{A}\cap B\) are empty,  i.e., if no point of \(A\) lies in the closure of \(B\) and no point of \(B\) lies in the closure of \(A\).
+</p>
+<p>\(\textbf{Definition. }\)[Correctness]
+A set \(E\subset X\) is said to be connected if \(E\) is not a union of two nonempty separated sets. 
+</p>
+<p>\(\textbf{Remark. }\)
+Separated sets are disjoint, but disjoint sets need not be  separated. For example, \([0,  1]\) and \((1,  2)\)  are not separated even though they are disjoint. \((0,  1)\) and \((1,  2)\) are separated.
+</p>
+</section>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+A subset \(E\) of the real line \(R^1\) is connected if and only if it has the following property: If \(x\in E\), \(y\in E\), and \(x \lt  z \lt  y\), then \(z\in E\). 
+</p>
+<p>\(\textbf{Proof. }\)
+If there exist \(x\in E\), \(y\in E\), and some \(z\in(x, y)\) such that \(z\notin E\),  then \(E = A_z\cup  B_z\) where \(A_z =E\cap (-\infty, z)\), \(B_z  =E\cap (z,  \infty)\). Since \(x\in A_z\) and \(y\in B_z\),  \(A_z\) and \(B_z\) are nonempty. Since \(A_z\subset (-\infty,  z)\) and 
+\(B_z\subset (z, \infty)\), they are separated. Hence \(E\) is not connected. It shows that a subset \(E\) of the line \(R^1\), \(x, y\in E\), and \(x\lt z\lt y\), and \(z\notin E\), \(E\) is not connected. \\
+Conversely, suppose \(E\) is not connected. Then there are nonempty separated sets \(A\) and \(B\) such that \(A\cup B = E\). Pick \(x\in A\), \(y\in B\), and assume (without loss of generality) that \(x \lt  y\). Define 
+\[
+z = \sup (A\;\cap\;  [x, y]). 
+\]
+By the previous theorem, let \(E\) be a nonempty set of real numbers  which is bounded above. Let \(x  = \sup E\). Then \(x\in\bar{E}\). Hence \(x\in E\) if \(E\) is closed. Since \(A\cap [x, y]\subset A\), \(z\in  \bar{A}\). Since \(E\) is not connected, \(z\notin B\). In particular, \(x\leq z \lt  y\), and \(z\notin E\).\\
+If \(z\notin A\), it follows that \(x\lt z\lt y\), for \(z\) is the supremum of \(A\cap[x, y]\) and \(x\in A\). \(z\notin E\) for \(z\notin B\).\\
+If \(z\in A\), then \(z\notin \bar{B}\) for \(E\) is not connected. Hence there exists \(z_1\) such that \(z\lt z_1\lt y\) and \(z_1\notin B\). Then \(x\lt z_1\lt y\) and \(z_1\notin E\). 
+</p>
+</section>
+
+<br>
+
+ <section>
+  <h2>Convergent Sequence</h2>
+<p>\(\textbf{Definition. }\)
+A sequence \(\{p_n\}\) in a metric space \(X\) is said to converge if there is a point \(p\in  X\) with the following property: For every \(\epsilon > 0\) there is an integer \(N\) such that \(n\geq N\) implies that \(d(p_n,  p)  \lt  \epsilon\). (Here \(d\) denotes the distance in \(X\).) We say that \(\{p_n\}\) converges to \(p\), or that \(p\) is the limit of \(\{P_n\}\). We write \(p_n\), or
+\[
+\lim_{n\rightarrow\infty} p_n  = p. 
+\]
+If \(\{p_n\}\) does not converge, it is said to diverge. 
+</p>
+
+<p>\(\textbf{Theorem. }\)
+Let \(\{p_n\}\) be a sequence in a metric space \(X\). \(\{P_n\}\) converges to \(p\in X\) if and only if every neighborhood of \(p\) contains \(p_n\) for all but finitely many \(n\).
+</p>
+<p>\(\textbf{Proof. }\)
+Suppose \(p_n\rightarrow p\) and let \(V\) be a neighborhood of \(p\). For some \(\epsilon>0\), the conditions \(d(q, p) \lt \epsilon\), \(q\in X\) imply \(q\in V\). Corresponding to this \(\epsilon\), there exists \(N\) such that \(n\geq N\) implies \(d(p_n, p) \lt  \epsilon\). Thus \(n\geq N\) implies \(p_n\in V\).
+Conversely, suppose every neighborhood of p contains all but
+finitely many of \(n\) the \(P_n\). Fix \(e>0\), and let \(V\) be the set of all \(q\in X\) such that \(d(p, q) \lt  e\). 
+By assumption, there exists \(N\) (corresponding to this \(V\)) such that \(P_n\in V\) if \(n\geq N\). Thus \(d(p_n,p)\lt e\) if \(n\geq N\); hence \( P_n >p\).
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+Suppose \(\{s_n\}\), \(\{t_n\}\) are complex sequences, and \(\lim_{n\rightarrow \infty}S_n = s\),  \(\lim_{n\rightarrow\infty} t_n = t\). Then 
+\item (a) \(\lim_{n\rightarrow \infty} (s_n  + t_n)  = s + t\); 
+\item (b) \(\lim_{n\rightarrow \infty} cs_n  = cs\),  \(\lim_{n\rightarrow \infty} ( c + s_n)  = c + s\),  for any  number  \(c\); 
+\item (c) \(\lim_{n\rightarrow \infty} s_nt_n  = st\); 
+\item (d) \(\lim_{n\rightarrow \infty} \frac{1}{s_n}= \frac{1}{s} \), provided \(s_n\neq 0\)  \((n  = 1,  2,  3, \dots)\),  and \(s\neq 0\). 
+</p>
+<p>\(\textbf{Proof. }\)
+(a) Given \(\epsilon > 0\),  there exist integers \(N_1\), \(N_2\) such that  \(n\geq N_1\) implies \(n\geq N_2\) implies 
+\[
+|s_n - s|\lt \frac{\epsilon}{2},
+\]
+\[
+|t_n - t|\lt \frac{\epsilon}{2}.
+\]
+If \(N=\max(N_1, N_2)\), then \(n\geq N\) implies 
+\[
+|(s_n+t_n)-(s+t)| = |s_n-s+t_n-t|\leq |s_n-s|+|t_n-t|\leq \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
+\]
+Thus, \(\lim_{n\rightarrow \infty} (s_n  + t_n)  = s + t\). \\
+(b) Given \(\epsilon > 0\),  there exist integers \(N\), such that \(n\geq N\) implies that \(|s_n-s|\lt \epsilon\) and \(|s_n - s|\lt \frac{\epsilon}{|c|}\).
+\[
+|cs_n - cs|=|c||s_n-s|\lt  |c|\frac{\epsilon}{|c|} = \epsilon.
+\]
+\[
+|(c+s_n) - (c+s)|=|s_n-s|\lt \epsilon.
+\]
+(c) We use  the equation that 
+\[
+s_nt_n-st = (s_n-s)(t_n-t) + s(t_n-t)+ t(s_n  - s). 
+\]
+Given \(\epsilon > 0\), there are integers \(N_1\), \(N_2\) such that 
+\(n\geq N_1\) implies 
+\[
+|s_n  - s| \lt  \sqrt{\epsilon},
+\]
+\(n\geq N_2\) implies 
+\[
+| t_n  - t| \lt  \sqrt{2}|. 
+\]
+If we take \(N = \max(N_1, N_2)\), \(n\geq N\)  implies 
+\[
+|(s_n-s)(t_n-t)|=|s_n-s||t_n-t|\lt \epsilon,
+\]
+\[
+|(s_n-s)(t_n-t)-0|\lt \epsilon,
+\]. Thus,
+\[
+\lim_{n\rightarrow\infty} (s_n - s)(t_n - t) = 0.
+\]
+We now apply (a)  and (b)  to (1),  and conclude that 
+lim \((s_nt_n  - st)= 0\).
+</p>
+</section>
+
+<br>
+
+<section>
+  <h3>Cauchy Sequence</h3>
+<p>\(\textbf{Definition. }\)[Cauchy Sequence]
+A sequence \(\{p_n\}\) in a metric space \(X\) is said to be a Cauchy sequence if for every \(\epsilon > 0\) there is an integer \(N\) such that \(d(p_n , p_m) \lt  \epsilon\) if \(n\geq N\) and \(m\geq N\).
+</p>
+<p>\(\textbf{Definition. }\)[Diameter]
+Let \(E\) be a nonempty subset of a metric space \(X\), and let \(S\) be the  set of all real numbers of the form \(d(p, q)\), with \(p\in E\) and \(q\in E\). The sup (least upper bound) of \(S\) is called the diameter of \(E\). 
+</p>
+<p>\(\textbf{Remark. }\)
+If \(\{p_n\}\) is a sequence in \(X\) and if \(E_N\) consists of the points \(P_N, P_{N+1} ,P_{N+2}, \dots\), it is clear from the two preceding definitions that \({p_n}\) is a Cauchy sequence if and only if 
+\[
+\lim diam E_N= 0. 
+\]
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(\overline{E}\) is the closure of a set \(E\) in a metric space \(X\), then 
+\[
+diam\overline{E} = diam E. 
+\]
+</p>
+<p>\(\textbf{Proof. }\)
+Since \(E\subset \overline{E}\), 
+\[
+diam E\leq diam\overline{E}.
+\]
+Fix \(\epsilon > 0\), and choose \(p\in \overline{E}\), \(q\in \overline{E}\). By the definition of \(E\),  there are limit points points \(p'\), \(q'\), in \(E\) such that \(d(p, p') \lt \epsilon\), \(d(q,  q') \lt  \epsilon\). At the same time, \(d(p',q')\leq diam\overline{E}\). Since \(E\) is in a metric space \(X\),
+\[
+d(p, q)\leq  d(p, q')+ d(q', q)\leq d(p, p') + d(p', q')  + d(q', q) 
+\lt  2\epsilon + d(p', q')\leq 2\epsilon + diam E. 
+\]
+It follows  that \(diam \overline{E}\leq  2\epsilon + diam E\), and since \(\epsilon\) was arbitrary, \(diam\overline{E}\leq diam E\). Therefore, \(diam E=diam\overline{E}\). 
+</p>
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(K_n\) is a sequence of compact sets in \(X\) such that \(K_n\supset K_{n+i}\)  \((n  = 1,  2,  3, \dots)\) and if 
+\[
+\lim diam K_n= 0,
+\]
+then \(\bigcap_1^\infty K_n\) consists of exactly one point.
+</p>
+<p>\(\textbf{Proof. }\)
+Assume \(K =  \bigcap_1^\infty K_n\). We know that if \(\{K_\alpha\}\) is a collection of compact subsets of a metric space \(X\) such that the intersection of every finite subcollection of \(\{K_\alpha\}\) is nonempty, then \(\cap_1^\infty K_\alpha\) is nonempty. Since \(K_n\supset K_{n+1}\), \(K\) is not empty. If \(K\) contains more than one point (i.e, there are two different points), then \(diam K > 0\). But for each \(n\),  \(K_n\supset K\) so that \(diam K_n\geq diam K\). However, \(\lim_{n\rightarrow\infty} diam K_n=0\), which means \(\lim_{n\rightarrow\infty} diam K_n=0\geq diam K\). Contradiction exists.
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+In any metric space \(X\), every convergent sequence is a Cauchy sequence.
+</p>
+<p>\(\textbf{Proof. }\)
+If \(p_n\rightarrow p\) and if \(\epsilon > 0\), there is an integer \(N\) such  that  \(d(p, p_n)\lt \epsilon\) for all \(n\geq N\). Thus, there exists \(m\geq N\) such that \(d(p, p_m)\lt \epsilon\). Hence,
+\[
+d(p, p_n)\lt \frac{1}{2}\epsilon,
+\]
+\[
+d(p, p_m)\lt \frac{1}{2}\epsilon.
+\]
+\[
+d(p_n, p_m)\leq d(p_n, p) + d(p, p_m)  \lt  \epsilon.
+\]
+Thus \({p_n}\) is a Cauchy sequence.
+</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Theorem. }\)
+If \(X\) is a  compact metric space and if \(\{p_n\}\) is a Cauchy sequence in \(X\), then \(\{p_n\}\) converges to some point of \(X\).
+</p>
+<p>\(\textbf{Proof. }\)
+Let \(\{p_n\}\) be a Cauchy sequence in the compact space \(X\). For
+\(N  =  1,  2,  3, \dots\), let \(E_N\) be the set consisting of \(P_N,  P_{N+1}, P_{N+2}, \dots\). Since \(\{p_n\}\) is a Cauchy sequence,  
+\[
+\lim_{N\rightarrow\infty} diam E_N= 0. 
+\]
+Since \(E_N\subset \overline{E}_N\), we know from the previous theorem that \( diam E_N=diam\overline{E}_N\). Thus,
+\[
+\lim_{N\rightarrow\infty} diam E_N = \lim_{N\rightarrow\infty}diam\overline{E}_N=0. 
+\]
+We know that closed subsets of compact sets are  compact from the previous theorem,  so each \(\overline{E_N}\) is  compact (Theorem  2.35). Since \(E_N\supset E_{N+1}\), \(\overline{E}_N\supset \overline{E}_{N+1}\). Theorem  3.10(b) shows now that there is a unique \(p\in X\) which lies 
+in every \(\overline{E}_N\). Let \(\epsilon> 0\) be given. Since
+\[
+\lim_{N\rightarrow\infty}diam\overline{E}_N=0,
+\]
+there is an integer \(N_0\) such that \(diam E_N  \lt \epsilon\) if \(N\geq N_0\). Since \(p\in \overline{E}_N\), it follows that \(d(p, q)\lt dim \overline{E}_n\lt  \epsilon\) for every \(q\in \overline{E}_N\), hence every \(q\in E_N\). In other words, \(d(p,  p_n) \lt \epsilon\) if \(n\geq N_0\).
+</p>
+
+<p>\(\textbf{Remark. }\)
+The difference between the definition of convergence and the definition of a Cauchy sequence is that the limit is explicitly involved in the former, but not in the latter. 
+</p>
+<br>
+<p>\(\textbf{Theorem. }\)
+In \(R^k\), every Cauchy sequence converges. 
+</p>
+<p>\(\textbf{Proof. }\)
+Let \(\{x_n\}\) be a Cauchy sequence in \(R^k\). For \(N  =  1,  2,  3,\dots \),  let \(E_N\) be the set consisting of \(x_N,  x_{N+1}, x_{N+2}, \dots\). For some \(N\), \(diam E_N\lt  1\). The range of \(\{x_n\}\): \(\{x_1, \dots, x_{N-1}\}\cup E_N\). Since \(diam E_N\lt 1\), for any \(i\in\{N, N+1 ,\dots\}\), \(E_N\subset N_1(x_i)\). Thus, \(E_N\subset N_1(x_N)\) and the range of \(\{x_n\}\): \(\{x_1, \dots, x_{N-1}\}\cup N_1(x_N)\). Hence \(\{x_n\}\) is bounded. Since every bounded subset of \(R^k\) has compact closure in \(R^k\) (Theorem  2.41), 
+(c)  follows  from  (b).
+</p>
+</section>
+
+<br>
+
+ <section>
+  <h2>Change of Variables</h2>
+<p>\(\textbf{Theorem. }\)[Change of Variable theorem]
+Let \(g: A\rightarrow B\) be a diffeomorphism of open sets in \(\mathbb{R}^n\). Let \(f : B\rightarrow \mathbb{R}\) be a continuous function. Then \(f\) is integrable over \(B\) if and only if the function \((f\circ g)|\text{det} Dg|\) is integrable over\(A\); in this case,
+\[
+\int_B f = \int_A (f\circ g)|\text{det} Dg|.
+\]
+</p>
+<br>%%%%%%%%%%%%%%
+<p>
+  \(\textbf{Lemma. }\)
+Let \(g : A\rightarrow B\) be a diffeomorphism of open sets in
+\(\mathbb{R}^n\). Then for every continuous function \(f : B\rightarrow\mathbb{R}\) that is integrable
+over \(B\), the function \((f\circ g)|\text{det} Dg|\) is integrable over \(A\), and
+\[
+\int_B f= \int_A (f\circ g)|\text{det} D g|.
+\]
+</p>
+<br>%%%%%%%%%%%%%%%
+<p>
+  \(\textbf{Lemma. }\)
+Let \(A\) be open in \(\mathbb{R}^n\); let \(g : A\rightarrow \mathbb{R}^n\) be a function
+of class \(C^1\). If the subset \(E\) of \(A\) has measure zero in \(\mathbb{R}^n\), then the set
+\(g(E)\) also has measure zero in \(\mathbb{R}^n\).
+</p>
+ </section>
+
+<br>
+
+ <section>
+  <h2>Manifold</h2>
+<br>%%%%%%%%%%%%%%%%%
+<p>\(\textbf{Definition. }\)[\(k\)-Manifold]
+Let \(k > 0\). Suppose that \(M\) is a subspace of \(\mathbb{R}^n\) having
+the following property: For each \(p\in M\), there is a set \(V\) containing \(p\) that
+is open in \(M\), a set \(U\) that is open in \(\mathbb{R}^k\)
+, and a continuous map \(a : U\rightarrow V\) carrying \(U\) onto \(V\) in a one-to-one fashion, such that:
+\item (1) \(a\) is of class \(C^r\).
+\item (2) \(a^{-1}: V\rightarrow U\) is continuous.
+\item (3) \(Da(x)\) has rank \(k\) for each \(x\in U\).
+Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of class \(C^r\). The map \(a\) is called a coordinate patch on \(M\) about \(p\).
+</p>
+ </section>
       
     <section id = "References">
-    <h2>References</h2>
+    <section><h2>References</h2>
     <ul>
       <li>
-        First Initial. Last name, "Book name", Publications, 
-        Edition, Year.
+        <a href="https://archive.math.ksu.edu/course?course=qe_algebra">Qualifying Exams Kansas State Mathematics Ph.D. Program (Algebra Archive)</a>
       </li>
     </ul>
   </section>
