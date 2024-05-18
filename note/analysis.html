@@ -559,7 +559,7 @@ Hence,
 {\bar z}^2 = (u, v) = w, 
 \]
 for \(v\leq 0\). 
-Therefore, for \(w = u +iv\), where \(u\neq 0\) or \(v\neq 0\), it has square roots \({\left (\frac{|w|+u}{2}\right )}^{1/2}+{\left (\frac{|w|-u}{2}\right )}^{1/2}i\) and \(-{\left (\frac{|w|+u}{2}\right )}^{1/2}-{\left (\frac{|w|-u}{2}\right )}^{1/2}i\) for \(v\geq 0\). If \(v\leq 0\), then it has square roots \({\Bigg (\frac{|w|+u}{2}\Bigg )}^{1/2}-{\Bigg (\frac{|w|-u}{2}\Bigg )}^{1/2}i\) and \(-{\Bigg (\frac{|w|+u}{2}\Bigg )}^{1/2}+{\Bigg (\frac{|w|-u}{2}\Bigg )}^{1/2}i\). When \(w = 0\), there only exists one square root, which is \(0\). 
+Therefore, for \(w = u +iv\), where \(u\neq 0\) or \(v\neq 0\), it has square roots \({\left (\frac{|w|+u}{2}\right )}^{1/2}+{\left (\frac{|w|-u}{2}\right )}^{1/2}i\) and \(-{\left (\frac{|w|+u}{2}\right )}^{1/2}-{\left (\frac{|w|-u}{2}\right )}^{1/2}i\) for \(v\geq 0\). If \(v\leq 0\), then it has square roots \({\left (\frac{|w|+u}{2}\right )}^{1/2}-{\left (\frac{|w|-u}{2}\right )}^{1/2}i\) and \(-{\left (\frac{|w|+u}{2}\right )}^{1/2}+{\left (\frac{|w|-u}{2}\right )}^{1/2}i\). When \(w = 0\), there only exists one square root, which is \(0\). 
 </p>
 
 </section>
@@ -880,25 +880,25 @@ I will prove it with mathematical contradiction. If there exists a limit point \
 <p>\(\textbf{Theorem. }\)
 Let \(\{E_\alpha\}\) be a (finite or infinite) collection of sets \(E_\alpha\). Then
 \[
-\Bigg(\bigcup_\alpha E_\alpha\Bigg)^c = \bigcap_\alpha (E_a^c).
+\left(\bigcup_\alpha E_\alpha\right)^c = \bigcap_\alpha (E_a^c).
 \]
 </p>
 <p>\(\textbf{Proof. }\)
-If \(x\in \Bigg(\bigcup_\alpha E_\alpha\Bigg)^c\), then \(x\notin \bigcup_\alpha E_\alpha\); hence \(x\notin E_\alpha\) for any \(\alpha\), hence \(x\in E_\alpha^c\) for every \(\alpha\), so that \(x\in\bigcap_\alpha (E_a^c)\). Thus, 
+If \(x\in \left(\bigcup_\alpha E_\alpha\right)^c\), then \(x\notin \bigcup_\alpha E_\alpha\); hence \(x\notin E_\alpha\) for any \(\alpha\), hence \(x\in E_\alpha^c\) for every \(\alpha\), so that \(x\in\bigcap_\alpha (E_a^c)\). Thus, 
 \[
-\Bigg(\bigcup_\alpha E_\alpha\Bigg)^c\subset \bigcap_\alpha (E_a^c).
+\left(\bigcup_\alpha E_\alpha\right)^c\subset \bigcap_\alpha (E_a^c).
 \]
 Conversely, if \(x\in\bigcap_\alpha (E_a^c)\), then \(x\in E_a^c\) for every \(\alpha\), hence \(x\notin E_\alpha\) for any \(\alpha\), hence \(x\notin\bigcup_\alpha E_\alpha\), so that \(x\in \Bigg(\bigcup_\alpha E_\alpha\Bigg)^c\). Thus,
 \[
-\bigcap_\alpha (E_a^c)\subset \Bigg(\bigcup_\alpha E_\alpha\Bigg)^c.
+\bigcap_\alpha (E_a^c)\subset \left(\bigcup_\alpha E_\alpha\right)^c.
 \]
 It follows that 
 \[
-\Bigg(\bigcup_\alpha E_\alpha\Bigg)^c = \bigcap_\alpha (E_a^c).
+\left(\bigcup_\alpha E_\alpha\right)^c = \bigcap_\alpha (E_a^c).
 \]
 </p>
  
-<br>%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 Let \(\{E_\alpha\}\) be a (finite or infinite) collection of sets \(E_\alpha\). Then
 \[
@@ -906,13 +906,13 @@ Let \(\{E_\alpha\}\) be a (finite or infinite) collection of sets \(E_\alpha\). 
 \]
 </p>
 <p>\(\textbf{Proof. }\)
-If \(x\in \Bigg(\bigcap_\alpha E_\alpha\Bigg)^c\), then \(x\notin \bigcap_\alpha E_\alpha\); hence \(x\notin E_\alpha\) for some \(\alpha\), hence \(x\in E_\alpha^c\) for some \(\alpha\), so that \(x\in\bigcup_\alpha (E_a^c)\). Thus, 
+If \(x\in \left(\bigcap_\alpha E_\alpha\right)^c\), then \(x\notin \bigcap_\alpha E_\alpha\); hence \(x\notin E_\alpha\) for some \(\alpha\), hence \(x\in E_\alpha^c\) for some \(\alpha\), so that \(x\in\bigcup_\alpha (E_a^c)\). Thus, 
 \[
-\Bigg(\bigcap_\alpha E_\alpha\Bigg)^c\subset \bigcup_\alpha (E_a^c).
+\left(\bigcap_\alpha E_\alpha\right)^c\subset \bigcup_\alpha (E_a^c).
 \]
 Conversely, if \(x\in\bigcup_\alpha (E_a^c)\), then \(x\in E_a^c\) for some \(\alpha\), hence \(x\notin E_\alpha\) for some \(\alpha\), hence \(x\notin\bigcap_\alpha E_\alpha\), so that \(x\in \Bigg(\bigcap_\alpha E_\alpha\Bigg)^c\). Thus,
 \[
-\bigcup_\alpha (E_a^c)\subset \Bigg(\bigcap_\alpha E_\alpha\Bigg)^c.
+\bigcup_\alpha (E_a^c)\subset \left(\bigcap_\alpha E_\alpha\right)^c.
 \]
 It follows that 
 \[
@@ -920,7 +920,7 @@ It follows that
 \]
 </p>
  
-<br>%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 A set \(E\) is open if and only if its complement is closed.
 </p>
@@ -1103,13 +1103,13 @@ Closed subsets of compact sets are compact.
 Suppose that \(F\subset K\subset X\). \(K\) is compact and \(F\) is closed relative to \(X\). Let \(\{V_\alpha\}\) be an open cover of \(F\), thus \(F\subset \bigcup_\alpha V_\alpha\). Since \(F\) is closed in \(X\), \(F^c\) is open in \(X\). Since \(F^c\cup F = X\), \(K\subset (F\cup F^c)\subset (\bigcup_\alpha V_\alpha)\cup F^c\). Thus, \(\{V_\alpha, F^c\}\) is an open cover of \(K\). Since \(K\) is compact, \(F\subset K\subset (\bigcup_{i=1}^n V_{\alpha_i} \cup F^c)\). Since \(F\cap F^c=\emptyset\), \(F\subset (\bigcup_{i=1}^n V_{\alpha_i} \cup F^c)\) indicates that \(F\subset \bigcup_{i=1}^n V_{\alpha_i}\) for any \(\{V_\alpha\}\). Therefore, \(F\) is compact. 
 </p>
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<br>
 
 <p>\(\textbf{Corollary. }\)If \(F\) is closed and \(K\) is  compact, then \(F\cap  K\) is compact.</p>
 <p>\(\textbf{Proof. }\)
 Since \(K\) is compact, \(K\) is closed. Since for any collection \(\{F_\alpha\}\) of closed sets, \(\bigcap_\alpha F_\alpha\) is closed. Hence, \(F\cap K\) is closed. Since \(F\cap K\subset K\), and closed subsets of compact sets are compact, \(F\cap K\) is compact.  
 </p>
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 If \(\{K_\alpha\}\) is a collection of compact subsets of a metric space \(X\) such that the intersection of every finite subcollection of \(\{K_\alpha\}\) is nonempty, then \(\cap_1^\infty K_\alpha\) is nonempty.
 </p>
@@ -1121,11 +1121,11 @@ K_1\subset \bigcup_{i=1}^n G_{\alpha_i} = \bigcup_{i=1}^n K_{\alpha_i}^c = (\big
 Therefore, it shows that \(K_1\cap \bigcap_{i=1}^n K_{\alpha_i}=\emptyset\), which means intersection of every finite subcollection of \(K_\alpha\) is empty. 
 </p>
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<br>
 <p>\(\textbf{Corollary. }\)
 If \(\{K_n\}\) is a sequence of nonempty compact sets such that \(K_n\supset k_{n+1}\). \((n = 1, 2, 3\dots )\), then \(\cap_1^\infty K_n\)  is not empty.
 </p>
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 If \(E\) is an infinite subset of a compact set \(K\), then \(E\) has a limit point in \(K\).
 </p>
@@ -1133,7 +1133,7 @@ If \(E\) is an infinite subset of a compact set \(K\), then \(E\) has a limit po
 I will prove it with contrapositve. If \(K\) does not have a limit point of \(E\), then, for each \(q\in K\), there exists a neighborhood of \(q\), \(V_q\), which contains only \(q\). Hence, there is no finite subcollection  of \({V_q}\) can cover \(E\) since \(E\) is infinite, which implies that \(E\) is not compact relative to \(K\). Based on the previous theorem, suppose \(K\subset Y\subset X\), then \(K\) is compact relative to \(X\) if and only if \(K\) is compact relative to \(Y\). Since \(E\subset K\) and \(E\) is not compact relative to \(K\), then \(K\) is not compact either. 
 </p>
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 If \(\{I_n\}\) is a sequence of intervals in \(R_1\), such that \(I_n\supset I_{n+t}\) \((n  = 1, 2, 3,\dots)\), then \(\bigcap_1^\infty I_n\) is not empty.
 </p>
@@ -1145,13 +1145,13 @@ a_n\leq a_{m+n}\leq b_{m+n}\leq b_m,
 so that \(a_n\leq  b_m\) for each \(m\), which implies that \(b_m\) is a upper bound of \(E\). Thus, \(x\leq b_m\) for all \(m\). Since  \(a_m\leq x\), we know that \(a_m\leq x\leq b_m\) for all \(m\in R\). Hence, \(x\in I_m\) for all \(m\). Therefore, \(\bigcap_1^\infty I_n\) is not empty. 
 </p>
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<br>
 <p>
   \(\textbf{Definition. }\)[\(k\)-cell]
 If \(a_i\lt  b_i\); for \(i =1, \dots, k\) the set of all points \(x =  (x_1, \dots, x_k)\) in \(R^k\) whose coordinates satisfy the  inequalities  \(a_i\leq x_i\leq b_i\); \((1\leq i\leq k)\) is called a \(k\)-cell.
 </p>
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 Let \(k\) be a positive integer. If \(\{I_n\}\) is a sequence of \(k\)-cells such that \(I_n\supset I_{n+1}\) \((n = 1, 2, 3, \dots)\), then \(\bigcap_1^\infty I_n\) is not empty. 
 </p>
@@ -1202,7 +1202,7 @@ tradicts (b).
  
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<br>
 <p>\(\textbf{Theorem. }\)
 If a set \(E\) in \(R^k\) has one of the following three properties,  then it has the other two: 
 \item (a) \(E\) is closed and bounded. 
@@ -1289,7 +1289,7 @@ finitely many of \(n\) the \(P_n\). Fix \(e>0\), and let \(V\) be the set of all
 By assumption, there exists \(N\) (corresponding to this \(V\)) such that \(P_n\in V\) if \(n\geq N\). Thus \(d(p_n,p)\lt e\) if \(n\geq N\); hence \( P_n >p\).
 </p>
  
-<br>%%
+<br>
 <p>\(\textbf{Theorem. }\)
 Suppose \(\{s_n\}\), \(\{t_n\}\) are complex sequences, and \(\lim_{n\rightarrow \infty}S_n = s\),  \(\lim_{n\rightarrow\infty} t_n = t\). Then 
 \item (a) \(\lim_{n\rightarrow \infty} (s_n  + t_n)  = s + t\); 
@@ -1361,7 +1361,7 @@ If \(\{p_n\}\) is a sequence in \(X\) and if \(E_N\) consists of the points \(P_
 \lim diam E_N= 0. 
 \]
 </p>
-<br>%%
+<br>
 <p>\(\textbf{Theorem. }\)
 If \(\overline{E}\) is the closure of a set \(E\) in a metric space \(X\), then 
 \[
@@ -1454,7 +1454,7 @@ Let \(g: A\rightarrow B\) be a diffeomorphism of open sets in \(\mathbb{R}^n\). 
 \int_B f = \int_A (f\circ g)|\text{det} Dg|.
 \]
 </p>
-<br>%%%%%%%%%%%%%%
+<br>
 <p>
   \(\textbf{Lemma. }\)
 Let \(g : A\rightarrow B\) be a diffeomorphism of open sets in
@@ -1464,7 +1464,7 @@ over \(B\), the function \((f\circ g)|\text{det} Dg|\) is integrable over \(A\),
 \int_B f= \int_A (f\circ g)|\text{det} D g|.
 \]
 </p>
-<br>%%%%%%%%%%%%%%%
+<br>
 <p>
   \(\textbf{Lemma. }\)
 Let \(A\) be open in \(\mathbb{R}^n\); let \(g : A\rightarrow \mathbb{R}^n\) be a function
@@ -1477,7 +1477,7 @@ of class \(C^1\). If the subset \(E\) of \(A\) has measure zero in \(\mathbb{R}^
 
  <section>
   <h2>Manifold</h2>
-<br>%%%%%%%%%%%%%%%%%
+<br>
 <p>\(\textbf{Definition. }\)[\(k\)-Manifold]
 Let \(k > 0\). Suppose that \(M\) is a subspace of \(\mathbb{R}^n\) having
 the following property: For each \(p\in M\), there is a set \(V\) containing \(p\) that
