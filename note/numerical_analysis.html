@@ -527,21 +527,24 @@ V & -V
         where \( f_n = f(t_n, y_n) \).
       <ul>
         <li>
-          For which value(s) of \(\theta\) is the \(\theta\)-method explicit? Implicit?
+          (a). For which value(s) of \(\theta\) is the \(\theta\)-method explicit? Implicit?
         </li>
         <li>
-          Find an expression for the local truncation error in terms of \(\theta\), \(h\), and derivatives of the exact solution \(y(t)\) to the initial value problem. What are the local truncation errors for \(\theta = 0\), \(\frac{1}{2}\), \(1\)?
+          (b). Find an expression for the local truncation error in terms of \(\theta\), \(h\), and derivatives of the exact solution \(y(t)\) to the initial value problem. What are the local truncation errors for \(\theta = 0\), \(\frac{1}{2}\), \(1\)?
         </li>
         </ul>
       </p>
       <p>
-        \(\textbf{Solution. }\)To make a method explicit, we only need values of \(y_n\) and \(f_n\).
+        \(\textbf{Solution (a). }\)To make a method explicit, we only need values of \(y_n\) and \(f_n\).
         Hence, when \(\theta = 0\), we have 
         \[ y_{n+1} = y_n + h f_n, \]
         which is explicit.
         To make a method implicit, we need values of \(f_{n+1}\). Hence, when \(\theta = 1\), we have
         \[ y_{n+1} = y_n + h f_{n+1}, \]
         which is implicit.
+      </p>
+      <p>
+        \(\textbf{Solution (b). }\)The local truncation error is given by \(\tau_{n+1} = y(t_{n+1}) - y_{n+1}\).
       </p>
     </section>
 
