@@ -96,9 +96,18 @@
         \[
         \begin{align}
         l(\theta) &= \log L(\theta) = n\log 2 + 2n\log\theta - 5\sum_{i=1}^n\log x_i - \theta\sum_{i=1}^n\frac{1}{x_i^2}.
+        \frac{\partial l(\theta)}{\partial \theta} &= \dfrac{2n}{\theta} - \sum_{i=1}^n\frac{1}{x_i^2}.
         \end{align}
         \]
       </p>
+      We set the derivative of the log-likelihood function to zero to find the maximum likelihood estimator of \( \theta \). 
+      Thus, we have 
+      \[
+      \begin{align}
+      \dfrac{2n}{\hat{\theta}} - \sum_{i=1}^n\frac{1}{x_i^2} &= 0 \\
+      \hat{\theta} &= \dfrac{2n}{\sum_{i=1}^n\frac{1}{x_i^2}}.
+      \end{align}
+      \]
     </section>
 
     <section id="References">
