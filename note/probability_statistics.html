@@ -103,22 +103,66 @@
         \begin{align}
         I(\theta) &= -E\left[ \frac{\partial^2}{\partial \theta^2} \log f_\theta(X) \right] \\
         &= -E\left[ \frac{\partial^2}{\partial \theta^2} \log \left( \frac{3\theta^3}{(X+\theta)^4} \right) \right] \\
-        &= -E\left[ \frac{\partial^2}{\partial \theta^2} \left( 3\log\theta + 3\log\theta - 4\log(X+\theta) \right) \right] \\
-        &= -E\left[ \frac{\partial^2}{\partial \theta^2} \left( 3\log\theta + 3\log\theta - 4\log(X+\theta) \right) \right] \\
-        &= -E\left[ \frac{\partial}{\partial \theta} \left( \frac{3}{\theta} + \frac{3}{\theta} - \frac{4}{X+\theta} \right) \right] \\
-        &= -E\left[ \frac{\partial}{\partial \theta} \left( \frac{6}{\theta} - \frac{4}{X+\theta} \right) \right] \\
-        &= -E\left[ \frac{\partial}{\partial \theta} \left( \frac{6}{\theta} - \frac{4}{X+\theta} \right) \right] \\
-        &= -E\left[ \frac{6}{\theta^2} + \frac{4}{(X+\theta)^2} \right] \\
-        &= -\left( \frac{6}{\theta^2} + 4E\left[ \frac{1}{(X+\theta)^2} \right] \right) \\
-        &= -\left( \frac{6}{\theta^2} + 4\int_{0}^{\infty} \frac{1}{(x+\theta)^2} \cdot \frac{3\theta^3}{(x+\theta)^4} \, dx \right) \\
-        &= -\left( \frac{6}{\theta^2} + 12\int_{0}^{\infty} \frac{1}{(x+\theta)^6} \, dx \right) \\
-        &= -\left( \frac{6}{\theta^2} + 12\int_{0}^{\infty} \frac{1}{u^6} \, du \right) \quad \text{where } u = x + \theta \\
-        &= -\left( \frac{6}{\theta^2} + 12\int_{\theta}^{\infty} \frac{1}{u^6} \, du \right) \\
-        &= -\left( \frac{6}{\theta^2} + 12\left[ \left. -\frac{1}{5u^5} \right|_{\theta}^{\infty} \right] \right) \\
-        &= -\left( \frac{6}{\theta^2} + 12\left[ 0 - \left( -\frac{1}{5\theta^5} \right) \right] \right) \\
-        &= -\left( \frac{6}{\theta^2} + \frac{12}{5\theta^5} \right) \\
-        &= -\frac{30}{5\theta^5} - \frac{12}{5\theta^5} \\
-        &= -\frac{42}{5\theta^5}.
+        &= -E\left[ \frac{\partial^2}{\partial \theta^2} \left( \log 3 + 3\log\theta - 4\log(X+\theta) \right) \right] \\
+        &= -E\left[ \frac{\partial}{\partial \theta} \left( \frac{3}{\theta} - \frac{4}{X+\theta} \right) \right] \\
+        &= -E\left[ -\frac{3}{\theta^2} + \frac{4}{(X+\theta)^2} \right] \\
+        &= -\left( -\frac{3}{\theta^2} + 4E\left[ \frac{1}{(X+\theta)^2} \right] \right) \\
+        &= \frac{3}{\theta^2} - 4E\left[ \frac{1}{(X+\theta)^2} \right].
+        \end{align}
+        \]
+        Set \(Y = \frac{1}{(X+\theta)^2}\), then \(X = \frac{1}{\sqrt{Y}} - \theta\). The density of \(Y\) is
+        \[
+        \begin{align}
+        f_Y(y) &= f_X\left( \frac{1}{\sqrt{y}} - \theta \right) \left| \frac{d}{dy} \left( \frac{1}{\sqrt{y}} - \theta \right) \right| \\
+        &= \frac{3\theta^3}{\left( \frac{1}{\sqrt{y}} - \theta + \theta \right)^4} \left| -\frac{1}{2}y^{-\frac{3}{2}} \right| \\
+        &= 3\theta^3y^2\cdot \frac{1}{2}y^{-\frac{3}{2}} \\
+        &= \frac{3}{2}\theta^3y^{\frac{1}{2}} \\
+        &= \frac{3}{2}\frac{\theta^3}{x + \theta}.
+        \end{align}
+        \]
+        Then, we have \(E[Y]\).
+        \[
+        \begin{align}
+        E\left[\frac{1}{(x + \theta)^2}\right] &= \int_{0}^{\infty} \frac{1}{(x + \theta)^2}\cdot \frac{3}{2}\frac{\theta^3}{x + \theta} \, dx \\
+        &= \frac{3}{2}\theta^3 \int_{0}^{\infty} \frac{1}{(x + \theta)^3} \, dx \\
+        &= \frac{3}{2}\theta^3 \int_{0}^{\infty} (x + \theta)^{-3} \, dx \\
+        &= \frac{3}{2}\theta^3 \left[ -\frac{1}{2(x + \theta)^2} \right]_{0}^{\infty} \\
+        &= \frac{3}{2}\theta^3 \left[ 0 - \left( -\frac{1}{2\theta^2} \right) \right] \\
+        &= \frac{3}{4}\theta.
+        \end{align}
+        \]
+        Finally, we find \(I(\theta)\).
+        \[
+        \begin{align}
+        I(\theta) &= \frac{3}{\theta^2} - 4E\left[ \frac{1}{(X+\theta)^2} \right] \\
+        &= \frac{3}{\theta^2} - 4\left( \frac{3}{4}\theta \right) \\
+        &= \frac{3}{\theta^2} - 3\theta.
+        \end{align}
+        \]
+        Now, we have the sample mean \( \overline{X} = \dfrac{1}{n}\sum\limits_{i=1}^{n}X_i \) and the efficiency of the statistic defined as two times the sample mean is
+        \[
+        \begin{align}
+        \text{Var}\left[ 2\overline{X} \right] &= 4\text{Var}\left[ \overline{X} \right] \\
+        &= 4\left( \frac{1}{n^2} \sum_{i=1}^{n} \text{Var}\left[ X_i \right] \right) \\
+        &= 4\left( \frac{1}{n^2} \sum_{i=1}^{n} \frac{3}{4}\theta^2 \right) \\
+        &= 4\left( \frac{1}{n^2} \cdot n \cdot \frac{3}{4}\theta^2 \right) \\
+        &= \frac{3\theta^2}{n}.
+        \end{align}
+        \]
+        \[
+        \begin{align}
+        E\left[ 2\overline{X} \right] &= 2E\left[ \overline{X} \right] \\
+        &= 2E\left[ \frac{1}{n}\sum_{i=1}^{n}X_i \right] \\
+        &= 2\frac{1}{n}\sum_{i=1}^{n}E\left[ X_i \right] \\
+        &= 2\frac{1}{n}\sum_{i=1}^{n}\frac{5}{2}\theta \\
+        &= 5\theta.
+        \end{align}
+        \]
+        Thus, it is not a unbiased estimator. Then, we have the efficiency of the statistic defined as two times the sample mean is
+        \[
+        \begin{align}
+        \text{Efficiency} &= \frac{E'\left[2\overline{X}\right]}{nI(\theta)} \\
+        &= \frac{5}{n\left( \frac{3}{\theta^2} - 3\theta \right)} \\
         \end{align}
         \]
       </p>
