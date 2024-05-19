@@ -544,7 +544,17 @@ V & -V
         which is implicit.
       </p>
       <p>
-        \(\textbf{Solution (b). }\)The local truncation error is given by \(\tau_{n+1} = y(t_{n+1}) - y_{n+1}\).
+        \(\textbf{Solution (b). }\)The local truncation error is given by 
+        \[\tau_{n+1} = y(t_{n+1}) - y_{n+1} - h(\theta f(t_{n+1}, y(t_{n+1})) + (1 - \theta) f(t_n, y(t_n)).\]
+        When \(\theta = 0\), we have
+        \[\tau_{n+1} = y(t_{n+1}) - y_n - h f(t_n, y(t_n)),\]
+        which is the local truncation error for \(\theta = 0\).
+        When \(\theta = \frac{1}{2}\), we have
+        \[\tau_{n+1} = y(t_{n+1}) - y_n - \frac{h}{2} (f(t_{n+1}, y(t_{n+1})) + f(t_n, y(t_n))),\]
+        which is the local truncation error for \(\theta = \frac{1}{2}\).
+        When \(\theta = 1\), we have
+        \[\tau_{n+1} = y(t_{n+1}) - y_n - h f(t_{n+1}, y(t_{n+1})),\]
+        which is the local truncation error for \(\theta = 1\).
       </p>
     </section>
 
