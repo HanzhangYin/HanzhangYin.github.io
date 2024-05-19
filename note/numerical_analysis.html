@@ -247,6 +247,39 @@
       D. Kincard & W. Cheney page.533.
     </section>
 
+    <br>
+
+    <section id = 'qr_factorization'>
+      <h2>QR Factorization</h2>
+      <p>
+        There are several wyas to compute the QR factorization of a matrix.
+        <ul>
+          <li>
+            \(\textbf{Gram-Schmidt Process. }\) The Gram-Schmidt process is a method for orthonormalizing a set of vectors. 
+            Given a set of linearly independent vectors \( \{v_1, v_2, \ldots, v_n\} \), the Gram-Schmidt process produces an orthonormal set of vectors \( \{q_1, q_2, \ldots, q_n\} \) such that \( \text{span}\{v_1, v_2, \ldots, v_n\} = \text{span}\{q_1, q_2, \ldots, q_n\} \).
+          </li>
+          <li>
+            \(\textbf{Householder Transformation. }\) The Householder transformation is a reflection across a plane. 
+            Given a vector \( x \), the Householder transformation \( H \) is defined as
+            \[
+              H = I - 2 \frac{vv^*}{v^*v},
+            \]
+            where \( v = x - \text{sign}(x_1) \|x\|_2 e_1 \) and \( e_1 \) is the first unit vector.
+          </li>
+          <li>
+            \(\textbf{Givens Rotation. }\) The Givens rotation is a rotation in the plane spanned by two vectors. 
+            Given a vector \( x \), the Givens rotation \( G \) is defined as
+            \[
+              G = \begin{bmatrix}
+                c & -s \\
+                s & c
+              \end{bmatrix},
+            \]
+            where \( c = \frac{x_1}{\|x\|_2} \) and \( s = \frac{x_2}{\|x\|_2} \).
+          </li>
+      </p>
+    </section>
+
     <section id = 'practice'>
       <h2>Qual Problems (January 2022)</h2>
       <p>
