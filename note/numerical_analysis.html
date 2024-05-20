@@ -112,8 +112,19 @@
       <p>\(\textbf{Example.}\)</p>
     </section>
 
-
     <br>
+
+    <section id = 'polynomial_interpretation'>
+      <h2>Polynomial Interpretation</h2>
+      <h3>Lagrange's Form</h3>
+      <p>
+      The Lagrange form of the interpolation polynomial is a method for constructing a polynomial that passes through a given set of points. Specifically, given a set of \( n+1 \) distinct data points \((x_0, y_0), (x_1, y_1), \ldots, (x_n, y_n)\), the Lagrange interpolation polynomial \( P(x) \) is defined as:
+      \[ P(x) = \sum_{i=0}^{n} y_i \ell_i(x) \]
+      where \( \ell_i(x) \) are the Lagrange basis polynomials given by:
+      \[ \ell_i(x) = \prod_{\substack{0 \le j \le n \\ j \ne i}} \frac{x - x_j}{x_i - x_j} \]
+      Each \( \ell_i(x) \) is a polynomial of degree \( n \) that is 1 at \( x = x_i \) and 0 at \( x = x_j \) for \( j \ne i \).
+      </p>
+    </section>
 
     <section id = 'theorem_on_polynomial_interpolation'>
       <h2>Theorem on Polynomial Interpolation</h2>
