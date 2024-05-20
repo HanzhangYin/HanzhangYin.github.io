@@ -137,6 +137,13 @@
       </p>
       <p>
         \(\textbf{Example. }\) Given the polynomial \( p(x) = 1 + 2x + 3x^2 + 4x^3 \), evaluate \( p(2) \) using Horner's algorithm.
+        \[
+        \begin{array}{cccccc}
+         & a_n & a_{n-1} & a_{n-2} & \cdots & a_0 \\
+        z_0 & & z_0 b_{n-1} & z_0 b_{n-2} & \cdots & z_0 b_0 \\
+         & b_{n-1} & b_{n-2} & b_{n-3} & \cdots & \boxed{b_{-1}} \\
+        \end{array}
+        \]
       </p>
       <p>
       \(\textbf{Theorem 5} \textit{Theorem on Horner's Method. }\)
