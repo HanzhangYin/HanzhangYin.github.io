@@ -124,6 +124,25 @@
       \[ \ell_i(x) = \prod_{\substack{0 \le j \le n \\ j \ne i}} \frac{x - x_j}{x_i - x_j} \]
       Each \( \ell_i(x) \) is a polynomial of degree \( n \) that is 1 at \( x = x_i \) and 0 at \( x = x_j \) for \( j \ne i \).
       </p>
+      <p>
+        Given points: \( (1, 1), (2, 4), (3, 9) \).
+      </p>
+      Compute the Lagrange basis polynomials \( \ell_i(x) \):
+      \[ \ell_0(x) = \frac{(x-2)(x-3)}{(1-2)(1-3)} = \frac{(x-2)(x-3)}{2} \]
+      \[ \ell_1(x) = \frac{(x-1)(x-3)}{(2-1)(2-3)} = - (x-1)(x-3) \]
+      \[ \ell_2(x) = \frac{(x-1)(x-2)}{(3-1)(3-2)} = \frac{(x-1)(x-2)}{2} \]
+      <p>
+      Construct the interpolation polynomial \( P(x) \):
+      \[ P(x) = 1 \cdot \ell_0(x) + 4 \cdot \ell_1(x) + 9 \cdot \ell_2(x) \]
+      \[ P(x) = 1 \cdot \frac{(x-2)(x-3)}{2} - 4 \cdot (x-1)(x-3) + 9 \cdot \frac{(x-1)(x-2)}{2} \]
+      Simplifying, we get:
+      \[ P(x) = \frac{(x-2)(x-3)}{2} - 4(x-1)(x-3) + \frac{9(x-1)(x-2)}{2} \]
+      Combining like terms, we find:
+      \[ P(x) = x^2 \]
+      </p>
+
+      <br>
+
       <h3>Newton's Form</h3>
       <p>
       The Newton form of the interpolation polynomial is a method for constructing a polynomial that passes through a given set of points. Specifically, given a set of \( n+1 \) distinct data points \((x_0, y_0), (x_1, y_1), \ldots, (x_n, y_n)\), the Newton interpolation polynomial \( P(x) \) is defined as:
