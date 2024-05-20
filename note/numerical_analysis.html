@@ -125,7 +125,7 @@
         \[ p(c) = a_0 + c(a_1 + c(a_2 + \cdots + c(a_{n-1} + c a_n) \cdots)). \]
       </p>
       <p>
-        Given a polynomial \( p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n \), Horner's algorithm evaluates \( p(x) \) at a point \( x = z_0 \) as follows:
+        Given a polynomial \( p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \), Horner's algorithm evaluates \( p(x) \) at a point \( x = z_0 \) as follows:
         \[
         \begin{array}{cccccc}
         & a_n & a_{n-1} & a_{n-2} & \cdots & a_0 \\
@@ -136,11 +136,11 @@
       The boxed number satisfies \(p(z_0) = b_{-1}\).
       </p>
       <p>
-        \(\textbf{Example. }\) Given the polynomial \( p(x) = 1 + 2x + 3x^2 + 4x^3 \), evaluate \( p(2) \) using Horner's algorithm.
+        \(\textbf{Example. }\) Given the polynomial \( p(x) = 4x^3 - 3x^2 + 2x - 1 \) and \( z_0 = 2 \), evaluate \( p(z_0) \). 
         \[
-        \begin{array}{cccccc}
-         & a_n & a_{n-1} & a_{n-2} & \cdots & a_0 \\
-        z_0 & & z_0 b_{n-1} & z_0 b_{n-2} & \cdots & z_0 b_0 \\
+        \begin{array}{ccccc}
+         & 4 & -3 & 2 & -1 \\
+        2 & & z_0 b_{n-1} & z_0 b_{n-2} & \cdots & z_0 b_0 \\
          & b_{n-1} & b_{n-2} & b_{n-3} & \cdots & \boxed{b_{-1}} \\
         \end{array}
         \]
