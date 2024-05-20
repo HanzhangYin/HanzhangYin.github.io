@@ -127,6 +127,17 @@
       <p>
         \(\textbf{Example. }\) Given the polynomial \( p(x) = 1 + 2x + 3x^2 + 4x^3 \), evaluate \( p(2) \) using Horner's algorithm.
       </p>
+      <p>
+      \textbf{Theorem 5} \textit{Theorem on Horner's Method}
+      Let \( p(x) = a_n x^n + \cdots + a_1 x + a_0 \). Define pairs \((\alpha_j, \beta_j)\) for \( j = n, n-1, \ldots, 0 \) by the algorithm
+      \[
+      \begin{cases}
+      (\alpha_n, \beta_n) = (a_n, 0) \\
+      (\alpha_j, \beta_j) = (a_j + x \alpha_{j+1}, \alpha_{j+1} + x \beta_{j+1}) & (n-1 \ge j \ge 0)
+      \end{cases}
+      \]
+      Then \(\alpha_0 = p(x)\) and \(\beta_0 = p'(x)\).
+      </p>
     </section>
 
     <br>
