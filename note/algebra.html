@@ -1168,7 +1168,13 @@
           \(\textbf{Problem 6. }\)Show that \(\mathbb{Q}(\sqrt[3]{2})\) is not contained in \(\mathbb{Q}(\epsilon)\) for any root of unity \(\epsilon \in \mathbb{C}\). 
         </p>
         <p>
-          \(\textbf{Proof. }\) 
+          \(\textbf{Proof. }\) We will prove it with mathematical contradiction. Suppose that it is true that  \(\mathbb{Q}(\sqrt[3]{2})\) is contained in \(\mathbb{Q}(\epsilon)\) for some \(n\)th root of unity \(\epsilon \in \mathbb{C}\). 
+          Firstly, we know that \(\mathbb{Q}(\epsilon)\cong \mathbb{Q}/\Phi_n(x)\), where \(\Phi_n(x)\) is the \(n\)th cyclotomic polynomial. Since \(\Phi_n(x)\) is irreducible over \(\mathbb{Q}\), we can know that \(\Phi_n(x)\) is separable over \(\mathbb{Q}\) since any irreducible polynomial over a characteristic zero field is separable. 
+          Then, we can know that \(\mathbb{Q}(\epsilon)\) is a galois extension over \(\mathbb{Q}\). 
+          Since \(\mathbb{Q}(\sqrt[3]{2})\) is a subfield of \(\mathbb{Q}(\epsilon)\), we can know that \(\mathbb{Q}(\sqrt[3]{2})\) is a galois extension over \(\mathbb{Q}\). 
+          The minimal polynomial of \(\sqrt[3]{2}\) is \(x^3 - 2\), which is irreducible over \(\mathbb{Q}\). 
+          However, we can know that \(x^3 - 2\) is not separable over \(\mathbb{Q}\) since it does not contain the complex roots in \(\mathbb{Q}(\sqrt[3]{2})\).
+          Hence, we have a contradiction. Therefore, we can know that \(\mathbb{Q}(\sqrt[3]{2})\) is not contained in \(\mathbb{Q}(\epsilon)\) for any root of unity \(\epsilon \in \mathbb{C}\).\(\blacksquare\)
         </p>
       </section>
 
