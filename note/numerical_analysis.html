@@ -124,6 +124,12 @@
       \[ \ell_i(x) = \prod_{\substack{0 \le j \le n \\ j \ne i}} \frac{x - x_j}{x_i - x_j} \]
       Each \( \ell_i(x) \) is a polynomial of degree \( n \) that is 1 at \( x = x_i \) and 0 at \( x = x_j \) for \( j \ne i \).
       </p>
+      <h3>Newton's Form</h3>
+      <p>
+      The Newton form of the interpolation polynomial is a method for constructing a polynomial that passes through a given set of points. Specifically, given a set of \( n+1 \) distinct data points \((x_0, y_0), (x_1, y_1), \ldots, (x_n, y_n)\), the Newton interpolation polynomial \( P(x) \) is defined as:
+      \[ P(x) = a_0 + a_1(x - x_0) + a_2(x - x_0)(x - x_1) + \cdots + a_n(x - x_0)(x - x_1) \cdots (x - x_{n-1}) \]
+      where \( a_0, a_1, \ldots, a_n \) are the divided differences of the data points.
+      </p>
     </section>
 
     <section id = 'theorem_on_polynomial_interpolation'>
