@@ -7,8 +7,8 @@
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Open algebra.html",
-            "file": "/Users/han/Documents/GitHub/HanzhangYin.github.io/note/algebra.html"
+            "name": "Open probability_statistics.html",
+            "file": "/Users/han/Documents/GitHub/HanzhangYin.github.io/note/probability_statistics.html"
         }
     ]
 }
