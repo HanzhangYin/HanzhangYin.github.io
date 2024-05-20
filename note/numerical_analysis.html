@@ -125,7 +125,17 @@
         \[ p(c) = a_0 + c(a_1 + c(a_2 + \cdots + c(a_{n-1} + c a_n) \cdots)). \]
       </p>
       <p>
-        Given a polynomial \( p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \), Horner's algorithm evaluates \( p(x) \) at a point \( x = z_0 \) as follows:
+        Given a polynomial \( p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \). Then 
+        \[
+        \begin{align}
+        b_{n-1} &= a_n \\
+        b_{n-2} &= a_{n-1} + z_0 b_{n-1} \\
+        &\vdots \\
+        b_0 &= a_1 + z_0 b_1 \\
+        p(z_0) &= a_0 + z_0 b_0
+        \end{align}
+        \]
+        Horner's algorithm evaluates \( p(x) \) at a point \( x = z_0 \) as follows:
         \[
         \begin{array}{cccccc}
         & a_n & a_{n-1} & a_{n-2} & \cdots & a_0 \\
