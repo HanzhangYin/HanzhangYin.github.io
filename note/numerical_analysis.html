@@ -678,6 +678,24 @@ V & -V
             \left\|\begin{bmatrix} \Sigma_m & 0 \\ 0 & \Sigma_m \end{bmatrix}\right\|_2 = \max\sigma_i.
         \]
         Therefore, we have \(\|B\|_2 = \|A\|_2\). \[ \tag*{$\square$} \]
+        For the second part, we prove it by contradiction. Suppose that it is not true. Then, we know that there is no singular value \(|\tilde sigma - \sigma|\leq \|E\|_2\). 
+        Hence, we can show that \(|\tilde sigma - \sigma| > \|E\|_2\) for all singular values of \(A\). 
+        If \(\tilde \sigma > \sigma\), then we have
+        \[
+          \tilde \sigma - \sigma > \|E\|_2.
+        \]
+        Let \(\sigma = \|A\|_2\). Then, we have
+        \[
+        \begin{align}
+          \tilde \sigma - \|A\|_2 &> \|E\|_2 \\
+          \tilde \sigma &> \|A\|_2 + \|E\|_2.
+        \end{align}
+        \]
+        Hence, we have \(\|\tilde A\|_2 > \tilde \sigma > \|A\|_2 + \|E\|_2\), which is a contradiction.
+        If \(\tilde \sigma \lt \sigma\), then we have
+        \[
+          \sigma - \tilde \sigma > \|E\|_2.
+        \]
 </p>
 </section>
 

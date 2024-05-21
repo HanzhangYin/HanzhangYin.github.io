@@ -63,96 +63,55 @@
       </p>
     </section>
 
-    <section id = 'schur_theorem'>
-      <h2>Schur's Theorem</h2>
-      <p>
-      \(\textbf{Theorem. }\) Every operator on a finite-dimensional complex inner product space has an upper-triangular matrix with respect to some orthonormal basis.
-      There exists an unitary matrix \(Q\in \mathbb{C}^{n\times n}\) such that \(Q^*AQ\) is upper-triangular for any \(A\in \mathbb{C}^{n\times n}\).
-      </p>
-    </section>
-
-    <br>
-
-    <section id = 'real_spertral_theorem'>
-      <h2>Real Spectral Theorem</h2>
-      <p>
-        \(\textbf{Theorem. }\) Suppose \( F = \mathbb{R} \) and \( T \in \mathcal{L}(V) \). Then the following are equivalent.  
-        <ul>
-          <li>
-            \( T \) is self-adjoint.
-          </li>
-          <li>
-            \( T \) has a diagonal matrix with respect to some orthonormal basis of \( V \).
-          </li>
-          <li>
-            \( V \) has an orthonormal basis consisting of eigenvectors of \( T \).
-          </li>
-        </ul>
-      </p>
-    </section>
-
-    <br>
-
-    <section id = 'complex_spectral_theorem'>
-      <h2>Complex Spectral Theorem</h2>
-      <p>
-        \(\textbf{Theorem.}\) Suppose \( F = \mathbb{C} \) and \( T \in \mathcal{L}(V) \). Then the following are equivalent.
-        <ul>
-          <li>
-            \( T \) is normal.
-          </li>
-          <li>
-            \(T\) has a diagonal matrix with respect to some orthonormal basis of \( V \).
-          </li>
-          <li>
-            \( V \) has an orthonormal basis consisting of eigenvectors of \( T \).
-          </li>
-        </ul>
-      </p>
-    </section>
-   
-    <br>
-
-    <section id = 'spectral_theorem_for_normal_operator'>
-      <h2>Spectral Theorem for Normal Operators</h2>
-      <p>
-        \(\textbf{Theorem. }\)A normal operator \(U\) on a finite-dimensional complex Hilbert space can be diagonalized by a unitary matrix \(V\), 
-        meaning that there exists a unitary matrix \(V\) and a diagonal matrix \(D\) such that \(U = VDV^*\).
-      </p>
-      <p>
-        \(\textbf{Proof. }\) Since \(U\) is normal, by the spectral theorem, it has a complete orthonormal set of eigenvectors. 
-        Let \(\{\lambda_1, \lambda_2, \dots, \lambda_n\}\) be the eigenvalues of \(U\), 
-        and \(\{v_1, v_2, \dots, v_n\}\) be the corresponding orthonormal eigenvectors where \(n\) is the dimension of the Hilbert space.
-        Form a matrix \(V\) whose columns are the eigenvectors \(v_1, v_2, \dots, v_n\) of \(U\). 
-        Since the eigenvectors form an orthonormal set, the matrix \(V\) is unitary, i.e., \(V^*V = VV^* = I\), where \(I\) is the identity matrix.
-        Define a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(U\) corresponding to the eigenvectors in \(V\). 
-        Specifically, \(D = \text{diag}(\lambda_1, \lambda_2, \dots, \lambda_n)\).
-        To show \(U = VDV^*\), consider the action of both sides on an arbitrary eigenvector \(v_i\) of \(U\). 
-        For the left side:
-        \[ 
-          Uv_i = \lambda_i v_i, 
-        \]
-        where \(\lambda_i\) is the eigenvalue corresponding to \(v_i\).
-        For the right side,
-        \[ 
-          VDV^*v_i = VD(\delta_{ij}v_j) = V(\lambda_i \delta_{ij}e_j) = \lambda_i Vv_i = \lambda_i v_i, 
-        \]
-        where \(\delta_{ij}\) is the Kronecker delta function and \(e_j\) is the standard basis vector with \(1\) at the \(j\)-th position and \(0\) elsewhere.
-        Since both sides have the same action on each eigenvector and eigenvectors form a basis for the Hilbert space, we conclude that \(U = VDV^*\). \(~~~~~\blacksquare\)
-      </p>
-    </section>
-
-    <br>
-
     <section id = 'normal_subgroup'>
       <h2>Normal Subgroup</h2>
       <p>
         \(\textbf{Definition. }\) Let \(G\) be a group and \(H\) be a subgroup of \(G\). 
         We say that \(H\) is a \(\textit{normal subgroup}\) of \(G\) if \(gH = Hg\) for all \(g\in G\).
       </p>
+      <p>
+        \(\textbf{Proposition. }\) Let \(\phi : G_1 \to G_2\) be a group homomorphism, with kernel \(K\). Then \(K\) is a normal subgroup of \(G_1\). Conversely, any normal subgroup of \(G_1\) is the kernel of a group homomorphism whose domain is \(G_1\). Thus, normal subgroups are exactly kernels of group homomorphisms.
+      </p>
+      <p>
+        \(\textbf{Theorem. }\)Let \(\phi : G_1 \to G_2\) be a surjective group homomorphism with kernel \(K\). Then there is a one-to-one, onto correspondence between the subgroups of \(G_1\) containing \(K\) and the subgroups of \(G_2\) given by \(H \mapsto \phi(H)\), for \(H \subseteq G_1\) containing \(K\), and \(L \mapsto \phi^{-1}(L)\), for \(L \subseteq G_2\). Under this correspondence, \(\phi(H)\) is normal in \(G_2\), if \(H\) is normal in \(G_1\) and \(\phi^{-1}(L)\) is normal in \(G_1\), if \(L\) is normal in \(G_2\).
+      </p>
+      <p>
+        \(\textbf{Corollary. }\) Let \( G \) be a group and \( N \) a normal subgroup. Then there is a one-to-one, onto correspondence between the subgroups of \( G \) containing \( N \) and the subgroups of \( G/N \). Under this correspondence, the normal subgroups of \( G \) containing \( N \) correspond to the normal subgroups of \( G/N \).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(G\) be a group and \(H \subseteq G\) a subgroup. Assume that \([G : H]\) is the smallest prime dividing the order of \(|G|\). Then \(H\) is normal in \(G\).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(G\) be a group and \(H \subset G\) a subgroup. Assume that \([G : H]\) is the smallest prime dividing the order of \(|G|\). Then \(H\) is normal in \(G\).
+      </p>
+      <p>
+        \(\textbf{LaGrange's Theorem. }\)
+        Let \(G\) be a finite group and \(H \subseteq G\) a subgroup. Then
+        \[
+        |G| = |H| \cdot (\text{number of distinct left cosets of } H)\\
+        = |H| \cdot (\text{number of distinct right cosets of } H).
+        \]
+      </p>
     </section>
 
-    <section id = 'sage_subgroup'>
+    <section id="isomorphism">
+      <h2>Isomorphism</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \(G_1\) and \(G_2\) be groups. A bijective function \(\phi: G_1\to G_2\) is called an isomorphism if for all \(a, b\in G_1\), we have
+        \[
+        \phi(ab) = \phi(a)\phi(b).
+        \]
+      </p>
+      <p>
+        \(\textbf{First Isomorphism Theorem. }\)Let \(\phi : G_1 \to G_2\) be a surjective group homomorphism with kernel \(K\). Then \(G_1/K \cong G_2\).
+      </p>
+      <p>
+        \(\textbf{Second Isomorphism Theorem. }\)
+        Let \(K \subseteq N \subseteq G\) be groups such that \(K\) and \(N\) are normal in \(G\). Then \(N/K\) is a normal subgroup of \(G/K\) and \((G/K)/(N/K) \cong G/N\).
+      </p>
+      </section>
+
+    <!-- <section id = 'sage_subgroup'>
       <h2>Sage Subgroup</h2>
       <p>
         Now, we try to define some subgroups in sagemath:
@@ -172,65 +131,175 @@
         </pre>
         </div>
       </div>
+    </section> -->
+
+    <br>
+
+
+    <section id = "center">
+      <h2>Center</h2>
       <p>
-        You can run the following code to show all the elements in the group:
+        \(\textbf{Definition. }\)Let \(G\) be a group. 
+        The set of all elements of \(G\) that commute with every element of \(G\) such that 
+        \[
+        Z(G) = \{g\in G\mid gx=xg\text{ for all }x\in G\},
+        \]
+        is called the center of \(G\). 
       </p>
-      <div class="code-box-container">
-        <div class="code-box">
-        <pre><code class="language-python">
-        <span class="comment"># Define the group Z2 x Z2 x Z2 using AbelianGroup</span>
-        <span class="keyword">sage:</span> <span class="variable">Z2xZ2xZ2</span> = <span class="function">AbelianGroup</span>(<span class="bracket">[</span><span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span><span class="bracket">]</span>)
-      
-        <span class="comment"># Iterate over all elements of the group and print them</span>
-        <span class="keyword">sage:</span> <span class="keyword">for</span> <span class="variable">g</span> <span class="keyword">in</span> <span class="variable">Z2xZ2xZ2</span>:
-        <span class="keyword">sage:</span>     <span class="function">print</span>(<span class="variable">g</span>)
-        <span class="outcome">
-        1
-        f2
-        f1
-        f1*f2
-        f0
-        f0*f2
-        f0*f1
-        f0*f1*f2</span>
-              </code>
-          </pre>
-          </div>
-        </div>
-        <p>
-          You can run the following code to show the all subgroups of the group:
-        </p>
-        <div class="code-box-container">
-        <div class="code-box">
-        <pre><code class="language-python">
-        <span class="comment"># Define the group Z2 x Z2 x Z2 using AbelianGroup</span>
-        <span class="keyword">sage:</span> <span class="variable">Z2xZ2xZ2</span> = <span class="function">AbelianGroup</span>(<span class="bracket">[</span><span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span><span class="bracket">]</span>)
-      
-        <span class="comment"># Iterate over all the subgroups and print them</span>
-        <span class="keyword">sage:</span> <span class="variable">subgroups</span> = Z2 x Z2 x Z2.<span class="function">subgroups</span>()
-        <span class="keyword">sage:</span> <span class="keyword">for</span> <span class="variable">H</span> <span class="keyword">in</span> <span class="variable">subgroups</span>:
-        <span class="keyword">sage:</span>     <span class="function">print</span>(<span class="variable">H</span>)
-        <span class="outcome">
-        Multiplicative Abelian subgroup isomorphic to C2 x C2 x C2 generated by {f0, f1, f2}
-        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0, f1}
-        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0, f1*f2}
-        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0*f2, f1}
-        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0*f2, f1*f2}
-        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0, f2}
-        Multiplicative Abelian subgroup isomorphic to C2 generated by {f0}
-        Multiplicative Abelian subgroup isomorphic to C2 generated by {f0*f2}
-        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f0*f1, f2}
-        Multiplicative Abelian subgroup isomorphic to C2 generated by {f0*f1}
-        Multiplicative Abelian subgroup isomorphic to C2 generated by {f0*f1*f2}
-        Multiplicative Abelian subgroup isomorphic to C2 x C2 generated by {f1, f2}
-        Multiplicative Abelian subgroup isomorphic to C2 generated by {f1}
-        Multiplicative Abelian subgroup isomorphic to C2 generated by {f1*f2}
-        Multiplicative Abelian subgroup isomorphic to C2 generated by {f2}
-        Trivial Abelian subgroup</span>
-                </code>
-            </pre>
-            </div>
-          </div>
+    </section>
+
+    <br>
+
+    
+    <section id = "centralizer">
+    <h2>Centralizer</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(A\) be any subset of a group \(G\). A subset of a\(G\) such that 
+        \[
+        C_G(A) = \{g\in G\mid gag^{-1}=a\text{ for all }a\in A\},
+        \]
+        is called the centralizer of \(A\) in \(G\).
+      </p>
+      <P>
+        \(\textbf{Proposition. }\)Let \(A\) be any subset of a group \(G\). Then \(C_G(A)\) is a subgroup of \(G\).
+      </P>
+      <p>
+        \(\textbf{Proof. }\)We will prove it with subgroup criterion. Let \(x, y\in C_G(A)\) and \(a\in A\). Then we have
+        \[
+        yay^{-1}=a\in A.
+        \]
+        Hence, 
+        \[
+        \begin{align}
+          y^{-1}yay^{-1}y &= y^{-1}ay = a\in A.
+        \end{align}
+        \]
+        Thus, we have \(y^{-1}\in C_G(A)\). Moreover, we have
+        \[
+        \begin{align}
+          (xy^{-1})a(xy^{-1})^{-1} &= x(y^{-1}ay)x^{-1}\\
+          &= xax^{-1} \\
+          &= a\in A.
+        \end{align}
+        \]
+        Hence, we have \(xy^{-1}\in C_G(A)\). Therefore, \(C_G(A)\) is a subgroup of \(G\). \[ \tag*{\(\square\)} \]
+      </p>
+    </section>
+
+
+    <br>
+
+    <section id = "normalizer">
+    <h2>Normalizer</h2>
+    <p>
+      \(\textbf{Definition. }\) Let \(A\) be any set of a group \(G\). A subset of \(G\) such that
+      \[
+      N_G(A) = \{g\in G\mid gAg^{-1}=A\},
+      \]
+      is called the normalizer of \(A\) in \(G\).
+    </p>
+    </section>
+
+    <br>
+
+    <section id = "stabilizer">
+      <h2>Stabilizer</h2>
+      <h3>Stabilizer of An Element</h3>
+    <p>
+      \(\textbf{Definition. }\)Let \(G\) be a group and \(x\) be an element. A subset of \(G\) such that
+      \[
+      G_x = \{g\in G\mid gx=x\},
+      \]
+      is called the stabilizer of \(x\) in \(G\).
+    </p>
+    <h3>Stabilizer of A Set</h3>
+    <p>
+      \(\textbf{Definition. }\)Let \(G\) be a group and \(X\) be a set. A subset of \(G\) such that
+      \[
+      G_X = \{g\in G\mid gx=x\text{ for all }x\in X\},
+      \]
+      is called the stabilizer of \(X\) in \(G\).
+    </p>       
+    </section>
+
+    <br>
+
+    <section id="orbit">
+      <h2>Orbit</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \(G\) be a group acting on a set \(X\). The orbit of an element \(x\in X\) is the set
+        \[
+        Gx = \{gx\mid g\in G\}.
+        \]
+      </p>
+      <p>
+        \(\textbf{Lemma. }\)Let \(G\) be a group of order \(p^t\), with \(p\) prime, and assume \(G\) acts on the finite set \(X\). If \(r\) denotes the number of orbits with just one element, then \(|X| \equiv r \pmod{p}\).
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Assume the group \( G \) acts on the set \( X \). Fix \( x \in X \). Then there is a 1-1, onto set map between \(\text{orb}(x)\) and the set of distinct left cosets of \( G_x \) given by \( g \cdot x \mapsto gG_x \). In particular, if \(\text{orb}(x)\) or \([G : G_x]\) is finite, then \(\left|\text{orb}(x)\right| = [G : G_x]\), and it follows that \(\left|\text{orb}(x)\right|\) divides \(\left|G\right|\), if \( G \) is finite.
+      </p>
+      <p>
+        \(\textbf{Class Equation. }\) Let \( G \) be a finite group. Then:
+        \[
+          |G| = |Z(G)| + \sum_{i=1}^r |c(x_i)| = |Z(G)| + \sum_{i=1}^r [G : C_G(x_i)],
+        \]
+        where the sum is taken over the distinct conjugacy classes with more than one element. Here \( Z(G) \) denotes the center of \( G \), where \( Z(G) := \{g \in G \mid gx = xg, \text{ for all } x \in G\} \).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "p_group">
+      <h2>\(p\)-group</h2>
+      <p>
+        \(\textbf{Definition(\(p\)-group). }\)A group \(G\) is called a \(p\)-group if \(|G|=p^n\) (order of \(G\) is \(p^n\)) for some prime \(p\) and some integer \(n\geq 0\).
+      </p>
+      <h2>\(p\)-subgroup</h2>
+      <p>
+        \(\textbf{Definition(\(p\)-subgroup). }\)A subgroup \(H\) of a group \(G\) is called a \(p\)-subgroup if \(|H|=p^n\) for some prime \(p\) and some integer \(n\geq 0\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = "sylow_p_subgroup">
+      <h2>Sylow \(p\)-Subgroup</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime. 
+        If \(G\) is a group of order \(p^nm\) where \(p\not\mid m\), 
+        then a subgroup \(H\) of \(G\) such that \(|H|=p^n\) is called a Sylow \(p\)-subgroup of \(G\).
+      </p>
+      <h2>\(Syl_p(G)\)</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime. 
+        The set of all Sylow \(p\)-subgroups of \(G\) is denoted by \(Syl_p(G)\).
+      </p>
+      <h2>\(n_p(G)\)</h2>
+      <p>
+        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime. 
+        The number of Sylow \(p\)-subgroups of \(G\) is denoted by \(n_p(G)\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'sylow_theorem'>
+      <h2>Sylow's Theorem</h2>
+      <p>
+      \(\textbf{Sylow's Theorem. }\) Let \( G \) be a group of order \( p^{\alpha} m \), where \( p \) is a prime not dividing \( m \).
+      <ul>
+        <li>
+        \(\textbf{First Sylow's Theorem. }\) Sylow \( p \)-subgroups of \( G \) exist, i.e., \( \text{Syl}_p(G) \neq \emptyset \).
+        </li>
+        <li>
+        \(\textbf{Second Sylow's Theorem. }\)If \( P \) is a Sylow \( p \)-subgroup of \( G \) and \( Q \) is any \( p \)-subgroup of \( G \), then there exists \( g \in G \) such that \( Q \leq gPg^{-1} \), i.e., \( Q \) is contained in some conjugate of \( P \). In particular, any two Sylow \( p \)-subgroups of \( G \) are conjugate in \( G \).
+        </li>
+        <li>
+        \(\textbf{Third Sylow's Theorem. }\)The number of Sylow \( p \)-subgroups of \( G \) is of the form \( 1 + kp \), i.e., 
+        \[ n_p \equiv 1 \mod p .\]
+        </li>
+      Further, \( n_p \) is the index in \( G \) of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).
+      </p>
     </section>
 
     <br>
@@ -239,6 +308,12 @@
       <h2>Simple Group</h2>
       <p>
         \(\textbf{Definition. }\) A group \(G\) is \(\textit{simple}\) if \(G\) is nontrivial and the only normal subgroups of \(G\) are \(\{e\}\) and \(G\).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \(G\) be a simple group of order \(60\). Then \(G\) is isomorphic to \(A_5\). 
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) The alternating group \(A_n\) is a simple group for \(n \geq 5\). In other words, there are no proper normal subgroups of \(A_n\), for \(n \geq 5\).
       </p>
     </section>
 
@@ -260,6 +335,17 @@
             (b) \( [G_{i-1} : G_i] \) is prime.
           </li>
         </ul>
+      </p>
+      <p>
+      \(\textbf{Theorem. }\) Let \( G \) be a finite group with \( |G| = p^n \), with \( p \) prime and \( n \geq 1 \). Then:
+      <ul>
+        <li>
+          (i) \( Z(G) \neq \{e\} \).
+        </li>
+        <li>
+          (ii) There is a sequence of subgroups \( \{e\} \subseteq H_1 \subseteq H_2 \subseteq \cdots \subseteq H_{n-1} \subseteq H_n = G \) such that each \( H_i \) is a normal subgroup of \( H_{i+1} \) and the quotient group \( H_{i+1}/H_i \cong \mathbb{Z}_p \).
+        </li>
+      </ul>
       </p>
     </section>
 
@@ -341,6 +427,15 @@
         ab = 0 \implies a = 0 \text{ or } b = 0.
       \]
       (i.e. there is no zero divisors in \(R\)).
+    </p>
+    <p>
+      \(\textbf{Statements of principal ideals. }\)For an integral domain \( R \):
+      <ul>
+        <li> \( a \mid b \) if and only if \( \langle b\rangle  \subseteq \langle a\rangle \). </li>
+        <li> \( \langle a \rangle= \langle b\rangle \) if and only if \( b = au \), for some unit \( u \in R \). </li>
+        <li> \( q \in R \) is irreducible if and only if \( \langle q\rangle \) is maximal among principal ideals. </li>
+        <li> \( p \in R \) is prime if and only if whenever \( ab \in \langle p\rangle \), \( a \in \langle p \rangle \) or \( b \in \langle p \rangle \). </li>
+      </ul>
     </p>
       <p>
       <ul>
@@ -463,7 +558,23 @@
     </section>
 
     <br>
+
+    <section id = 'ascending_chain_condition'>
+      <p>
+        \(\textbf{Definition. }\) Given a chain of ideals \(I_1 \subset I_2 \subset \dost\), there exists \(n_0\) such that for all \(n\geq n_0\), \(I_{n_0} =I_n\).
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) The following conditions are equivalent for the commutative ring \( R \):
+      <ul>
+        <li> \( R \) satisfies the ascending chain condition, i.e., given a chain of ideals \( I_1 \subseteq I_2 \subseteq \cdots \), there exists \( n_0 \) such that for all \( n \geq n_0 \), \( I_{n_0} = I_n \). </li>
+        <li> \( R \) satisfies the maximal condition, i.e., any non-empty collection of ideals of \( R \) has a maximal element. </li>
+        <li> Every ideal of \( R \) is finitely generated. </li>
+      </ul>
+      </p>
+    </section>
     
+    <br>
+
     <section id = 'principal_ideal_domain'>
     <h2>Principal Ideal Domain</h2>
       <p>
@@ -504,12 +615,47 @@
         Hence, every element of \(I\) can be written as a multiple of \(a\), so \(I = (a)\).
         Therefore, every ideal in a Euclidean domain is generated by a single element, and hence a Euclidean domain is a principal ideal domain. \(\blacksquare\)
       </p>
+      <p>
+        \(\textbf{Proposition.}\) Let \( R \) be a commutative ring.
+      <ul>
+          <li>An ideal \( P \subseteq R \) is a prime ideal if and only if \( R/P \) is an integral domain.</li>
+          <li>An ideal \( M \subseteq R \) is a maximal ideal if and only if \( R/M \) is a field.</li> 
+      </ul>
+    </section>
+
+    <br>
+
+    <section id = 'unique_factorization_domain'>
+      <h2>Unique Factorization Domain</h2>
+      Let \(R\) be an integral domain. Then the following are equivalent:
+      <ul>
+        <li>Every non-zero, non-unit of \(R\) can be written as a product of prime elements.</li>
+        <li>Every non-zero, non-unit in \(R\) can be written uniquely (up to order and unit multiples) as a product of irreducible elements.</li>
+      </ul>>
+      <p>
+        \(\textbf{Definition. }\) A unique factorization domain is an integral domain \(R\) such that every nonzero nonunit element of \(R\) can be written as a product of irreducible elements of \(R\) in a unique way up to order and units.
+      </p>
+      <p>
+        \(\textbf{Example 1. }\) \(\mathbb{Z}\) is a unique factorization domain.
+      </p>
+      <p>
+        \(\textbf{Example 2. }\) \(\mathbb{Z}[i]\) is a unique factorization domain.
+      </p>
+      <p>
+        \(\textbf{Example 3. }\) \(\mathbb{Z}[\sqrt{D}]\) is a unique factorization domain.
+      </p>
+      <p>
+        \(\textbf{Example 4. }\) \(\mathbb{Z}[x]\) is a unique factorization domain.
+      </p>
+      <p>
+        \(\textbf{Example 5. }\) \(\mathbb{F}[x]\) is a unique factorization domain, where \(\mathbb{F}\) is a field.
+      </p>
     </section>
 
     <br>
 
     <section id = 'polynomial_ring'>
-      <h2>Polynomial</h2>
+      <h2>Polynomial Ring</h2>
       <p>
         \(\textbf{Theorem. }\) Let \(F\) be a field. The polynomial ring \(F[x]\) is a \(\textit{Euclidean Domain}\).
         Specifically, if \(a(x)\) and \(b(x)\) are two polynomials in \(F[x]\) with \(b(x)\) nonzero, then there are unique \(q(x)\) and \(r(x)\) in \(F[x]\) such that
@@ -563,8 +709,23 @@
         </ul>
       </p>
       <p>
+        \(\textbf{Definition (Primitive). }\) A polynomial \( f \in F[x] \) is \textit{primitive} if the greatest common divisor of its coefficients is \(1\).
+        (i.e. for all prime elements \(p \in R\), \(p \not\mid f(x)\) in \(R[x]\)).
+      <p>
         \(\textbf{Proposition. }\)Every nonzero ideal of \(F[x]\) can be written uniquely as \((f)\) where
         \(f\) is monic.
+      </p>
+      <p>
+        \(\textbf{Proposition A. }\)For a UFD \(R\), if \(p \in R\) is a prime element, then \(p\) is also a prime element in \(R[x]\).
+      </p>
+      <p>
+        \(\textbf{Gauss's lemma. }\)Let \(R\) be a UFD. Then the product of primitive polynomials is primitive.
+      </p>
+      <p>
+        \(\textbf{Proposition B. }\)Suppose \(R\) is a UFD with quotient field \(K\) and \(f(x) \in R[x]\) is primitive. Then \(f(x)\) is irreducible in \(R[x]\) if and only if it is irreducible in \(K[x]\).
+      </p>
+      <p>
+        \(\textbf{Proposition C. }\)Suppose \(R\) is a UFD and \(f(x) \in R[x]\) is primitive and irreducible. Then \(f(x)\) is a prime element.
       </p>
     </section>
 
@@ -642,6 +803,29 @@
         \]
         We say that a field extension \( L/K \) is a \textit{splitting field} if \( f(x) \) splits in \( L \) and there is no proper intermediary subfield \( M \) in which \( f(x) \) splits.
       </p>
+      <p>
+        \(\textbf{Definition. }\) For a finite extension of fields \( F \subseteq K \), \( \alpha \in K \) is a \(\textit{primitive element}\) if \( K = F(\alpha) \).
+      </p>
+      <p>
+        \(\textbf{Primitive Element Theorem. }\) Suppose \( F \subseteq K \) is an extension of fields satisfying \( [K : F] \lt \infty \). If \( \mathbb{Q} \subseteq F \), then there exists a primitive element \( \alpha \in K \) such that \( K = F(\alpha) \).
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Let \( 0 \neq f(x) \in F[x] \) be a non-constant polynomial. The following are equivalent:
+        <ul>
+          <li>
+            \(\text{GCD}(f(x), f'(x)) = 1\)
+          </li>
+          <li>
+            \( f(x) \) and \( f'(x) \) have no root in common (say, in the splitting field of \( f(x) \) over \( F \)).
+          </li>
+          <li>
+            \( f(x) \) has distinct roots in its splitting field over \( F \).
+          </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Corollary. }\) If \( F \) is a field containing \( \mathbb{Q} \) and \( p(x) \in F[x] \) is irreducible, then \( p(x) \) has distinct roots in \( K \), the splitting of \( p(x) \) over \( F \).
+      </p>
     </section>
 
     <br>
@@ -658,15 +842,15 @@
       <p>
         Let us briefly talk about how to use sagemath to find the minimal polynomial of an element. Suppose that your \(\alpha = \sqrt{2}\).
       </p>
-      <div class="code-box-container">
+      <!-- <div class="code-box-container">
       <div class="code-box">
-      <!-- <pre><code>
+      <pre><code>
       <span class = 'keyword'>sage:</span> var('a')
       <span class = 'keyword'>sage:</span> a = sqrt(<span class = 'number'>2</span>); a
       <span class = 'outcome'>sqrt(2)</span>
       <span class = 'keyword'>sage:</span> p = a.minpoly(); p
       <span class = 'outcome'>x^2 - 2</span>
-      </code></pre> -->
+      </code></pre>
       <pre><code> 
       <span class="keyword">sage:</span> <span class="function">var</span>(<span class="string">'a'</span>) 
       <span class="keyword">sage:</span> a <span class="operator">=</span> <span class="function">sqrt</span><span class="group">(</span><span class="number">2</span><span class="group">)</span>; a 
@@ -675,7 +859,7 @@
       <span class="outcome">x^2 - 2</span> 
     </code></pre>
       </div>
-      </div>
+      </div> -->
     </section>
 
     <br>
@@ -686,7 +870,7 @@
         \(\textbf{Definition. }\) Suppose that \(F\subset K\) and \([K: F]\lt\infty\). We say that \(\alpha\in K\) is a \(\textit{primitive element}\) for \(F\subset K\) if \(K = F(\alpha)\).
       </p>
       <p>
-        \(textbf{Lemma. }\) An extension \(F \subset L\) has degree \([L: F] = 1\) if and only if \(F = L\).
+        \(\textbf{Lemma. }\) An extension \(F \subset L\) has degree \([L: F] = 1\) if and only if \(F = L\).
       </p>
       <p>
         \(\textbf{Proposition. }\) Let \(F \subset K\) and \([K: F]\lt\infty, |F| = \infty\). 
@@ -714,6 +898,13 @@
       <p>
       \(\textbf{Proposition. }\)
         Assume that \(F \subset L\) is a field extension, and let \(\alpha \in L\). Then \(\alpha\) is algebraic over \(F\) if and only if \(F[\alpha] = F(\alpha)\).
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let \( F \subseteq K \) be fields such that \( K \) is the splitting field of \( f(x) \) over \( F \). If the irreducible polynomial \( p(x) \in F[x] \) has a root in \( K \), then it splits over \( K \).
+      </p>
+      <p>
+        \(\textbf{Crucial Proposition. }\) Let \( F_1 \subseteq K_1 \), \( F_2 \subseteq K_2 \) be fields, \( p_1(x) \in F_1[x] \), \( p_2(x) \in F_2[x] \) be monic irreducible polynomials of degree \( d \), and \( \alpha_1 \in K_1 \), \( \alpha_2 \in K_2 \) roots of \( p_1(x) \) and \( p_2(x) \), respectively. Suppose \( \sigma : F_1 \to F_2 \) is an isomorphism such that \( p_2(x) = p_1(x)^\sigma \). Then there exists an isomorphism \( \tilde{\sigma} : F_1(\alpha_1) \to F_2(\alpha_2) \) extending \( \sigma \) such that \( \tilde{\sigma}(\alpha_1) = \alpha_2 \).
+        We noted that in the proposition, \( p_1(x)^\sigma \) denotes the polynomial in \( F_2[x] \) obtained by applying \( \sigma \) to the coefficients of \( p_1(x) \).
       </p>
     </section>
 
@@ -768,14 +959,67 @@
         \(\textbf{Definition. }\)An \(\textbf{algebraic extension}\) \(L\) of a field \(K\) is a field extension such that every element of \(L\) is algebraic over \(K\). In other words, if \(L\) is an algebraic extension of \(K\), then for every \(\alpha \in L\), there exists a non-zero polynomial \(f(x) \in K[x]\) such that \(f(\alpha) = 0\).
       </p>
       <p>
+        \(\textbf{Definition. }\) A field \(\mathbb{F}\) is algebraically closed if every non-constant polynomial in \(\mathbb{F}[x]\) has a root in \(\mathbb{F}\).
+      </p>
+      <p>
         \(\textbf{Definition. }\)Let \(F\) be a field. The set of all elements in \(F\) that are algebraic over \(K\) is denoted by \(\overline{K}\) and is called the \(\textbf{algebraic closure}\) of \(K\) in \(F\).
       </p>
       <p>
-        \(\textbf{Definition. }\)An algebraic closure of a field \(F\) is an algebraic extension \(K\) of \(F\) such that every polynomial in \(F[x]\) splits in \(K\).
+        \(\textbf{Alternate Definition. }\)An algebraic closure of a field \(F\) is an algebraic extension \(K\) of \(F\) such that every polynomial in \(F[x]\) splits in \(K\).
+      </p>
+      <p>
+        \(\textbf{Theorem.}\) Let \( F \) be a field, then there exists an algebraic closure for \( F \), i.e., a field \( \overline{F} \subseteq F \) such that \( \overline{F} \) is algebraically closed and algebraic over \( F \).
       </p>
     </section>
 
     <br>
+
+    <section id = 'galois_group'>
+      <h2>Galois Group</h2>
+      <p>
+        \(\textbf{Definition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is the set
+        \[ \{\sigma: L \rightarrow L \mid \sigma \text{ is an automorphism, } \sigma(a) = a \text{ for all } a \in F\}. \]
+        In other words, \( \text{Gal}(L/F) \) consists of all automorphisms of \( L \) that are the identity on \( F \). The basic structure of \( \text{Gal}(L/F) \) is as follows.
+      </p>
+      <p>
+      \(\textbf{Theorem. }\) If \( L \) is the splitting field of a separable polynomial in \( F[x] \), then the Galois group of \( f \) over \( F \) has order \( \left| \text{Gal}(L/F) \right| = [L : F] \).
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is a group under composition of functions.
+      </p>
+      <p>
+        \(\textbf{Proof. }\)We need to check the following properties:
+        <ul>
+          <li>
+            \( \text{Gal}(L/F) \) is closed under composition of functions.
+          </li>
+             <ul>
+              <li>
+                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \). 
+                Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
+              </li>
+             </ul> 
+        </ul> 
+        We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.
+      </p>
+      <p>
+        \(\textbf{Proposition. }\) Any finite field extension of a finite field is separable and simple.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'galois_theory'>
+      <h2>Galois Theory</h2>
+      <p>
+        \(\textbf{Proposition. }\) Let \( F \subset L \) be a finite extension and let \( \sigma \in \text{Gal}(L/F) \). Then:
+        <ul>
+          <li>If \(h \in F[x]\) is a non-constant polynomial with \( \alpha \in L \) as a root, then \( \sigma(\alpha) \) is also a root of \( h \) lying in \( L \).</li>
+          <li>If \(L = F(\alpha_1, \ldots, \alpha_n)\), then \( \sigma \) is uniquely determined by its values on \( \alpha_1, \ldots, \alpha_n \).</li> 
+        </ul>
+      </p>
+    </section>
+
 
     <section id = 'galois_group'>
       <h2>Galois Group</h2>
@@ -831,20 +1075,6 @@
     </section>
 
     <br>
-
-    <section id = 'galois_theory'>
-      <h2>Galois Theory</h2>
-      <p>
-        \(\textbf{Proposition. }\) Let \( F \subset L \) be a finite extension and let \( \sigma \in \text{Gal}(L/F) \). Then:
-        <ul>
-          <li>If \(h \in F[x]\) is a non-constant polynomial with \( \alpha \in L \) as a root, then \( \sigma(\alpha) \) is also a root of \( h \) lying in \( L \).</li>
-          <li>If \(L = F(\alpha_1, \ldots, \alpha_n)\), then \( \sigma \) is uniquely determined by its values on \( \alpha_1, \ldots, \alpha_n \).</li> 
-        </ul>
-      </p>
-    </section>
-
-    <br>
-
 
     <h2>KU 2017 (August)</h2>
     <section id = 'ku_2017_8_6'>
