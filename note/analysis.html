@@ -1510,6 +1510,21 @@ of class \(C^1\). If the subset \(E\) of \(A\) has measure zero in \(\mathbb{R}^
 </p>
  </section>
 
+ <br>
+
+ <Section>
+  <p>
+    4.1 \textbf{Definition} Let \( X \) and \( Y \) be metric spaces; suppose \( E \subset X \), \( f \) maps \( E \) into \( Y \), and \( p \) is a limit point of \( E \). We write \( f(x) \to q \) as \( x \to p \), or
+\[ \lim_{x \to p} f(x) = q \]
+if there is a point \( q \in Y \) with the following property: For every \( \epsilon > 0 \) there exists a \( \delta > 0 \) such that
+\[ d_Y(f(x), q) \lt \epsilon \]
+for all points \( x \in E \) for which
+\[ 0 \lt d_X(x, p) \lt \delta. \]
+The symbols \( d_X \) and \( d_Y \) refer to the distances in \( X \) and \( Y \), respectively.
+
+  </p>
+ </Section>
+
 <br>
 
  <section>
@@ -1546,9 +1561,22 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
     \[ f(2x) = 3f(x), \quad 0 \le x \lt \frac{1}{2},\]
     which is given. Suppose that the statement is true for \( n = k \), i.e.,
     \[ f(2^k x) = 3^k f(x), \quad 0 \le x \lt \frac{1}{2^k}. \]
-    Then for \( n = k + 1 \), we have
-    \[ f(2^{k+1} x) = f(2(2^k x)) = 3f(2^k x) = 3 \cdot 3^k f(x) = 3^{k+1} f(x), \quad 0 \le x \lt \frac{1}{2^{k+1}}. \]
-    Therefore, by mathematical induction, the statement is true for all \( n \in \mathbb{N} \).
+    Then for \( n = k + 1 \), and \(0\leq x \lt \frac{1}{2^{k+1}}\), we have
+    \[ 
+    \begin{align}
+    0&\leq 2x \lt \frac{1}{2^k}, \\
+    f(2^{k+1}x) &= f(2^{k}2x) = 3^{k}f(2x),
+    \end{align}
+    \]
+    Based on our assumption. 
+    Since \(0\leq x\lt \frac{1}{2^{k+1}}\lt \frac12\), we have \(f(2x) = 3f(x)\). Therefore,
+    \[ f(2^{k+1}x) = 3^{k}f(2x) = 3^{k+1}f(x), \quad 0 \le x \lt \frac{1}{2^{k+1}}. \]
+    By the principle of mathematical induction, the statement is true for all \( n \in \mathbb{N} \).  \(\blacksquare\)
+  </p>
+  <p>
+    \(\textbf{Proof (b).}\) Since \(f\) is defined at \(0\), and \(f(2x) = 3f(x)\) for \(0\leq x\lt \frac12\), we have
+    \[ f(0) = 3f(0), \]
+    which implies that \(f(0) = 0\).
   </p>
 </section>
 
