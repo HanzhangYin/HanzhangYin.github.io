@@ -1576,7 +1576,17 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
   <p>
     \(\textbf{Proof (b).}\) Since \(f\) is defined at \(0\), and \(f(2x) = 3f(x)\) for \(0\leq x\lt \frac12\), we have
     \[ f(0) = 3f(0), \]
-    which implies that \(f(0) = 0\).
+    which implies that \(f(0) = 0\). Let \(\varepsilon >0\), Since \(f\) is bounded on \(\mathbb{R}\), there exists \(M>0\) such that \(|f(x)|\leq M\) for all \(x\in [0, 1]\).
+    Let \(a\in [0, 1]\) such that \(|f(a)|=C\) is the maximum value of \(|f(x)|\) on \([0, 1]\). 
+    According to Achimedes' principle, there exists \(n\in \mathbb{N}\) such that \(\frac{C}{3^{n}} \lt \varepsilon\).
+    Since \(a = 2^{n}(\frac{a}{2^{n}})\), we have 
+    \[ 
+    \begin{align}
+    |f(a)| &= |f(2^{n}(\frac{a}{2^{n}}))| = 3^{n}|f(\frac{a}{2^{n}})| = C.\\
+    \left|f(\frac{a}{2^n})\right| &= \frac{C}{3^{n}} \lt \varepsilon.
+    \end{align}
+    \]
+    Let \(\delta = \frac{a}{2^n}\). Then for all \(x\in [0, 1]\) such that \(0\lt x\lt \delta\), we have
   </p>
 </section>
 
