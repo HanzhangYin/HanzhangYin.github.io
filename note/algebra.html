@@ -602,9 +602,11 @@
         \(\textbf{Proposition. }\) Let \(R\) be a principal ideal domain. Then every irreducible element in \(R\) is prime.
       </p>
       <p>
-        \(\textbf{Proof. }\) If \( M \) is any ideal containing \( (p) \) then by hypothesis \( M = (m) \) is a principal ideal. 
-        Since \( p \in (m) \), \( p = rm \) for some \( r \). But \( p \) is irreducible so by definition either \( r \) or \( m \) is a unit. 
-        This means either \( (p) = (m) \) or \( (m) = (1) \), respectively. 
+        \(\textbf{Proof. }\) Suppose that \(p\) is prime in \(R\), then we can know that \(\langle p\rangle \) is a prime ideal in \(R\).
+        If \( M \) is any ideal containing \( \langle p\rangle  \) then by hypothesis \( M = \langle m\rangle  \) is a principal ideal. 
+        Since \( p \in \langle m\rangle  \), \( p = rm \) for some \( r \in R\). 
+        Since every prime is irreducible, we know \(p\) is irreducible. By definition either \( r \) or \( m \) is a unit. 
+        If \(m\) is a unit, we have \(\langle m\rangle = R\). If \(r\) is a unit, we have \(\langle p\rangle = \langle m\rangle \).
         Thus the only ideals containing \( (p) \) are \( (p) \) or \( (1) \), i.e., \( (p) \) is a maximal ideal. Since maximal ideals are prime ideals, the proof is complete.
       </p>
       <p>
