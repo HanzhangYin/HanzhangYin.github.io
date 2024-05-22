@@ -1527,7 +1527,30 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
 </p>
  </section>
 
-
+<section id = 'ku_8_2023'>
+  <h2>KU 8 2023</h2>
+  <p>
+    \(\textbf{Problem 2. }\)Let \( f : [0,1] \to \mathbb{R} \) be a bounded function satisfying
+    \[ f(2x) = 3f(x), \quad 0 \le x \lt \frac{1}{2}. \]
+    <ul>
+      <li> 
+        (a) Show that \( f(2^n x) = 3^n f(x), \quad 0 \le x \lt \frac{1}{2^n}, \) for all \( n \in \mathbb{N} \).
+      </li>
+      <li>
+        (b) Prove that \( \lim_{x \to 0^+} f(x) = f(0) \).
+      </li>
+    </ul>
+  </p>
+  <p>
+    \(\textbf{Proof (a). }\)We will prove it with mathematical induction. For \( n = 1 \), we have
+    \[ f(2x) = 3f(x), \quad 0 \le x \lt \frac{1}{2},\]
+    which is given. Suppose that the statement is true for \( n = k \), i.e.,
+    \[ f(2^k x) = 3^k f(x), \quad 0 \le x \lt \frac{1}{2^k}. \]
+    Then for \( n = k + 1 \), we have
+    \[ f(2^{k+1} x) = f(2(2^k x)) = 3f(2^k x) = 3 \cdot 3^k f(x) = 3^{k+1} f(x), \quad 0 \le x \lt \frac{1}{2^{k+1}}. \]
+    Therefore, by mathematical induction, the statement is true for all \( n \in \mathbb{N} \).
+  </p>
+</section>
 
       
     <section id = "References">
