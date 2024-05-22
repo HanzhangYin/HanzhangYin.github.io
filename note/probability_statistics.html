@@ -265,6 +265,16 @@
       \end{align}
       \]
       Now, we try to find the \(E[X^4]\).
+      \[
+      \begin{align}
+        E[X^4] &= \sum_{x=0}^{2} x^4 \binom{2}{x} \theta^x(1-\theta)^{2-x} \\
+        &= 0^4 \binom{2}{0} \theta^0(1-\theta)^{2-0} + 1^4 \binom{2}{1} \theta^1(1-\theta)^{2-1} + 2^4 \binom{2}{2} \theta^2(1-\theta)^{2-2} \\
+        &= 2\theta + 14\theta^2.\\
+        \text{Var}[X^2] &= E[X^4] - (E[X^2])^2 \\
+        &= 2\theta + 14\theta^2 - (2\theta + 2\theta^2)^2 \\
+        &= 2\theta + 10\theta^2 - 8\theta^3 - 4\theta^2 \\
+      \end{align}
+      \]
       </p>
     </section>
 
