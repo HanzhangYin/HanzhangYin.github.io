@@ -1542,8 +1542,8 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
 </p>
  </section>
 
-<section id = 'ku_8_2023'>
-  <h2>KU 8 2023</h2>
+<section id = 'ku_8_2021'>
+  <h2>KU 8 2021</h2>
   <p>
     \(\textbf{Problem 2. }\)Let \( f : [0,1] \to \mathbb{R} \) be a bounded function satisfying
     \[ f(2x) = 3f(x), \quad 0 \le x \lt \frac{1}{2}. \]
@@ -1586,7 +1586,16 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
     \left|f(\frac{a}{2^n})\right| &= \frac{C}{3^{n}} \lt \varepsilon.
     \end{align}
     \]
-    Let \(\delta = \frac{a}{2^n}\). Then for all \(x\in [0, 1]\) such that \(0\lt x\lt \delta\), we have
+    Let \(\delta = \frac{a}{2^n}\). Then for all \(y\in [0, 1]\) such that \(0\leq y\lt \delta\), we have
+    \[
+    \begin{align} 
+    0\leq y&\lt \delta\leq \frac{1}{2^n}, \\
+    3^n|f(y)| = |3^nf(y)| = |f(2^{n}y)| &\leq |f(2^{n}\delta)| = 3^{n}|f(\delta)|, \\
+    |f(y)| &\leq |f(\delta)| \lt \varepsilon, \\
+    |f(y) - f(0)| &\lt \varepsilon.
+    \end{align}
+    \]
+    Therefore, \(\lim_{x\to 0^+} f(x) = f(0) = 0\). \(\blacksquare\)
   </p>
 </section>
 
