@@ -157,7 +157,7 @@
         Hence, we have \( p(2) = 23 \).
       </p>
       <p>
-      \(\textbf{Theorem 5} \textit{Theorem on Horner's Method. }\)
+      \(\textbf{Theorem on Horner's Method. }\)
       Let \( p(x) = a_n x^n + \cdots + a_1 x + a_0 \). Define pairs \((\alpha_j, \beta_j)\) for \( j = n, n-1, \ldots, 0 \) by the algorithm
       \[
       \begin{cases}
@@ -173,6 +173,17 @@
 
     <section id = 'polynomial_interpretation'>
       <h2>Polynomial Interpretation</h2>
+      <h3>Theorem on Polynomial Interpolation Error</h3>
+      <p>
+        \(\textbf{Theorem. }\)Let \( f \) be a function in \( C^{n+1}[a, b] \), and let \( p \) be the polynomial of degree at most \( n \) that interpolates the function \( f \) at \( n + 1 \) distinct points \( x_0, x_1, \ldots, x_n \) in the interval \([a, b]\). 
+        To each \( x \) in \([a, b]\) there corresponds a point \( \xi_x \) in \((a, b)\) such that
+        \[ 
+          f(x) - p(x) = \frac{1}{(n + 1)!} f^{(n+1)}(\xi_x) \prod_{i=0}^{n} (x - x_i) .
+        \]
+      </p>
+      
+      <br>
+
       <h3>Lagrange's Form</h3>
       <p>
       The Lagrange form of the interpolation polynomial is a method for constructing a polynomial that passes through a given set of points. Specifically, given a set of \( n+1 \) distinct data points \((x_0, y_0), (x_1, y_1), \ldots, (x_n, y_n)\), the Lagrange interpolation polynomial \( P(x) \) is defined as:
@@ -235,6 +246,17 @@
         \end{array}
         \]
       </p>
+      <p>
+      \(\textbf{Theorem on Permutations in Divided Differences. }\)
+        The divided difference is a symmetric function of its arguments. Thus, if \((z_0, z_1, \ldots, z_n)\) is a permutation of \((x_0, x_1, \ldots, x_n)\), then
+        \[ f[z_0, z_1, \ldots, z_n] = f[x_0, x_1, \ldots, x_n]. \]
+      </p>
+      <p>
+        \(\textbf{Theorem on Derivatives and Divided Differences. }\)
+        If \( f \) is \( n \) times continuously differentiable on \([a, b]\) and if \( x_0, x_1, \ldots, x_n \) are distinct points in \([a, b]\), then there exists a point \( \xi \) in \((a, b)\) such that
+        \[ f[x_0, x_1, \ldots, x_n] = \frac{1}{n!} f^{(n)}(\xi). \]
+      </p>
+
       <br>
 
       <h3>Newton's Form</h3>
@@ -257,17 +279,6 @@
         \]
         We already found the divided differences in the previous example. The Newton form of the interpolation polynomial is
         \[ p(x) = 1 + 2(x - 3) - \frac{3}{8}(x - 3)(x - 1) + \frac{7}{40}(x - 3)(x - 1)(x - 5). \]
-      </p>
-    </section>
-
-    <section id = 'theorem_on_polynomial_interpolation'>
-      <h2>Theorem on Polynomial Interpolation</h2>
-      <p>
-        \(\textbf{Theorem. }\)If \( x_0, x_1, \ldots, x_n \) are distinct real numbers, then for arbitrary values \( y_0, y_1, \ldots, y_n \), 
-        there is a unique polynomial \( p_n \) of degree at most \( n \) such that
-        \[ 
-          p_n(x_i) = y_i \quad (0 \leq i \leq n) 
-        \]
       </p>
     </section>
 
@@ -390,6 +401,16 @@
         \(\textbf{Total Error. }\) The total error is the sum of the global truncation error and the global roundoff error.
       </p>
       D. Kincard & W. Cheney page.533.
+    </section>
+
+    <br>
+
+    <section>
+      <h2>Richardson Extrapolation</h2>
+      <p>
+        \(\textbf{Definition. }\) Richardson extrapolation is a method for improving the accuracy of a numerical method. 
+        Given a numerical method that approximates a quantity with error \( E(h) \) for a step size \( h \), Richardson extrapolation constructs a new approximation with error \( E(h^2) \) by combining two approximations with step sizes \( h \) and \( h/2 \).
+      </p>
     </section>
 
     <br>
