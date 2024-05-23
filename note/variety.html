@@ -38,7 +38,10 @@
     <section>
       <h2>Hyperplane</h2>
       <p>
-        A hyperplane in a vector space \( V \) is a subspace of codimension 1. In other words, a hyperplane is a linear variety of the form \( \{ v \in V : f(v) = 0 \} \) where \( f \) is a linear functional on \( V \).
+        \(\textbf{Definition 1. }\)A hyperplane in a vector space \( V \) is a subspace of codimension 1. In other words, a hyperplane is a linear variety of the form \( \{ v \in V : f(v) = 0 \} \) where \( f \) is a linear functional on \( V \).
+      </p>
+      <p>
+        \(\textbf{Definition 2. }\)The ambient space is \(n\)-dimensional Euclidean space, in which case the hyperplanes are the \((n-1)\)-dimensional flats, each of which separates the space into two half spaces.
       </p>
       <p>
         \(\textbf{Example. }\)More generally, a hyperplane in \(\mathbb{P}_n\) is given by an equation 
@@ -72,15 +75,66 @@
       </p>
     </section>
 
+    <br>
+
+    <section id = 'the_euclidean_inner_product'>
+      <h2>The Euclidean Inner Product</h2>
+      <p>
+      \(\textbf{Definition. }\)Let \( \mathbf{x} = (x_1, x_2, \ldots, x_n) \), \( \mathbf{y} = (y_1, y_2, \ldots, y_n) \in \mathbb{R}^n \). Then the \(\textbf{Euclidean Inner Product}\) between \( \mathbf{x} \) and \( \mathbf{y} \), denoted \( \mathbf{x} \cdot \mathbf{y} \), is defined to be
+        \[ \mathbf{x} \cdot \mathbf{y} = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n = \sum_{i=1}^n x_i y_i. \]
+      </p>
+      <p>
+        \(\textbf{Remark. }\)In short, the Euclidean inner product is the dot product of two vectors.
+      </p>
+    </section>
+
+    <br>
+
     <section id = 'root_system'>
       <h2>Root System</h2>
       <p>
-        A subset \(\Phi\) of the Euclidean space \(E\) is called a root system in \(E\) if the following axioms are satisfied:
+        \(\textbf{Definition 1. }\)A subset \(\Phi\) of the Euclidean space \(E\) is called a root system in \(E\) if the following axioms are satisfied:
         <ul>
           <li>(R1) \(\Phi\) is finite, spans \(E\), and does not contain \(0\).</li>
           <li>(R2) If \(\alpha \in \Phi\), the only multiples of \(\alpha\) in \(\Phi\) are \(\pm \alpha\).</li>
           <li>(R3) If \(\alpha \in \Phi\), the reflection \(\sigma_{\alpha}\) leaves \(\Phi\) invariant.</li>
           <li>(R4) If \(\alpha, \beta \in \Phi\), then \(\langle \beta, \alpha \rangle \in \mathbb{Z}\).</li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Definition 2. }\)A set \(\Phi\) of non-zero vectors (roots) in a Euclidean space \(E\) equipped with an inner product \(\langle \cdot, \cdot \rangle\) forms a root system if it satisfies the following conditions:
+        <ul>
+          <li>Finite and spans \(E\): The set \(\Phi\) is finite, and the vectors in \(\Phi\) span the vector space \(E\).</li>
+          <li>Non-zero multiples: If \(\alpha \in \Phi\), the only scalar multiples of \(\alpha\) that belong to \(\Phi\) are \(\alpha\) itself and \(-\alpha\).</li>
+          <li>Reflection Symmetry: For each root \(\alpha \in \Phi\), the reflection \(s_\alpha\) in the hyperplane perpendicular to \(\alpha\) maps \(\Phi\) to itself. The reflection \(s_\alpha\) is defined by:
+            \[
+            s_\alpha(x) = x - 2 \frac{\langle x, \alpha \rangle}{\langle \alpha, \alpha \rangle} \alpha
+            \]
+            for any \(x \in E\).
+          </li>
+          <li>Integral Multiples: If \(\alpha\) and \(\beta\) are in \(\Phi\), then the projection of \(\beta\) onto \(\alpha\) is an integer multiple of \(\alpha\), specifically:
+            \[
+            \frac{2 \langle \beta, \alpha \rangle}{\langle \alpha, \alpha \rangle} \in \mathbb{Z}
+            \]
+          </li>
+        </ul>
+        This structure ensures that the reflections associated with the roots generate a group (the Weyl group), which acts on the vector space \(E\) by permuting the roots, thereby preserving the geometric structure of the root system.
+      </p>
+      <p>
+        \(\textbf{Definition 3. }\)
+        Let \( E \) be a finite-dimensional Euclidean vector space, with the standard Euclidean inner product denoted by \( (\cdot, \cdot) \). A root system \( \Phi \) in \( E \) is a finite set of non-zero vectors (called roots) that satisfy the following conditions:
+        <ul>
+            <li> The roots span \( E \). </li>
+            <li> The only scalar multiples of a root \( \alpha \in \Phi \) that belong to \( \Phi \) are \( \alpha \) itself and \( -\alpha \). </li>
+            <li> For every root \( \alpha \in \Phi \), the set \( \Phi \) is closed under reflection through the hyperplane perpendicular to \( \alpha \). </li>
+            <li> (Integrality) If \( \alpha \) and \( \beta \) are roots in \( \Phi \), then the projection of \( \beta \) onto the line through \( \alpha \) is an integer or half-integer multiple of \( \alpha \). </li>
+        </ul>
+        
+        An equivalent way of writing conditions 3 and 4 is as follows:
+        
+        <ul>
+            <li> For any two roots \( \alpha, \beta \in \Phi \), the set \( \Phi \) contains the element \( \sigma_{\alpha}(\beta) := \beta - 2 \frac{(\alpha, \beta)}{(\alpha, \alpha)} \alpha \). </li>
+            <li> For any two roots \( \alpha, \beta \in \Phi \), the number \( \langle \beta, \alpha \rangle := 2 \frac{(\alpha, \beta)}{(\alpha, \alpha)} \) is an integer. </li>
         </ul>
       </p>
     </section>
