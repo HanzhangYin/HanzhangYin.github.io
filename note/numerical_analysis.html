@@ -473,10 +473,97 @@
     <section id = 'bauer-fike_Theorem'>
       <h2>Bauer-Fike Theorem</h2>
       <p>
-        \(\textbf{Theorem. }\) Let \( A \in \mathbb{F}^{m \times n} \) (\( m \geq n \)) and let \( A = QR \) be the reduced QR factorization of \( A \). Let \( \hat{R} \) have diagonal entries \( r_{11}, r_{22}, \ldots, r_{nn} \). Then the condition number of the least squares problem \( \min_x \|Ax - b\|_2 \) is
-        \[
-          \kappa(A) = \frac{r_{11}}{r_{nn}}.
-        \]
+        Consider a diagonalizable matrix \(A \in \mathbb{C}^{n \times n}\) with non-singular eigenvector matrix \(V \in \mathbb{C}^{n \times n}\), such that \(A = V\Lambda V^{-1}\), where \(\Lambda\) is a diagonal matrix.
+        If \(X \in \mathbb{C}^{n \times n}\) is invertible, its condition number in the \(p\)-norm is denoted by \(\kappa_p(X)\) and defined as: \[ \kappa_p(X) = |X|_p |X^{-1}|_p \]
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let A be an \( n \times n \) matrix with a complete set of linearly independent eigenvectors and suppose the \( V^{-1}AV = D \) where \( V \) is nonsingular and \( D \) is diagonal. Let \( \delta A \) be a perturbation of \( A \) and let \( \mu \) be an eigenvalue of \( A + \delta A \). Then \( A \) has an eigenvalue \( \lambda \) such that
+
+        \[ |\mu - \lambda| \leq \kappa_p(V) \| \delta A \|_p, \quad 1 \leq p \leq \infty \]
+        
+        where \( \kappa_p(V) \) is the \( p \)-norm condition number of \( V \).
+      </p>
+      <p>
+        The Bauer-Fike Theorem:
+      <ul>
+          <li>Suppose \(\mu\) is an eigenvalue of \(A + \delta A\).</li>
+          <li>Then there exists \(\lambda \in \Lambda(A)\) (i.e., an eigenvalue of \(A\)) such that:
+          \[
+          |\lambda - \mu| \leq \kappa_p(V) \|\delta A\|_p
+          \]
+          </li>
+          <li>Here, \(\|\cdot\|_p\) denotes the \(p\)-norm of a matrix.</li>
+      </ul>
+      </p>
+      <p>
+        <p>The <strong>Bauer–Fike theorem</strong> is a powerful result, and its proof involves several key concepts from linear algebra and perturbation theory. Let's outline the main steps of the proof:</p>
+
+<ul>
+    <li>
+        <strong>Eigenvalue Perturbation</strong>:
+        <ul>
+            <li>Consider a matrix \(A\) with eigenvalues \(\lambda_1, \lambda_2, \ldots, \lambda_n\).</li>
+            <li>Suppose we have a perturbed matrix \(A + \delta A\), where \(\delta A\) represents a small perturbation.</li>
+            <li>We want to understand how the eigenvalues of \(A + \delta A\) relate to the eigenvalues of \(A\).</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Eigenvector Matrix and Diagonalization</strong>:
+        <ul>
+            <li>Recall that \(A\) can be diagonalized as \(A = V\Lambda V^{-1}\), where:
+                <ul>
+                    <li>\(V\) is the matrix of eigenvectors of \(A\).</li>
+                    <li>\(\Lambda\) is the diagonal matrix with eigenvalues \(\lambda_1, \lambda_2, \ldots, \lambda_n\) on the diagonal.</li>
+                </ul>
+            </li>
+            <li>The eigenvector matrix \(V\) is invertible.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Bounding the Deviation</strong>:
+        <ul>
+            <li>Let \(\mu\) be an eigenvalue of \(A + \delta A\).</li>
+            <li>We want to find a bound on \(| \lambda - \mu |\), where \(\lambda\) is an eigenvalue of \(A\).</li>
+            <li>Using the eigenvector matrix \(V\), we can express \(\mu\) as:
+                \[ \mu = v_i^T (A + \delta A) v_i = \lambda_i + v_i^T \delta A v_i \]
+                Here, \(v_i\) corresponds to the \(i\)-th column of \(V\).
+            </li>
+            <li>Since \(\delta A\) is small, we can bound the deviation:
+                \[ | \lambda - \mu | = | \lambda_i - \mu | = | v_i^T \delta A v_i | \leq \| v_i \|_p \| \delta A \|_p \]
+                The inequality follows from the properties of matrix norms.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Condition Number of \(V\)</strong>:
+        <ul>
+            <li>The condition number of \(V\) in the \(p\)-norm is denoted by \(\kappa_p(V)\).</li>
+            <li>It measures how sensitive the eigenvectors are to perturbations.</li>
+            <li>We have:
+                \[ | \lambda - \mu | \leq \kappa_p(V) \| \delta A \|_p \]
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Alternate Formulation</strong>:
+        <ul>
+            <li>If we have an approximate eigenvalue-eigenvector pair \((\lambda_a, v_a)\), we can bound the error:
+                \[ | \lambda - \lambda_a | \leq \frac{\kappa_p(V) \| r \|_p}{\| v_a \|_p} \]
+                where \(r = Av_a - \lambda_av_a\).
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Relative Bound</strong>:
+        <ul>
+            <li>If \(A\) is invertible and \(\mu\) is an eigenvalue of \(A + \delta A\), then:
+                \[ \frac{| \lambda - \mu |}{| \lambda |} \leq \kappa_p(V) \| A^{-1} \delta A \|_p \]
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p>In summary, the Bauer–Fike theorem provides bounds on how eigenvalues change under small perturbations. It highlights the importance of eigenvector conditioning and helps us understand the stability of eigenvalues.</p>
       </p>
     </section>
 
