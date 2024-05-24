@@ -1627,7 +1627,20 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
   <h2>KU August 2023</h2>
   <p>
     \(\textbf{Problem 1. }\) Let \( f \) be a real-valued function which is continuous on \([-1,1]\) and differentiable on \((-1,1)\). 
-    Suppose that \( f(-1) = -1 \), \( f(1) = 1 \) and that \( f'(x) \leq 1 \) for all \( x \in (-1,1) \). Prove that \( f(x) = x \) for all \( x \in [-1,1] \).  </p>
+    Suppose that \( f(-1) = -1 \), \( f(1) = 1 \) and that \( f'(x) \leq 1 \) for all \( x \in (-1,1) \). Prove that \( f(x) = x \) for all \( x \in [-1,1] \).  
+  </p>
+  <p>
+    \(\textbf{Proof. }\) Firstly, we know that there exists \(x\in (-1, 1)\) such that \(f(x) = y > x\). 
+    Since \(f\) is differentiable, by the mean value theorem, there exists \(c\in (-1, x)\) such that 
+    \[ f'(c) = \frac{f(x) - f(-1)}{x - (-1)} = \frac{y + 1}{x + 1}. \]
+    Since \(y> x\), we have \(y + 1 > x + 1 > 0\), which implies that \(\frac{y + 1}{x + 1} = f'(c)> 1\). 
+    Since \(f'(x) \leq 1\) for all \(x\in (-1, 1)\), we have a contradiction. Therefore, \(f(x) \leq x\) for all \(x\in [-1, 1]\). 
+    Now suppose that there exists \(x\in (-1, 1)\) such that \(f(x) = y \lt x\).
+    By the mean value theorem, there exists \(c\in (x, 1)\) such that
+    \[ f'(c) = \frac{f(1) - f(x)}{1 - x} = \frac{1 - y}{1 - x}. \]
+    Since \(y \lt x\), we have \(1 - y > 1 - x > 0\), which implies that \(\frac{1 - y}{1 - x} = f'(c) > 1\).
+    Again, we have a contradiction. Hence, \(f(x) \geq x\) for all \(x\in [-1, 1]\). Therefore, \(f(x) = x\) for all \(x\in [-1, 1]\). \(\blacksquare\)
+  </p>
 </section>
 
       
