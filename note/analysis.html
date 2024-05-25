@@ -1309,7 +1309,7 @@ If \(z\in A\), then \(z\notin \bar{B}\) for \(E\) is not connected. Hence there 
  <section>
   <h2>Convergent Sequence</h2>
 <p>\(\textbf{Definition. }\)
-A sequence \(\{p_n\}\) in a metric space \(X\) is said to converge if there is a point \(p\in  X\) with the following property: For every \(\epsilon > 0\) there is an integer \(N\) such that \(n\geq N\) implies that \(d(p_n,  p)  \lt  \epsilon\). (Here \(d\) denotes the distance in \(X\).) We say that \(\{p_n\}\) converges to \(p\), or that \(p\) is the limit of \(\{P_n\}\). We write \(p_n\), or
+A sequence \(\{p_n\}\) in a metric space \(X\) is said to converge if there is a point \(p\in  X\) with the following property: For every \(\varepsilon > 0\) there is an integer \(N\) such that \(n\geq N\) implies that \(d(p_n,  p)  \lt  \varepsilon\). (Here \(d\) denotes the distance in \(X\).) We say that \(\{p_n\}\) converges to \(p\), or that \(p\) is the limit of \(\{P_n\}\). We write \(p_n\), or
 \[
 \lim_{n\rightarrow\infty} p_n  = p. 
 \]
@@ -1320,7 +1320,7 @@ If \(\{p_n\}\) does not converge, it is said to diverge.
 Let \(\{p_n\}\) be a sequence in a metric space \(X\). \(\{P_n\}\) converges to \(p\in X\) if and only if every neighborhood of \(p\) contains \(p_n\) for all but finitely many \(n\).
 </p>
 <p>\(\textbf{Proof. }\)
-Suppose \(p_n\rightarrow p\) and let \(V\) be a neighborhood of \(p\). For some \(\epsilon>0\), the conditions \(d(q, p) \lt \epsilon\), \(q\in X\) imply \(q\in V\). Corresponding to this \(\epsilon\), there exists \(N\) such that \(n\geq N\) implies \(d(p_n, p) \lt  \epsilon\). Thus \(n\geq N\) implies \(p_n\in V\).
+Suppose \(p_n\rightarrow p\) and let \(V\) be a neighborhood of \(p\). For some \(\varepsilon>0\), the conditions \(d(q, p) \lt \varepsilon\), \(q\in X\) imply \(q\in V\). Corresponding to this \(\varepsilon\), there exists \(N\) such that \(n\geq N\) implies \(d(p_n, p) \lt  \varepsilon\). Thus \(n\geq N\) implies \(p_n\in V\).
 Conversely, suppose every neighborhood of p contains all but
 finitely many of \(n\) the \(P_n\). Fix \(e>0\), and let \(V\) be the set of all \(q\in X\) such that \(d(p, q) \lt  e\). 
 By assumption, there exists \(N\) (corresponding to this \(V\)) such that \(P_n\in V\) if \(n\geq N\). Thus \(d(p_n,p)\lt e\) if \(n\geq N\); hence \( P_n >p\).
@@ -1335,33 +1335,33 @@ Suppose \(\{s_n\}\), \(\{t_n\}\) are complex sequences, and \(\lim_{n\rightarrow
 \item (d) \(\lim_{n\rightarrow \infty} \frac{1}{s_n}= \frac{1}{s} \), provided \(s_n\neq 0\)  \((n  = 1,  2,  3, \dots)\),  and \(s\neq 0\). 
 </p>
 <p>\(\textbf{Proof. }\)
-(a) Given \(\epsilon > 0\),  there exist integers \(N_1\), \(N_2\) such that  \(n\geq N_1\) implies \(n\geq N_2\) implies 
+(a) Given \(\varepsilon > 0\),  there exist integers \(N_1\), \(N_2\) such that  \(n\geq N_1\) implies \(n\geq N_2\) implies 
 \[
-|s_n - s|\lt \frac{\epsilon}{2},
+|s_n - s|\lt \frac{\varepsilon}{2},
 \]
 \[
-|t_n - t|\lt \frac{\epsilon}{2}.
+|t_n - t|\lt \frac{\varepsilon}{2}.
 \]
 If \(N=\max(N_1, N_2)\), then \(n\geq N\) implies 
 \[
-|(s_n+t_n)-(s+t)| = |s_n-s+t_n-t|\leq |s_n-s|+|t_n-t|\leq \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
+|(s_n+t_n)-(s+t)| = |s_n-s+t_n-t|\leq |s_n-s|+|t_n-t|\leq \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon.
 \]
 Thus, \(\lim_{n\rightarrow \infty} (s_n  + t_n)  = s + t\). \\
-(b) Given \(\epsilon > 0\),  there exist integers \(N\), such that \(n\geq N\) implies that \(|s_n-s|\lt \epsilon\) and \(|s_n - s|\lt \frac{\epsilon}{|c|}\).
+(b) Given \(\varepsilon > 0\),  there exist integers \(N\), such that \(n\geq N\) implies that \(|s_n-s|\lt \varepsilon\) and \(|s_n - s|\lt \frac{\varepsilon}{|c|}\).
 \[
-|cs_n - cs|=|c||s_n-s|\lt  |c|\frac{\epsilon}{|c|} = \epsilon.
+|cs_n - cs|=|c||s_n-s|\lt  |c|\frac{\varepsilon}{|c|} = \varepsilon.
 \]
 \[
-|(c+s_n) - (c+s)|=|s_n-s|\lt \epsilon.
+|(c+s_n) - (c+s)|=|s_n-s|\lt \varepsilon.
 \]
 (c) We use  the equation that 
 \[
 s_nt_n-st = (s_n-s)(t_n-t) + s(t_n-t)+ t(s_n  - s). 
 \]
-Given \(\epsilon > 0\), there are integers \(N_1\), \(N_2\) such that 
+Given \(\varepsilon > 0\), there are integers \(N_1\), \(N_2\) such that 
 \(n\geq N_1\) implies 
 \[
-|s_n  - s| \lt  \sqrt{\epsilon},
+|s_n  - s| \lt  \sqrt{\varepsilon},
 \]
 \(n\geq N_2\) implies 
 \[
@@ -1369,10 +1369,10 @@ Given \(\epsilon > 0\), there are integers \(N_1\), \(N_2\) such that
 \]
 If we take \(N = \max(N_1, N_2)\), \(n\geq N\)  implies 
 \[
-|(s_n-s)(t_n-t)|=|s_n-s||t_n-t|\lt \epsilon,
+|(s_n-s)(t_n-t)|=|s_n-s||t_n-t|\lt \varepsilon,
 \]
 \[
-|(s_n-s)(t_n-t)-0|\lt \epsilon,
+|(s_n-s)(t_n-t)-0|\lt \varepsilon,
 \]. Thus,
 \[
 \lim_{n\rightarrow\infty} (s_n - s)(t_n - t) = 0.
@@ -1387,7 +1387,7 @@ lim \((s_nt_n  - st)= 0\).
 <section>
   <h3>Cauchy Sequence</h3>
 <p>\(\textbf{Definition. }\)[Cauchy Sequence]
-A sequence \(\{p_n\}\) in a metric space \(X\) is said to be a Cauchy sequence if for every \(\epsilon > 0\) there is an integer \(N\) such that \(d(p_n , p_m) \lt  \epsilon\) if \(n\geq N\) and \(m\geq N\).
+A sequence \(\{p_n\}\) in a metric space \(X\) is said to be a Cauchy sequence if for every \(\varepsilon > 0\) there is an integer \(N\) such that \(d(p_n , p_m) \lt  \varepsilon\) if \(n\geq N\) and \(m\geq N\).
 </p>
 <p>\(\textbf{Definition. }\)[Diameter]
 Let \(E\) be a nonempty subset of a metric space \(X\), and let \(S\) be the  set of all real numbers of the form \(d(p, q)\), with \(p\in E\) and \(q\in E\). The sup (least upper bound) of \(S\) is called the diameter of \(E\). 
@@ -1410,12 +1410,12 @@ Since \(E\subset \overline{E}\),
 \[
 diam E\leq diam\overline{E}.
 \]
-Fix \(\epsilon > 0\), and choose \(p\in \overline{E}\), \(q\in \overline{E}\). By the definition of \(E\),  there are limit points points \(p'\), \(q'\), in \(E\) such that \(d(p, p') \lt \epsilon\), \(d(q,  q') \lt  \epsilon\). At the same time, \(d(p',q')\leq diam\overline{E}\). Since \(E\) is in a metric space \(X\),
+Fix \(\varepsilon > 0\), and choose \(p\in \overline{E}\), \(q\in \overline{E}\). By the definition of \(E\),  there are limit points points \(p'\), \(q'\), in \(E\) such that \(d(p, p') \lt \varepsilon\), \(d(q,  q') \lt  \varepsilon\). At the same time, \(d(p',q')\leq diam\overline{E}\). Since \(E\) is in a metric space \(X\),
 \[
 d(p, q)\leq  d(p, q')+ d(q', q)\leq d(p, p') + d(p', q')  + d(q', q) 
-\lt  2\epsilon + d(p', q')\leq 2\epsilon + diam E. 
+\lt  2\varepsilon + d(p', q')\leq 2\varepsilon + diam E. 
 \]
-It follows  that \(diam \overline{E}\leq  2\epsilon + diam E\), and since \(\epsilon\) was arbitrary, \(diam\overline{E}\leq diam E\). Therefore, \(diam E=diam\overline{E}\). 
+It follows  that \(diam \overline{E}\leq  2\varepsilon + diam E\), and since \(\varepsilon\) was arbitrary, \(diam\overline{E}\leq diam E\). Therefore, \(diam E=diam\overline{E}\). 
 </p>
  
 <br>
@@ -1434,15 +1434,15 @@ Assume \(K =  \bigcap_1^\infty K_n\). We know that if \(\{K_\alpha\}\) is a coll
 In any metric space \(X\), every convergent sequence is a Cauchy sequence.
 </p>
 <p>\(\textbf{Proof. }\)
-If \(p_n\rightarrow p\) and if \(\epsilon > 0\), there is an integer \(N\) such  that  \(d(p, p_n)\lt \epsilon\) for all \(n\geq N\). Thus, there exists \(m\geq N\) such that \(d(p, p_m)\lt \epsilon\). Hence,
+If \(p_n\rightarrow p\) and if \(\varepsilon > 0\), there is an integer \(N\) such  that  \(d(p, p_n)\lt \varepsilon\) for all \(n\geq N\). Thus, there exists \(m\geq N\) such that \(d(p, p_m)\lt \varepsilon\). Hence,
 \[
-d(p, p_n)\lt \frac{1}{2}\epsilon,
+d(p, p_n)\lt \frac{1}{2}\varepsilon,
 \]
 \[
-d(p, p_m)\lt \frac{1}{2}\epsilon.
+d(p, p_m)\lt \frac{1}{2}\varepsilon.
 \]
 \[
-d(p_n, p_m)\leq d(p_n, p) + d(p, p_m)  \lt  \epsilon.
+d(p_n, p_m)\leq d(p_n, p) + d(p, p_m)  \lt  \varepsilon.
 \]
 Thus \({p_n}\) is a Cauchy sequence.
 </p>
@@ -1461,11 +1461,11 @@ Since \(E_N\subset \overline{E}_N\), we know from the previous theorem that \( d
 \lim_{N\rightarrow\infty} diam E_N = \lim_{N\rightarrow\infty}diam\overline{E}_N=0. 
 \]
 We know that closed subsets of compact sets are  compact from the previous theorem,  so each \(\overline{E_N}\) is  compact (Theorem  2.35). Since \(E_N\supset E_{N+1}\), \(\overline{E}_N\supset \overline{E}_{N+1}\). Theorem  3.10(b) shows now that there is a unique \(p\in X\) which lies 
-in every \(\overline{E}_N\). Let \(\epsilon> 0\) be given. Since
+in every \(\overline{E}_N\). Let \(\varepsilon> 0\) be given. Since
 \[
 \lim_{N\rightarrow\infty}diam\overline{E}_N=0,
 \]
-there is an integer \(N_0\) such that \(diam E_N  \lt \epsilon\) if \(N\geq N_0\). Since \(p\in \overline{E}_N\), it follows that \(d(p, q)\lt dim \overline{E}_n\lt  \epsilon\) for every \(q\in \overline{E}_N\), hence every \(q\in E_N\). In other words, \(d(p,  p_n) \lt \epsilon\) if \(n\geq N_0\).
+there is an integer \(N_0\) such that \(diam E_N  \lt \varepsilon\) if \(N\geq N_0\). Since \(p\in \overline{E}_N\), it follows that \(d(p, q)\lt dim \overline{E}_n\lt  \varepsilon\) for every \(q\in \overline{E}_N\), hence every \(q\in E_N\). In other words, \(d(p,  p_n) \lt \varepsilon\) if \(n\geq N_0\).
 </p>
 
 <p>\(\textbf{Remark. }\)
@@ -1487,8 +1487,8 @@ Let \(\{x_n\}\) be a Cauchy sequence in \(R^k\). For \(N  =  1,  2,  3,\dots \),
  <p>
    \(\textbf{Definition. }\) Let \( X \) and \( Y \) be metric spaces; suppose \( E \subset X \), \( f \) maps \( E \) into \( Y \), and \( p \) is a limit point of \( E \). We write \( f(x) \to q \) as \( x \to p \), or
 \[ \lim_{x \to p} f(x) = q \]
-if there is a point \( q \in Y \) with the following property: For every \( \epsilon > 0 \) there exists a \( \delta > 0 \) such that
-\[ d_Y(f(x), q) \lt \epsilon \]
+if there is a point \( q \in Y \) with the following property: For every \( \varepsilon > 0 \) there exists a \( \delta > 0 \) such that
+\[ d_Y(f(x), q) \lt \varepsilon \]
 for all points \( x \in E \) for which
 \[ 0 \lt d_X(x, p) \lt \delta. \]
 The symbols \( d_X \) and \( d_Y \) refer to the distances in \( X \) and \( Y \), respectively.
@@ -1567,14 +1567,24 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
     \]
   </p>
   <p>
-    \(\textbf{Proof. }\)Given that \(\lim\limits_{n \to \infty} a_n = a\), for every \(\epsilon/2 > 0\), there exists an integer \(N\) such that
+    \(\textbf{Proof. }\)Given that \(\lim\limits_{n \to \infty} a_n = a\), for every \(\frac{\varepsilon}{2} > 0\), there exists an integer \(N\) such that
     \[
-    |a_n - a| \lt \epsilon, \quad \text{for all } n \geq N.
+    |a_n - a| \lt \frac{\varepsilon}{2}, \quad \text{for all } n \geq N.
     \]
-    Fristly, fix \(\epsilon > 0\). Now, define \(c:= \max\{|a_1 - a|, |a_2 - a|, \dots, |a_{N-1} - a|, |a_N - a|\}\). Find an positive integer \(M\) such that 
-    \[\frac{c}{M}\lt \frac{\epsilon}{2N}.\]
+    Fristly, fix \(\varepsilon > 0\). Now, define \(c:= \max\{|a_1 - a|, |a_2 - a|, \dots, |a_{N-1} - a|, |a_N - a|\}\). Find an positive integer \(M\) such that 
+    \[\frac{c}{M}\lt \frac{\varepsilon}{2N}.\]
     If \(M\leq N\), then we have 
-    \[\frac{1}{N}(|a_1 - a|  + \dots + |a_N - a|)\leq \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a|) \lt \frac{NC}{M}\leq \frac{\epsilon}{2} \lt \epsilon.\]
+    \[\frac{1}{N}(|a_1 - a|  + \dots + |a_N - a|)\leq \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a|) \lt \frac{NC}{M}\leq \frac{\varepsilon}{2} \lt \varepsilon.\]
+    If \(M > N\), then we have
+    \[
+    \begin{align}
+    \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a| + |a_{N+1} - a| + \dots + |a_{M} - a|)&\leq \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a|) + \frac{1}{M}(|a_{N+1} - a| + \dots + |a_{M} - a|) \\
+    &\lt \frac{1}{M}(C + \dots + C ) + \frac{1}{M}(\varepsilon + \dots + \varepsilon) \\
+    &= \frac{NC}{M} + \frac{M-N}{M}\varepsilon \\
+    &\lt \frac{\varepsilon}{2} + \frac{\varepsilon}{2} \\
+    &= \varepsilon.
+    \end{align}
+    \]
   </p>
   <p>
     \(\textbf{Problem 2. }\)Let \( f : [0,1] \to \mathbb{R} \) be a bounded function satisfying
