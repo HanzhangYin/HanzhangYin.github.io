@@ -1575,16 +1575,28 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
     \[\frac{c}{M}\lt \frac{\varepsilon}{2N}.\]
     If \(M\leq N\), then we have 
     \[\frac{1}{N}(|a_1 - a|  + \dots + |a_N - a|)\leq \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a|) \lt \frac{NC}{M}\leq \frac{\varepsilon}{2} \lt \varepsilon.\]
-    If \(M > N\), then we have
+    If \(n\geq M > N\), then we have
     \[
     \begin{align}
-    \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a| + |a_{N+1} - a| + \dots + |a_{M} - a|)&\leq \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a|) + \frac{1}{M}(|a_{N+1} - a| + \dots + |a_{M} - a|) \\
-    &\lt \frac{1}{M}(C + \dots + C ) + \frac{1}{M}(\varepsilon + \dots + \varepsilon) \\
-    &= \frac{NC}{M} + \frac{M-N}{M}\varepsilon \\
+    &\frac{1}{n}(|a_1 - a|  + \dots + |a_N - a| + |a_{N+1} - a| + \dots + |a_{n} - a|)\\
+    &\leq \frac{1}{n}(|a_1 - a|  + \dots + |a_N - a|) + \frac{1}{n}(|a_{N+1} - a| + \dots + |a_{n} - a|) \\
+    &\leq \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a|) + \frac{1}{n}(|a_{N+1} - a| + \dots + |a_{n} - a|) \\
+    &\lt \frac{1}{M}(C + \dots + C ) + \frac{1}{n}\left(\frac{\varepsilon}{2} + \dots + \frac{\varepsilon}{2}\right) \\
+    &= \frac{NC}{M} + \frac{n-N}{n}\frac{\varepsilon}{2} \\
     &\lt \frac{\varepsilon}{2} + \frac{\varepsilon}{2} \\
     &= \varepsilon.
     \end{align}
     \]
+    Thus, we showed that, for any \(\varepsilon > 0\), there exists \(N\in \mathbb{Z}^*\) such that 
+    \[\frac{1}{n}(|a_1 - a|  + \dots + |a_n - a|)\lt \varepsilon \text{ for all } n\geq N.\]
+    Since 
+    \[
+    \begin{align}
+    \left|\frac{a_1 + a_2 + \cdots + a_n}{n} - a\right| &= \frac{1}{n}|(a_1 - a) + (a_2 - a) + \cdots + (a_n - a)|\\
+    & \leq \frac{1}{n}(|a_1 - a| + \cdots + |a_n - a|).
+    \end{align},
+    \]
+    Hence, we have showed that \(\lim\limits_{n \to \infty} \dfrac{a_1 + a_2 + \cdots + a_n}{n} = a\). \(\blacksquare\)
   </p>
   <p>
     \(\textbf{Problem 2. }\)Let \( f : [0,1] \to \mathbb{R} \) be a bounded function satisfying
