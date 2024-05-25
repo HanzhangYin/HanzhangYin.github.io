@@ -40,7 +40,7 @@
     <section id = 'lie_algebra'>
       <h2>Lie Algebra</h2>
       <p>
-        \(\textbf{Definition. }\) A vector space \(L\) over a field \(\mathbb{F}\), with an operation \(L \times L \rightarrow L\), denoted \((x, y) \mapsto [xy]\) and called the \(\textbf{bracket}\) or \(\textbf{commutator}\) of \(x\) and \(y\), is called a \(\textit{Lie algebra}\) over \(\mathbb{F}\) if the following axioms are satisfied:
+        \(\textbf{Definition. }\) A vector space \(L\) over a field \(\mathbb{F}\), with an operation \(L \times L \rightarrow L\), denoted \((x, y) \mapsto [xy]\) and called the \(\textbf{bracket}\) or \(\textbf{commutator}\) of \(x\) and \(y\), is called a \(\textbf{Lie algebra}\) over \(\mathbb{F}\) if the following axioms are satisfied:
         <ul>
           <li>[(L1)] The bracket operation is bilinear.</li>
           <li>[(L2)] \([xx] = 0\) for all \(x \in L\).</li>
@@ -57,13 +57,17 @@
 
     <section id = 'root'>
       <h2>Root</h2>
+      <p>
       Now fix a \(\textbf{maximal toral subalgebra}\) \(H\) of \(L\), i.e., a toral subalgebra not properly included in any other. (The notation \(H\) is less natural than \(T\), but more traditional.) For example, if \(L = \mathfrak{sl}(n, \mathbb{F})\), it is easy to verify (Exercise 1) that \(H\) can be taken to be the set of diagonal matrices (of trace 0).
       Since \(H\) is abelian (by the above lemma), \(\operatorname{ad}_L H\) is a commuting family of semisimple endomorphisms of \(L\). According to a standard result in linear algebra, \(\operatorname{ad}_L H\) is simultaneously diagonalizable. In other words, \(L\) is the direct sum of the subspaces \(L_\alpha = \{x \in L \mid [hx] = \alpha(h)x \text{ for all } h \in H\}\), where \(\alpha\) ranges over \(H^*\). Notice that \(L_0\) is simply \(C_L(H)\), the centralizer of \(H\); it includes \(H\), thanks to the lemma. The set of all nonzero \(\alpha \in H^*\) for which \(L_\alpha \neq 0\) is denoted by \(\Phi\); the elements of \(\Phi\) are called the roots of \(L\) relative to \(H\) (and are finite in number). With this notation we have a root space decomposition (or Cartan decomposition):
       \[
       L = C_L(H) \oplus \bigoplus_{\alpha \in \Phi} L_\alpha.
       \]
       When \(L = \mathfrak{sl}(n, \mathbb{F})\), for example, the reader will observe that \((*)\) corresponds to the decomposition of \(L\) given by the standard basis (1.2). Our aim in what follows is first to prove that \(H = C_L(H)\), then to describe the set of roots in more detail, and ultimately to show that \(\Phi\) characterizes \(L\) completely.
+      </p>
     </section>
+
+    <br>
 
     <section>
       <h2>Hyperplane</h2>
