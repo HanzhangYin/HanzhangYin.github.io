@@ -56,8 +56,8 @@
       <a href="#ku_2023_8_1">KU 2023 (August) (1)</a>
       <a href="#ku_2023_8_2">KU 2023 (August) (2)</a>
       <a href="#ku_2023_8_3">KU 2023 (August) (3)</a>
-      <a href="#ku_2023_8_4">KU 2023 (August) (4)</a> 
-      <a href="#ku_2023_8_5">KU 2023 (August) (5)</a> 
+      <a href="#ku_2023_8_4">KU 2023 (August) (4)</a>
+      <a href="#ku_2023_8_5">KU 2023 (August) (5)</a>
       <a href="#k_state_2022_1">K-State 2022(1)</a>
       <a href="#References">References</a>
     </nav>
@@ -67,7 +67,7 @@
 
     <section>
       <p>
-        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts in abstract algebra and it is not fully completed. 
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts in abstract algebra and it is not fully completed.
         Feel free to send me an email at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions for improvement.
       </p>
     </section>
@@ -75,7 +75,7 @@
     <section id = 'normal_subgroup'>
       <h2>Normal Subgroup</h2>
       <p>
-        \(\textbf{Definition. }\) Let \(G\) be a group and \(H\) be a subgroup of \(G\). 
+        \(\textbf{Definition. }\) Let \(G\) be a group and \(H\) be a subgroup of \(G\).
         We say that \(H\) is a \(\textit{normal subgroup}\) of \(G\) if \(gH = Hg\) for all \(g\in G\).
       </p>
       <p>
@@ -126,7 +126,7 @@
         Now, we try to define some subgroups in sagemath:
       </p>
       <p>
-       For example: \(S_3, \mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2\). 
+       For example: \(S_3, \mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2\).
       </p>
       <div class="code-box-container">
       <div class="code-box">
@@ -148,22 +148,22 @@
     <section id = "center">
       <h2>Center</h2>
       <p>
-        \(\textbf{Definition. }\)Let \(G\) be a group. 
-        The set of all elements of \(G\) that commute with every element of \(G\) such that 
+        \(\textbf{Definition. }\)Let \(G\) be a group.
+        The set of all elements of \(G\) that commute with every element of \(G\) such that
         \[
         Z(G) = \{g\in G\mid gx=xg\text{ for all }x\in G\},
         \]
-        is called the center of \(G\). 
+        is called the center of \(G\).
       </p>
     </section>
 
     <br>
 
-    
+
     <section id = "centralizer">
     <h2>Centralizer</h2>
       <p>
-        \(\textbf{Definition. }\)Let \(A\) be any subset of a group \(G\). A subset of a\(G\) such that 
+        \(\textbf{Definition. }\)Let \(A\) be any subset of a group \(G\). A subset of a\(G\) such that
         \[
         C_G(A) = \{g\in G\mid gag^{-1}=a\text{ for all }a\in A\},
         \]
@@ -177,7 +177,7 @@
         \[
         yay^{-1}=a\in A.
         \]
-        Hence, 
+        Hence,
         \[
         \begin{align}
           y^{-1}yay^{-1}y &= y^{-1}ay = a\in A.
@@ -228,7 +228,7 @@
       G_X = \{g\in G\mid gx=x\text{ for all }x\in X\},
       \]
       is called the stabilizer of \(X\) in \(G\).
-    </p>       
+    </p>
     </section>
 
     <br>
@@ -274,18 +274,18 @@
     <section id = "sylow_p_subgroup">
       <h2>Sylow \(p\)-Subgroup</h2>
       <p>
-        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime. 
-        If \(G\) is a group of order \(p^nm\) where \(p\not\mid m\), 
+        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime.
+        If \(G\) is a group of order \(p^nm\) where \(p\not\mid m\),
         then a subgroup \(H\) of \(G\) such that \(|H|=p^n\) is called a Sylow \(p\)-subgroup of \(G\).
       </p>
       <h2>\(Syl_p(G)\)</h2>
       <p>
-        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime. 
+        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime.
         The set of all Sylow \(p\)-subgroups of \(G\) is denoted by \(Syl_p(G)\).
       </p>
       <h2>\(n_p(G)\)</h2>
       <p>
-        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime. 
+        \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime.
         The number of Sylow \(p\)-subgroups of \(G\) is denoted by \(n_p(G)\).
       </p>
     </section>
@@ -304,7 +304,7 @@
         \(\textbf{Second Sylow's Theorem. }\)If \( P \) is a Sylow \( p \)-subgroup of \( G \) and \( Q \) is any \( p \)-subgroup of \( G \), then there exists \( g \in G \) such that \( Q \leq gPg^{-1} \), i.e., \( Q \) is contained in some conjugate of \( P \). In particular, any two Sylow \( p \)-subgroups of \( G \) are conjugate in \( G \).
         </li>
         <li>
-        \(\textbf{Third Sylow's Theorem. }\)The number of Sylow \( p \)-subgroups of \( G \) is of the form \( 1 + kp \), i.e., 
+        \(\textbf{Third Sylow's Theorem. }\)The number of Sylow \( p \)-subgroups of \( G \) is of the form \( 1 + kp \), i.e.,
         \[ n_p \equiv 1 \mod p .\]
         </li>
       Further, \( n_p \) is the index in \( G \) of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).
@@ -319,7 +319,7 @@
         \(\textbf{Definition. }\) A group \(G\) is \(\textit{simple}\) if \(G\) is nontrivial and the only normal subgroups of \(G\) are \(\{e\}\) and \(G\).
       </p>
       <p>
-        \(\textbf{Theorem. }\) Let \(G\) be a simple group of order \(60\). Then \(G\) is isomorphic to \(A_5\). 
+        \(\textbf{Theorem. }\) Let \(G\) be a simple group of order \(60\). Then \(G\) is isomorphic to \(A_5\).
       </p>
       <p>
         \(\textbf{Theorem. }\) The alternating group \(A_n\) is a simple group for \(n \geq 5\). In other words, there are no proper normal subgroups of \(A_n\), for \(n \geq 5\).
@@ -332,8 +332,8 @@
       <h2>Solvable Group</h2>
       <p>
         \(\textbf{Definition. }\) A finite group \( G \) is \textit{solvable} if there are subgroups
-        \[ 
-        \{e\} = G_n \subseteq G_{n-1} \subseteq \cdots \subseteq G_1 \subseteq G_0 = G 
+        \[
+        \{e\} = G_n \subseteq G_{n-1} \subseteq \cdots \subseteq G_1 \subseteq G_0 = G
         \]
         such that for \( i = 1, \ldots, n \) we have:
         <ul>
@@ -378,15 +378,15 @@
 
     <section id = 'ideal'>
       <p>
-        \(\textbf{Proposition(1). }\) Let \(R\) be a ring with identity \(1\), and \(I\) is an ideal of \(R\). \(R = I\) if and only if \(I\) contains a unit. 
+        \(\textbf{Proposition(1). }\) Let \(R\) be a ring with identity \(1\), and \(I\) is an ideal of \(R\). \(R = I\) if and only if \(I\) contains a unit.
       </p>
       <p>
-        \(\textbf{Proof. }\)Firstly, suppose that \(R = I\). 
+        \(\textbf{Proof. }\)Firstly, suppose that \(R = I\).
         Since \(R\) is a ring with identity \(1\), then we can know that \(1\) is unit in \(R\).
         Hence, we can see that \(I\) contains a unit.
         For the other direction, suppose that \(I\) contains a unit \(u\in R\).
         Then we can know that there exists an inverse \(u^{-1}\in R\) such that \(u^{-1}u = 1\).
-        Hence, we have for any \(r\in R\), 
+        Hence, we have for any \(r\in R\),
         \[
           r = r(1) = r(u^{-1}u) = (ru^{-1})(u)\in I.
         \]
@@ -398,12 +398,12 @@
 
     <section id = 'prime'>
       <p>
-        \(\textbf{Theorem. }\) Suppose that \(p\) is in a ring \(R\). Then \(p\) is prime if and only if \((p)\) is a prime ideal. 
+        \(\textbf{Theorem. }\) Suppose that \(p\) is in a ring \(R\). Then \(p\) is prime if and only if \((p)\) is a prime ideal.
       </p>
       <p>
-        \(\textbf{Proof. }\) We firstly show that if \(p\) is prime then \((p)\) is a prime ideal. Suppose that \(p\) is prime. 
+        \(\textbf{Proof. }\) We firstly show that if \(p\) is prime then \((p)\) is a prime ideal. Suppose that \(p\) is prime.
         Then we have \(p\neq 0\) and \(p\) is not a unit. If \(p\mid ab\) where \(a, b\in R\), then we have \(ab = pr\) for some \(r\in R\).
-        In other words, \(ab\in (p)\). Since \(p\) is prime, we have \(p\mid a\), which implies that \(a = pu\) for some \(u\in R\) (i.e. \(a\in (p)\)), 
+        In other words, \(ab\in (p)\). Since \(p\) is prime, we have \(p\mid a\), which implies that \(a = pu\) for some \(u\in R\) (i.e. \(a\in (p)\)),
         or \(p\mid b\), which implies that \(b = pv\) for some \(v\in R\) (i.e. \(b\in (p)\)). Therefore, we have \((p)\) is a prime ideal.
         For the other direction, we suppose that \((p)\) is a prime ideal. If \(ab\in (p)\) for some \(a, b\in R\), then we have \(ab = pr\) for some \(r\in R\).
         Since \((p)\) is a prime ideal, we have \(a\in (p)\) or \(b\in (p)\). Thus, we have \(p\mid a\) or \(p\mid b\). Therefore, \(p\) is prime. \(\blacksquare\)
@@ -411,22 +411,22 @@
     </section>
 
     <br>
-    
+
     <section id = 'homomorphism'>
       <p>
         \(\textbf{Corollary. }\) If \(R\) is a field then any nonzero ring homomorphism \(\varphi: R\to S\) is injective.
       </p>
       <p>
         \(\textbf{Proof. }\) Given \(R\) is a field, we can know that the only ideals of \(R\) are \(\{0\}\) and \(R\).
-        We know that \(\ker(\varphi)\) is an ideal of \(R\). Thus, we only have two options, \(\ker(\varphi) = \{0\}\) or \(\ker(\varphi) = R\). 
-        Suppose that \(a\in \ker(\varphi)\) where \(a\neq 0\). Since \(R\) is a field, we have \(a^{-1}\in R\). Then we have 
+        We know that \(\ker(\varphi)\) is an ideal of \(R\). Thus, we only have two options, \(\ker(\varphi) = \{0\}\) or \(\ker(\varphi) = R\).
+        Suppose that \(a\in \ker(\varphi)\) where \(a\neq 0\). Since \(R\) is a field, we have \(a^{-1}\in R\). Then we have
         \[
           0 = \varphi(a)\cdot \varphi(a^{-1}) = \varphi(aa^{-1}) = \varphi(1) = 1,
         \]
         which is a contradiction. Thus, we have \(\ker(\varphi) = \{0\}\). Therefore, \(\varphi\) is injective. \(\blacksquare\)
       </p>
     </section>
-    
+
     <br>
 
     <section id = 'integral_domain'>
@@ -454,10 +454,10 @@
         <p>
           \(\textbf{Proof (2).}\) The major part is to show that there is no zero divisor in \(\mathbb{Z}[i]\).
           Suppose that there exists zero divisors in \(\mathbb{Z}[i]\).
-          Suppose \(a + bi, c + di\in \mathbb{Z}[i]\) such that \((a + bi)(c + di) = 0\), where 
+          Suppose \(a + bi, c + di\in \mathbb{Z}[i]\) such that \((a + bi)(c + di) = 0\), where
           \(a\) or \(b\) is not zero and \(c\) or \(d\) is not zero. Then we have
           \[
-            \begin{align} 
+            \begin{align}
             (a + bi)(c + di) &= 0\\
             ac + adi + bci + bdi^2 &= 0\\
             ac - bd + (ad + bc)i &= 0\\
@@ -467,7 +467,7 @@
             ad &= -bc\\
             \end{align}
           \]
-          Then we have 
+          Then we have
           \[
           \begin{align}
             acd & = bd^2\\
@@ -491,7 +491,7 @@
               2 &= ac - 5bd + (ad + bc)\sqrt{-5}\\
             \end{align}
             \]
-            We can see that \(ad + bc = 0\). Then we have 
+            We can see that \(ad + bc = 0\). Then we have
             \[
             \begin{align}
             2 &= ac - 5bd\\
@@ -499,7 +499,7 @@
             2 &= (a - b\sqrt{-5})(c + d\sqrt{-5})\\
             \end{align}
             \]
-            In that case, we have 
+            In that case, we have
             \[
             \begin{align}
             4 &= 2\cdot 2\\
@@ -507,43 +507,43 @@
             4 &= (a^2 + 5b^2)(c^2 + 5d^2)\\
             \end{align}
             \]
-            Thus, we can see that if \(b\neq 0\), then we have \(a^2 + 5b^2 \geq 5\). 
+            Thus, we can see that if \(b\neq 0\), then we have \(a^2 + 5b^2 \geq 5\).
             Similarly, if \(d\neq 0\), then we have \(c^2 + 5d^2 \geq 5\).
             Hence, we can see that \(b = d = 0\). Then we have \(2 = ac\).
             Since \(2\) is a prime number, we have \(a = 1\) and \(c = 2\).
             Therefore, we have \(2 = (2 + 0\sqrt{-5})(1 + 0\sqrt{-5})\), where one of them is a unit.
-            Then, we have \(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\). \( \blacksquare\) 
+            Then, we have \(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\). \( \blacksquare\)
           </p>
           <li>\(\textbf{Claim 2.}\) \(3\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
           <p>
-            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example. 
-            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\). 
+            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example.
+            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\).
             Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
             Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
           <li>\(\textbf{Claim 2.}\) \(2\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
           <p>
-            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example. 
-            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\). 
+            \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example.
+            Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\).
             Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
             Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
           <li>\(\textbf{Claim 3.}\) \(3\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
           <p>
-            \(\textbf{Proof. }\) To show that \(3\) is not a prime, we come up with an example. 
-            Firstly, we can see that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\). 
+            \(\textbf{Proof. }\) To show that \(3\) is not a prime, we come up with an example.
+            Firstly, we can see that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\).
             Then we have \(3\mid 9\). However, we can see that \(3\nmid (2 + \sqrt{-5})\) and \(3\nmid (2 - \sqrt{-5})\).
             Therefore, we can see that \(3\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
           <li>\(\textbf{Claim 3.}\) \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
           <p>
-            \(\textbf{Proof. }\)We prove it with contradiction. Suppose that \(2+\sqrt{-5}\) is a prime. 
-            We know that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\). 
+            \(\textbf{Proof. }\)We prove it with contradiction. Suppose that \(2+\sqrt{-5}\) is a prime.
+            We know that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\).
             Then we have \(2+\sqrt{-5}\mid 9\), which implies that \(2 + \sqrt{-5}\mid 3\).
-            We know that \(3\) is irreducible in \(\mathbb{Z}(-\sqrt{5})\). 
+            We know that \(3\) is irreducible in \(\mathbb{Z}(-\sqrt{5})\).
             Then \(2 + \sqrt{-5}\) is a unit, which is not true, or \(2 + \sqrt{-5}\) multiplied by a unit will be \(3\).
             There are only two units in \(\mathbb{Z}(-\sqrt{5})\), which are \(\pm 1\).
-            However, \((2 + \sqrt{-5})\cdot 1 \neq 3\) and \(2 + \sqrt{-5}\cdot (-1) \neq 3\). 
+            However, \((2 + \sqrt{-5})\cdot 1 \neq 3\) and \(2 + \sqrt{-5}\cdot (-1) \neq 3\).
             It is a contradiction. Therefore, we can see that \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
       </ul>
@@ -558,9 +558,9 @@
       </p>
       <p>
         Suppose that \(p\) is a prime and \(p = ab\) for some \(a, b\in R\). Then we have \(p\mid ab\). Since \(p\) is prime, we have \(p\mid a\) or \(p\mid b\).
-        Without loss of generality, we can assume that \(p\mid a\). Then we have \(a = pc\) for some \(c\in R\). Then we have 
+        Without loss of generality, we can assume that \(p\mid a\). Then we have \(a = pc\) for some \(c\in R\). Then we have
         \[
-          p = a\cdot b = (pc)\cdot b = p(cb). 
+          p = a\cdot b = (pc)\cdot b = p(cb).
         \]
         Then we have \(p(1 - cb) = 0\). Since \(R\) is an integral domain, we can know that \(1 - cb = 0\), which implies that \(cb = 1\).
         Therefore, we have \(b\) is a unit. Thus, we have \(p\) is irreducible. \(\blacksquare\)
@@ -582,7 +582,7 @@
       </ul>
       </p>
     </section>
-    
+
     <br>
 
     <section id = 'principal_ideal_domain'>
@@ -602,11 +602,11 @@
       <p>
         \(\textbf{Proof. }\)Let \(R\) be a principal ideal domain and \((p)\) be a prime ideal in \(R\).
         Since \(R\) is a principal ideal domain, we find a ideal containing \((p)\) and assume it is \((m)\) (i.e. \((p)\subset (m)\)).
-        Then we can know that \(p\in (m)\), which implies that \(p = mr\) for some \(r\in R\). 
+        Then we can know that \(p\in (m)\), which implies that \(p = mr\) for some \(r\in R\).
         Then we can get \(mr\in (p)\). Since \(p\) is a prime ideal, we have \(m\in (p)\) or \(r\in (p)\).
         If \(m\in (p)\), then we have \((m)\subset (p)\). Since \((p)\subset (m)\), we have \((p) = (m)\).
         If \(r\in (p)\), then we have \(r = ps\) for some \(s\in R\). Then we have \(p =mr = psm\), which implies that \(1 = sm\).
-        Hence, we have \(m\) is a unit in \(R\). Thus, we have \((m) = R\). 
+        Hence, we have \(m\) is a unit in \(R\). Thus, we have \((m) = R\).
         Therefore, we can see that \((p)\) is maximal. \(\blacksquare\)
       </p>
       <p>
@@ -614,9 +614,9 @@
       </p>
       <p>
         \(\textbf{Proof. }\) Suppose that \(p\) is irreducible in \(R\).
-        If \( M \) is any ideal containing \( \langle p\rangle  \) then by hypothesis \( M = \langle m\rangle  \) is a principal ideal. 
-        Since \( p \in \langle m\rangle  \), \( p = rm \) for some \( r \in R\). 
-        Since \(p\) is irreducible, either \( r \) or \( m \) is a unit. 
+        If \( M \) is any ideal containing \( \langle p\rangle  \) then by hypothesis \( M = \langle m\rangle  \) is a principal ideal.
+        Since \( p \in \langle m\rangle  \), \( p = rm \) for some \( r \in R\).
+        Since \(p\) is irreducible, either \( r \) or \( m \) is a unit.
         If \(m\) is a unit, we have \(\langle m\rangle = R\). If \(r\) is a unit, we have \(\langle p\rangle = \langle m\rangle \).
         Thus the only ideals of \(R\) containing \( \langle p\rangle  \) are \( \langle p\rangle \) or \( R \).
         Thus, we can know that \(\langle p\rangle \) is a maximal ideal.
@@ -631,9 +631,9 @@
       <p>
         \(\textbf{Proof. }\) Let \(I\) be an ideal in a Euclidean domain \(R\). We will show that there exists an element \(a \in I\) such that \(I = (a)\).
         Since the well ordering principle, we can choose \(a \in I\) such that \(a \neq 0\) and \(a\) has the smallest norm among all nonzero elements of \(I\). We claim that \(I = (a)\).
-        Let \(x \in I\). We can write \(x = qa + r\), where \(q, r \in R\) and either \(r = 0\) or \(N(r) \lt N(a)\). 
+        Let \(x \in I\). We can write \(x = qa + r\), where \(q, r \in R\) and either \(r = 0\) or \(N(r) \lt N(a)\).
         Since \(x \in I\) and \(a \in I\), we have \(qa + r \in I\). Therefore, \(r \in I\).
-        If \(r = 0\), then \(x = qa \in (a)\). If \(r \neq 0\), then \(N(r) \lt N(a)\). 
+        If \(r = 0\), then \(x = qa \in (a)\). If \(r \neq 0\), then \(N(r) \lt N(a)\).
         This contradicts the choice of \(a\). Therefore, \(r = 0\) and \(x = qa \in (a)\).
         Hence, every element of \(I\) can be written as a multiple of \(a\), so \(I = (a)\).
         Therefore, every ideal in a Euclidean domain is generated by a single element, and hence a Euclidean domain is a principal ideal domain. \(\blacksquare\)
@@ -642,9 +642,10 @@
         \(\textbf{Proposition.}\) Let \( R \) be a commutative ring.
       <ul>
           <li>An ideal \( P \subseteq R \) is a prime ideal if and only if \( R/P \) is an integral domain.</li>
-          <li>An ideal \( M \subseteq R \) is a maximal ideal if and only if \( R/M \) is a field.</li> 
+          <li>An ideal \( M \subseteq R \) is a maximal ideal if and only if \( R/M \) is a field.</li>
       </ul>
     </section>
+
 
     <br>
 
@@ -685,7 +686,7 @@
         (where \( d = 1 \) if all the exponents are 0) is a greatest common divisor of \( a \) and \( b \).
       </p>
       <p>
-        \(\textbf{Remark. }\) A ring satisfying Bezout's identity is called a Bézout domain. 
+        \(\textbf{Remark. }\) A ring satisfying Bezout's identity is called a Bézout domain.
         Not all unique factorization domains are Bézout domains, but all Bézout domains are unique factorization domains.
       </p>
     </section>
@@ -702,23 +703,23 @@
         \]
       </p>
       <p>
-        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f \in F[x_1, \ldots, x_n] \) be non-constant. 
+        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f \in F[x_1, \ldots, x_n] \) be non-constant.
         Then we say that \(F[X_1, \ldots, x_n]\) is a Unique Factorization Domain.
         Specifically, there are irreducible polynomials \( g_1, \ldots, g_r \in F[x_1, \ldots, x_n] \) such that
-        \[ 
-          f = g_1 \cdots g_r. 
+        \[
+          f = g_1 \cdots g_r.
         \]
         Furthermore, if there is a second factorization of \( f \) into irreducible polynomials
-        \[ 
-          f = h_1 \cdots h_s, 
+        \[
+          f = h_1 \cdots h_s,
         \]
         then \( r = s \) and the \( h_i \)'s can be permuted so that each \( h_i \) is a constant multiple of \( g_i \).
       </p>
       <p>
-        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f, g \in F[x] \). Assume that \( g \) is nonzero. 
+        \(\textbf{Theorem. }\) Let \(F\) be a field and \( f, g \in F[x] \). Assume that \( g \) is nonzero.
         Then there are polynomials \( q, r \in F[x] \) such that
-        \[ 
-          f = qg + r, \quad \text{where } r = 0 \text{ or } \deg(r) \lt \deg(g). 
+        \[
+          f = qg + r, \quad \text{where } r = 0 \text{ or } \deg(r) \lt \deg(g).
         \]
         Furthermore, \( q \) and \( r \) are unique.
       </p>
@@ -727,8 +728,8 @@
       </p>
       <p>
         \(\textbf{Definition. }\)To say that a field \( L \) contains \(\textit{all}\) roots of \( f \) means that \( f \) factors as
-        \[ 
-          f = a_0(x - \alpha_1) \cdots (x - \alpha_n), 
+        \[
+          f = a_0(x - \alpha_1) \cdots (x - \alpha_n),
         \]
         where \( \alpha_1, \ldots, \alpha_n \in L \). When this happens, we say that \( f \) splits completely over \( L \).
       </p>
@@ -773,52 +774,51 @@
       <h2>Adjoining Element</h2>
       <p>
         \(\textbf{Definition.}\) The \(\textit{polynomial ring}\) in the variables \( x_1, x_2, \ldots, x_n \) with coefficients in \( R \), denoted \( R[x_1, x_2, \ldots, x_n] \), is defined inductively by
-        \[ 
+        \[
           R[x_1, x_2, \ldots, x_n] = R[x_1, x_2, \ldots, x_{n-1}][x_n].
         \]
       </p>
       <p>
-        \(\textbf{Adjoining Elements.}\) We next show how to describe some interesting subrings and subfields of a given extension \( F \subset L \). 
+        \(\textbf{Adjoining Elements.}\) We next show how to describe some interesting subrings and subfields of a given extension \( F \subset L \).
         Given \( \alpha_1, \ldots, \alpha_n \in L \), we define
-        \[ 
-          F[\alpha_1, \ldots, \alpha_n] = \{ h(\alpha_1, \ldots, \alpha_n) \mid h \in F[x_1, \ldots, x_n] \}. 
+        \[
+          F[\alpha_1, \ldots, \alpha_n] = \{ h(\alpha_1, \ldots, \alpha_n) \mid h \in F[x_1, \ldots, x_n] \}.
         \]
-        Hence \( F[\alpha_1, \ldots, \alpha_n] \) consists of all polynomial expressions in \( L \) that can be formed using \( \alpha_1, \ldots, \alpha_n \) with coefficients in \( F \). 
+        Hence \( F[\alpha_1, \ldots, \alpha_n] \) consists of all polynomial expressions in \( L \) that can be formed using \( \alpha_1, \ldots, \alpha_n \) with coefficients in \( F \).
       </p>
       <p>
         \(\textbf{Note. }\)Keep in mind that \(F[\alpha_1, \ldots, \alpha_n]\) is a ring, not necessarily a field.
       </p>
       <p>
-        For example let Let \(F = \mathbb{Q}\) and \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\) is not a field. 
+        For example let Let \(F = \mathbb{Q}\) and \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\) is not a field.
         We know that \(1 + \sqrt{2} + \sqrt{3}\in \mathbb{Q}[\sqrt{2}+\sqrt{3}]\). However, we can see that
         \(\frac{1}{1 + \sqrt{2} + \sqrt{3}}\) is not in \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\).
-      </p> 
+      </p>
         Let
-        \[ 
-          F(\alpha_1, \ldots, \alpha_n) = \left\{ \frac{\alpha}{\beta} \mid \alpha, \beta \in F[\alpha_1, \ldots, \alpha_n], \beta \neq 0 \right\}. 
+        \[
+          F(\alpha_1, \ldots, \alpha_n) = \left\{ \frac{\alpha}{\beta} \mid \alpha, \beta \in F[\alpha_1, \ldots, \alpha_n], \beta \neq 0 \right\}.
         \]
-        Thus \( F(\alpha_1, \ldots, \alpha_n) \) is the set of all rational expressions in the \( \alpha_i \) with coefficients in \( F \). 
+        Thus \( F(\alpha_1, \ldots, \alpha_n) \) is the set of all rational expressions in the \( \alpha_i \) with coefficients in \( F \).
       </p>
       <p>
         \(\textbf{Lemma. }\)\( F(\alpha_1, \ldots, \alpha_n) \) is the smallest subfield of the field \( L \) containing \( F \) and \( \alpha_1, \ldots, \alpha_n \).
       </p>
       <p>
         \(\textbf{Proof. }\) Let \(L\) be a field containing \(F\) and \(\alpha_1, \ldots, \alpha_n\).
-        Firstly, we show that \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \). 
-
-        Thus, to prove the lemma, we must show that if \( K \) is a subfield of \( L \) containing \( F \) and \( \alpha_1, \ldots, \alpha_n \), then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K \). 
+        Firstly, we show that \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \).
+        Thus, to prove the lemma, we must show that if \( K \) is a subfield of \( L \) containing \( F \) and \( \alpha_1, \ldots, \alpha_n \), then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K \).
         This is what "smallest" means in the statement of the lemma.
-        Suppose that \( K \subseteq L \) contains \( F \) and \( \alpha_1, \ldots, \alpha_n \). 
-        Since \( K \) is closed under multiplication and addition, it follows that \( p(\alpha_1, \ldots, \alpha_n) \in K \) for any polynomial \( p \in F[x_1, \ldots, x_n] \). 
+        Suppose that \( K \subseteq L \) contains \( F \) and \( \alpha_1, \ldots, \alpha_n \).
+        Since \( K \) is closed under multiplication and addition, it follows that \( p(\alpha_1, \ldots, \alpha_n) \in K \) for any polynomial \( p \in F[x_1, \ldots, x_n] \).
         This shows that \( F[\alpha_1, \ldots, \alpha_n] \subseteq K \). Then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K \) follows immediately, since \( K \) is a field.
-        Since \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \) containing \( F \), we get extensions  
-        \[ 
-          F \subseteq F(\alpha_1, \ldots, \alpha_n) \subseteq L. 
+        Since \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \) containing \( F \), we get extensions
+        \[
+          F \subseteq F(\alpha_1, \ldots, \alpha_n) \subseteq L.
         \]
-        We say that \( F(\alpha_1, \ldots, \alpha_n) \) is obtained from \( F \) by adjoining \( \alpha_1, \ldots, \alpha_n \in L \). 
+        We say that \( F(\alpha_1, \ldots, \alpha_n) \) is obtained from \( F \) by adjoining \( \alpha_1, \ldots, \alpha_n \in L \).
       </p>
   </section>
-    
+
     <br>
 
     <section id = 'splitting_field'>
@@ -889,12 +889,12 @@
       <span class = 'keyword'>sage:</span> p = a.minpoly(); p
       <span class = 'outcome'>x^2 - 2</span>
       </code></pre>
-      <pre><code> 
-      <span class="keyword">sage:</span> <span class="function">var</span>(<span class="string">'a'</span>) 
-      <span class="keyword">sage:</span> a <span class="operator">=</span> <span class="function">sqrt</span><span class="group">(</span><span class="number">2</span><span class="group">)</span>; a 
-      <span class="outcome">sqrt(2)</span> 
-      <span class="keyword">sage:</span> p <span class="operator">=</span> a.minpoly<span class="group">()</span>; p 
-      <span class="outcome">x^2 - 2</span> 
+      <pre><code>
+      <span class="keyword">sage:</span> <span class="function">var</span>(<span class="string">'a'</span>)
+      <span class="keyword">sage:</span> a <span class="operator">=</span> <span class="function">sqrt</span><span class="group">(</span><span class="number">2</span><span class="group">)</span>; a
+      <span class="outcome">sqrt(2)</span>
+      <span class="keyword">sage:</span> p <span class="operator">=</span> a.minpoly<span class="group">()</span>; p
+      <span class="outcome">x^2 - 2</span>
     </code></pre>
       </div>
       </div>
@@ -911,18 +911,18 @@
         \(\textbf{Lemma. }\) An extension \(F \subset L\) has degree \([L: F] = 1\) if and only if \(F = L\).
       </p>
       <p>
-        \(\textbf{Proposition. }\) Let \(F \subset K\) and \([K: F]\lt\infty, |F| = \infty\). 
+        \(\textbf{Proposition. }\) Let \(F \subset K\) and \([K: F]\lt\infty, |F| = \infty\).
         Then there exists a primitive element for \(F\subset K\) if and only if there are only finitely many intermediate fields between \(F\) and \(K\).
       </p>
       <p>
-        \(\textbf{Corollary. }\) Suppose that \(\mathbb{Q}\subset F\) and \([K: F]\lt\infty\). 
+        \(\textbf{Corollary. }\) Suppose that \(\mathbb{Q}\subset F\) and \([K: F]\lt\infty\).
         Then there are only finitely many intermediate fields between \(F\) and \(K\).
       </p>
       <p>
         \(\textbf{Proposition. }\) Suppose that \([K: F]\lt\infty\). Then every \(\alpha \in K\) is algebraic over \(F\).
       </p>
       <p>
-        \(\textbf{Theorem. }\) Suppose that \(F\subset E\subset K\), and \(E\) is algebraic over \(F\) and \(K\) is algebraic over \(E\). 
+        \(\textbf{Theorem. }\) Suppose that \(F\subset E\subset K\), and \(E\) is algebraic over \(F\) and \(K\) is algebraic over \(E\).
         Then \(K\) is algebraic over \(F\).
       </p>
       <p>
@@ -960,22 +960,22 @@
       </p>
       <p>
         \(\textbf{Proof. }\)We firstly show that if a nonzero polynomial in \(K[X]\) is separable, then it is relatively prime to its derivative in \(K[X]\).
-        Suppose that \(f(x)\in K[X]\) is separable, then we have \(f(x) = (x - \alpha)h(x)\) for some \(\alpha\) in the extension of \(K\). 
-        Note that \((x - \alpha)\) is the distinct factor of \(f\) because of the definition of separable. 
+        Suppose that \(f(x)\in K[X]\) is separable, then we have \(f(x) = (x - \alpha)h(x)\) for some \(\alpha\) in the extension of \(K\).
+        Note that \((x - \alpha)\) is the distinct factor of \(f\) because of the definition of separable.
         In other words, \(h(\alpha)\neq 0\).
-        Then we have 
+        Then we have
         \[
         \begin{align}
           f'(x) &= h(x) + (x - \alpha)h'(x). \\
           f'(\alpha) &= h(\alpha) + (\alpha - \alpha)h'(\alpha) = h(\alpha) \neq 0. \\
-        \end{align} 
+        \end{align}
         \]
-        In that case, we can know that \(f\) and \(f'\) do not share the same root, which implies that 
+        In that case, we can know that \(f\) and \(f'\) do not share the same root, which implies that
         they do not have the same factor. Hence, we have \(f\) and \(f'\) are relatively prime.
-        For the other direction, we will prove it with contrapositive. 
+        For the other direction, we will prove it with contrapositive.
         Suppose that \(f(x)\) is not separable, given the definition of separable, we can know that \(f(x)\) has a repeated roots.
         Then we have \(f(x) = (x - \alpha)^2h(x)\) for some \(\alpha\) in the extension of \(K\).
-        Hence, we can get 
+        Hence, we can get
         \[
         \begin{align}
           f'(x) &= 2(x - \alpha)h(x) + (x - \alpha)^2h'(x)\\
@@ -1033,11 +1033,11 @@
           </li>
              <ul>
               <li>
-                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \). 
+                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \).
                 Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
               </li>
-             </ul> 
-        </ul> 
+             </ul>
+        </ul>
         We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.
       </p>
       <p>
@@ -1053,7 +1053,7 @@
         \(\textbf{Proposition. }\) Let \( F \subset L \) be a finite extension and let \( \sigma \in \text{Gal}(L/F) \). Then:
         <ul>
           <li>If \(h \in F[x]\) is a non-constant polynomial with \( \alpha \in L \) as a root, then \( \sigma(\alpha) \) is also a root of \( h \) lying in \( L \).</li>
-          <li>If \(L = F(\alpha_1, \ldots, \alpha_n)\), then \( \sigma \) is uniquely determined by its values on \( \alpha_1, \ldots, \alpha_n \).</li> 
+          <li>If \(L = F(\alpha_1, \ldots, \alpha_n)\), then \( \sigma \) is uniquely determined by its values on \( \alpha_1, \ldots, \alpha_n \).</li>
         </ul>
       </p>
     </section>
@@ -1080,26 +1080,26 @@
           </li>
              <ul>
               <li>
-                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \). 
+                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \).
                 Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
               </li>
-             </ul> 
-        </ul> 
+             </ul>
+        </ul>
         We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.
       </p>
       <div class="code-box-container">
       <div class="code-box">
-      <pre><code> 
+      <pre><code>
         <span class="keyword">sage:</span> R.<span class="operator">&lt;</span>x<span class="operator">&gt;</span> <span class="operator">=</span> QQ[]
 
         <span class="keyword">sage:</span> K.<span class="operator">&lt;</span>a<span class="operator">></span> <span class="operator">=</span> <span class="function">NumberField</span><span class="group">(</span>x<span class="operator">^</span><span class="number">3</span> <span class="operator">+</span> x<span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="number">2</span><span class="group">)</span>
-        
+
         <span class="keyword">sage:</span> G <span class="operator">=</span> K.galois_group<span class="group">()</span>; G
         <span class="outcome">Galois group 3T2 (S3) with order 6 of x^3 + x^2 + 2</span>
-        
+
         <span class="keyword">sage:</span> G.easy_order<span class="group">()</span>
         <span class="outcome">6</span>
-        
+
         <span class="keyword">sage:</span> G.list<span class="group">()</span>
         <span class="outcome">[(),
         (1,2,3)(4,5,6),
@@ -1122,7 +1122,7 @@
           -1 & 1 & 0 & 0 \\
           -2 & 0 & -1 & -2 \\
           1 & -1 & 0 & 0 \\
-          \end{bmatrix} \), with entries in \( \mathbb{C} \). 
+          \end{bmatrix} \), with entries in \( \mathbb{C} \).
         Find \( J \), the Jordan canonical form for \( A \) and an invertible matrix \( P \) such that \( J = P^{-1}AP \).
       </p>
       <p>
@@ -1142,9 +1142,9 @@
           \end{bmatrix}.
         \]
         Now we calculate the eigenvectors of \(A\).
-        Then we have the eigenvectors of \(A\) are \(v_1 =  (0, 1, 1, -1)^T\) for eigenvalue \(1\), 
+        Then we have the eigenvectors of \(A\) are \(v_1 =  (0, 1, 1, -1)^T\) for eigenvalue \(1\),
         \(v_2 = (0, 0, 1, 0)^T\) for eigenvalue \(1\), \(v_3 = (1, 1, 0, -1)^T\) for eigenvalue \(0\).
-        We need to find another column vector of \(P\). Suppose that it is \((a, b, c, d)^T\) such that 
+        We need to find another column vector of \(P\). Suppose that it is \((a, b, c, d)^T\) such that
         \[
          A \begin{bmatrix}
           a \\
@@ -1158,7 +1158,7 @@
             -1 \\
           \end{bmatrix}.
         \]
-        Then we have \((a, b, c, d)^T = (1, 2, 0, -1)^T\). Hence, we have a matrix such that 
+        Then we have \((a, b, c, d)^T = (1, 2, 0, -1)^T\). Hence, we have a matrix such that
         \[
           B = \begin{bmatrix}
             1 & 1 & 0 & 0 \\
@@ -1189,18 +1189,18 @@
         \(\textbf{Solution 1.}\)
       </p>
       <p>
-        \(\textbf{Proof 2.}\)Suppose that \(I\) is an identity matrix and \(N\) is a nilpotent matrix. 
-        Hence, we know there exists a \(n\in\mathbb{N}\) such that \(N^n = 0\). 
-        If \(N = 0\), then we can know that 
+        \(\textbf{Proof 2.}\)Suppose that \(I\) is an identity matrix and \(N\) is a nilpotent matrix.
+        Hence, we know there exists a \(n\in\mathbb{N}\) such that \(N^n = 0\).
+        If \(N = 0\), then we can know that
         \[
           I + N = I + 0 = I.
         \]
         Since \(I\) is a diagonal matrix, we can know that \(I + N\) is diagonalizable. To see that, just pick any invertible matrix \(P\).
         Then, we have \(PIP^{-1} = I\). Hence, we have \(I\) is diagonalizable. Now suppose that \((I+N)\) is diagonalizable.
         Then, there exists a diagonal matrix \(D\) and an invertible matrix \(P\) such that \(D = P^{-1}(I + N)P\).
-        Then, we have 
+        Then, we have
         \[
-        \begin{align} 
+        \begin{align}
         P^{-1}(I + N)P &= D\\
         P^{-1}IP + P^{-1}NP &= D\\
         I + P^{-1}NP &= D\\
@@ -1211,14 +1211,14 @@
         0 &= (D - I)^n\\
         \end{align}
         \]
-        Thus, we can see that \(D - I = 0\), which implies that \(D = I\). 
+        Thus, we can see that \(D - I = 0\), which implies that \(D = I\).
         Hence, we have \(P^{-1}(I + N)P = D = I\).
         Then we have \(I + N = PIP^{-1} = I\). Therefore, we have \(N = 0\).\(\blacksquare\)
       </p>
     </section>
 
     <br>
-    
+
     <h2>KU 2022 (January)</h2>
       <section id = 'ku_2022_1_1'>
         <p>
@@ -1234,19 +1234,19 @@
       </p>
       <p>
         \(\textbf{Proof(1). }\) Let \( A \) be a \( 2 \times 2 \) matrix over the real numbers.
-        If \( A^2 = \pm A \), then we have \( A^4 = A^2 A^2 = (\pm A)(\pm A) = A^2\). 
+        If \( A^2 = \pm A \), then we have \( A^4 = A^2 A^2 = (\pm A)(\pm A) = A^2\).
         If \( A^m = I \) for some \( m > 0 \), then we have \( A^{m+1} = A^m\cdot A = I\cdot A = A \), where \(m+1 > 1\).
         For the other direction, without loss of generality, given \(A^m = A^n\) where \(m\gt n\).
         If \(A\) is invertible, then we have \(A^{m-n} = I\) where \(m-n > 0\).
-        Firstly, we show that if \(A\) is non-invertible, then we can know that of the eigenvalue is \(0\).  
-        Since \(A\) is non-invertible, we can know that \(\text{det}(A) = 0\). 
-        Then we know the characteristic polynomial of \(A\) is \(\chi_A(x) = \text{det}(A - xI)\). 
+        Firstly, we show that if \(A\) is non-invertible, then we can know that of the eigenvalue is \(0\).
+        Since \(A\) is non-invertible, we can know that \(\text{det}(A) = 0\).
+        Then we know the characteristic polynomial of \(A\) is \(\chi_A(x) = \text{det}(A - xI)\).
         When we plug in \(x = 0\), then we have \(\chi_A(0) = \text{det}(A - 0I) = \text{det}(A) = 0\).
         In that case, we have \(0\) is an eigenvalue of \(A\). Now we know one of the eigenvalues is \(0\) and we assume that the other eigenvalue is \(\lambda\).
-        In that case we can denote the \(\chi_A(x) = (x - 0)(x - \lambda) = x(x - \lambda)\). 
+        In that case we can denote the \(\chi_A(x) = (x - 0)(x - \lambda) = x(x - \lambda)\).
         According to the Cayley-Hamilton theorem, we have \(\chi_A(A) = A(A - \lambda I) = A^2 - \lambda A = 0\).
-        Then we have \(A^2 = \lambda A\), which implies that \(\frac{1}{\lambda}A^2 = A\). Given we have \(A^m = A^n\). 
-        We have 
+        Then we have \(A^2 = \lambda A\), which implies that \(\frac{1}{\lambda}A^2 = A\). Given we have \(A^m = A^n\).
+        We have
         \[
         \begin{align}
           A^n &=  (\frac{1}{\lambda}A^2)^n \\
@@ -1257,18 +1257,18 @@
         \lambda^n A^m &= A^{2m}\\
         \end{align}
         \]
-        At the same time, it is not hard to get \(A^{2m} = \lambda^mA^m\). 
-        Then we have \(\lambda^n A^m = \lambda^m A^m\), which implies that 
+        At the same time, it is not hard to get \(A^{2m} = \lambda^mA^m\).
+        Then we have \(\lambda^n A^m = \lambda^m A^m\), which implies that
         \[
           A^m(\lambda^m - \lambda^n) = 0.
         \]
         Then, we can know that \(A^m = 0\) or \(\lambda^m = \lambda^n\).
-        It \(A^m = 0\), then we can know that \(A\) is nilpotent. 
+        It \(A^m = 0\), then we can know that \(A\) is nilpotent.
         We know that \(A\) is nilpotent, then we can know that \(A\) has only one eigenvalue which is \(0\). (need to be proved.)
         In that case, we have \(A^2 = 0 \). Then we can get that \(A = 0\) with conditions of \(\text{det}(A) = 0\).
-        If \(\lambda^m = \lambda^n\), then we have \(\lambda^n(\lambda^{m-n} - 1)\). Again, if \(\lambda \neq 0\), then we have 
-        \(\lambda^{m-n} = 1\) where \(\lambda\in \mathbb{R}\). Then we have \(\lambda = \pm 1\). In that case, we have 
-        \(A^2 = \lambda A = \pm A\).\(\blacksquare\) 
+        If \(\lambda^m = \lambda^n\), then we have \(\lambda^n(\lambda^{m-n} - 1)\). Again, if \(\lambda \neq 0\), then we have
+        \(\lambda^{m-n} = 1\) where \(\lambda\in \mathbb{R}\). Then we have \(\lambda = \pm 1\). In that case, we have
+        \(A^2 = \lambda A = \pm A\).\(\blacksquare\)
       </p>
       <p>
         \(\textbf{Solution(2). }\) Let \( A = \begin{pmatrix} \cos(\frac{2\pi}{2022}) &  -\sin(\frac{2\pi}{2022}) \\  \sin(\frac{2\pi}{2022}) &  \cos(\frac{2\pi}{2022}) \end{pmatrix} \).
@@ -1298,7 +1298,7 @@
         x - 2 & 2 & 1\\
         0 & x-3 & 0\\
         -1 & x + 2 & x - 4\\
-        \end{matrix} 
+        \end{matrix}
         \right|\\
         &= -(x-3)((x-2)(x-4) + 1)\\
         &= -(x-3)(x^2 - 6x + 9)\\
@@ -1308,7 +1308,7 @@
         Now we try to identity the minimal polynomial, which only have two options for us: \((x - 3)^2\) or \((x - 3)^3\).
         When we plug in \(A = x\) to \((x - 3)^2\), we have \((A - 3)^2 = 0\).
         Hence, we have the minimal polynomial which is \((x - 3)^2\).
-        Hence, we have the rational canonical form and Jordan canonical form 
+        Hence, we have the rational canonical form and Jordan canonical form
         \[
         R = \begin{pmatrix}
         0 & -9 & 0\\
@@ -1319,23 +1319,23 @@
         3 & 0 & 0\\
         1 & 3 & 0 \\
         0 & 0 & 3\\
-        \end{pmatrix} 
+        \end{pmatrix}
         \]
-      Since the minimal polynomial is \((x - 3)^2\), we want to find a vector \(v\not\in \ker(A - 3)\) as a maximal vector. 
-      We find out that \(v = (1, 0, 0)^T\), and we have the eigenvectors \((1, 0, -1)^T, (0, 1, 2)^T\). 
-      We calculate the \(A\cdot v= (2, 0, 1)^T\). In order to make basis, we will choose \(v, Av\). For the last vector, we will use an 
+      Since the minimal polynomial is \((x - 3)^2\), we want to find a vector \(v\not\in \ker(A - 3)\) as a maximal vector.
+      We find out that \(v = (1, 0, 0)^T\), and we have the eigenvectors \((1, 0, -1)^T, (0, 1, 2)^T\).
+      We calculate the \(A\cdot v= (2, 0, 1)^T\). In order to make basis, we will choose \(v, Av\). For the last vector, we will use an
       eigenvector which is linearly independent to \(v, Av\), which is \((0, 1, 2)^T\).
-      Thus, the basis for the rational canonical form is 
+      Thus, the basis for the rational canonical form is
       \[
-      P_C = \begin{pmatrix} 
+      P_C = \begin{pmatrix}
       1 & 2 & 0\\
       0 & 0 & 1\\
       0 & 1 & 2\\
       \end{pmatrix}
       \]
-      Similarly, we can find the Jordan basis 
+      Similarly, we can find the Jordan basis
       \[
-      P_C = \begin{pmatrix} 
+      P_C = \begin{pmatrix}
       1 & -1 & 0\\
       0 & 0 & 1\\
       0 & 1 & 2\\
@@ -1346,7 +1346,7 @@
     <!-- <section id = "ku_2022_8_17_2">
     <h2>KU 2022(8/17)(2)</h2>
     <p>
-    \(\textbf{Question 2.}\) For \(a, b \in \mathbb{C}\). Let \(M(a, b)\) be the matrix 
+    \(\textbf{Question 2.}\) For \(a, b \in \mathbb{C}\). Let \(M(a, b)\) be the matrix
     \(
     \begin{pmatrix}
     0 & 1 & 0 \\
@@ -1372,7 +1372,7 @@
         </ul>
       </p>
       <p>
-        \(textbf{Proof (i).}\) By Esenstain's criterion, we choose \(p = 5\), then we have \(f(x) = x^4 + 5\) is irreducible over \(\mathbb{Z}\). 
+        \(textbf{Proof (i).}\) By Esenstain's criterion, we choose \(p = 5\), then we have \(f(x) = x^4 + 5\) is irreducible over \(\mathbb{Z}\).
         If \(f(x)\) is irreducible over \( \mathbb{Z} \), then it is irreducible over \( \mathbb{Q} \). \(\blacksquare\)
       </p>
     </section>
@@ -1393,17 +1393,17 @@
       </ul>
     </p>
     <p>
-      \(\textbf{Proof (a). }\) Suppose that \(I\) is a prime ideal in \(R\). 
+      \(\textbf{Proof (a). }\) Suppose that \(I\) is a prime ideal in \(R\).
       Suppose that \(r\in I\) and \(r = p_1\cdots p_n\) for some prime elements \(p_1, \ldots, p_n\) since \(R\) is a unique factorization domain.
       Then we have \(p_1\in I\) or \(p_2\in I\) or \(\cdots\) or \(p_n\in I\). In general, there exists a prime \(p\in I\).
       Hence, we have \(pR \subset I\). Since \(I\) is a prime ideal, it is proper and there are no proper ideals properly containing \(pR\).
       Thus, it forces \(I = pR\). Hence, we have every prime ideal in \(R\) is a principal ideal. \(\blacksquare\)
     </p>
     <p>
-      \(\textbf{Proof (b). }\) Suppose that \(a, b\in R\) are non-unit and non-zero elements in \(R\). 
+      \(\textbf{Proof (b). }\) Suppose that \(a, b\in R\) are non-unit and non-zero elements in \(R\).
       Suppose that \(d\) is the greatest common divisor of \(a\) and \(b\). Then we have \(d\mid a\) and \(d\mid b\).
       It shows that \(a\in dR\) and \(b\in dR\). Hence, we have \(\langle a, b \rangle \subset dR\).
-      For the other direction, 
+      For the other direction,
     </p>
     </section>
 
@@ -1424,12 +1424,12 @@
           </ul>
         </p>
         <p>
-          \(\textbf{Proof(1). }\)Suppose that \(A\) and \(B\) are two similar \(n\times n\) matrices. 
-          Then we have \(A = PBP^{-1}\) for some invertible \(n\times n\) matrices over \(\mathbb{C}\). 
+          \(\textbf{Proof(1). }\)Suppose that \(A\) and \(B\) are two similar \(n\times n\) matrices.
+          Then we have \(A = PBP^{-1}\) for some invertible \(n\times n\) matrices over \(\mathbb{C}\).
           Suppose the characteristic polynomial of \(A\) is \(\chi_A(x)\). Then we have
-          Hence, we have 
+          Hence, we have
           \[
-            \begin{align} 
+            \begin{align}
             \chi_A(x) &= \text{det}(xI - A)\\
             &= \text{det}(xI - PBP^{-1})\\
             &= \text{det}(PxIP^{-1} - PBP^{-1})\\
@@ -1442,13 +1442,13 @@
             &= \chi_B(x).
             \end{align}
           \]
-          Thus, we show that the characteristic polynomial of \(A\) and \(B\) are the same. 
+          Thus, we show that the characteristic polynomial of \(A\) and \(B\) are the same.
           Now we need to show that the minimal polynomial of \(A\) and \(B\) are the same.
           Suppose that the minimal polynomial of \(A\) is \(\mu_A(x):=(x-\lambda_1)^{e_1}\cdots(x - \lambda_m)^{e_m}\)
           and the minimal polynomial of \(B\) is \(\mu_B(x):=(x-\lambda_1)^{f_1}\cdots(x - \lambda_m)^{f_m}\).
-          Then we have 
+          Then we have
           \[
-            \begin{align} 
+            \begin{align}
             \mu_A(A) &= 0\\
             \mu_A(PBP^{-1}) &= (\lambda_1I - PBP^{-1})^{e_1}\cdots(\lambda_mI - PBP^{-1})^{e_m}\\
             &= (P\lambda_1IP^{-1} - PBP^{-1})^{e_1}\cdots(P\lambda_mIP^{-1} - PBP^{-1})^{e_m}\\
@@ -1458,9 +1458,9 @@
             (\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m} &= P^{-1}0P = 0\\
             \end{align}
           \]
-          Thus, we can know that \(e_i\geq f_i\) for \(i = 1, \ldots, m\). Similarly, we can know that 
+          Thus, we can know that \(e_i\geq f_i\) for \(i = 1, \ldots, m\). Similarly, we can know that
           \[
-          \begin{align} 
+          \begin{align}
             \mu_B(B) &= 0\\
             \mu_B(P^{-1}AP) &= (\lambda_1I - P^{-1}AP)^{f_1}\cdots(\lambda_mI - P^{-1}AP)^{f_m}\\
             &= (P^{-1}\lambda_1IP - P^{-1}AP)^{f_1}\cdots(P^{-1}\lambda_mIP - P^{-1}AP)^{f_m}\\
@@ -1474,7 +1474,7 @@
           Therefore, we show that they share the same minimal polynomial.\(\blacksquare\)
         </p>
         <p>
-          \(\textbf{Solution 2. }\)The converse of (i) does hold when \(n = 3\). 
+          \(\textbf{Solution 2. }\)The converse of (i) does hold when \(n = 3\).
           The converse of (i) does not hold when \(n = 4\).
         </p>
 
@@ -1492,18 +1492,18 @@
           </ul>
         </p>
         <p>
-          \(\textbf{Proof. }\)Firstly, given that \(R\) is an integral domain, \(\mathcal{J}\) satisfies the ascending chain condition implies that 
+          \(\textbf{Proof. }\)Firstly, given that \(R\) is an integral domain, \(\mathcal{J}\) satisfies the ascending chain condition implies that
           there is a maximal element in \(\mathcal{J}\) (i.e. a maximal ideal in \(\mathcal{J}\)). We also know that a maximal ideal is a prime ideal.
           For any principal ideal of \(R\), we can denote it as \(\langle r\rangle\) for some \(r\in R\) where \(r\neq 0\).
           Then, we can know that \(\langle r\rangle \subset (R, \frac{1}{r})\) since \(r\cdot \frac{1}{r} = 1\in R\).
-          Hence, we can know that any principal ideal is contained in an ideal in \(\mathcal{J}\). 
+          Hence, we can know that any principal ideal is contained in an ideal in \(\mathcal{J}\).
           Since every ideal in \(\mathcal{J}\) is principal and it satisfies the ascending chain condition, we can know that
-          the collection of principal ideals in \(R\) satisfies the ascending chain condition. 
+          the collection of principal ideals in \(R\) satisfies the ascending chain condition.
           According to \(\textbf{Proposition A}\), we can know it implies that every non-zero and non-unit element in \(R\) can be written as a finite product of irreducible elements.
-          Now, suppose that \(\langle r\rangle \subset (R, \frac{1}{r})\). For any \(s\in (R, \frac{1}{r})\), we can know that \(s\cdot \frac{1}{r} \in R\). 
+          Now, suppose that \(\langle r\rangle \subset (R, \frac{1}{r})\). For any \(s\in (R, \frac{1}{r})\), we can know that \(s\cdot \frac{1}{r} \in R\).
           Then we have \(\frac{s}{r} = t\) for some \(t\in R\). Hence, we have \(s = tr\in \langle r\rangle \).
           Hence, we show that \(\langle r\rangle = (R, \frac{1}{r})\). Suppose that there is an ideal \(I\in \mathcal{J}\) such that \(\langle q\rangle \subset I\), where \(q\) is irreducible in \(R\).
-          Since every ideal in \(\mathcal{J}\) is principal, we can know that \(I = \langle m\rangle\) for some \(m\in R\). 
+          Since every ideal in \(\mathcal{J}\) is principal, we can know that \(I = \langle m\rangle\) for some \(m\in R\).
           Since \(q\in \langle m\rangle\), we can k
           now that \(q = rm\) for some \(r\in R\). Since \(q\) is irreducible, we can know that either \(m\) or \(r\) is a unit in \(R\).
           If \(m\) is a unit, then we have \(I = R\). If \(r\) is a unit, then we have \(I = \langle q\rangle\).
@@ -1513,27 +1513,27 @@
         <br>
 
         <p>
-          \(\textbf{Problem 6. }\)Show that \(\mathbb{Q}(\sqrt[3]{2})\) is not contained in \(\mathbb{Q}(\epsilon)\) for any root of unity \(\epsilon \in \mathbb{C}\). 
+          \(\textbf{Problem 6. }\)Show that \(\mathbb{Q}(\sqrt[3]{2})\) is not contained in \(\mathbb{Q}(\epsilon)\) for any root of unity \(\epsilon \in \mathbb{C}\).
         </p>
         <p>
-          \(\textbf{Proof. }\) We will prove it with mathematical contradiction. Suppose that it is true that  \(\mathbb{Q}(\sqrt[3]{2})\) is contained in \(\mathbb{Q}(\epsilon)\) for some \(n\)th root of unity \(\epsilon \in \mathbb{C}\). 
-          Firstly, we know that \(\mathbb{Q}(\epsilon)\cong \mathbb{Q}/\Phi_n(x)\), where \(\Phi_n(x)\) is the \(n\)th cyclotomic polynomial. Since \(\Phi_n(x)\) is irreducible over \(\mathbb{Q}\), we can know that \(\Phi_n(x)\) is separable over \(\mathbb{Q}\) since any irreducible polynomial over a characteristic zero field is separable. 
-          Then, we can know that \(\mathbb{Q}(\epsilon)\) is a galois extension over \(\mathbb{Q}\). 
-          Since \(\mathbb{Q}(\sqrt[3]{2})\) is a subfield of \(\mathbb{Q}(\epsilon)\), we can know that \(\mathbb{Q}(\sqrt[3]{2})\) is a galois extension over \(\mathbb{Q}\). 
-          The minimal polynomial of \(\sqrt[3]{2}\) is \(x^3 - 2\), which is irreducible over \(\mathbb{Q}\). 
+          \(\textbf{Proof. }\) We will prove it with mathematical contradiction. Suppose that it is true that  \(\mathbb{Q}(\sqrt[3]{2})\) is contained in \(\mathbb{Q}(\epsilon)\) for some \(n\)th root of unity \(\epsilon \in \mathbb{C}\).
+          Firstly, we know that \(\mathbb{Q}(\epsilon)\cong \mathbb{Q}/\Phi_n(x)\), where \(\Phi_n(x)\) is the \(n\)th cyclotomic polynomial. Since \(\Phi_n(x)\) is irreducible over \(\mathbb{Q}\), we can know that \(\Phi_n(x)\) is separable over \(\mathbb{Q}\) since any irreducible polynomial over a characteristic zero field is separable.
+          Then, we can know that \(\mathbb{Q}(\epsilon)\) is a galois extension over \(\mathbb{Q}\).
+          Since \(\mathbb{Q}(\sqrt[3]{2})\) is a subfield of \(\mathbb{Q}(\epsilon)\), we can know that \(\mathbb{Q}(\sqrt[3]{2})\) is a galois extension over \(\mathbb{Q}\).
+          The minimal polynomial of \(\sqrt[3]{2}\) is \(x^3 - 2\), which is irreducible over \(\mathbb{Q}\).
           However, we can know that \(x^3 - 2\) is not separable over \(\mathbb{Q}\) since it does not contain the complex roots in \(\mathbb{Q}(\sqrt[3]{2})\).
           Hence, we have a contradiction. Therefore, we can know that \(\mathbb{Q}(\sqrt[3]{2})\) is not contained in \(\mathbb{Q}(\epsilon)\) for any root of unity \(\epsilon \in \mathbb{C}\).\(\blacksquare\)
         </p>
       </section>
 
 
-    
+
     <h2>KU 2023 (August) </h2>
 
     <section id = "ku_2023_8_1">
       <p>
       \(\textbf{Problem 1.}\) Suppose that \(A\) is a square complex matrix such that \(A\) is similar to \(A^n\), for some \(n>1\).
-      Prove that the eigenvalues of \(A\) are either \(0\) or roots of unity. 
+      Prove that the eigenvalues of \(A\) are either \(0\) or roots of unity.
       </p>
       <p>
         \(\textbf{Proof. }\) Suppose that \(\lambda\) is an eigenvalue of \(A\) and \(v\) is the corresponding eigenvector, and we
@@ -1567,7 +1567,7 @@
         Hence, we can know that \(\lambda^n\) is an eigenvalue of \(A^n\) and its corresponding eigenvector is \(v\).
         Since we know that \(A\) and \(A^n\) are similar, we have \(\lambda^n\) is an eigenvalue of \(A\).
       </p>
-    </section> 
+    </section>
 
     <section id = "ku_2023_8_2">
     <p>
@@ -1601,11 +1601,11 @@
             -3 & 3 & 0\\
             -3 & 3 & 0\\
             0 & 0 & 0
-          \end{pmatrix} \\ 
+          \end{pmatrix} \\
           &\neq 0.
         \end{align}
       \]
-      Then it leaves me the only option, which is \((x-2)(x+1)^2\). And we can know that the minimal polynomial 
+      Then it leaves me the only option, which is \((x-2)(x+1)^2\). And we can know that the minimal polynomial
       is the characteristic polynomial, which implies that there is only one Jordan block for the eigenvalue \(-1\).
       Now we can get the Jordan canonical form of \(A\), which is
       \[
@@ -1615,10 +1615,10 @@
           0 & 0 & 2
         \end{pmatrix}.
       \]
-      Now we need to find the matrix \(P\) such that \(A=PJP^{-1}\). 
+      Now we need to find the matrix \(P\) such that \(A=PJP^{-1}\).
       Firstly, we need to find the maximal vector of \(A\) for the eigenvalue \(-1\), which is in not in \(\ker(A + I)\).
       Then we get the columns of \(P\) as \(v, (A-2I)v = (1, 1, 0)^T, v_1\), where \(v_1\) is the eigenvector corresponding to the eigenvalue \(2\).
-      Hence, we have 
+      Hence, we have
       \[
         P = \begin{pmatrix}
           1 & 1 & 1\\
@@ -1677,8 +1677,8 @@
         2022 & -2023 & 2^{2023}+1\\
         2023 & -2024 & 2^{2023} + 1\\
         0 & 0 & 2^{2023}
-      \end{pmatrix} 
-      \end{align} 
+      \end{pmatrix}
+      \end{align}
       \]
       </p>
   </section>
@@ -1781,14 +1781,14 @@
             3 &= (a - b\sqrt{-11})(c - d\sqrt{-11})\\
             \end{align}.
           \]
-          Then, we have 
+          Then, we have
           \[
             9 = 3\cdot 3 = (a + b\sqrt{-11})(c + d\sqrt{-11})(a - b\sqrt{-11})(c - d\sqrt{-11}) = (a^2 + 11b^2)(c^2 + 11d^2).
           \]
           We can know that if \(b\neq 0\), then \(a^2 + 11b^2\geq 11\). Similarly, if \(d\neq 0\), then \(c^2 + 11d^2\geq 11\).
           Now we can conclude that \(b = d = 0\), which implies that \((ac)^2 = 9\). Hence, we have \(ac = \pm 3\).
           Since \(a, c\in \mathbb{Z}\), we can get that, without loss of generality, \(a = -1\) and \(c = -3\) or \(a = 1\) and \(c = 3\).
-          Then, we show that \(3 = (-1)(-3)\) or \(3 = (1)(3)\), which implies one of the divisors is a unit. 
+          Then, we show that \(3 = (-1)(-3)\) or \(3 = (1)(3)\), which implies one of the divisors is a unit.
           Hence, we can know that \(3\) is irreducible in \(\mathbb{Z}(\sqrt{-11})\). \
           Then, we need to show that \(3\) is not prime in \(\mathbb{Z}(\sqrt{-11})\).
           The first observation is that \(3\mid 12 = (1 + \sqrt{-11})(1 - \sqrt{-11})\).
@@ -1796,30 +1796,30 @@
           Hence, we can know that \(3\) is not prime in \(\mathbb{Z}(\sqrt{-11})\).
     </p>
     <p>
-      \(\textbf{Proof (3). }\) Suppose that \(R\) is an integral domain, and \(p\) is a prime in \(R\). 
+      \(\textbf{Proof (3). }\) Suppose that \(R\) is an integral domain, and \(p\) is a prime in \(R\).
       Then we can know that \((p)\) is a prime ideal in \(R\).
-      If \((p)\) is a prime ideal, then for any \(a, b\in R\) such that \(p = ab\), we have \(a\in (p)\) or \(b\in (p)\) 
-      according to the definition of prime ideal. Without loss of generality, we assume that \(a\in (p)\). 
+      If \((p)\) is a prime ideal, then for any \(a, b\in R\) such that \(p = ab\), we have \(a\in (p)\) or \(b\in (p)\)
+      according to the definition of prime ideal. Without loss of generality, we assume that \(a\in (p)\).
       Then according to the definition of principal ideal, we have \(a = pr\) for some \(r\in R\).
       THen, we have \(p = ab= prb\), which implies that \(ar = 1\). Hence, we can know that \(a\) is a unit.
       In that case, we have for any \(ab = p\), either \(a\) or \(b\) is a unit. Therefore, we show that \(p\) is irreducible. \[ \tag*{$\square$} \]
     </p>
     <p>
       \(\textbf{Proof (4). }\) Suppose that \(R\) is an principal ideal domain, and \(p\) is irreducible in \(R\).
-      Let \(I\) to be any ideal containing \((p)\). Firstly, we can know that \(I\) is generated by some \(a\in R\) given 
-      \(R\) is principal ideal domain. Then we have \(I = (a)\) and \((p)\subset (a)\). 
-      Thus, we have \(p = ar\) for some \(r\in R\). Since \(p\) is irreducible, we have either \(a\) or \(r\) is a unit. 
+      Let \(I\) to be any ideal containing \((p)\). Firstly, we can know that \(I\) is generated by some \(a\in R\) given
+      \(R\) is principal ideal domain. Then we have \(I = (a)\) and \((p)\subset (a)\).
+      Thus, we have \(p = ar\) for some \(r\in R\). Since \(p\) is irreducible, we have either \(a\) or \(r\) is a unit.
       If \(a\) is a unit, then \((a)\) is a ideal containing a unit, which implies that \((a) = R\). If \(r\) is a unit, then
-      there exists \(u\in R\) such that \(ru = 1\). Then we have 
+      there exists \(u\in R\) such that \(ru = 1\). Then we have
       \[
-      \begin{align} 
+      \begin{align}
         p &= ar\\
         pu &= aru\\
         pu &= a\\
       \end{align}.
       \]
       Thus, we have \(a\in (p)\), which implies that \((a) = (p)\). Thus, we have the only ideals containing \((p)\) are \((p)\) and \(R\).
-      Therefore, we show that \((p)\) is a maximal ideal. Since \(R\) is a principal ideal domain, we know that 
+      Therefore, we show that \((p)\) is a maximal ideal. Since \(R\) is a principal ideal domain, we know that
       \(R\) is an integral domain. Since every maximal domain is a prime ideal in an integral domain, we have \((p)\) is a prime ideal.
       Therefore, we have \(p\) is a prime in \(R\). \(\blacksquare\)
     </p>
@@ -1856,18 +1856,18 @@
       \[
         [K: \mathbb{Q}] = [\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}): \mathbb{Q}]
       \]
-      Since we can know that \(\mathbb{Q}\subset \mathbb{Q}(\sqrt{2})\), and we can know that \(x^2 + 1\) is irreducible in \(\mathbb{Q}[x]\) 
+      Since we can know that \(\mathbb{Q}\subset \mathbb{Q}(\sqrt{2})\), and we can know that \(x^2 + 1\) is irreducible in \(\mathbb{Q}[x]\)
       by using the Eisenstein's criterion with \(p = 2\). Thus, we can know that \([\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})] \leq 2\).
       Thus, we only have two options: the degree is either 1 or 2. If the degree is 1, then we have \(i\in\mathbb{Q}(\sqrt{2})\).
       Then we have \(i = a + b\sqrt{2}\) for some \(a, b\in\mathbb{Q}\). Then we have \(i^2 = -1 = (a + b\sqrt{2})^2\geq 0\), which is a contradiction.
-      In that case, we can know that \([\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})] = 2\). Therefore, we have 
+      In that case, we can know that \([\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})] = 2\). Therefore, we have
       \[
         [K: \mathbb{Q}] = [\mathbb{Q}(\sqrt{2}, i): \mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}): \mathbb{Q}] = 2\cdot 2 = 4.
       \]
     </p>
     <p>
-      \(\textbf{Solution(2). }\)We need to determine \(\text{Gal}(K/\mathbb{Q})\). 
-      Since we know that \(|\text{Gal}(K/\mathbb{Q})|\leq [K: \mathbb{Q}] = 4\). 
+      \(\textbf{Solution(2). }\)We need to determine \(\text{Gal}(K/\mathbb{Q})\).
+      Since we know that \(|\text{Gal}(K/\mathbb{Q})|\leq [K: \mathbb{Q}] = 4\).
     </p>
   </section>
 
@@ -1895,28 +1895,28 @@
       </ul>
     </p>
       <p>
-        \(\textbf{Solution(1). }\)We firstly need to calculate the order of \(A_5\). 
-        We know that the order of \(S_5\) is \(5!\). Since we know that 
+        \(\textbf{Solution(1). }\)We firstly need to calculate the order of \(A_5\).
+        We know that the order of \(S_5\) is \(5!\). Since we know that
         \[
           \frac{S_5}{A_5} = \{-1, 1\} = \mathbb{Z}/2\mathbb{Z},
         \]
         we can know that the order of \(A_5\) is \(5!/2 = 60 = 5\cdot 3\cdot 2^2\).
         Since \(2^2\not\mid 5\cdot 3\), we can know that any group of order \(4\) is a Sylow \(2\)-subgroup.
-        According to the Sylow's theorem, we have the possible number \(n_2\) of Sylow \(2\)-subgroups is in the form of 
+        According to the Sylow's theorem, we have the possible number \(n_2\) of Sylow \(2\)-subgroups is in the form of
         \[
           n_2 \equiv 1 \pmod{2} \text{ and } n_2\mid 15.
         \]
         Therefore, we have possible number of subgroups of order four is \(n_2 = 1, 3, 5, 15\).
       </p>
       <p>
-        \(\textbf{Proof(2). }\)Let \(H_1\) and \(H_2\) be two subgroups of order four. 
-        According to the Sylow's theorem, we have \(H_1\) and \(H_2\) are Sylow \(2\)-subgroups, and they 
+        \(\textbf{Proof(2). }\)Let \(H_1\) and \(H_2\) be two subgroups of order four.
+        According to the Sylow's theorem, we have \(H_1\) and \(H_2\) are Sylow \(2\)-subgroups, and they
         conjugate to each other since they have the same order. Therefore, we have \(H_1\) and \(H_2\) are isomorphic.
       </p>
       <p>
         \(\textbf{Solution(3). }\) We know there are two possible structures of subgroups of order four, which are
         \(V_4 \cong \mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\) and \(\mathbb{Z}/4\mathbb{Z}\).
-        We can find one subgroup of order \(4\), which is 
+        We can find one subgroup of order \(4\), which is
         \[
           H = \{e, (12)(34), (13)(24), (14)(23)\}\cong V_4.
         \]
@@ -1936,16 +1936,16 @@
       </p>
       <p>
         \(\textbf{Proof(5). }\)We know that \(A_5\) has \(44\) elements of order \(3\) or \(5\).
-        Since we show that every subgroup of order \(4\) is isomorphic to \(V_4\), we can know that the element of order 
+        Since we show that every subgroup of order \(4\) is isomorphic to \(V_4\), we can know that the element of order
         \(3\) and order \(5\) cannot be in subgroup of order \(4\).
         Hence, there are \(60 - 44\ = 16\) elements to form subgroup of order \(4\). According to the Sylow's theorem,
         and we already found out there are \(5\) subgroups of order \(4\). In that case, the number of subgroup of order \(4\)
-        is either \(5\) or \(15\). Now we want to show that for any two subgroups \(H_1, H_2\) of order \(4\), we only have two options: 
+        is either \(5\) or \(15\). Now we want to show that for any two subgroups \(H_1, H_2\) of order \(4\), we only have two options:
         \[
           H_1\cap H_2 = \{e\} \text{ or } H_1 = H_2.
         \]
-        There exists \(g\in G\) such that \(H_1 = gH_2g^{-1}\). 
-        Since \(h_1 \in H_1\), then we know that there exists \(h_2\in H_2\) such that 
+        There exists \(g\in G\) such that \(H_1 = gH_2g^{-1}\).
+        Since \(h_1 \in H_1\), then we know that there exists \(h_2\in H_2\) such that
         \[
           h_1 = gh_2g^{-1}.
         \]
@@ -1964,7 +1964,7 @@
     </p>
     <p>
       \(\textbf{Solution 1. }\) We want to find the kernel of the surjective ring homomorphism \(\phi : \mathbb{Z}[x] \to R\).
-      Since \(\ker(\phi)\) is the set of all polynomials \(f(x)\) in \(\mathbb{Z}[x]\) such that \(f(\sqrt[3]{2}) = 0\), we have 
+      Since \(\ker(\phi)\) is the set of all polynomials \(f(x)\) in \(\mathbb{Z}[x]\) such that \(f(\sqrt[3]{2}) = 0\), we have
       \[
         \ker(\phi) := \{f(x) \in \mathbb{Z}[x] \mid f(\sqrt[3]{2}) = 0\}.
       \]
@@ -1976,7 +1976,7 @@
       \(\textbf{Proof. }\) For one direction, we want to show that \(\langle x^3 - 2\rangle \subset \ker(\phi)\).
       For any \(f(x)\in \langle x^3 - 2\rangle\), we have \(f(x) = (x^3 - 2)g(x)\) for some \(g(x)\in \mathbb{Z}[x]\).
       Then we have \(f(\sqrt[3]{2}) = ((\sqrt[3]{2})^3 - 2)g(\sqrt[3]{2}) = 0\). Hence, we have \(f(x)\in \ker(\phi)\).
-      For the other direction, we want to show that \(\ker(\phi) \subset \langle x^3 - 2\rangle\). 
+      For the other direction, we want to show that \(\ker(\phi) \subset \langle x^3 - 2\rangle\).
       Since \(x^3 - 2\) is irreducible in \(\mathbb{Z}[x]\), and we can know that there is no polynomial with degree less than \(3\) in \(\ker(\phi)\).
       Since \(\mathbb{Z}\) is a Unique Factorization Domain by the Fundamental Theorem of Arithmetic, we can know that \(\mathbb{Z}[x]\) is a Unique Factorization Domain.
       Let \(f(x)\in \ker(\phi)\). Then we have \(f(x) = (x^3 - 2)g(x) + r(x)\) for some \(g(x), r(x)\in \mathbb{Z}[x]\) such that \(\deg(r(x)) \lt 3\).
@@ -1987,14 +1987,14 @@
       \(\textbf{Solution 2. }\) We want to find primes \(p, q\in \mathbb{Z}\) such that \(pR\) is a prime ideal and \(qR\) is not a prime ideal.
       Since \(\mathbb{Z}[\sqrt[3]{2}] = \{a + b\sqrt[3]{2} + c(\sqrt[3]{2})^2 \mid a, b, c\in \mathbb{Z}\}\), we have \(\sqrt[3]{2}, \sqrt[3]{2}^2\in R\).
       Since \(\sqrt[3]{2}\cdot\sqrt[3]{2}^2 = 2\), and \(2\not\mid \sqrt[3]{2}\) and \(2\not\mid \sqrt[3]{2}^2\), we can know that \(2\) is not prime in \(R\).
-      Since \(pR\) is a prime ideal if and only if \(p\) is a prime in \(R\), we can know that \(2R\) is not a prime ideal in \(R\). 
+      Since \(pR\) is a prime ideal if and only if \(p\) is a prime in \(R\), we can know that \(2R\) is not a prime ideal in \(R\).
       Now, we want to show that \(3\) is still prime in \(R\).
       Suppose that \(3 = (a + b\sqrt[3]{2} + c\sqrt[3]{2}^2)(d + e\sqrt[3]{2} + f\sqrt[3]{2}^2)\) for some \(a, b, c, d, e, f\in \mathbb{Z}\).
       Then we have
     </p>
 
   </section>
-    
+
   <section id = "k_state_2022_1">
     <h2>
       K-State 2022(1)
@@ -2027,7 +2027,7 @@
           (h, g)(h_1, h_1)(h, g)^{-1} &= (h_2, h_2)\\
         \end{align}
       \]
-      for some \(h_1, h_2\in H\). 
+      for some \(h_1, h_2\in H\).
       Since \((e, g)\in H\times G\), we have
       \[
         \begin{align}
@@ -2037,8 +2037,8 @@
           &= (h_2, h_2)\\
         \end{align}
       \]
-      Hence, we can get \(h_1=h_2\). Thus, we have \(gh_1g^{-1}=h_1\) for any \(g\). 
-      Therefore, we show that \(H\subset Z(G)\). \(\blacksquare\) 
+      Hence, we can get \(h_1=h_2\). Thus, we have \(gh_1g^{-1}=h_1\) for any \(g\).
+      Therefore, we show that \(H\subset Z(G)\). \(\blacksquare\)
     </p>
 
     <br>
@@ -2050,7 +2050,7 @@
       \[
       \text{Ann}_R(m) = \{ r \in R \mid rm = 0 \}.
       \]
-      Prove that \(\text{Ann}_R(m)\) is a left ideal of \( R \). 
+      Prove that \(\text{Ann}_R(m)\) is a left ideal of \( R \).
       Give an example of \( R, M, \) and \( m \in M \) such that \(\text{Ann}_R(m)\) is not a right ideal.
     </p>
     <p>
@@ -2062,7 +2062,7 @@
     </p>
     </section> -->
 
-      
+
     <section id = "References">
     <h2>References</h2>
     <ul>
