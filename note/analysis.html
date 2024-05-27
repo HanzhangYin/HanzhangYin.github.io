@@ -1662,7 +1662,9 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
     Suppose that \( f(-1) = -1 \), \( f(1) = 1 \) and that \( f'(x) \leq 1 \) for all \( x \in (-1,1) \). Prove that \( f(x) = x \) for all \( x \in [-1,1] \).  
   </p>
   <p>
-    \(\textbf{Proof. }\) Firstly, we know that there exists \(x\in (-1, 1)\) such that \(f(x) = y > x\). 
+    \(\textbf{Proof. }\) We prove it by Contradiction. Suppose that there exists a point \(x\in [-1, 1]\) such that \(f(x) \neq x\).
+    Since \(f(-1) = -1\) and \(f(1) = 1\), if \(f(x)\neq x\), then we can know that \(x\in (-1, 1)\).
+    Firstly, we know that there exists \(x\in (-1, 1)\) such that \(f(x) = y > x\). 
     Since \(f\) is differentiable, by the mean value theorem, there exists \(c\in (-1, x)\) such that 
     \[ f'(c) = \frac{f(x) - f(-1)}{x - (-1)} = \frac{y + 1}{x + 1}. \]
     Since \(y> x\), we have \(y + 1 > x + 1 > 0\), which implies that \(\frac{y + 1}{x + 1} = f'(c)> 1\). 
