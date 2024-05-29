@@ -756,7 +756,7 @@
         \(\textbf{Definition (Primitive). }\) A polynomial \( f \in F[x] \) is \textit{primitive} if the greatest common divisor of its coefficients is \(1\).
         (i.e. for all prime elements \(p \in R\), \(p \not\mid f(x)\) in \(R[x]\)).
       <p>
-        \(\textbf{Proposition. }\)Every nonzero ideal of \(F[x]\) can be written uniquely as \((f)\) where
+        \(\textbf{Proposition.}\) Every nonzero ideal of \(F[x]\) can be written uniquely as \((f)\) where
         \(f\) is monic.
       </p>
       <p>
@@ -996,19 +996,19 @@
     <section id = 'algebraic_closure'>
       <h2>Algebraic Closure</h2>
       <p>
-        \(\textbf{Definition. }\)Let \(F\) be a field and \(K\) be a subfield of \(F\). An element \(\alpha \in F\) is said to be \(\textbf{algebraic over}\) \(K\) if there exists a non-zero polynomial \(f(x) \in K[x]\) such that \(f(\alpha) = 0\). In other words, \(\alpha\) is a root of a non-zero polynomial with coefficients in \(K\).
+        \(\textbf{Definition.}\) Let \(F\) be a field and \(K\) be a subfield of \(F\). An element \(\alpha \in F\) is said to be \(\textbf{algebraic over}\) \(K\) if there exists a non-zero polynomial \(f(x) \in K[x]\) such that \(f(\alpha) = 0\). In other words, \(\alpha\) is a root of a non-zero polynomial with coefficients in \(K\).
       </p>
       <p>
-        \(\textbf{Definition. }\)An \(\textbf{algebraic extension}\) \(L\) of a field \(K\) is a field extension such that every element of \(L\) is algebraic over \(K\). In other words, if \(L\) is an algebraic extension of \(K\), then for every \(\alpha \in L\), there exists a non-zero polynomial \(f(x) \in K[x]\) such that \(f(\alpha) = 0\).
+        \(\textbf{Definition.}\) An \(\textbf{algebraic extension}\) \(L\) of a field \(K\) is a field extension such that every element of \(L\) is algebraic over \(K\). In other words, if \(L\) is an algebraic extension of \(K\), then for every \(\alpha \in L\), there exists a non-zero polynomial \(f(x) \in K[x]\) such that \(f(\alpha) = 0\).
       </p>
       <p>
-        \(\textbf{Definition. }\) A field \(\mathbb{F}\) is algebraically closed if every non-constant polynomial in \(\mathbb{F}[x]\) has a root in \(\mathbb{F}\).
+        \(\textbf{Definition.}\) A field \(\mathbb{F}\) is algebraically closed if every non-constant polynomial in \(\mathbb{F}[x]\) has a root in \(\mathbb{F}\).
       </p>
       <p>
-        \(\textbf{Definition. }\)Let \(F\) be a field. The set of all elements in \(F\) that are algebraic over \(K\) is denoted by \(\overline{K}\) and is called the \(\textbf{algebraic closure}\) of \(K\) in \(F\).
+        \(\textbf{Definition.}\) Let \(F\) be a field. The set of all elements in \(F\) that are algebraic over \(K\) is denoted by \(\overline{K}\) and is called the \(\textbf{algebraic closure}\) of \(K\) in \(F\).
       </p>
       <p>
-        \(\textbf{Alternate Definition. }\)An algebraic closure of a field \(F\) is an algebraic extension \(K\) of \(F\) such that every polynomial in \(F[x]\) splits in \(K\).
+        \(\textbf{Alternate Definition.}\) An algebraic closure of a field \(F\) is an algebraic extension \(K\) of \(F\) such that every polynomial in \(F[x]\) splits in \(K\).
       </p>
       <p>
         \(\textbf{Theorem.}\) Let \( F \) be a field, then there exists an algebraic closure for \( F \), i.e., a field \( \overline{F} \subseteq F \) such that \( \overline{F} \) is algebraically closed and algebraic over \( F \).
@@ -1312,6 +1312,7 @@
       \end{pmatrix}
       \]
     </p>
+      </section>
 
     <!-- <section id = "ku_2022_8_17_2">
     <h2>KU 2022(8/17)(2)</h2>
@@ -1467,7 +1468,7 @@
           For any principal ideal of \(R\), we can denote it as \(\langle r\rangle\) for some \(r\in R\) where \(r\neq 0\).
           Then, we can know that \(\langle r\rangle \subset (R, \frac{1}{r})\) since \(r\cdot \frac{1}{r} = 1\in R\).
           Hence, we can know that any principal ideal is contained in an ideal in \(\mathcal{J}\).
-          Since every ideal in \(\mathcal{J}\) is principal and it satisfies the ascending chain condition, we can know that
+          Since every ideal in \(\mathcal{J}\) is principal, and it satisfies the ascending chain condition, we can know that
           the collection of principal ideals in \(R\) satisfies the ascending chain condition.
           According to \(\textbf{Proposition A}\), we can know it implies that every non-zero and non-unit element in \(R\) can be written as a finite product of irreducible elements.
           Now, suppose that \(\langle r\rangle \subset (R, \frac{1}{r})\). For any \(s\in (R, \frac{1}{r})\), we can know that \(s\cdot \frac{1}{r} \in R\).
@@ -1686,7 +1687,7 @@
       </ul>
     </p>
     <p>
-      \(\textbf{Proof (3). }\) Suppose that \(T\) is normal. Then we have \(TT^*=T^*T\).
+      \(\textbf{Proof (3).}\) Suppose that \(T\) is normal. Then we have \(TT^*=T^*T\).
       Let \(v\in V\). Then we have
       \[
         \begin{align}
@@ -1779,7 +1780,7 @@
       Let \(I\) to be any ideal containing \((p)\). Firstly, we can know that \(I\) is generated by some \(a\in R\) given
       \(R\) is principal ideal domain. Then we have \(I = (a)\) and \((p)\subset (a)\).
       Thus, we have \(p = ar\) for some \(r\in R\). Since \(p\) is irreducible, we have either \(a\) or \(r\) is a unit.
-      If \(a\) is a unit, then \((a)\) is a ideal containing a unit, which implies that \((a) = R\). If \(r\) is a unit, then
+      If \(a\) is a unit, then \((a)\) is an ideal containing a unit, which implies that \((a) = R\). If \(r\) is a unit, then
       there exists \(u\in R\) such that \(ru = 1\). Then we have
       \[
       \begin{align}
@@ -2011,8 +2012,6 @@
       Therefore, we show that \(H\subset Z(G)\). \(\blacksquare\)
     </p>
 
-    <br>
-
     <!-- <section id = 'k_state_2022_4'>
     <h2>K-State 2022(4)</h2>
     <p>
@@ -2041,6 +2040,11 @@
       </li>
     </ul>
   </section>
+    <footer>
+        <p>Posted by: Han Yin</p>
+        <p>Contact information: <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a>.</p>
+        <p>Department of Mathematics, University of Kansas</p>
+    </footer>
 
   </body>
 </html>
