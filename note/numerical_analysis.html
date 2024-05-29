@@ -115,6 +115,39 @@
 
     <br>
 
+    <section>
+      <h2>Newton's Method</h2>
+      <p>
+      $\textbf{Definition. }$  Newton's method, also known as the Newton-Raphson method, is an iterative root-finding algorithm used to find successively better approximations to the roots (or zeros) of a real-valued function. 
+      Given a function \( f(x) \) and its derivative \( f'(x) \), Newton's method starts with an initial guess \( x_0 \) and iteratively refines this guess using the following formula:
+      \[ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}, \]
+      where:
+      <ul>
+      <li> \( x_n \) is the current approximation. </li>
+      <li> \( x_{n+1} \) is the next approximation. </li>
+      <li> \( f(x_n) \) is the value of the function at \( x_n \). </li>
+      <li> \( f'(x_n) \) is the value of the derivative of the function at \( x_n \). </li>
+      </ul>
+      </p>
+      <p>
+      $\textbf{convergence Criteria. }$ The method typically converges if the initial guess \( x_0 \) is sufficiently close to the actual root, and \( f(x) \) is continuously differentiable in the neighborhood of the root.
+      </p>
+      <p>
+        $\textbf{Example. }$Consider finding the root of the function \( f(x) = x^2 - 2 \). The derivative of the function is \( f'(x) = 2x \).
+
+        Firstly, we start with an initial guess \( x_0 \).
+        Secondly, we apply the Newton's iteration:
+        
+        \[ x_{n+1} = x_n - \frac{x_n^2 - 2}{2x_n} = \frac{2x_n - \frac{x_n^2 - 2}{x_n}}{2} = \frac{x_n + \frac{2}{x_n}}{2} \]
+        
+        So, the iterative formula becomes:
+        
+        \[ x_{n+1} = \frac{1}{2} \left( x_n + \frac{2}{x_n} \right) \]
+        
+        By repeatedly applying this formula, the sequence \( \{x_n\} \) will converge to the square root of 2.
+      </p>
+    </section>
+
     <section id = 'horner_algorithem'>
       <h2>Horner's Algorithm</h2>
       <p>
