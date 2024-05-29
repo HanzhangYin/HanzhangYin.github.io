@@ -148,6 +148,39 @@
       </p>
     </section>
 
+    <br>
+
+    <section id = 'error_analysis_netwon'>
+      <h2>Error Analysis for Newton's Method</h2>
+      <p>
+        Let \( r \) be a solution of \( f(x) = 0 \) (i.e. \( f(r) = 0 \)). 
+        Suppose that we have already computed \( x_n \) and the error in \( x_n \) is \(e_n = |x_n - r| \). 
+        We now derive a formula that relates the error after the next step, \( |x_{n+1} - r| \), to \( |x_n - r| \). 
+        According to Taylor's theorem, there is a \( c \) between \( x_n \) and \( r \) such that        
+        \[
+         0 = f(r) = f(x_n) + f'(x_n)(r - x_n) + \frac{1}{2}f''(c)(r - x_n)^2 \quad (1)
+        \]
+        By the definition of Newton's method, we have 
+        \[ 
+        0 = f(x_n) + f'(x_n)(x_{n+1} - x_n) \quad (2) 
+        \]
+        Subtracting (2) from (1).
+        \[
+        \begin{align}
+         0 &= f'(x_n)(r - x_{n+1}) + \frac{1}{2}f''(c)(r - x_n)^2\\
+        x_{n+1} - r &= \frac{f''(c)}{2f'(x_n)}(x_n - r)^2 \\
+        e_{n+1} &= |x_{n+1} - r| = \left| \frac{f''(c)}{2f'(x_n)} \right||x_n - r|^2 \\
+        \end{align}
+        \]
+        If \( x_n \) is close to \( r \), then \( c \), which must be between \( x_n \) and \( r \), is also close to \( r \) and
+        \[ e_{n+1} = |x_{n+1} - r| \approx \left| \frac{f''(r)}{2f'(r)} \right||x_n - r|^2 = \left| \frac{f''(r)}{2f'(r)}\right| e_n^2 = Ce_n^2 \]
+        Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
+        \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]         
+      </p>
+    </section>
+
+    <br>
+
     <section id = 'horner_algorithem'>
       <h2>Horner's Algorithm</h2>
       <p>
@@ -326,35 +359,6 @@
         \[ 
           f(x) - p(x) = \frac{1}{(n + 1)!} f^{(n+1)}(\xi_x) \prod_{i=0}^{n} (x - x_i) .
         \]
-      </p>
-    </section>
-
-    <section id = 'error_analysis_netwon'>
-      <h2>Error Analysis for Newton's Method</h2>
-      <p>
-        Let \( r \) be a solution of \( f(x) = 0 \) (i.e. \( f(r) = 0 \)). 
-        Suppose that we have already computed \( x_n \) and the error in \( x_n \) is \(e_n = |x_n - r| \). 
-        We now derive a formula that relates the error after the next step, \( |x_{n+1} - r| \), to \( |x_n - r| \). 
-        According to Taylor's theorem, there is a \( c \) between \( x_n \) and \( r \) such that        
-        \[
-         0 = f(r) = f(x_n) + f'(x_n)(r - x_n) + \frac{1}{2}f''(c)(r - x_n)^2 \quad (1)
-        \]
-        By the definition of Newton's method, we have 
-        \[ 
-        0 = f(x_n) + f'(x_n)(x_{n+1} - x_n) \quad (2) 
-        \]
-        Subtracting (2) from (1).
-        \[
-        \begin{align}
-         0 &= f'(x_n)(r - x_{n+1}) + \frac{1}{2}f''(c)(r - x_n)^2\\
-        x_{n+1} - r &= \frac{f''(c)}{2f'(x_n)}(x_n - r)^2 \\
-        e_{n+1} &= |x_{n+1} - r| = \left| \frac{f''(c)}{2f'(x_n)} \right||x_n - r|^2 \\
-        \end{align}
-        \]
-        If \( x_n \) is close to \( r \), then \( c \), which must be between \( x_n \) and \( r \), is also close to \( r \) and
-        \[ e_{n+1} = |x_{n+1} - r| \approx \left| \frac{f''(r)}{2f'(r)} \right||x_n - r|^2. \]
-        Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
-        \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]         
       </p>
     </section>
 
@@ -886,8 +890,8 @@ V & -V
             \left\|\begin{bmatrix} \Sigma_m & 0 \\ 0 & \Sigma_m \end{bmatrix}\right\|_2 = \max\sigma_i.
         \]
         Therefore, we have \(\|B\|_2 = \|A\|_2\). \[ \tag*{$\square$} \]
-        For the second part, we prove it by contradiction. Suppose that it is not true. Then, we know that there is no singular value \(|\tilde sigma - \sigma|\leq \|E\|_2\). 
-        Hence, we can show that \(|\tilde sigma - \sigma| > \|E\|_2\) for all singular values of \(A\). 
+        For the second part, we prove it by contradiction. Suppose that it is not true. Then, we know that there is no singular value \(|\tilde \sigma - \sigma|\leq \|E\|_2\). 
+        Hence, we can show that \(|\tilde \sigma - \sigma| > \|E\|_2\) for all singular values of \(A\). 
         If \(\tilde \sigma > \sigma\), then we have
         \[
           \tilde \sigma - \sigma > \|E\|_2.
