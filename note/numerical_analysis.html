@@ -553,9 +553,13 @@
         R = \{ (t, x) : |t - t_0| \leq \alpha, \quad |x - x_0| \leq \beta \}
         \]
         then the initial-value problem (1) has a solution \( x(t) \) for \( |t - t_0| \leq \min(\alpha, \beta / M) \), where \( M \) is the maximum of \( |f(t, x)| \) in the rectangle \( R \).
+
+        $\textit{Numerical Analysis: Mathematics of Scientific Computing}$ page. 525.
       </p>
+      <h3>Uniqueness</h3>
       <p>
-        $\textbf{Theorem (Picard's Theorem). }$ Suppose that the real-valued function \((x,y) \mapsto f(x,y)\) is continuous in the rectangular region \(D\) defined by \(x_0 \leq x \leq X_M\), \(y_0 - C \leq y \leq y_0 + C\); that \(|f(x,y_0)| \leq K\) when \(x_0 \leq x \leq X_M\); and that \(f\) satisfies the Lipschitz condition: there exists \(L > 0\) such that
+        $\textbf{Theorem (Picard's Theorem). }$ Suppose that the real-valued function \((x,y) \mapsto f(x,y)\) is continuous in the rectangular region \(D\) defined by \(x_0 \leq x \leq X_M\), \(y_0 - C \leq y \leq y_0 + C\); that \(|f(x,y_0)| \leq K\) when \(x_0 \leq x \leq X_M\); 
+        and that \(f\) satisfies the Lipschitz condition: there exists \(L > 0\) such that
         \[
         |f(x,u) - f(x,v)| \leq L|u - v| \quad \text{for all} \quad (x,u) \in D, \quad (x,v) \in D.
         \]
