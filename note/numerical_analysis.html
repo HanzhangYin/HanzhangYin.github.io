@@ -530,6 +530,25 @@
 
     <br>
 
+    <section>
+      <h2>Initial value problems for ODEs</h2>
+      <p>
+        $\textbf{Theorem (Picard's Theorem). }$ Suppose that the real-valued function \((x,y) \mapsto f(x,y)\) is continuous in the rectangular region \(D\) defined by \(x_0 \leq x \leq X_M\), \(y_0 - C \leq y \leq y_0 + C\); that \(|f(x,y_0)| \leq K\) when \(x_0 \leq x \leq X_M\); and that \(f\) satisfies the Lipschitz condition: there exists \(L > 0\) such that
+        \[
+        |f(x,u) - f(x,v)| \leq L|u - v| \quad \text{for all} \quad (x,u) \in D, \quad (x,v) \in D.
+        \]
+        Assume further that
+        \[
+        C \geq \frac{K}{L} \left( e^{L(X_M - x_0)} - 1 \right). \tag{12.3}
+        \]
+        Then, there exists a unique function \(y \in C^1[x_0, X_M]\) such that \(y(x_0) = y_0\) and \(y' = f(x,y)\) for \(x \in [x_0, X_M]\); moreover,
+        \[
+        |y(x) - y_0| \leq C, \quad x_0 \leq x \leq X_M.
+        \]
+      </p>
+      <h3>One-step methods</h3>
+    </section>
+
     <section id = 'stability'>
       <h2>Stability</h2>
       <p>
