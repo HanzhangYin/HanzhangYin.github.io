@@ -174,8 +174,22 @@
         \]
         If \( x_n \) is close to \( r \), then \( c \), which must be between \( x_n \) and \( r \), is also close to \( r \) and
         \[ e_{n+1} = |x_{n+1} - r| \approx \left| \frac{f''(r)}{2f'(r)} \right||x_n - r|^2 = \left| \frac{f''(r)}{2f'(r)}\right| e_n^2 = Ce_n^2 \]
-        Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
-        \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]         
+        <!-- Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
+        \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]          -->
+        $\textbf{Thus we can see that newton's method is quadratically convergent.}$
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'theorems_on_newton_method'>
+      <h2>Theorems on Newton's Method</h2>
+      <p>
+        $\textbf{Theorem. }$
+        Let \(f''\) be continuous and let \(r\) be a simple zero of \(f\). Then there is a neighborhood of \(r\) and a constant \(C\) such that if Newton's method is started in that neighborhood, the successive points become steadily closer to \(r\) and satisfy
+        \[
+        |x_{n+1} - r| \leq C (x_n - r)^2 \quad (n \geq 0)
+        \]
       </p>
     </section>
 
