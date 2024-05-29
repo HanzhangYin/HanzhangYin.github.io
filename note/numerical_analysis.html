@@ -176,7 +176,7 @@
         \[ e_{n+1} = |x_{n+1} - r| \approx \left| \frac{f''(r)}{2f'(r)} \right||x_n - r|^2 = \left| \frac{f''(r)}{2f'(r)}\right| e_n^2 = Ce_n^2 \]
         <!-- Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
         \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]          -->
-        $\textbf{Thus we can see that newton's method is quadratically convergent.}$
+        $\textbf{Thus we can see that Newton's Method is quadratically convergent.}$
       </p>
     </section>
 
@@ -190,6 +190,10 @@
         \[
         |x_{n+1} - r| \leq C (x_n - r)^2 \quad (n \geq 0)
         \]
+      </p>
+      <p>
+        $\textbf{Theorem on Newton's Method for a Convex Function. }$
+        If \( f \) belongs to \( C^2(\mathbb{R}) \), is increasing, is convex, and has a zero, then the zero is unique, and the Newton iteration will converge to it from any starting point.
       </p>
     </section>
 
