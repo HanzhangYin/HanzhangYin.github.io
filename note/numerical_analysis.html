@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+    <!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--link for the font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css" />
+    <!--It is a link for css structure-->
+    <script src="highlight.js"></script>
+    <!--It is a link for highlight.js-->
+    <title>Numerical Analysis</title>
+  </head>
+  <body>
+    <div class="top-bar"></div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <span class="visually-hidden">Menu</span>
+    </label>
+    <nav class="navbar">
+      <a href="#binary">Binary</a>
+      <a href="#Unit_Roundoff">Unit Roundoff</a>
+      <a href="#Roundoff_Error">Roundoff Error</a>
+      <a href="#Number_System_with_base_Beta">Number System with base $\beta$</a>
+      <a href="#FLoating_point_error_analysis">FLoating point error analysis</a>
+      <a href="#Error_Analysis_for_Newton's_Method">Error Analysis for Newton's Method</a>
+      <a href="#Error_Analysis_for_Gaussian_Quadrature">Error Analysis for Gaussian Quadrature</a>
+      <a href="#References">References</a>
+    </nav>
+    <script src="click.js"></script>
+    <!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+    <script src = "mathjax_config.js"></script><!--It is a link for Mathjax configuration-->
+    <h1>Numerical Analysis</h1>
+
+    <section>
+      <h2>Binary</h2>
+      <p>
+        \[ x = \pm (0. a_1\cdots a_n\cdots)_2\times 2^m \] where \(a_1 = 1\)
+      </p>
+      <p>
+        \(\textbf{Note. }\)For Marc-32, \(n = 24\), \(-126\leq m\leq 127\). For
+        Marc-64, \(n = 53\), \(-1021\leq m\leq 1024\).
+      </p>
+    </section>
+
+    <br />
+
+    <section id="unit_roundoff">
+      <h2>Unit Roundoff</h2>
+      <p>
+        \[ fl(1 + \varepsilon) > 1 \] \[ \varepsilon = 2^{-24} ~ 10^{-8} \] \[
+        \varepsilon = 2^{-53} ~ 10^{-16} \]
+      </p>
+    </section>
+
+    <br />
+
+    <section id="roundoff_error">
+      <h2>Roundoff Error</h2>
+      <p>
+        Let \(\delta = \frac{x - fl(x)}{x}\). define \[ \left|\delta\right|\leq
+        \varepsilon \] Suppose that \(x = \pm (0. a_1\cdots a_n\cdots)_2\times
+        2^m\), then we pick two points such that \(x_-\) is less than \(x\) and
+        \(x_+\) is greater than \(x\). Then we have \[ x_- = (0, a_1\cdots
+        a_n)_2\times 2^m \] \[ x_+ = (0, a_1\cdots a_n+0.000\dots 1_n)_2\times
+        2^m \] \[ fl(x) = x_- \text{ if }a_{n+1} = 0 \text{(x is closer to x_-
+        than x_+) and } fl(x) = x_+ \text{ if }a_{n+1} = 1\text{ (x is closer to
+        x_+ than x_-)} \] \[ |fl(x) - x|\leq \frac{1}{2}\times (x_+ - x_-) =
+        \frac{1}{2}\cdot 2^{-n}\cdot 2^m \] \[ \left|\frac{fl(x) -
+        x}{x}\right|\leq \frac{\frac{1}{2}2^{-n}2^m}{(0,a_1\cdots a_n)_2\times
+        2^m} = 2^{-n} \]
+      </p>
+    </section>
+
+    <br />
+
+    <section id="base">
+      <h2>Number System with base \(\beta\)</h2>
+      <p>
+        The unit roundoff is \[ \varepsilon = \frac{1}{2}\beta^{1-t} \] where
+        \(t\) is the number of digits in the mantissa.
+      </p>
+    </section>
+
+    <br />
+
+    <section id="floating_point_error_analysis">
+      <h2>FLoating point error analysis</h2>
+      <p>
+        Let \(x, y\) be two machine numbers. Let \(\circ\) is a binary
+        operation. \[ fl(x\circ y) = (x\circ y)(1 + \delta) \] where
+        \(|\delta|\leq\varepsilon\) is the roundoff error. \[ fl(x) = x(1 +
+        \delta) \]
+      </p>
+      <p>\(\textbf{Example.}\)</p>
+    </section>
+
+    <br>
+
+    <section>
+      <h2>Newton's Method</h2>
+      <p>
+      $\textbf{Definition. }$  Newton's method, also known as the Newton-Raphson method, is an iterative root-finding algorithm used to find successively better approximations to the roots (or zeros) of a real-valued function. 
+      Given a function \( f(x) \) and its derivative \( f'(x) \), Newton's method starts with an initial guess \( x_0 \) and iteratively refines this guess using the following formula:
+      \[ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}, \]
+      where:
+      <ul>
+      <li> \( x_n \) is the current approximation. </li>
+      <li> \( x_{n+1} \) is the next approximation. </li>
+      <li> \( f(x_n) \) is the value of the function at \( x_n \). </li>
+      <li> \( f'(x_n) \) is the value of the derivative of the function at \( x_n \). </li>
+      </ul>
+      </p>
+      <p>
+      $\textbf{convergence Criteria. }$ The method typically converges if the initial guess \( x_0 \) is sufficiently close to the actual root, and \( f(x) \) is continuously differentiable in the neighborhood of the root.
+      </p>
+      <p>
+        $\textbf{Example. }$Consider finding the root of the function \( f(x) = x^2 - 2 \). The derivative of the function is \( f'(x) = 2x \).
+
+        Firstly, we start with an initial guess \( x_0 \).
+        Secondly, we apply the Newton's iteration:
+        
+        \[ x_{n+1} = x_n - \frac{x_n^2 - 2}{2x_n} = \frac{2x_n - \frac{x_n^2 - 2}{x_n}}{2} = \frac{x_n + \frac{2}{x_n}}{2} \]
+        
+        So, the iterative formula becomes:
+        
+        \[ x_{n+1} = \frac{1}{2} \left( x_n + \frac{2}{x_n} \right) \]
+        
+        By repeatedly applying this formula, the sequence \( \{x_n\} \) will converge to the square root of 2.
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'error_analysis_netwon'>
+      <h2>Error Analysis for Newton's Method</h2>
+      <p>
+        Let \( r \) be a solution of \( f(x) = 0 \) (i.e. \( f(r) = 0 \)). 
+        Suppose that we have already computed \( x_n \) and the error in \( x_n \) is \(e_n = |x_n - r| \). 
+        We now derive a formula that relates the error after the next step, \( |x_{n+1} - r| \), to \( |x_n - r| \). 
+        According to Taylor's theorem, there is a \( c \) between \( x_n \) and \( r \) such that        
+        \[
+         0 = f(r) = f(x_n) + f'(x_n)(r - x_n) + \frac{1}{2}f''(c)(r - x_n)^2 \quad (1)
+        \]
+        By the definition of Newton's method, we have 
+        \[ 
+        0 = f(x_n) + f'(x_n)(x_{n+1} - x_n) \quad (2) 
+        \]
+        Subtracting (2) from (1).
+        \[
+        \begin{align}
+         0 &= f'(x_n)(r - x_{n+1}) + \frac{1}{2}f''(c)(r - x_n)^2\\
+        x_{n+1} - r &= \frac{f''(c)}{2f'(x_n)}(x_n - r)^2 \\
+        e_{n+1} &= |x_{n+1} - r| = \left| \frac{f''(c)}{2f'(x_n)} \right||x_n - r|^2 \\
+        \end{align}
+        \]
+        If \( x_n \) is close to \( r \), then \( c \), which must be between \( x_n \) and \( r \), is also close to \( r \) and
+        \[ e_{n+1} = |x_{n+1} - r| \approx \left| \frac{f''(r)}{2f'(r)} \right||x_n - r|^2 = \left| \frac{f''(r)}{2f'(r)}\right| e_n^2 = Ce_n^2 \]
+        <!-- Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
+        \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]          -->
+        $\textbf{Thus we can see that Newton's Method is quadratically convergent. }$
+        $\textbf{However, the disadvantage of Newton's Method is that if the initial value is closed enough to the root. }$
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'theorems_on_newton_method'>
+      <h2>Theorems on Newton's Method</h2>
+      <p>
+        $\textbf{Theorem. }$
+        Let \(f''\) be continuous and let \(r\) be a simple zero of \(f\). Then there is a neighborhood of \(r\) and a constant \(C\) such that if Newton's method is started in that neighborhood, the successive points become steadily closer to \(r\) and satisfy
+        \[
+        |x_{n+1} - r| \leq C (x_n - r)^2 \quad (n \geq 0)
+        \]
+      </p>
+      <p>
+        $\textbf{Theorem on Newton's Method for a Convex Function. }$
+        If \( f \) belongs to \( C^2(\mathbb{R}) \), is increasing, is convex, and has a zero, then the zero is unique, and the Newton iteration will converge to it from any starting point.
+      </p>
+      <p>
+        $\textbf{Convergence of Newton's method. }$
+        Assume that \( f(x) \), \( f'(x) \), and \( f''(x) \) are continuous for all \( x \) in some neighborhood of \( \alpha \) and \( f(\alpha) = 0 \) and \( f'(\alpha) \neq 0 \).
+        If \( x_0 \) is sufficiently close to \( \alpha \), then \( x_n \to \alpha \) as \( n \to \infty \). Moreover,
+        \[
+        \lim_{n \to \infty} \frac{|x_{n+1} - \alpha|}{|x_n - \alpha|^2} = \frac{1}{2} \left| \frac{f''(\alpha)}{f'(\alpha)} \right|.
+        \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'horner_algorithem'>
+      <h2>Horner's Algorithm</h2>
+      <p>
+        This method is also known as Horner's method, nested multiplication, or synthetic division.
+      </p>
+      <p>
+        \(\textbf{Definition. }\) Horner's algorithm is a method for evaluating a polynomial at a point. 
+        Given a polynomial \( p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n \), Horner's algorithm evaluates \( p(x) \) at a point \( x = c \) as follows:
+        \[ p(c) = a_0 + c(a_1 + c(a_2 + \cdots + c(a_{n-1} + c a_n) \cdots)). \]
+      </p>
+      <p>
+        Given a polynomial \( p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \). Then 
+        \[
+        \begin{align}
+        b_{n-1} &= a_n \\
+        b_{n-2} &= a_{n-1} + z_0 b_{n-1} \\
+        &\vdots \\
+        b_0 &= a_1 + z_0 b_1 \\
+        p(z_0) &= a_0 + z_0 b_0
+        \end{align}
+        \]
+        Horner's algorithm evaluates \( p(x) \) at a point \( x = z_0 \) as follows:
+        \[
+        \begin{array}{cccccc}
+        & a_n & a_{n-1} & a_{n-2} & \cdots & a_0 \\
+        z_0 & & z_0 b_{n-1} & z_0 b_{n-2} & \cdots & z_0 b_0 \\
+        & b_{n-1} & b_{n-2} & b_{n-3} & \cdots & \boxed{b_{-1}} \\
+      \end{array}
+        \]
+      The boxed number satisfies \(p(z_0) = b_{-1}\).
+      </p>
+      <p>
+        \(\textbf{Example. }\) Given the polynomial \( p(x) = 4x^3 - 3x^2 + 2x - 1 \) and \( z_0 = 2 \), evaluate \( p(z_0) \). 
+        \[
+        \begin{array}{ccccc}
+         & 4 & -3 & 2 & -1 \\
+        2 & & 8 & 10 & 24 \\
+        & 4 & 5 & 12 & \boxed{23} \\
+        \end{array}
+        \]
+        Hence, we have \( p(2) = 23 \).
+      </p>
+      <p>
+      \(\textbf{Theorem on Horner's Method. }\)
+      Let \( p(x) = a_n x^n + \cdots + a_1 x + a_0 \). Define pairs \((\alpha_j, \beta_j)\) for \( j = n, n-1, \ldots, 0 \) by the algorithm
+      \[
+      \begin{cases}
+      (\alpha_n, \beta_n) = (a_n, 0) \\
+      (\alpha_j, \beta_j) = (a_j + x \alpha_{j+1}, \alpha_{j+1} + x \beta_{j+1}) & (n-1 \ge j \ge 0)
+      \end{cases}
+      \]
+      Then \(\alpha_0 = p(x)\) and \(\beta_0 = p'(x)\).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'polynomial_interpretation'>
+      <h2>Polynomial Interpretation</h2>
+      <h3>Theorem on Polynomial Interpolation Error</h3>
+      <p>
+        \(\textbf{Theorem. }\)Let \( f \) be a function in \( C^{n+1}[a, b] \), and let \( p \) be the polynomial of degree at most \( n \) that interpolates the function \( f \) at \( n + 1 \) distinct points \( x_0, x_1, \ldots, x_n \) in the interval \([a, b]\). 
+        To each \( x \) in \([a, b]\) there corresponds a point \( \xi_x \) in \((a, b)\) such that
+        \[ 
+          f(x) - p(x) = \frac{1}{(n + 1)!} f^{(n+1)}(\xi_x) \prod_{i=0}^{n} (x - x_i) .
+        \]
+      </p>
+      
+      <br>
+
+      <h3>Lagrange's Form</h3>
+      <p>
+      The Lagrange form of the interpolation polynomial is a method for constructing a polynomial that passes through a given set of points. Specifically, given a set of \( n+1 \) distinct data points \((x_0, y_0), (x_1, y_1), \ldots, (x_n, y_n)\), the Lagrange interpolation polynomial \( P(x) \) is defined as:
+      \[ P(x) = \sum_{i=0}^{n} y_i \ell_i(x) \]
+      where \( \ell_i(x) \) are the Lagrange basis polynomials given by:
+      \[ \ell_i(x) = \prod_{\substack{0 \le j \le n \\ j \ne i}} \frac{x - x_j}{x_i - x_j} \]
+      Each \( \ell_i(x) \) is a polynomial of degree \( n \) that is 1 at \( x = x_i \) and 0 at \( x = x_j \) for \( j \ne i \).
+      </p>
+      <p>
+        \(\textbf{Example. }\) Given points: \( (1, 1), (2, 4), (3, 9) \).
+        Here \(x_0 = 1, x_1 = 2, x_2 = 3\), and \(y_0 = 1, y_1 = 4, y_2 = 9\).
+      </p>
+      <p>
+      Compute the Lagrange basis polynomials \( \ell_i(x) \):
+      \[ \ell_0(x) = \frac{(x-2)(x-3)}{(1-2)(1-3)} = \frac{(x-2)(x-3)}{2} \]
+      \[ \ell_1(x) = \frac{(x-1)(x-3)}{(2-1)(2-3)} = - (x-1)(x-3) \]
+      \[ \ell_2(x) = \frac{(x-1)(x-2)}{(3-1)(3-2)} = \frac{(x-1)(x-2)}{2} \]
+      </p>
+      <p>
+      Construct the interpolation polynomial \( P(x) \):
+      \[ P(x) = 1 \cdot \ell_0(x) + 4 \cdot \ell_1(x) + 9 \cdot \ell_2(x). \]
+      \[ P(x) = 1 \cdot \frac{(x-2)(x-3)}{2} - 4 \cdot (x-1)(x-3) + 9 \cdot \frac{(x-1)(x-2)}{2}. \]
+      Simplifying, we get:
+      \[ P(x) = \frac{(x-2)(x-3)}{2} - 4(x-1)(x-3) + \frac{9(x-1)(x-2)}{2}. \]
+      </p>
+
+      <br>
+
+      <h3>Divided Differences</h3>
+      <p>
+      The divided differences of a set of data points are a sequence of numbers that are used to construct the Newton form of the interpolation polynomial.
+      </p>
+      <p>
+        \[f[x_i, x_{i+1}, \ldots, x_{i+j}] = \frac{f[x_{i+1}, x_{i+2}, \ldots, x_{i+j}] - f[x_i, x_{i+1}, \ldots, x_{i+j-1}]}{x_{i+j} - x_i}\]
+        The Following table shows the divided differences for a set of data points:
+        \[\begin{array}{cccc}
+        x_0 & f[x_0] & f[x_0, x_1] & f[x_0, x_1, x_2] & f[x_0, x_1, x_2, x_3] \\
+        x_1 & f[x_1] & f[x_1, x_2] & f[x_1, x_2, x_3] & \\
+        x_2 & f[x_2] & f[x_2, x_3] & & \\
+        x_3 & f[x_3] & & &
+        \end{array}
+        \]
+      </p>
+      <p>
+        \(\textbf{Example. }\) Given the following table of data points:
+        \[
+        \begin{array}{c|cccc}
+        x & 3 & 1 & 5 & 6 \\
+        \hline
+        f(x) & 1 & -3 & 2 & 4 \\
+        \end{array}
+        \]
+        Solution: We arrange the given table vertically and compute divided differences by the use of Formula above, arriving at
+        \[
+        \begin{array}{ccccc}
+        3 & 1 & 2 & -3/8 & 7/40 \\
+        1 & -3 & 5/4 & 3/20 & \\
+        5 & 2 & 2 & & \\
+        6 & 4 & & & \\
+        \end{array}
+        \]
+      </p>
+      <p>
+      \(\textbf{Theorem on Permutations in Divided Differences. }\)
+        The divided difference is a symmetric function of its arguments. Thus, if \((z_0, z_1, \ldots, z_n)\) is a permutation of \((x_0, x_1, \ldots, x_n)\), then
+        \[ f[z_0, z_1, \ldots, z_n] = f[x_0, x_1, \ldots, x_n]. \]
+      </p>
+      <p>
+        \(\textbf{Theorem on Derivatives and Divided Differences. }\)
+        If \( f \) is \( n \) times continuously differentiable on \([a, b]\) and if \( x_0, x_1, \ldots, x_n \) are distinct points in \([a, b]\), then there exists a point \( \xi \) in \((a, b)\) such that
+        \[ f[x_0, x_1, \ldots, x_n] = \frac{1}{n!} f^{(n)}(\xi). \]
+      </p>
+
+      <br>
+
+      <h3>Newton's Form</h3>
+      <p>
+      The Newton form of the interpolation polynomial is a method for constructing a polynomial that passes through a given set of points. Specifically, given a set of \( n+1 \) distinct data points \((x_0, y_0), (x_1, y_1), \ldots, (x_n, y_n)\), the Newton interpolation polynomial \( P(x) \) is defined as:
+      \[ P(x) = a_0 + a_1(x - x_0) + a_2(x - x_0)(x - x_1) + \cdots + a_n(x - x_0)(x - x_1) \cdots (x - x_{n-1}) \]
+        where \( a_0, a_1, \ldots, a_n \) are the \(\textit{divided differences}\) of the data points.
+      </p>
+      <p>
+        \(\textbf{Remark. }\)Here, \(a_n = f[x_0, x_1, \ldots, x_n]\).
+      </p>
+      <p>
+        \(\textbf{Example. }\) Given the following table of data points:
+        \[
+        \begin{array}{c|cccc}
+        x & 3 & 1 & 5 & 6 \\
+        \hline
+        f(x) & 1 & -3 & 2 & 4 \\
+        \end{array}
+        \]
+        We already found the divided differences in the previous example. The Newton form of the interpolation polynomial is
+        \[ p(x) = 1 + 2(x - 3) - \frac{3}{8}(x - 3)(x - 1) + \frac{7}{40}(x - 3)(x - 1)(x - 5). \]
+      </p>
+    </section>
+
+    <br>
+
+    <section>
+      <h2>Theorem on Polynomial Interpolation Error</h2>
+      <p>
+        \(\textbf{Theorem. }\)Let \( f \) be a function in \( C^{n+1}[a, b] \), and let \( p \) be the polynomial of degree at most \( n \) that interpolates the function \( f \) at \( n + 1 \) distinct points \( x_0, x_1, \ldots, x_n \) in the interval \([a, b]\). 
+        To each \( x \) in \([a, b]\) there corresponds a point \( \xi_x \) in \((a, b)\) such that
+        \[ 
+          f(x) - p(x) = \frac{1}{(n + 1)!} f^{(n+1)}(\xi_x) \prod_{i=0}^{n} (x - x_i) .
+        \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'gaussian_quadrature'>
+      <h2>Gaussian Quadrature</h2>
+      <p>
+        The theory can be formulated for quadrature rules of a slightly more general form; namely,
+        \[
+        \int_a^b f(x) w(x) \, dx \approx \sum_{i=0}^n A_i f(x_i),
+        \]
+        where \( w \) is a fixed positive $\textit{weight function}$. 
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'gaussian_quadrature_error_analysis'>
+      <h2>Error Analysis for Gaussian Quadrature</h2>
+      <p>
+        Given the Gaussian quadrature formula
+        \[
+         \int_a^b f(x) dx = \sum_{i=1}^{n} w_i f(x_i) + R_n(f),
+        \]
+        where 
+        \[
+          R_n(f) = \frac{(b-a)^{2n+1}(n!)^4}{(2n+1)[(2n)!]^3} f^{(2n)}(c).
+        \]
+      </p>
+    </section>
+
+    <br>
+
+    <section>
+      <h2>\(\theta\)-Method</h2>
+      <p>
+      \(\textbf{Definition. }\) (Theta methods) We consider methods of the form
+      \[ y_{n+1} = y_n + h [ \theta f(t_n, y_n) + (1 - \theta) f(t_{n+1}, y_{n+1}) ], \quad n = 0, 1, \ldots, \]
+      where \( \theta \in [0, 1] \) is a parameter:
+      - If \( \theta = 1 \), we recover Euler's method.
+      - If \( \theta \in (0, 1) \), then the theta method (3.3) is implicit: Each time step requires the solution of \( N \) (in general, nonlinear) algebraic equations for the unknown vector \( y_{n+1} \).
+      - The choices \( \theta = 0 \) and \( \theta = \frac{1}{2} \) are known as
+
+      \textit{Backward Euler}:
+      \[ y_{n+1} = y_n + h f(t_{n+1}, y_{n+1}), \]
+
+      \textit{Trapezoidal rule}:
+      \[ y_{n+1} = y_n + \frac{1}{2} h [ f(t_n, y_n) + f(t_{n+1}, y_{n+1}) ]. \]
+
+      Solution of nonlinear algebraic equations can be done by iteration. For example, for backward Euler, letting \( y_{n+1}^{[0]} = y_n \), we may use
+
+      \textit{Direct iteration}
+      \[ y_{n+1}^{[j+1]} = y_n + h f(t_{n+1}, y_{n+1}^{[j]}); \]
+
+      \textit{Newton–Raphson}:
+      \[ y_{n+1}^{[j+1]} = y_{n+1}^{[j]} - \left[ I - h \frac{\partial f(t_n, y_n)}{\partial y} \right]^{-1} \left[ y_{n+1}^{[j]} - y_n - h f(t_{n+1}, y_{n+1}^{[j]}) \right]; \]
+
+      \textit{Modified Newton–Raphson}:
+      \[ y_{n+1}^{[j+1]} = y_{n+1}^{[j]} - \left[ I - h \frac{\partial f(t_n, y_n)}{\partial y} \right]^{-1} \left[ y_{n+1}^{[j]} - y_n - h f(t_{n+1}, y_{n+1}^{[j]}) \right]. \]
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'error'>
+      <h2>Error</h2>
+      <p>
+      In numerically solving a differential equation, several types of errors arise. These are conveniently classified as follows:
+    <ul>
+    <li>Local truncation error</li>
+    <li>Local roundoff error</li>
+    <li>Global truncation error</li>
+    <li>Global roundoff error</li>
+    <li>Total error</li>
+    </ul>
+      </p>
+      <p>
+        \(\textbf{Local Truncation Error. }\) The local truncation error is the error made in a single step of a numerical method. 
+      </p>
+      <p>
+        \(\textbf{Local Roundoff Error. }\) The local roundoff error is the error made in a single step of a numerical method due to roundoff.
+      </p>
+      <p>
+        \(\textbf{Global Truncation Error. }\) The global truncation error is the accumulation of the local truncation errors in the previous steps. 
+      </p>
+      <p>
+        \(\textbf{Global Roundoff Error. }\) The global roundoff error is the accumulation of the local roundoff errors in the previous steps.
+      </p>
+      <p>
+        \(\textbf{Total Error. }\) The total error is the sum of the global truncation error and the global roundoff error.
+      </p>
+      D. Kincard & W. Cheney page.533.
+    </section>
+
+    <br>
+
+    <section id = 'richardson_extrapolation'>
+      <h2>Richardson Extrapolation</h2>
+      <p>
+        \(\textbf{Definition. }\) Richardson extrapolation is a method for improving the accuracy of a numerical method. 
+        Given a numerical method that approximates a quantity with error \( E(h) \) for a step size \( h \), Richardson extrapolation constructs a new approximation with error \( E(h^2) \) by combining two approximations with step sizes \( h \) and \( h/2 \).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'stability'>
+      <h2>Stability</h2>
+      <p>
+        \(\textbf{Definition. }\) The roots of \(\rho(z)\) of modulus one are called essential roots. The root \( z = 1 \) is called the principal root. The roots of \(\rho(z)\) of modulus \( \lt 1 \) are called nonessential roots.
+      </p>
+      <p>
+        \(\textbf{Definition. }\) A linear multistep method is strongly stable if all roots of \(\rho(z)\) are \(\leq 1\) in magnitude and only one root has magnitude one. If more than one root has magnitude one, the method is called weakly or conditionally stable. Note, we still require only simple roots of magnitude one. Also, note these definitions refer to the case \( h = 0 \).
+      </p>
+    </section>
+
+    <br>
+
+    <section id = 'gram_schmidt'>
+      <h2>Gram-Schmidt</h2>
+      <p>
+      </p>
+    </section>
+
+    <section id = 'qr_factorization'>
+      <h2>QR Factorization</h2>
+      <h3>Reduced QR Factorization</h3>
+      <p>
+        \(\textbf{Definition 8.1 [Reduced QR factorization]}\) Let \( A \in \mathbb{F}^{m \times n} \) (\( m \geq n \)). There is an orthonormal matrix \( \hat{Q} \in \mathbb{F}^{m \times n} \) and a square upper triangular matrix \( \hat{R} \in \mathbb{F}^{n \times n} \) such that
+        \[ A = \hat{Q} \hat{R}. \]
+      </p>
+      <p>
+        There are several ways to compute the QR factorization of a matrix.
+        <ul>
+          <li>
+            \(\textbf{Gram-Schmidt Process. }\) The Gram-Schmidt process is a method for orthonormalizing a set of vectors. 
+            Given a set of linearly independent vectors \( \{v_1, v_2, \ldots, v_n\} \), the Gram-Schmidt process produces an orthonormal set of vectors \( \{q_1, q_2, \ldots, q_n\} \) such that \( \text{span}\{v_1, v_2, \ldots, v_n\} = \text{span}\{q_1, q_2, \ldots, q_n\} \).
+          </li>
+          <li>
+            \(\textbf{Householder Transformation. }\) The Householder transformation is a reflection across a plane. 
+            Given a vector \( x \), the Householder transformation \( H \) is defined as
+            \[
+              H = I - 2 \frac{vv^*}{v^*v},
+            \]
+            where \( v = x - \text{sign}(x_1) \|x\|_2 e_1 \) and \( e_1 \) is the first unit vector.
+          </li>
+          <li>
+            \(\textbf{Givens Rotation. }\) The Givens rotation is a rotation in the plane spanned by two vectors. 
+            Given a vector \( x \), the Givens rotation \( G \) is defined as
+            \[
+              G = \begin{bmatrix}
+                c & -s \\
+                s & c
+              \end{bmatrix},
+            \]
+            where \( c = \frac{x_1}{\|x\|_2} \) and \( s = \frac{x_2}{\|x\|_2} \).
+          </li>
+      </p>
+    </section>
+
+    <section id = 'bauer-fike_Theorem'>
+      <h2>Bauer-Fike Theorem</h2>
+      <p>
+        Consider a diagonalizable matrix \(A \in \mathbb{C}^{n \times n}\) with non-singular eigenvector matrix \(V \in \mathbb{C}^{n \times n}\), such that \(A = V\Lambda V^{-1}\), where \(\Lambda\) is a diagonal matrix.
+        If \(X \in \mathbb{C}^{n \times n}\) is invertible, its condition number in the \(p\)-norm is denoted by \(\kappa_p(X)\) and defined as: \[ \kappa_p(X) = |X|_p |X^{-1}|_p \]
+      </p>
+      <p>
+        \(\textbf{Theorem. }\) Let A be an \( n \times n \) matrix with a complete set of linearly independent eigenvectors and suppose the \( V^{-1}AV = D \) where \( V \) is nonsingular and \( D \) is diagonal. Let \( \delta A \) be a perturbation of \( A \) and let \( \mu \) be an eigenvalue of \( A + \delta A \). Then \( A \) has an eigenvalue \( \lambda \) such that
+
+        \[ |\mu - \lambda| \leq \kappa_p(V) \| \delta A \|_p, \quad 1 \leq p \leq \infty \]
+        
+        where \( \kappa_p(V) \) is the \( p \)-norm condition number of \( V \).
+      </p>
+      <p>
+        The Bauer-Fike Theorem:
+      <ul>
+          <li>Suppose \(\mu\) is an eigenvalue of \(A + \delta A\).</li>
+          <li>Then there exists \(\lambda \in \Lambda(A)\) (i.e., an eigenvalue of \(A\)) such that:
+          \[
+          |\lambda - \mu| \leq \kappa_p(V) \|\delta A\|_p
+          \]
+          </li>
+          <li>Here, \(\|\cdot\|_p\) denotes the \(p\)-norm of a matrix.</li>
+      </ul>
+      </p>
+      <p>
+        <p>The <strong>Bauer–Fike theorem</strong> is a powerful result, and its proof involves several key concepts from linear algebra and perturbation theory. Let's outline the main steps of the proof:</p>
+
+<ul>
+    <li>
+        <strong>Eigenvalue Perturbation</strong>:
+        <ul>
+            <li>Consider a matrix \(A\) with eigenvalues \(\lambda_1, \lambda_2, \ldots, \lambda_n\).</li>
+            <li>Suppose we have a perturbed matrix \(A + \delta A\), where \(\delta A\) represents a small perturbation.</li>
+            <li>We want to understand how the eigenvalues of \(A + \delta A\) relate to the eigenvalues of \(A\).</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Eigenvector Matrix and Diagonalization</strong>:
+        <ul>
+            <li>Recall that \(A\) can be diagonalized as \(A = V\Lambda V^{-1}\), where:
+                <ul>
+                    <li>\(V\) is the matrix of eigenvectors of \(A\).</li>
+                    <li>\(\Lambda\) is the diagonal matrix with eigenvalues \(\lambda_1, \lambda_2, \ldots, \lambda_n\) on the diagonal.</li>
+                </ul>
+            </li>
+            <li>The eigenvector matrix \(V\) is invertible.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Bounding the Deviation</strong>:
+        <ul>
+            <li>Let \(\mu\) be an eigenvalue of \(A + \delta A\).</li>
+            <li>We want to find a bound on \(| \lambda - \mu |\), where \(\lambda\) is an eigenvalue of \(A\).</li>
+            <li>Using the eigenvector matrix \(V\), we can express \(\mu\) as:
+                \[ \mu = v_i^T (A + \delta A) v_i = \lambda_i + v_i^T \delta A v_i \]
+                Here, \(v_i\) corresponds to the \(i\)-th column of \(V\).
+            </li>
+            <li>Since \(\delta A\) is small, we can bound the deviation:
+                \[ | \lambda - \mu | = | \lambda_i - \mu | = | v_i^T \delta A v_i | \leq \| v_i \|_p \| \delta A \|_p \]
+                The inequality follows from the properties of matrix norms.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Condition Number of \(V\)</strong>:
+        <ul>
+            <li>The condition number of \(V\) in the \(p\)-norm is denoted by \(\kappa_p(V)\).</li>
+            <li>It measures how sensitive the eigenvectors are to perturbations.</li>
+            <li>We have:
+                \[ | \lambda - \mu | \leq \kappa_p(V) \| \delta A \|_p \]
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Alternate Formulation</strong>:
+        <ul>
+            <li>If we have an approximate eigenvalue-eigenvector pair \((\lambda_a, v_a)\), we can bound the error:
+                \[ | \lambda - \lambda_a | \leq \frac{\kappa_p(V) \| r \|_p}{\| v_a \|_p} \]
+                where \(r = Av_a - \lambda_av_a\).
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Relative Bound</strong>:
+        <ul>
+            <li>If \(A\) is invertible and \(\mu\) is an eigenvalue of \(A + \delta A\), then:
+                \[ \frac{| \lambda - \mu |}{| \lambda |} \leq \kappa_p(V) \| A^{-1} \delta A \|_p \]
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p>In summary, the Bauer–Fike theorem provides bounds on how eigenvalues change under small perturbations. It highlights the importance of eigenvector conditioning and helps us understand the stability of eigenvalues.</p>
+      </p>
+    </section>
+
+    <section>
+      <h2>Qual Problems (January 2022)</h2>
+      <p>
+      1. Consider the iteration 
+      \[
+        x_{n+1} = \frac{1}{2} x_n + \frac{5}{2x_n}, \quad n = 0, 1, \ldots
+      \]
+      <ul>
+        <li>
+          1. Show that if \(x_0 > 0\), then \(x_n \geq \sqrt{5}\) for \(n = 1,2,\ldots\).
+        </li>
+        <li>
+          2. Use the Contractive Mapping Theorem to show that the iteration is convergent.
+        </li>
+        <li>
+          3. Show that the order of convergence of the iteration is quadratic.
+        </li>
+      </ul>
+      </p>
+      <h2>Solutions</h2>
+      <p>
+      \(\textbf{Proof of 1.}\) Let \(f(x) = \frac{1}{2}x + \frac{5}{2x}\). 
+      Hence, we can calculate the derivative of \(f(x)\) as
+      \[
+        f'(x) = \frac{1}{2} - \frac{5}{2x^2} = \frac{1}{2}\left(1 - \frac{5}{x^2}\right)
+      \]
+      Since \(x_0 > 0\), we just assume that \(x>0\).
+      When \( 0 \lt x \leq \sqrt{5} \), we have \( f'(x) \lt 0 \).
+      When \( x \geq \sqrt{5} \), we have \( f'(x) \geq 0 \).
+      Thus, we can know that when \( x = \sqrt{5} \), \( f(x) \) is at minimum for \( f(x) \) where \( x \geq 0 \).
+      Then, 
+      \[
+       \min f(x) = f(\sqrt{5}) = \frac{1}{2} \sqrt{5} + \frac{5}{2\sqrt{5}} = \frac{1}{2} \sqrt{5} + \frac{1}{2} \sqrt{5} = \sqrt{5}.
+      \]
+      Therefore, we have \( f(x) \geq \sqrt{5} \).
+      In other words, if \( x_0 > 0 \), then \( x_n \geq \sqrt{5} \). \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br>
+
+    <h2>Qual Problems (August 2022)</h2>
+    <section id = 'ku_2022_8_1'>
+      <p>
+        \(\textbf{Problem 1. }\)Consider the interpolation problem: Find a polynomial of degree less than or equal to three interpolating the table
+        \[
+          \begin{array}{c|cccc}
+            x & 0 & 1 & 7 & 2 \\
+            \hline
+            f(x) & 51 & 3 & 201 & 1 \\
+          \end{array} 
+        \]
+        <ul>
+          <li>
+            Prove that the solution to the interpolation problem exists and is unique.
+          </li>
+          <li>
+            Find the interpolation polynomial in Newton's form.
+          </li>
+          <li>
+            Derive the error for the interpolation polynomial provided that function \( f = f(x) \) is sufficiently smooth.
+          </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Proof. }\)Firstly, we can observe that for all \(x\), they are distinct.
+        Therefore, for arbitrary value of \(f(x)\), we can find a unique polynomial of degree less than or equal to \(3\) interpolating the table. \( \blacksquare \)
+      </p>
+      <p>
+        \(\textbf{Solution.}\)Here we can use Newton's divided difference method to find the interpolation polynomial.
+        \[
+          \begin{align*}
+            x_0 = 0: & f[x_0] = 51, & f[x_0, x_1] = \frac{3 - 51}{1 - 0} = -48, & f[x_0, x_1, x_2] = \frac{33 - (-48)}{7 - 0} = \frac{81}{7}, & f[x_0, x_1, x_2, x_3] = \frac{7 - 81/7}{2-0} = -\frac{16}{7},\\
+            x_1 = 1: & f[x_1] = 3, & f[x_1, x_2] = \frac{201 - 3}{7 - 1} = 33, & f[x_1, x_2, x_3] = \frac{40 - 33}{1-0} = 7, & \\
+            x_2 = 7: & f[x_2] = 201, & f[x_2, x_3] = \frac{1 - 201}{2 - 7} = 40, & & \\
+            x_3 = 2: & f[x_3] = 1, & & & \\
+          \end{align*}
+        \]
+        Therefore, we have
+        \[
+          p(x) = 51 + (-48)(x-0) + \frac{81}{7}(x-0)(x-1) - \frac{16}{7}(x-0)(x-1)(x-7).
+        \]
+      </p>
+      <p>
+        \(\textbf{Solution.}\)
+      </p>
+    </section>
+
+    <section>
+      <p>
+\(\textbf{Problem. }\)Let \( A \in \mathbb{C}^{m \times m} \), and \( A = U\Sigma V^* \) being a singular value decomposition of \( A \), where \( U, V \in \mathbb{C}^{m \times m} \) are unitary and \( \Sigma \) is non-negative diagonal. Define
+\[
+W = \frac{1}{\sqrt{2}}
+\begin{bmatrix}
+U & U \\
+V & -V
+\end{bmatrix}
+\in \mathbb{C}^{2m \times 2m}.
+\]
+<ul>
+  <li>
+  Prove \( W \) is unitary.
+  </li>
+  <li>
+  Let
+  \[
+  B =
+  \begin{bmatrix}
+  0 & A \\
+  A^* & 0
+  \end{bmatrix}
+  \in \mathbb{C}^{2m \times 2m}.
+  \]
+  Prove \( B \) is Hermitian and have the spectral decomposition
+  \[
+  B = W
+  \begin{bmatrix}
+  \Sigma & 0 \\
+  0 & -\Sigma
+  \end{bmatrix}
+  W^*.
+  \]
+  </li>
+  <li>
+  Prove \( \|B\|_2 = \|A\|_2 \).
+  </li>
+</ul>
+</p>
+<p>
+  \(\textbf{Proof(a). }\) Given \(W\), we have with Unitary Matrices \(U, V\), we can get 
+    \[
+        W^* = \frac{1}{\sqrt{2}}
+        \begin{bmatrix}
+            U^* & V^* \\
+            U^* & -V^*
+        \end{bmatrix}
+        \in \mathbb{C}^{2m \times 2m}.
+        \]
+    Then we have
+    \begin{align}
+      W^* W &= \frac{1}{2}  
+        \begin{bmatrix}
+            U^*U + V^*V & U^*U - V^*V \\
+            U^*U - V^*V & U^*U + V^*V
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            I_m + I_m & I_m - I_m \\
+            I_m - I_m & I_m + I_m
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            2I_m & 0_m \\
+            0_m & 2I_m
+        \end{bmatrix}\\
+        &= 
+        \begin{bmatrix}
+            I_m & 0_m \\
+            0_m & I_m
+        \end{bmatrix} \\
+        &= I_{2m}.
+    \end{align}
+    By the similar process, we have 
+    \begin{align}
+        WW^* &= \frac{1}{2}
+        \begin{bmatrix}
+            UU^* + UU^* & UV^* - UV^* \\
+            VU^* - VU^* & VV^* + VV^*
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            I_m + I_m & 0_m \\
+            0_m & I_m + I_m
+        \end{bmatrix}\\
+        &= I_{2m}.
+    \end{align}
+    Therefore, we show that \(W\) is unitary. \[ \tag*{$\square$} \]
+</p>
+<p>
+\(\textbf{Proof(b). }\)Firstly, we have 
+    \[
+      B^* = \begin{bmatrix}
+        0 & A^* \\
+        (A^*)^* & 0
+        \end{bmatrix} = \begin{bmatrix}
+        0 & A^* \\
+        A & 0
+        \end{bmatrix} = B.
+    \]
+    Thus, we have \(B\) is Hermitian. 
+    To show the spectral decomposition, we need to do calculation. 
+    \begin{align}
+        W
+        \begin{bmatrix}
+            \Sigma & 0 \\
+            0 & -\Sigma
+        \end{bmatrix}
+        W^* &= \frac{1}{2}
+        \begin{bmatrix}
+            U & U \\
+            V & -V
+        \end{bmatrix}
+        \begin{bmatrix}
+            \Sigma & 0 \\
+            0 & -\Sigma
+        \end{bmatrix}
+        \begin{bmatrix}
+            U^* & V^* \\
+            U^* & -V^*
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            U\Sigma & -U\Sigma \\
+            V\Sigma & V\Sigma
+        \end{bmatrix}
+        \begin{bmatrix}
+            U^* & V^* \\
+            U^* & -V^*
+        \end{bmatrix}\\
+        &= \frac{1}{2}
+        \begin{bmatrix}
+            U\Sigma U^* - U\Sigma U^* & U\Sigma V^* + U\Sigma V^* \\
+            V\Sigma U^* + V\Sigma U^* & V\Sigma V^* - V\Sigma V^*
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+            0 & U\Sigma V^*  \\
+            V\Sigma U^*  & 0
+        \end{bmatrix}\\
+    \end{align}
+    Since \(A = U\Sigma V^*\), which is SVD of \(A\), we know all entires of \(\Sigma\) are non-negative. 
+    Thus, we have \(\Sigma = \Sigma^*\). In that case, we have
+    \[
+        W
+        \begin{bmatrix}
+            \Sigma & 0 \\
+            0 & -\Sigma
+        \end{bmatrix}
+        W^* = \begin{bmatrix}
+            0 & U\Sigma V^*  \\
+            V\Sigma U^*  & 0
+        \end{bmatrix}
+        = \begin{bmatrix}
+            0 & U\Sigma V^*  \\
+            V\Sigma^* U^*  & 0
+        \end{bmatrix}
+        = \begin{bmatrix}
+            0 & A  \\
+            A^*  & 0
+        \end{bmatrix} = B.
+    \] \[ \tag*{$\square$} \]
+</p>
+<p>
+    \(\textbf{Proof(c). }\)Since we just show that \(W\) is unitary, and we are given that \(U\) and \(V\) are unitary, we have
+        \begin{align}
+            \|A\|_2 &= \|U\Sigma V^*\|_2 = \|\Sigma\|_2 = \max\sigma_i  \\
+            \|B\|_2 &= \left\|W \begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix} W^*\right\|_2 = \left\|\begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix}\right\|_2.
+        \end{align}
+        Since \(\begin{bmatrix} I_m & 0 \\ 0 & -I_m \end{bmatrix}\) is a unitary matrix, and 
+        \[ \begin{bmatrix} I_m & 0 \\ 0 & -I_m \end{bmatrix}
+            \begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix}
+            = \begin{bmatrix} \Sigma_m & 0 \\ 0 & \Sigma_m \end{bmatrix},
+        \]
+        we have 
+        \[
+            \left\|\begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix}\right\|_2 = \left\|\begin{bmatrix} I_m & 0 \\ 0 & -I_m \end{bmatrix}
+            \begin{bmatrix}
+                \Sigma & 0 \\
+                0 & -\Sigma
+            \end{bmatrix}\right\|_2
+            =
+            \left\|\begin{bmatrix} \Sigma_m & 0 \\ 0 & \Sigma_m \end{bmatrix}\right\|_2 = \max\sigma_i.
+        \]
+        Therefore, we have \(\|B\|_2 = \|A\|_2\). \[ \tag*{$\square$} \]
+        For the second part, we prove it by contradiction. Suppose that it is not true. Then, we know that there is no singular value \(|\tilde \sigma - \sigma|\leq \|E\|_2\). 
+        Hence, we can show that \(|\tilde \sigma - \sigma| > \|E\|_2\) for all singular values of \(A\). 
+        If \(\tilde \sigma > \sigma\), then we have
+        \[
+          \tilde \sigma - \sigma > \|E\|_2.
+        \]
+        Let \(\sigma = \|A\|_2\). Then, we have
+        \[
+        \begin{align}
+          \tilde \sigma - \|A\|_2 &> \|E\|_2 \\
+          \tilde \sigma &> \|A\|_2 + \|E\|_2.
+        \end{align}
+        \]
+        Hence, we have \(\|\tilde A\|_2 > \tilde \sigma > \|A\|_2 + \|E\|_2\), which is a contradiction.
+        If \(\tilde \sigma \lt \sigma\), then we have
+        \[
+          \sigma - \tilde \sigma > \|E\|_2.
+        \]
+</p>
+</section>
+
+    <section id = 'August_2023'>
+      <h2>Qual Problems (August 2023)</h2>
+      <p>
+        \(\textbf{Problem 3. }\)Consider the \(\theta\)-method
+        \[ y_{n+1} = y_n + h \left( \theta f_{n+1} + (1 - \theta) f_n \right), \quad \theta \in [0, 1], \]
+        where \( f_n = f(t_n, y_n) \).
+      <ul>
+        <li>
+          (a). For which value(s) of \(\theta\) is the \(\theta\)-method explicit? Implicit?
+        </li>
+        <li>
+          (b). Find an expression for the local truncation error in terms of \(\theta\), \(h\), and derivatives of the exact solution \(y(t)\) to the initial value problem. What are the local truncation errors for \(\theta = 0\), \(\frac{1}{2}\), \(1\)?
+        </li>
+        </ul>
+      </p>
+      <p>
+        \(\textbf{Solution (a). }\)To make a method explicit, we only need values of \(y_n\) and \(f_n\).
+        Hence, when \(\theta = 0\), we have 
+        \[ y_{n+1} = y_n + h f_n, \]
+        which is explicit.
+        To make a method implicit, we need values of \(f_{n+1}\). Hence, when \(\theta = 1\), we have
+        \[ y_{n+1} = y_n + h f_{n+1}, \]
+        which is implicit.
+      </p>
+      <p>
+        \(\textbf{Solution (b). }\)The local truncation error is given by 
+        \[\tau_{n+1} = y(t_{n+1}) - y_{n+1} - h(\theta f(t_{n+1}, y(t_{n+1})) + (1 - \theta) f(t_n, y(t_n))).\]
+        When \(\theta = 0\), we have
+        \[\tau_{n+1} = y(t_{n+1}) - y_n - h f(t_n, y(t_n)),\]
+        which is the local truncation error for \(\theta = 0\).
+        When \(\theta = \frac{1}{2}\), we have
+        \[\tau_{n+1} = y(t_{n+1}) - y_n - \frac{h}{2} (f(t_{n+1}, y(t_{n+1})) + f(t_n, y(t_n))),\]
+        which is the local truncation error for \(\theta = \frac{1}{2}\).
+        When \(\theta = 1\), we have
+        \[\tau_{n+1} = y(t_{n+1}) - y_n - h f(t_{n+1}, y(t_{n+1})),\]
+        which is the local truncation error for \(\theta = 1\).
+      </p>
+    </section>
+
+    <section id="References">
+      <h2>References</h2>
+      <ul>
+        <li>
+          D. Kincard & W. Cheney "Numerical Analysis: Mathematics of Scientific Computing", AMS, Third Edition, 2009.
+        </li>
+      </ul>
+    </section>
+
+  </body>
+</html>
