@@ -812,11 +812,11 @@ whenever \(x\in E\), \(y\in E\), and \(0\lt \lambda\lt  1\).
 
  
 <p>
-  \(\textbf{Remark. }\)The same proof applies to closed balls. It is also easy to see that \(k\)-cells are convex.
+  \(\textbf{Remark.}\) The same proof applies to closed balls. It is also easy to see that \(k\)-cells are convex.
 </p>
 
 <br>
-<p>\(\textbf{Definition. }\)[Neighborhood]
+<p>\(\textbf{Definition.}\)[Neighborhood]
 In a metric \(X\), a neighborhood of \(p\) is a set \(N_r(p)\) consisting of all \(q\) such that \(d(p, q)\lt  r\), for some \(r > 0\), The number \(r\) is called the radius of \(N_r(p)\).
 </p>
 
@@ -927,7 +927,7 @@ If \(x\in \left(\bigcap_\alpha E_\alpha\right)^c\), then \(x\notin \bigcap_\alph
 \[
 \left(\bigcap_\alpha E_\alpha\right)^c\subset \bigcup_\alpha (E_a^c).
 \]
-Conversely, if \(x\in\bigcup_\alpha (E_a^c)\), then \(x\in E_a^c\) for some \(\alpha\), hence \(x\notin E_\alpha\) for some \(\alpha\), hence \(x\notin\bigcap_\alpha E_\alpha\), so that \(x\in \Bigg(\bigcap_\alpha E_\alpha\Bigg)^c\). Thus,
+Conversely, if \(x\in\bigcup_\alpha (E_a^c)\), then \(x\in E_a^c\) for some \(\alpha\), hence \(x\notin E_\alpha\) for some \(\alpha\), hence \(x\notin\bigcap_\alpha E_\alpha\), so that \(x\in \left(\bigcap_\alpha E_\alpha\right)^c\). Thus,
 \[
 \bigcup_\alpha (E_a^c)\subset \left(\bigcap_\alpha E_\alpha\right)^c.
 \]
@@ -966,7 +966,7 @@ Since we know that
 \[
 \left(\bigcap_\alpha F_\alpha\right)^c = \bigcup_\alpha (F_a^c),
 \]
-and \(F_\alpha^c\) is open for \(F_\alpha\) is closed. Based on the previous theorem, we know that \(\bigcup_\alpha (F_a^c)\) is open, which implies that \(\Bigg(\bigcap_\alpha F_\alpha\Bigg)^c\) is open. Therefore, \(\bigcap_\alpha F_\alpha\) is closed. 
+and \(F_\alpha^c\) is open for \(F_\alpha\) is closed. Based on the previous theorem, we know that \(\bigcup_\alpha (F_a^c)\) is open, which implies that \(\left(\bigcap_\alpha F_\alpha\right)^c\) is open. Therefore, \(\bigcap_\alpha F_\alpha\) is closed.
 </p>
 
  
@@ -986,14 +986,15 @@ For any \(x\), let \(N\) be a neighborhood of \(x\) with radius \(r\). Then \(N\
 <p>\(\textbf{Theorem. }\)
 For any finite collection \(F_1, \dots, F_n\) of closed sets, \(\bigcup_{i=1}^n F_n\) is closed.
 </p>
-<p>\(\textbf{Proof. }\)
-Since we know that \[
-\Bigg(\bigcup_\alpha F_\alpha\Bigg)^c = \bigcap_\alpha (F_a^c),
-\]
-and \(F_1^c, F_2^c, \dots, F_n^c\) are all open. Based on the previous theorem, \(\bigcap_{i=1}^n F_i\) is open. Thus, \(\Bigg(\bigcup_{i=1}^n F_i\Bigg)^c\) is open. Therefore, \(\bigcup_{i=1}^n F_i\) is closed.
+<p>\(\textbf{Proof.}\) Since we know that
+    \[
+    \left(\bigcup_\alpha F_\alpha\right)^c = \bigcap_\alpha (F_a^c),
+    \]
+and \(F_1^c, F_2^c, \dots, F_n^c\) are all open. Based on the previous theorem, \(\bigcap_{i=1}^n F_i\) is open. Thus, \(\left(\bigcup_{i=1}^n F_i\right)^c\) is open. Therefore, \(\bigcup_{i=1}^n F_i\) is closed.
 </p>
  
 <br>
+
 <p>\(\textbf{Definition. }\)[Closure]
 If \(X\) is a metric space, if \(E\subset X\), and if \(E'\) denotes the set of all limit points of \(E\) in \(X\), then the closure of \(E\) is the set \(\bar{E} = E\cup E'\).
 </p>
@@ -1074,14 +1075,14 @@ Secondly, suppose that \(G\) is open in \(X\) and \(E  = G\cap Y\), every \(p\in
 By an open  cover  of a  set \(E\) in a metric space \(X\) we mean a collection \({G_\alpha}\) of open subsets of \(X\) such that \(E\subset \bigcup_\alpha G_a\). 
 </p>
 <p>\(\textbf{Definition. }\)[Compact set]
-A subset \(K\) of a metric space \(X\) is said to be compact if every open cover of \(K\) contains a finite subcover. i.e, if \(\{G_\alpha \}\) is an open cover of \(K\), then there are finitely many indices \(\alpha_1, \dots, \alpha_n\) such that \(K\subset G_{a_1}\cup\dots\cup G_{a_n}\).
+A subset \(K\) of a metric space \(X\) is said to be compact if every open cover of \(K\) contains a finite sub-cover. i.e, if \(\{G_\alpha \}\) is an open cover of \(K\), then there are finitely many indices \(\alpha_1, \dots, \alpha_n\) such that \(K\subset G_{a_1}\cup\dots\cup G_{a_n}\).
 </p>
 <p>\(\textbf{Remark. }\)
 Every finite set is compact. 
 </p>
 
 <p>\(\textbf{Definition. }\)[Compact relative]
-A subset \(K\) of a metric space \(X\) is said to be compact relative to \(K\) if every open cover of \(K\) contains a finite subcover. i.e, if \(\{G_\alpha \}\) is an open cover of \(K\), then there are finitely many indices \(\alpha_1, \dots, \alpha_n\) such that \(K\subset G_{a_1}\cup\dots\cup G_{a_n}\).
+A subset \(K\) of a metric space \(X\) is said to be compact relative to \(K\) if every open cover of \(K\) contains a finite sub-cover. i.e, if \(\{G_\alpha \}\) is an open cover of \(K\), then there are finitely many indices \(\alpha_1, \dots, \alpha_n\) such that \(K\subset G_{a_1}\cup\dots\cup G_{a_n}\).
 </p>
 
 <br>
@@ -1148,11 +1149,11 @@ Since \(K\) is compact, \(K\) is closed. Since for any collection \(\{F_\alpha\}
 If \(\{K_\alpha\}\) is a collection of compact subsets of a metric space \(X\) such that the intersection of every finite subcollection of \(\{K_\alpha\}\) is nonempty, then \(\cap_1^\infty K_\alpha\) is nonempty.
 </p>
 <p>\(\textbf{Proof. }\)
-I will prove it with mathematical contrapositive. Fix a memebr \(K_1\) of \(\{K_\alpha\}\). Let \(G_\alpha=K_\alpha^c\). Since \(K_\alpha\) is compact, \(K_\alpha\) is closed and \(G_\alpha\) is open. Suppose that no point of \(K_1\) belongs to every \(K_\alpha\), which means \(\bigcap_\alpha K_\alpha\) does not contain any point of \(K_1\). Hence, \(K_1\cap (\bigcap_\alpha K_\alpha)=\emptyset\). Thus, \(K_1\subset (\bigcap_\alpha K_\alpha)^c\). Because of \ref{compliment2}, \(K_1\subset \bigcup_\alpha K_\alpha^c = \bigcup_\alpha G_\alpha\). Since \(K_1\) is compact, there exists \(\alpha_1,\dots, \alpha_n\) such that 
+I will prove it with mathematical contrapositive. Fix a member \(K_1\) of \(\{K_\alpha\}\). Let \(G_\alpha=K_\alpha^c\). Since \(K_\alpha\) is compact, \(K_\alpha\) is closed and \(G_\alpha\) is open. Suppose that no point of \(K_1\) belongs to every \(K_\alpha\), which means \(\bigcap_\alpha K_\alpha\) does not contain any point of \(K_1\). Hence, \(K_1\cap (\bigcap_\alpha K_\alpha)=\emptyset\). Thus, \(K_1\subset (\bigcap_\alpha K_\alpha)^c\). Because of \ref{compliment2}, \(K_1\subset \bigcup_\alpha K_\alpha^c = \bigcup_\alpha G_\alpha\). Since \(K_1\) is compact, there exists \(\alpha_1,\dots, \alpha_n\) such that
 \[
 K_1\subset \bigcup_{i=1}^n G_{\alpha_i} = \bigcup_{i=1}^n K_{\alpha_i}^c = (\bigcap_{i=1}^n K_{\alpha_i})^c. 
 \]
-Therefore, it shows that \(K_1\cap \bigcap_{i=1}^n K_{\alpha_i}=\emptyset\), which means intersection of every finite subcollection of \(K_\alpha\) is empty. 
+Therefore, it shows that \(K_1\cap \bigcap_{i=1}^n K_{\alpha_i}=\emptyset\), which means intersection of every finite sub-collection of \(K_\alpha\) is empty.
 </p>
  
 <br>
@@ -1434,7 +1435,7 @@ If \(K_n\) is a sequence of compact sets in \(X\) such that \(K_n\supset K_{n+i}
 then \(\bigcap_1^\infty K_n\) consists of exactly one point.
 </p>
 <p>\(\textbf{Proof. }\)
-Assume \(K =  \bigcap_1^\infty K_n\). We know that if \(\{K_\alpha\}\) is a collection of compact subsets of a metric space \(X\) such that the intersection of every finite subcollection of \(\{K_\alpha\}\) is nonempty, then \(\cap_1^\infty K_\alpha\) is nonempty. Since \(K_n\supset K_{n+1}\), \(K\) is not empty. If \(K\) contains more than one point (i.e, there are two different points), then \(diam K > 0\). But for each \(n\),  \(K_n\supset K\) so that \(diam K_n\geq diam K\). However, \(\lim_{n\rightarrow\infty} diam K_n=0\), which means \(\lim_{n\rightarrow\infty} diam K_n=0\geq diam K\). Contradiction exists.
+Assume \(K =  \bigcap_1^\infty K_n\). We know that if \(\{K_\alpha\}\) is a collection of compact subsets of a metric space \(X\) such that the intersection of every finite sub-collection of \(\{K_\alpha\}\) is nonempty, then \(\cap_1^\infty K_\alpha\) is nonempty. Since \(K_n\supset K_{n+1}\), \(K\) is not empty. If \(K\) contains more than one point (i.e, there are two different points), then \(diam K > 0\). But for each \(n\),  \(K_n\supset K\) so that \(diam K_n\geq diam K\). However, \(\lim_{n\rightarrow\infty} diam K_n=0\), which means \(\lim_{n\rightarrow\infty} diam K_n=0\geq diam K\). Contradiction exists.
 </p>
 <br>
 <p>\(\textbf{Theorem. }\)
@@ -1578,7 +1579,7 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
     \[
     |a_n - a| \lt \frac{\varepsilon}{2}, \quad \text{for all } n \geq N.
     \]
-    Fristly, fix \(\varepsilon > 0\). Now, define \(c:= \max\{|a_1 - a|, |a_2 - a|, \dots, |a_{N-1} - a|, |a_N - a|\}\). Find an positive integer \(M\) such that 
+    Firstly, fix \(\varepsilon > 0\). Now, define \(c:= \max\{|a_1 - a|, |a_2 - a|, \dots, |a_{N-1} - a|, |a_N - a|\}\). Find an positive integer \(M\) such that
     \[\frac{c}{M}\lt \frac{\varepsilon}{2N}.\]
     If \(M\leq N\), then we have 
     \[\frac{1}{N}(|a_1 - a|  + \dots + |a_N - a|)\leq \frac{1}{M}(|a_1 - a|  + \dots + |a_N - a|) \lt \frac{NC}{M}\leq \frac{\varepsilon}{2} \lt \varepsilon.\]
