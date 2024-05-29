@@ -313,6 +313,7 @@
         </li>
       Further, \( n_p \) is the index in \( G \) of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).
       </p>
+      </ul>
     </section>
 
     <br>
@@ -1016,41 +1017,6 @@
 
     <br>
 
-    <section id = 'galois_group'>
-      <h2>Galois Group</h2>
-      <p>
-        \(\textbf{Definition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is the set
-        \[ \{\sigma: L \rightarrow L \mid \sigma \text{ is an automorphism, } \sigma(a) = a \text{ for all } a \in F\}. \]
-        In other words, \( \text{Gal}(L/F) \) consists of all automorphisms of \( L \) that are the identity on \( F \). The basic structure of \( \text{Gal}(L/F) \) is as follows.
-      </p>
-      <p>
-      \(\textbf{Theorem. }\) If \( L \) is the splitting field of a separable polynomial in \( F[x] \), then the Galois group of \( f \) over \( F \) has order \( \left| \text{Gal}(L/F) \right| = [L : F] \).
-      </p>
-      <p>
-        \(\textbf{Proposition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is a group under composition of functions.
-      </p>
-      <p>
-        \(\textbf{Proof. }\)We need to check the following properties:
-        <ul>
-          <li>
-            \( \text{Gal}(L/F) \) is closed under composition of functions.
-          </li>
-             <ul>
-              <li>
-                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \).
-                Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
-              </li>
-             </ul>
-        </ul>
-        We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.
-      </p>
-      <p>
-        \(\textbf{Proposition. }\) Any finite field extension of a finite field is separable and simple.
-      </p>
-    </section>
-
-    <br>
-
     <section id = 'galois_theory'>
       <h2>Galois Theory</h2>
       <p>
@@ -1407,7 +1373,7 @@
       \(\textbf{Proof (b). }\) Suppose that \(a, b\in R\) are non-unit and non-zero elements in \(R\).
       Suppose that \(d\) is the greatest common divisor of \(a\) and \(b\). Then we have \(d\mid a\) and \(d\mid b\).
       It shows that \(a\in dR\) and \(b\in dR\). Hence, we have \(\langle a, b \rangle \subset dR\).
-      For the other direction,
+      For the other direction, suppose that \(c\in dR\). Then we have \(c = dr\) for some \(r\in R\).
     </p>
     </section>
 
@@ -2075,5 +2041,6 @@
       </li>
     </ul>
   </section>
+
   </body>
 </html>
