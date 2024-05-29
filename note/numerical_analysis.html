@@ -427,6 +427,31 @@
         \[
         \int_a^b f(x) \, dx \approx h \left[ \frac{1}{2} f(x_0) + f(x_1) + \cdots + f(x_{m-1}) + \frac{1}{2} f(x_m) \right].
         \]
+      $\textit{Introdution to Numerical Analysis}$ page. 209.
+      </p>
+      <p>
+        \textbf{Definition 7.2 (Composite Simpson rule)}
+        \[
+        \int_a^b f(x) \, dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{2m-2}) + 4f(x_{2m-1}) + f(x_{2m}) \right].
+        \]
+
+      </p>
+      <p>
+        \textbf{Definition (Composite Midpoint Rule). } The composite midpoint rule is the composite Gauss formula with \(w(x) \equiv 1\) and \(n = 0\) defined by
+          \[
+          \int_a^b f(x) \, dx \approx h \sum_{j=1}^m f\left(a + \left(j - \frac{1}{2}\right) h \right).
+          \]
+          This follows from the fact that when \(n = 0\) there is one quadrature point \(\xi_0 = 0\) in \((-1,1)\), which is at the midpoint of the interval, and the corresponding quadrature weight \(W_0\) is equal to the length of the interval \((-1,1)\), i.e., \(W_0 = 2\). It follows from (10.24) with \(n = 0\) and
+          \[
+          C_0 = \int_{-1}^1 t^2 \, dt = \frac{2}{3}
+          \]
+          that the error in the composite midpoint rule is
+          \[
+          E_{0,m} = \frac{(b-a)^3}{24m^2} f''(\eta),
+          \]
+          where \(\eta \in (a, b)\), provided that the function \(f\) has a continuous second derivative on \([a, b]\).
+
+          $\textit{Introdution to Numerical Analysis}$ page. 286.
       </p>
     </section>
 
