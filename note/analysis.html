@@ -30,8 +30,8 @@
 
     <section>
       <p>
-        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts in abstract algebra and it is not fully completed. 
-        Feel free to send me an email at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions for improvement.
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts in abstract algebra, and it is not fully completed.
+        Feel free to email me at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions for improvement.
       </p>
     </section>
 
@@ -54,7 +54,7 @@ For all real numbers \(a\), \(b\), and \(c\),
 <p>\(\textbf{Definition. }\)[The Additive Identity]
 There is a real number, denoted by \(0\), such that
 \[
-0+a=a+0=a,
+0+a=a+0=a
 \]
 for all real numbers \(a\).
 </p>
@@ -84,7 +84,7 @@ For all real numbers \(a\), \(b\), and \(c\),
 <p>\(\textbf{Definition. }\)[The Multiplicative Identity]
 There is a real number,denoted by \(1\), such that 
 \[
-1a=a1=a,
+1\cdot a=a\cdot 1= a
 \]
 for all real numbers \(a\).
 </p>
@@ -169,7 +169,7 @@ Suppose \(S\) is an ordered set, \(E\subset S\), and \(E\) is bounded above. Sup
 <p>\(\textbf{Definition. }\)[Greatest lower bound/Infimum]
 Suppose \(S\) is an ordered set, \(E\subset S\), and \(E\) is bounded below. Suppose there exists an \(\alpha\in S\) with the following properties:
 \item (i) \(\alpha\) is an lower bound of \(E\).
-\item (ii) If \(\alpha\lt \gamma\) then \(\gamma\) is not an lower bound of \(E\).
+\item (ii) If \(\alpha\lt \gamma\) then \(\gamma\) is not a lower bound of \(E\).
 \\ Then \(\alpha\) is called the greatest lower bound of \(E\) or the infimum of \(E\), and we write
 \[
 \alpha= \inf E.
@@ -191,7 +191,8 @@ exists in \(S\) and \(\alpha = \inf B\).
 In particular, \(\inf B\) exists in \(S\).
 </p>
 <p>\(\textbf{Proof. }\)
-Since \(B\) is bounded below and \(L\) is the set of all lower bounds of \(B\), \(L\neq \emptyset\). Since \(L\) consists of exactly those \(y\in S\) which satisfy the inequality \(y\leq x\) for every \(x\in B\), we see that every \(x\in B\) is an upper bound of \(L\). Thus \(L\) is bounded above. Our hypothesis about \(S\) implies therefore that \(L\) has a supremum in \(S\);
+Since \(B\) is bounded below and \(L\) is the set of all lower bounds of \(B\), \(L\neq \emptyset\). Since \(L\) consists of exactly those \(y\in S\) which satisfy the inequality \(y\leq x\) for every \(x\in B\), we see that every \(x\in B\) is an upper bound of \(L\).
+  Thus, \(L\) is bounded above. Our hypothesis about \(S\) implies therefore that \(L\) has a supremum in \(S\);
 call it \(\alpha=\sup L\).
 If \(\gamma \lt  \alpha\) then \(\gamma\) is not an upper bound of \(L\) since \(\alpha\) is the least upper bound. Hence \(\gamma\notin B\). If \(x\lt \alpha\) for some \(x\in B\) and we know that \(x\) is the upper bound of \(L\), then the contradiction exists for \(\alpha\) is the least upper bound of \(L\). Hence,  \(\alpha\leq x\) for every \(x\in B\). Thus \(\alpha\in L\) for \(\alpha\) is a lower bound of \(B\). 
 If \(\alpha \lt  \beta\) then \(\beta\notin L\), since \(\alpha\) is an upper bound of \(L\). We have shown that \(\alpha\in L\) but \(\beta\notin L\) if \(\beta>\alpha\). In other words, \(\alpha\)
@@ -222,7 +223,7 @@ In other words, for all \(n\in\mathbb{Z}^+\),
 \[
 nx\leq y. 
 \]
-Let \(A\) be a set of \(nx\). In that case, \(A\) is bounded above and \(y\) is an upper bound of \(A\). Then \(A\) has an least upper bound and we assume that \(\alpha = \sup A\), and we know that \(nx\leq \alpha\leq y\). Since \(x>0\), 
+Let \(A\) be a set of \(nx\). In that case, \(A\) is bounded above and \(y\) is an upper bound of \(A\). Then \(A\) has a least upper bound, and we assume that \(\alpha = \sup A\), and we know that \(nx\leq \alpha\leq y\). Since \(x>0\),
 \[
 \alpha - x \leq \alpha.
 \]
@@ -242,7 +243,7 @@ We know that \(m+1\) is a positive integer. Therefore, contradiction exists.
  
 
 <p>\(\textbf{Theorem. }\)
-Every nonempty set of natural numbers has a smallest member.
+Every nonempty set of natural numbers has the smallest member.
 </p>
 
 <p>\(\textbf{Theorem. }\)[\(\mathbb{Q}\) is dense in \(\mathbb{R}\)]
@@ -261,12 +262,13 @@ Again using the \ref{Archimedean property}, the set of natural numbers \(S\) whe
 S=\{n\in \mathbb{N}\; |\; n/q>b\},
 \] 
 is nonempty. 
-According to Theorem 1, \(S\) has a smallest member \(p\). Observe that \(\frac{1}{q}\lt b-a\lt b\lt \frac{n}{q}\) for all \(n\in S\). Since \(\frac{1}{q}\lt \frac{n}{q}\) and \(n\) is a positive integer, \(n>1\), which indicates \(p>1\). Then we can know that \(p-1\) is a natural number (seProblem9) and so, by the minimality of the choice of \(p\), \(\frac{p-1}{q}\lt b\). We also have
+According to Theorem 1, \(S\) has the smallest member \(p\). Observe that \(\frac{1}{q}\lt b-a\lt b\lt \frac{n}{q}\) for all \(n\in S\). Since \(\frac{1}{q}\lt \frac{n}{q}\) and \(n\) is a positive integer, \(n>1\), which indicates \(p>1\). Then we can know that \(p-1\) is a natural number (seProblem9) and so, by the minimality of the choice of \(p\), \(\frac{p-1}{q}\lt b\). We also have
 \[
 a=b-(b-a)\lt \frac{p}{q}-\frac{1}{q}=\frac{p-1}{q}. 
 \]
 Therefore the rational number \(r=\frac{p-1}{q}\) lies between \(a\) and \(b\). 
-\item If \(a\lt 0\), by the \ref{Archimedean property}, there is a natural number \(n\) for which \(n\cdot 1>-a\). Hence, \(n+a>0\). Since \(b>a\), \(n+b>n+a\). We infer from the first case considered that there is a rational number \(r\) such that \(n+a\lt r\lt n+b\). Therefore there exists a rational number \(r-n\) such that  \(a\lt r-n\lt b\).
+\item If \(a\lt 0\), by the \ref{Archimedean property}, there is a natural number \(n\) for which \(n\cdot 1>-a\). Hence, \(n+a>0\). Since \(b>a\), \(n+b>n+a\). We infer from the first case considered that there is a rational number \(r\) such that \(n+a\lt r\lt n+b\).
+  Therefore, there exists a rational number \(r-n\) such that  \(a\lt r-n\lt b\).
 </p>
  
 
@@ -485,12 +487,10 @@ Let \(z\) and \(w\) be complex numbers. Then
   </li>
 </ul>
 </p>
-
 </section>
 
- 
-
 <br>
+
 <section>
   <h3>Euclidean Space</h3>
 <p>\(\textbf{Definition. }\)[Coordinates]
@@ -633,7 +633,7 @@ set.
 
 <p>\(\textbf{Definition. }\)
 Let \(A\) and \(\Omega\) be sets, and suppose that with each element \(\alpha\) of \(A\) there is associated a subset of \(n\) which we denote by \(E_\alpha\).\\
-The set whose elements are the sets \(E_\alpha\) will be denoted by \(\{E_\alpha\}\). Instead of speaking of sets of sets, we shall sometimes speak of a collection of sets, or a family of sets.\\
+The set whose elements are the sets \(E_\alpha\) will be denoted by \(\{E_\alpha\}\). Instead of speaking of sets, we shall sometimes speak of a collection of sets, or a family of sets.\\
 The union of the sets \(E_\alpha\) is defined to be the set \(S\) such that \(x\in S\) if and only if \(x\in E_\alpha\) for at least one \(\alpha\in A\). We use the notation
 \begin{equation} 
 S = \bigcup_{\alpha\in A} E_\alpha.
@@ -697,7 +697,10 @@ or
 \[
 x_{11},\; x_{12},\;\dots;\; x_{21},\; x_{22},\dots
 \]
-\item If any two of the sets \(E_n\) have elements in common, these will appear more than once in the new sequence. Hence there is a subset \(T\) of the set of all positive integers such that \(S\sim T\), which shows that \(S\) is at most countable(finite or countable). Since \(E_1\subset S\), and \(E_1\) is infinite, \(S\) is infinite, and thus \(T\) is infinite. Hence, \(T\) is countable for every infinite subset of a countable set is countable. Therefore, \(S\) is countable. 
+\item If any two of the sets \(E_n\) have elements in common, these will appear more than once in the new sequence.
+   Hence, there is a subset \(T\) of the set of all positive integers such that \(S\sim T\), which shows that \(S\) is at most countable(finite or countable).
+   Since \(E_1\subset S\), and \(E_1\) is infinite, \(S\) is infinite, and thus \(T\) is infinite.
+   Hence, \(T\) is countable for every infinite subset of a countable set is countable. Therefore, \(S\) is countable.
 <!-- \item \centering{\includegraphics[scale=0.7]{analysis_1.png}} -->
 </p>
 
@@ -762,7 +765,7 @@ Any function with these three properties is called a \textbf{distance function},
 </p>
 
 <p>
-  \(\textbf{Remark. }\)Every subset of a euclidean space is a metric space.
+  \(\textbf{Remark. }\)Every subset of a Euclidean Space is a metric space.
 </p>
 
 <br>
@@ -902,7 +905,7 @@ If \(x\in \left(\bigcup_\alpha E_\alpha\right)^c\), then \(x\notin \bigcup_\alph
 \[
 \left(\bigcup_\alpha E_\alpha\right)^c\subset \bigcap_\alpha (E_a^c).
 \]
-Conversely, if \(x\in\bigcap_\alpha (E_a^c)\), then \(x\in E_a^c\) for every \(\alpha\), hence \(x\notin E_\alpha\) for any \(\alpha\), hence \(x\notin\bigcup_\alpha E_\alpha\), so that \(x\in \Bigg(\bigcup_\alpha E_\alpha\Bigg)^c\). Thus,
+Conversely, if \(x\in\bigcap_\alpha (E_a^c)\), then \(x\in E_a^c\) for every \(\alpha\), hence \(x\notin E_\alpha\) for any \(\alpha\), hence \(x\notin\bigcup_\alpha E_\alpha\), so that \(x\in \left(\bigcup_\alpha E_\alpha\right)^c\). Thus,
 \[
 \bigcap_\alpha (E_a^c)\subset \left(\bigcup_\alpha E_\alpha\right)^c.
 \]
@@ -939,7 +942,7 @@ It follows that
 A set \(E\) is open if and only if its complement is closed.
 </p>
 <p>\(\textbf{Proof. }\)
-First, suppose \(E^c\) is closed. Choose \(x\in E\). Then \(x\notin E^c\). Since \(E^c\) is closed, which means it contains all its limit points, thus \(x\) is not a limit point of \(E^c\). Hence there exists a neighborhood \(N\) of \(x\) such that \(N\cap E^c\) is empty, that is, \(N\subset E\). Thus \(x\) is an interior point of \(E\), and every \(x\in E\) is an interior point of \(E\), which shows that \(E\) is open.\\
+First, suppose \(E^c\) is closed. Choose \(x\in E\). Then \(x\notin E^c\). Since \(E^c\) is closed, which means it contains all its limit points, thus \(x\) is not a limit point of \(E^c\). Hence, there exists a neighborhood \(N\) of \(x\) such that \(N\cap E^c\) is empty, that is, \(N\subset E\). Thus \(x\) is an interior point of \(E\), and every \(x\in E\) is an interior point of \(E\), which shows that \(E\) is open.\\
 Next, suppose \(E\) is open. Let \(x\) be a limit point of \(E^c\). Then every neighborhood of \(x\) contains a point of \(E^c\), which means there is no neighborhood \(N\) of \(x\) such that \(N\subset E\), so that \(x\) is not an interior point of \(E\). Since \(E\) is open, this means that \(x\in E^c\). It follows that \(E^c\) is closed for \(E^c\) contains all of its limit points. 
 </p>
 
@@ -957,10 +960,11 @@ Put \(G=\bigcup_\alpha G_\alpha\). If \(x\in G\), then \(x\in G_\alpha\) for som
 <p>\(\textbf{Theorem. }\)
 For any collection \(\{F_\alpha\}\) of closed sets, \(\bigcap_\alpha F_\alpha\) is closed. 
 </p>
+
 <p>\(\textbf{Proof. }\)
 Since we know that 
 \[
-\Bigg(\bigcap_\alpha F_\alpha\Bigg)^c = \bigcup_\alpha (F_a^c),
+\left(\bigcap_\alpha F_\alpha\right)^c = \bigcup_\alpha (F_a^c),
 \]
 and \(F_\alpha^c\) is open for \(F_\alpha\) is closed. Based on the previous theorem, we know that \(\bigcup_\alpha (F_a^c)\) is open, which implies that \(\Bigg(\bigcap_\alpha F_\alpha\Bigg)^c\) is open. Therefore, \(\bigcap_\alpha F_\alpha\) is closed. 
 </p>
@@ -971,7 +975,7 @@ and \(F_\alpha^c\) is open for \(F_\alpha\) is closed. Based on the previous the
 For any finite collection \(G_1,\dots ,G_n\) of open sets, \(\bigcap_{i=1}^n G_i\) is open.
 </p>
 <p>\(\textbf{Proof. }\)
-Assume that \(G = \bigcap_{i=1}^n G_i\). For any \(x\in G\), \(x\in G_i\) for all \(i\in\{1, \dots, n\}\), and there exists an Neighborhood \(N_i\) of \(x\) with radius \(r_i\) such that \(N_i\subset G_i\) where \(i=1, \dots, n\) for \(G_i\) is open. Choose
+Assume that \(G = \bigcap_{i=1}^n G_i\). For any \(x\in G\), \(x\in G_i\) for all \(i\in\{1, \dots, n\}\), and there exists a Neighborhood \(N_i\) of \(x\) with radius \(r_i\) such that \(N_i\subset G_i\) where \(i=1, \dots, n\) for \(G_i\) is open. Choose
 \[
 r = \min(r_1, r_2, \dots, r_n). 
 \]
@@ -1017,7 +1021,8 @@ Based on previous theorem, we know that if \(E = \bar{E}\) then \(E\) is closed 
 If \(X\) is a metric space and \(E\subset X\), then \(\bar{E}\subset F\) for every closed set \(F\subset X\) such that \(E\subset F\).
 </p>
 <p>\(\textbf{Proof. }\)
-Since \(F\) is closed, \(F'\subset F\), which implies that every limit point of \(F\) is a point of \(F\) (based on the definition). Since \(E\subset F\), every limit point of \(E\) is a point of \(F\), which means that \(E'\subset F\). Therefore \(E'\cup E\subset F\), which is \(\bar{E}\subset F\). 
+Since \(F\) is closed, \(F'\subset F\), which implies that every limit point of \(F\) is a point of \(F\) (based on the definition). Since \(E\subset F\), every limit point of \(E\) is a point of \(F\), which means that \(E'\subset F\).
+  Therefore, \(E'\cup E\subset F\), which is \(\bar{E}\subset F\).
 </p>
  
 <br>
@@ -1118,7 +1123,7 @@ Since \(K\) is compact, there are finitely many points \(q_1, \cdots, q_n\) in \
 \[
 K\subset W_{q_1} \cup\dots\cup  W_{q_n} = W. 
 \]
-If \(V=V_{q_1}\cap\dots\cap V_{q_n}\), then \(V\) is a neighborhood  of \(p\) which does not intersect \(W\). Thus, for any \(p\in X\) and \(p\notin X\), there is a open neighborhood of \(p\) in \(K^c\). Thus, \(K^c\) is open and \(K\) is closed. 
+If \(V=V_{q_1}\cap\dots\cap V_{q_n}\), then \(V\) is a neighborhood  of \(p\) which does not intersect \(W\). Thus, for any \(p\in X\) and \(p\notin X\), there is an open neighborhood of \(p\) in \(K^c\). Thus, \(K^c\) is open and \(K\) is closed.
 theorem follows.
 </p>
  
@@ -1172,8 +1177,9 @@ If \(I_n=[a_n, b_n]\), let \(E\) be the set of all \(a_n\). Then \(E\) is nonemp
 \[
 a_n\leq a_{m+n}\leq b_{m+n}\leq b_m, 
 \]
-so that \(a_n\leq  b_m\) for each \(m\), which implies that \(b_m\) is a upper bound of \(E\). Thus, \(x\leq b_m\) for all \(m\). Since  \(a_m\leq x\), we know that \(a_m\leq x\leq b_m\) for all \(m\in R\). Hence, \(x\in I_m\) for all \(m\). Therefore, \(\bigcap_1^\infty I_n\) is not empty. 
+so that \(a_n\leq  b_m\) for each \(m\), which implies that \(b_m\) is an upper bound of \(E\). Thus, \(x\leq b_m\) for all \(m\). Since  \(a_m\leq x\), we know that \(a_m\leq x\leq b_m\) for all \(m\in R\). Hence, \(x\in I_m\) for all \(m\). Therefore, \(\bigcap_1^\infty I_n\) is not empty.
 </p>
+</section>
  
 <br>
 
@@ -1195,7 +1201,7 @@ Let \(I_n\) consist of all points \(x = (x_1, \dots, x_k)\)  such that
 a_{n,j}\leq x_j\leq b_{n,j} 
 \]
 \((1\leq j\leq k; n = 1, 2, 3, \dots)\). Fix \(j\), put \(I_{n,j}  = [a_{n,j}, b_{n,j}]\). The sequence \(\{I_{n,j}\}\) satisfies the 
-the previous theorem, and there are real numbers \(x_j^*\) such that 
+ previous theorem, and there are real numbers \(x_j^*\) such that
 \[
 a_{n,j}\leq x_j^*\leq b_{n,j}.
 \]
@@ -1219,7 +1225,7 @@ Put
 \delta = (\sum_1^k |a_i - b_i|^2)^\frac{1}{2}.
 \]
 Since \(x_i, y_i\in [a_i, b_i]\), \(|x-y|\leq \delta\).\\
-I will prove it with mathematical contradiction. Suppose that \(I\) is not compact, which implies that there exists an open cover \(\{G_\alpha\}\) of \(I\) which contains no finite subcover of \(I\). Put \(c_j = (a_j + b_j)/2\). The intervals \([a_1 ,  c_1]\) and \([c_1, b_1]\) then determine \(2^k\)  \(k\)-cells \(Q_i\) whose union is \(I\) (i.e, imagine a square in \(R^2\), then we divided it into \(4\) small squares whose union is the square, which means each side of the square we cut it in half. A cube in \(R^3\) we divide it into \(8\) small cubes, whose union is the cube, we means each interval of single dimension we cut it in half). 
+I will prove it with mathematical contradiction. Suppose that \(I\) is not compact, which implies that there exists an open cover \(\{G_\alpha\}\) of \(I\) which contains no finite subcover of \(I\). Put \(c_j = (a_j + b_j)/2\). The intervals \([a_1 ,  c_1]\) and \([c_1, b_1]\) then determine \(2^k\)  \(k\)-cells \(Q_i\) whose union is \(I\) (i.e, imagine a square in \(R^2\), then we divided it into \(4\) small squares whose union is the square, which means each side of the square we cut it in half. A cube in \(R^3\) we divide it into \(8\) small cubes, whose union is the cube, we mean each interval of single dimension we cut it in half).
 At least one of these sets \(Q_i\), call it \(I_1\), cannot be covered  by any finite subcollection of \(\{G_a\}\) (otherwise every \(Q_i\) can be finitely convered and \(I\) can be finitely covered). We  next subdivide \(I_1\) and continue the process. 
 We obtain a sequence \({I_n}\)  with  the following 
 properties: 
@@ -1232,6 +1238,7 @@ I y - x* I \lt  r  implies  that ye Ga. If n  is  so  large  that 2-nb  \lt  r  
 such  an  n, for  otherwise  2n b/r  for  all positive  integers  n, which  is 
 absurd since  R  is  archimedean),  then ( c)  implies  that In  c Ga,  which  contradicts (b).
 </p>
+  </section>
  
 
 
@@ -1293,14 +1300,14 @@ A subset \(E\) of the real line \(R^1\) is connected if and only if it has the f
 </p>
 <p>\(\textbf{Proof. }\)
 If there exist \(x\in E\), \(y\in E\), and some \(z\in(x, y)\) such that \(z\notin E\),  then \(E = A_z\cup  B_z\) where \(A_z =E\cap (-\infty, z)\), \(B_z  =E\cap (z,  \infty)\). Since \(x\in A_z\) and \(y\in B_z\),  \(A_z\) and \(B_z\) are nonempty. Since \(A_z\subset (-\infty,  z)\) and 
-\(B_z\subset (z, \infty)\), they are separated. Hence \(E\) is not connected. It shows that a subset \(E\) of the line \(R^1\), \(x, y\in E\), and \(x\lt z\lt y\), and \(z\notin E\), \(E\) is not connected. \\
+\(B_z\subset (z, \infty)\), they are separated. Hence, \(E\) is not connected. It shows that a subset \(E\) of the line \(R^1\), \(x, y\in E\), and \(x\lt z\lt y\), and \(z\notin E\), \(E\) is not connected. \\
 Conversely, suppose \(E\) is not connected. Then there are nonempty separated sets \(A\) and \(B\) such that \(A\cup B = E\). Pick \(x\in A\), \(y\in B\), and assume (without loss of generality) that \(x \lt  y\). Define 
 \[
 z = \sup (A\;\cap\;  [x, y]). 
 \]
 By the previous theorem, let \(E\) be a nonempty set of real numbers  which is bounded above. Let \(x  = \sup E\). Then \(x\in\bar{E}\). Hence \(x\in E\) if \(E\) is closed. Since \(A\cap [x, y]\subset A\), \(z\in  \bar{A}\). Since \(E\) is not connected, \(z\notin B\). In particular, \(x\leq z \lt  y\), and \(z\notin E\).\\
 If \(z\notin A\), it follows that \(x\lt z\lt y\), for \(z\) is the supremum of \(A\cap[x, y]\) and \(x\in A\). \(z\notin E\) for \(z\notin B\).\\
-If \(z\in A\), then \(z\notin \bar{B}\) for \(E\) is not connected. Hence there exists \(z_1\) such that \(z\lt z_1\lt y\) and \(z_1\notin B\). Then \(x\lt z_1\lt y\) and \(z_1\notin E\). 
+If \(z\in A\), then \(z\notin \bar{B}\) for \(E\) is not connected. Hence, there exists \(z_1\) such that \(z\lt z_1\lt y\) and \(z_1\notin B\). Then \(x\lt z_1\lt y\) and \(z_1\notin E\).
 </p>
 </section>
 
@@ -1699,5 +1706,6 @@ Then \(M\) is called a \(k\)-manifold without boundary in \(\mathbb{R}^n\), of c
       </li>
     </ul>
   </section>
+
   </body>
 </html>
