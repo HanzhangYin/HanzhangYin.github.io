@@ -530,7 +530,7 @@
 
     <br>
 
-    <section>
+    <section id = 'initial_value_problems'>
       <h2>Initial value problems for ODEs</h2>
       <p>
         $\textbf{Theorem (Picard's Theorem). }$ Suppose that the real-valued function \((x,y) \mapsto f(x,y)\) is continuous in the rectangular region \(D\) defined by \(x_0 \leq x \leq X_M\), \(y_0 - C \leq y \leq y_0 + C\); that \(|f(x,y_0)| \leq K\) when \(x_0 \leq x \leq X_M\); and that \(f\) satisfies the Lipschitz condition: there exists \(L > 0\) such that
@@ -549,6 +549,13 @@
         $\textit{Introdution to Numerical Analysis}$ page. 311.
       </p>
       <h3>One-step methods</h3>
+      <p>
+        $\textbf{Euler's method. }$ Given that \( y(x_0) = y_0 \), let us suppose that we have already calculated \( y_n \), up to some \( n \), \( 0 \leq n \leq N - 1 \), \( N \geq 1 \); we define
+        \[
+        y_{n+1} = y_n + h f(x_n, y_n).
+        \]
+        Thus, taking in succession \( n = 0, 1, \ldots, N - 1 \), one step at a time, the approximate values \( y_n \) at the mesh points \( x_n \) can be easily obtained. This numerical method is known as Euler's method.
+      </p>
     </section>
 
     <section id = 'stability'>
