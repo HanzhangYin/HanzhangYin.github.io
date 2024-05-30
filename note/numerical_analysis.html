@@ -172,9 +172,9 @@
         \[ e_{n+1} = |x_{n+1} - r| \approx \left| \frac{f''(r)}{2f'(r)} \right||x_n - r|^2 = \left| \frac{f''(r)}{2f'(r)}\right| e_n^2 = Ce_n^2 \]
       </p>
         <!-- Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
-        \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]          -->
-        <strong>Thus we can see that Newton's Method is quadratically convergent.</strong>
-        <strong>However, the disadvantage of Newton's Method is that if the initial value is closed enough to the root.</strong>
+        \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \] -->
+      <p><b>Thus, we can see that Newton's Method is quadratically convergent.</b></p>
+      <p><b>However, the disadvantage of Newton's Method is that if the initial value is closed enough to the root.</b></p>
     </section>
 
     <br>
@@ -557,27 +557,27 @@
 
         then the initial-value problem above has a solution \( x(t) \) for \( |t - t_0| \leq \min(\alpha, \beta / M) \), where \( M \) is the maximum of \( |f(t, x)| \) in the rectangle \( R \).
       <p>
-      <b><i>""Numerical Analysis: Mathematics of Scientific Computing"" page. 525.</i></b>
+      <b><i>"Numerical Analysis: Mathematics of Scientific Computing" page. 525.</i></b>
       </p>
       <p>
         $\textbf{Second Existence Theorem, Initial-Value Problem.}$
         If \( f \) is continuous in the strip \( a \leq t \leq b, -\infty < x < \infty \) and satisfies there an inequality
         \[ |f(t, x_1) - f(t, x_2)| \leq L |x_1 - x_2| \tag{5} \]
-        then the initial-value problem $\textbf{(1)}$ has a unique solution in the interval \([a, b]\).
+        then the initial-value problem <b>(1)</b> has a unique solution in the interval \([a, b]\).
       </p>
       <p>
         $\textit{"Numerical Analysis: Mathematics of Scientific Computing"}$ page. 526.
       </p>
       <h3>Lipschitz Condition</h3>
       <p>
-        <strong>Definition</strong>: A function \( f : \mathbb{R}^n \to \mathbb{R} \) satisfies the Lipschitz condition on a domain \( D \subset \mathbb{R}^n \) if there exists a constant \( L \geq 0 \) such that for all \( x, y \in D \):
+        <b>Definition</b>: A function \( f : \mathbb{R}^n \to \mathbb{R} \) satisfies the Lipschitz condition on a domain \( D \subset \mathbb{R}^n \) if there exists a constant \( L \geq 0 \) such that for all \( x, y \in D \):
 
         \[ \| f(x) - f(y) \| \leq L \| x - y \| \]
 
         where \( \| \cdot \| \) denotes a norm (commonly the Euclidean norm). And \( L \) is called the Lipschitz constant.
       </p>
       <p>
-        <strong>Note.</strong> Hence, inequality <strong>(5)</strong> is the Lipschitz condition.
+        <b>Note.</b> Hence, inequality <b>(5)</b> is the Lipschitz condition.
       </p>
       <h3>Uniqueness</h3>
       <p>
@@ -600,7 +600,7 @@
         \]
         </p>
         <p>
-          <i>Introduction to Numerical Analysis} page. 311.</i>
+          <b><i>"Introduction to Numerical Analysis", page. 311.</i></b>
       </p>
       <h3>One-step methods</h3>
       <p>
@@ -611,17 +611,38 @@
         Thus, taking in succession \( n = 0, 1, \ldots, N - 1 \), one step at a time, the approximate values \( y_n \) at the mesh points \( x_n \) can be easily obtained. This numerical method is known as Euler's method.
       </p>
       <p>
-        $\textit{Introduction to Numerical Analysis}$ page. 317.
+        <b><i>"Introduction to Numerical Analysis", page. 317.</i></b>
       </p>
+      <h2>Adams-Bashforth Formula</h2>
+      <p>
+        Suppose the resulting formula is of the following type:
+        \[ x_{n+1} = x_n + a\cdot f_n + b\cdot f_{n-1} + c\cdot f_{n-2} + \cdots \]
+        where \( f_i \) denotes \( f(t_i, x_i) \). An equation of this type is called an <b>Adams-Bashforth formula</b>.
+      </p>
+      <p>
+        <b>Note.</b> The Adams-Bashforth formula is an explicit method since it does not include $f_{n+1}$.
+      </p>
+      <h3>Adams-Bashforth Formula of Order $4$</h3>
+      <h2>Adams-Moulton Formula</h2>
+      <p>
+        Suppose the resulting formula is of the following type:
+        \[ x_{n+1} = x_n + a\cdot f_{n+1} + b\cdot f_{n} + c\cdot f_{n} + \cdots \]
+        where \( f_i \) denotes \( f(t_i, x_i) \). An equation of this type is called an <b>Adams-Moulton formula</b>.
+      </p>
+      <p><b>Note.</b> The Adams-Moulton formula is an implicit method since it includes \( f_{n+1} \).</p>
     </section>
 
     <section id = 'stability'>
+      <h2>Root Condition</h2>
+      <p>
+        <b>Definition.</b> The roots of the first characteristic polynomial lie in the closed unit disc and those on the unit circle are simple is often called the Root Condition.
+      </p>
       <h2>Stability</h2>
       <p>
-        \(\textbf{Definition. }\) The roots of \(\rho(z)\) of modulus one are called essential roots. The root \( z = 1 \) is called the principal root. The roots of \(\rho(z)\) of modulus \( \lt 1 \) are called nonessential roots.
+        <b>Definition.</b> The roots of \(\rho(z)\) of modulus one are called essential roots. The root \( z = 1 \) is called the principal root. The roots of \(\rho(z)\) of modulus \( \lt 1 \) are called nonessential roots.
       </p>
       <p>
-        \(\textbf{Definition. }\) A linear multistep method is strongly stable if all roots of \(\rho(z)\) are \(\leq 1\) in magnitude and only one root has magnitude one. If more than one root has magnitude one, the method is called weakly or conditionally stable. Note, we still require only simple roots of magnitude one. Also, note these definitions refer to the case \( h = 0 \).
+        <b>Definition.</b> A linear multistep method is strongly stable if all roots of \(\rho(z)\) are \(\leq 1\) in magnitude and only one root has magnitude one. If more than one root has magnitude one, the method is called weakly or conditionally stable. Note, we still require only simple roots of magnitude one. Also, note these definitions refer to the case \( h = 0 \).
       </p>
     </section>
 
