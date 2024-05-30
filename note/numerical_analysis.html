@@ -146,7 +146,7 @@
 
     <br>
 
-    <section id = 'error_analysis_netwon'>
+    <section id = 'error_analysis_newton'>
       <h2>Error Analysis for Newton's Method</h2>
       <p>
         Let \( r \) be a solution of \( f(x) = 0 \) (i.e. \( f(r) = 0 \)). 
@@ -625,11 +625,42 @@
       <h3>Adams-Bashforth Formula of Order $4$</h3>
       <h2>Adams-Moulton Formula</h2>
       <p>
-        Suppose the resulting formula is of the following type:
+        <b>Definition.</b> Suppose the resulting formula is of the following type:
         \[ x_{n+1} = x_n + a\cdot f_{n+1} + b\cdot f_{n} + c\cdot f_{n} + \cdots \]
         where \( f_i \) denotes \( f(t_i, x_i) \). An equation of this type is called an <b>Adams-Moulton formula</b>.
       </p>
       <p><b>Note.</b> The Adams-Moulton formula is an implicit method since it includes \( f_{n+1} \).</p>
+      <h3>Adams-Moulton Formula of Order $5$</h3>
+      <p>
+        \[ x_{n+1} = x_n + \frac{h}{720} \left[ 251 f_{n+1} + 646 f_n - 264 f_{n-1} + 106 f_{n-2} - 19 f_{n-3} \right] \]
+      </p>
+      <p>
+        <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page. 551.</i></b>
+      </p>
+      <h2>Analysis of Linear Multistep Methods</h2>
+      <h3>$k$-step</h3>
+      <p>
+        The format of any such method is
+        \[ a_k x_n + a_{k-1} x_{n-1} + \cdots + a_0 x_{n-k} = h \left[ b_k f_n + b_{k-1} f_{n-1} + \cdots + b_0 f_{n-k} \right] \tag{9} \]
+        This is called a \( k \)-step method. The coefficients \( a_i \) and \( b_i \) are given. As before, \( x_i \) denotes an approximation to the solution at \( t_i \), with \( t_i = t_0 + ih \).
+        The letter \( f_i \) denotes \( f(t_i, x_i) \).
+        Formula (9) is used to compute \( x_n \), assuming that \( x_0, x_1, \ldots, x_{n-1} \) are already known. Thus, we may assume that \( a_k \neq 0 \). The coefficient \( b_k \) can be 0. If \( b_k = 0 \), the method is said to be explicit.
+        In this case, \( x_n \) can be computed directly from Equation (9) in an elementary fashion.
+        If \( b_k \neq 0 \), then on the right the term \( f_n \) involves the unknown \( x_n \). Hence,the method is then said to be implicit.
+        </p>
+      <h3>Order</h3>
+      <p>
+        The accuracy of a numerical solution of a differential equation is largely determined by the order of the algorithm used.
+      </p>
+      <p>
+        <b>Definition.</b>The order indicates how many terms in a Taylor-series solution are being simulated by the method.
+      </p>
+      <p>
+        For example, the Adams-Bashforth method in Equation (4) is said to be of order 5 because it produces approximately the same accuracy as the Taylor-series method with terms \( h, h^2, h^3, h^4, \) and \( h^5 \). The error can then be expected to be \( \mathcal{O}(h^6) \) in each step of a solution using Equation (4). The intuitive idea of order will be made more precise in the following paragraphs.
+      </p>
+      <p>
+        <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page. 552.</i></b>
+      </p>
     </section>
 
     <section id = 'stability'>
@@ -639,7 +670,7 @@
       </p>
       <h2>Stability</h2>
       <p>
-        <b>Definition.</b> The roots of \(\rho(z)\) of modulus one are called essential roots. The root \( z = 1 \) is called the principal root. The roots of \(\rho(z)\) of modulus \( \lt 1 \) are called nonessential roots.
+        <b>Definition.</b> The roots of $\rho(z)$ of modulus one are called essential roots. The root \( z = 1 \) is called the principal root. The roots of \(\rho(z)\) of modulus \( \lt 1 \) are called nonessential roots.
       </p>
       <p>
         <b>Definition.</b> A linear multistep method is strongly stable if all roots of \(\rho(z)\) are \(\leq 1\) in magnitude and only one root has magnitude one. If more than one root has magnitude one, the method is called weakly or conditionally stable. Note, we still require only simple roots of magnitude one. Also, note these definitions refer to the case \( h = 0 \).
@@ -666,7 +697,7 @@
       </p>
         <ul>
           <li>
-            \(\textbf{Gram-Schmidt Process.}\) The Gram-Schmidt process is a method for orthonormalizing a set of vectors.
+            <b>Gram-Schmidt Process.</b> The Gram-Schmidt process is a method for orthonormalizing a set of vectors.
             Given a set of linearly independent vectors \( \{v_1, v_2, \ldots, v_n\} \), the Gram-Schmidt process produces an orthonormal set of vectors \( \{q_1, q_2, \ldots, q_n\} \) such that \( \text{span}\{v_1, v_2, \ldots, v_n\} = \text{span}\{q_1, q_2, \ldots, q_n\} \).
           </li>
           <li>
@@ -698,7 +729,7 @@
         If \(X \in \mathbb{C}^{n \times n}\) is invertible, its condition number in the \(p\)-norm is denoted by \(\kappa_p(X)\) and defined as: \[ \kappa_p(X) = |X|_p |X^{-1}|_p \]
       </p>
       <p>
-        \(\textbf{Theorem. }\) Let A be an \( n \times n \) matrix with a complete set of linearly independent eigenvectors and suppose the \( V^{-1}AV = D \) where \( V \) is nonsingular and \( D \) is diagonal. Let \( \delta A \) be a perturbation of \( A \) and let \( \mu \) be an eigenvalue of \( A + \delta A \). Then \( A \) has an eigenvalue \( \lambda \) such that
+        \(\textbf{Theorem. }\) Let A be an \( n \times n \) matrix with a complete set of linearly independent eigenvectors and suppose the \( V^{-1}AV = D \) where \( V \) is non-singular and \( D \) is diagonal. Let \( \delta A \) be a perturbation of \( A \) and let \( \mu \) be an eigenvalue of \( A + \delta A \). Then \( A \) has an eigenvalue \( \lambda \) such that
 
         \[ |\mu - \lambda| \leq \kappa_p(V) \| \delta A \|_p, \quad 1 \leq p \leq \infty \]
         
@@ -1136,6 +1167,9 @@
       <ul>
         <li>
           D. Kincard & W. Cheney "Numerical Analysis: Mathematics of Scientific Computing", AMS, Third Edition, 2009.
+        </li>
+        <li>
+          E. S&uumlli & D. F. Mayers "An introduction to numerical analysis", Cambridge University Press, 2003
         </li>
       </ul>
     </section>
