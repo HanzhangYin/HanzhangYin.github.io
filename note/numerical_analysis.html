@@ -170,11 +170,11 @@
         \]
         If \( x_n \) is close to \( r \), then \( c \), which must be between \( x_n \) and \( r \), is also close to \( r \) and
         \[ e_{n+1} = |x_{n+1} - r| \approx \left| \frac{f''(r)}{2f'(r)} \right||x_n - r|^2 = \left| \frac{f''(r)}{2f'(r)}\right| e_n^2 = Ce_n^2 \]
+      </p>
         <!-- Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
         \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]          -->
-        $\textbf{Thus we can see that Newton's Method is quadratically convergent. }$
-        $\textbf{However, the disadvantage of Newton's Method is that if the initial value is closed enough to the root.}$
-      </p>
+        <strong>Thus we can see that Newton's Method is quadratically convergent.</strong>
+        <strong>However, the disadvantage of Newton's Method is that if the initial value is closed enough to the root.</strong>
     </section>
 
     <br>
@@ -182,7 +182,7 @@
     <section id = 'theorems_on_newton_method'>
       <h2>Theorems on Newton's Method</h2>
       <p>
-        $\textbf{Theorem. }$
+        <strong>Theorem.</strong>
         Let \(f''\) be continuous and let \(r\) be a simple zero of \(f\). Then there is a neighborhood of \(r\) and a constant \(C\) such that if Newton's method is started in that neighborhood, the successive points become steadily closer to \(r\) and satisfy
         \[
         |x_{n+1} - r| \leq C (x_n - r)^2 \quad (n \geq 0)
@@ -393,7 +393,7 @@
         \[
         \int_a^b f(x) w(x) \, dx \approx \sum_{i=0}^n A_i f(x_i),
         \]
-        where \( w \) is a fixed positive $\textit{weight function}$. 
+        where \( w \) is a fixed positive <b>weight function</b>.
       </p>
     </section>
 
@@ -422,14 +422,18 @@
         \[
         \int_a^b f(x) \, dx \approx h \left[ \frac{1}{2} f(x_0) + f(x_1) + \cdots + f(x_{m-1}) + \frac{1}{2} f(x_m) \right].
         \]
-      $\textit{Introduction to Numerical Analysis}$ page. 209.
       </p>
       <p>
-        \textbf{Definition 7.2 (Composite Simpson rule)}
+        <i>Introduction to Numerical Analysis page. 209.</i>
+      </p>
+      <p>
+        <strong>Definition (Composite Simpson rule).</strong>
         \[
         \int_a^b f(x) \, dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{2m-2}) + 4f(x_{2m-1}) + f(x_{2m}) \right].
         \]
-        $\textit{Introduction to Numerical Analysis}$ page. 210.
+      </p>
+        <p>
+          <i>Introduction to Numerical Analysis page. 210.</i>
       </p>
       <p>
         \textbf{Definition (Composite Midpoint Rule).} The composite midpoint rule is the composite Gauss formula with \(w(x) \equiv 1\) and \(n = 0\) defined by
@@ -445,8 +449,9 @@
           E_{0,m} = \frac{(b-a)^3}{24m^2} f''(\eta),
           \]
           where \(\eta \in (a, b)\), provided that the function \(f\) has a continuous second derivative on \([a, b]\).
-
-          $\textit{Introduction to Numerical Analysis}$ page. 286.
+        </p>
+        <p>
+          <b><i>"Introduction to Numerical Analysis", page. 286.</i></b>
       </p>
     </section>
 
@@ -455,14 +460,14 @@
     <section>
       <h2>\(\theta\)-Method</h2>
       <p>
-      \(\textbf{Definition. }\) (Theta methods) We consider methods of the form
+      <b>Definition(Theta methods).</b> We consider methods of the form
       \[ y_{n+1} = y_n + h [ \theta f(t_n, y_n) + (1 - \theta) f(t_{n+1}, y_{n+1}) ], \quad n = 0, 1, \ldots, \]
       where \( \theta \in [0, 1] \) is a parameter:
       - If \( \theta = 1 \), we recover Euler's method.
       - If \( \theta \in (0, 1) \), then the theta method (3.3) is implicit: Each time step requires the solution of \( N \) (in general, nonlinear) algebraic equations for the unknown vector \( y_{n+1} \).
       - The choices \( \theta = 0 \) and \( \theta = \frac{1}{2} \) are known as
 
-      $\textit{Backward Euler}$:
+        <i>Backward Euler:</i>
       \[ y_{n+1} = y_n + h f(t_{n+1}, y_{n+1}), \]
 
       $\textit{Trapezoidal rule}$:
@@ -510,7 +515,9 @@
       <p>
         \(\textbf{Total Error.}\) The total error is the sum of the global truncation error and the global roundoff error.
       </p>
-      D. Kincard & W. Cheney page.533.
+      <p>
+      $\textit{"Numerical Analysis: Mathematics of Scientific Computing"}$ page.533.
+      </p>
     </section>
 
     <br>
@@ -539,7 +546,7 @@
         Here \( x \) is an unknown function of \( t \) that we hope to construct from the information given in Equations (1), where \( x' = \frac{dx(t)}{dt} \). The second of the two equations in (1) specifies one particular value of the function \( x(t) \). The first equation gives the slope.
       </p>
       <p>
-        $\textit{Numerical Analysis: Mathematics of Scientific Computing}$ page. 524.
+        <b><i>"Numerical Analysis: Mathematics of Scientific Computing" page. 524.</i></b>
       </p>
       <h3>Existence</h3>
       <p>
@@ -550,7 +557,7 @@
 
         then the initial-value problem above has a solution \( x(t) \) for \( |t - t_0| \leq \min(\alpha, \beta / M) \), where \( M \) is the maximum of \( |f(t, x)| \) in the rectangle \( R \).
       <p>
-        $\textit{Numerical Analysis: Mathematics of Scientific Computing}$ page. 525.
+      <b><i>""Numerical Analysis: Mathematics of Scientific Computing"" page. 525.</i></b>
       </p>
       <p>
         $\textbf{Second Existence Theorem, Initial-Value Problem.}$
@@ -559,11 +566,22 @@
         then the initial-value problem $\textbf{(1)}$ has a unique solution in the interval \([a, b]\).
       </p>
       <p>
-        $\textit{Numerical Analysis: Mathematics of Scientific Computing}$ page. 526.
+        $\textit{"Numerical Analysis: Mathematics of Scientific Computing"}$ page. 526.
+      </p>
+      <h3>Lipschitz Condition</h3>
+      <p>
+        <strong>Definition</strong>: A function \( f : \mathbb{R}^n \to \mathbb{R} \) satisfies the Lipschitz condition on a domain \( D \subset \mathbb{R}^n \) if there exists a constant \( L \geq 0 \) such that for all \( x, y \in D \):
+
+        \[ \| f(x) - f(y) \| \leq L \| x - y \| \]
+
+        where \( \| \cdot \| \) denotes a norm (commonly the Euclidean norm). And \( L \) is called the Lipschitz constant.
+      </p>
+      <p>
+        <strong>Note.</strong> Hence, inequality <strong>(5)</strong> is the Lipschitz condition.
       </p>
       <h3>Uniqueness</h3>
       <p>
-        $\textbf{Uniqueness Theorem, Initial-Value Problem.}$
+        <strong>Uniqueness Theorem, Initial-Value Problem.</strong>
         If \( f \) and \(\partial f / \partial x \) are continuous in the rectangle \( R \) defined by $\textbf{(4)}$, then the initial-value problem (1) has a unique solution in the interval \( |t - t_0| < \min(\alpha, \beta / M) \).
       </p>
       <p>
@@ -580,8 +598,9 @@
         \[
         |y(x) - y_0| \leq C, \quad x_0 \leq x \leq X_M.
         \]
-
-        $\textit{Introduction to Numerical Analysis}$ page. 311.
+        </p>
+        <p>
+          <i>Introduction to Numerical Analysis} page. 311.</i>
       </p>
       <h3>One-step methods</h3>
       <p>
