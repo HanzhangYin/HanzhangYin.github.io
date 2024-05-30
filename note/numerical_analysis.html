@@ -37,12 +37,8 @@
     </label>
     <nav class="navbar">
       <a href="#binary">Binary</a>
-      <a href="#Unit_Roundoff">Unit Round-off</a>
-      <a href="#Roundoff_Error">Round-off Error</a>
-      <a href="#Number_System_with_base_Beta">Number System with base $\beta$</a>
-      <a href="#FLoating_point_error_analysis">Floating point error analysis</a>
-      <a href="#Error_Analysis_for_Newton's_Method">Error Analysis for Newton's Method</a>
-      <a href="#Error_Analysis_for_Gaussian_Quadrature">Error Analysis for Gaussian Quadrature</a>
+      <a href="#unit_roundoff">Unit Round-off</a>
+      <a href="#roundoff_error">Round-off Error</a>
       <a href="#References">References</a>
     </nav>
     <script src="click.js"></script>
@@ -50,7 +46,7 @@
     <script src = "mathjax_config.js"></script><!--It is a link for Mathjax configuration-->
     <h1>Numerical Analysis</h1>
 
-    <section>
+    <section id = 'binary'>
       <h2>Binary</h2>
       <p>
         \[ x = \pm (0. a_1\cdots a_n\cdots)_2\times 2^m \] where \(a_1 = 1\)
@@ -122,13 +118,13 @@
       Given a function \( f(x) \) and its derivative \( f'(x) \), Newton's method starts with an initial guess \( x_0 \) and iteratively refines this guess using the following formula:
       \[ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}, \]
       where:
+      </p>
       <ul>
       <li> \( x_n \) is the current approximation. </li>
       <li> \( x_{n+1} \) is the next approximation. </li>
       <li> \( f(x_n) \) is the value of the function at \( x_n \). </li>
       <li> \( f'(x_n) \) is the value of the derivative of the function at \( x_n \). </li>
       </ul>
-      </p>
       <p>
       $\textbf{convergence Criteria.}$ The method typically converges if the initial guess \( x_0 \) is sufficiently close to the actual root, and \( f(x) \) is continuously differentiable in the neighborhood of the root.
       </p>
@@ -491,6 +487,7 @@
       <h2>Error</h2>
       <p>
       In numerically solving a differential equation, several types of errors arise. These are conveniently classified as follows:
+      </p>
     <ul>
     <li>Local truncation error</li>
     <li>Local roundoff error</li>
@@ -498,7 +495,6 @@
     <li>Global roundoff error</li>
     <li>Total error</li>
     </ul>
-      </p>
       <p>
         \(\textbf{Local Truncation Error.}\) The local truncation error is the error made in a single step of a numerical method.
       </p>
@@ -614,6 +610,7 @@
       </p>
       <p>
         There are several ways to compute the QR factorization of a matrix.
+      </p>
         <ul>
           <li>
             \(\textbf{Gram-Schmidt Process.}\) The Gram-Schmidt process is a method for orthonormalizing a set of vectors.
@@ -639,7 +636,6 @@
             where \( c = \frac{x_1}{\|x\|_2} \) and \( s = \frac{x_2}{\|x\|_2} \).
           </li>
       </ul>
-      </p>
     </section>
 
     <section id = 'bauer-fike_Theorem'>
@@ -657,6 +653,7 @@
       </p>
       <p>
         The Bauer-Fike Theorem:
+      </p>
       <ul>
           <li>Suppose \(\mu\) is an eigenvalue of \(A + \delta A\).</li>
           <li>Then there exists \(\lambda \in \Lambda(A)\) (i.e., an eigenvalue of \(A\)) such that:
@@ -666,8 +663,6 @@
           </li>
           <li>Here, \(\|\cdot\|_p\) denotes the \(p\)-norm of a matrix.</li>
       </ul>
-      </p>
-      <p>
         <p>The <strong>Bauer–Fike theorem</strong> is a powerful result, and its proof involves several key concepts from linear algebra and perturbation theory. Let's outline the main steps of the proof:</p>
 
 <ul>
@@ -736,7 +731,6 @@
 </ul>
 
 <p>In summary, the Bauer–Fike theorem provides bounds on how eigenvalues change under small perturbations. It highlights the importance of eigenvector conditioning and helps us understand the stability of eigenvalues.</p>
-      </p>
     </section>
 
     <section>
@@ -746,6 +740,7 @@
       \[
         x_{n+1} = \frac{1}{2} x_n + \frac{5}{2x_n}, \quad n = 0, 1, \ldots
       \]
+      </p>
       <ul>
         <li>
           1. Show that if \(x_0 > 0\), then \(x_n \geq \sqrt{5}\) for \(n = 1,2,\ldots\).
@@ -757,7 +752,6 @@
           3. Show that the order of convergence of the iteration is quadratic.
         </li>
       </ul>
-      </p>
       <h2>Solutions</h2>
       <p>
       \(\textbf{Proof of 1.}\) Let \(f(x) = \frac{1}{2}x + \frac{5}{2x}\). 
@@ -791,6 +785,7 @@
             f(x) & 51 & 3 & 201 & 1 \\
           \end{array} 
         \]
+      </p>
         <ul>
           <li>
             Prove that the solution to the interpolation problem exists and is unique.
@@ -802,7 +797,6 @@
             Derive the error for the interpolation polynomial provided that function \( f = f(x) \) is sufficiently smooth.
           </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Proof. }\)Firstly, we can observe that for all \(x\), they are distinct.
         Therefore, for arbitrary value of \(f(x)\), we can find a unique polynomial of degree less than or equal to \(3\) interpolating the table. \( \blacksquare \)
@@ -829,15 +823,16 @@
 
     <section>
       <p>
-\(\textbf{Problem. }\)Let \( A \in \mathbb{C}^{m \times m} \), and \( A = U\Sigma V^* \) being a singular value decomposition of \( A \), where \( U, V \in \mathbb{C}^{m \times m} \) are unitary and \( \Sigma \) is non-negative diagonal. Define
-\[
-W = \frac{1}{\sqrt{2}}
-\begin{bmatrix}
-U & U \\
-V & -V
-\end{bmatrix}
-\in \mathbb{C}^{2m \times 2m}.
-\]
+        \(\textbf{Problem. }\)Let \( A \in \mathbb{C}^{m \times m} \), and \( A = U\Sigma V^* \) being a singular value decomposition of \( A \), where \( U, V \in \mathbb{C}^{m \times m} \) are unitary and \( \Sigma \) is non-negative diagonal. Define
+        \[
+        W = \frac{1}{\sqrt{2}}
+        \begin{bmatrix}
+        U & U \\
+        V & -V
+        \end{bmatrix}
+        \in \mathbb{C}^{2m \times 2m}.
+        \]
+      </p>
 <ul>
   <li>
   Prove \( W \) is unitary.
@@ -866,7 +861,6 @@ V & -V
   Prove \( \|B\|_2 = \|A\|_2 \).
   </li>
 </ul>
-</p>
 <p>
   \(\textbf{Proof(a). }\) Given \(W\), we have with Unitary Matrices \(U, V\), we can get 
     \[
@@ -1051,6 +1045,7 @@ V & -V
         \(\textbf{Problem 3. }\)Consider the \(\theta\)-method
         \[ y_{n+1} = y_n + h \left( \theta f_{n+1} + (1 - \theta) f_n \right), \quad \theta \in [0, 1], \]
         where \( f_n = f(t_n, y_n) \).
+      </p>
       <ul>
         <li>
           (a). For which value(s) of \(\theta\) is the \(\theta\)-method explicit? Implicit?
@@ -1059,7 +1054,6 @@ V & -V
           (b). Find an expression for the local truncation error in terms of \(\theta\), \(h\), and derivatives of the exact solution \(y(t)\) to the initial value problem. What are the local truncation errors for \(\theta = 0\), \(\frac{1}{2}\), \(1\)?
         </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Solution (a).}\)To make a method explicit, we only need values of \(y_n\) and \(f_n\).
         Hence, when \(\theta = 0\), we have 
