@@ -533,7 +533,7 @@
         \begin{cases}
         x' = f(t, x) \\
         x(t_0) = x_0
-        \quad \text{(1)}
+        \quad \tag{1}
         \end{cases}
         \]
         Here \( x \) is an unknown function of \( t \) that we hope to construct from the information given in Equations (1), where \( x' = \frac{dx(t)}{dt} \). The second of the two equations in (1) specifies one particular value of the function \( x(t) \). The first equation gives the slope.
@@ -545,12 +545,21 @@
       <p>
         $\textbf{First Existence Theorem, Initial-Value Problem}$
         If \( f \) is continuous in a rectangle \( R \) centered at \( (t_0, x_0) \), say
-        \[
-        R = \{ (t, x) : |t - t_0| \leq \alpha, \quad |x - x_0| \leq \beta \}\qquad(4)
-        \]
+
+        \[ R = \{ (t, x) : |t - t_0| \leq \alpha, \quad |x - x_0| \leq \beta \}\tag{4} \]
+
         then the initial-value problem above has a solution \( x(t) \) for \( |t - t_0| \leq \min(\alpha, \beta / M) \), where \( M \) is the maximum of \( |f(t, x)| \) in the rectangle \( R \).
       <p>
         $\textit{Numerical Analysis: Mathematics of Scientific Computing}$ page. 525.
+      </p>
+      <p>
+        $\textbf{Second Existence Theorem, Initial-Value Problem.}$
+        If \( f \) is continuous in the strip \( a \leq t \leq b, -\infty < x < \infty \) and satisfies there an inequality
+        \[ |f(t, x_1) - f(t, x_2)| \leq L |x_1 - x_2| \tag{5} \]
+        then the initial-value problem $\textbf{(1)}$ has a unique solution in the interval \([a, b]\).
+      </p>
+      <p>
+        $\textit{Numerical Analysis: Mathematics of Scientific Computing}$ page. 526.
       </p>
       <h3>Uniqueness</h3>
       <p>
@@ -572,7 +581,7 @@
         |y(x) - y_0| \leq C, \quad x_0 \leq x \leq X_M.
         \]
 
-        $\textit{Introdution to Numerical Analysis}$ page. 311.
+        $\textit{Introduction to Numerical Analysis}$ page. 311.
       </p>
       <h3>One-step methods</h3>
       <p>
