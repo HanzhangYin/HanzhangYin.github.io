@@ -12,8 +12,8 @@
 </script>
 <script>
   function copyCode2() {
-    var code = document.getElementById("code-block2");
-    var textarea = document.createElement("textarea");
+    let code = document.getElementById("code-block2");
+    let textarea = document.createElement("textarea");
     textarea.value = code.textContent;
     document.body.appendChild(textarea);
     textarea.select();
@@ -23,8 +23,8 @@
 </script>
 <script>
   function copyCode3() {
-    var code = document.getElementById("code-block3");
-    var textarea = document.createElement("textarea");
+    let code = document.getElementById("code-block3");
+    let textarea = document.createElement("textarea");
     textarea.value = code.textContent;
     document.body.appendChild(textarea);
     textarea.select();
@@ -34,8 +34,8 @@
 </script>
 <script>
   function copyCode4() {
-    var code = document.getElementById("code-block4");
-    var textarea = document.createElement("textarea");
+    let code = document.getElementById("code-block4");
+    let textarea = document.createElement("textarea");
     textarea.value = code.textContent;
     document.body.appendChild(textarea);
     textarea.select();
@@ -45,8 +45,8 @@
 </script>
 <script>
   function copyCode5() {
-    var code = document.getElementById("code-block5");
-    var textarea = document.createElement("textarea");
+    let code = document.getElementById("code-block5");
+    let textarea = document.createElement("textarea");
     textarea.value = code.textContent;
     document.body.appendChild(textarea);
     textarea.select();
@@ -56,8 +56,8 @@
 </script>
 <script>
   function copyCode6() {
-    var code = document.getElementById("code-block6");
-    var textarea = document.createElement("textarea");
+    let code = document.getElementById("code-block6");
+    let textarea = document.createElement("textarea");
     textarea.value = code.textContent;
     document.body.appendChild(textarea);
     textarea.select();
@@ -77,12 +77,8 @@
     <meta charset="utf-8" />
     <meta name="generator" content="pandoc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <title>Add Exsisting Direcory to GitHub</title>
+    <title>Add Existing Directory to GitHub</title>
     <style>
-        .second-font {
-          font-family: 'Noto Serif JP', serif;
-          }
-    
         html {
           color: #1a1a1a;
           background-color: #ededed;
@@ -90,10 +86,7 @@
         body {
           margin: 0 auto;
           max-width: 36em;
-          padding-left: 50px;
-          padding-right: 50px;
-          padding-top: 50px;
-          padding-bottom: 50px;
+          padding: 50px;
           hyphens: auto;
           overflow-wrap: break-word;
           text-rendering: optimizeLegibility;
@@ -178,10 +171,6 @@
           overflow: visible;
           overflow-wrap: normal;
         }
-        .sourceCode {
-         background-color: transparent;
-         overflow: visible;
-        }
         hr {
           background-color: #1a1a1a;
           border: none;
@@ -228,17 +217,11 @@
           text-decoration: none;
         }
         code{white-space: pre-wrap;}
-        span.smallcaps{font-variant: small-caps;}
-        div.columns{display: flex; gap: min(4vw, 1.5em);}
-        div.column{flex: auto; overflow-x: auto;}
-        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-        ul.task-list{list-style: none;}
         ul.task-list li input[type="checkbox"] {
           width: 0.8em;
           margin: 0 0.8em 0.2em -1.6em;
           vertical-align: middle;
         }
-        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
       </style>
       <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -263,8 +246,7 @@ existing directories to GitHub using terminal. </p>
 </ul>
 <h2>Steps</h2>
 <h3 id="naveigate-to-the-directory-you-want-to-add-to-GitHub-using-the-terminal">1. Navigate to the directory you want to add to GitHub using the
-  terminal.</h3></li>
-</ul>
+  terminal.</h3>
 <pre><code>cd /path/to/directory</code></pre>
 <h3 id="initialize-git-in-the-directory">2. Initialize Git in the
 directory</h3>
@@ -303,5 +285,9 @@ the name such as “master”.</p>
 <button onclick="copyCode6()">Copy</button>
 <p>Note: If your branch name is “master” or something else, change
 “main” to your branch name.</p>
+<h3>Un-track Files on Git</h3>
+<p>If you want to un-track files on Git, you can use the following
+command:</p>
+<pre><code>git rm --cached filename</code></pre>
 </body>
 </html>
