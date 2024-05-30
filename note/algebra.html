@@ -299,6 +299,7 @@
       <h2>Sylow's Theorem</h2>
       <p>
       \(\textbf{Sylow's Theorem. }\) Let \( G \) be a group of order \( p^{\alpha} m \), where \( p \) is a prime not dividing \( m \).
+      </p>
       <ul>
         <li>
         \(\textbf{First Sylow's Theorem. }\) Sylow \( p \)-subgroups of \( G \) exist, i.e., \( \text{Syl}_p(G) \neq \emptyset \).
@@ -311,7 +312,6 @@
         \[ n_p \equiv 1 \mod p .\]
         </li>
       Further, \( n_p \) is the index in \( G \) of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).
-      </p>
       </ul>
     </section>
 
@@ -340,6 +340,7 @@
         \{e\} = G_n \subseteq G_{n-1} \subseteq \cdots \subseteq G_1 \subseteq G_0 = G
         \]
         such that for \( i = 1, \ldots, n \) we have:
+      </p>
         <ul>
           <li>
             (a) \( G_i \) is normal in \( G_{i-1} \).
@@ -348,9 +349,9 @@
             (b) \( [G_{i-1} : G_i] \) is prime.
           </li>
         </ul>
-      </p>
       <p>
       \(\textbf{Theorem. }\) Let \( G \) be a finite group with \( |G| = p^n \), with \( p \) prime and \( n \geq 1 \). Then:
+      </p>
       <ul>
         <li>
           (i) \( Z(G) \neq \{e\} \).
@@ -359,7 +360,6 @@
           (ii) There is a sequence of subgroups \( \{e\} \subseteq H_1 \subseteq H_2 \subseteq \cdots \subseteq H_{n-1} \subseteq H_n = G \) such that each \( H_i \) is a normal subgroup of \( H_{i+1} \) and the quotient group \( H_{i+1}/H_i \cong \mathbb{Z}_p \).
         </li>
       </ul>
-      </p>
     </section>
 
 
@@ -444,17 +444,17 @@
     </p>
     <p>
       \(\textbf{Statements of principal ideals. }\)For an integral domain \( R \):
+    </p>
       <ul>
         <li> \( a \mid b \) if and only if \( \langle b\rangle  \subseteq \langle a\rangle \). </li>
         <li> \( \langle a \rangle= \langle b\rangle \) if and only if \( b = a\cdot u \), for some unit \( u \in R \). </li>
         <li> \( q \in R \) is irreducible if and only if \( \langle q\rangle \) is maximal among principal ideals. </li>
         <li> \( p \in R \) is prime if and only if whenever \( ab \in \langle p\rangle \), \( a \in \langle p \rangle \) or \( b \in \langle p \rangle \). </li>
       </ul>
-    </p>
-      <p>
       <ul>
         <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is an integral domain.</li>
         <li>\(\textbf{Example 2. }\) \(\mathbb{Z}[i]\) (Gaussian Integer) is an integral domain.</li>
+      </ul>
         <p>
           \(\textbf{Proof (2).}\) The major part is to show that there is no zero divisor in \(\mathbb{Z}[i]\).
           Suppose that there exists zero divisors in \(\mathbb{Z}[i]\).
@@ -483,9 +483,11 @@
           \]
           Since \(d, c\in \mathbb{Z}\), we have \(d = c = 0\). However, we assume that \(c\) or \(d\) is not zero, which is a contradiction.
         </p>
+      <ul>
         <li>\(\textbf{Example 3. }\) Quadratic Integer Ring \(\mathbb{Z}(\sqrt{D})\) is an integral domain</li>
         <li>\(\textbf{Example 4. }\) All fields are integral domains.</li>
         <li>\(\textbf{Claim 1. }\)\(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
+      </ul>
           <p>
             \(\textbf{Proof. }\) suppose that \(2 = (a + b\sqrt{-5})(c + d\sqrt{-5})\) for some \(a, b, c, d\in \mathbb{Z}\).
             Then we have
@@ -518,28 +520,36 @@
             Therefore, we have \(2 = (2 + 0\sqrt{-5})(1 + 0\sqrt{-5})\), where one of them is a unit.
             Then, we have \(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\). \( \blacksquare\)
           </p>
+      <ul>
           <li>\(\textbf{Claim 2.}\) \(3\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
+        </ul>
           <p>
             \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example.
             Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\).
             Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
             Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
+        <ul>
           <li>\(\textbf{Claim 2.}\) \(2\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+        </ul>
           <p>
             \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example.
             Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\).
             Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
             Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
+        <ul>
           <li>\(\textbf{Claim 3.}\) \(3\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+        </ul>
           <p>
             \(\textbf{Proof. }\) To show that \(3\) is not a prime, we come up with an example.
             Firstly, we can see that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\).
             Then we have \(3\mid 9\). However, we can see that \(3\nmid (2 + \sqrt{-5})\) and \(3\nmid (2 - \sqrt{-5})\).
             Therefore, we can see that \(3\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
+      <ul>
           <li>\(\textbf{Claim 3.}\) \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+        </ul>
           <p>
             \(\textbf{Proof. }\)We prove it with contradiction. Suppose that \(2+\sqrt{-5}\) is a prime.
             We know that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\).
@@ -550,8 +560,6 @@
             However, \((2 + \sqrt{-5})\cdot 1 \neq 3\) and \(2 + \sqrt{-5}\cdot (-1) \neq 3\).
             It is a contradiction. Therefore, we can see that \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
           </p>
-      </ul>
-    </p>
     </section>
 
     <br>
@@ -579,19 +587,18 @@
       </p>
       <p>
         \(\textbf{Proposition.}\) The following conditions are equivalent for the commutative ring \( R \):
+      </p>
       <ul>
         <li> \( R \) satisfies the ascending chain condition, i.e., given a chain of ideals \( I_1 \subseteq I_2 \subseteq \cdots \), there exists \( n_0 \) such that for all \( n \geq n_0 \), \( I_{n_0} = I_n \). </li>
         <li> \( R \) satisfies the maximal condition, i.e., any non-empty collection of ideals of \( R \) has a maximal element. </li>
         <li> Every ideal of \( R \) is finitely generated. </li>
       </ul>
-      </p>
     </section>
 
     <br>
 
     <section id = 'principal_ideal_domain'>
     <h2>Principal Ideal Domain</h2>
-      <p>
         <ul>
           <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is a principal ideal domain.</li>
           <li>\(\textbf{Example 2. }\) All fields are principal ideal domains.</li>
@@ -599,7 +606,6 @@
           <li>\(\textbf{Example 4. }\) Given \(F\) is a field, we have\(\mathbb{F}[x]\) is a principal ideal domain.</li>
           <li>\(\textbf{Example 5. }\) All Euclidean domains are principal ideal domains (one of the propositions below)</li>
         </ul>
-      </p>
       <p>
         \(\textbf{Theorem. }\) Let \(R\) be a principal ideal domain, then every prime ideal in \(R\) is maximal.
       </p>
@@ -661,7 +667,7 @@
         <li>Every non-zero, non-unit in \(R\) can be written uniquely (up to order and unit multiples) as a product of irreducible elements.</li>
       </ul>>
       <p>
-        \(\textbf{Definition. }\) A unique factorization domain is an integral domain \(R\) such that every nonzero nonunit element of \(R\) can be written as a product of irreducible elements of \(R\) in a unique way up to order and units.
+        \(\textbf{Definition. }\) A unique factorization domain is an integral domain \(R\) such that every nonzero non-unit element of \(R\) can be written as a product of irreducible elements of \(R\) in a unique way up to order and units.
       </p>
       <p>
         \(\textbf{Example 1. }\) \(\mathbb{Z}\) is a unique factorization domain.
@@ -739,6 +745,7 @@
       </p>
       <p>
         \(\textbf{Theorem. }\) If \( F \) is a field and \( f \in F[x] \) is non-constant, then the following are equivalent:
+      </p>
         <ul>
           <li>
             The polynomial \( f \) is irreducible over \( F \).
@@ -750,7 +757,6 @@
             The quotient ring \( F[x] / (f) \) is a field.
           </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Definition (Primitive). }\) A polynomial \( f \in F[x] \) is \textit{primitive} if the greatest common divisor of its coefficients is \(1\).
         (i.e. for all prime elements \(p \in R\), \(p \not\mid f(x)\) in \(R[x]\)).
@@ -798,6 +804,7 @@
         We know that \(1 + \sqrt{2} + \sqrt{3}\in \mathbb{Q}[\sqrt{2}+\sqrt{3}]\). However, we can see that
         \(\frac{1}{1 + \sqrt{2} + \sqrt{3}}\) is not in \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\).
       </p>
+        <p>
         Let
         \[
           F(\alpha_1, \ldots, \alpha_n) = \left\{ \frac{\alpha}{\beta} \mid \alpha, \beta \in F[\alpha_1, \ldots, \alpha_n], \beta \neq 0 \right\}.
@@ -829,6 +836,7 @@
       <h2>Splitting Field</h2>
       <p>
         \(\textbf{Definition 5.1.1}\) Let \( f \in F[x] \) have degree \( n > 0 \). Then an extension \( F \subset L \) is a splitting field of \( f \) over \( F \) if
+      </p>
         <ul>
           <li>
             \( f = c(x - \alpha_1) \cdots (x - \alpha_n) \), where \( c \in F \) and \( \alpha_i \in L \), and
@@ -837,7 +845,6 @@
             \( L = F(\alpha_1, \ldots, \alpha_n) \).
           </li>
         </ul>
-      </p>
       <p>
         \textbf{Definition.} Let \( K \) be a field and let \( f(x) \) be a polynomial in \( K[x] \). We say that \( f(x) \) \textit{splits} in \( K \) if there are elements \( \alpha_1, \alpha_2, \ldots, \alpha_n \) of \( K \) such that
         \[
@@ -853,6 +860,7 @@
       </p>
       <p>
         \(\textbf{Proposition. }\) Let \( 0 \neq f(x) \in F[x] \) be a non-constant polynomial. The following are equivalent:
+      </p>
         <ul>
           <li>
             \(\text{GCD}(f(x), f'(x)) = 1\)
@@ -864,7 +872,6 @@
             \( f(x) \) has distinct roots in its splitting field over \( F \).
           </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Corollary. }\) If \( F \) is a field containing \( \mathbb{Q} \) and \( p(x) \in F[x] \) is irreducible, then \( p(x) \) has distinct roots in \( K \), the splitting of \( p(x) \) over \( F \).
       </p>
@@ -1020,11 +1027,11 @@
       <h2>Galois Theory</h2>
       <p>
         \(\textbf{Proposition. }\) Let \( F \subset L \) be a finite extension and let \( \sigma \in \text{Gal}(L/F) \). Then:
+      </p>
         <ul>
           <li>If \(h \in F[x]\) is a non-constant polynomial with \( \alpha \in L \) as a root, then \( \sigma(\alpha) \) is also a root of \( h \) lying in \( L \).</li>
           <li>If \(L = F(\alpha_1, \ldots, \alpha_n)\), then \( \sigma \) is uniquely determined by its values on \( \alpha_1, \ldots, \alpha_n \).</li>
         </ul>
-      </p>
     </section>
 
 
@@ -1043,19 +1050,17 @@
       </p>
       <p>
         \(\textbf{Proof.}\) We need to check the following properties:
+      </p>
         <ul>
           <li>
             \( \text{Gal}(L/F) \) is closed under composition of functions.
           </li>
-             <ul>
-              <li>
-                Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \).
-                Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
-              </li>
-             </ul>
+          <li>
+            Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \).
+            Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
+          </li>
         </ul>
-        We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.
-      </p>
+      <p>We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.</p>
       <div class="code-box-container">
       <div class="code-box">
       <pre><code>
@@ -1149,6 +1154,7 @@
     <section id = 'ku_2021_1_1'>
       <p>
         \(\textbf{Problem 1.}\)
+      </p>
         <ul>
           <li>
             Write down all possible Jordan canonical forms for a \( 5 \times 5 \) matrix \( A \) such that \( A^3 = 0 \) (the blocks should have non-increasing size down the diagonal. We work over complex numbers).
@@ -1157,7 +1163,6 @@
             Let \(N\) be a nilpotent matrix over any field. Prove that \(I + N\) is diagonalizable if and only if \(N = 0\) (I is the identity matrix of the same size).
           </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Solution 1.}\)
       </p>
@@ -1196,6 +1201,7 @@
       <section id = 'ku_2022_1_1'>
         <p>
           \(\textbf{Problem 1.}\)A square matrix \( A \) is called \(\textit{aperiodic}\) if \( A^m = A^n \) for some integers \( m > n \geq 0 \) (by convention \( A^0 = I \)).
+        </p>
         <ul>
             <li>
               Prove that a \( 2 \times 2 \) matrix \( A \) over the real numbers is aperiodic if and only if: \( A^2 = \pm A \) or \( A^m = I \) for some \( m > 0 \).
@@ -1204,7 +1210,6 @@
               Give an example of a \( 2 \times 2 \) matrix \( A \) over the real numbers such that \( A^{2022} = I \) but \( A^m \neq I \) for any positive integer \( m \lt 2022 \).
           </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Proof(1). }\) Let \( A \) be a \( 2 \times 2 \) matrix over the real numbers.
         If \( A^2 = \pm A \), then we have \( A^4 = A^2 A^2 = (\pm A)(\pm A) = A^2\).
@@ -1338,13 +1343,13 @@
     <h2>KU 2022 (August)</h2>
     <section id = 'ku_2022_8_4'>
       <p>
-        \(\textbf{Question 4. }\) Let \( f(x) = x^4 + 5 \in \mathbb{Q}[x] \) and \( K \) denote the splitting field of \( f(x) \) over \( \mathbb{Q} \).</p>
+        \(\textbf{Question 4. }\) Let \( f(x) = x^4 + 5 \in \mathbb{Q}[x] \) and \( K \) denote the splitting field of \( f(x) \) over \( \mathbb{Q} \).
+      </p>
         <ul>
           <li>(i) Prove that \( f(x) \) is irreducible over \( \mathbb{Q} \).</li>
           <li>(ii) Find a basis for \( K \) over \( \mathbb{Q} \).</li>
           <li>(iii) Show that Galois group of \( K \) over \( F \) is a non-abelian group of order eight.</li>
         </ul>
-      </p>
       <p>
         \(textbf{Proof (i).}\) By Esenstain's criterion, we choose \(p = 5\), then we have \(f(x) = x^4 + 5\) is irreducible over \(\mathbb{Z}\).
         If \(f(x)\) is irreducible over \( \mathbb{Z} \), then it is irreducible over \( \mathbb{Q} \). \(\blacksquare\)
@@ -1356,6 +1361,7 @@
     <section id = 'ku_2022_8_6'>
     <p>
       \(\textbf{Question 6. }\)Let \( R \) be a unique factorization domain satisfying the following property: If \( p \in R \) is a prime element, then there are no proper ideals properly containing \( pR \). Show that:
+    </p>
       <ul>
         <li>
           Every prime ideal in \( R \) is a principal ideal.
@@ -1367,8 +1373,6 @@
           Conclude that \( R \) is a principal ideal domain.
         </li>
       </ul>
-    </p>
-
     <p>
       \(\textbf{Proof (a). }\) Suppose that \(I\) is a prime ideal in \(R\).
       Suppose that \(r\in I\) and \(r = p_1\cdots p_n\) for some prime elements \(p_1, \ldots, p_n\) since \(R\) is a unique factorization domain.
@@ -1392,6 +1396,7 @@
       <section id = 'ku_2023_1_1'>
         <p>
           \(\textbf{Problem 1. }\) Suppose that \( A \) and \( B \) are \( n \times n \) matrices over the complex numbers.
+        </p>
           <ul>
             <li>
               Prove that if \( A \) and \( B \) are similar, then \( A \) and \( B \) have the same minimal and characteristic polynomials.
@@ -1400,7 +1405,6 @@
               Determine, with justification, whether the converse of (i) holds when \( n = 3 \). What about when \( n = 4 \)?
             </li>
           </ul>
-        </p>
         <p>
           \(\textbf{Proof(1). }\)Suppose that \(A\) and \(B\) are two similar \(n\times n\) matrices.
           Then we have \(A = PBP^{-1}\) for some invertible \(n\times n\) matrices over \(\mathbb{C}\).
@@ -1460,6 +1464,7 @@
 
         <p>
           \(\textbf{Problem 5. }\)Let \( R \) be an integral domain with quotient field (i.e., field of fractions) \( K \). Let \( \mathcal{J} \) denote the collection of ideals \( (R : \alpha) \) such that \( \alpha \in K \), where \( (R : \alpha) := \{ r \in R \mid r\alpha \in R \} \). Show that \( R \) is a UFD if the following conditions hold (15 points):
+        </p>
         <ul>
           <li>
             The ideals in \( \mathcal{J} \) satisfy the ascending chain condition.
@@ -1467,8 +1472,8 @@
           <li>
             Every ideal in \( \mathcal{J} \) is principal.
           </li>
-          </ul>
-        </p>
+        </ul>
+
         <p>
           \(\textbf{Proof. }\)Firstly, given that \(R\) is an integral domain, \(\mathcal{J}\) satisfies the ascending chain condition implies that
           there is a maximal element in \(\mathcal{J}\) (i.e. a maximal ideal in \(\mathcal{J}\)). We also know that a maximal ideal is a prime ideal.
@@ -1666,6 +1671,7 @@
   <section id = "ku_2023_8_3">
     <p>
       \(\textbf{Problem 3. }\) Let \( T: V \rightarrow V \) be a linear operator on the finite dimensional inner product space \( V \) defined over the complex numbers.
+    </p>
     <ul>
       <li>(i) Define the adjoint of \( T \).</li>
       <li>(ii) Define what it means for \( T \) to be:
@@ -1677,7 +1683,6 @@
       <li>(iii) Prove \( T \) is normal if and only if \( \|T(v)\| = \|T^*(v)\| \) for all \( v \in V \). Here, \( \|u\| \) denotes the length of the vector \( u \in V \).</li>
       <li>(iv) Give an example of a normal linear operator that is not self adjoint.</li>
     </ul>
-    </p>
     <p>
       \(\textbf{Solution (1). }\)The adjoint of \(T\) is the function \(T^*: V\to V\) such
       that
@@ -1688,11 +1693,11 @@
     </p>
     <p>
       \(\textbf{Solution (2). }\)
+    </p>
       <ul>
         <li>(a) \(T\) is self-adjoint if \(T^*=T\).</li>
         <li>(b) \(T\) is normal if \(TT^*=T^*T\).</li>
       </ul>
-    </p>
     <p>
       \(\textbf{Proof (3).}\) Suppose that \(T\) is normal. Then we have \(TT^*=T^*T\).
       Let \(v\in V\). Then we have
@@ -1731,13 +1736,13 @@
   <section id = "ku_2023_8_4">
     <p>
     \(\textbf{Problem 4.}\) Let \( R \) be an integral domain.
+    </p>
     <ul>
       <li>(i) Define what it means for \( p \) in \( R \) to be irreducible and for \( p \) to be prime.</li>
       <li>(ii) Give an example (with proof) of an integral domain having an irreducible element that is not prime.</li>
       <li>(iii) Prove that primes are irreducible.</li>
       <li>(iv) Show that if \( R \) is a PID, then irreducible elements are prime.</li>
     </ul>
-    </p>
     <p>
       \(\textbf{Solution(1). }\) We say that \(p\) is irreducible if \(p = ab\) where \(a, b\in R\), then either \(a\) or \(b\) is a unit.
       We say that \(p\) is prime if \(p\) is not a unit and \(p\mid ab\) where \(a, b\in R\), then either \(p\mid a\) or \(p\mid b\).
@@ -1808,6 +1813,7 @@
   <section id = "ku_2023_8_5">
     <p>
       \(\textbf{Problem 5.}\) For the polynomial \( p(x) = x^4 - 4 \) find, with full justification:
+    </p>
     <ul>
       <li>
         (i) The splitting field \( K \) of \( p(x) \) over \( \mathbb{Q} \) and \( [K : \mathbb{Q}] \).
@@ -1819,7 +1825,6 @@
         (iii) The intermediate fields between \( K \) and \( \mathbb{Q} \).
       </li>
     </ul>
-    </p>
     <p>
       \(\textbf{Solution(1). }\) Firstly, we need to find the roots of \(p(x)\). We can get the roots of \(p(x)\) as follows:
       \[
@@ -1854,6 +1859,7 @@
   <section id = "ku_2023_8_6">
     <p>
       \(\textbf{Problem 6.}\) Consider the alternating group \( A_5 \), i.e., the subgroup of the symmetric group \( S_5 \) consisting of even permutations.
+    </p>
       <ul>
         <li>
           What are the possible number of subgroups of order four?
@@ -1871,7 +1877,6 @@
           Using the fact that \( A_5 \) has 44 elements of order 3 or 5 explain why the subgroups in (iv) are the only subgroups of order four.
         </li>
       </ul>
-    </p>
       <p>
         \(\textbf{Solution(1). }\)We firstly need to calculate the order of \(A_5\).
         We know that the order of \(S_5\) is \(5!\). Since we know that
@@ -1934,12 +1939,12 @@
 
   <section>
     <p>
-      \(\textbf{Problem 6. }\)Consider the ring extension \(\mathbb{Z} \subseteq R\), where \(R := \mathbb{Z}[\sqrt[3]{2}]\) denotes the smallest subring of \(\mathbb{R}\) containing \(\mathbb{Z}\) and the real cube root of 2.
+      \(\textbf{Problem 6. }\)Consider the ring extension \(\mathbb{Z} \subseteq R\), where \(R := \mathbb{Z}[\sqrt[3]{2}]\) denotes the smallest subring of \(\mathbb{R}\) containing \(\mathbb{Z}\) and the real cube root of \(2\).
+    </p>
     <ul>
       <li>Find, with proof, the kernel of the surjective ring homomorphism \(\phi : \mathbb{Z}[x] \to R\) taking \(f(x)\) in \(\mathbb{Z}[x]\) to \(f(\sqrt[3]{2})\) in \(R\).</li>
       <li>Find primes \(p, q \in \mathbb{Z}\) such that \(pR\) is a prime ideal and \(qR\) is not a prime ideal.</li>
     </ul>
-    </p>
     <p>
       \(\textbf{Solution 1. }\) We want to find the kernel of the surjective ring homomorphism \(\phi : \mathbb{Z}[x] \to R\).
       Since \(\ker(\phi)\) is the set of all polynomials \(f(x)\) in \(\mathbb{Z}[x]\) such that \(f(\sqrt[3]{2}) = 0\), we have
