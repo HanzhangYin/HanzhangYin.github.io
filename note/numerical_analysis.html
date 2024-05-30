@@ -659,6 +659,17 @@
         <li>If \( b_k = 0 \), the method is said to be explicit.</li>
         <li>If \( b_k \neq 0 \), the method is then said to be implicit.</li>
       </ul>
+      <p>
+        <b>Examples.</b>
+      </p>
+      <ul>
+        <li><b>The implicit Euler method</b> \(y_{n+1} = y_n + h f(x_{n+1}, y_{n+1})\) is an implicit linear one-step method.</li>
+        <li><b>The trapezium rule method</b> \(y_{n+1} = y_n + \frac{1}{2} h (f_{n+1} + f_n) \) is an implicit linear one-step method.</li>
+        <li><b>The Adams-Bashforth method</b> \(y_{n+4} = y_{n+3} + \frac{1}{24} h \left( 55 f_{n+3} - 59 f_{n+2} + 37 f_{n+1} - 9 f_n \right)\)
+          is an example of an explicit linear four-step method.</li>
+        <li><b>The Adams-Moulton method</b> \(y_{n+3} = y_{n+2} + \frac{1}{24} h \left( 9 f_{n+3} + 19 f_{n+2} - 5 f_{n+1} - 9 f_n \right)\)
+          is an implicit linear three-step method.</li>
+      </ul>
       <h3>Order</h3>
       <p>
         The accuracy of a numerical solution of a differential equation is largely determined by the order of the algorithm used.
@@ -667,7 +678,8 @@
         <b>Definition.</b>The order indicates how many terms in a Taylor-series solution are being simulated by the method.
       </p>
       <p>
-        For example, the Adams-Bashforth method in Equation (4) is said to be of order 5 because it produces approximately the same accuracy as the Taylor-series method with terms \( h, h^2, h^3, h^4, \) and \( h^5 \). The error can then be expected to be \( \mathcal{O}(h^6) \) in each step of a solution using Equation (4). The intuitive idea of order will be made more precise in the following paragraphs.
+        For example, the Adams-Bashforth method: $x_{n+1} = x_n + \frac{h}{720} \left[ 1901 f_n - 2774 f_{n-1} + 2616 f_{n-2} - 1274 f_{n-3} + 251 f_{n-4} \right]$ is said to be of order 5 because it produces approximately the same accuracy as the Taylor-series method with terms \( h, h^2, h^3, h^4, \) and \( h^5 \).
+        The error can then be expected to be \( \mathcal{O}(h^6) \) in each step of a solution using the above method.
       </p>
       <p>
         <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page. 552.</i></b>
