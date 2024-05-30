@@ -462,21 +462,21 @@
       - If \( \theta \in (0, 1) \), then the theta method (3.3) is implicit: Each time step requires the solution of \( N \) (in general, nonlinear) algebraic equations for the unknown vector \( y_{n+1} \).
       - The choices \( \theta = 0 \) and \( \theta = \frac{1}{2} \) are known as
 
-      \textit{Backward Euler}:
+      $\textit{Backward Euler}$:
       \[ y_{n+1} = y_n + h f(t_{n+1}, y_{n+1}), \]
 
-      \textit{Trapezoidal rule}:
+      $\textit{Trapezoidal rule}$:
       \[ y_{n+1} = y_n + \frac{1}{2} h [ f(t_n, y_n) + f(t_{n+1}, y_{n+1}) ]. \]
 
       Solution of nonlinear algebraic equations can be done by iteration. For example, for backward Euler, letting \( y_{n+1}^{[0]} = y_n \), we may use
 
-      \textit{Direct iteration}
+      $\textit{Direct iteration}$:
       \[ y_{n+1}^{[j+1]} = y_n + h f(t_{n+1}, y_{n+1}^{[j]}); \]
 
-      \textit{Newton–Raphson}:
+      $\textit{Newton–Raphson}$:
       \[ y_{n+1}^{[j+1]} = y_{n+1}^{[j]} - \left[ I - h \frac{\partial f(t_n, y_n)}{\partial y} \right]^{-1} \left[ y_{n+1}^{[j]} - y_n - h f(t_{n+1}, y_{n+1}^{[j]}) \right]; \]
 
-      \textit{Modified Newton–Raphson}:
+      $\textit{Modified Newton–Raphson}$:
       \[ y_{n+1}^{[j+1]} = y_{n+1}^{[j]} - \left[ I - h \frac{\partial f(t_n, y_n)}{\partial y} \right]^{-1} \left[ y_{n+1}^{[j]} - y_n - h f(t_{n+1}, y_{n+1}^{[j]}) \right]. \]
       </p>
     </section>
@@ -546,13 +546,17 @@
         $\textbf{First Existence Theorem, Initial-Value Problem}$
         If \( f \) is continuous in a rectangle \( R \) centered at \( (t_0, x_0) \), say
         \[
-        R = \{ (t, x) : |t - t_0| \leq \alpha, \quad |x - x_0| \leq \beta \}
+        R = \{ (t, x) : |t - t_0| \leq \alpha, \quad |x - x_0| \leq \beta \}\qquad(4)
         \]
-        then the initial-value problem (1) has a solution \( x(t) \) for \( |t - t_0| \leq \min(\alpha, \beta / M) \), where \( M \) is the maximum of \( |f(t, x)| \) in the rectangle \( R \).
+        then the initial-value problem above has a solution \( x(t) \) for \( |t - t_0| \leq \min(\alpha, \beta / M) \), where \( M \) is the maximum of \( |f(t, x)| \) in the rectangle \( R \).
       <p>
         $\textit{Numerical Analysis: Mathematics of Scientific Computing}$ page. 525.
       </p>
       <h3>Uniqueness</h3>
+      <p>
+        $\textbf{Uniqueness Theorem, Initial-Value Problem.}$
+        If \( f \) and \(\partial f / \partial x \) are continuous in the rectangle \( R \) defined by $\textbf{(4)}$, then the initial-value problem (1) has a unique solution in the interval \( |t - t_0| < \min(\alpha, \beta / M) \).
+      </p>
       <p>
         $\textbf{Theorem (Picard's Theorem).}$ Suppose that the real-valued function \((x,y) \mapsto f(x,y)\) is continuous in the rectangular region \(D\) defined by \(x_0 \leq x \leq X_M\), \(y_0 - C \leq y \leq y_0 + C\); that \(|f(x,y_0)| \leq K\) when \(x_0 \leq x \leq X_M\);
         and that \(f\) satisfies the Lipschitz condition: there exists \(L > 0\) such that
