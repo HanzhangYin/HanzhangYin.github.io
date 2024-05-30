@@ -37,10 +37,10 @@
     </label>
     <nav class="navbar">
       <a href="#binary">Binary</a>
-      <a href="#Unit_Roundoff">Unit Roundoff</a>
-      <a href="#Roundoff_Error">Roundoff Error</a>
+      <a href="#Unit_Roundoff">Unit Round-off</a>
+      <a href="#Roundoff_Error">Round-off Error</a>
       <a href="#Number_System_with_base_Beta">Number System with base $\beta$</a>
-      <a href="#FLoating_point_error_analysis">FLoating point error analysis</a>
+      <a href="#FLoating_point_error_analysis">Floating point error analysis</a>
       <a href="#Error_Analysis_for_Newton's_Method">Error Analysis for Newton's Method</a>
       <a href="#Error_Analysis_for_Gaussian_Quadrature">Error Analysis for Gaussian Quadrature</a>
       <a href="#References">References</a>
@@ -103,7 +103,7 @@
     <br />
 
     <section id="floating_point_error_analysis">
-      <h2>FLoating point error analysis</h2>
+      <h2>Floating point error analysis</h2>
       <p>
         Let \(x, y\) be two machine numbers. Let \(\circ\) is a binary
         operation. \[ fl(x\circ y) = (x\circ y)(1 + \delta) \] where
@@ -130,7 +130,7 @@
       </ul>
       </p>
       <p>
-      $\textbf{convergence Criteria. }$ The method typically converges if the initial guess \( x_0 \) is sufficiently close to the actual root, and \( f(x) \) is continuously differentiable in the neighborhood of the root.
+      $\textbf{convergence Criteria.}$ The method typically converges if the initial guess \( x_0 \) is sufficiently close to the actual root, and \( f(x) \) is continuously differentiable in the neighborhood of the root.
       </p>
       <p>
         $\textbf{Example. }$Consider finding the root of the function \( f(x) = x^2 - 2 \). The derivative of the function is \( f'(x) = 2x \).
@@ -177,7 +177,7 @@
         <!-- Even if \( x_n \) is not close to \( r \), by the hypotheses (H1) and (H2) on the behavior of \( f \)
         \[ |x_{n+1} - r| \leq M|x_n - r|^2 \quad (3) \]          -->
         $\textbf{Thus we can see that Newton's Method is quadratically convergent. }$
-        $\textbf{However, the disadvantage of Newton's Method is that if the initial value is closed enough to the root. }$
+        $\textbf{However, the disadvantage of Newton's Method is that if the initial value is closed enough to the root.}$
       </p>
     </section>
 
@@ -207,7 +207,7 @@
 
     <br>
 
-    <section id = 'horner_algorithem'>
+    <section id = 'horner_algorithm'>
       <h2>Horner's Algorithm</h2>
       <p>
         This method is also known as Horner's method, nested multiplication, or synthetic division.
@@ -340,12 +340,12 @@
         \]
       </p>
       <p>
-      \(\textbf{Theorem on Permutations in Divided Differences. }\)
+      \(\textbf{Theorem on Permutations in Divided Differences.}\)
         The divided difference is a symmetric function of its arguments. Thus, if \((z_0, z_1, \ldots, z_n)\) is a permutation of \((x_0, x_1, \ldots, x_n)\), then
         \[ f[z_0, z_1, \ldots, z_n] = f[x_0, x_1, \ldots, x_n]. \]
       </p>
       <p>
-        \(\textbf{Theorem on Derivatives and Divided Differences. }\)
+        \(\textbf{Theorem on Derivatives and Divided Differences.}\)
         If \( f \) is \( n \) times continuously differentiable on \([a, b]\) and if \( x_0, x_1, \ldots, x_n \) are distinct points in \([a, b]\), then there exists a point \( \xi \) in \((a, b)\) such that
         \[ f[x_0, x_1, \ldots, x_n] = \frac{1}{n!} f^{(n)}(\xi). \]
       </p>
@@ -426,14 +426,14 @@
         \[
         \int_a^b f(x) \, dx \approx h \left[ \frac{1}{2} f(x_0) + f(x_1) + \cdots + f(x_{m-1}) + \frac{1}{2} f(x_m) \right].
         \]
-      $\textit{Introdution to Numerical Analysis}$ page. 209.
+      $\textit{Introduction to Numerical Analysis}$ page. 209.
       </p>
       <p>
         \textbf{Definition 7.2 (Composite Simpson rule)}
         \[
         \int_a^b f(x) \, dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{2m-2}) + 4f(x_{2m-1}) + f(x_{2m}) \right].
         \]
-        $\textit{Introdution to Numerical Analysis}$ page. 210.
+        $\textit{Introduction to Numerical Analysis}$ page. 210.
       </p>
       <p>
         \textbf{Definition (Composite Midpoint Rule). } The composite midpoint rule is the composite Gauss formula with \(w(x) \equiv 1\) and \(n = 0\) defined by
@@ -450,7 +450,7 @@
           \]
           where \(\eta \in (a, b)\), provided that the function \(f\) has a continuous second derivative on \([a, b]\).
 
-          $\textit{Introdution to Numerical Analysis}$ page. 286.
+          $\textit{Introduction to Numerical Analysis}$ page. 286.
       </p>
     </section>
 
@@ -500,16 +500,16 @@
     </ul>
       </p>
       <p>
-        \(\textbf{Local Truncation Error. }\) The local truncation error is the error made in a single step of a numerical method. 
+        \(\textbf{Local Truncation Error.}\) The local truncation error is the error made in a single step of a numerical method.
       </p>
       <p>
-        \(\textbf{Local Roundoff Error. }\) The local roundoff error is the error made in a single step of a numerical method due to roundoff.
+        \(\textbf{Local Roundoff Error.}\) The local roundoff error is the error made in a single step of a numerical method due to roundoff.
       </p>
       <p>
-        \(\textbf{Global Truncation Error. }\) The global truncation error is the accumulation of the local truncation errors in the previous steps. 
+        \(\textbf{Global Truncation Error.}\) The global truncation error is the accumulation of the local truncation errors in the previous steps.
       </p>
       <p>
-        \(\textbf{Global Roundoff Error. }\) The global roundoff error is the accumulation of the local roundoff errors in the previous steps.
+        \(\textbf{Global Roundoff Error.}\) The global roundoff error is the accumulation of the local roundoff errors in the previous steps.
       </p>
       <p>
         \(\textbf{Total Error. }\) The total error is the sum of the global truncation error and the global roundoff error.
@@ -576,7 +576,7 @@
       </p>
       <h3>One-step methods</h3>
       <p>
-        $\textbf{Euler's method. }$ Given that \( y(x_0) = y_0 \), let us suppose that we have already calculated \( y_n \), up to some \( n \), \( 0 \leq n \leq N - 1 \), \( N \geq 1 \); we define
+        $\textbf{Euler's method.}$ Given that \( y(x_0) = y_0 \), let us suppose that we have already calculated \( y_n \), up to some \( n \), \( 0 \leq n \leq N - 1 \), \( N \geq 1 \); we define
         \[
         y_{n+1} = y_n + h f(x_n, y_n).
         \]
@@ -616,11 +616,11 @@
         There are several ways to compute the QR factorization of a matrix.
         <ul>
           <li>
-            \(\textbf{Gram-Schmidt Process. }\) The Gram-Schmidt process is a method for orthonormalizing a set of vectors. 
+            \(\textbf{Gram-Schmidt Process.}\) The Gram-Schmidt process is a method for orthonormalizing a set of vectors.
             Given a set of linearly independent vectors \( \{v_1, v_2, \ldots, v_n\} \), the Gram-Schmidt process produces an orthonormal set of vectors \( \{q_1, q_2, \ldots, q_n\} \) such that \( \text{span}\{v_1, v_2, \ldots, v_n\} = \text{span}\{q_1, q_2, \ldots, q_n\} \).
           </li>
           <li>
-            \(\textbf{Householder Transformation. }\) The Householder transformation is a reflection across a plane. 
+            \(\textbf{Householder Transformation.}\) The Householder transformation is a reflection across a plane.
             Given a vector \( x \), the Householder transformation \( H \) is defined as
             \[
               H = I - 2 \frac{vv^*}{v^*v},
@@ -628,7 +628,7 @@
             where \( v = x - \text{sign}(x_1) \|x\|_2 e_1 \) and \( e_1 \) is the first unit vector.
           </li>
           <li>
-            \(\textbf{Givens Rotation. }\) The Givens rotation is a rotation in the plane spanned by two vectors. 
+            \(\textbf{Givens Rotation.}\) The Givens rotation is a rotation in the plane spanned by two vectors.
             Given a vector \( x \), the Givens rotation \( G \) is defined as
             \[
               G = \begin{bmatrix}
@@ -740,7 +740,7 @@
     </section>
 
     <section>
-      <h2>Qual Problems (January 2022)</h2>
+      <h2>Qualifying Problems (January 2022)</h2>
       <p>
       1. Consider the iteration 
       \[
@@ -780,7 +780,7 @@
 
     <br>
 
-    <h2>Qual Problems (August 2022)</h2>
+    <h2>Qualifying Exam Problems (August 2022)</h2>
     <section id = 'ku_2022_8_1'>
       <p>
         \(\textbf{Problem 1. }\)Consider the interpolation problem: Find a polynomial of degree less than or equal to three interpolating the table
@@ -968,7 +968,7 @@ V & -V
             V\Sigma U^*  & 0
         \end{bmatrix}\\
     \end{align}
-    Since \(A = U\Sigma V^*\), which is SVD of \(A\), we know all entires of \(\Sigma\) are non-negative. 
+    Since \(A = U\Sigma V^*\), which is SVD of \(A\), we know all entries of \(\Sigma\) are non-negative.
     Thus, we have \(\Sigma = \Sigma^*\). In that case, we have
     \[
         W
@@ -1046,7 +1046,7 @@ V & -V
 </section>
 
     <section id = 'August_2023'>
-      <h2>Qual Problems (August 2023)</h2>
+      <h2>Qualify Exam Problems (August 2023)</h2>
       <p>
         \(\textbf{Problem 3. }\)Consider the \(\theta\)-method
         \[ y_{n+1} = y_n + h \left( \theta f_{n+1} + (1 - \theta) f_n \right), \quad \theta \in [0, 1], \]
@@ -1061,7 +1061,7 @@ V & -V
         </ul>
       </p>
       <p>
-        \(\textbf{Solution (a). }\)To make a method explicit, we only need values of \(y_n\) and \(f_n\).
+        \(\textbf{Solution (a).}\)To make a method explicit, we only need values of \(y_n\) and \(f_n\).
         Hence, when \(\theta = 0\), we have 
         \[ y_{n+1} = y_n + h f_n, \]
         which is explicit.
