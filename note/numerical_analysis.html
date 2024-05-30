@@ -622,7 +622,10 @@
       <p>
         <b>Note.</b> The Adams-Bashforth formula is an explicit method since it does not include $f_{n+1}$.
       </p>
-      <h3>Adams-Bashforth Formula of Order $4$</h3>
+      <h3>Adams-Bashforth Formula of Order $5$</h3>
+      <p>
+        \[x_{n+1} = x_n + \frac{h}{720} \left[ 1901 f_n - 2774 f_{n-1} + 2616 f_{n-2} - 1274 f_{n-3} + 251 f_{n-4} \right]\]
+      </p>
       <h2>Adams-Moulton Formula</h2>
       <p>
         <b>Definition.</b> Suppose the resulting formula is of the following type:
@@ -637,17 +640,25 @@
       <p>
         <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page. 551.</i></b>
       </p>
-      <h2>Analysis of Linear Multistep Methods</h2>
-      <h3>$k$-step</h3>
+      <h2>Linear Multistep Methods</h2>
+      <h3>Linear $k$-step method</h3>
       <p>
         The format of any such method is
-        \[ a_k x_n + a_{k-1} x_{n-1} + \cdots + a_0 x_{n-k} = h \left[ b_k f_n + b_{k-1} f_{n-1} + \cdots + b_0 f_{n-k} \right] \tag{9} \]
-        This is called a \( k \)-step method. The coefficients \( a_i \) and \( b_i \) are given. As before, \( x_i \) denotes an approximation to the solution at \( t_i \), with \( t_i = t_0 + ih \).
-        The letter \( f_i \) denotes \( f(t_i, x_i) \).
-        Formula (9) is used to compute \( x_n \), assuming that \( x_0, x_1, \ldots, x_{n-1} \) are already known. Thus, we may assume that \( a_k \neq 0 \). The coefficient \( b_k \) can be 0. If \( b_k = 0 \), the method is said to be explicit.
-        In this case, \( x_n \) can be computed directly from Equation (9) in an elementary fashion.
-        If \( b_k \neq 0 \), then on the right the term \( f_n \) involves the unknown \( x_n \). Hence,the method is then said to be implicit.
-        </p>
+        \[ a_k x_n + a_{k-1} x_{n-1} + \cdots + a_0 x_{n-k} = h \left[ b_k f_n + b_{k-1} f_{n-1} + \cdots + b_0 f_{n-k} \right] \]
+        Or in general, it can be written as
+        \[\sum_{j=0}^{k} a_j x_{n+j} = h \sum_{j=0}^{k} b_j f(t_{n+j}, x_{n+j}), \]
+        where \( a_k \neq 0 \).
+        This is called a \( k \)-step method.
+      </p>
+      <p><b>Note</b></p>
+      <ul>
+        <li>The coefficients \( a_i \) and \( b_i \) are given.</li>
+        <li>\( x_i \) denotes an approximation to the solution at \( t_i \), with \( t_i = t_0 + ih \).</li>
+        <li>The letter \( f_i \) denotes \( f(t_i, x_i) \).</li>
+        <li>The formula above is used to compute \( x_n \), assuming that \( x_0, x_1, \ldots, x_{n-1} \) are already known (Assume that \( a_k \neq 0 \)).</li>
+        <li>If \( b_k = 0 \), the method is said to be explicit.</li>
+        <li>If \( b_k \neq 0 \), the method is then said to be implicit.</li>
+      </ul>
       <h3>Order</h3>
       <p>
         The accuracy of a numerical solution of a differential equation is largely determined by the order of the algorithm used.
