@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <script>
   function copyCode1() {
-    var code = document.getElementById("code-block1");
-    var textarea = document.createElement("textarea");
+    let code = document.getElementById("code-block1");
+    let textarea = document.createElement("textarea");
     textarea.value = code.textContent;
     document.body.appendChild(textarea);
     textarea.select();
