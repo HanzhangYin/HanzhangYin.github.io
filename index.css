@@ -14,7 +14,7 @@
     }
     header {
         padding-top: 30px;
-        padding: 20px;
+        /*padding: 20px;*/
         text-align: center;
         font-family: 'Spectral', serif; 
     }
@@ -86,7 +86,7 @@
         text-align: right;
         font-family: 'Spectral', serif;
         font-weight: bold;
-        /* text-transform: uppercase; It makes all letters of the tiltle uppercase*/
+        /* text-transform: uppercase; It makes all letters of the title uppercase*/
         border-bottom: 1px solid #646060;
         margin-top: 50px; 
     }
@@ -174,7 +174,6 @@
     box-sizing: border-box;
     display: flex;  
     flex-direction: column; /* make the navbar elements appear in a column */
-    overflow: hidden; /* (was auto previously) make the navbar scrollable */
     z-index: 1;
     transform: translateX(-100%);  /* Initially move the navbar off the screen. */
     transition: transform 0.2s ease-in-out;  /* Animate the movement. */  
@@ -208,7 +207,7 @@
       text-align: center;
       padding: 11px 10px;
       display: block;
-      padding: 20px;
+      /*padding: 20px;*/
       text-decoration: none;
     }
     
