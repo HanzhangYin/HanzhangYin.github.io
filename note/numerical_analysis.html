@@ -831,6 +831,10 @@
       <p>
         <b>Definition.</b> A linear multistep method is said to be <i><b>absolutely stable</b></i> for a given value of \( \lambda h \) if each root \(z_r = z_r(\lambda h)\) of the associated stability polynomial \(\pi(\cdot; \lambda h)\) satisfies \(|z_r(\lambda h)| < 1\).
       </p>
+      <h3>Region of Absolute Stability</h3>
+      <p>
+        <b>Definition.</b> The region of absolute stability of a linear multistep method is the set of all points \(\lambda h\) in the complex plane for which the method is absolutely stable.
+      </p>
       <h3>\(A\)-stable</h3>
         <p>
           <b>Definition.</b> A linear multistep method is said to be <i><b>A-stable</b></i> if its region of absolute stability contains the negative (left) complex half-plane.
@@ -851,7 +855,7 @@
       <h2>QR Factorization</h2>
       <h3>Reduced QR Factorization</h3>
       <p>
-        \(\textbf{Definition 8.1 [Reduced QR factorization]}\) Let \( A \in
+        <b>Definition [Reduced QR factorization].</b> Let \( A \in
         \mathbb{F}^{m \times n} \) (\( m \geq n \)). There is an orthonormal
         matrix \( \hat{Q} \in \mathbb{F}^{m \times n} \) and a square upper
         triangular matrix \( \hat{R} \in \mathbb{F}^{n \times n} \) such that \[
@@ -875,11 +879,10 @@
           and \( e_1 \) is the first unit vector.
         </li>
         <li>
-          \(\textbf{Givens Rotation.}\) The Givens rotation is a rotation in the
-          plane spanned by two vectors. Given a vector \( x \), the Givens
-          rotation \( G \) is defined as \[ G = \begin{bmatrix} c & -s \\ s & c
-          \end{bmatrix}, \] where \( c = \frac{x_1}{\|x\|_2} \) and \( s =
-          \frac{x_2}{\|x\|_2} \).
+          <b>Givens Rotation.</b> The Givens rotation is a rotation in the plane spanned by two vectors.
+          Given a vector \( x \), the Givens rotation \( G \) is defined as
+          \[ G = \begin{bmatrix} c & -s \\ s & c \end{bmatrix}, \]
+          where \( c = \frac{x_1}{\|x\|_2} \) and \( s = \frac{x_2}{\|x\|_2} \).
         </li>
       </ul>
     </section>
