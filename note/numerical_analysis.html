@@ -424,19 +424,19 @@
         \frac{1}{2} f(x_m) \right]. \]
       </p>
       <p>
-        <i>Introduction to Numerical Analysis page. 209.</i>
+        <b><i>Introduction to Numerical Analysis page. 209.</i></b>
       </p>
       <p>
-        <strong>Definition (Composite Simpson rule).</strong>
+        <b>Definition (Composite Simpson rule).</b>
         \[ \int_a^b f(x) \, dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) +
         2f(x_2) + 4f(x_3) + \cdots + 2f(x_{2m-2}) + 4f(x_{2m-1}) + f(x_{2m})
         \right]. \]
       </p>
       <p>
-        <i>Introduction to Numerical Analysis page. 210.</i>
+        <b><i>Introduction to Numerical Analysis page. 210.</i></b>
       </p>
       <p>
-        \textbf{Definition (Composite Midpoint Rule).} The composite midpoint
+        <b>Definition (Composite Midpoint Rule).</b> The composite midpoint
         rule is the composite Gauss formula with \(w(x) \equiv 1\) and \(n = 0\)
         defined by \[ \int_a^b f(x) \, dx \approx h \sum_{j=1}^m f\left(a +
         \left(j - \frac{1}{2}\right) h \right). \] This follows from the fact
@@ -520,8 +520,7 @@
         truncation error and the global roundoff error.
       </p>
       <p>
-        $\textit{"Numerical Analysis: Mathematics of Scientific Computing"}$
-        page.533.
+        <b><i>"Numerical Analysis: Mathematics of Scientific Computing" page. 533.</i></b>
       </p>
     </section>
 
@@ -581,8 +580,7 @@
         solution in the interval \([a, b]\).
       </p>
       <p>
-        $\textit{"Numerical Analysis: Mathematics of Scientific Computing"}$
-        page. 526.
+        <b><i>"Numerical Analysis: Mathematics of Scientific Computing" page.526.</i></b>
       </p>
       <h3>Lipschitz Condition</h3>
       <p>
@@ -635,19 +633,15 @@
       </p>
       <h2>Adams-Bashforth Formula</h2>
       <p>
-        Suppose the resulting formula is of the following type: \[ x_{n+1} = x_n
-        + a\cdot f_n + b\cdot f_{n-1} + c\cdot f_{n-2} + \cdots \] where \( f_i
-        \) denotes \( f(t_i, x_i) \). An equation of this type is called an
+        Suppose the resulting formula is of the following type: \[ x_{n+1} = x_n + a\cdot f_n + b\cdot f_{n-1} + c\cdot f_{n-2} + \cdots \] where \( f_i \) denotes \( f(t_i, x_i) \). An equation of this type is called an
         <b>Adams-Bashforth formula</b>.
       </p>
       <p>
-        <b>Note.</b> The Adams-Bashforth formula is an explicit method since it
-        does not include $f_{n+1}$.
+        <b>Note.</b> The Adams-Bashforth formula is an explicit method since it does not include $f_{n+1}$.
       </p>
       <h3>Adams-Bashforth Formula of Order $5$</h3>
       <p>
-        \[x_{n+1} = x_n + \frac{h}{720} \left[ 1901 f_n - 2774 f_{n-1} + 2616
-        f_{n-2} - 1274 f_{n-3} + 251 f_{n-4} \right]\]
+        \[x_{n+1} = x_n + \frac{h}{720} \left[ 1901 f_n - 2774 f_{n-1} + 2616 f_{n-2} - 1274 f_{n-3} + 251 f_{n-4} \right]\]
       </p>
       <h2>Adams-Moulton Formula</h2>
       <p>
@@ -657,13 +651,11 @@
         type is called an <b>Adams-Moulton formula</b>.
       </p>
       <p>
-        <b>Note.</b> The Adams-Moulton formula is an implicit method since it
-        includes \( f_{n+1} \).
+        <b>Note.</b> The Adams-Moulton formula is an implicit method since it includes \( f_{n+1} \).
       </p>
       <h3>Adams-Moulton Formula of Order $5$</h3>
       <p>
-        \[ x_{n+1} = x_n + \frac{h}{720} \left[ 251 f_{n+1} + 646 f_n - 264
-        f_{n-1} + 106 f_{n-2} - 19 f_{n-3} \right] \]
+        \[ x_{n+1} = x_n + \frac{h}{720} \left[ 251 f_{n+1} + 646 f_n - 264 f_{n-1} + 106 f_{n-2} - 19 f_{n-3} \right] \]
       </p>
       <p>
         <b
@@ -724,12 +716,10 @@
       <p><i>"Introduction to Numerical Analysis" page. 331.</i></p>
       <h3>Order</h3>
       <p>
-        The accuracy of a numerical solution of a differential equation is
-        largely determined by the order of the algorithm used.
+        The accuracy of a numerical solution of a differential equation is largely determined by the order of the algorithm used.
       </p>
       <p>
-        <b>Definition.</b>The order indicates how many terms in a Taylor-series
-        solution are being simulated by the method.
+        <b>Definition.</b>The order indicates how many terms in a Taylor-series solution are being simulated by the method.
       </p>
       <p>
         For example, the Adams-Bashforth method: $x_{n+1} = x_n + \frac{h}{720}
@@ -762,24 +752,26 @@
         d_j &= \sum_{i=0}^{k} \left( \frac{i^j}{j!} a_i - \frac{i^{j-1}}{(j-1)!} b_i \right) \quad (j \geq 1)
         \end{aligned} \tag{12}
         \]
-        Here we use \( 0! = 1 \) and \( i^0 = 1 \), of course.
+        Here we use \( 0! = 1 \) and \( i^0 = 1 \).
       </p>
       <p>
-        <b
-          ><i
-            >"Numerical Analysis: Mathematics of Scientific Computing", page.
-            552.</i
-          ></b
-        >
+        <b>Theorem on Multistep Method Properties.</b>
+        These three properties of the multistep method (9) are equivalent:
+      </P>
+      <ol>
+        <li>\( d_0 = d_1 = \cdots = d_m = 0 \)</li>
+        <li>\( Lp = 0 \) for each polynomial \( p \) of degree \( \leq m \)</li>
+        <li>\( Lx \) is \( \mathcal{O}(h^{m+1}) \) for all \( x \in C^{m+1} \)</li>
+      </ol>
+      <p>
+        <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page. 552 & 553.</i></b>
       </p>
     </section>
 
     <section id="stability">
       <h2>Root Condition</h2>
       <p>
-        <b>Definition.</b> The roots of the first characteristic polynomial lie
-        in the closed unit disc and those on the unit circle are simple is often
-        called the Root Condition.
+        <b>Definition.</b> The roots of the first characteristic polynomial lie in the closed unit disc and those on the unit circle are simple is often called the Root Condition.
       </p>
       <h2>Stability</h2>
       <p>
@@ -789,12 +781,8 @@
         roots.
       </p>
       <p>
-        <b>Definition.</b> A linear multistep method is strongly stable if all
-        roots of \(\rho(z)\) are \(\leq 1\) in magnitude and only one root has
-        magnitude one. If more than one root has magnitude one, the method is
-        called weakly or conditionally stable. Note, we still require only
-        simple roots of magnitude one. Also, note these definitions refer to the
-        case \( h = 0 \).
+        <b>Definition.</b> A linear multistep method is strongly stable if all roots of \(\rho(z)\) are \(\leq 1\) in magnitude and only one root has magnitude one.
+        If more than one root has magnitude one, the method is called weakly or conditionally stable. Note, we still require only simple roots of magnitude one. Also, note these definitions refer to the case \( h = 0 \).
       </p>
     </section>
 
@@ -988,15 +976,15 @@
       </p>
       <ul>
         <li>
-          1. Show that if \(x_0 > 0\), then \(x_n \geq \sqrt{5}\) for \(n =
+          Show that if \(x_0 > 0\), then \(x_n \geq \sqrt{5}\) for \(n =
           1,2,\ldots\).
         </li>
         <li>
-          2. Use the Contractive Mapping Theorem to show that the iteration is
+          se the Contractive Mapping Theorem to show that the iteration is
           convergent.
         </li>
         <li>
-          3. Show that the order of convergence of the iteration is quadratic.
+          Show that the order of convergence of the iteration is quadratic.
         </li>
       </ul>
       <h2>Solutions</h2>
