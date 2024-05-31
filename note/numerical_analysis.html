@@ -695,21 +695,17 @@
       </p>
       <ul>
         <li>
-          <b>The implicit Euler method</b> \(y_{n+1} = y_n + h f(x_{n+1},
-          y_{n+1})\) is an implicit linear one-step method.
+          <b>The implicit Euler method</b> \(y_{n+1} = y_n + h f(x_{n+1}, y_{n+1})\) is an implicit linear one-step method.
         </li>
         <li>
-          <b>The trapezium rule method</b> \(y_{n+1} = y_n + \frac{1}{2} h
-          (f_{n+1} + f_n) \) is an implicit linear one-step method.
+          <b>The trapezium rule method</b> \(y_{n+1} = y_n + \frac{1}{2} h (f_{n+1} + f_n) \) is an implicit linear one-step method.
         </li>
         <li>
-          <b>The Adams-Bashforth method</b> \(y_{n+4} = y_{n+3} + \frac{1}{24} h
-          \left( 55 f_{n+3} - 59 f_{n+2} + 37 f_{n+1} - 9 f_n \right)\) is an
+          <b>The Adams-Bashforth method</b> \(y_{n+4} = y_{n+3} + \frac{1}{24} h \left( 55 f_{n+3} - 59 f_{n+2} + 37 f_{n+1} - 9 f_n \right)\) is an
           example of an explicit linear four-step method.
         </li>
         <li>
-          <b>The Adams-Moulton method</b> \(y_{n+3} = y_{n+2} + \frac{1}{24} h
-          \left( 9 f_{n+3} + 19 f_{n+2} - 5 f_{n+1} - 9 f_n \right)\) is an
+          <b>The Adams-Moulton method</b> \(y_{n+3} = y_{n+2} + \frac{1}{24} h \left( 9 f_{n+3} + 19 f_{n+2} - 5 f_{n+1} - 9 f_n \right)\) is an
           implicit linear three-step method.
         </li>
       </ul>
@@ -816,9 +812,14 @@
         roots of \(\rho(z)\) of modulus \( \lt 1 \) are called nonessential
         roots.
       </p>
+      <h3>Weakly Stability</h3>
       <p>
         <b>Definition.</b> A linear multistep method is strongly stable if all roots of \(\rho(z)\) are \(\leq 1\) in magnitude and only one root has magnitude one.
         If more than one root has magnitude one, the method is called weakly or conditionally stable. Note, we still require only simple roots of magnitude one. Also, note these definitions refer to the case \( h = 0 \).
+      </p>
+      <h3>Strong Stability</h3>
+      <p>
+        <b>Definition.</b> A multistep method is said to be \textit{strongly stable} if \( p(1) = 0, p'(1) \neq 0 \), and all other roots of \( p \) satisfy the inequality \( |z| < 1 \).
       </p>
     </section>
 
@@ -850,7 +851,7 @@
           q_2, \ldots, q_n\} \).
         </li>
         <li>
-          \(\textbf{Householder Transformation.}\) The Householder
+          <b>Householder Transformation.</b> The Householder
           transformation is a reflection across a plane. Given a vector \( x \),
           the Householder transformation \( H \) is defined as \[ H = I - 2
           \frac{vv^*}{v^*v}, \] where \( v = x - \text{sign}(x_1) \|x\|_2 e_1 \)
