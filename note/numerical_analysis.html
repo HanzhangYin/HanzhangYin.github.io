@@ -1025,12 +1025,21 @@
           </ul>
         </li>
       </ul>
-
       <p>
-        In summary, the Bauer–Fike theorem provides bounds on how eigenvalues
-        change under small perturbations. It highlights the importance of
-        eigenvector conditioning and helps us understand the stability of
-        eigenvalues.
+        <b>Theorem [Bauer-Fike Theorem]</b> Suppose \( A, E \in \mathbb{C}^{m \times m} \) and \( A = X \Lambda X^{-1} \), where
+        \[
+        \Lambda =
+        \begin{bmatrix}
+        \lambda_1 & & \\
+        & \ddots & \\
+        & & \lambda_m
+        \end{bmatrix}.
+        \]
+        Then for any eigenvalue \( \tilde{\lambda} \) of \( \tilde{A} = A + E \), there exists \( \lambda_i \), an eigenvalue of \( A \), such that
+        \[
+        |\tilde{\lambda} - \lambda_i| \leq \kappa_2(X) \|E\|_2,
+        \]
+        where \( \kappa_2(X) = \|X\|_2 \|X^{-1}\|_2 \).
       </p>
     </section>
 
