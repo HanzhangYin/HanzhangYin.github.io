@@ -1094,7 +1094,7 @@
 
     <br>
 
-    <section>
+    <section id = 'upper_hessenberg_matrix'>
         <h2>Upper Hessenberg Matrix</h2>
       <p>
         <b>Definition.</b> A matrix \( H = [h_{ij}] \in \mathbb{C}^{m \times m} \) is upper Hessenberg if \( h_{ij} = 0 \) for all \( i \geq j + 2 \), or equivalently,
@@ -1139,10 +1139,10 @@
         the table. \( \blacksquare \)
       </p>
       <p>
-        \(\textbf{Solution.}\)Here we can use Newton's divided difference method
-        to find the interpolation polynomial. \[ \begin{align*} x_0 = 0: &
-        f[x_0] = 51, & f[x_0, x_1] = \frac{3 - 51}{1 - 0} = -48, & f[x_0, x_1,
-        x_2] = \frac{33 - (-48)}{7 - 0} = \frac{81}{7}, & f[x_0, x_1, x_2, x_3]
+        \(\textbf{Solution.}\)Here we can use Newton's divided difference method to find the interpolation polynomial.
+        \[
+        \begin{align*}
+        x_0 = 0: & f[x_0] = 51, & f[x_0, x_1] = \frac{3 - 51}{1 - 0} = -48, & f[x_0, x_1, x_2] = \frac{33 - (-48)}{7 - 0} = \frac{81}{7}, & f[x_0, x_1, x_2, x_3]
         = \frac{7 - 81/7}{2-0} = -\frac{16}{7},\\ x_1 = 1: & f[x_1] = 3, &
         f[x_1, x_2] = \frac{201 - 3}{7 - 1} = 33, & f[x_1, x_2, x_3] = \frac{40
         - 33}{1-0} = 7, & \\ x_2 = 7: & f[x_2] = 201, & f[x_2, x_3] = \frac{1 -
