@@ -1095,6 +1095,7 @@
     <br>
 
     <section id = "gerschgorin_theorem">
+      <h2>Gerschgorin’s Theorem</h2>
       <p>
         <b>Theorem [Row version Gerschgorin’s Theorem]</b> Let \( A \in \mathbb{C}^{m \times m} \). Consider \( m \) disks in the complex plane:
         \[ D_i = \left\{ z \mid |z - a_{ii}| \leq \sum_{j \neq i} |a_{ij}| = |a_{i1}| + \ldots + |a_{i,i-1}| + |a_{i,i+1}| + \ldots + |a_{im}| \right\}. \]
@@ -1108,8 +1109,26 @@
           (b) Suppose the \( m \) disks form \( n \) disjoint regions \( \mathcal{R}_1, \ldots, \mathcal{R}_n \), and each \( \mathcal{R}_k \) (\( 1 \leq k \leq n \)) is connected and consists of \( p_k \) disks. Then for each \( k \) from 1 to \( n \), exactly \( p_k \) eigenvalues of \( A \) are in \( \mathcal{R}_k \).
         </li>
       </ul>
+      <br>
+      <p>
+        <b>Theorem [Column version Gerschgorin’s Theorem]</b> Let \( A \in \mathbb{C}^{m \times m} \). Consider \( m \) disks in the complex plane:
+        \[
+        \tilde{D}_i = \left\{ z \mid |z - a_{ii}| \leq \sum_{j \neq i} |a_{ji}| = |a_{1i}| + \ldots + |a_{i-1,i}| + |a_{i+1,i}| + \ldots + |a_{mi}| \right\}.
+        \]
+        Then we have the following results.
+      </p>
+        <ul>
+            <li>
+                (a) Any eigenvalue \( \lambda \in \Lambda(A) \) must lie in at least one of the \( m \) disks.
+            </li>
+            <li>
+                (b) The \( m \) disks form \( r \) disjoint regions \( \tilde{\mathcal{R}}_1, \ldots, \tilde{\mathcal{R}}_r \). Suppose each \( \tilde{\mathcal{R}}_k \) (\( 1 \leq k \leq r \)) is connected and consists of \( q_k \) disks. Then for each \( k \) from 1 to \( r \), exactly \( q_k \) eigenvalues of \( A \) are in \( \tilde{\mathcal{R}}_k \).
+            </li>
+        </ul>
+      <p>
+        <i><b>"Lecture note No. 22"</b></i>
+      </p>
     </section>
-
     <br>
 
     <section id = "rayleigh_quotient">
