@@ -668,9 +668,9 @@
       <h2>Linear Multistep Methods</h2>
       <h3>Linear $k$-step method</h3>
       <p>
-        The format of any such method is \[ a_k x_n + a_{k-1} x_{n-1} + \cdots +
-        a_0 x_{n-k} = h \left[ b_k f_n + b_{k-1} f_{n-1} + \cdots + b_0 f_{n-k}
-        \right] \] Or in general, it can be written as \[\sum_{j=0}^{k} a_j
+        The format of any such method is
+        \[ a_k x_n + a_{k-1} x_{n-1} + \cdots + a_0 x_{n-k} = h \left[ b_k f_n + b_{k-1} f_{n-1} + \cdots + b_0 f_{n-k} \right]. \tag{9}\]
+        Or in general, it can be written as \[\sum_{j=0}^{k} a_j
         x_{n+j} = h \sum_{j=0}^{k} b_j f(t_{n+j}, x_{n+j}), \] where \( a_k \neq
         0 \). This is called a \( k \)-step method.
       </p>
@@ -756,7 +756,7 @@
       </p>
       <p>
         <b>Theorem on Multistep Method Properties.</b>
-        These three properties of the multistep method (9) are equivalent:
+        These three properties of the multistep method <b>(9)</b> are equivalent:
       </P>
       <ol>
         <li>\( d_0 = d_1 = \cdots = d_m = 0 \)</li>
@@ -765,6 +765,42 @@
       </ol>
       <p>
         <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page. 552 & 553.</i></b>
+      </p>
+      <h3>Alternate Definition of Order</h3>
+      <p>
+        Now, we can define the order of the multistep method as follows:
+        The order of the multistep method in Equation <b>(9)</b> is the unique natural number \( m \) such that
+        \[ d_0 = d_1 = \cdots = d_m = 0 \neq d_{m+1}. \]
+      </p>
+      <p>
+        <b>EXAMPLE 1</b> What is the order of the method described by the following equation?
+
+        \[ x_n - x_{n-2} = \frac{1}{3}h(f_n + 4f_{n-1} + f_{n-2}). \]
+
+        <b>Solution.</b> Firstly, we rewrite the equation in the form of Equation <b>(9)</b>:
+        \[
+        \begin{align}
+        x_n - x_{n-2} &= \frac{1}{3}h(f_n + 4f_{n-1} + f_{n-2}) \\
+        x_n + 0\cdot x_{n-1} - x_{n-2} &= h\left(\frac{1}{3}f_n + \frac{4}{3}f_{n-1} + \frac{1}{3}f_{n-2}\right)
+        \end{align}
+        \]
+        And we have to match it to
+        \[ a_2 x_n + a_{1} x_{n-1} + a_0 x_{n-2} = h \left[ b_2 f_n + b_{1} f_{n-1} + b_0 f_{n-2} \right]. \]
+        The vector \((a_0, a_1, a_2)\) is \((-1, 0, 1)\) and the vector \((b_0, b_1, b_2)\) is \(\left(\frac{1}{3}, \frac{4}{3}, \frac{1}{3}\right)\). Thus, the \( d_i \) are
+        \[
+        \begin{align}
+        d_0 &= a_0 + a_1 + a_2 = 0 \\
+        d_1 &= -b_0 + (a_1 - b_1) + (2a_2 - b_2) = 0 \\
+        d_2 &= \left( \frac{1}{2}a_1 - b_1 \right) + (2a_2 - 2b_2) = 0 \\
+        d_3 &= \left( \frac{1}{6}a_1 - \frac{1}{2}b_1 \right) + \left( \frac{4}{3}a_2 - 2b_2 \right) = 0 \\
+        d_4 &= \left( \frac{1}{24}a_1 - \frac{1}{6}b_1 \right) + \left( \frac{2}{3}a_2 - \frac{4}{3}b_2 \right) = 0 \\
+        d_5 &= \left( \frac{1}{120}a_1 - \frac{1}{24}b_1 \right) + \left( \frac{4}{15}a_2 - \frac{2}{3}b_2 \right) = -\frac{1}{90}
+        \end{align}
+        \]
+        The order of the method is \(4\).
+      </p>
+      <p>
+        <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page 554.</i></b>
       </p>
     </section>
 
