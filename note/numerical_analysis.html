@@ -50,6 +50,9 @@
       <a href="#gaussian_quadrature_error_analysis">Error Analysis for Gaussian Quadrature</a>
       <a href="#composite_formulae">Composite Formulae</a>
       <a href="#theta_method">\(\theta\)-Method</a>
+      <a href="#error">Error</a>
+      <a href="#initial_value_problems">Initial Value Problem</a>
+      <a href="#stability">Stability</a>
       <a href="#References">References</a>
     </nav>
     <script src="click.js"></script>
@@ -459,7 +462,7 @@
     <section id="theta_method">
       <h2>\(\theta\)-Method</h2>
       <p>
-        <b>Definition(Theta methods).</b> We consider methods of the form \[
+        <b>Theta methods.</b> We consider methods of the form \[
         y_{n+1} = y_n + h [ \theta f(t_n, y_n) + (1 - \theta) f(t_{n+1},
         y_{n+1}) ], \quad n = 0, 1, \ldots, \] where \( \theta \in [0, 1] \) is
         a parameter: - If \( \theta = 1 \), we recover Euler's method. - If \(
@@ -821,7 +824,6 @@
       </p>
       <p>
         <b>Note.</b> We still require only simple roots of magnitude one. Also, note these definitions refer to the case \( h = 0 \).
-
       </p>
       <h3>Strong Stability</h3>
       <p>
@@ -842,6 +844,14 @@
         <p>
           <b>Definition.</b> A linear multistep method is said to be <i><b>A-stable</b></i> if its region of absolute stability contains the negative (left) complex half-plane.
         </p>
+      <p>
+        <b>Second Barrier Theorem</b>:
+      </p>
+        <ul>
+            <li>No explicit linear multistep method is A-stable.</li>
+            <li>No A-stable linear multistep method can have order greater than 2.</li>
+            <li>The second-order A-stable linear multistep method with the smallest error constant is the trapezium rule method.</li>
+        </ul>
         <p>
             <b><i>"Introduction to Numerical Analysis", page 348.</i></b>
         </p>
