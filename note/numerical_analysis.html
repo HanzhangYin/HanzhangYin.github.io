@@ -817,6 +817,10 @@
       </p>
       <h3>Weakly Stability</h3>
       <p>
+        A method is said to be <b>weakly unstable</b> if \( p \) has a zero \( \lambda \) such that \( \lambda \neq 1, |\lambda| = 1 \), and \( q(\lambda) < \lambda p'(\lambda) \). Show that the Milne method given by Equation (12) is weakly unstable.
+      </p>
+      <p>Now, we will introduce an alternate version of the definition.</p>
+      <p>
         <b>Definition.</b> A linear multistep method is strongly stable if all roots of \(\rho(z)\) are \(\leq 1\) in magnitude and only one root has magnitude one.
         If more than one root has magnitude one, the method is called weakly or conditionally stable. Note, we still require only simple roots of magnitude one. Also, note these definitions refer to the case \( h = 0 \).
       </p>
@@ -873,10 +877,9 @@
         </li>
         <li>
           <b>Householder Transformation.</b> The Householder
-          transformation is a reflection across a plane. Given a vector \( x \),
-          the Householder transformation \( H \) is defined as \[ H = I - 2
-          \frac{vv^*}{v^*v}, \] where \( v = x - \text{sign}(x_1) \|x\|_2 e_1 \)
-          and \( e_1 \) is the first unit vector.
+          transformation is a reflection across a plane. Given a vector \( x \), the Householder transformation \( H \) is defined as
+          \[ H = I - 2 \frac{vv^*}{v^*v}, \]
+          where \( v = x - \text{sign}(x_1) \|x\|_2 e_1 \) and \( e_1 \) is the first unit vector.
         </li>
         <li>
           <b>Givens Rotation.</b> The Givens rotation is a rotation in the plane spanned by two vectors.
