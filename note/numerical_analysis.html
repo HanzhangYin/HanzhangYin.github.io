@@ -822,11 +822,22 @@
       </p>
       <h3>Strong Stability</h3>
       <p>
-        <b>Definition.</b> A multistep method is said to be \textit{strongly stable} if \( p(1) = 0, p'(1) \neq 0 \), and all other roots of \( p \) satisfy the inequality \( |z| < 1 \).
+        <b>Definition.</b> A multistep method is said to be <i><b>strongly stable</b></i> if \( p(1) = 0, p'(1) \neq 0 \), and all other roots of \( p \) satisfy the inequality \( |z| < 1 \).
       </p>
       <p>
         <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page 564.</i></b>
       </p>
+      <h3>Absolute Stability</h3>
+      <p>
+        <b>Definition.</b> A linear multistep method is said to be <i><b>absolutely stable</b></i> for a given value of \( \lambda h \) if each root \(z_r = z_r(\lambda h)\) of the associated stability polynomial \(\pi(\cdot; \lambda h)\) satisfies \(|z_r(\lambda h)| < 1\).
+      </p>
+      <h3>\(A\)-stable</h3>
+        <p>
+          <b>Definition.</b> A linear multistep method is said to be <i><b>A-stable</b></i> if its region of absolute stability contains the negative (left) complex half-plane.
+        </p>
+        <p>
+            <b><i>"Introduction to Numerical Analysis", page 348.</i></b>
+        </p>
     </section>
 
     <br />
@@ -1199,7 +1210,7 @@
         y_n + h f_{n+1}, \] which is implicit.
       </p>
       <p>
-        \(\textbf{Solution (b). }\)The local truncation error is given by
+        <b>Solution (b).</b> The local truncation error is given by
         \[\tau_{n+1} = y(t_{n+1}) - y_{n+1} - h(\theta f(t_{n+1}, y(t_{n+1})) +
         (1 - \theta) f(t_n, y(t_n))).\] When \(\theta = 0\), we have
         \[\tau_{n+1} = y(t_{n+1}) - y_n - h f(t_n, y(t_n)),\] which is the local
