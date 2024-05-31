@@ -1080,6 +1080,15 @@
         An \( n \times n \) Hermitian complex matrix \( M \) is said to be <i><b>positive semi-definite</b></i> or <i><b>non-negative-definite</b></i> if \( x^* M x \geq 0 \) for all \( x \) in \( \mathbb{C}^n \). Formally,
         \[ M \text{ positive semi-definite} \iff x^* M x \geq 0 \text{ for all } x \in \mathbb{C}^n \]
       </p>
+      <p>
+        <b>Theorem.</b> A matrix \( M \) is positive-definite if and only if it satisfies any of the following equivalent conditions:
+      </p>
+      <ul>
+        <li>\( M \) is congruent with a diagonal matrix with positive real entries.</li>
+        <li>\( M \) is symmetric or Hermitian, and all its eigenvalues are real and positive.</li>
+        <li>\( M \) is symmetric or Hermitian, and all its leading principal minors are positive.</li>
+        <li>There exists an invertible matrix \( B \) with conjugate transpose \( B^* \) such that \( M = B^* B \).</li>
+      </ul>
     </section>
 
     <br>
