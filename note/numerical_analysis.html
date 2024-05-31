@@ -741,6 +741,30 @@
         method.
       </p>
       <p>
+        In order to have better understanding of the order of the Multistep methods, we will define the following function
+        \[ Lx = \sum_{i=0}^{k} \left[ a_i x(ih) - h b_i x'(ih) \right] a. \]
+        However, in the following analysis, we assume that \( x \) is represented by its Taylor series at \( t = 0 \). By using the Taylor series for \( x \), one can express \( L \) in this form:
+
+        \[ Lx = d_0 x(0) + d_1 h x'(0) + d_2 h^2 x''(0) + \cdots \tag{11} \]
+
+        To compute the coefficients, \( d_i \), in Equation (11), we write the Taylor series for \( x \) and \( x' \):
+
+        \[ x(ih) = \sum_{j=0}^{\infty} \frac{(ih)^j}{j!} x^{(j)}(0) \]
+
+        \[ x'(ih) = \sum_{j=0}^{\infty} \frac{(ih)^j}{j!} x^{(j+1)}(0) \]
+        These series are then substituted into Equation <b>(10)</b>. Rearranging the result in powers of \( h \), we obtain an equation having the form of <b>(11)</b>, with these values of \( d_i \):
+        \[
+        \begin{aligned}
+        d_0 &= \sum_{i=0}^{k} a_i \\
+        d_1 &= \sum_{i=0}^{k} (i a_i - b_i) \\
+        d_2 &= \sum_{i=0}^{k} \left( \frac{1}{2} i^2 a_i - i b_i \right) \\
+        &\vdots \\
+        d_j &= \sum_{i=0}^{k} \left( \frac{i^j}{j!} a_i - \frac{i^{j-1}}{(j-1)!} b_i \right) \quad (j \geq 1)
+        \end{aligned} \tag{12}
+        \]
+        Here we use \( 0! = 1 \) and \( i^0 = 1 \), of course.
+      </p>
+      <p>
         <b
           ><i
             >"Numerical Analysis: Mathematics of Scientific Computing", page.
