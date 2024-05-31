@@ -54,6 +54,7 @@
       <a href="#initial_value_problems">Initial Value Problem</a>
       <a href="#stability">Stability</a>
       <a href="#positive_definite">Positive Definite</a>
+      <a href="#gerschgorin_theorem">Gerschgorin Theorem</a>
       <a href="#rayleigh_quotient">Rayleigh Quotient</a>
       <a href="#References">References</a>
     </nav>
@@ -1093,12 +1094,49 @@
 
     <br>
 
+    <section id = "gerschgorin_theorem">
+      <p>
+        <b>Theorem [Row version Gerschgorin’s Theorem]</b> Let \( A \in \mathbb{C}^{m \times m} \). Consider \( m \) disks in the complex plane:
+        \[ D_i = \left\{ z \mid |z - a_{ii}| \leq \sum_{j \neq i} |a_{ij}| = |a_{i1}| + \ldots + |a_{i,i-1}| + |a_{i,i+1}| + \ldots + |a_{im}| \right\}. \]
+        Then we have the following results.
+      </p>
+      <ul>
+        <li>
+          (a) Any eigenvalue \( \lambda \in \Lambda(A) \) must lie in at least one of these disks.
+        </li>
+        <li>
+          (b) Suppose the \( m \) disks form \( n \) disjoint regions \( \mathcal{R}_1, \ldots, \mathcal{R}_n \), and each \( \mathcal{R}_k \) (\( 1 \leq k \leq n \)) is connected and consists of \( p_k \) disks. Then for each \( k \) from 1 to \( n \), exactly \( p_k \) eigenvalues of \( A \) are in \( \mathcal{R}_k \).
+        </li>
+      </ul>
+    </section>
+
+    <br>
+
     <section id = "rayleigh_quotient">
       <h2>Rayleigh Quotient</h2>
       <p>
         <b>Definition.</b> Let \( A \in \mathbb{C}^{m \times m} \). For a given vector \( 0 \neq x \in \mathbb{C}^m \), the Rayleigh quotient of \( x \) is the scalar defined by
         \[ r(x) = \frac{x^* A x}{x^* x} \]
       </p>
+      <p>
+        <b>Algorithm: Rayleigh quotient iteration</b>
+      </p>
+      <p>
+        Choose an initial vector \( x^{(0)} \in \mathbb{C}^m \) with \( \|x^{(0)}\|_2 = 1 \).
+      </p>
+      <p>
+        Compute \( \mu^{(0)} = (x^{(0)})^* A x^{(0)} \).
+      </p>
+      <p>
+        For \( k = 1, 2, \ldots \)
+      </p>
+      <ul>
+        <li>Solve \( (A - \mu^{(k-1)} I) y^{(k)} = x^{(k-1)} \) for \( y^{(k)} \)</li>
+        <li>Compute \( \nu_k = \|y^{(k)}\|_2 \)</li>
+        <li>Compute \( x^{(k)} = y^{(k)} / \nu_k \)</li>
+        <li>Compute \( \mu^{(k)} = (x^{(k)})^* A x^{(k)} \)</li>
+      </ul>
+      <p>End</p>
     </section>
 
     <br>
