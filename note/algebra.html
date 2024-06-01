@@ -793,16 +793,16 @@
       <span class = 'keyword'>sage:</span> R.<<span class = 'variable'>x</span>> = QQ['x']
       <span class = 'keyword'>sage:</span>
       <span class = 'keyword'>sage:</span> <span class = 'comment'># Define the polynomials</span>
-      <span class = 'keyword'>sage:</span> f = x^3 + 2*x^2 + 3*x + 4
-      <span class = 'keyword'>sage:</span> g = x + 1
+      <span class = 'keyword'>sage:</span> f = x^<span class = 'number'>3</span> + <span class = 'number'>2</span>*x^<span class = 'number'>2</span> + <span class = 'number'>3</span>* + <span class = 'number'>4</span>
+      <span class = 'keyword'>sage:</span> g = x + <span class = 'number'>1</span>
       <span class = 'keyword'>sage:</span>
       <span class = 'keyword'>sage:</span> <span class = 'comment'># Perform the division to get quotient and remainder</span>
       <span class = 'keyword'>sage:</span> quotient, remainder = f.quo_rem(g)
       <span class = 'keyword'>sage:</span>
       <span class = 'keyword'>sage:</span> <span class = 'comment'># Display the results</span>
-      <span class = 'keyword'>sage:</span> print("Quotient:", quotient)
+      <span class = 'keyword'>sage:</span> <span class = 'function'>print</span>("Quotient:", quotient)
       <span class = 'outcome'>Quotient: x^2 + x + 2</span>
-      <span class = 'keyword'>sage:</span> print("Remainder:", remainder)
+      <span class = 'keyword'>sage:</span> <span class = 'function'>print</span>("Remainder:", remainder)
       <span class = 'outcome'>Remainder: 2</span>
       </code></pre>
         </div>
@@ -940,6 +940,12 @@
     <section id='field_extension'>
       <h2>Field Extension</h2>
       <p>
+        <b>Proposition.</b> A splitting field of a polynomial of degree \( n \) over \( F \) is of degree at most \( n! \) over \( F \).
+      </p>
+      <p>
+        <i><b>"Abstract Algebra", Page 538</b></i>
+      </p>
+      <p>
         \(\textbf{Definition. }\) Suppose that \(F\subset K\) and \([K: F]\lt\infty\). We say that \(\alpha\in K\) is a \(\textit{primitive element}\) for \(F\subset K\) if \(K = F(\alpha)\).
       </p>
       <p>
@@ -1058,13 +1064,29 @@
         </ul>
     </section>
 
+    <br>
 
     <section id = 'galois_group'>
       <h2>Galois Group</h2>
       <p>
-        \(\textbf{Definition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is the set
+        <b>Definition.</b> Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is the set
         \[ \{\sigma: L \rightarrow L \mid \sigma \text{ is an automorphism, } \sigma(a) = a \text{ for all } a \in F\}. \]
         In other words, \( \text{Gal}(L/F) \) consists of all automorphisms of \( L \) that are the identity on \( F \). The basic structure of \( \text{Gal}(L/F) \) is as follows.
+      </p>
+      <p>
+        <b>Definition.</b> Let \( K / F \) be a finite extension. Then \( K \) is said to be Galois over \( F \) and \( K / F \) is a Galois extension if \( | \text{Aut}(K / F) | = [K : F] \). If \( K / F \) is Galois the group of automorphisms \( \text{Aut}(K / F) \) is called the Galois group of \( K / F \), denoted \( \text{Gal}(K / F) \).
+      </p>
+      <p>
+        <b>Corollary.</b> If \( K \) is the splitting field over \( F \) of a separable polynomial \( f(x) \) then \( K / F \) is Galois.
+      </p>
+      <p>
+        <i><b>"Abstract Algebra", Page 562</b></i>
+      </p>
+      <p>
+        <b>Definition.</b> If \( f(x) \) is a separable polynomial over \( F \), then the Galois group of \( f(x) \) over \( F \) is the Galois group of the splitting field of \( f(x) \) over \( F \).
+      </p>
+      <p>
+        <i><b>"Abstract Algebra", Page 563</b></i>
       </p>
       <p>
       \(\textbf{Theorem. }\) If \( L \) is the splitting field of a separable polynomial in \( F[x] \), then the Galois group of \( f \) over \( F \) has order \( \left| \text{Gal}(L/F) \right| = [L : F] \).
@@ -1248,10 +1270,12 @@
         \[
         \begin{align}
         f(x) &= f'(x)\left(\frac13x\right) + \left(\frac23 x + 2021\right) \\
-        f'(x) &= \left(\frac23 x + 2021\right)\left(\frac92x\right) + \\
+        f'(x) &= \left(\frac23 x + 2021\right)\left(\frac92x - \frac{54567}{4}\right) + \frac{110279911}{4}\\
+        \frac23 x + 2021 &= \frac{110279911}{4}\left(\frac{8}{330839733}x + \frac{8084}{110279911}\right) + 0\\
         \end{align}
         \]
         Then we can know that the <b>GCD</b> of \(f(x)\) and \(f'(x)\) is \(1\). Hence, we can know that the polynomial is separable.
+        Once, we know that \(f(x) = x^3 + x + 2021\) is separable, then we can know that the Galois group of \(f(x)\) over \( \mathbb{Q} \) is \(S_3\).
       </p>
     </section>
 
