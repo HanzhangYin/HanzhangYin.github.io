@@ -786,6 +786,27 @@
       <p>
 
       </p>
+      <div class="code-box-container">
+        <div class="code-box">
+      <pre><code>
+      <span class = 'keyword'>sage:</span> <span class = 'comment'># Define the polynomial ring over QQ</span>
+      <span class = 'keyword'>sage:</span> R.<<span class = 'variable'>x</span>> = QQ['x']
+      <span class = 'keyword'>sage:</span>
+      <span class = 'keyword'>sage:</span> <span class = 'comment'># Define the polynomials</span>
+      <span class = 'keyword'>sage:</span> f = x^3 + 2*x^2 + 3*x + 4
+      <span class = 'keyword'>sage:</span> g = x + 1
+      <span class = 'keyword'>sage:</span>
+      <span class = 'keyword'>sage:</span> <span class = 'comment'># Perform the division to get quotient and remainder</span>
+      <span class = 'keyword'>sage:</span> quotient, remainder = f.quo_rem(g)
+      <span class = 'keyword'>sage:</span>
+      <span class = 'keyword'>sage:</span> <span class = 'comment'># Display the results</span>
+      <span class = 'keyword'>sage:</span> print("Quotient:", quotient)
+      <span class = 'outcome'>Quotient: x^2 + x + 2</span>
+      <span class = 'keyword'>sage:</span> print("Remainder:", remainder)
+      <span class = 'outcome'>Remainder: 2</span>
+      </code></pre>
+        </div>
+      </div>
     </section>
 
     <br>
@@ -903,13 +924,6 @@
       </p>
       <div class="code-box-container">
       <div class="code-box">
-      <pre><code>
-      <span class = 'keyword'>sage:</span> var('a')
-      <span class = 'keyword'>sage:</span> a = sqrt(<span class = 'number'>2</span>); a
-      <span class = 'outcome'>sqrt(2)</span>
-      <span class = 'keyword'>sage:</span> p = a.minpoly(); p
-      <span class = 'outcome'>x^2 - 2</span>
-      </code></pre>
       <pre><code>
       <span class="keyword">sage:</span> <span class="function">var</span>(<span class="string">'a'</span>)
       <span class="keyword">sage:</span> a <span class="operator">=</span> <span class="function">sqrt</span><span class="group">(</span><span class="number">2</span><span class="group">)</span>; a
