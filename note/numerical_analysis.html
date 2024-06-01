@@ -1070,43 +1070,6 @@
 
     <br>
 
-    <section>
-      <h2>Qualifying Problems (January 2022)</h2>
-      <p>
-        1. Consider the iteration \[ x_{n+1} = \frac{1}{2} x_n + \frac{5}{2x_n},
-        \quad n = 0, 1, \ldots \]
-      </p>
-      <ul>
-        <li>
-          Show that if \(x_0 > 0\), then \(x_n \geq \sqrt{5}\) for \(n =
-          1,2,\ldots\).
-        </li>
-        <li>
-          se the Contractive Mapping Theorem to show that the iteration is
-          convergent.
-        </li>
-        <li>
-          Show that the order of convergence of the iteration is quadratic.
-        </li>
-      </ul>
-      <h2>Solutions</h2>
-      <p>
-        \(\textbf{Proof of 1.}\) Let \(f(x) = \frac{1}{2}x + \frac{5}{2x}\).
-        Hence, we can calculate the derivative of \(f(x)\) as \[ f'(x) =
-        \frac{1}{2} - \frac{5}{2x^2} = \frac{1}{2}\left(1 - \frac{5}{x^2}\right)
-        \] Since \(x_0 > 0\), we just assume that \(x>0\). When \( 0 \lt x \leq
-        \sqrt{5} \), we have \( f'(x) \lt 0 \). When \( x \geq \sqrt{5} \), we
-        have \( f'(x) \geq 0 \). Thus, we can know that when \( x = \sqrt{5} \),
-        \( f(x) \) is at minimum for \( f(x) \) where \( x \geq 0 \). Then, \[
-        \min f(x) = f(\sqrt{5}) = \frac{1}{2} \sqrt{5} + \frac{5}{2\sqrt{5}} =
-        \frac{1}{2} \sqrt{5} + \frac{1}{2} \sqrt{5} = \sqrt{5}. \] Therefore, we
-        have \( f(x) \geq \sqrt{5} \). In other words, if \( x_0 > 0 \), then \(
-        x_n \geq \sqrt{5} \). \[ \tag*{$\square$} \]
-      </p>
-    </section>
-
-    <br>
-
     <section id = "positive_definite">
       <h2>Positive Definite</h2>
       <p>
@@ -1230,7 +1193,44 @@
 
     <br>
 
-    <h2>Qualifying Exam Problems (August 2022)</h2>
+    <section>
+      <h2>Qualify Exam Problems (January 2022)</h2>
+      <p>
+        1. Consider the iteration \[ x_{n+1} = \frac{1}{2} x_n + \frac{5}{2x_n},
+        \quad n = 0, 1, \ldots \]
+      </p>
+      <ul>
+        <li>
+          Show that if \(x_0 > 0\), then \(x_n \geq \sqrt{5}\) for \(n =
+          1,2,\ldots\).
+        </li>
+        <li>
+          se the Contractive Mapping Theorem to show that the iteration is
+          convergent.
+        </li>
+        <li>
+          Show that the order of convergence of the iteration is quadratic.
+        </li>
+      </ul>
+      <h2>Solutions</h2>
+      <p>
+        \(\textbf{Proof of 1.}\) Let \(f(x) = \frac{1}{2}x + \frac{5}{2x}\).
+        Hence, we can calculate the derivative of \(f(x)\) as \[ f'(x) =
+        \frac{1}{2} - \frac{5}{2x^2} = \frac{1}{2}\left(1 - \frac{5}{x^2}\right)
+        \] Since \(x_0 > 0\), we just assume that \(x>0\). When \( 0 \lt x \leq
+        \sqrt{5} \), we have \( f'(x) \lt 0 \). When \( x \geq \sqrt{5} \), we
+        have \( f'(x) \geq 0 \). Thus, we can know that when \( x = \sqrt{5} \),
+        \( f(x) \) is at minimum for \( f(x) \) where \( x \geq 0 \). Then, \[
+        \min f(x) = f(\sqrt{5}) = \frac{1}{2} \sqrt{5} + \frac{5}{2\sqrt{5}} =
+        \frac{1}{2} \sqrt{5} + \frac{1}{2} \sqrt{5} = \sqrt{5}. \] Therefore, we
+        have \( f(x) \geq \sqrt{5} \). In other words, if \( x_0 > 0 \), then \(
+        x_n \geq \sqrt{5} \). \[ \tag*{$\square$} \]
+      </p>
+    </section>
+
+    <br>
+
+    <h2>Qualify Exam Problems (August 2022)</h2>
     <section id="ku_2022_8_1">
       <p>
         \(\textbf{Problem 1. }\)Consider the interpolation problem: Find a
@@ -1353,6 +1353,85 @@
         \[ \sigma - \tilde \sigma > \|E\|_2. \]
       </p>
     </section>
+
+    <br>
+
+    <section>
+      <h2>Qualify Exam Problems (January 2023)</h2>
+      <p>
+        <b>Problem 4.</b> For \( A \in \mathbb{R}^{n \times n} \) and \( A = A^T \), Rayleigh Quotient Iteration is defined by:
+      </p>
+      <p>
+        select \( \vec{v}^{(0)} \in \mathbb{R}^n \) such that \( \|\vec{v}^{(0)}\|_2 = 1 \)
+      </p>
+      <p>
+        for \( k = 1, 2, \ldots \)
+      </p>
+      <p>
+        compute \( \lambda^{(k-1)} = [\vec{v}^{(k-1)}]^T A \vec{v}^{(k-1)} \)
+      </p>
+      <p>
+        solve \( (A - \lambda^{(k-1)}I)\vec{w} = \vec{v}^{(k-1)} \) for \( \vec{w} \)
+      </p>
+      <p>
+        compute \( \vec{v}^{(k)} = \vec{w} / \|\vec{w}\|_2 \).
+      </p>
+      <p>
+        Assume \( A = \begin{bmatrix} d_1 & 0 \\ 0 & d_2 \end{bmatrix} \) with \( d_1 > d_2 \), and \( \vec{v}^{(k-1)} = [v_1^{(k-1)}, v_2^{(k-1)}]^T \) with \( v_1^{(k-1)} \neq 0 \) and \( v_2^{(k-1)} \neq 0 \).
+      </p>
+        <ul>
+            <li>
+                (a) Express components of \( \vec{v}^{(k)} = [v_1^{(k)}, v_2^{(k)}]^T \) in terms of \( v_1^{(k-1)} \) and \( v_2^{(k-1)} \).
+            </li>
+            <li>
+                (b) Assume, in addition, that \( v_1^{(k-1)} \approx 1 \) and \( v_2^{(k-1)} \approx 0 \). Show that \( \|\vec{v}^{(k)} - \vec{e}_1\|_2 \approx \|\vec{v}^{(k-1)} - \vec{e}_1\|_2^3 \), where \( \vec{e}_1 = [1, 0]^T \). What is the significance of this result? <b>Hint:</b> \( \sqrt{1 + x} \approx 1 + x/2 \) for \( x \approx 0 \).
+            </li>
+        </ul>
+      <p>
+        <b>Solution (a).</b> For simplicity, we denote \(a = v_1^{(k-1)}\in\mathbb{R}\) and \(b = v_2^{(k-1)}\in\mathbb{R}\). Then, we have
+        \[ v^{(k-1)} = [a, b]^T. \]
+        Thus, we have
+        \[
+        \begin{align*}
+        \lambda^{(k-1)} &= [v^{(k-1)}]^T A v^{(k-1)} = [a, b] \begin{bmatrix} d_1 & 0 \\ 0 & d_2 \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix} = [a, b] \begin{bmatrix} d_1 a \\ d_2 b \end{bmatrix} = d_1 a^2 + d_2 b^2, \\
+        A- \lambda^{(k-1)}I &= \begin{bmatrix} d_1 & 0 \\ 0 & d_2 \end{bmatrix} - \begin{bmatrix} d_1 a^2 + d_2 b^2 & 0 \\ 0 & d_1 a^2 + d_2 b^2 \end{bmatrix} = \begin{bmatrix} d_1 - d_1 a^2 - d_2 b^2 & 0 \\ 0 & d_2 - d_1 a^2 - d_2 b^2 \end{bmatrix}. \\
+        \end{align*}
+        \]
+        Since, we have \(v^{(k-1)} = w/\|w\|_2\), we have the norm of \(v^{(k-1)}\) is 1. Therefore, we have \(a^2 + b^2 = 1\). Then, we have
+        \[
+        A- \lambda^{(k-1)}I = \begin{bmatrix} d_1(1 - a^2) - d_2b^2 & 0 \\ 0 & d_2(1 - b^2) -d_1a^2 \end{bmatrix} = \begin{bmatrix} d_1b^2 - d_2b^2 & 0 \\ 0 & d_2a^2 -d_1a^2 \end{bmatrix} = \begin{bmatrix} (d_1 - d_2)b^2 & 0 \\ 0 & (d_2 - d_1)a^2 \end{bmatrix}.
+        \]
+        Since, we know that \(b_1>b_2\) and neither \(a\) nor \(b\) is zero, we have \((d_1 - d_2)b^2\neq 0\) and \((d_2 - d_1)a^2\neq 0\).
+        Thus, we can know that \(A - \lambda^{(k-1)}I\) is non-singular. Therefore, we have the inverse of \(A - \lambda^{(k-1)}I\) as
+        \[
+        (A - \lambda^{(k-1)}I)^{-1} = \begin{bmatrix} \frac{1}{(d_1 - d_2)b^2} & 0 \\ 0 & \frac{1}{(d_2 - d_1)a^2} \end{bmatrix}.
+        \]
+        Then, we have
+        \[
+        w = (A - \lambda^{(k-1)}I)^{-1}v^{(k-1)} = \begin{bmatrix} \frac{1}{(d_1 - d_2)b^2} & 0 \\ 0 & \frac{1}{(d_2 - d_1)a^2} \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} \frac{a}{(d_1 - d_2)b^2} \\ \frac{b}{(d_2 - d_1)a^2} \end{bmatrix}.
+        \]
+        Hence, we have
+        \[
+        \|w\|_2 = \sqrt{\left(\frac{a}{(d_1 - d_2)b^2}\right)^2 + \left(\frac{b}{(d_2 - d_1)a^2}\right)^2} = \sqrt{\frac{a^2}{(d_1 - d_2)^2b^4} + \frac{b^2}{(d_2 - d_1)^2a^4}} = \sqrt{\frac{a^6}{(d_1 - d_2)^2a^4b^4} + \frac{b^6}{(d_2 - d_1)^2a^4b^4}}.
+        \]
+        Given that \(b_1>b_2\),
+        \[
+        \begin{align}
+        \|w\|_2 &= \sqrt{\frac{a^6 + b^6}{(d_1 - d_2)^2a^4b^4}} = \dfrac{\sqrt{a^6 + b^6}}{(d_1 - d_2)a^2b^2}, \\
+        \vec{v}^{(k)} &= \dfrac{\vec{w}}{\|\vec{w}\|_2} = \dfrac{\begin{bmatrix} \frac{a}{(d_1 - d_2)b^2} \\ \frac{b}{(d_2 - d_1)a^2} \end{bmatrix}}{\dfrac{\sqrt{a^6 + b^6}}{(d_1 - d_2)a^2b^2}} = \begin{bmatrix} \dfrac{a^3}{\sqrt{a^6 + b^6}} \\ -\dfrac{b^3}{\sqrt{a^6 + b^6}} \end{bmatrix}.
+        \end{align}
+        \]
+        Thus, we have the components of \( \vec{v}^{(k)} \) in terms of \( v_1^{(k-1)} \) and \( v_2^{(k-1)} \) as
+        \[
+        \begin{align}
+        v_1^{(k)} &= \dfrac{(v_1^{(k)})^3}{\sqrt{(v_1^{(k)})^6 + (v_2^{(k)})^6}}, \\
+        v_2^{(k)} &= -\dfrac{(v_2^{(k)})^3}{\sqrt{(v_1^{(k)})^6 + (v_2^{(k)})^6}}.
+        \end{align}
+        \]
+      </p>
+    </section>
+
+    <br>
 
     <section id="August_2023">
       <h2>Qualify Exam Problems (August 2023)</h2>
