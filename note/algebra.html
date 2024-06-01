@@ -1197,6 +1197,42 @@
 
     <br>
 
+    <section>
+      <p>
+        <b>Question 5.</b> Find the Galois group of \( x^3 + x + 2021 \) over \( \mathbb{Q} \). (2021 = 43 × 47)
+      </p>
+      <p>
+        <b>Proof.</b> Firstly, we want to show that the polynomial is irreducible over \( \mathbb{Q} \).
+        Given that the degree of the polynomial is degree \(3\). Suppose that it is reducible, then it can only be factored into a polynomial of degree \(2\) and a polynomial of degree \(1\).
+        If it can be factored as a polynomial of degree \(1\), it means it has a root in \( \mathbb{Q} \).
+        Since we know that \(p(x)\) is an irreducible polynomial over \( \mathbb{Q} \) if and only if it is an irreducible polynomial over \( \mathbb{Z} \).
+        For the other direction, we can know that if it is reducible over \( \mathbb{Q} \), then it is reducible over \( \mathbb{Z} \).
+        Then we can know that it has a root in \( \mathbb{Z} \). Now, suppose that \(a\) is a root of the polynomial, then we have
+        \[
+        \begin{align}
+        a^3 + a + 2021 &= 0\\
+        a^3 + a &= -2021\\
+        a(a^2 + 1) &= -2021\\
+        a(a^2 + 1) &= -43 \times 47\\
+        \end{align}
+        \]
+        In \(\mathbb{Z}\), we can know that each number of prime factorization. Hence, we can know that \(a^2+1\) is either \(43\) or \(47\).
+        Suppose that \(a^2 + 1 = 43\), then we have \(a^2 = 42\), which is not a perfect square. Hence, we have \(a^2 + 1 = 47\), then we have \(a^2 = 46\), which is not a perfect square.
+        Hence, it is a contradiction. Therefore, we can know that the polynomial is irreducible over \( \mathbb{Z} \), which implies that it is irreducible over \( \mathbb{Q} \).
+        Now, set \(f(x) = x^3 + x + 2021\), we take the derivative of \(f(x)\) and find that it is \(3x^2 + 1\).
+        We try to see what the <b>GCD</b> of \(f(x)\) and \(f'(x)\) is. We will use the Euclidean algorithm to find the <b>GCD</b>.
+        \[
+        \begin{align}
+        f(x) &= f'(x)\left(\frac13x\right) + \left(\frac23 x + 2021\right) \\
+        f'(x) &= \left(\frac23 x + 2021\right)\left(\frac92x\right) + \\
+        \end{align}
+        \]
+        Then we can know that the <b>GCD</b> of \(f(x)\) and \(f'(x)\) is \(1\). Hence, we can know that the polynomial is separable.
+      </p>
+    </section>
+
+    <br>
+
     <h2>KU 2022 (January)</h2>
       <section id = 'ku_2022_1_1'>
         <p>
