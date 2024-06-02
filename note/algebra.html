@@ -336,7 +336,7 @@
     <section id = 'solvable_group'>
       <h2>Solvable Group</h2>
       <p>
-        \(\textbf{Definition. }\) A finite group \( G \) is \textit{solvable} if there are subgroups
+        <b>Definition.</b> A finite group \( G \) is <i><b>solvable</b></i> if there are subgroups
         \[
         \{e\} = G_n \subseteq G_{n-1} \subseteq \cdots \subseteq G_1 \subseteq G_0 = G
         \]
@@ -394,14 +394,14 @@
           \]
           Thus, we have \(g\cdot G_i\subset h\cdot G_i\).
           Similarly, we can get \(g^{-1}h\in H_i\) from \(g\cdot H_i = h\cdot H_i\). Then, it shows that \(g^{-1}h\in G_i\), which implies that \(h\cdot G_i\subset g\cdot G_i\).
-          Hence, we have \(g\cdot G_i = h\cdot G_i\) (i.e. \varphi(g\cdot H_i) = \varphi(h\cdot H_i)\), and we showed the map is well-defined.
+          Hence, we have \(g\cdot G_i = h\cdot G_i\) (i.e. \(\varphi(g\cdot H_i) = \varphi(h\cdot H_i)\)), and we showed the map is well-defined.
           Next, we need to show that \(\varphi\) is a homomorphism.
           Let \(g, h\in H_{i+1}\), we have
           \[
           \begin{align}
             \varphi(g\cdot H_i)\cdot \varphi(h\cdot H_i) &= g\cdot G_i\cdot h\cdot G_i = g\cdot hG_i, \\
-            \varphi(gH_i\cdot hH_i) &= \varphi(g\cdot hH_i) &= g\cdot hG_i.
-        \end{align}
+            \varphi(gH_i\cdot hH_i) &= \varphi(g\cdot hH_i) = g\cdot hG_i.
+          \end{align}
           \]
           Thus, we have \(\varphi(g\cdot H_i)\cdot \varphi(h\cdot H_i) = \varphi(gH_i\cdot hH_i)\).
           After that, we want to show that \(\varphi\) is injective.
@@ -415,6 +415,49 @@
             \{e\} = \{e\}\cap H= H_0\subset H_1\subset \dots H_r = H\cap G,
           \]
           where each \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1}/H_i\) is abelian. Therefore, \(H\) is solvable.
+        Now we need to show that \(G/H\) is solvable.
+        We define \(K_i = G_i/H\) and want to show that \(K_i\) is normal in \(K_{i+1}\).
+        Let \(gH\in K_{i+1}\) and \(g'H\in K_i\). We have
+        \[
+          (gH)(g'H)(gH)^{-1} = gHg'Hg^{-1}H = g g'g^{-1}H.
+        \]
+        Since \(G_i\) is normal in \(G_{i+1}\), we have \(g g'g^{-1}\in G_i\), which implies that \(g g'g^{-1}H \in G_i/H = K_i\).
+        Hence, we show that \(K_i\) is normal in \(K_{i+1}\).
+        Now, we need to show that \(K_{i+1}/K_i\) is abelian.
+        If \(H\subset G_i\subset G_{i+1}\), we can know \(H\) is normal in \(G_i\) since \(H\) is normal in \(G\).
+        By the Third Isomorphism Theorem, we have
+        \[
+           G_{i+1}/G_i\cong (G_{i+1}/H)/(G_i/H).
+        \]
+        Then, we have \((G_{i+1}/H)/(G_i/H)\) is abelian since \(G_{i+1}/G_i\) is abelian by assumption.
+        (To be continued...)
+        Now, suppose that \(H\) is a normal subgroup of \(G\), and \(H\) and \(G/H\) are solvable.
+        We want to show that \(G\) is solvable. Since \(H\) is solvable, we have
+        \[
+        \{e\} = H_0\subset H_1\subset \dots H_n = H,
+        \]
+        where each \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1}/H_i\) is abelian.
+        Since \(G/H\) is solvable, we have
+        \[
+        H \subset G_1/H\subset \dots \subset G_m/H = G/H,
+        \]
+        where \(H\subset G_i\) for all \(i\).
+        Moreover, we have \(G_i/H\) is normal in \(G_{i+1}/H\) and \((G_{i+1}/H)/(G_i/H)\) is abelian.
+        Since \(G_i/H\) is normal in \(G_{i+1}/H\), let \(g\in G_{i+1}\) and \(g'\in G_i\), we have
+        \[
+        \begin{align}
+          (gH)(g'H)(gH)^{-1} &= gHg'Hg^{-1}H = g g'g^{-1}H\in G_i/H.
+        \end{align}
+        \]
+        It shows that \(g g'g^{-1}\in G_i\), which implies that \(G_i\) is normal in \(G_{i+1}\).
+        Since \((G_1/H)/H\cong G_1/H\), we have \(G_1/H\) is abelian.
+        Thus, we can have a chain such as
+        \[
+        \{e\} = H_0\subset H_1\subset \dots H_n = H\subset G_1\subset \dots \subset G_m = G,
+        \]
+        where each \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1}/H_i\) is abelian, and each \(G_i\) is normal in \(G_{i+1}\) and \(G_{i+1}/G_i\) is abelian.
+        Moreover, \(H\) is normal in \(G_1\) since \(H\) is normal in \(G\), and \(G_1/H\) is abelian.
+        Therefore, we have \(G\) is solvable. \(\blacksquare\)
       </p>
       <p>
           <i><b>"Algebra", Page 19</b></i>
