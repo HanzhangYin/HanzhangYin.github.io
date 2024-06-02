@@ -66,7 +66,7 @@
     <script src="highlight.js"></script><!--It is a link for highlight.js-->
     <script src = "mathjax_config.js"></script><!--It is a link for mathjax_configuration-->
     <h1>Algebra</h1>
-    
+
 
     <section>
       <p>
@@ -361,6 +361,64 @@
           (ii) There is a sequence of subgroups \( \{e\} \subseteq H_1 \subseteq H_2 \subseteq \cdots \subseteq H_{n-1} \subseteq H_n = G \) such that each \( H_i \) is a normal subgroup of \( H_{i+1} \) and the quotient group \( H_{i+1}/H_i \cong \mathbb{Z}_p \).
         </li>
       </ul>
+
+      <br>
+
+      <p>
+          <b>Theorem.</b> Let \(G\) be a group and \(H\) a normal subgroup. Then \(G\) is solvable if and only if \(H\) and \(G/H\) are solvable.
+      </p>
+      <p>
+          <b>Proof.</b> Firstly, we want to show that if \(G\) is solvable, then we have \(H\) is solvable, and \(G/H\) is solvable.
+          Given that \(G\) is solvable and \(H\) is normal. We can know that
+          \[
+            \{e\} = G_0\subset G_1\subset \dots G_r = G,
+          \]
+          where \(G_i\) is normal in \(G_{i+1}\) and \(G_{i+1}/G_i\) is abelian.
+          Now, we define \(H_{i} = H\cap G_i\).
+          Suppose that \(h'\in H_i\), we can know that for any \(h\in H_{i+1}\), we have \(h\cdot h'\cdot h^{-1}\in H\) since \(h, h', h^{-1}\in H\).
+          At the same time, we can know that \(h\cdot h'\cdot h^{-1}\in G_i\), since \(h'\in G_i\) and \(G_i\) is normal in \(G_{i+1}\).
+          Thus, we showed that \(h\cdot h'\cdot h^{-1}\in H\cap G_i = H_i\). Hence, we can know that \(H_i\) is normal in \(H_{i+1}\).
+          Now, we define a map \(\varphi: H_{i+1}/H_i\to G_{i+1}/G_i\) such as
+          \[
+            \varphi(g\cdot H_i) = g\cdot G_i.
+          \]
+          Firstly, we want to show that the map is well-defined.
+          Suppose that \(g\cdot H_i = h\cdot H_i\). Hence, we have \(h^{-1}\cdot g\in H_i\), which implies that \(h^{-1}g\in G_i\) for \(H_i\subset G_i\).
+          Thus, we can know that \(h^{-1}g\cdot G_i \subset G_i\). Hence, for any \(g'\in G_i\) we have
+          \[
+            h^{-1}g\cdot g'\in G_i,
+          \]
+          which implies that
+          \[
+            g\cdot g'\in h\cdot G_i, \text{ for any }g'\in G_i.
+          \]
+          Thus, we have \(g\cdot G_i\subset h\cdot G_i\).
+          Similarily, we can get \(g^{-1}h\in H_i\) from \(g\cdot H_i = h\cdot H_i\). Then, it shows that \(g^{-1}h\in G_i\), which implies that \(h\cdot G_i\subset g\cdot G_i\).
+          Hence, we have \(g\cdot G_i = h\cdot G_i\) (i.e. \varphi(g\cdot H_i) = \varphi(h\cdot H_i)\), and we showed the map is well-defined.
+          Next, we need to show that \(\varphi\) is a homomorphism.
+          Let \(g, h\in H_{i+1}\), we have
+          \[
+          \begin{align}
+            \varphi(g\cdot H_i)\cdot \varphi(h\cdot H_i) &= g\cdot G_i\cdot h\cdot G_i = g\cdot hG_i, \\
+            \varphi(gH_i\cdot hH_i) &= \varphi(g\cdot hH_i) &= g\cdot hG_i.
+        \end{align}
+          \]
+          Thus, we have \(\varphi(g\cdot H_i)\cdot \varphi(h\cdot H_i) = \varphi(gH_i\cdot hH_i)\).
+          After that, we want to show that \(\varphi\) is injective.
+          Suppose that \(\varphi(gH_i) = \varphi(hH_i)\) (i.e. \(gG_i = hG_i\)). Hence, we have \(h^{-1}g\in G_i\).
+          Since \(h, g\in H\), we have \(h^{-1}g\in H\), which implies that \(h^{-1}g\in H_i\). Again, we can get \(gH_i\subset hH_i\).
+          By the same process, we can get \(g^{-1}h\in G_i\), which will lead us to \(hH_i\subset gH_i\).
+          Thus, \(gH_i = hH_i\). Hence, \(\varphi\) is injective. It allows us to know that \(\varphi(H_{i+1}/H_i)\) is a subgroup of \(G_{i+1}/G_i\).
+          Since \(G_{i+1}/G_i\) is abelian by assumption, and \(H_{i+1}/H_i\cong \varphi(H_{i+1}/H_i)\subset G_{i+1}/G_i\), we can know that \(H_{i+1}/H_i\) is abelian for subgroup of an abelian group is abelian.
+          Thus, we have
+          \[
+            \{e\} = \{e\}\cup H= H_0\subset H_1\subset \dots H_r = H\cap G,
+          \]
+          where each \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1}/H_i\) is abelian. Therefore, \(H\) is solvable.
+      </p>
+      <p>
+          <i><b>"Algebra", Page 19</b></i>
+      </p>
     </section>
 
 
@@ -1549,7 +1607,26 @@
         <br>
 
         <p>
-          \(\textbf{Problem 5. }\)Let \( R \) be an integral domain with quotient field (i.e., field of fractions) \( K \). Let \( \mathcal{J} \) denote the collection of ideals \( (R : \alpha) \) such that \( \alpha \in K \), where \( (R : \alpha) := \{ r \in R \mid r\alpha \in R \} \). Show that \( R \) is a UFD if the following conditions hold (15 points):
+            <b>Problem 4.</b>Recall that a group \(G\) is said to be solvable if there exists a sequence of subgroups
+            \[
+                \{e\} = G_0\subset G_2\subset \dots \subset G_{n-1}\subset G_n = G,
+            \]
+            such that for each \(i\), \(G_i\) is a normal subgroup of \(G_{i+1}\) and the factor group \(G_{i+1}/G_i\) is abelian. Prove
+        </p>
+        <ul>
+            <li>
+                If \(G\) is solvable, then any quotient group of \(G\) is solvable.
+            </li>
+            <li>
+                If \(H, K\subset G\) are normal subgroups and both are solvable, prove that \(HK\) is solvable. What is just one of \(H, K\)are normal?
+                Verify this, or give a counterexample.
+            </li>
+        </ul>
+
+        <br>
+
+        <p>
+          <b>Problem 5.</b> Let \( R \) be an integral domain with quotient field (i.e., field of fractions) \( K \). Let \( \mathcal{J} \) denote the collection of ideals \( (R : \alpha) \) such that \( \alpha \in K \), where \( (R : \alpha) := \{ r \in R \mid r\alpha \in R \} \). Show that \( R \) is a UFD if the following conditions hold (15 points):
         </p>
         <ul>
           <li>
