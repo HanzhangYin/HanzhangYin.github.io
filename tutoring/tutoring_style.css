@@ -94,7 +94,6 @@
       width: 80%;
       font-size: 1em;
       padding: 12px;
-      /* hyphens: auto; */
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
@@ -155,7 +154,36 @@
       border: 0;
     }
 
+    .code-box {
+      background-color:#D0D0D0   ; 
+      padding: 2px 1px;
+      width: 80%; /* Adjust the width as needed */
+      /* max-height: 300px; Maximum height before scrolling  */
+      overflow: auto;
+      border: 0.5px solid #ddd;
+      font-family: monospace;
+      box-sizing: border-box; /* Includes padding and border in the width */
+    }
+    .code-box-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  .code-box code {
+      color: black;
   }
+.code-box .keyword { color:  #FF5F1F ; font-weight: bold; }
+.code-box .function { color: #0066ff; }
+.code-box .string { color: #a31515; }
+.code-box .comment { color: #008000; font-style: italic; }
+.code-box .number { color: #ff0000; }
+.code-box .operator { color: #DE3163; }
+.code-box .group { color: #4CBB17; }
+.code-box .outcome { color:  #0F52BA ; }
+  
+
+  }
+
   
 
 /* define styles for larger screens */
@@ -169,19 +197,20 @@
     color: #1a1a1a;
     background-color: #ededed;
   }
+
   body {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     max-width: 50em;
-    padding-left: 200px;  /* push all body content to the right by the width of the navbar */
+    padding-left: 350px;  /*push all body content to the right by the width of the navbar */
     padding-right: 30px;  
     padding-top: 30px;
-    padding-bottom: 30px;
-    /* hyphens: auto; */
+    padding-bottom: 30px; 
     overflow-wrap: break-word;
     text-rendering: optimizeLegibility;
     font-kerning: normal;
     font-family:  'Spectral', serif;
   }
+
   .navbar {
     overflow: hidden; 
     background-color: transparent;
@@ -237,32 +266,6 @@
   li > ol, li > ul {
     margin-top: 0;
   }
-  blockquote {
-    margin: 1em 0 1em 1.7em;
-    padding-left: 1em;
-    border-left: 2px solid #e6e6e6;
-    color: #606060;
-  }
-  code {
-    font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-    font-size: 85%;
-    margin: 0;
-    /* hyphens: manual; */
-  }
-  pre {
-    background-color: #d9d9d9; 
-    margin: 1em 0;
-    overflow: auto;
-  }
-  pre code {
-    padding: 0;
-    overflow: visible;
-    overflow-wrap: normal;
-  }
-  .sourceCode {
-   background-color: transparent;
-   overflow: visible;
-  }
   hr {
     background-color: #1a1a1a;
     border: none;
@@ -308,7 +311,6 @@
   #TOC a:not(:hover) {
     text-decoration: none;
   }
-  code{white-space: pre-wrap;}
   span.smallcaps{font-variant: small-caps;}
   div.columns{display: flex; gap: min(4vw, 1.5em);}
   div.column{flex: auto; overflow-x: auto;}
@@ -361,28 +363,48 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
+  .code-box {
+    background-color: #D0D0D0   ; 
+    padding: 2px 1px;
+    width: 100%; /* Adjust the width as needed */
+    max-width: 1500px;
+    max-height: 300px; /* Maximum height before scrolling */ 
+    overflow: auto;
+    border: 0.5px solid #ddd;
+    font-family: monospace;
+    box-sizing: border-box; /* Includes padding and border in the width */
+  }
+  .code-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+.code-box code {
+    color: black;
+}
+.code-box .keyword { color:  #FF5F1F ; font-weight: bold; } /* Keywords */
+.code-box .function { color: #0066ff; } /* Functions */
+.code-box .string { color: #a31515; } /* String literals */
+.code-box .comment { color: #008000; font-style: italic; } /* Comments */
+.code-box .number { color: #ff0000; } /* Numbers */
+.code-box .operator { color: #DE3163; } /* Operators */
+.code-box .group { color: #4CBB17; } /* Parentheses and Brackets */
+.code-box .outcome { color:  #0F52BA ; } /* Outcome */
+
 
 }
-  /* ul.task-list li input[type="checkbox"] {
-    width: 0.8em;
-    margin: 0 0.8em 0.2em -1.6em;
-    vertical-align: middle;
-  } */
   
   header {
     padding: 20px;
     text-align: center;
-    /* margin-left: 10px;  Add a left margin to the header equal to the width of the navbar plus a little extra */
   }
   
   section {
   width: 100%; /* Adjust this value to change the width of the section */
-  /*height: 100vh;  Set the height to 100% of the viewport height */
-  /*position: fixed;  This positions the element relative to the browser window */
-  /* margin-left: 10px;  Add a left margin to the sections equal to the width of the navbar plus a little extra */
   transition: background-color 1s; /* make the transition of the color */
   }
 
-  .highlight {
+.highlight {
     background-color: yellow;
   }
+
