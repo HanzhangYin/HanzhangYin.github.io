@@ -34,14 +34,46 @@
             <span class="visually-hidden">Menu</span>
         </label>
         <nav class="navbar">
+            <a href="#function">Function</a>
             <a href="#domain">Domain</a>
-            <a href="#References">References</a>
+            <a href="#range">Range</a>
+            <a href="#trigonometry">Trigonometry</a>
+            <a href="#secant_line">Secant Line</a>
+            <a href="#tangent_line">Tangent Line</a>
+            <a href="#average_velocity">Average Velocity</a>
+            <a href="#instantaneous_velocity">Instantaneous Velocity</a>
+            <a href="#limit">Limit of a Function</a>
+            <a href="#left_limit">Left and Right Limits</a>
+            <a href="#existence_of_limit">Existence of a Limit</a>
+            <a href="#law_of_limits">The Basic Law of Limits</a>
+<!--            <a href="#References">References</a>-->
         </nav>
         <script src="click.js"></script>
         <!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
         <h1>Note 1</h1>
 
-        <section id="Domain">
+        <section id = 'function'>
+            <h2>Function</h2>
+            <p>
+                <b>Definition.</b> A function is a relation between a set of
+                inputs (domain) and a set of possible outputs (range) with the
+                property that each input is related to exactly one output.
+            </p>
+            <h3>Vertical Line Test</h3>
+            <p>
+                <b>Note.</b> To determine if a relation is a function, we can use the
+                vertical line test. If a vertical line intersects the graph of the
+                relation at more than one point, then the relation is not a function.
+            </p>
+            <p>
+                <b>Example.</b> Consider the function \(f(x) = x^2\). This
+                function takes an input \(x\) and returns the square of the input.
+            </p>
+        </section>
+
+        <br>
+
+        <section id="domain">
             <h2>The Domain of a Function</h2>
             <p>
                 <b>Definition.</b> The domain of a function is the set of all
@@ -50,12 +82,12 @@
             <p>
                 <b>Example.</b> Consider the function \(f(x) = \frac{1}{x}\).
                 The domain of this function is the set of all real numbers
-                except 0 (i.e. \((-\infty, 0)\cup\(0, \infty)\). This is because
+                except 0 (i.e. \((-\infty, 0)\cup(0, \infty)\). This is because
                 the function is not defined when \(x = 0\).
             </p>
         </section>
 
-        <br />
+        <br>
 
         <section id="range">
             <h2>The Range of a Function</h2>
@@ -65,14 +97,201 @@
             </p>
         </section>
 
-        <section id="References">
-            <h2>References</h2>
-            <ul>
-                <li>
-                    First Initial. Last name, "Book name", Publications,
-                    Edition, Year.
-                </li>
-            </ul>
+        <br>
+
+        <section id = 'trigonometry'>
+            <h2>Trigonometry</h2>
+            <p>
+                <b>Definition.</b> Trigonometry is the branch of mathematics that
+                deals with the relationships between the sides and angles of
+                triangles.
+            </p>
+            <p>
+                <b>Example.</b> Consider a right triangle with opposite \(a\), adjacent \(b\),
+                and hypotenuse \(c\). Then the following relationships hold:
+                \begin{align*}
+                    \sin(\theta) &= \dfrac{a}{c}, \\
+                    \cos(\theta) &= \dfrac{b}{c}, \\
+                    \tan(\theta) &= \dfrac{a}{b}, \\
+                    \csc(\theta) &= \dfrac{1}{\sin(\theta)}, \\
+                    \sec(\theta) &= \dfrac{1}{\cos(\theta)}, \\
+                    \cot(\theta) &= \dfrac{1}{\tan(\theta)}.
+                \end{align*}
+            </p>
         </section>
+
+        <br>
+
+        <section id = 'secant_line'>
+            <h2>The Secant Line</h2>
+            <p>
+                <b>Definition.</b> The secant line of a function is a straight
+                line that intersects the function at given <b>two</b> points.
+            </p>
+            <p>
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'tangent_line'>
+            <h2>The Tangent Line</h2>
+            <p>
+                <b>Definition.</b> The tangent line of a function is a straight
+                line that intersects the function at given <b>one</b> point.
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'average_velocity'>
+            <h2>Average Velocity</h2>
+            <p>
+                <b>Definition.</b> The average velocity of an object is the
+                change in position of the object divided by the time interval
+                over which the change occurs. Mathematically, the average
+                velocity is given by
+                \[
+                    \text{Average velocity} = \frac{\text{Change in position}}{\text{Time interval}}.
+                \]
+            </p>
+            <p>
+                <b>Note.</b> If you graph the position function, where your y-axis is the position of the object and the x-axis is the time,
+                the average velocity is the slope of the line that connects two points on the graph (i.e. the slope of the secant line).
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'instantaneous_velocity'>
+            <h2>Instantaneous Velocity</h2>
+            <p>
+                <b>Definition.</b> The instantaneous velocity of an object is the
+                velocity of the object at a given instant in time. Mathematically,
+                the instantaneous velocity is given by
+                \[
+                    \text{Instantaneous velocity} = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t},
+                \]
+                where \(\Delta x\) is the change in position of the object and
+                \(\Delta t\) is the time interval over which the change occurs.
+            </p>
+            <p>
+                <b>Note.</b> If you graph the position function, where your y-axis is the position of the object and the x-axis is the time,
+                the instantaneous velocity is the slope of the tangent line at a given point on the graph.
+            </p>
+            <h3>Approximating the Instantaneous Velocity</h3>
+            <p>
+                To approximate the instantaneous velocity of an object at a given
+                point, we can use the average velocity over a <b>small-time</b> interval
+                that contains the point. The smaller the time interval, the better
+                the approximation.
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'limit'>
+            <h2>Limit of a Function</h2>
+            <p>
+                <b>Definition.</b> The limit of a function is the value that the
+                function approaches as the input (variable) approaches a given value.
+            </p>
+            <p>
+                <b>Example.</b> Consider the function \(f(x) = x^2\). Then
+                \(\lim\limits_{x \to 2} f(x) = 4\). This is because as \(x\) approaches
+                2, the value of \(f(x)\) approaches 4.
+            </p>
+            <p>
+                <b>Note.</b> If \(f(x)\) is a constant function (i.e the value of the function will not change as the input changes), then the limit of the function is the constant value.
+            </p>
+            <p>
+                <b>Example.</b> Consider the function \(f(x) = 3\) defined all real numbers. Then
+                \(\lim\limits_{x \to 2} f(x) = 3\). In general, if \(f(x) = k\) for all \(x\), then
+                \[
+                \lim\limits_{x \to c} f(x) = k.
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'left_limit'>
+            <h2>Left and Right Limits</h2>
+            <p>
+                <b>Definition.</b> The left limit of a function is the value that
+                the function approaches as the input approaches a given value from
+                the left side. We denote the left limit as
+                \[
+                    \lim_{x \to c^-} f(x),
+                \]
+                where the superscript \(^-\) indicates that the input is approaching from the left side.
+            </p>
+            <p>
+                <b>Definition.</b> The right limit of a function is the value that the
+                function approaches as the input approaches a given value from the
+                right side.
+                \[
+                    \lim_{x \to c^+} f(x),
+                \]
+                where the superscript \(^+\) indicates that the input is approaching from the right side.
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'existence_of_limit'>
+            <h2>Existence of a Limit</h2>
+            <p>
+                <b>Definition.</b> The limit of a function exists if the left and
+                right limits of the function exist and are equal. Mathematically,
+                the limit of a function exists if
+                \[
+                    \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x).
+                \]
+            </p>
+            <p>
+                <b>Example.</b> Consider the function \(f(x) = x^2\). Then
+                \(\lim\limits_{x \to 2} f(x) = 4\). This is because the left and
+                right limits of the function are both 4.
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'law_of_limits'>
+            <h2>The Basic Law of Limits</h2>
+            <p>
+                <b>Definition.</b> The law of limits states that the limit of a
+                sum is the sum of the limits, the limit of a product is the
+                product of the limits, and the limit of a quotient is the
+                quotient of the limits.
+            </p>
+            <p>
+                <b>Theorem.</b> Given that \(\lim\limits_{x \to c} f(x) = L<\infty\) and \(\lim\limits_{x \to c} g(x) = M<\infty\), then
+                \begin{align*}
+                    \lim_{x \to c} \left(k\cdot f(x)\right) &= k\cdot L \\
+                    \lim_{x \to c} \left(f(x) + g(x)\right) &= L + M, \\
+                    \lim_{x \to c} \left(f(x) \cdot g(x)\right) &= L \cdot M, \\
+                    \lim_{x \to c} \left(\frac{f(x)}{g(x)}\right) &= \frac{L}{M}, \quad \text{if } M \neq 0.
+                \end{align*}
+            </p>
+            <p>
+                <b>Example.</b> Consider the functions \(f(x) = x^2\) and
+                \(g(x) = x\). Then \(\lim\limits_{x \to 0} f(x) = 0\) and
+                \(\lim\limits_{x \to 0} g(x) = 0\). Therefore, \(\lim_{x \to 0} f(x) +
+                g(x) = 0 + 0 = 0\).
+            </p>
+        </section>
+
+
+<!--        <section id="References">-->
+<!--            <h2>References</h2>-->
+<!--            <ul>-->
+<!--                <li>-->
+<!--                    First Initial. Last name, "Book name", Publications,-->
+<!--                    Edition, Year.-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </section>-->
     </body>
 </html>
