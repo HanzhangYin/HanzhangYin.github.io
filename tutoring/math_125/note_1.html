@@ -413,18 +413,109 @@
                 <b>Examples. </b> \(0^0\), \(\infty - \infty\), \(\dfrac{0}{0}\), \(\dfrac{\infty}{\infty}\), \(0 \cdot \infty\), \(\infty^0\).
             </p>
             <p>
-                <b>Important.</b> If you encounter an indeterminate form, you may need to use <b>factoring</b>, <b>L'Hopital's Rule</b>, <b>times the conjugate</b>, or other methods to evaluate the limit.
+                <b>Important.</b> If you encounter an indeterminate form, you may need to use <b>factoring</b>, <b>times the conjugate</b>, or other methods to evaluate the limit.
             </p>
         </section>
 
         <br>
 
         <section>
-            <h2>Conjugate</h2>
+            <h2>Times the Conjugate</h2>
             <p>
                 <b>Definition.</b> The conjugate of a complex number \(a + b\) is \(a - b\). The conjugate of a complex number \(a - b\) is \(a + b\).
             </p>
+            <p><b>Example.</b>
+                \[
+                \begin{align}
+                \lim_{x\to 7}\dfrac{\sqrt{x+9}-4}{x-7} &= \lim_{x\to 7}\left(\dfrac{\sqrt{x+9}-4}{x-7}\cdot\dfrac{\sqrt{x+9}+4}{\sqrt{x+9}+4}\right) \\
+                &= \lim_{x\to 7}\dfrac{x+9-16}{(x-7)(\sqrt{x+9}+4)} \\
+                &= \lim_{x\to 7}\dfrac{x-7}{(x-7)(\sqrt{x+9}+4)} \\
+                &= \lim_{x\to 7}\dfrac{1}{\sqrt{x+9}+4} \\
+                &= \dfrac{1}{\sqrt{7+9}+4} \\
+                &= \dfrac{1}{8}.
+                \end{align}
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'simplify'>
+            <h2>Simplify the Rationals</h2>
             <p>
+                <b>
+                    Example 1.
+                </b>
+                \[
+                \begin{align}
+                \lim_{x \to 2} \left( \frac{1}{x - 2} - \frac{11}{x^2 + 7x - 18} \right) &= \lim_{x \to 2} \left( \frac{1}{x - 2} - \frac{11}{(x + 9)(x - 2)} \right) \\
+                &= \lim_{x \to 2} \left( \frac{x + 9}{(x + 9)(x - 2)} - \frac{11}{(x + 9)(x - 2)}\right) \\
+                &= \lim_{x \to 2} \left( \frac{x + 9 - 11}{(x + 9)(x - 2)} \right) \\
+                &= \lim_{x \to 2} \left( \frac{x - 2}{(x + 9)(x - 2)} \right) \\
+                &= \lim_{x \to 2} \left( \frac{1}{x + 9} \right) \\
+                &= \frac{1}{2 + 9} \\
+                &= \frac{1}{11}.
+                \end{align}
+                \]
+            </p>
+            <p>
+                <b>Example 2.</b>
+                \[
+                \begin{align}
+                \lim_{x \to \frac{\pi}{4}} \dfrac{\cot(4x)}{\csc(4x)} &= \lim_{x \to \frac{\pi}{4}} \left(\dfrac{\dfrac{1}{\tan(4x)}}{\dfrac{1}{\sin(4x)}}\right) \\
+                &= \lim_{x \to \frac{\pi}{4}} \left(\dfrac{\sin(4x)}{\tan(4x)}\right) \\
+                &= \lim_{x \to \frac{\pi}{4}} \left(\dfrac{\sin(4x)}{\dfrac{\sin(4x)}{\cos(4x)}}\right) \\
+                &= \lim_{x \to \frac{\pi}{4}} \cos(4x) \\
+                &= \cos\left(4\left(\dfrac{\pi}{4}\right)\right) \\
+                &= \cos(\pi) \\
+                &= -1.
+                \end{align}
+                \]
+            </p>
+        </section>
+
+        <section id = 'factoring'>
+        <h2>Factoring</h2>
+            <p>
+            <b>
+                Example.
+            </b>
+                \[
+                \begin{align}
+                \lim_{x \to 5^-} \frac{4x^2 - 27x + 35}{x^2 - 25} &= \lim_{x \to 5^-} \frac{(4x - 7)(x - 5)}{(x + 5)(x - 5)} \\
+                &= \lim_{x \to 5^-} \frac{4x - 7}{x + 5} \\
+                &= \frac{4(5) - 7}{5 + 5} \\
+                &= \frac{13}{10} \\
+                &= 1.3.
+                \end{align}
+                \]
+            </p>
+        </section>
+
+        <section id = 'multiple_method'>
+            <h2>Multiple Methods</h2>
+            <p>
+                Sometimes, you are required to use several ways to evaluate a limit. Here is one example using the conjugate and simplify the rationals.
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \begin{align}
+                \lim_{\theta \to \frac{\pi}{2}} (3 \sec(\theta) - 3 \tan(\theta)) &= \lim_{\theta \to \frac{\pi}{2}} \left(3\dfrac{1}{\cos(\theta)} - 3\dfrac{\sin(\theta)}{\cos(\theta)}\right) \\
+                &= \lim_{\theta \to \frac{\pi}{2}} \left(\dfrac{3 - 3\sin(\theta)}{\cos(\theta)}\right) \\
+                &= \lim_{\theta \to \frac{\pi}{2}} \left(\dfrac{3(1 - \sin(\theta))}{\cos(\theta)}\right) \\
+                &= \lim_{\theta \to \frac{\pi}{2}} \left(\dfrac{3(1 - \sin(\theta))\cdot (1 + \sin(\theta))}{\cos(\theta)\cdot (1 + \sin(\theta))}\right) \\
+                &= \lim_{\theta \to \frac{\pi}{2}} \left(\dfrac{3(1 - \sin^2(\theta))}{\cos(\theta)\cdot (1 + \sin(\theta))}\right) \\
+                &= \lim_{\theta \to \frac{\pi}{2}} \left(\dfrac{3\cos^2(\theta)}{\cos(\theta)\cdot (1 + \sin(\theta))}\right) \\
+                &= \lim_{\theta \to \frac{\pi}{2}} \left(\dfrac{3\cos(\theta)}{1 + \sin(\theta)}\right) \\
+                &= \dfrac{3\cos\left(\dfrac{\pi}{2}\right)}{1 + \sin\left(\dfrac{\pi}{2}\right)} \\
+                &= \dfrac{3(0)}{1 + 1} \\
+                &= 0.
+                \end{align}
+                \]
+            </p>
+            <p>
+                <b>Note.</b> Keep in mind that \(\sin^2(\theta) + \cos^2(\theta) = 1\).
             </p>
         </section>
 
