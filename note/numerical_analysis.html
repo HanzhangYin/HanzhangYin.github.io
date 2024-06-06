@@ -1205,16 +1205,54 @@
           </li>
       </ul>
       <p>
-      <b>Proof.</b> We will use polynomial interpotation.
-      Suppose that we have the following data points:
-      \[
-      \begin{array}{c|c}
-      t & x(t) \\ \hline
-      t_k & x_k \\
-      t_{k+1} & x_{k+1} \\
-      t_{k+2} & x_{k+2}
-      \end{array}
-      \]
+      <b>Proof.</b>
+
+      </p>
+
+      <br>
+
+      <p>
+        <b>Problem 4.</b> The Lagrange interpolating polynomial \( p_n \in P_n \) that interpolates function \( f \in C([a, b]) \) at distinct points \( x_i \in [a, b], \, i = 0, \ldots, n \) is given as
+        \[ p_n(x) = \sum_{i=0}^{n} f(x_i) \ell_i(x), \]
+        where
+        \[ \ell_i = \prod_{\substack{j=0 \\ j \neq i}}^{n} \frac{(x - x_j)}{(x_i - x_j)}. \]
+        Let \( w(x) = \prod_{j=0}^{n} (x - x_j) \) and \( \beta_i = \frac{1}{\prod_{\substack{j=0 \\ j \neq i}}^{n} (x_i - x_j)}, \, i = 0, \ldots, n. \)
+      </p>
+      <ul>
+        <li>
+          (a) Show that evaluating \( p_n(x) \) directly from (1) requires \( \mathcal{O}(n^2) \) floating-point operations.
+        </li>
+        <li>
+          (b) Show that the Lagrange interpolating polynomial \( p_n(x) \) can be rewritten as
+          \[ p_n(x) = w(x) \sum_{i=0}^{n} \frac{\beta_i}{x - x_i} f(x_i). \]
+        </li>
+        <li>
+          (c) Show that
+          \[ 1 = w(x) \sum_{i=0}^{n} \frac{\beta_i}{x - x_i}\text{ and }p_n(x) = \frac{\sum_{i=0}^{n} \frac{\beta_i}{x - x_i} f(x_i)}{\sum_{i=0}^{n} \frac{\beta_i}{x - x_i}}. \]
+          Note: values \( \beta_i \) are called the barycentric weights, and this alternative Lagrange interpolation formula is known as the barycentric interpolation formula.
+        </li>
+      </ul>
+      <p>
+        <b>Proof (b).</b>
+        Given that \(\beta_i = \frac{1}{\prod_{\substack{j=0 \\ j \neq i}}^{n} (x_i - x_j)}\), and \(w(x) = \prod_{j=0}^{n} (x - x_j)\), we have
+        \[
+          w(x)\cdot \frac{\beta_i}{x - x_i} = \frac{\prod_{j=0}^{n} (x - x_j)}{\prod_{\substack{j=0 \\ j \neq i}}^{n} (x_i - x_j)} \cdot \frac{1}{x - x_i} = \frac{\prod_{\substack{j=0 \\ j \neq i}}^{n} (x - x_j)}{\prod_{\substack{j=0 \\ j \neq i}}^{n} (x_i - x_j)} = \ell_i(x).
+        \]
+        Therefore, we can rewrite the Lagrange interpolating polynomial \( p_n(x) \) as
+        \[
+          p_n(x) = \sum_{i=0}^{n} f(x_i) \ell_i(x) = \sum_{i=0}^{n} f(x_i) w(x) \frac{\beta_i}{x - x_i} = w(x) \sum_{i=0}^{n} \frac{\beta_i}{x - x_i} f(x_i). \tag*{\(\square\)}
+        \]
+      </p>
+      <p>
+        <b>Proof (c).</b>
+        Since we showed that \(\ell_i(x) = w(x) \cdot \frac{\beta_i}{x - x_i}\) above, we have
+        \[
+          w(x)\sum_{i=0}^{n} \frac{\beta_i}{x - x_i} = \sum_{i=0}^{n} w(x)\frac{\beta_i}{x - x_i} = \sum_{i=0}^{n} \ell_i(x).
+        \]
+        Suppose that \(f(x) = 1\) for all \(x\). Then, we have the polynomial interpolation \(p(x)\) for \(f(x) = 1\) as
+        \[
+          p(x) = \sum_{i=0}^{n} f(x_i) \ell_i(x) = \sum_{i=0}^{n} \ell_i(x).
+        \]
       </p>
   </section>
 
