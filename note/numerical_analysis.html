@@ -1353,6 +1353,46 @@
   <br>
 
     <section>
+      <p>
+        <b>Problem 2.</b>
+      </p>
+      <p>
+        (a) Suppose \( g(x) \in C([a,b]) \) with \( a \leq g(x) \leq b \) for all \( x \in [a,b] \).
+      </p>
+      <ul>
+        <li>
+          Show that \( g(x) \) has at least one fixed point in \( [a,b] \).
+        </li>
+        <li>
+          Show that if \( g'(x) \) exists on \( [a,b] \) and \( |g'(x)| \leq k < 1 \) for \( x \in [a,b] \), then this fixed point is unique.
+        </li>
+      </ul>
+      <p>
+        (b) Consider the nonlinear equation \( x^2 - 1 = 0 \). Propose two ways of rewriting this equation as a fixed-point problem \( x = f(x) \) using different functions \( f \). Discuss the convergence (or nonconvergence) behavior of the fixed-point iteration \( x_{n+1} = f(x_n) \), \( n = 0,1,2, \ldots \), for each of these two iteration functions.
+      </p>
+      <p>
+        <b>Proof (i).</b>Define \(h(x) = x\) where \(x\in [a, b]\). Hence, we can know that \(h(x)\in C([a, b])\).
+        Since \(g(x)\in C([a, b])\), we can know that \(f(x) = g(x) - h(x) = g(x) - x\) is in \(C([a, b])\).
+        If \(f(a) = a\) or \(f(b) = b\), then we are done.
+        Now, suppose that \(f(a)\neq a\) and \(f(b)\neq b\). Since \(a\leq f(x)\leq b\) for all \(x\in [a, b]\), we can know that \(f(a) > a\) and \(f(b) < b\).
+        Hence, we have \(f(a) = g(a) - a > 0\) and \(f(b) = g(b) - b < 0\).
+        Since \(f(x)\in C([a, b])\), by the Intermediate Value Theorem, for any \(c\in [f(b), f(a)]\), there exists \(x\in [a, b]\) such that \(f(x) = c \).
+        Now, set \(c = 0\), we know that there exists \(x\in [a, b]\) such that \(f(x) = 0\). Therefore, we can know that \(g(x) = x\) for some \(x\in [a, b]\). \( \blacksquare \)
+      </p>
+      <p>
+        <b>Proof (ii).</b>Since \(g(x)\in C([a, b])\), according to the Mean Value Theorem, we have
+        \[
+          g(y) - g(x) = g'(\xi)(y - x) \text{ for some } \xi \in (x,y), \text{ where }a\leq x\leq y\leq b.
+        \]
+        Thus, we have
+        \[
+          |g(y) - g(x)| = |g'(\xi)| |y - x| \leq k |b - a|< 1\cdot |y - x|.
+        \]
+        Hence, we can see that \(g(x)\) is a contraction mapping. Therefore, by the Contraction Mapping Theorem, we have that the fixed point is unique. \( \blacksquare \)
+      </p>
+    </section>
+
+    <section>
       <h2>Qualify Exam Problems (January 2022)</h2>
       <p>
         1. Consider the iteration \[ x_{n+1} = \frac{1}{2} x_n + \frac{5}{2x_n},
