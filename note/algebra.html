@@ -91,10 +91,25 @@
         <i><b>"Linear Algebra Done Right (4th Edition)", Page 145</b></i>
       </p>
       <p>
-        <b>Definition.</b>
+        <b>Definition (Order Ideal).</b>
+        Let \( T \in \mathcal{L}(V, V) \) and \( v \in V \). The <b>order ideal</b> of \( v \) with respect to \( T \), denoted by \(\text{Ann}(T, v)\), we mean the set of all polynomials \( f(x) \) such that \( v \in \text{Ker}(f(T)) \), that is, \( f(T)(v) = 0 \):
+        \[
+        \text{Ann}(T, v) = \{ f(x) \in \mathbb{F}[x] \mid f(T)(v) = 0 \}.
+        \]
+      </p>
+      <p>
+        <i><b>"Advanced Linear Algebra (2nd Edition)", Page 106</b></i>
+      </p>
+      <p>
+        Note that \(\text{Ann}(T, v)\) contains a monic polynomial \(\mu(x)\) such that every polynomial in \(\text{Ann}(T, v)\) is a multiple of \(\mu(x)\). Recall such a polynomial is called a <b>generator</b> of \(\text{Ann}(T, v)\).
+      </p>
+      <p>
+        <i><b>"Advanced Linear Algebra (2nd Edition)", Page 107</b></i>
+      </p>
+      <p>
+        <b>Definition(Minimal polynomial of \( T \) with respect to \( v \)).</b>
         Let \( V \) be a finite-dimensional vector space, \( T \) an operator on \( V \), and \( v \) a vector in \( V \). The unique monic generator of \(\text{Ann}(T, v)\) is called the <b>minimal polynomial</b> of \( T \) with respect to \( v \). It is also sometimes referred to as the order of \( v \) with respect to \( T \). It is denoted here by \( \mu_{T, v}(x) \).
       </p>
-
       <p>
         <i><b>"Advanced Linear Algebra (2nd Edition)", Page 107</b></i>
       </p>
