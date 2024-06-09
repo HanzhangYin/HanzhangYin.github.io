@@ -51,7 +51,10 @@
       <a href="#algebraic_closure">Algebraic Closure</a>
       <a href="#galois_group">Galois Group</a>
       <a href="#galois_theory">Galois Theory</a>
-      <a href='#ku_2017_8_6'>KU 2017 (August) (6)</a>
+      <a href="#ku_2015_8_6">KU 2015 (August)</a>
+      <a href="#ku_2016_1_5">KU 2016 (January)</a>
+      <a href="#ku_2016_8_4">KU 2016 (August)</a>
+      <a href='#ku_2017_8_6'>KU 2017 (August)</a>
       <a href='#ku_2021_1_1'>KU 2021 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (2)</a>
@@ -111,6 +114,26 @@
       </p>
       <p>
         <i><b>"Advanced Linear Algebra (2nd Edition)", Page 123</b></i>
+      </p>
+    </section>
+
+    <br>
+
+    <section>
+      <p>
+        <b>Theorem.</b>
+        Let \( V \) be a finite-dimensional vector space, \( T \) an operator on \( V \), and assume the minimal polynomial of \( T \) is \( \mu_T(x) = p_1(x)^{e_1} \cdots p_t(x)^{e_t} \), where the polynomials \( p_i(x) \) are irreducible and distinct.
+        For each \( i \), let
+        \[
+        V_i = V(p_i) = \{ v \in V \mid p_i(T)^{e_i}(v) = 0 \} = \text{Ker}(p_i(T)^{e_i}).
+        \]
+        Then each of the spaces \( V_i \) is \( T \)-invariant and
+        \[
+        V = V_1 \oplus V_2 \oplus \cdots \oplus V_t.
+        \]
+      </p>
+      <p>
+        <i><b>"Advanced Linear Algebra (2nd Edition)", Page 132</b></i>
       </p>
     </section>
 
@@ -1320,10 +1343,10 @@
     <p>
       <b>Problem 5.</b> Let \( V \) be a finite dimensional vector space over the field \( F \) and \( T : V \to V \) is a linear transformation. Suppose that \( \chi_T(x) \), the characteristic polynomial of \( T \), factors as \( \chi_T(x) = p_1(x)^{f_1} \cdots p_r(x)^{f_r} \), where each \( p_i(x) \) is irreducible over \( F \). Prove that the minimal polynomial of \( T \) equals \( p_1(x)^{e_1} \cdots p_r(x)^{e_r} \), where for each \( 1 \leq i \leq r \), \( e_i \) is the first exponent for which the kernel of \( p_i(T)^{e_i} \) equals the kernel of \( p_i(T)^{e_i+1} \).
     </p>
-      <p>
-        <b>Proof.</b> Given that the characteristic polynomial of \( T \) is \( \chi_T(x) = p_1(x)^{f_1} \cdots p_r(x)^{f_r} \), where each \( p_i(x) \) is irreducible over \( F \).
-        Then we have the minimal polynomial of \( T \) is \( p_1(x)^{e_1} \cdots p_r(x)^{e_r} \), where \( 1 \leq e_i \leq f_i \) for each \(i\).
-      </p>
+    <p>
+      <b>Proof.</b> Given that the characteristic polynomial of \( T \) is \( \chi_T(x) = p_1(x)^{f_1} \cdots p_r(x)^{f_r} \), where each \( p_i(x) \) is irreducible over \( F \).
+      Then we have the minimal polynomial of \( T \) is \( p_1(x)^{e_1} \cdots p_r(x)^{e_r} \), where \( 1 \leq e_i \leq f_i \) for each \(i\).
+    </p>
     </section>
 
     <br>
