@@ -1509,6 +1509,30 @@
     <p>
       <b>Solution (a).</b> We say \(A\) is positive definite if for all \(x\in \mathbb{R}^n\setminus \{0\}\), we have \(x^T A x > 0\).
     </p>
+    <p>
+      <b>Proof (b).</b> Let \(v\in \mathbb{R}^k\setminus \{0\}\). We denote \(X\) as
+      \[
+        X = \begin{bmatrix} \vec{x_1} & \vec{x_2} & \cdots & \vec{x_k} \end{bmatrix},
+        \]
+      where \(x_i\in \mathbb{R}^n\). Since \(X\) is of full column rank, we have \(\vec{x_1}, \vec{x_2}, \ldots, \vec{x_k}\) are linearly independent.
+      Now, let \(v = \begin{bmatrix} v_1 & v_2 & \cdots & v_k \end{bmatrix}^T\). Then, we have
+      \[
+        v^T\cdot X^T = \begin{bmatrix} v_1 & v_2 & \cdots & v_k \end{bmatrix} \begin{bmatrix} \vec{x_1}^T \\ \vec{x_2}^T \\ \vdots \\ \vec{x_k}^T \end{bmatrix} = v_1 \vec{x_1} + v_2 \vec{x_2} + \cdots + v_k \vec{x_k}.
+      \]
+      Since \(\{ \vec{x_1}, \vec{x_2}, \ldots, \vec{x_k} \}\) are linearly independent, we have
+      \[
+      a_1\vec{x_1} + a_2 \vec{x_2} + \cdots + a_k \vec{x_k} = 0 \quad \text{if and only if} \quad a_1 = a_2 = \cdots = a_k = 0.
+        \]
+      And we know that there exists some \(v_i\neq 0\). Therefore, we have
+      \[
+        v^T\cdot X^T \neq 0,\text{ and } (Xv)^T\neq 0,
+      \]
+      which implies that \(Xv\neq 0\). Now, we denote \(u = Xv\).
+      Since \(A\) is positive definite and \(u\neq 0\), we have
+        \[
+            v^T\cdot X^TAXv = (Xv)^TA(Xv) = u^TAu > 0. \tag*{\(\square\)}
+        \]
+    </p>
 
     <section>
       <h2>Qualify Exam Problems (January 2022)</h2>
