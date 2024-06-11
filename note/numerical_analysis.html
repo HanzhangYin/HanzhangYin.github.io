@@ -1423,7 +1423,7 @@
 
     <h2>Qualify Exam Problems (January 2000)</h2>
     <p>
-      <b>4.</b> Let \( A \in \mathbb{C}^{n \times n} \) be a non-singular matrix, and let \( 0 \neq b \in \mathbb{C}^n \) be a fixed vector. Suppose that you have an algorithm for solving \( Ax = b \) that produces an approximate solution \( \tilde{x} (\neq 0) \) that satisfies
+      <b>Problem 4.</b> Let \( A \in \mathbb{C}^{n \times n} \) be a non-singular matrix, and let \( 0 \neq b \in \mathbb{C}^n \) be a fixed vector. Suppose that you have an algorithm for solving \( Ax = b \) that produces an approximate solution \( \tilde{x} (\neq 0) \) that satisfies
 
       \[
       (A + \Delta A) \tilde{x} = b,
@@ -1455,6 +1455,36 @@
       \]
         </li>
     </ul>
+    <p>
+      <b>Proof.</b> Given that \((A + \Delta A) \tilde{x} = b \) and \(A x = b\), we have
+      \[
+        \begin{align}
+      Ax - (A + \Delta A) \tilde{x} &= 0 \\
+      Ax - A\tilde{x} - \Delta A \tilde{x} &= 0 \\
+      A(x - \tilde{x}) &= \Delta A \tilde{x}.
+        \end{align}
+        \]
+      Since \(A\) is non-singular, we have
+        \[
+        x - \tilde{x} = A^{-1} \Delta A \tilde{x}.
+      \]
+      By Triangle Inequality, we have
+        \[
+        \|x - \tilde{x}\| = \|A^{-1} \Delta A \tilde{x}\| \leq \|A^{-1}\| \|\Delta A\| \|\tilde{x}\|.
+        \]
+      Since \(A\) is non-singular and \(b\neq 0\), if \(x = 0\) then \(b = 0\) since \(A\cdot x = 0\), which is a contradiction.
+      Thus, we can know that \(x\neq 0\), which implies that \(\|x\|>0\). Therefore, we have
+        \[
+        \frac{\|x - \tilde{x}\|}{\|\tilde{x}\|} \leq \|A^{-1}\| \|\Delta A\|.
+        \]
+      Since \(\frac{\|\Delta A\|}{\|A\|} \leq \epsilon\), we have
+        \[
+        \begin{align}
+      \|\Delta A\| &\leq \epsilon \|A\| \\
+        \frac{\|x - \tilde{x}\|}{\|\tilde{x}\|} \leq \|A^{-1}\| \|\Delta A\| &\leq \|A^{-1}\| \|A\| \epsilon = \kappa(A) \epsilon. \tag*{\(\square\)}
+        \end{align}
+        \]
+    </p>
 
     <section>
       <h2>Qualify Exam Problems (January 2022)</h2>
