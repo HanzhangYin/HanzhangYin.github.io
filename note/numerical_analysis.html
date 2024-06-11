@@ -398,7 +398,7 @@
       </p>
     </section>
 
-    <br />
+    <br>
 
     <section id="gaussian_quadrature">
       <h2>Gaussian Quadrature</h2>
@@ -407,9 +407,23 @@
         general form; namely, \[ \int_a^b f(x) w(x) \, dx \approx \sum_{i=0}^n
         A_i f(x_i), \] where \( w \) is a fixed positive <b>weight function</b>.
       </p>
+      <p>
+        The <b>Gauss quadrature</b> rule:
+        \[
+        \int_a^b w(x) f(x) \, dx \approx G_n(f) = \sum_{k=0}^{n} W_k f(x_k), \tag*{(10.6)}
+        \]
+        where the <b>quadrature weights</b> are
+        \[
+        W_k = \int_a^b w(x) [L_k(x)]^2 \, dx, \tag*{(10.7)}
+        \]
+        and the <b>quadrature points</b> \( x_k, \, k = 0, \ldots, n \), are chosen as the zeros of the polynomial of degree \( n + 1 \) from a system of orthogonal polynomials over the interval \( (a, b) \) with respect to the weight function \( w \). Since this quadrature rule was obtained by exact integration of the Hermite interpolation polynomial of degree \( 2n + 1 \) for \( f \), it gives the exact result whenever \( f \) is a polynomial of degree \( 2n + 1 \) or less.
+      </p>
+      <p>
+        <b><i>"Introduction to Numerical Analysis", page. 279.</i></b>
+      </p>
     </section>
 
-    <br />
+    <br>
 
     <section id="gaussian_quadrature_error_analysis">
       <h2>Error Analysis for Gaussian Quadrature</h2>
