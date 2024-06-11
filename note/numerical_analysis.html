@@ -56,6 +56,7 @@
       <a href="#positive_definite">Positive Definite</a>
       <a href="#gerschgorin_theorem">Gerschgorin Theorem</a>
       <a href="#rayleigh_quotient">Rayleigh Quotient</a>
+      <a href="#january_2019">January 2019</a>
       <a href="#References">References</a>
     </nav>
     <script src="click.js"></script>
@@ -1419,6 +1420,41 @@
         Hence, we can see that \(g(x)\) is a contraction mapping. Therefore, by the Contraction Mapping Theorem, we have that the fixed point is unique. \( \blacksquare \)
       </p>
     </section>
+
+    <h2>Qualify Exam Problems (January 2000)</h2>
+    <p>
+      <b>4.</b> Let \( A \in \mathbb{C}^{n \times n} \) be a non-singular matrix, and let \( 0 \neq b \in \mathbb{C}^n \) be a fixed vector. Suppose that you have an algorithm for solving \( Ax = b \) that produces an approximate solution \( \tilde{x} (\neq 0) \) that satisfies
+
+      \[
+      (A + \Delta A) \tilde{x} = b,
+      \]
+
+      for some matrix \( \Delta A \) such that
+
+      \[
+      \frac{\|\Delta A\|}{\|A\|} \leq \epsilon,
+      \]
+
+      with any consistent matrix norm \( \|\cdot\| \).
+    </p>
+    <ul>
+      <li>
+      (a) Prove that for every \( \epsilon > 0 \)
+
+      \[
+      \frac{\|\tilde{x} - x\|}{\|\tilde{x}\|} \leq \kappa(A) \epsilon,
+      \]
+
+      where \( x \in \mathbb{C}^n \) is the exact solution of \( Ax = b \), and \( \kappa(A) \) is the condition number of \( A \).
+        </li>
+        <li>
+      (b) Suppose that (a) holds asymptotically as \( \epsilon \to 0 \). Prove that
+
+      \[
+      \frac{\|\tilde{x} - x\|}{\|x\|} \leq \kappa(A) \epsilon + \mathcal{O}(\epsilon^2), \quad \text{as} \quad \epsilon \to 0.
+      \]
+        </li>
+    </ul>
 
     <section>
       <h2>Qualify Exam Problems (January 2022)</h2>
