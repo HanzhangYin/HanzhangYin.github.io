@@ -22,7 +22,7 @@
         <!--link for the font-->
         <link rel="stylesheet" type="text/css" href="tutoring_style.css" />
         <!--It is a link for css structure-->
-        <title>Note 1</title>
+        <title>Note 2</title>
     </head>
     <body>
         <div class="top-bar"></div>
@@ -34,536 +34,385 @@
             <span class="visually-hidden">Menu</span>
         </label>
         <nav class="navbar">
-            <a href="#function">Function</a>
-            <a href="#domain">Domain</a>
-            <a href="#range">Range</a>
-            <a href="#trigonometry">Trigonometry</a>
-            <a href="#secant_line">Secant Line</a>
-            <a href="#tangent_line">Tangent Line</a>
-            <a href="#average_velocity">Average Velocity</a>
-            <a href="#instantaneous_velocity">Instantaneous Velocity</a>
-            <a href="#limit">Limit of a Function</a>
-            <a href="#left_limit">Left and Right Limits</a>
-            <a href="#existence_of_limit">Existence of a Limit</a>
-            <a href="#law_of_limits">The Basic Law of Limits</a>
-            <a href="#continuity_and_discontinuity"
-                >Continuity and Discontinuity</a
-            >
-            <a href="#types_of_discontinuities"
-                >Three types of discontinuities</a
-            >
-            <a href="#elementary_function">Elementary Function</a>
-            <a href="#properties_of_continuous_functions"
-                >Properties of Continuous Functions</a
-            >
+            <a href="#limits_at_infinity">Limits at Infinity</a>
+            <a href="#x_approaches_positive_infinity">\(x\) Approaches \(+\infty\)</a>
+            <a href="#x_approaches_negative_infinity">\(x\) Approaches \(-\infty\)</a>
+            <a href="#limits_at_infinity_of_a_rational_function">Limits at Infinity of a Rational Function</a>
+            <a href="#intermediate_value_theorem">Intermediate Value Theorem</a>
+            <a href="#bisection_method">Bisection Method</a>
+            <a href="#difference_quotient">Difference Quotient</a>
+            <a href="#derivative">Derivative</a>
+            <a href="#derivative_of_linear_and_constant_functions"> Rules of Linear and Constant Functions</a>
+            <a href="#power_rule">Power Rule</a>
+            <a href="#sum_and_difference_rule">Sum and Difference Rules</a>
+            <a href="#constant_multiple_rule">Constant Multiple Rule</a>
+            <a href="#exponential_function_rule">The Exponential Function Rule</a>
+            <a href="#differentiability_implies_continuity">Differentiability Implies Continuity</a>
+            <a href="#product_rule">Product Rule</a>
+            <a href="#quotient_rule">Quotient Rule</a>
+
             <!--            <a href="#References">References</a>-->
         </nav>
         <script src="click.js"></script>
         <!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
-        <h1>Note 1</h1>
+        <h1>Note 2</h1>
 
-        <section id="function">
-            <h2>Function</h2>
+        <section id = 'limits_at_infinity'>
+            <h2>Limits at Infinity</h2>
             <p>
-                <b>Definition.</b> A function is a relation between a set of
-                inputs (domain) and a set of possible outputs (range) with the
-                property that each input is related to exactly one output.
+                Consider limits where \(x\) approaches \(+\infty\) or \(-\infty\).
             </p>
-            <h3>Vertical Line Test</h3>
+            <h2> Constant Case </h2>
             <p>
-                <b>Note.</b> To determine if a relation is a function, we can
-                use the vertical line test. If a vertical line intersects the
-                graph of the relation at more than one point, then the relation
-                is not a function.
+                Special cases:
             </p>
             <p>
-                <b>Example.</b> Consider the function \(f(x) = x^2\). This
-                function takes an input \(x\) and returns the square of the
-                input.
-            </p>
-        </section>
-
-        <br />
-
-        <section id="domain">
-            <h2>The Domain of a Function</h2>
-            <p>
-                <b>Definition.</b> The domain of a function is the set of all
-                real numbers for which the function is defined.
-            </p>
-            <p>
-                <b>Example.</b> Consider the function \(f(x) = \frac{1}{x}\).
-                The domain of this function is the set of all real numbers
-                except 0 (i.e. \((-\infty, 0)\cup(0, \infty)\). This is because
-                the function is not defined when \(x = 0\).
-            </p>
-        </section>
-
-        <br />
-
-        <section id="range">
-            <h2>The Range of a Function</h2>
-            <p>
-                <b>Definition.</b> The range of a function is the set of all
-                real numbers that the function can take as its output.
-            </p>
-        </section>
-
-        <br />
-
-        <section id="trigonometry">
-            <h2>Trigonometry</h2>
-            <p>
-                <b>Definition.</b> Trigonometry is the branch of mathematics
-                that deals with the relationships between the sides and angles
-                of triangles.
-            </p>
-            <p>
-                <b>Example.</b> Consider a right triangle with opposite \(a\),
-                adjacent \(b\), and hypotenuse \(c\). Then the following
-                relationships hold: \begin{align*} \sin(\theta) &= \dfrac{a}{c},
-                \\ \cos(\theta) &= \dfrac{b}{c}, \\ \tan(\theta) &=
-                \dfrac{a}{b}, \\ \csc(\theta) &= \dfrac{1}{\sin(\theta)}, \\
-                \sec(\theta) &= \dfrac{1}{\cos(\theta)}, \\ \cot(\theta) &=
-                \dfrac{1}{\tan(\theta)}. \end{align*}
-            </p>
-        </section>
-
-        <br />
-
-        <section id="secant_line">
-            <h2>The Secant Line</h2>
-            <p>
-                <b>Definition.</b> The secant line of a function is a straight
-                line that intersects the function at given <b>two</b> points.
-            </p>
-            <p></p>
-        </section>
-
-        <br />
-
-        <section id="tangent_line">
-            <h2>The Tangent Line</h2>
-            <p>
-                <b>Definition.</b> The tangent line of a function is a straight
-                line that intersects the function at given <b>one</b> point.
-            </p>
-        </section>
-
-        <br />
-
-        <section id="average_velocity">
-            <h2>Average Velocity</h2>
-            <p>
-                <b>Definition.</b> The average velocity of an object is the
-                change in position of the object divided by the time interval
-                over which the change occurs. Mathematically, the average
-                velocity is given by \[ \text{Average velocity} =
-                \frac{\text{Change in position}}{\text{Time interval}}. \]
-            </p>
-            <p>
-                <b>Note.</b> If you graph the position function, where your
-                y-axis is the position of the object, and the x-axis is the
-                time, the average velocity is the slope of the line that
-                connects two points on the graph (i.e. the slope of the secant
-                line).
-            </p>
-        </section>
-
-        <br />
-
-        <section id="instantaneous_velocity">
-            <h2>Instantaneous Velocity</h2>
-            <p>
-                <b>Definition.</b> The instantaneous velocity of an object is
-                the velocity of the object at a given instant in time.
-                Mathematically, the instantaneous velocity is given by \[
-                \text{Instantaneous velocity} = \lim_{\Delta t \to 0}
-                \frac{\Delta x}{\Delta t}, \] where \(\Delta x\) is the change
-                in position of the object and \(\Delta t\) is the time interval
-                over which the change occurs.
-            </p>
-            <p>
-                <b>Note.</b> If you graph the position function, where your
-                y-axis is the position of the object, and the x-axis is the
-                time, the instantaneous velocity is the slope of the tangent
-                line at a given point on the graph.
-            </p>
-            <h3>Approximating the Instantaneous Velocity</h3>
-            <p>
-                To approximate the instantaneous velocity of an object at a
-                given point, we can use the average velocity over a
-                <b>small-time</b> interval that contains the point. The smaller
-                the time interval, the better the approximation.
-            </p>
-        </section>
-
-        <br />
-
-        <section id="limit">
-            <h2>Limit of a Function</h2>
-            <p>
-                <b>Definition.</b> The limit of a function is the value that the
-                function approaches as the input (variable) approaches a given
-                value.
-            </p>
-            <p>
-                <b>Example.</b> Consider the function \(f(x) = x^2\). Then
-                \(\lim\limits_{x \to 2} f(x) = 4\). This is because as \(x\)
-                approaches 2, the value of \(f(x)\) approaches 4.
-            </p>
-            <p>
-                <b>Note.</b> If \(f(x)\) is a constant function (i.e. the value
-                of the function will not change as the input changes), then the
-                limit of the function is the constant value.
-            </p>
-            <p>
-                <b>Example.</b> Consider the function \(f(x) = 3\) defined all
-                real numbers. Then \(\lim\limits_{x \to 2} f(x) = 3\). In
-                general, if \(f(x) = k\) for all \(x\), then \[ \lim\limits_{x
-                \to c} f(x) = k. \]
-            </p>
-        </section>
-
-        <br />
-
-        <section id="left_limit">
-            <h2>Left and Right Limits</h2>
-            <p>
-                <b>Definition.</b> The left limit of a function is the value
-                that the function approaches as the input approaches a given
-                value from the left side. We denote the left limit as \[ \lim_{x
-                \to c^-} f(x), \] where the superscript \(^-\) indicates that
-                the input is approaching from the left side.
-            </p>
-            <p>
-                <b>Definition.</b> The right limit of a function is the value
-                that the function approaches as the input approaches a given
-                value from the right side. \[ \lim_{x \to c^+} f(x), \] where
-                the superscript \(^+\) indicates that the input is approaching
-                from the right side.
-            </p>
-        </section>
-
-        <br />
-
-        <section id="existence_of_limit">
-            <h2>Existence of a Limit</h2>
-            <p>
-                <b>Definition.</b> The limit of a function exists if the left
-                and right limits of the function exist and are equal.
-                Mathematically, the limit of a function exists if \[ \lim_{x \to
-                c^-} f(x) = \lim_{x \to c^+} f(x). \]
-            </p>
-            <p>
-                <b>Example.</b> Consider the function \(f(x) = x^2\). Then
-                \(\lim\limits_{x \to 2} f(x) = 4\). This is because the left and
-                right limits of the function are both 4.
-            </p>
-        </section>
-
-        <br />
-
-        <section id="law_of_limits">
-            <h2>The Basic Law of Limits</h2>
-            <p>
-                <b>Definition.</b> The law of limits states that the limit of a
-                sum is the sum of the limits, the limit of a product is the
-                product of the limits, and the limit of a quotient is the
-                quotient of the limits.
-            </p>
-            <p>
-                <b>Theorem.</b> Given that \(\lim\limits_{x \to c} f(x) =
-                L<\infty\) and \(\lim\limits_{x \to c} g(x) = M<\infty\), then
-                \begin{align*} \lim_{x \to c} \left(k\cdot f(x)\right) &= k\cdot
-                L \\ \lim_{x \to c} \left(f(x) + g(x)\right) &= L + M, \\
-                \lim_{x \to c} \left(f(x) \cdot g(x)\right) &= L \cdot M, \\
-                \lim_{x \to c} \left(\frac{f(x)}{g(x)}\right) &= \frac{L}{M},
-                \quad \text{if } M \neq 0. \end{align*}
-            </p>
-            <p>
-                <b>Example.</b> Consider the functions \(f(x) = x^2\) and \(g(x)
-                = x\). Then \(\lim\limits_{x \to 0} f(x) = 0\) and
-                \(\lim\limits_{x \to 0} g(x) = 0\). Therefore, \(\lim_{x \to 0}
-                f(x) + g(x) = 0 + 0 = 0\).
-            </p>
-        </section>
-
-        <br />
-
-        <section id="continuity_and_discontinuity">
-            <h2>Continuity and Discontinuity</h2>
-            <p>
-                <b>Definition.</b> A function is continuous at a point if the
-                limit of the function at that point exists and is equal to the
-                value of the function at that point. Mathematically, a function
-                is continuous at a point \(c\) if \[ \lim_{x \to c} f(x) = f(c).
+                <b>Theorem.</b> For all constant numbers \( c \),
+                \[
+                \lim_{x \to \infty} c = c \quad \text{and} \quad \lim_{x \to -\infty} c = c.
                 \]
             </p>
-            <p>
-                <b>Note.</b> The immediate consequence of being continuous are
-            </p>
-            <ul>
-                <li>\(f(c)\) exists.</li>
-                <li>\(\lim\limits_{x\to c}f(x)\) exists.</li>
-                <li>\(\lim\limits_{x\to c}f(x) = f(c)\).</li>
-            </ul>
-            <p>
-                <b>Definition.</b> A function is discontinuous at a point if the
-                limit of the function at that point does not exist or is not
-                equal to the value of the function at that point.
-            </p>
-        </section>
-
-        <br />
-
-        <section>
-            <h2>One-Sided Continuity</h2>
-            <h3>Left Continuity</h3>
-            <p>
-                <b>Definition.</b> A function is continuous from the left at a
-                point if the limit of the function from the left side exists and
-                is equal to the value of the function at that point.
-                Mathematically, a function is continuous from the left at a
-                point \(c\) if \[ \lim_{x \to c^-} f(x) = f(c). \]
-            </p>
-            <h3>Right Continuity</h3>
-            <p>
-                <b>Definition.</b> A function is continuous from the right at a
-                point if the limit of the function from the right side exists
-                and is equal to the value of the function at that point.
-                Mathematically, a function is continuous from the right at a
-                point \(c\) if \[ \lim_{x \to c^+} f(x) = f(c). \]
-            </p>
-        </section>
-
-        <br />
-
-        <section id="types_of_discontinuities">
-            <h2>Three types of discontinuities</h2>
-            <p>
-                <b>Removable Discontinuity.</b> A removable discontinuity occurs
-                when the limit of the function at a point exists, but the value
-                of the function at that point is not equal to the limit.
-                Mathematically, a removable discontinuity occurs when \[ \lim_{x
-                \to c} f(x) = L \quad \text{and} \quad f(c) \neq L. \]
-            </p>
-            <p>
-                <b>Jump Discontinuity.</b> A jump discontinuity occurs when the
-                limit of the function at a point from the left side is not equal
-                to the limit of the function at that point from the right side.
-                Mathematically, a jump discontinuity occurs when \[ \lim_{x \to
-                c^-} f(x)\text{ exists and } \lim_{x \to c^+} f(x)\text{ exists,
-                but } \lim_{x \to c^-} f(x) \neq \lim_{x \to c^+} f(x). \]
-            </p>
-            <p>
-                <b>Infinite Discontinuity.</b> An infinite discontinuity occurs
-                when the limit of the function at a point is infinite.
-                Mathematically, an infinite discontinuity occurs when \[ \lim_{x
-                \to c} f(x) = \pm \infty, \text{ or }\lim_{x \to c^-} f(x) = \pm
-                \infty,\text{ or }\lim_{x \to c^+} f(x) = \pm \infty. \]
-            </p>
-        </section>
-
-        <br />
-
-        <section id="elementary_function">
-            <h2>Elementary Function</h2>
-            <p>
-                <b>Definition.</b> An elementary function is a function of one
-                variable which is the composition of a finite number of
-                operations (\(+, -, \times, \div\)), exponential, logarithms,
-                constants, polynomials, trigonometric functions, inverse
-                trigonometric functions, and roots.
-            </p>
-            <p>
-                <b>Note.</b> \(\sqrt[n]{x}\), \(\log_a(x)\), \(a^x\),
-                \(\sin(x)\), \(\cos(x)\), \(\tan(x)\) are elementary functions
-                on their domains.
-            </p>
-            <p>
-                <b>Theorem.</b> If \(f(x)\) and \(g(x)\) are elementary
-                functions, then the following functions are also elementary
-                functions: \begin{align*} f(x) \pm g(x), \\ f(x) \times g(x), \\
-                f(x) \div g(x) = \dfrac{f(x)}{g(x)}, \\ f\circ g = f(g(x)), \\
-                \end{align*}
-            </p>
-            <p>
-                <b>Example.</b> \(f(x) = \log_{5}(x^2 + 3) - e^{\sin(x)}\) and
-                \(g(x) = \dfrac{\sqrt{\sin(e^x)}}{2x^4 - x^2 + 1}\) are
-                elementary functions.
-            </p>
-            <p>
-                <b>Important.</b> If \(f(x)\) is an elementary function, then
-                \(f(x)\) is continuous on its domain.
-            </p>
-        </section>
-
-        <br />
-
-        <section id="properties_of_continuous_functions">
-            <h2>Properties of Continuous Functions</h2>
-            <p>
-                <b>Theorem.</b> If \( f(x) \) and \( g(x) \) are
-                <b>continuous</b> at \( x = c \), then
-            </p>
-            <ul>
-                <li>
-                    \( kf(x) \) is continuous at \( x = c \) for a constant \( k
-                    \),
-                </li>
-                <li>\( f(x) \pm g(x) \) is continuous at \( x = c \),</li>
-                <li>\( f(x)g(x) \) is continuous at \( x = c \),</li>
-                <li>
-                    \( \dfrac{f(x)}{g(x)} \) is continuous at \( x = c \) given
-                    \( g(c) \neq 0 \).
-                </li>
-            </ul>
-        </section>
-
-        <h1>Indeterminate Forms</h1>
-
-        <section>
-            <h2>Indeterminate Forms</h2>
-            <p>
-                <b>Definition.</b> An indeterminate form is a mathematical
-                expression that cannot be evaluated using the standard rules of
-                arithmetic.
-            </p>
-            <p>
-                <b>Examples. </b> \(0^0\), \(\infty - \infty\),
-                \(\dfrac{0}{0}\), \(\dfrac{\infty}{\infty}\), \(0 \cdot
-                \infty\), \(\infty^0\).
-            </p>
-            <p>
-                <b>Important.</b> If you encounter an indeterminate form, you
-                may need to use <b>factoring</b>, <b>times the conjugate</b>, or
-                other methods to evaluate the limit.
-            </p>
-        </section>
-
-        <br />
-
-        <section>
-            <h2>Rationalization</h2>
-            <p>
-                <b>Definition.</b> The conjugate of a complex number \(a + b\)
-                is \(a - b\). The conjugate of a complex number \(a - b\) is \(a
-                + b\).
-            </p>
-            <p>
-                <b>Example.</b>
-                \[ \begin{align} \lim_{x\to 7}\dfrac{\sqrt{x+9}-4}{x-7} &=
-                \lim_{x\to
-                7}\left(\dfrac{\sqrt{x+9}-4}{x-7}\cdot\dfrac{\sqrt{x+9}+4}{\sqrt{x+9}+4}\right)
-                \\ &= \lim_{x\to 7}\dfrac{x+9-16}{(x-7)(\sqrt{x+9}+4)} \\ &=
-                \lim_{x\to 7}\dfrac{x-7}{(x-7)(\sqrt{x+9}+4)} \\ &= \lim_{x\to
-                7}\dfrac{1}{\sqrt{x+9}+4} \\ &= \dfrac{1}{\sqrt{7+9}+4} \\ &=
-                \dfrac{1}{8}. \end{align} \]
-            </p>
-        </section>
-
-        <br />
-
-        <section id="simplify">
-            <h2>Simplify the Rationals</h2>
-            <p>
-                <b> Example 1. </b>
-                \[ \begin{align} \lim_{x \to 2} \left( \frac{1}{x - 2} -
-                \frac{11}{x^2 + 7x - 18} \right) &= \lim_{x \to 2} \left(
-                \frac{1}{x - 2} - \frac{11}{(x + 9)(x - 2)} \right) \\ &=
-                \lim_{x \to 2} \left( \frac{x + 9}{(x + 9)(x - 2)} -
-                \frac{11}{(x + 9)(x - 2)}\right) \\ &= \lim_{x \to 2} \left(
-                \frac{x + 9 - 11}{(x + 9)(x - 2)} \right) \\ &= \lim_{x \to 2}
-                \left( \frac{x - 2}{(x + 9)(x - 2)} \right) \\ &= \lim_{x \to 2}
-                \left( \frac{1}{x + 9} \right) \\ &= \frac{1}{2 + 9} \\ &=
-                \frac{1}{11}. \end{align} \]
-            </p>
-            <p>
-                <b>Example 2.</b>
-                \[ \begin{align} \lim_{x \to \frac{\pi}{4}}
-                \dfrac{\cot(4x)}{\csc(4x)} &= \lim_{x \to \frac{\pi}{4}}
-                \left(\dfrac{\dfrac{1}{\tan(4x)}}{\dfrac{1}{\sin(4x)}}\right) \\
-                &= \lim_{x \to \frac{\pi}{4}}
-                \left(\dfrac{\sin(4x)}{\tan(4x)}\right) \\ &= \lim_{x \to
-                \frac{\pi}{4}}
-                \left(\dfrac{\sin(4x)}{\dfrac{\sin(4x)}{\cos(4x)}}\right) \\ &=
-                \lim_{x \to \frac{\pi}{4}} \cos(4x) \\ &=
-                \cos\left(4\left(\dfrac{\pi}{4}\right)\right) \\ &= \cos(\pi) \\
-                &= -1. \end{align} \]
-            </p>
-        </section>
-
-        <section id="factoring">
-            <h2>Factoring</h2>
-            <p>
-                <b> Example. </b>
-                \[ \begin{align} \lim_{x \to 5^-} \frac{4x^2 - 27x + 35}{x^2 -
-                25} &= \lim_{x \to 5^-} \frac{(4x - 7)(x - 5)}{(x + 5)(x - 5)}
-                \\ &= \lim_{x \to 5^-} \frac{4x - 7}{x + 5} \\ &= \frac{4(5) -
-                7}{5 + 5} \\ &= \frac{13}{10} \\ &= 1.3. \end{align} \]
-            </p>
-        </section>
-
-        <section id="multiple_method">
-            <h2>Multiple Methods</h2>
-            <p>
-                Sometimes, you are required to use several ways to evaluate a
-                limit. Here is one example using the conjugate and simplify the
-                rationals.
-            </p>
-            <p>
-                <b>Example.</b>
-                \[ \begin{align} \lim_{\theta \to \frac{\pi}{2}} (3 \sec(\theta)
-                - 3 \tan(\theta)) &= \lim_{\theta \to \frac{\pi}{2}}
-                \left(3\dfrac{1}{\cos(\theta)} -
-                3\dfrac{\sin(\theta)}{\cos(\theta)}\right) \\ &= \lim_{\theta
-                \to \frac{\pi}{2}} \left(\dfrac{3 -
-                3\sin(\theta)}{\cos(\theta)}\right) \\ &= \lim_{\theta \to
-                \frac{\pi}{2}} \left(\dfrac{3(1 -
-                \sin(\theta))}{\cos(\theta)}\right) \\ &= \lim_{\theta \to
-                \frac{\pi}{2}} \left(\dfrac{3(1 - \sin(\theta))\cdot (1 +
-                \sin(\theta))}{\cos(\theta)\cdot (1 + \sin(\theta))}\right) \\
-                &= \lim_{\theta \to \frac{\pi}{2}} \left(\dfrac{3(1 -
-                \sin^2(\theta))}{\cos(\theta)\cdot (1 + \sin(\theta))}\right) \\
-                &= \lim_{\theta \to \frac{\pi}{2}}
-                \left(\dfrac{3\cos^2(\theta)}{\cos(\theta)\cdot (1 +
-                \sin(\theta))}\right) \\ &= \lim_{\theta \to \frac{\pi}{2}}
-                \left(\dfrac{3\cos(\theta)}{1 + \sin(\theta)}\right) \\ &=
-                \dfrac{3\cos\left(\dfrac{\pi}{2}\right)}{1 +
-                \sin\left(\dfrac{\pi}{2}\right)} \\ &= \dfrac{3(0)}{1 + 1} \\ &=
-                0. \end{align} \]
-            </p>
-            <p>
-                <b>Note.</b> Keep in mind that \(\sin^2(\theta) + \cos^2(\theta)
-                = 1\).
-            </p>
-        </section>
-
-        <section id="x_approach_infty">
-            <h2>Approaching Infinity</h2>
             <p>
                 <b>Example.</b>
                 \[
-                \begin{align} \lim_{x \to \infty} \dfrac{2x^3 + 2x + 1}{5x^3 +3x^2 + 7}
-                &= \lim_{x \to \infty} \dfrac{\left(2x^3 + 2x + 1\right)\cdot \frac{1}{x^3}}{(5x^3 +3x^2 + 7)\cdot \frac{1}{x^3}} \\
-                &= \lim_{x \to \infty} \dfrac{\dfrac{2x^3}{x^3} + \dfrac{2x}{x^3} + \dfrac{1}{x^3}}{\dfrac{5x^3}{x^3} + \dfrac{3x^2}{x^3} + \dfrac{7}{x^3}} \\
-                &= \lim_{x \to \infty} \dfrac{2 + \dfrac{2}{x^2} + \dfrac{1}{x^3}}{5 + \dfrac{3}{x} + \dfrac{7}{x^3}} \\
-                &= \dfrac{2 + 0 + 0}{5 + 0 + 0} \\
-                &= \dfrac{2}{5}.
-                \end{align}
+                \lim_{x \to \infty} 23 = 23 \quad \text{and} \quad \lim_{x \to -\infty} 100 = 100.
                 \]
             </p>
         </section>
 
-        <!--        <section id="References">-->
-        <!--            <h2>References</h2>-->
-        <!--            <ul>-->
-        <!--                <li>-->
-        <!--                    First Initial. Last name, "Book name", Publications,-->
-        <!--                    Edition, Year.-->
-        <!--                </li>-->
-        <!--            </ul>-->
-        <!--        </section>-->
+        <br>
+
+        <section id = 'x_approaches_positive_infinity'>
+            <h2>\(x\) Approaches \(+\infty\)</h2>
+            <p>
+                <b>Theorem.</b> For all \( n > 0 \),
+                \[
+                \lim_{x \to \infty} x^n = \infty \quad \text{and} \quad \lim_{x \to \infty} x^{-n} = \lim_{x \to \infty} \frac{1}{x^n} = 0
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \lim_{x \to \infty} x^3 = \infty \quad \text{and} \quad \lim_{x \to \infty} x^{-3} = \lim_{x\to \infty}\frac{1}{x^3} = 0
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'x_approaches_negative_infinity'>
+            <h2>\(x\) Approaches \(-\infty\)</h2>
+            <p>
+                <b>Theorem.</b> If \( n \) is a positive whole number,
+                \[
+                \lim_{x \to -\infty} x^n =
+                \begin{cases}
+                \infty & \text{if } n \text{ is even} \\
+                -\infty & \text{if } n \text{ is odd}
+                \end{cases}
+                \quad \text{and} \quad \lim_{x \to -\infty} x^{-n} = \lim_{x \to -\infty} \frac{1}{x^n} = 0
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \lim_{x \to -\infty} x^3 = -\infty \quad \text{and} \quad \lim_{x \to -\infty} x^4 = \infty
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \lim_{x \to -\infty} x^{-3} = \lim_{x\to -\infty}\frac{1}{x^3} = 0, \quad \text{and} \quad \lim_{x \to -\infty} x^{-4} = \lim_{x\to -\infty}\frac{1}{x^4} = 0
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'limits_at_infinity_of_a_rational_function'>
+            <h2>Limits at Infinity of a Rational Function</h2>
+            <p>
+                Here the rational functions are of the form polynomial over polynomial.
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{3x^2 + 2x + 1}{x^2 + 1}, \quad \frac{x^5 + 2x + 1}{x^7 + x^4 + x^2 + 3}, \quad \frac {2x^2 + 1}{x + 1}
+                \]
+            </p>
+            <p>
+                <b>Theorem.</b> The asymptotic behavior of a rational function depends only on the leading terms of its numerator and denominator. If \( a_n, b_m \neq 0 \), then
+                \[
+                \lim_{x \to \infty} \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0}{b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0} = \frac{a_n}{b_m}\cdot(\lim_{x \to \infty} x^{n-m}).
+                \]
+                \[
+                \lim_{x \to -\infty} \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0}{b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0} = \frac{a_n}{b_m}\cdot(\lim_{x \to -\infty} x^{n-m}).
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = "intermediate_value_theorem">
+            <h2>Intermediate Value Theorem</h2>
+            <p>
+                How do we know that a continuous function \(f(x) = 0\) has a root?
+            </p>
+            <p>
+                One way is to use the Intermediate Value Theorem.
+            </p>
+            <p>
+                The Intermediate Value Theorem (IVT) says that a continuous function cannot skip values.
+            </p>
+            <p>
+                In other words, if a continuous function \(f\) takes on values \(f(a)\) and \(f(b)\), then it takes on all values between \(f(a)\) and \(f(b)\).
+            </p>
+            <p>
+                <b>Theorem.</b>
+]            </p>
+            <ul>
+                <li> \( f \) is continuous on \([a, b]\) </li>
+                <li> \( L \) is any number between \( f(a) \) and \( f(b) \) </li>
+            </ul>
+            <p>
+                Then there exists a number \( c \) in \((a, b)\) such that \( f(c) = L \).
+            </p>
+            <br>
+            <p>
+                How does the Intermediate Value Theorem help us to see there is a root in the interval?
+            </p>
+            <p>
+                <b>Theorem.</b> If \( f \) is continuous on \([a, b]\) and \( f(a) \cdot f(b) < 0 \), then there exists a number \( c \) in \((a, b)\) such that \( f(c) = 0 \).
+            </p>
+`          </section>
+
+        <br>
+
+        <section id = 'bisection_method'>
+            <h2>Bisection Method</h2>
+            <p>
+                Once we know that a continuous function has a root, how can we find the root more accurately?
+            </p>
+            <p>
+                One way is to use the Bisection Method.
+            </p>
+            <p>
+                Here is the process:
+            </p>
+            <ul>
+                <li> Let \( c = \frac{a+b}{2} \) </li>
+                <li> If \( f(c) = 0 \), then we are done. </li>
+                <li> If \( f(c) > 0 \), then the root is in \((a, c)\). </li>
+                <li> If \( f(c) < 0 \), then the root is in \((c, b)\). </li>
+                <li> Repeat the process. </li>
+            </ul>
+            <p>
+                <b>Question.</b> When can we stop the process?
+            </p>
+            <p>
+                <b>Answer.</b> When the interval is small enough. The Problem will provide the length of the intervals.
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'difference_quotient'>
+            <h2>Difference Quotient</h2>
+            <p>
+                <b>Definition.</b>The difference quotient of a function \( f \) at a number \( x\) is
+                    \[
+                    \frac{f(a) - f(x)}{a - x},
+                    \]
+                    where \(x\) is a number from \(a\).
+            </p>
+            <p>
+                Hence, the difference quotient is the slope of the secant line through the points \((a, f(a))\) and \((x, f(x))\).
+            </p>
+            <p>
+                Now, if we denote \(h = a - x\), then \(a = x + h\).
+                The difference quotient becomes
+                \[
+                \frac{f(a) - f(x)}{a - x} = \frac{f(x+h) - f(x)}{h}.
+                \]
+                And we will have an alternative form of the difference quotient.
+            </p>
+            <p>
+                <b>Definition.</b>
+                The difference quotient of a function \( f \) at a number \( x \) is
+                \[
+                \frac{f(x+h) - f(x)}{h}.
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'derivative'>
+            <h2>Derivative</h2>
+            <p>
+                <b>Definition.</b> The derivative of a function \( f \) at a number \( x \) is
+                \[
+                f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}.
+                \]
+                \[
+                f'(x) = \lim_{a \to x} \frac{f(a) - f(x)}{a - x}.
+                \]
+            </p>
+            <p>
+                <b>Remark.</b> The derivative of a function at a number is the slope of the tangent line to the graph of the function at that number.
+            </p>
+            <p>
+                \(f'(x)\) is also denoted by \(\frac{df}{dx}\), \(\frac{dy}{dx}\), or \(\frac{d}{dx} f(x)\).
+            </p>
+            <p>
+            <b>Definition.</b>
+                The derivative of a function \( f \) at a number \( x \) is
+                \[
+                \frac{d}{dx}f(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}.
+                \]
+                \[
+                \frac{d}{dx}f(x) = \lim_{a \to x} \frac{f(a) - f(x)}{a - x}.
+                \]
+            </p>
+        </section>
+
+
+        <section id = 'derivative_of_linear_and_constant_functions'>
+            <h2>Derivative of Linear and Constant Functions</h2>
+            <p>
+                <b>Theorem.</b> If \( f(x) = mx + b \) is a linear function, then \( f'(a) = m \) for all \( a \) in its domain.
+            </p>
+            <p>
+                If \( f(x) = b \) is a constant function, then \( f'(a) = 0 \) for all \( a \) in its domain.
+            </p>
+            <p>
+                <b>Example.</b> If \( f(x) = \frac23x + 3 \) is a linear function define on \(x\in [5, 10]\), then \( f'(a) = \frac23 \) for all \( a \in [5, 10]\).
+            </p>
+            <p>
+                <b>Example.</b> If \( f(x) = 100 \) is a constant function, whose domain is \((-\infty, \infty)\). Then ,\( f'(a) = 0 \) for all \( a \).
+            </p>
+        </section>
+
+        <section id = 'power_rule'>
+            <h2>Power Rule</h2>
+            <p>
+                <b>Theorem.</b> For all exponents \( n \):
+                \[
+                \frac{d}{dx} x^n = n x^{n-1}
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} x^3 = 3x^2
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} x^{-1} = -1x^{-2}
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} x^{-\frac{1}{2}} = -\frac12x^{-\frac32}
+                \]
+            </p>
+        </section>
+
+        <section id = 'sum_and_difference_rule'>
+            <h2>Sum and Difference Rules</h2>
+            <p>
+                <b>Theorem.</b> Assume that \( f \) and \( g \) are differentiable. Then \( f + g \) and \( f - g \) are differentiable, and
+                \[
+                (f + g)' = f' + g', \quad (f - g)' = f' - g'
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} (x^2 + 3x) = \frac{d}{dx} x^2 + \frac{d}{dx} 3x = 2x + 3.
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'constant_multiple_rule'>
+            <h2>Constant Multiple Rule</h2>
+            <p>
+                <b>Theorem.</b> For any constant \( c \), \( c\cdot f \) is differentiable, and
+                \[
+                (c\cdot f)' = c\cdot f'
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} 3x^2 = 3\frac{d}{dx} x^2 = 3\cdot 2x = 6x.
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'exponential_function_rule'>
+            <h2>The Exponential Function Rule</h2>
+            <p>
+                <b>Theorem.</b> For all \( x \),
+                \[
+                \frac{d}{dx} e^x = e^x
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'differentiability_implies_continuity'>
+            <h2>Differentiability Implies Continuity</h2>
+            <p>
+                <b>Theorem.</b> If \( f \) is differentiable at \( x = c \), then \( f \) is continuous at \( x = c \).
+            </p>
+            <p>
+                <b>Example.</b> If \( f \) is not continuous at \( x = c \), then \( f \) is not differentiable at \( x = c \).
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'product_rule'>
+            <h2>Product Rule</h2>
+            <p>
+                <b>Theorem.</b> If \( f \) and \( g \) are differentiable, then \( f\cdot g \) is differentiable, and
+                \[
+                (f\cdot g)' = f'\cdot g + f\cdot g'
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} (x^2\cdot e^x) = \frac{d}{dx} x^2\cdot e^x + x^2\cdot \frac{d}{dx} e^x = 2x\cdot e^x + x^2\cdot e^x
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'quotient_rule'>
+            <h2>Quotient Rule</h2>
+            <p>
+                <b>Theorem.</b> If \( f \) and \( g \) are differentiable, then \( \frac{f}{g} \) is differentiable, and
+                \[
+                \left(\frac{f}{g}\right)' = \frac{f'\cdot g - f\cdot g'}{g^2}
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} \frac{x^2}{e^x} = \frac{2x\cdot e^x - x^2\cdot e^x}{(e^x)^2}
+                \]
+            </p>
+        </section>
     </body>
 </html>
