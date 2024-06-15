@@ -1,5 +1,5 @@
 // Select all the links in the navbar
-var navLinks = document.querySelectorAll('.navbar a');
+const navLinks = document.querySelectorAll('.navbar a');
 
 // For each link, add a click event
 navLinks.forEach(function(link) {
