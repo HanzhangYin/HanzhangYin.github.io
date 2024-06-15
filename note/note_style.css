@@ -17,7 +17,6 @@
     }
     
     .navbar {
-      overflow: hidden;  
       background-color: #ededed;
       padding-top: 60px; /* Height of the hamburger menu */
       font-family: 'Spectral', serif;
@@ -60,14 +59,9 @@
       font-family: 'Spectral', serif;
       color: #565656;
       text-align: center;
-      padding: 11px 10px;
       display: block;
       padding: 20px;
       text-decoration: none;
-    }
-    
-    .navbar ul li a:hover {
-      background: #565656;
     }
     
 
@@ -107,8 +101,12 @@
       padding-top: 60px; /* Adjust this value to move h1 below the top-bar */
     }
 
+  b {
+    font-weight: 900; /* You can adjust this value as needed */
+  }
+
     .tooltip-link {
-      position: center;
+      position: relative;
       display: inline-block;
       color: #33D1FF;
     }
@@ -311,12 +309,7 @@
   #TOC a:not(:hover) {
     text-decoration: none;
   }
-  span.smallcaps{font-variant: small-caps;}
-  div.columns{display: flex; gap: min(4vw, 1.5em);}
-  div.column{flex: auto; overflow-x: auto;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-  
+
   .tooltip-link {
     position: relative;
     display: inline-block;
