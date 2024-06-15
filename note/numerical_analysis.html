@@ -45,6 +45,7 @@
       <a href="#error_analysis_newton">Error Analysis for Newton's Method</a>
       <a href="#theorems_on_newton_method">Theorems on Newton's Method</a>
       <a href="#horner_algorithm">Horner's Algorithm</a>
+      <a href="#contractive_mapping_theorem">Contractive Mapping</a>
       <a href="#polynomial_interpretation">Polynomial Interpretation</a>
       <a href="#gaussian_quadrature">Gaussian Quadrature</a>
       <a href="#gaussian_quadrature_error_analysis">Error Analysis for Gaussian Quadrature</a>
@@ -278,6 +279,13 @@
     <br />
 
     <section id = 'contractive_mapping_theorem'>
+      <h2>Contractive Mapping</h2>
+        <p>
+            \(\textbf{Definition. }\) A mapping \( F \) of a metric space \( (X, d) \)
+            into itself is called a <b>contraction</b> if there exists a constant \(
+            k \) with \( 0 \leq k < 1 \) such that \[ d(F(x), F(y)) \leq k d(x, y)
+            \] for all \( x, y \) in \( X \).
+        </p>
       <h2>Contractive Mapping Theorem</h2>
       <p>
         <b>Theorem (Contractive Mapping Theorem).</b>
@@ -286,6 +294,8 @@
         Moreover, this fixed point is the limit of every sequence obtained from Equation (1) with a starting point \( x_0 \in C \).
       </p>
     </section>
+
+    <br>
 
     <section id="polynomial_interpretation">
       <h2>Polynomial Interpretation</h2>
