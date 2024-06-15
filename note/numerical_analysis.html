@@ -1758,7 +1758,77 @@
         By the Contraction Mapping Theorem, we can know that \(g(x)\) has a unique fixed point on the given interval. \( \blacksquare \)
       </p>
       <p>
-        <b>Proof (b).</b>Since we already showed that \(g(x)\) is a contraction mapping, we can know that the fixed point iteration \(x_n = g(x_{n-1})\) converges to the unique fixed point by contractive mapping theorem. \( \blacksquare \)
+        <b>Proof (b).</b> Since we already showed that \(g(x)\) is a contraction mapping, we can know that the fixed point iteration \(x_n = g(x_{n-1})\) converges to the unique fixed point by contractive mapping theorem. \( \blacksquare \)
+      </p>
+      <p>
+        <b>Solution (c).</b> We firstly found the point it will converge to. Let \(g(x) = x\).
+        We have
+        \[
+        \frac{1}{2}(1 + 2x - x^2) = x.
+        \]
+        We solve for \(x\) and we have \(x = \pm 1\). Since it is in \([1/2, 3/2]\), we have \(x = 1\).
+        Now, we let
+        \[
+        \dfrac{\left|\frac12(1 + 2x - x^2) - 1\right|}{\left|x - 1\right|} = \dfrac{\left|\frac12(1 + 2x - x^2) - 1\right|}{\left|x - 1\right|} = \dfrac{\left|\frac12(1 + 2x - x^2) - 1\right|}{\left|x - 1\right|} = \dfrac{\left|-\frac12(x-1)^2\right|}{\left|x - 1\right|} = \dfrac{\frac12|x-1|^2}{|x-1|} = \dfrac12|x-1|.
+        \]
+        Thus, we can see that
+        \[
+        \dfrac{\left|\frac12(1 + 2x - x^2) - 1\right|}{\left|x - 1\right|^2} = \dfrac12.
+        \]
+        Therefore, we say that the convergence rate of the fixed point iteration is quadratic.
+      </p>
+    </section>
+
+    <br>
+
+    <section>
+      <p>
+        <b>2.</b> (a) Consider the Gaussian quadrature of the form
+
+        \[
+        G_2(f) = w f(-d) + w f(d) \approx \int_{-h}^{h} f(x) \, dx, \tag*{(1)}
+        \]
+
+        where \( h \) is a given positive number and \( w, d \) are unknown real numbers. Determine this Gaussian quadrature by finding \( w \) and \( d \).
+      </p>
+      <p>
+        (b) The Gaussian quadrature (1) has an error formula
+
+        \[
+        \int_{-h}^{h} f(x) \, dx - G_2(f) = C f^{(r+1)}(\xi),
+        \]
+
+        where \( \xi \in [-h, h] \). Determine the constant \( C \) and the integer \( r \).
+      </p>
+      <p>
+        (c) Consider the composite Gaussian quadrature \( G_m(f) \) that approximates the integral
+
+        \[
+        I(f) = \int_{0}^{b} f(x) \, dx.
+        \]
+
+        Let \( m > 0 \) be an integer and \( h = b/(2m) \). Divide the interval \([0, b]\) into \( m \) equally spaced subintervals \([x_k, x_{k+1}]\) of length \( 2h \) for \( k = 0, 1, \ldots, m-1 \), where the endpoints are determined by \( x_k = 2hk \) for \( k = 0, 1, \ldots, m \). The composite Gaussian quadrature \( G_m(f) \) is constructed by adapting (1) to each subinterval \([x_k, x_{k+1}]\) ( \( k = 0, \ldots, m-1 \)). Derive a formula for \( G_m(f) \) and the error formula
+
+        \[
+        I(f) - G_m(f) = D f^{(s+1)}(\eta), \quad \eta \in [0, b].
+        \]
+
+        The constant \( D \) and the integer \( s \) need to be provided.
+      </p>
+      <p>
+        <b>Solution (a).</b> Let \(f(x) = 1\), we have
+        \[
+          \int_{-h}^{h} f(x) \, dx = \int_{-h}^{h} 1 \, dx = 2h = w\cdot 1 + w\cdot 1 = 2w.
+        \]
+        Hence, we have \(w = h\). Now, set \(f(x) = x\), we have
+        \[
+          \int_{-h}^{h} f(x) \, dx = \int_{-h}^{h} x \, dx = 0 = w\cdot (-d) + w\cdot d = 0,
+        \]
+        which does not provide too much information. Now, we set \(f(x) = x^2\), we have
+        \[
+          \int_{-h}^{h} f(x) \, dx = \int_{-h}^{h} x^2 \, dx = \frac{2h^3}{3} = h\cdot d^2 + h\cdot d^2 = 2hd^2.
+        \]
+        Thus, we have \(d = \frac{\sqrt{3}h}{3}\). Hence, we have \(w = h\) and \(d = \frac{\sqrt{3}h}{3}\).
       </p>
     </section>
 
