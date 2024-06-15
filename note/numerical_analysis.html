@@ -1670,8 +1670,17 @@
       <p>
         <b>Proof (a).</b> Suppose that \(a, b\in [1/2, 3/2]\) and \(a\neq b\). Then, we have
         \[
-        |g(a) - g(b)| = \left|\frac{1}{2}(1 + 2a - a^2) - \frac{1}{2}(1 + 2b - b^2)\right| = |\frac12 (b^2 - a^2) + a - b|.
+        |g(a) - g(b)| = \left|\frac{1}{2}(1 + 2a - a^2) - \frac{1}{2}(1 + 2b - b^2)\right| = \left|\frac12 (b^2 - a^2) + a - b\right| = \left|\frac12(b-a)(b+a) + a - b\right|.
         \]
+        \[
+        \left|\frac{g(a) - g(b)}{a - b}\right| = \left|-\frac12(b+a) + 1\right|.
+        \]
+        Since \(a, b\in [1/2, 3/2]\), we have \(1 \leq b+a \leq 3\). Then, we can have \(|-\frac12(b+a) + 1| \leq \frac12\).
+        Thus, we can know that
+        \[
+        |g(a) - g(b)| \leq \frac12 |a - b|.
+        \]
+        By the Contraction Mapping Theorem, we can know that \(g(x)\) has a unique fixed point on the given interval. \( \blacksquare \)
       </p>
     </section>
 
