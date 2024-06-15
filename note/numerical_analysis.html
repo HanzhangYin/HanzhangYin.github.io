@@ -1841,6 +1841,31 @@
     </section>
 
     <section>
+      <p>
+        <b>3.</b> Consider the numerical ODE method
+        \[
+        y_{k+1} = y_{k-1} + \frac{h}{3} \left( f(t_{k+1}, y_{k+1}) + 4f(t_k, y_k) + f(t_{k-1}, y_{k-1}) \right)
+        \]
+        for solving the initial value problem \( y' = f(t, y) \) for \( t \in (a, b] \) with \( y(a) = \alpha \), where \( h = \frac{(b-a)}{n} \), \( t_k = a + kh \) for \( k = 0, 1, \ldots, n \), and \( n > 0 \) is an integer.
+        </p>
+        <p>
+        (a) State whether this method is explicit or implicit, single-step or multistep.
+        </p>
+        <p>
+        (b) State and justify whether this method is weakly stable, strongly stable, or unstable.
+        </p>
+        <p>
+        (c) Derive the order of the local truncation error.
+      </p>
+      <p>
+        <b>Solution (a).</b> This method is explicit and multistep.
+      </p>
+        <p>
+            <b>Solution (b).</b>
+        </p>
+    </section>
+
+    <section>
       <h2>Qualify Exam Problems (January 2022)</h2>
       <p>
         1. Consider the iteration \[ x_{n+1} = \frac{1}{2} x_n + \frac{5}{2x_n},
