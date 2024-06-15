@@ -41,6 +41,7 @@
       <a href="#roundoff_error">Roundoff Error</a>
       <a href="#base">Number System with base \(\beta\)</a>
       <a href="#floating_point_error_analysis">Floating point error analysis</a>
+      <a href="#orders_of_convergence">Orders of Convergence</a>
       <a href="#newton_method">Newton's Method</a>
       <a href="#error_analysis_newton">Error Analysis for Newton's Method</a>
       <a href="#theorems_on_newton_method">Theorems on Newton's Method</a>
@@ -59,7 +60,7 @@
       <a href="#rayleigh_quotient">Rayleigh Quotient</a>
       <a href="#january_2019">January 2019</a>
       <a href="#january_2020">January 2020</a>
-      <a href="#august_2020">January 2021</a>
+      <a href="#august_2020">August 2020</a>
       <a href="#References">References</a>
     </nav>
     <script src="click.js"></script>
@@ -132,6 +133,37 @@
     </section>
 
     <br />
+
+    <section id = 'orders_of_convergence'>
+      <h2>Orders of Convergence</h2>
+      <p>
+        Let \(\{x_n\}\) be a sequence of real numbers tending to a limit \( x^* \). We say that the rate of convergence is at least <b>linear</b> if there are a constant \( c < 1 \) and an integer \( N \) such that
+
+        \[
+        |x_{n+1} - x^*| \le c |x_n - x^*| \quad (n \ge N)
+        \]
+
+        We say that the rate of convergence is at least <b>superlinear</b> if there exist a sequence \( \epsilon_n \) tending to 0 and an integer \( N \) such that
+
+        \[
+        |x_{n+1} - x^*| \le \epsilon_n |x_n - x^*| \quad (n \ge N)
+        \]
+
+        The convergence is at least <b>quadratic</b> if there are a constant \( C \) (not necessarily less than 1) and an integer \( N \) such that
+
+        \[
+        |x_{n+1} - x^*| \le C |x_n - x^*|^2 \quad (n \ge N)
+        \]
+
+        In general, if there are positive constants \( C \) and \( \alpha \) and an integer \( N \) such that
+
+        \[
+        |x_{n+1} - x^*| \le C |x_n - x^*|^\alpha \quad (n \ge N)
+        \]
+
+        we say that the rate of convergence is of <b>order \(\alpha\)</b> at least.
+      </p>
+    </section>
 
     <section id="newton_method">
       <h2>Newton's Method</h2>
