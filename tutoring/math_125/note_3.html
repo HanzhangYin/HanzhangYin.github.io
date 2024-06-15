@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script
+            type="text/javascript"
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+        ></script>
+        <!--It is a link for MathJax-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <!--link for the font-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!--link for the font-->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap"
+            rel="stylesheet"
+        />
+        <!--link for the font-->
+        <link rel="stylesheet" type="text/css" href="tutoring_style.css" />
+        <!--It is a link for css structure-->
+        <title>Note 2</title>
+    </head>
+    <body>
+        <div class="top-bar"></div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <span class="visually-hidden">Menu</span>
+        </label>
+        <nav class="navbar">
+            <a href="#limits_at_infinity">Limits at Infinity</a>
+            <a href="#x_approaches_positive_infinity">\(x\) Approaches \(+\infty\)</a>
+            <a href="#x_approaches_negative_infinity">\(x\) Approaches \(-\infty\)</a>
+            <a href="#limits_at_infinity_of_a_rational_function">Limits at Infinity of a Rational Function</a>
+            <a href="#intermediate_value_theorem">Intermediate Value Theorem</a>
+            <a href="#bisection_method">Bisection Method</a>
+            <a href="#difference_quotient">Difference Quotient</a>
+            <a href="#derivative">Derivative</a>
+            <a href="#derivative_of_linear_and_constant_functions"> Rules of Linear and Constant Functions</a>
+            <a href="#power_rule">Power Rule</a>
+            <a href="#sum_and_difference_rule">Sum and Difference Rules</a>
+            <a href="#constant_multiple_rule">Constant Multiple Rule</a>
+            <a href="#exponential_function_rule">The Exponential Function Rule</a>
+            <a href="#differentiability_implies_continuity">Differentiability Implies Continuity</a>
+            <a href="#product_rule">Product Rule</a>
+            <a href="#quotient_rule">Quotient Rule</a>
+
+            <!--            <a href="#References">References</a>-->
+        </nav>
+        <script src="click.js"></script>
+        <!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+        <h1>Note 2</h1>
+
+        <section id = 'limits_at_infinity'>
+            <h2>Limits at Infinity</h2>
+            <p>
+                Consider limits where \(x\) approaches \(+\infty\) or \(-\infty\).
+            </p>
+            <h2> Constant Case </h2>
+            <p>
+                Special cases:
+            </p>
+            <p>
+                <b>Theorem.</b> For all constant numbers \( c \),
+                \[
+                \lim_{x \to \infty} c = c \quad \text{and} \quad \lim_{x \to -\infty} c = c.
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \lim_{x \to \infty} 23 = 23 \quad \text{and} \quad \lim_{x \to -\infty} 100 = 100.
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'x_approaches_positive_infinity'>
+            <h2>\(x\) Approaches \(+\infty\)</h2>
+            <p>
+                <b>Theorem.</b> For all \( n > 0 \),
+                \[
+                \lim_{x \to \infty} x^n = \infty \quad \text{and} \quad \lim_{x \to \infty} x^{-n} = \lim_{x \to \infty} \frac{1}{x^n} = 0
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \lim_{x \to \infty} x^3 = \infty \quad \text{and} \quad \lim_{x \to \infty} x^{-3} = \lim_{x\to \infty}\frac{1}{x^3} = 0
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'x_approaches_negative_infinity'>
+            <h2>\(x\) Approaches \(-\infty\)</h2>
+            <p>
+                <b>Theorem.</b> If \( n \) is a positive whole number,
+                \[
+                \lim_{x \to -\infty} x^n =
+                \begin{cases}
+                \infty & \text{if } n \text{ is even} \\
+                -\infty & \text{if } n \text{ is odd}
+                \end{cases}
+                \quad \text{and} \quad \lim_{x \to -\infty} x^{-n} = \lim_{x \to -\infty} \frac{1}{x^n} = 0
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \lim_{x \to -\infty} x^3 = -\infty \quad \text{and} \quad \lim_{x \to -\infty} x^4 = \infty
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \lim_{x \to -\infty} x^{-3} = \lim_{x\to -\infty}\frac{1}{x^3} = 0, \quad \text{and} \quad \lim_{x \to -\infty} x^{-4} = \lim_{x\to -\infty}\frac{1}{x^4} = 0
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'limits_at_infinity_of_a_rational_function'>
+            <h2>Limits at Infinity of a Rational Function</h2>
+            <p>
+                Here the rational functions are of the form polynomial over polynomial.
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{3x^2 + 2x + 1}{x^2 + 1}, \quad \frac{x^5 + 2x + 1}{x^7 + x^4 + x^2 + 3}, \quad \frac {2x^2 + 1}{x + 1}
+                \]
+            </p>
+            <p>
+                <b>Theorem.</b> The asymptotic behavior of a rational function depends only on the leading terms of its numerator and denominator. If \( a_n, b_m \neq 0 \), then
+                \[
+                \lim_{x \to \infty} \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0}{b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0} = \frac{a_n}{b_m}\cdot(\lim_{x \to \infty} x^{n-m}).
+                \]
+                \[
+                \lim_{x \to -\infty} \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0}{b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0} = \frac{a_n}{b_m}\cdot(\lim_{x \to -\infty} x^{n-m}).
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = "intermediate_value_theorem">
+            <h2>Intermediate Value Theorem</h2>
+            <p>
+                How do we know that a continuous function \(f(x) = 0\) has a root?
+            </p>
+            <p>
+                One way is to use the Intermediate Value Theorem.
+            </p>
+            <p>
+                The Intermediate Value Theorem (IVT) says that a continuous function cannot skip values.
+            </p>
+            <p>
+                In other words, if a continuous function \(f\) takes on values \(f(a)\) and \(f(b)\), then it takes on all values between \(f(a)\) and \(f(b)\).
+            </p>
+            <p>
+                <b>Theorem.</b>
+]            </p>
+            <ul>
+                <li> \( f \) is continuous on \([a, b]\) </li>
+                <li> \( L \) is any number between \( f(a) \) and \( f(b) \) </li>
+            </ul>
+            <p>
+                Then there exists a number \( c \) in \((a, b)\) such that \( f(c) = L \).
+            </p>
+            <br>
+            <p>
+                How does the Intermediate Value Theorem help us to see there is a root in the interval?
+            </p>
+            <p>
+                <b>Theorem.</b> If \( f \) is continuous on \([a, b]\) and \( f(a) \cdot f(b) < 0 \), then there exists a number \( c \) in \((a, b)\) such that \( f(c) = 0 \).
+            </p>
+`          </section>
+
+        <br>
+
+        <section id = 'bisection_method'>
+            <h2>Bisection Method</h2>
+            <p>
+                Once we know that a continuous function has a root, how can we find the root more accurately?
+            </p>
+            <p>
+                One way is to use the Bisection Method.
+            </p>
+            <p>
+                Here is the process:
+            </p>
+            <ul>
+                <li> Let \( c = \frac{a+b}{2} \) </li>
+                <li> If \( f(c) = 0 \), then we are done. </li>
+                <li> If \( f(c) > 0 \), then the root is in \((a, c)\). </li>
+                <li> If \( f(c) < 0 \), then the root is in \((c, b)\). </li>
+                <li> Repeat the process. </li>
+            </ul>
+            <p>
+                <b>Question.</b> When can we stop the process?
+            </p>
+            <p>
+                <b>Answer.</b> When the interval is small enough. The Problem will provide the length of the intervals.
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'difference_quotient'>
+            <h2>Difference Quotient</h2>
+            <p>
+                <b>Definition.</b>The difference quotient of a function \( f \) at a number \( x\) is
+                    \[
+                    \frac{f(a) - f(x)}{a - x},
+                    \]
+                    where \(x\) is a number from \(a\).
+            </p>
+            <p>
+                Hence, the difference quotient is the slope of the secant line through the points \((a, f(a))\) and \((x, f(x))\).
+            </p>
+            <p>
+                Now, if we denote \(h = a - x\), then \(a = x + h\).
+                The difference quotient becomes
+                \[
+                \frac{f(a) - f(x)}{a - x} = \frac{f(x+h) - f(x)}{h}.
+                \]
+                And we will have an alternative form of the difference quotient.
+            </p>
+            <p>
+                <b>Definition.</b>
+                The difference quotient of a function \( f \) at a number \( x \) is
+                \[
+                \frac{f(x+h) - f(x)}{h}.
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'derivative'>
+            <h2>Derivative</h2>
+            <p>
+                <b>Definition.</b> The derivative of a function \( f \) at a number \( x \) is
+                \[
+                f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}.
+                \]
+                \[
+                f'(x) = \lim_{a \to x} \frac{f(a) - f(x)}{a - x}.
+                \]
+            </p>
+            <p>
+                <b>Remark.</b> The derivative of a function at a number is the slope of the tangent line to the graph of the function at that number.
+            </p>
+            <p>
+                \(f'(x)\) is also denoted by \(\frac{df}{dx}\), \(\frac{dy}{dx}\), or \(\frac{d}{dx} f(x)\).
+            </p>
+            <p>
+            <b>Definition.</b>
+                The derivative of a function \( f \) at a number \( x \) is
+                \[
+                \frac{d}{dx}f(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}.
+                \]
+                \[
+                \frac{d}{dx}f(x) = \lim_{a \to x} \frac{f(a) - f(x)}{a - x}.
+                \]
+            </p>
+        </section>
+
+
+        <section id = 'derivative_of_linear_and_constant_functions'>
+            <h2>Derivative of Linear and Constant Functions</h2>
+            <p>
+                <b>Theorem.</b> If \( f(x) = mx + b \) is a linear function, then \( f'(a) = m \) for all \( a \) in its domain.
+            </p>
+            <p>
+                If \( f(x) = b \) is a constant function, then \( f'(a) = 0 \) for all \( a \) in its domain.
+            </p>
+            <p>
+                <b>Example.</b> If \( f(x) = \frac23x + 3 \) is a linear function define on \(x\in [5, 10]\), then \( f'(a) = \frac23 \) for all \( a \in [5, 10]\).
+            </p>
+            <p>
+                <b>Example.</b> If \( f(x) = 100 \) is a constant function, whose domain is \((-\infty, \infty)\). Then ,\( f'(a) = 0 \) for all \( a \).
+            </p>
+        </section>
+
+        <section id = 'power_rule'>
+            <h2>Power Rule</h2>
+            <p>
+                <b>Theorem.</b> For all exponents \( n \):
+                \[
+                \frac{d}{dx} x^n = n x^{n-1}
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} x^3 = 3x^2
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} x^{-1} = -1x^{-2}
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} x^{-\frac{1}{2}} = -\frac12x^{-\frac32}
+                \]
+            </p>
+        </section>
+
+        <section id = 'sum_and_difference_rule'>
+            <h2>Sum and Difference Rules</h2>
+            <p>
+                <b>Theorem.</b> Assume that \( f \) and \( g \) are differentiable. Then \( f + g \) and \( f - g \) are differentiable, and
+                \[
+                (f + g)' = f' + g', \quad (f - g)' = f' - g'
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} (x^2 + 3x) = \frac{d}{dx} x^2 + \frac{d}{dx} 3x = 2x + 3.
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'constant_multiple_rule'>
+            <h2>Constant Multiple Rule</h2>
+            <p>
+                <b>Theorem.</b> For any constant \( c \), \( c\cdot f \) is differentiable, and
+                \[
+                (c\cdot f)' = c\cdot f'
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} 3x^2 = 3\frac{d}{dx} x^2 = 3\cdot 2x = 6x.
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'exponential_function_rule'>
+            <h2>The Exponential Function Rule</h2>
+            <p>
+                <b>Theorem.</b> For all \( x \),
+                \[
+                \frac{d}{dx} e^x = e^x
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'differentiability_implies_continuity'>
+            <h2>Differentiability Implies Continuity</h2>
+            <p>
+                <b>Theorem.</b> If \( f \) is differentiable at \( x = c \), then \( f \) is continuous at \( x = c \).
+            </p>
+            <p>
+                <b>Example.</b> If \( f \) is not continuous at \( x = c \), then \( f \) is not differentiable at \( x = c \).
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'product_rule'>
+            <h2>Product Rule</h2>
+            <p>
+                <b>Theorem.</b> If \( f \) and \( g \) are differentiable, then \( f\cdot g \) is differentiable, and
+                \[
+                (f\cdot g)' = f'\cdot g + f\cdot g'
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} (x^2\cdot e^x) = \frac{d}{dx} x^2\cdot e^x + x^2\cdot \frac{d}{dx} e^x = 2x\cdot e^x + x^2\cdot e^x
+                \]
+            </p>
+        </section>
+
+        <br>
+
+        <section id = 'quotient_rule'>
+            <h2>Quotient Rule</h2>
+            <p>
+                <b>Theorem.</b> If \( f \) and \( g \) are differentiable, then \( \frac{f}{g} \) is differentiable, and
+                \[
+                \left(\frac{f}{g}\right)' = \frac{f'\cdot g - f\cdot g'}{g^2}
+                \]
+            </p>
+            <p>
+                <b>Example.</b>
+                \[
+                \frac{d}{dx} \frac{x^2}{e^x} = \frac{2x\cdot e^x - x^2\cdot e^x}{(e^x)^2}
+                \]
+            </p>
+        </section>
+    </body>
+</html>
