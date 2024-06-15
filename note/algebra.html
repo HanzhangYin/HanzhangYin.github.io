@@ -24,6 +24,8 @@
       <a href="#linear_minimal_polynomial">Minimal Polynomial</a>
       <a href="#t_complement">\(T\)-Complement</a>
       <a href="#cyclic_operator">Cyclic Operator</a>
+      <a href="#indecomposable_operator">Indecomposable Operator</a>
+      <a href="#characteristic_polynomial">Characteristic Polynomial</a>
       <a href="#normal_subgroup">Normal Subgroup</a>
       <a href="#isomorphism">Isomorphism</a>
       <a href="#center">Center</a>
@@ -220,6 +222,22 @@
       <p>
         <b>Theorem.</b> Let \( V \) be a finite-dimensional vector space and \( T \) a linear operator on \( V \) with minimal polynomial \( \mu_T(x) \). Let \( v \) be a vector such that \( \mu_{T,v}(x) = \mu_T(x) \). Then \( \langle T, v \rangle \) has a \( T \)-invariant complement in \( V \).
       </p>
+      <p>
+        <i><b>"Advanced Linear Algebra (2nd Edition)", Page 134</b></i>
+      </p>
+    </section>
+
+    <section id = 'characteristic_polynomial'>
+        <h2>Characteristic Polynomial</h2>
+      <p>
+        <b>Theorem.</b> Let \( V \) be a finite-dimensional vector space and \( T \) a linear operator on \( V \). Then there are vectors \( \mathbf{w}_1, \mathbf{w}_2, \ldots, \mathbf{w}_r \) such that the following hold:
+      </p>
+      <p>
+        i. \( V = \langle T, \mathbf{w}_1 \rangle \oplus \cdots \oplus \langle T, \mathbf{w}_r \rangle \).
+        </p>
+      <p>
+        ii. If \( d_i(x) = \mu_{T, \mathbf{w}_i}(x) \) then \( d_r(x) \mid d_{r-1}(x) \mid \cdots \mid d_1(x) = \mu_T(x) \).
+        </p>
       <p>
         <i><b>"Advanced Linear Algebra (2nd Edition)", Page 134</b></i>
       </p>
