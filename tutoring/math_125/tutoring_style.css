@@ -17,7 +17,6 @@
     }
     
     .navbar {
-      overflow: hidden;  
       background-color: #ededed;
       padding-top: 60px; /* Height of the hamburger menu */
       font-family: 'Spectral', serif;
@@ -60,7 +59,6 @@
       font-family: 'Spectral', serif;
       color: #565656;
       text-align: center;
-      padding: 11px 10px;
       display: block;
       padding: 20px;
       text-decoration: none;
@@ -108,7 +106,7 @@
     }
 
     .tooltip-link {
-      position: center;
+      position: relative;
       display: inline-block;
       color: #33D1FF;
     }
