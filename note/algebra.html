@@ -1661,12 +1661,69 @@
         Now, let \(v = a e_1 + b e_2 + c e_3\), then we have
         \[
         \begin{align}
-        T^*(T(v)) &= T^*(a\alpha e_1 + b\beta e_2 + b\gamma e_3 + c\gamma e_2 + c\beta e_3)\\
-        &= T^*(a\alpha e_1 + (b\beta + c\gamma) e_2 + (b\gamma + c\beta) e_3)\\
-        &= a\alpha T^*(e_1) + (b\beta + c\gamma) T^*(e_2) + (b\gamma + c\beta) T^*(e_3)\\
+        T^*(T(v)) &= T^*(a\alpha e_1 + b\beta e_2 + b\gamma e_3 - c\gamma e_2 + c\beta e_3)\\
+        &= T^*(a\alpha e_1 + (b\beta - c\gamma) e_2 + (b\gamma + c\beta) e_3)\\
+        &= a\alpha T^*(e_1) + (b\beta - c\gamma) T^*(e_2) + (b\gamma + c\beta) T^*(e_3)\\
+        &= a\alpha \alpha e_1 + (b\beta - c\gamma)(\beta e_2 - \gamma e_3) + (b\gamma + c\beta)(\gamma e_2 + \beta e_3)\\
+        &= a\alpha^2 e_1 + b(\beta^2 + \gamma^2)e_2 + c(\beta^2 + \gamma^2)e_3\\
         \end{align}
         \]
+        For the other direction,
+        \[
+        \begin{align}
+        T(T^*(v)) &= T(a\alpha e_1 + b\beta e_2 - b\gamma e_3 + c\gamma e_2 + c\beta e_3)\\
+        &= T(a\alpha e_1 + (b\beta + c\gamma) e_2 + (-b\gamma + c\beta) e_3)\\
+        &= a\alpha T(e_1) + (b\beta + c\gamma) T(e_2) + (-b\gamma + c\beta) T(e_3)\\
+        &= a\alpha \alpha e_1 + (b\beta + c\gamma)(\beta e_2 + \gamma e_3) + (-b\gamma + c\beta)(-\gamma e_2 + \beta e_3)\\
+        &= a\alpha^2 e_1 + b(\beta^2 + \gamma^2)e_2 + c(\beta^2 + \gamma^2)e_3\\
+        \end{align}
+        \]
+      Hence, we can see that \(T^*(T(v)) = T(T^*(v))\) for any \(v\in \mathbb{R}^3\). Therefore, we have \(T\) is a normal operator. \(\blacksquare\)
+      </p>
+      <p>
+        <b>Proof (b).</b> Similar to part \((a)\), we have
+        \[
+        \begin{align}
+        T(e_1) &= e_1 + e_3, \\
+        T(e_2) &= e_1 + e_2, \\
+        T(e_3) &= e_2 + e_3.
+        \end{align}
+        \]
+        Then we have the adjoint of the matrix of \(T\) is \(\begin{pmatrix}
+        1 & 0 & 1 \\
+        1 & 1 & 0 \\
+        0 & 1 & 1
+        \end{pmatrix}\).
         Then we have
+        \[
+        \begin{align}
+        T^*(e_1) &= e_1 + e_2, \\
+        T^*(e_2) &= e_2 + e_3, \\
+        T^*(e_3) &= e_1 + e_3.
+        \end{align}
+        \]
+        Now, set \(v = a e_1 + b e_2 + c e_3\), then we have
+        \[
+        \begin{align}
+        T^*(T(v)) &= T^*(a e_1 + a e_3 + b e_1 + b e_2 + c e_2 + c e_3)\\
+        &= T^*((a + b)e_1 + (b + c)e_2 + (a + c)e_3)\\
+        &= (a + b)T^*(e_1) + (b + c)T^*(e_2) + (a + c)T^*(e_3)\\
+        &= (a + b)(e_1 + e_2) + (b + c)(e_2 + e_3) + (a + c)(e_1 + e_3)\\
+        &= (2a + b + c)e_1 + (a + 2b + c)e_2 + (a + b + 2c)e_3.
+        \end{align}
+        \]
+        For the other direction,
+        \[
+        \begin{align}
+        T(T^*(v)) &= T(a e_1 + a e_2 + b e_2 + b e_3 + c e_1 + c e_3)\\
+        &= T((a + c)e_1 + (a + b)e_2 + (b + c)e_3)\\
+        &= (a + c)T(e_1) + (a + b)T(e_2) + (b + c)T(e_3)\\
+        &= (a + c)(e_1 + e_3) + (a + b)(e_1 + e_2) + (b + c)(e_2 + e_3)\\
+        &= (2a + b + c)e_1 + (a + 2b + c)e_2 + (a + b + 2c)e_3.
+        \end{align}
+        \]
+        Hence, we can see that \(T^*(T(v)) = T(T^*(v))\) for any \(v\in \mathbb{R}^3\). Therefore, we have \(T\) is a normal operator.
+        (to be continued...)
       </p>
     </section>
 
