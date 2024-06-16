@@ -58,6 +58,7 @@
       <a href="#ku_2016_1_5">KU 2016 (January)</a>
       <a href="#ku_2016_8_4">KU 2016 (August)</a>
       <a href='#ku_2017_8_6'>KU 2017 (August)</a>
+      <a href='#ku_2020_1'>KU 2020 (January)</a>
       <a href='#ku_2021_1_1'>KU 2021 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (2)</a>
@@ -1605,6 +1606,67 @@
         Thus, we show that there is only one eigenvalue of \(T\), which is \(\lambda\).
         Then, we can know that the characteristic polynomial of \(T\) is \((x - \lambda)^n\), where \(n\) is the dimension of \(V\).
         In that case, the minimal polynomial of \(T\) is \((x - \lambda)^m\), where \(m\leq n\) (to be continued...)
+      </p>
+    </section>
+
+    <h2 id = 'ku_2020_1'>KU 2020 (January)</h2>
+    <section>
+      <p>
+        <b>2.</b> Let \( T : \mathbb{R}^3 \rightarrow \mathbb{R}^3 \) be a linear operator.
+      </p>
+        <p>
+        (a) Suppose the matrix of \( T \) with respect to the standard basis of \( \mathbb{R}^3 \) equals
+        \[
+        \begin{pmatrix}
+        \alpha & 0 & 0 \\
+        0 & \beta & -\gamma \\
+        0 & \gamma & \beta
+        \end{pmatrix},
+        \]
+        with \( \alpha, \beta, \gamma \in \mathbb{R} \). Prove that \( T \) is a normal operator.
+        </p>
+        <p>
+        (b) Suppose the matrix of \( T \) with respect to the standard basis is
+        \[
+        A = \begin{pmatrix}
+        1 & 1 & 0 \\
+        0 & 1 & 1 \\
+        1 & 0 & 1
+        \end{pmatrix}.
+        \]
+        Prove that \( T \) is a normal operator and find an orthonormal basis \( B \) for \( \mathbb{R}^3 \) such that the matrix of \( T \) with respect to \( B \) has the form in part (a).
+      </p>
+      <p>
+        <b>Proof (a).</b> Given that the matrix is the linear operator \(T\) respect to the standard basis. We have
+        \[
+        \begin{align}
+        T(e_1) = \alpha e_1, \\
+        T(e_2) = \beta e_2 + \gamma e_3, \\
+        T(e_3) = -\gamma e_2 + \beta e_3.
+        \end{align}
+        \]
+        Then, we have the transpose \(\begin{pmatrix}
+        \alpha & 0 & 0 \\
+        0 & \beta & \gamma \\
+        0 & -\gamma & \beta
+        \end{pmatrix}\), which is the adjoint of the matrix of \(T\).
+        Thus, we have
+        \[
+        \begin{align}
+        T^*(e_1) &= \alpha e_1, \\
+        T^*(e_2) &= \beta e_2 - \gamma e_3, \\
+        T^*(e_3) &= \gamma e_2 + \beta e_3.
+        \end{align}
+        \]
+        Now, let \(v = a e_1 + b e_2 + c e_3\), then we have
+        \[
+        \begin{align}
+        T^*(T(v)) &= T^*(a\alpha e_1 + b\beta e_2 + b\gamma e_3 + c\gamma e_2 + c\beta e_3)\\
+        &= T^*(a\alpha e_1 + (b\beta + c\gamma) e_2 + (b\gamma + c\beta) e_3)\\
+        &= a\alpha T^*(e_1) + (b\beta + c\gamma) T^*(e_2) + (b\gamma + c\beta) T^*(e_3)\\
+        \end{align}
+        \]
+        Then we have
       </p>
     </section>
 
