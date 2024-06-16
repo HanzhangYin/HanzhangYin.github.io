@@ -55,6 +55,7 @@
       <a href="#error">Error</a>
       <a href="#initial_value_problems">Initial Value Problem</a>
       <a href="#stability">Stability</a>
+      <a href='#local_truncation_error_multistep'>Local Truncation Error for Multistep Methods</a>
       <a href="#positive_definite">Positive Definite</a>
       <a href="#gerschgorin_theorem">Gerschgorin Theorem</a>
       <a href="#rayleigh_quotient">Rayleigh Quotient</a>
@@ -1044,7 +1045,25 @@
         </p>
     </section>
 
-    <br />
+    <br>
+
+    <section id = "local_truncation_error_multistep">
+      <h2>Local Truncation Error, Multistep Method</h2>
+      <p>
+        <b>Theorem (Theorem on Local Truncation Error, Multistep Method).</b>
+
+        If the multistep method (2) is of order \( m \), if \( x \in C^{m+2} \), and if \( \partial f / \partial x \) is continuous, then under the hypotheses of the preceding paragraph,
+        \[
+        x(t_n) - x_n = \left( \frac{d_{m+1}}{a_k} \right) h^{m+1} x^{(m+1)}(t_{n-k}) + \mathcal{O}(h^{m+2}) \tag*{(13)}
+        \]
+        (The coefficients \( d_k \) are defined in Section 8.4, p. 553.)
+      </p>
+      <p>
+        <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page 560.</i></b>
+      </p>
+    </section>
+
+    <br>
 
     <section id="gram_schmidt">
       <h2>Gram-Schmidt</h2>
@@ -1860,9 +1879,11 @@
       <p>
         <b>Solution (a).</b> This method is implicit and multistep.
       </p>
-        <p>
-            <b>Solution (b).</b>
-        </p>
+      <p>
+        <b>Solution (b).</b> We firstly find the characteristic polynomial of the method.
+        Hence, we have \(p(x) = x^2 - x\). Then, we can know that \(p(x) = x(x-1)\). Since the roots of the characteristic polynomial are \(0\) and \(1\), \(|0| < 1\) and \(p(1) = 0\).
+        Moreover, \(p'(x) = 2x - 1\), and \(p'(1) = 1 \neq 0\). Therefore, we can know that this method is strongly stable.
+      </p>
     </section>
 
     <section>
