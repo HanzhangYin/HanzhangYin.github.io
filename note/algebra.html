@@ -1737,8 +1737,30 @@
         \end{align}
         \]
         Hence, we can see that \(T^*(T(v)) = T(T^*(v))\) for any \(v\in \mathbb{R}^3\). Therefore, we have \(T\) is a normal operator.
+        When \(v = ae_1 + be_2 + ce_3\), we have
+        \[
+        T(v) = (a + b)e_1 + (b + c)e_2 + (a + c)e_3.
+        \]
+        Thus, we have \(T(a, b, c) = (a + b, b + c, a + c)\).
         Since \(T(e_1) + T(e_2) - T(e_3) = e_1 + e_3 + e_1 + e_2 - e_2 - e_3 = 2e_1\), we have \(T(e_1 + e_2 - e_3) = 2e_1\).
-        Moreover, we have \(T(e_1) - T(e_2) = e_1 + e_3 - e_1 - e_2 = e_3 - e_2\).
+        Moreover, we have \(T(e_1) - T(e_2) =  -(e_1 + e_2) + e_1 + e_3 = e_3 - e_2\) and \(T(e_3) = e_2 + e_3\).
+        Let \(\mathcal{B} = \{e_1 + e_2 - e_3, e_3, e_1 - e_2\} = \{[1, 1, -1]^T, [0, 0, 1]^T, [-1, 1, 0]^T\}\).
+        We have the matrix of \(T\) with respect to \(\mathbb{B}\) is
+        \[
+        \begin{pmatrix}
+        2 & 0 & 0 \\
+        0 & 1 & -1 \\
+        0 & 1 & 1
+        \end{pmatrix}.
+        \]
+        Now, we only need to show that \(\mathcal{B}\) is a basis.
+        \[
+        \begin{align}
+        a\cdot \begin{pmatrix} 1 \\ 1 \\ -1 \end{pmatrix} + b\cdot \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} + c\cdot \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} &= \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\\
+        \begin{pmatrix} a + b \\ a - b \\ -a + c \end{pmatrix} &= \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\\
+        \end{align}
+        \]
+        Hence, we have \(a = b = c = 0\), which implies that they are independent. Thus, we have \(\mathcal{B}\) is a basis.
       </p>
     </section>
 
