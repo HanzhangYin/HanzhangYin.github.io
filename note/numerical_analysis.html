@@ -588,9 +588,12 @@
         = 0 \) and \( \theta = \frac{1}{2} \) are known as
 
         <i>Backward Euler:</i>
-        \[ y_{n+1} = y_n + h f(t_{n+1}, y_{n+1}), \] $\textit{Trapezoidal
-        rule}$: \[ y_{n+1} = y_n + \frac{1}{2} h [ f(t_n, y_n) + f(t_{n+1},
-        y_{n+1}) ]. \] Solution of nonlinear algebraic equations can be done by
+        \[ y_{n+1} = y_n + h f(t_{n+1}, y_{n+1}), \]
+
+        <i>Trapezoidal rule</i>: \[ y_{n+1} = y_n + \frac{1}{2} h [ f(t_n, y_n) + f(t_{n+1},
+        y_{n+1}) ]. \]
+
+        Solution of nonlinear algebraic equations can be done by
         iteration. For example, for backward Euler, letting \( y_{n+1}^{[0]} =
         y_n \), we may use $\textit{Direct iteration}$: \[ y_{n+1}^{[j+1]} = y_n
         + h f(t_{n+1}, y_{n+1}^{[j]}); \] $\textit{Newton–Raphson}$: \[
