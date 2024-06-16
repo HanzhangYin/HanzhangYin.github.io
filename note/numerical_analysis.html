@@ -1109,6 +1109,119 @@
       </ul>
     </section>
 
+    <section>
+      <h2>Householder Transformation</h2>
+      <p>
+        <b>Solution.</b>
+        Let
+        \[
+        v_1 = a_1 + \begin{bmatrix} \|a_1\|_2 \\ 0 \\ 0 \end{bmatrix} = \begin{bmatrix} 2+\sqrt{2} \\ 1 \\ 1\end{bmatrix}.
+        \], we define our first Householder reflector as
+        \[
+        H_1 = I - 2\dfrac{v_1v_1^*}{v_1^*v_1} =
+        \begin{bmatrix}
+        1 - \frac{\sqrt{2}+2}{2} & -\frac{1}{2} & -\frac{1}{2} \\
+        -\frac{1}{2} & 1 - \frac{1}{2(\sqrt{2}+2)} & -\frac{1}{2(\sqrt{2}+2)} \\
+        -\frac{1}{2} &  -\frac{1}{2(\sqrt{2}+2)} & 1-\frac{1}{2(\sqrt{2}+2)} \\
+        \end{bmatrix}=
+        \begin{bmatrix}
+        -\sqrt{2}/2 & -1/2 & -1/2 \\
+        -1/2 & (\sqrt{2}+2)/4 & (\sqrt{2}- 2)/4 \\
+        -1/2 &  (\sqrt{2}-2)/4& (\sqrt{2}+2)/4\\
+        \end{bmatrix}
+        \]
+        Then, we have a new matrix \(M_2\) as
+        \[
+        \begin{align}
+        M_2 &= H_1\cdot A\\
+        &=  \begin{bmatrix}
+        1 - \frac{\sqrt{2}+2}{2} & -\frac{1}{2} & -\frac{1}{2} \\
+        -\frac{1}{2} & 1 - \frac{1}{2(\sqrt{2}+2)} & -\frac{1}{2(\sqrt{2}+2)} \\
+        -\frac{1}{2} &  -\frac{1}{2(\sqrt{2}+2)} & 1-\frac{1}{2(\sqrt{2}+2)} \\
+        \end{bmatrix}\cdot \begin{bmatrix}
+        \sqrt{2} & 0 & 0 \\
+        1 & 1 & 0\\
+        1 & 1 & 1\\
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+        -2 & -1 & -\frac{1}{2} \\
+        0  & 1 -\frac{1}{\sqrt{2}+2} &  - \frac{1}{\sqrt{2}+2} \\
+        0  & 1 -\frac{1}{\sqrt{2}+2} & 1 - \frac{1}{2(\sqrt{2}+2)} \\
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+        -2 & -1 & -1/2 \\
+        0  & \sqrt{2}/2 &  (\sqrt{2}-2)/2 \\
+        0  & \sqrt{2}/2 & (2+\sqrt{2})/4 \\
+        \end{bmatrix}
+        \end{align}
+        \]
+        Now we pick vector \(a'_2 = [\sqrt{2}/2, \sqrt{2}/2]^T\), and we have \(\|a'_2\|_2 = 1\).
+        Now, we define \(v_2 = a'_2 + \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} \sqrt{2}/2 + 1 \\ \sqrt{2}/2 \end{bmatrix}\).
+        Then, we define our second reduced Householder reflector as
+        \[
+        \begin{align}
+        H'_2 &= I - 2\dfrac{v_2v_2^*}{v_2^*v_2} \\
+        &= \begin{bmatrix}
+        1 - \frac{2+\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \\
+        -\frac{\sqrt{2}}{2} & 1 - \frac{2-\sqrt{2}}{2} \\
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+        -\sqrt{2}/2 & -\sqrt{2}/2 \\
+        -\sqrt{2}/2 & \sqrt{2}/2 \\
+        \end{bmatrix}\\
+        \end{align}
+        \]
+        And we extend \(H'_2\) to a \(3\times 3\) matrix \(H_2\) as
+        \[
+        H_2 = \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & -\sqrt{2}/2 & -\sqrt{2}/2 \\
+        0 & -\sqrt{2}/2 & \sqrt{2}/2 \\
+        \end{bmatrix}
+        \]
+        Then we have \(M_3 = H_2M_2\) as
+        \[
+        \begin{align}
+        M_3 &= H_2M_2\\
+        &= \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & -\sqrt{2}/2 & -\sqrt{2}/2 \\
+        0 & -\sqrt{2}/2 & \sqrt{2}/2 \\
+        \end{bmatrix}\cdot \begin{bmatrix}
+        -2 & -1 & -1/2 \\
+        0  & \sqrt{2}/2 &  (2-\sqrt{2})/2 \\
+        0  & \sqrt{2}/2 & (2+\sqrt{2})/4 \\
+        \end{bmatrix}\\
+        &= \begin{bmatrix} -2 & -1 & -1/2 \\ 0 & -1 & -1/2 \\ 0 & 0 & 1/\sqrt{2} \end{bmatrix}.
+        \end{align}
+        \]
+        Given that for any Householder reflector \(H\), we have \(H^{-1} = H\) (Proved in the next problem).
+        Thus, we have \(QR\) factorization as
+        \[
+        \begin{align}
+        \begin{bmatrix} \sqrt{2} & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix} &=
+        \begin{bmatrix}
+        -2 & -1 & -1/2 \\
+        0  & \sqrt{2}/2 &  (\sqrt{2}-2)/2 \\
+        0  & \sqrt{2}/2 & (2+\sqrt{2})/4 \\
+        \end{bmatrix}\cdot
+        \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & -\sqrt{2}/2 & -\sqrt{2}/2 \\
+        0 & -\sqrt{2}/2 & \sqrt{2}/2 \\
+        \end{bmatrix}
+        \begin{bmatrix} -2 & -1 & -1/2 \\ 0 & -1 & -1/2 \\ 0 & 0 & 1/\sqrt{2} \end{bmatrix} \\
+        &= \begin{bmatrix}
+        -\sqrt{2}/2 & \sqrt{2}/2 & 0 \\
+        -1/2  & -1/2 &  -\sqrt{2}/2 \\
+        -1/2  & -1/2 & \sqrt{2}/2 \\
+        \end{bmatrix}\cdot
+        \begin{bmatrix} -2 & -1 & -1/2 \\ 0 & -1 & -1/2 \\ 0 & 0 & 1/\sqrt{2} \end{bmatrix}.
+        \end{align}
+        \]
+      </p>
+    </section>
+
     <section id="bauer-fike_Theorem">
       <h2>Bauer-Fike Theorem</h2>
       <p>
