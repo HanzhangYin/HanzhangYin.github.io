@@ -1517,7 +1517,34 @@
       </p>
     </section>
 
-    <h2>KU 2017 (August)</h2>
+    <h2 id = 'ku_2017_1'>KU 2017 (January)</h2>
+    <section>
+      <p>
+        <b>5.</b> Let \( A \) be an \( n \times n \) matrix over the field \( F \) and \( F^n \) denote the vector space of column vectors of length \( n \). Suppose \( A \) is idempotent, i.e., \( A^2 = A \).
+      </p>
+      <p>
+        (i) Prove that \( F^n = U \oplus W \), where \( A \cdot u = 0 \), for all \( u \in U \) and \( A \cdot w = w \), for all \( w \in W \).
+      </p>
+      <p>
+        (ii) If \( F = \mathbb{Z}_p \), how many idempotent \( 3 \times 3 \) matrices are there?
+      </p>
+      <p>
+        <b>Proof (i).</b> Given that \(A^2 = A\), we have \(A^2 - A = A(A - I) = 0\). Hence, we define \(p(x) = x(x - 1)\).
+        If \(p(x)\) is the minimal polynomial of \(A\), then we can know that
+        \[
+        F^n = \ker(A) \oplus \ker(A - I).
+        \]
+        Let \(U = \ker(A)\) and \(W = \ker(A - I)\). Hence, for any \(u\in U\), we have \(A\cdot u = 0\) by the definition of the kernel.
+        Let \(w\in W\), then we have \((A - I)\cdot w = 0\). Thus, we have \(A\cdot w = w\). Suppose that \(p(x)\) is not the minimal polynomial of \(A\).
+        Then, we can know that the minimal polynomial of \(A\) divides \(p(x)\). Hence, we have two options: either it is \(x\) or \(x - 1\).
+        (To be continued...)
+      </p>
+      <p>
+        <b>Proof (ii).</b>
+      </p>
+    </section>
+
+    <h2 id = 'ku_2017_8'>KU 2017 (August)</h2>
     <section id = 'ku_2017_8_6'>
       <p>
         \(\textbf{Problem 6. }\) Consider the matrix \( A = \begin{bmatrix}
