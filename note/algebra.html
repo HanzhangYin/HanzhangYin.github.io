@@ -23,6 +23,7 @@
     <nav class="navbar">
       <a href="#linear_transformation">Linear Transformation</a>
       <a href="#multiplicity">Multiplicity</a>
+      <a href="#dual_space">Dual Space</a>
       <a href="#linear_minimal_polynomial">Minimal Polynomial</a>
       <a href="#t_complement">\(T\)-Complement</a>
       <a href="#cyclic_operator">Cyclic Operator</a>
@@ -102,14 +103,38 @@
 
     <br>
 
+    <section id = 'dual_space'>
+        <h2>Dual Space</h2>
+      <p>
+        <b>Definition 5.16</b> Let \( V \) be a finite-dimensional vector space over a field \( \mathbb{F} \). The dual space of \( V \), denoted by \( V' \), is \( \mathcal{L}(V, \mathbb{F}) \), that is, the vector space of all linear transformations from \( V \) to \( \mathbb{F} \), the latter regarded as a vector space of dimension one. Elements of \( V' \) are called <b>linear functions</b>.
+      </p>
+    </section>
+
     <section id = 'multiplicity'>
       <h2>Geometric Multiplicity</h2>
       <p>
-        The geometric multiplicity of an eigenvalue is the dimension of its corresponding eigenspace.
+        <b>Definition</b> Let \( A \) be a \( K \times K \) matrix. Let \( \lambda_k \) be one of the eigenvalues of \( A \) and denote its associated eigenspace by \( E_k \). The dimension of \( E_k \) is called the geometric multiplicity of the eigenvalue \( \lambda_k \).
+      </p>
+      <p>
+        <a href="https://www.statlect.com/matrix-algebra/algebraic-and-geometric-multiplicity-of-eigenvalues">Source</a>
       </p>
       <h2>Algebraic multiplicity</h2>
       <p>
         The algebraic multiplicity of the eigenvalue is its multiplicity as a root of the characteristic polynomial.
+      </p>
+      <p>
+        <b>Proposition</b> Let \( A \) be a \( K \times K \) matrix. Let \( \lambda_k \) be one of the eigenvalues of \( A \). Then, the geometric multiplicity of \( \lambda_k \) is less than or equal to its algebraic multiplicity.
+      </p>
+      <p>
+        <a href="https://www.statlect.com/matrix-algebra/algebraic-and-geometric-multiplicity-of-eigenvalues">Source</a>
+      </p>
+
+      <p>
+        <b>Remark.</b> For each eigenvalue \(\lambda\),, compute \(\ker(A − \lambda \cdot I)\). This is the
+        \(\lambda\)-eigenspace, the vectors in the \(\lambda\)-eigenspace are the \(\lambda\)-eigenvectors.
+      </p>
+      <p>
+        <a href = 'https://dept.math.lsa.umich.edu/~speyer/LinearAlgebraVideos/Lecture9c.pdf'>Source</a>
       </p>
     </section>
 
