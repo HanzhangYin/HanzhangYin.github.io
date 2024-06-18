@@ -48,6 +48,7 @@
       <a href="#horner_algorithm">Horner's Algorithm</a>
       <a href="#contractive_mapping_theorem">Contractive Mapping</a>
       <a href="#polynomial_interpretation">Polynomial Interpretation</a>
+      <a href="#hermite_interpolation">Hermite Interpolation</a>
       <a href="#gaussian_quadrature">Gaussian Quadrature</a>
       <a href="#gaussian_quadrature_error_analysis">Error Analysis for Gaussian Quadrature</a>
       <a href="#composite_formulae">Composite Formulae</a>
@@ -470,7 +471,7 @@
       </p>
     </section>
 
-    <br />
+    <br>
 
     <section>
       <h2>Theorem on Polynomial Interpolation Error</h2>
@@ -482,6 +483,23 @@
         b]\) there corresponds a point \( \xi_x \) in \((a, b)\) such that \[
         f(x) - p(x) = \frac{1}{(n + 1)!} f^{(n+1)}(\xi_x) \prod_{i=0}^{n} (x -
         x_i) . \]
+      </p>
+    </section>
+
+    <br>
+
+
+    <section id = 'hermite_interpolation'>
+      <h2>Hermite Interpolation</h2>
+      <p>
+        <b>Hermite Interpolation Theorem.</b> Let \( n \geq 0 \), and suppose that \( x_i \), \( i = 0, \ldots, n \), are distinct real numbers. Then, given two sets of real numbers \( y_i \), \( i = 0, \ldots, n \), and \( z_i \), \( i = 0, \ldots, n \), there is a unique polynomial \( p_{2n+1} \) in \( \mathcal{P}_{2n+1} \) such that
+        \[
+        p_{2n+1}(x_i) = y_i, \quad p'_{2n+1}(x_i) = z_i, \quad i = 0, \ldots, n.
+        \quad (6.13)
+        \]
+      </p>
+      <p>
+        <b><i>"Introduction to Numerical Analysis", page. 188.</i></b>
       </p>
     </section>
 
