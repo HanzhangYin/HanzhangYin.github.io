@@ -22,6 +22,8 @@
     </label>
     <nav class="navbar">
       <a href="#linear_transformation">Linear Transformation</a>
+      <a href="#multiplicity">Multiplicity</a>
+      <a href="#dual_space">Dual Space</a>
       <a href="#linear_minimal_polynomial">Minimal Polynomial</a>
       <a href="#t_complement">\(T\)-Complement</a>
       <a href="#cyclic_operator">Cyclic Operator</a>
@@ -98,6 +100,48 @@
         \]
       </p>
     </section>
+
+    <br>
+
+    <section id = 'dual_space'>
+        <h2>Dual Space</h2>
+      <p>
+        <b>Definition 5.16</b> Let \( V \) be a finite-dimensional vector space over a field \( \mathbb{F} \). The dual space of \( V \), denoted by \( V' \), is \( \mathcal{L}(V, \mathbb{F}) \), that is, the vector space of all linear transformations from \( V \) to \( \mathbb{F} \), the latter regarded as a vector space of dimension one. Elements of \( V' \) are called <b>linear functions</b>.
+      </p>
+    </section>
+
+    <section id = 'multiplicity'>
+      <h2>Geometric Multiplicity</h2>
+      <p>
+        <b>Definition</b> Let \( A \) be a \( K \times K \) matrix. Let \( \lambda_k \) be one of the eigenvalues of \( A \) and denote its associated eigenspace by \( E_k \). The dimension of \( E_k \) is called the geometric multiplicity of the eigenvalue \( \lambda_k \).
+      </p>
+      <p>
+        <a href="https://www.statlect.com/matrix-algebra/algebraic-and-geometric-multiplicity-of-eigenvalues">Source</a>
+      </p>
+      <p>
+        <b>Remark.</b> For each eigenvalue \(\lambda\),, compute \(\ker(A − \lambda \cdot I)\). This is the
+        \(\lambda\)-eigenspace, the vectors in the \(\lambda\)-eigenspace are the \(\lambda\)-eigenvectors.
+      </p>
+      <p>
+        <a href = 'https://dept.math.lsa.umich.edu/~speyer/LinearAlgebraVideos/Lecture9c.pdf'>Source</a>
+      </p>
+      <p>
+        <b>Remark.</b> Hence, we can know the geometric multiplicity of an eigenvalue is \(\dim(\ker(A - \lambda \cdot I)) \).
+      </p>
+      <h2>Algebraic multiplicity</h2>
+      <p>
+        The algebraic multiplicity of the eigenvalue is its multiplicity as a root of the characteristic polynomial.
+      </p>
+      <p>
+        <b>Proposition</b> Let \( A \) be a \( K \times K \) matrix. Let \( \lambda_k \) be one of the eigenvalues of \( A \). Then, the geometric multiplicity of \( \lambda_k \) is less than or equal to its algebraic multiplicity.
+      </p>
+      <p>
+        <a href="https://www.statlect.com/matrix-algebra/algebraic-and-geometric-multiplicity-of-eigenvalues">Source</a>
+      </p>
+
+    </section>
+
+    <br>
 
     <section id = 'linear_minimal_polynomial'>
       <h2>Minimal Polynomial</h2>
@@ -1532,7 +1576,34 @@
       </p>
     </section>
 
-    <h2>KU 2017 (August)</h2>
+    <h2 id = 'ku_2017_1'>KU 2017 (January)</h2>
+    <section>
+      <p>
+        <b>5.</b> Let \( A \) be an \( n \times n \) matrix over the field \( F \) and \( F^n \) denote the vector space of column vectors of length \( n \). Suppose \( A \) is idempotent, i.e., \( A^2 = A \).
+      </p>
+      <p>
+        (i) Prove that \( F^n = U \oplus W \), where \( A \cdot u = 0 \), for all \( u \in U \) and \( A \cdot w = w \), for all \( w \in W \).
+      </p>
+      <p>
+        (ii) If \( F = \mathbb{Z}_p \), how many idempotent \( 3 \times 3 \) matrices are there?
+      </p>
+      <p>
+        <b>Proof (i).</b> Given that \(A^2 = A\), we have \(A^2 - A = A(A - I) = 0\). Hence, we define \(p(x) = x(x - 1)\).
+        If \(p(x)\) is the minimal polynomial of \(A\), then we can know that
+        \[
+        F^n = \ker(A) \oplus \ker(A - I).
+        \]
+        Let \(U = \ker(A)\) and \(W = \ker(A - I)\). Hence, for any \(u\in U\), we have \(A\cdot u = 0\) by the definition of the kernel.
+        Let \(w\in W\), then we have \((A - I)\cdot w = 0\). Thus, we have \(A\cdot w = w\). Suppose that \(p(x)\) is not the minimal polynomial of \(A\).
+        Then, we can know that the minimal polynomial of \(A\) divides \(p(x)\). Hence, we have two options: either it is \(x\) or \(x - 1\).
+        (To be continued...)
+      </p>
+      <p>
+        <b>Proof (ii).</b>
+      </p>
+    </section>
+
+    <h2 id = 'ku_2017_8'>KU 2017 (August)</h2>
     <section id = 'ku_2017_8_6'>
       <p>
         \(\textbf{Problem 6. }\) Consider the matrix \( A = \begin{bmatrix}
