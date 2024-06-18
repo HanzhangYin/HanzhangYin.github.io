@@ -453,6 +453,21 @@
         \(\textbf{Proposition.}\) Assume the group \( G \) acts on the set \( X \). Fix \( x \in X \). Then there is a 1-1, onto set map between \(\text{orb}(x)\) and the set of distinct left cosets of \( G_x \) given by \( g \cdot x \mapsto gG_x \). In particular, if \(\text{orb}(x)\) or \([G : G_x]\) is finite, then \(\left|\text{orb}(x)\right| = [G : G_x]\), and it follows that \(\left|\text{orb}(x)\right|\) divides \(\left|G\right|\), if \( G \) is finite.
       </p>
       <p>
+        <b>Orbit Stabilizer Theorem.</b>
+        Let \( G \) be a group which acts on a finite set \( X \).
+        Let \( x \in X \).
+        Let \( \text{Orb}(x) \) denote the orbit of \( x \).
+        Let \( \text{Stab}(x) \) denote the stabilizer of \( x \) by \( G \).
+        Let \( [G : \text{Stab}(x)] \) denote the index of \( \text{Stab}(x) \) in \( G \).
+        Then:
+        \[
+        |\text{Orb}(x)| = [G : \text{Stab}(x)] = \frac{|G|}{|\text{Stab}(x)|}
+        \]
+      </p>
+      <p>
+        <a href = "https://proofwiki.org/wiki/Orbit-Stabilizer_Theorem">Source: Wiki Proof</a>
+      </p>
+      <p>
         \(\textbf{Class Equation. }\) Let \( G \) be a finite group. Then:
         \[
           |G| = |Z(G)| + \sum_{i=1}^r |c(x_i)| = |Z(G)| + \sum_{i=1}^r [G : C_G(x_i)],
