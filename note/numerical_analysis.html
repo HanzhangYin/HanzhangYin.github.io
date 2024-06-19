@@ -505,6 +505,24 @@
         <b><i>"Introduction to Numerical Analysis", page. 188.</i></b>
       </p>
       <p>
+        <b>Theorem.</b> Suppose that \( n \geq 0 \) and let \( f \) be a real-valued function, defined, continuous and \( 2n + 2 \) times differentiable on the interval \([a, b]\), such that \( f^{(2n+2)} \) is continuous on \([a, b]\). Further, let \( p_{2n+1} \) denote the Hermite interpolation polynomial of \( f \) defined by (6.16). Then, for each \( x \in [a, b] \) there exists \( \xi = \xi(x) \) in \((a, b)\) such that
+
+        \[
+        f(x) - p_{2n+1}(x) = \frac{f^{(2n+2)}(\xi)}{(2n+2)!} [\pi_{n+1}(x)]^2, \quad (6.17)
+        \]
+
+        where \( \pi_{n+1} \) is as defined in (6.9). Moreover,
+
+        \[
+        |f(x) - p_{2n+1}(x)| \leq \frac{M_{2n+2}}{(2n+2)!} [\pi_{n+1}(x)]^2, \quad (6.18)
+        \]
+
+        where \( M_{2n+2} = \max_{\zeta \in [a,b]} |f^{(2n+2)}(\zeta)| \).
+      </p>
+      <p>
+        <b><i>"Introduction to Numerical Analysis", page. 190.</i></b>
+      </p>
+      <p>
         <b>Theorem on Hermite Interpolation Error Estimate</b>
         Let \( x_0, x_1, \ldots, x_n \) be distinct nodes in \([a, b]\) and let \( f \in C^{2n+2}[a, b] \). If \( p \) is the polynomial of degree at most \( 2n + 1 \) such that
 
