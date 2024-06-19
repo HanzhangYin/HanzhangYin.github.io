@@ -504,7 +504,22 @@
       <p>
         <b><i>"Introduction to Numerical Analysis", page. 188.</i></b>
       </p>
+      <p>
+        <b>Theorem on Hermite Interpolation Error Estimate</b>
+        Let \( x_0, x_1, \ldots, x_n \) be distinct nodes in \([a, b]\) and let \( f \in C^{2n+2}[a, b] \). If \( p \) is the polynomial of degree at most \( 2n + 1 \) such that
+
+        \[
+        p(x_i) = f(x_i) \quad \text{and} \quad p'(x_i) = f'(x_i) \quad (0 \leq i \leq n)
+        \]
+
+        then to each \( x \) in \([a, b]\) there corresponds a point \( \xi \) in \((a, b)\) such that
+
+        \[
+        f(x) - p(x) = \frac{f^{(2n+2)}(\xi)}{(2n+2)!} \prod_{i=0}^{n} (x - x_i)^2
+        \]
+      </p>
     </section>
+
 
     <br>
 
