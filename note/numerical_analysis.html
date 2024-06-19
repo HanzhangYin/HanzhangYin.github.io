@@ -590,6 +590,55 @@
         <p>
             <b><i>"Introduction to Numerical Analysis", page. 282.</i></b>
         </p>
+      <p>
+        <b>Theorem on Gaussian Formula with Error Term</b>
+
+        Consider a Gaussian formula with error term:
+
+        \[
+        \int_a^b f(x)w(x) \, dx = \sum_{i=0}^{n-1} A_i f(x_i) + E
+        \]
+
+        For an \( f \in C^{2n}[a, b] \), we have
+
+        \[
+        E = \frac{f^{(2n)}(\xi)}{(2n)!} \int_a^b q^2(x) w(x) \, dx
+        \]
+
+        where \( a < \xi < b \) and \( q(x) = \prod_{i=0}^{n-1} (x - x_i) \).
+        </p>
+      <p>
+        <b>Proof.</b> By Hermite interpolation (Section 6.3, p. 338), a polynomial \( p \) of degree at most \( 2n - 1 \) exists such that
+
+        \[
+        p(x_i) = f(x_i), \quad p'(x_i) = f'(x_i) \quad (0 \leq i \leq n-1)
+        \]
+        The error formula for this interpolation is
+
+        \[
+        f(x) - p(x) = \frac{f^{(2n)}(\zeta(x)) q^2(x)}{(2n)!} \quad (11)
+        \]
+
+        as given in Theorem 2 of Section 6.3 (p. 344). It follows that
+
+        \[
+        \int_a^b f(x) w(x) \, dx - \int_a^b p(x) w(x) \, dx = \frac{1}{(2n)!} \int_a^b f^{(2n)}(\zeta(x)) q^2(x) w(x) \, dx
+        \]
+
+        Now use the fact that \( p \) is of degree at most \( 2n - 1 \) to see that
+
+        \[
+        \int_a^b p(x) w(x) \, dx = \sum_{i=0}^{n-1} A_i p(x_i) = \sum_{i=0}^{n-1} A_i f(x_i)
+        \]
+
+        Furthermore, the Mean-Value Theorem for Integrals can be used to write
+
+        \[
+        \int_a^b f^{(2n)}(\zeta(x)) q^2(x) w(x) \, dx = f^{(2n)}(\xi) \int_a^b q^2(x) w(x) \, dx
+        \]
+
+        This requires continuity of \( f^{(2n)}(\zeta(x)) \), which can be inferred from Equation (11). The desired error formula results from making the substitution described. \(\blacksquare\)
+      </p>
     </section>
 
     <br />
