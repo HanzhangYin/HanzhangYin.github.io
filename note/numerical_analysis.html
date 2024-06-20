@@ -643,6 +643,49 @@
       <p>
         <b><i>"Numerical Analysis: Mathematics of Scientific Computing" page. 498.</i></b>
       </p>
+      <p>
+        <b>Theorem 8.</b> Let \( w(x) \) be a weight function and \( p_n(x) \) be the monic polynomial of degree \( n \) orthogonal to all polynomials of smaller degrees. Let \( x_j \), \( j = 1, 2, \ldots, n \), be zeros of \( p_n(x) \). Let \( Q(f) \) be the quadrature rule defined in Eqs. (36) and (37). Suppose \( f \in C^{2n}[a, b] \). Then one can find \( \lambda \in (a, b) \) such that
+
+        \[
+        \int_a^b f(x) w(x) \, dx = Q(f) + \gamma_n \frac{f^{(2n)}(\lambda)}{(2n)!}, \quad \text{where} \quad \gamma_n = \int_a^b p_n^2(x) w(x) \, dx. \quad (43)
+        \]
+        </p>
+      <p>
+        <b>Proof.</b> We use the Hermite interpolation to prove the error estimate. There exists a unique polynomial \( h_{2n-1}(x) \) of degree \( 2n - 1 \) such that
+
+        \[
+        h_{2n-1}(x_j) = f(x_j) \quad \text{and} \quad h'_{2n-1}(x_j) = f'(x_j).
+        \]
+
+        In addition, there exists \( \zeta \in (a, b) \) depending on \( x \) such that
+
+        \[
+        f(x) = h_{2n-1}(x) + \frac{f^{(2n)}(\zeta)}{(2n)!} (x - x_1)^2 \cdots (x - x_n)^2.
+        \]
+
+        Note that \( (x - x_1) \cdots (x - x_n) = p_n(x) \) as \( p_n \) is monic and \( x_j \), \( j = 1, \ldots, n \), are its roots. Therefore,
+
+        \[
+        \int_a^b f(x) w(x) \, dx = \int_a^b h_{2n-1}(x) w(x) \, dx + \int_a^b \frac{f^{(2n)}(\zeta(x))}{(2n)!} p_n^2(x) w(x) \, dx.
+        \]
+
+        Since the quadrature is exact for polynomials of degree \( 2n - 1 \), it is exact for \( h_{2n-1}(x) \). Hence
+
+        \[
+        \int_a^b h_{2n-1}(x) w(x) \, dx = Q(h_{2n-1}) = \sum_{j=1}^n h_{2n-1}(x_j) w_j = \sum_{j=1}^n f(x_j) w_j = Q(f).
+        \]
+
+        On the other hand, because \( p_n^2(x) w(x) \geq 0 \) on \([a, b]\), we can apply the mean value theorem and get
+
+        \[
+        \int_a^b \frac{f^{(2n)}(\zeta(x))}{(2n)!} p_n^2(x) w(x) \, dx = \frac{f^{(2n)}(\lambda)}{(2n)!} \int_a^b p_n^2(x) w(x) \, dx.
+        \]
+
+        for some \( \lambda \in (a, b) \). This completes the proof. \(\square\)
+      </p>
+      <p>
+        <a href = 'https://www.math.umd.edu/~mariakc/AMSC466/LectureNotes/quadrature.pdf'></a>
+      </p>
     </section>
 
     <br />
