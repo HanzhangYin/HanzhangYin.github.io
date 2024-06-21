@@ -1648,24 +1648,153 @@
         Then we have \(|G| = (p^3 - 1)(p^3 - p)(p^3 - p^2)\).
         And we denote \(X\) be the set such as
         \[
-          X = \left\{\begin{bmatrix}
+          X = \left\{x_0 = \begin{bmatrix}
             0 & 0 & 0 \\
             0 & 0 & 0 \\
             0 & 0 & 0 \\
-            \end{bmatrix}, \begin{bmatrix}
+            \end{bmatrix}, x_1 = \begin{bmatrix}
             1 & 0 & 0 \\
             0 & 0 & 0 \\
             0 & 0 & 0 \\
-            \end{bmatrix}, \begin{bmatrix}
+            \end{bmatrix}, x_2 = \begin{bmatrix}
             1 & 0 & 0 \\
             0 & 1 & 0 \\
             0 & 0 & 0 \\
-            \end{bmatrix}, \begin{bmatrix}
+            \end{bmatrix},x_3 = \begin{bmatrix}
             1 & 0 & 0 \\
             0 & 1 & 0 \\
             0 & 0 & 1 \\
             \end{bmatrix}\right\}.
         \]
+        Since \(A\) is diagonalizable, we have \(A = gxg^{-1}\) for some \(g\in G\) and \(x\in X\).
+        Now, we try to find the centralizer for each element in \(X\).
+        For identity matrix and zero matrix, we know they are in the center of \(G\). Hence, we have \(|C_G(x_0)| = |C_G(x_3)| = |G| = (p^3 - 1)(p^3 - p)(p^3 - p^2)\).
+        For the matrix \(x_1 = \begin{bmatrix}
+          1 & 0 & 0 \\
+          0 & 0 & 0 \\
+          0 & 0 & 0 \\
+          \end{bmatrix}\), suppose that \(g = \begin{bmatrix}
+            a & b & c \\
+            d & e & f \\
+            g & h & i \\
+            \end{bmatrix}\), such that
+        \[
+        gxg^{-1} = \begin{bmatrix}
+              1 & 0 & 0 \\
+              0 & 0 & 0 \\
+              0 & 0 & 0 \\
+              \end{bmatrix}.
+        \]
+        Hence,
+        \[
+        \begin{align}
+        \begin{bmatrix}
+          a & b & c \\
+          d & e & f \\
+          g & h & i \\
+          \end{bmatrix}\begin{bmatrix}
+          1 & 0 & 0 \\
+          0 & 0 & 0 \\
+          0 & 0 & 0 \\
+          \end{bmatrix} &= \begin{bmatrix}
+          1 & 0 & 0 \\
+          0 & 0 & 0 \\
+          0 & 0 & 0 \\
+          \end{bmatrix}\begin{bmatrix}
+            a & b & c \\
+            d & e & f \\
+            g & h & i \\
+            \end{bmatrix},\\
+        \begin{bmatrix}
+        a & 0 & 0 \\
+        d & 0 & 0 \\
+        g & 0 & 0 \\
+        \end{bmatrix} &= \begin{bmatrix}
+        a & b & c \\
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+        \end{bmatrix},\\
+        g &=
+        \begin{bmatrix}
+        a & 0 & 0 \\
+        0 & e & f \\
+        0 & h & i \\
+        \end{bmatrix}.
+        \end{align}
+        \]
+        Then, we can see that \(a\neq 0\), which implies that there are \(p - 1\) choices for \(a\).
+        And the principal submatrix \(\begin{bmatrix}e & f \\ h & i\end{bmatrix}\) has to be nonsingular, which implies that there are \(p^2 - 1\) choices for \(e\) and \(h\) and \(p^2 - p\) choices for \(f\) and \(i\).
+        In total, there are \((p - 1)(p^2 - 1)(p^2 - p)\) choices for \(g\).
+        Now, we consider the matrix \(\begin{bmatrix}
+          1 & 0 & 0 \\
+          0 & 1 & 0 \\
+          0 & 0 & 0 \\
+          \end{bmatrix}\).
+        Suppose that \(g = \begin{bmatrix}
+          a & b & c \\
+          d & e & f \\
+          g & h & i \\
+          \end{bmatrix}\), such that
+        \[
+        gxg^{-1} = \begin{bmatrix}
+              1 & 0 & 0 \\
+              0 & 1 & 0 \\
+              0 & 0 & 0 \\
+              \end{bmatrix}.
+        \]
+        Hence,
+        \[
+        \begin{align}
+        \begin{bmatrix}
+          a & b & c \\
+          d & e & f \\
+          g & h & i \\
+          \end{bmatrix}\begin{bmatrix}
+          1 & 0 & 0 \\
+          0 & 1 & 0 \\
+          0 & 0 & 0 \\
+          \end{bmatrix} &= \begin{bmatrix}
+          1 & 0 & 0 \\
+          0 & 1 & 0 \\
+          0 & 0 & 0 \\
+          \end{bmatrix}\begin{bmatrix}
+            a & b & c \\
+            d & e & f \\
+            g & h & i \\
+            \end{bmatrix},\\
+        \begin{bmatrix}
+        a & b & 0 \\
+        d & e & 0 \\
+        g & h & 0 \\
+        \end{bmatrix} &= \begin{bmatrix}
+        a & b & c \\
+        d & e & f \\
+        0 & 0 & 0 \\
+        \end{bmatrix}
+        \end{align}.
+        \]
+          Then, we have
+        \[
+        g = \begin{bmatrix}
+        a & b & 0 \\
+        d & e & 0 \\
+        0 & 0 & i \\
+        \end{bmatrix}.
+        \]
+        Similarly, we have \(i\neq 0\), which implies that there are \(p - 1\) choices for \(i\).
+        And the principal submatrix \(\begin{bmatrix}a & b \\ d & e\end{bmatrix}\) has to be nonsingular, which implies that there are \(p^2 - 1\) choices for \(a\) and \(d\) and \(p^2 - p\) choices for \(b\) and \(e\).
+        In total, there are \((p - 1)(p^2 - 1)(p^2 - p)\) choices for \(g\).
+        Hence, we have \(|C_G(x_1)| = |C_G(x_2)| = (p - 1)(p^2 - 1)(p^2 - p)\).
+        And we can get the
+        \[
+        \begin{align}
+      \text{orb}(x_0) &= 1,\\
+        \text{orb}(x_1) &= \dfrac{|G|}{|C_G(x_1)|} = \frac{(p^3 - 1)(p^3 - p)(p^3 - p^2)}{(p - 1)(p^2 - 1)(p^2 - p)} = p^2(p^2 +p + 1) = p^4 + p^3 + p^2,\\
+        \text{orb}(x_2) &= \dfrac{|G|}{|C_G(x_2)|} = \frac{(p^3 - 1)(p^3 - p)(p^3 - p^2)}{(p - 1)(p^2 - 1)(p^2 - p)} = p^2(p^2 +p + 1) = p^4 + p^3 + p^2,\\
+        \text{orb}(x_3) &= 1.
+        \end{align}
+        \]
+        Then, we have the number of idempotent \(3 \times 3\) matrices is \(2p^4 + 2p^3 + 2p^2 + 2\).
       </p>
     </section>
 

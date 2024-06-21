@@ -1220,6 +1220,39 @@
       <p>
         <b><i>"Numerical Analysis: Mathematics of Scientific Computing", page 560.</i></b>
       </p>
+      <p>
+        <b>Proof</b> It suffices to prove the equation when \( n = k \), because \( x_n \) can be interpreted as the value of a numerical solution that began at the point \( t_{n-k} \). Using the linear functional \( L \), Equation (10) in Section 8.4 (p. 552), we have
+
+        \[
+        Lx = \sum_{i=0}^k [a_i x(t_i) - h b_i x'(t_i)] = \sum_{i=0}^k [a_i x(t_i) - h b_i f(t_i, x(t_i))] \tag(14)
+        \]
+
+        On the other hand, the numerical solution satisfies the equation
+
+        \[
+        0 = \sum_{i=0}^k [a_i x_i - h b_i f(t_i, x_i)] \tag(15)
+        \]
+
+        Because we have assumed that \( x_i = x(t_i) \) for \( i < k \), the result of subtracting Equation (15) from Equation (14) will be
+
+        \[
+        Lx = a_k [x(t_k) - x_k] - h b_k [f(t_k, x(t_k)) - f(t_k, x_k)] \tag(16)
+        \]
+
+        To the last term of Equation (16) we apply the Mean-Value Theorem, obtaining
+
+        \[
+        Lx = a_k [x(t_k) - x_k] - h b_k \frac{\partial f}{\partial x} (t_k, \xi) [x(t_k) - x_k] = [a_k - h b_k F] [x(t_k) - x_k] \tag(17)
+        \]
+
+        where \( F = \frac{\partial f(t_k, \xi)}{\partial x} \) for some \( \xi \) between \( x(t_k) \) and \( x_k \). Now recall from Equation (13) in Section 8.4 (p. 553) that if the method being used is of order \( m \), then \( Lx \) will have the form
+
+        \[
+        Lx = d_{m+1} h^{m+1} x^{(m+1)} (t_0) + \mathcal{O}(h^{m+2}) \tag(18)
+        \]
+
+        Combining Equations (17) and (18), we obtain (13). Here we can ignore \( h b_k F \) in the denominator. (See Problem 8.5.8, p. 564.) \(\blacksquare\)
+      </p>
     </section>
 
     <br>
