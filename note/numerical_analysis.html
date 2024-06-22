@@ -2630,6 +2630,34 @@
         G_2(f) &= w_1 f \left( -\frac{1}{\sqrt{3}} \right) + w_2 f \left( \frac{1}{\sqrt{3}} \right) = w_1 \left( -\frac{1}{\sqrt{3}} \right) + w_2 \left( \frac{1}{\sqrt{3}} \right) = 0.
         \end{align*}
         \]
+        Hence, we can get \(w_1 = w_2 = 1\). Now, set \(f(x) = x^2\), we have
+        \[
+        \begin{align*}
+        I(f) &= \int_{-1}^1 x^2 \, dx = \frac{2}{3}, \\
+        G_2(f) &= f \left( -\frac{1}{\sqrt{3}} \right) + f \left( \frac{1}{\sqrt{3}} \right) = \left( -\frac{1}{\sqrt{3}} \right)^2 + \left( \frac{1}{\sqrt{3}} \right)^2 = \frac{2}{3}.
+        \end{align*}
+        \]
+        Hence, we can know that the approximation is exact when the degree is 2. Then, we set \(f(x) = x^3\), we have
+        \[
+        \begin{align*}
+        I(f) &= \int_{-1}^1 x^3 \, dx = 0, \\
+        G_2(f) &= f \left( -\frac{1}{\sqrt{3}} \right) + f \left( \frac{1}{\sqrt{3}} \right) = \left( -\frac{1}{\sqrt{3}} \right)^3 + \left( \frac{1}{\sqrt{3}} \right)^3 = 0.
+        \end{align*}
+        \]
+        Thus, we again have the approximation is exact when the degree is 3. After that, we set \(f(x) = x^4\), we have
+        \[
+        \begin{align*}
+        I(f) &= \int_{-1}^1 x^4 \, dx = \frac{2}{5}, \\
+        G_2(f) &= f \left( -\frac{1}{\sqrt{3}} \right) + f \left( \frac{1}{\sqrt{3}} \right) = \left( -\frac{1}{\sqrt{3}} \right)^4 + \left( \frac{1}{\sqrt{3}} \right)^4 = \frac{2}{9}.
+        \end{align*}
+        \]
+        Now we can see that \(I(f) - G_2(f) \neq 0\) when the degree is 4. Hence, we can know tht \(m = 4\).
+        Once, we know that \(w_1 = w_2 = 1\), and \(m = 4\), we can find the constant \(C\).
+        Let \(f(x) = x^4\), we have
+        \[
+        I(f) - G_2(f) = \frac25 - \frac29 = \frac{8}{45} = C f^{(4)}(\xi),
+        \]
+      for some \(\xi \in (-1, 1)\). Since \(f^{(4)}(x) = 24\) when \(f(x) = x^4\), we have \(f^{(4)}(\xi) = 24\). Therefore, we have \(C = \frac{8}{45 \cdot 24} = \frac{1}{135}\).
       </p>
     </section>
 
