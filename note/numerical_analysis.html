@@ -2412,7 +2412,7 @@
 
     <br>
 
-    <section>
+    <section id = 'january_2023'>
       <h2>Qualify Exam Problems (January 2023)</h2>
       <p>
         <b>Problem 4.</b> For \( A \in \mathbb{R}^{n \times n} \) and \( A = A^T \), Rayleigh Quotient Iteration is defined by:
@@ -2526,6 +2526,44 @@
         \(\theta = \frac{1}{2}\). When \(\theta = 1\), we have \[\tau_{n+1} =
         y(t_{n+1}) - y_n - h f(t_{n+1}, y(t_{n+1})),\] which is the local
         truncation error for \(\theta = 1\).
+      </p>
+    </section>
+
+    <br>
+
+    <h2 id = 'january_2024'>Qualify Exam Problems (January 2024)</h2>
+    <section>
+      <p>
+        <b>2.</b> Consider the integral \( I(f) = \int_{-1}^1 f(x) \, dx \).
+      </p>
+      <p>
+        (a) Give a description of the Gaussian quadrature.
+      </p>
+      <p>
+        (b) The two-node Gaussian quadrature has the expression
+        \[
+        G_2(f) = w_1 f \left( -\frac{1}{\sqrt{3}} \right) + w_2 f \left( \frac{1}{\sqrt{3}} \right)
+        \]
+
+        and the error has the form
+
+        \[
+        E(f) = I(f) - G_2(f) = C f^{(m)}(\xi).
+        \]
+
+        Determine \( w_1, w_2, C \), and \( m \).
+      </p>
+      <p>
+        (c) What is the degree of precision of \( G_2(f) \)?
+      </p>
+      <p>
+        <b>Solution (a).</b> Gaussian quadrature is a method to approximate the integral of a function by evaluating the function at specific points and weighting the function values. The weights and points are chosen such that the method is exact for polynomials of a certain degree.
+        \[
+        \int_a^b f(x)w(x)dx \approx \sum_{i=1}^n w_i f(x_i).
+        \]
+      </p>
+      <p>
+
       </p>
     </section>
 
