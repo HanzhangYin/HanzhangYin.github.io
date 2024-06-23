@@ -66,6 +66,7 @@
       <a href='#ku_2021_1_1'>KU 2021 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (2)</a>
+      <a href='#8_2022'>KU 2022 (August)</a>
       <a href='#ku_2022_1_1'>KU 2023 (August) (1)</a>
       <a href="#ku_2023_8_1">KU 2023 (August) (1)</a>
       <a href="#ku_2023_8_2">KU 2023 (August) (2)</a>
@@ -616,6 +617,29 @@
         </li>
       Further, \( n_p \) is the index in \( G \) of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).
       </ul>
+    </section>
+
+    <br>
+
+    <section id = 'direct_product'>
+      <h2>Direct Product</h2>
+      <p>
+        <b>Proposition.</b> Let \( H \) and \( K \) be subgroups of the group \( G \). The number of distinct ways of writing each element of the set \( HK \) in the form \( hk \), for some \( h \in H \) and \( k \in K \), is \( |H \cap K| \). In particular, if \( H \cap K = 1 \), then each element of \( HK \) can be written uniquely as a product \( hk \), for some \( h \in H \) and \( k \in K \).
+      </p>
+      <p>
+        <b>Theorem.</b> Suppose \( G \) is a group with subgroups \( H \) and \( K \) such that
+      </p>
+      <ul>
+        <li>
+          \( H \) and \( K \) are normal in \( G \), and
+        </li>
+        <li>
+          \( H \cap K = 1 \).
+        </li>
+      </ul>
+      <p>
+        <i><b>"Abstract Algebra", Dummit & Foote, Third Edition, Page 171</b></i>
+      </p>
     </section>
 
     <br>
@@ -2280,7 +2304,7 @@
 
 
 
-    <h2>KU 2022 (August)</h2>
+    <h2 id = '8_2022'>KU 2022 (August)</h2>
 
     <section id = 'ku_2022_8_1'>
       <p>
@@ -2339,6 +2363,45 @@
     </section>
 
     <br>
+
+    <section id = 'ku_2022_8_5'>
+      <p>
+        <b>Question 5.</b> Let \( G \) be a finite group, and set \( Z := Z(G) \), the center of \( G \). Recall that if \( H \) is a subgroup of \( G \), the normalizer of \( H \) is the subgroup \( N_G(H) = \{ g \in G \mid gHg^{-1} = H \} \). Suppose \( G/Z \) is abelian.
+      </p>
+      <p>
+        (i) Prove that if \( H \) is a proper subgroup of \( G \), then \( N_G(H) \) properly contains \( H \).
+      </p>
+      <p>
+        (ii) Use the fact that, if \( P \) is a Sylow subgroup of \( G \) then \( N_G(N_G(P)) = N_G(P) \), to prove that \( G \) is the (internal) direct product of its Sylow subgroups.
+      </p>
+      <p>
+        <b>Proof (a).</b>  For any \(h\in H\), we have \(h\cdot H\cdot h^{-1} = H\), which implies that \(h\in N_G(H)\).
+        Thus, we know that \(H\subset N_G(H)\). Now we want to show that \(N_G(H)\) properly contains \(H\) by contradiction. suppose that \(N_G(H) = H\).
+        For any \(z\in Z\), we have \(zh = hz\) for all \(h\in H\) by the definition of the center. It shows that \(zHz^{-1} = H\) for any \(z\in Z\).
+        Hence, we can get \(Z\subset N_G(H)\). Since \(H = N_G(H)\), we have \(Z\subset H\).
+        Since \( H \) is a proper subgroup of \( G \), we know there exists \(g\in G\) and \(g\notin H\).
+        Fix an element \(g\in G\setminus H\) and an element \(h\in H\). Given \(G/Z\) is abelian, we know that \(gh Z = hgZ\).
+        In other words, for any \(z_1\in Z\), there exists a \(z_2\in Z\) such that \(ghz_1 = hgz_2\).
+        Hence,
+        \[
+        \begin{align}
+        ghz_1 H &= hgz_2 H\\
+        gh H &= hg H\text{ for }Z\subset H,\\
+        gH &= hg H.
+        \end{align}
+        \]
+        Now, we know there exists \(h_1, h_2\in H\) such that
+        \[
+        \begin{align}
+        gh_1 &= hgh_2, \\
+        gh_1h_2^{-1} &= hg \\
+        g^{-1}hg &= h_1h_2^{-1}\in H.
+        \end{align}
+        \]
+        Since \(h\) is a random element of \(H\), we have \(g^{-1}Hg = H\), where \(g\notin H\). Thus we have \(g\in N_G(H)\) and \(g\notin H\), which is a contradiction.
+        Thus, we can know that \(N_G(H)\) properly contains \(H\). \(\blacksquare\)
+      </p>
+    </section>
 
     <section id = 'ku_2022_8_6'>
     <p>
