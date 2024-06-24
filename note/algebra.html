@@ -2339,7 +2339,7 @@
         2. If \( X \in M_n(\mathbb{R}) \) is an invertible skew-symmetric matrix (i.e., the transpose of \( X \) is equal to \( -X \)), then \( I_n \) (the identity matrix in \( M_n(\mathbb{R}) \)) is \( X \)-consistent.
       </p>
       <p>
-        <b>Solution (1).</b> Firstly, we want to show that if \(X + \alpha Y\) is invertible for all \(\alpha \in \mathbb{R}\), then \(X\) is invertible.
+        <b>Proof (1).</b> Firstly, we want to show that if \(X + \alpha Y\) is invertible for all \(\alpha \in \mathbb{R}\), then \(X\) is invertible.
         We can set \(\alpha = 0\), then we know that \(X + 0\cdot Y = X\) is invertible. Hence, we have \(X\) is invertible.
         For the other direction, let \(N\) to be a nilpotent \(n\times n\) real matrix, such that \(N^m = 0\) for some \(m > 0\).
         Hence, we can see that
@@ -2347,13 +2347,32 @@
         (I + \alpha N)\cdot (I - \alpha N + \alpha^2 N^2 - \cdots + (-1)^{m-1}\alpha^{m-1}N^{m-1}) = I - \alpha^m N^m = I,
         \]
         for any \(\alpha\in \mathbb{R}\). Thus, we know that \(I + \alpha N\) has an inverse and it is invertible.
-        Hence, we can know that \(\det(I + \alpha N\)\neq 0\) for all \(\alpha\in \mathbb{R}\).
+        Hence, we can know that \(\det(I + \alpha N)\neq 0\) for all \(\alpha\in \mathbb{R}\).
         Given that \(X\) is invertible, we can know that \(\det(X)\neq 0\). Then,
         \[
-          \det(X + \alpha X\cdot N\) = \det(X)\det(I + \alpha N) \neq 0.
+          \det(X + \alpha X\cdot N) = \det(X)\det(I + \alpha N) \neq 0.
         \]
         Thus, we have \(X + \alpha X\cdot N\) is invertible for all \(\alpha\in \mathbb{R}\), and \(X\cdot N\) is \(X\)-consistent. \(\blacksquare\)
       </p>
+      <p>
+        <b>Proof (2).</b> Suppose that \(X\) is an invertible skew-symmetric matrix. Then we have \(X^T = -X\).
+        Suppose that \(\lambda\) is an eigenvalue of \(X\) and \(v\) is the corresponding eigenvector.
+        Then we have \(Xv = \lambda v\) and
+        \[
+        \begin{align}
+         \lambda\langle v, v\rangle = \langle \lambda v, v \rangle = \langle Xv, v \rangle = \langle v, X^T v \rangle &= \langle v, -Xv \rangle = \langle v, -\lambda v \rangle = -\overline{\lambda}\langle  v, v \rangle.\\
+          (\lambda + \overline{\lambda})\langle v, v \rangle &= 0.
+        \end{align}
+        \]
+        Since \(v\) is an eigenvalue, we have \(\lambda\neq 0\) and \(\langle v, v \rangle > 0\).
+        Now, we can know that \(\lambda + \overline{\lambda} = 0\).
+        Assume that \(\lambda\) is real. Then we have \(\lambda + \overline{\lambda} = 2\lambda = 0\), which implies that \(\lambda = 0\).
+        However, we know that \(\lambda\neq 0\) since \(X\) is invertible. Hence, we can know that \(\lambda\) is not real.
+        Then, we can know that \(\lambda\) has to be complex.
+        Since \(\det(X + \alpha I\) = \det(X - (-\alpha)I\), we know \(\det(X + \alpha I\) = 0\) if and only if \(-\alpha\) is an eigenvalue of \(X\).
+        Again, we showed that all eigenvalues of \(X\) are complex. Hence, we can know that \(\det(X + \alpha I) \neq 0\) for all \(\alpha\in \mathbb{R}\).
+        Therefore, we showed that \(I\) is \(X\)-consistent. \(\blacksquare\)
+        </p>
     </section>
 
     <br>
