@@ -2289,9 +2289,21 @@
       <p>
         <b>Proof (a).</b>Firstly, we showed that \(\sigma_1 = \max_{\|x\|_2 = 1}\|Ax\|_2\).
         Since every matrix has \(SVD\), we defined that \(A = U\Sigma V^*\), where \(U, V\) are unitary matrices and \(\Sigma\) is a diagonal matrix with singular values on the diagonal.
-        Let \(v\) be the vector such that \(\|v\|_2 = 1\) and \(\max_{\|x\|_2 = 1}\|Ax\|_2 = \|Av\|_2\).
-        Hence, we have \(\|Av\|_2 \leq \|A\|_2\|v\|_2 = \|U\Sigma V^*\|_2\|v\|_2 = \|\Sigma\|_2\|v\|_2 = \|\Sigma\|_2\).
-        Since \(\sigma_1\) is the largest singular value, we can know that \(\|\Sigma\|_2 \leq \sigma_1\).
+        Moreover, let the \(\sigma_{11}\) entry of \(\Sigma\) be \(\sigma_1\).
+        Let \(v\) be the vector such that \(\|v\|_2 = 1\) and \(\max\limits_{\|x\|_2 = 1}\|Ax\|_2 = \|Av\|_2\).
+        Hence, we have
+        \[
+        \|Av\|_2 \leq \|A\|_2\|v\|_2 = \|U\Sigma V^*\|_2\|v\|_2 = \|\Sigma\|_2\|v\|_2 = \|\Sigma\|_2.
+        \]
+        Since \(\sigma_1\) is the largest singular value, we can know that \(\|\Sigma\|_2 = \sigma_1\).
+        Suppose that \(V = \begin{bmatrix} v_1 & v_2 & \cdots & v_n \end{bmatrix}\) where \(v_i\) is the column vector of \(V\).
+        Then, we have \(V^* = \begin{bmatrix} v_1^* \\ v_2^* \\ \vdots \\ v_n^* \end{bmatrix}\). Since \(V\) is unitary, the columns of \(V\) are orthonormal.
+        Thus, we have
+        \[
+        \begin{align}
+        \sigma_1 = \|\Sigma\cdot \vec{e_1}\|_2 =
+        \end{align}
+        \]
       </p>
         <p>
             <b>Proof (b).</b>
