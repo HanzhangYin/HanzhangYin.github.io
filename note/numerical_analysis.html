@@ -2286,8 +2286,15 @@
         \]
         Also, prove that both the equalities hold if \(A\) is Hermitian, i.e., \(A\) satisfies \(A = A^*\), where \(A^*\) is the adjoint (conjugate transpose) of \(A\).
         </p>
+      <p>
+        <b>Proof (a).</b>Firstly, we showed that \(\sigma_1 = \max_{\|x\|_2 = 1}\|Ax\|_2\).
+        Since every matrix has \(SVD\), we defined that \(A = U\Sigma V^*\), where \(U, V\) are unitary matrices and \(\Sigma\) is a diagonal matrix with singular values on the diagonal.
+        Let \(v\) be the vector such that \(\|v\|_2 = 1\) and \(\max_{\|x\|_2 = 1}\|Ax\|_2 = \|Av\|_2\).
+        Hence, we have \(\|Av\|_2 \leq \|A\|_2\|v\|_2 = \|U\Sigma V^*\|_2\|v\|_2 = \|\Sigma\|_2\|v\|_2 = \|\Sigma\|_2\).
+        Since \(\sigma_1\) is the largest singular value, we can know that \(\|\Sigma\|_2 \leq \sigma_1\).
+      </p>
         <p>
-            <b>Solution (b).</b>
+            <b>Proof (b).</b>
             Firstly, we know that \(\sigma_1 = \max_{\|x\|_2 = 1}\|Ax\|_2\) and \(\sigma_n = \min_{\|x\|_2 = 1}\|Ax\|_2\).
             Suppose that \(\lambda_1\) is the eigenvalue such that \(|\lambda_1| = \max_{\lambda\in\Lambda(A)}|\lambda|\) and \(v_1\) is the corresponding eigenvector where \(\|v_1\|_2 = 1\).
             Thus, we have
