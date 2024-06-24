@@ -2341,7 +2341,18 @@
       <p>
         <b>Solution (1).</b> Firstly, we want to show that if \(X + \alpha Y\) is invertible for all \(\alpha \in \mathbb{R}\), then \(X\) is invertible.
         We can set \(\alpha = 0\), then we know that \(X + 0\cdot Y = X\) is invertible. Hence, we have \(X\) is invertible.
-        For the other direction (to be continued...).
+        For the other direction, let \(N\) to be a nilpotent \(n\times n\) real matrix, such that \(N^m = 0\) for some \(m > 0\).
+        Hence, we can see that
+        \[
+        (I + \alpha N)\cdot (I - \alpha N + \alpha^2 N^2 - \cdots + (-1)^{m-1}\alpha^{m-1}N^{m-1}) = I - \alpha^m N^m = I,
+        \]
+        for any \(\alpha\in \mathbb{R}\). Thus, we know that \(I + \alpha N\) has an inverse and it is invertible.
+        Hence, we can know that \(\det(I + \alpha N\)\neq 0\) for all \(\alpha\in \mathbb{R}\).
+        Given that \(X\) is invertible, we can know that \(\det(X)\neq 0\). Then,
+        \[
+          \det(X + \alpha X\cdot N\) = \det(X)\det(I + \alpha N) \neq 0.
+        \]
+        Thus, we have \(X + \alpha X\cdot N\) is invertible for all \(\alpha\in \mathbb{R}\), and \(X\cdot N\) is \(X\)-consistent. \(\blacksquare\)
       </p>
     </section>
 
