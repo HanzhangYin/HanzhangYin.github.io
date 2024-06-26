@@ -2228,7 +2228,7 @@
         upper triangular one)
       </p>
       <p>
-        b) Prove that a \(2 \times 2\) normal matrix with real entries must be symmetric or has the form
+        <b>b).</b> Prove that a \(2 \times 2\) normal matrix with real entries must be symmetric or has the form
         \(rB\) where \(B\) is a rotation matrix and \(r\) is a real number.
       </p>
       <p>
@@ -2240,6 +2240,14 @@
         \begin{align}
         URU^*UR^*U^* &= UR^*U^*URU^*. \\
         R^*R &= RR^*
+        \end{align}
+        \]
+        Denote \(R = \begin{pmatrix} r_{ij} \end{pmatrix}\), then we have \(R^* = \begin{pmatrix} l_{ij} \end{pmatrix}\), where \(l_{ij} = \overline{r_{ji}}\).
+        Then we can know that \(r_{ij} = 0\) when \(i \gt j\), and \(l_{ij} = 0\) when \(i \lt j\).
+        Then, we can have the \((i, j)\)th entry of \(RR^*\) is
+        \[
+        \begin{align}
+        RR^*_{ij} &= \sum_{k=1}^n r_{ik}l_{kj} = \sum_{k=1}^n r_{ik}\overline{r_{jk}}\\
         \end{align}
         \]
       </p>
