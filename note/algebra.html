@@ -121,7 +121,7 @@
         <a href="https://www.statlect.com/matrix-algebra/algebraic-and-geometric-multiplicity-of-eigenvalues">Source</a>
       </p>
       <p>
-        <b>Remark.</b> For each eigenvalue \(\lambda\),, compute \(\ker(A − \lambda \cdot I)\). This is the
+        <b>Remark.</b> For each eigenvalue \(\lambda\), compute \(\ker(A − \lambda \cdot I)\). This is the
         \(\lambda\)-eigenspace, the vectors in the \(\lambda\)-eigenspace are the \(\lambda\)-eigenvectors.
       </p>
       <p>
@@ -2218,6 +2218,33 @@
 
     <br>
 
+    <section id = 'ku_2022_1_2'>
+      <p>
+        <b>Question 2.</b> Recall that a square complex matrix \(A\) is called normal if \(AA^* = A^*A\).
+      </p>
+      <p>
+        <b>a).</b> Prove that \(A\) is normal if and only if it is unitarily equivalent to a diagonal matrix.
+        (You can quote the fact that any square complex matrix is unitarily equivalent to an
+        upper triangular one)
+      </p>
+      <p>
+        b) Prove that a \(2 \times 2\) normal matrix with real entries must be symmetric or has the form
+        \(rB\) where \(B\) is a rotation matrix and \(r\) is a real number.
+      </p>
+      <p>
+        <b>Solution a).</b> Suppose that \(A\) is normal, then we have \(AA^* = A^*A\).
+        We know that any square complex matrix is unitarily equivalent to an upper triangular matrix, we let \(A = URU^*\) where \(U\) is a unitary matrix.
+        Hence, we have \(A^* = UR^*U^*\), where \(R^*\) is the conjugate transpose of \(R\) and it is lower triangular.
+        Then we have
+        \[
+        \begin{align}
+        URU^*UR^*U^* &= UR^*U^*URU^*. \\
+        R^*R &= RR^*
+        \end{align}
+        \]
+      </p>
+    </section>
+
     <section id = 'ku_2022_1_3'>
       <p>
         \(\textbf{Problem 3. }\) Find the Jordan canonical form and a Jordan basis for
@@ -2346,7 +2373,7 @@
         \[
         (I + \alpha N)\cdot (I - \alpha N + \alpha^2 N^2 - \cdots + (-1)^{m-1}\alpha^{m-1}N^{m-1}) = I - \alpha^m N^m = I,
         \]
-        for any \(\alpha\in \mathbb{R}\). Thus, we know that \(I + \alpha N\) has an inverse and it is invertible.
+        for any \(\alpha\in \mathbb{R}\). Thus, we know that \(I + \alpha N\) has an inverse, and it is invertible.
         Hence, we can know that \(\det(I + \alpha N)\neq 0\) for all \(\alpha\in \mathbb{R}\).
         Given that \(X\) is invertible, we can know that \(\det(X)\neq 0\). Then,
         \[
