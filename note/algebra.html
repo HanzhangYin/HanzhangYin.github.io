@@ -64,6 +64,7 @@
       <a href='#ku_2017_8_6'>KU 2017 (August)</a>
       <a href='#ku_2020_1'>KU 2020 (January)</a>
       <a href='#ku_2021_1_1'>KU 2021 (January) (1)</a>
+      <a href='#january_2022'>KU 2022 (January)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (2)</a>
       <a href='#8_2022'>KU 2022 (August)</a>
@@ -2159,7 +2160,7 @@
 
     <br>
 
-    <h2>KU 2022 (January)</h2>
+    <h2 id = 'january_2022'>KU 2022 (January)</h2>
       <section id = 'ku_2022_1_1'>
         <p>
           \(\textbf{Problem 1.}\)A square matrix \( A \) is called \(\textit{aperiodic}\) if \( A^m = A^n \) for some integers \( m > n \geq 0 \) (by convention \( A^0 = I \)).
@@ -2249,6 +2250,99 @@
         \begin{align}
         RR^*_{ij} &= \sum_{k=1}^n r_{ik}l_{kj} = \sum_{k=1}^n r_{ik}\overline{r_{jk}}\\
         \end{align}
+        \]
+      </p>
+      <p>
+        <b>Proof b).</b> Suppose that \(A\) is a normal real \(2\times 2\) matrix such as
+        \[
+        A = \begin{pmatrix}
+        a & b\\
+        c & d
+        \end{pmatrix}.
+        \]
+        Then we have \(AA^T = A^TA\), which implies that
+        \[
+        \begin{align}
+        \begin{pmatrix}
+        a & b\\
+        c & d
+        \end{pmatrix}
+        \begin{pmatrix}
+        a & c\\
+        b & d
+        \end{pmatrix} &= \begin{pmatrix}
+        a & c\\
+        b & d
+        \end{pmatrix}
+        \begin{pmatrix}
+        a & b\\
+        c & d
+        \end{pmatrix}\\
+        \begin{pmatrix}
+        a^2 + b^2 & ac + bd\\
+        ac + bd & c^2 + d^2
+        \end{pmatrix} &= \begin{pmatrix}
+        a^2 + c^2 & ab + cd\\
+        ab + cd & b^2 + d^2
+        \end{pmatrix}.
+        \end{align}
+        \]
+        Then we have \(a^2 + b^2 = a^2 + c^2\), which implies that \(b^2 = c^2\).
+        It shows that \( b = \pm c\). If \(b = c\), then we have \(A\) is symmetric.
+        If \(b = -c\), then we have \(A\) has the form
+        \[
+        A = \begin{pmatrix}
+        a & b\\
+        -b & d
+        \end{pmatrix}.
+        \]
+        Then we can get
+        \[
+        \begin{pmatrix}
+        a^2 + b^2 & -ab + bd\\
+        -ab + bd & b^2 + d^2
+        \end{pmatrix} = \begin{pmatrix}
+        a^2 + b^2 & ab - bd\\
+        ab - bd & b^2 + d^2
+        \end{pmatrix}.
+        \]
+        We can have \(-ab + bd = ab - bd\), which implies that \(ab = bd\).
+        Then we have \(b(a - d) = 0\), which implies that \(b = 0\) or \(a = d\).
+        If \(b = 0\), then again we have \(b = c = 0\) and \(A\) is symmetric.
+        If \(b\neq 0\) and \(a = d\), then we have
+        \[
+        A = \begin{pmatrix} a & b \\ -b & a \end{pmatrix}. \blacksquare
+        \]
+        Let \(r^2 = a^2 + b^2\) for some \(t\in \mathbb{R}\), Then, we have \(0\leq \frac{a^2}{r^2}< 1\) since \(b\neq 0\). Hence, we have
+        \(-1\leq \frac{a}{r} < 1\). Now, we can know that there exists \(\theta\) such that \(\cos(\theta) = \frac{a}{t}\) and \(a = r\cos(\theta)\). Now, fix \(r\).
+        Then we have
+        \[
+        \begin{align}
+        a^2 + b^2 = r^2
+        r^2\cos^2(\theta) + b^2 &= r^2\\
+        r^2 &= t^2(1 - \cos^2(\theta))\\
+        b^2 &= r^2\sin^2(\theta)\\
+        \end{align}
+        \]
+        Hence, we know that \(b\) could be \(r\sin(\theta)\) or \(-r\sin(\theta)\). Therefore, we have
+        \[
+        A = \begin{pmatrix}
+        r\cos(\theta) & r\sin(\theta)\\
+        -r\sin(\theta) & r\cos(\theta)
+        \end{pmatrix} = r\begin{pmatrix}
+        \cos(\theta) & \sin(\theta)\\
+        -\sin(\theta) & \cos(\theta)
+        \end{pmatrix}.
+        \]
+        or
+        \[
+        A = \begin{pmatrix}
+        r\cos(\theta) & -r\sin(\theta)\\
+        r\sin(\theta) & r\cos(\theta)
+        \end{pmatrix} = r\begin{pmatrix}
+        \cos(\theta) & -\sin(\theta)\\
+        \sin(\theta) & \cos(\theta)
+        \end{pmatrix}. \blacksquare
         \]
       </p>
     </section>
