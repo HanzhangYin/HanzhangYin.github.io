@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4572ab25-48cb-4101-aeed-77e7517dd10e" name="Changes" comment="add new contents">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algebra.html" beforeDir="false" afterPath="$PROJECT_DIR$/algebra.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,15 +88,8 @@
       <workItem from="1719071802290" duration="7525000" />
       <workItem from="1719233504572" duration="2124000" />
       <workItem from="1719265356991" duration="10456000" />
-      <workItem from="1719410777824" duration="4950000" />
-    </task>
-    <task id="LOCAL-00030" summary="fix the proof">
-      <option name="closed" value="true" />
-      <created>1718571661011</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1718571661011</updated>
+      <workItem from="1719410777824" duration="5571000" />
+      <workItem from="1719435033961" duration="693000" />
     </task>
     <task id="LOCAL-00031" summary="fix the proof">
       <option name="closed" value="true" />
@@ -481,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719418672763</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="add new contents">
+      <option name="closed" value="true" />
+      <created>1719434311544</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1719434311544</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

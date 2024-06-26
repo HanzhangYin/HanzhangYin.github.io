@@ -2441,6 +2441,47 @@
 
         Prove that \( R \) is a PID.
       </p>
+      <p>
+        <b>Proof.</b> Firstly, we want to show that \((R, +)\) forms an abelian group.
+        Since \(\mathbb{Z}\) is an abelian group, we have
+        \[
+        (a, b) + (c, d) = (a + c, b + d) = (c + a, d + b) = (c, d) + (a, b).
+        \]
+        We know that \((0, 0)\in \mathbb{Z}^2\) is the identity elements. Since
+        \[
+        (a, b) + (0, 0) = (a + 0, b + 0) = (a, b),
+        \]
+        For any \((a, b)\in \mathbb{Z}^2\), we have \((-a, -b)\in \mathbb{Z}^2\) such that
+        \[
+        (a, b) + (-a, -b) = (a - a, b - b) = (0, 0).
+        \]
+        Thus, there exists an inverse element for each element in \(\mathbb{Z}^2\).
+        Now, given that \((a, b), (c, d), (e, f)\in \mathbb{Z}^2\), we have
+        \[
+        (a, b) + ((c, d) + (e, f)) = (a, b) + (c + e, d + f) = (a + c + e, b + d + f) = (a + c, b + d) + (e, f) = ((a, b) + (c, d)) + (e, f).
+        \]
+        Thus, we have \((R, +)\) forms an abelian group.
+        Then, we want to show that \(R\) forms a ring. We know that \((1, 0)\in \mathbb{Z}^2\) is the identity element for multiplication since for any \((a, b)\in \mathbb{Z}^2\), we have
+        \[
+        \begin{align}
+        (a, b)\times (1, 0) &= (a\cdot 1 - b\cdot 0, a\cdot 0 + b\cdot 1) = (a, b), \\
+        (1, 0)\times (a, b) &= (1\cdot a - 0\cdot b, 1\cdot b + 0\cdot a) = (a, b).
+        \end{align}
+        \]
+        Now, we want to show that is associative. Given that \((a, b), (c, d), (e, f)\in \mathbb{Z}^2\), we have
+        \[
+        \begin{align}
+        (a, b)\times ((c, d)\times (e, f)) &= (a, b)\times (c\cdot e - d\cdot f, c\cdot f + d\cdot e)\\
+        &= (a\cdot (c\cdot e - d\cdot f) - b\cdot (c\cdot f + d\cdot e), a\cdot (c\cdot f + d\cdot e) + b\cdot (c\cdot e - d\cdot f))\\
+        &= (a\cdot c\cdot e - a\cdot d\cdot f - b\cdot c\cdot f - b\cdot d\cdot e, a\cdot c\cdot f + a\cdot d\cdot e + b\cdot c\cdot e - b\cdot d\cdot f)\\
+        &= (a\cdot c\cdot e - b\cdot d\cdot f - a\cdot d\cdot f - b\cdot c\cdot f, a\cdot c\cdot f + b\cdot d\cdot e + a\cdot d\cdot e - b\cdot c\cdot e)\\
+        &= ((a\cdot c - b\cdot d)\cdot e - (a\cdot d + b\cdot c)\cdot f, (a\cdot c - b\cdot d)\cdot f + (a\cdot d + b\cdot c)\cdot e)\\
+        &= (a\cdot c - b\cdot d, a\cdot d + b\cdot c)\times (e, f)\\
+        &= ((a, b)\times (c, d))\times (e, f).
+        \end{align}
+        \]
+        Then we have \((a, b)\times ((c, d)\times (e, f)) = ((a, b)\times (c, d))\times (e, f)\).
+      </p>
     </section>
 
 
