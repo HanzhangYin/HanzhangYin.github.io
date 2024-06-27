@@ -2307,8 +2307,7 @@
 
     <section>
         <p>
-            <b>5.</b> Consider the square matrix \(A\in \mathbb{C}^{n\times n\}\).
-            Suppose that \(\sigma_1\) and \(\sigma_n\) are the largest and the smallest singular values of \(A\), respectively. Let \(\|\cdot \|_2\) be the \(2\)-norm.
+            <b>5.</b> Consider the square matrix \( A\in \mathbb{C}^{n\times n}\).Suppose that \(\sigma_1\) and \(\sigma_n\) are the largest and the smallest singular values of \(A\), respectively. Let \(\|\cdot \|_2\) be the \(2\)-norm.
         </p>
         <p>
             (a) Prove
@@ -2323,10 +2322,45 @@
         \]
         Also, prove that both the equalities hold if \(A\) is Hermitian, i.e., \(A\) satisfies \(A = A^*\), where \(A^*\) is the adjoint (conjugate transpose) of \(A\).
         </p>
+      <p>
+        <b>Proof (a).</b>Firstly, we showed that \(\sigma_1 = \max\limits_{\|x\|_2 = 1}\|Ax\|_2\).
+        Since every matrix has \(SVD\), we defined that \(A = U\Sigma V^*\), where \(U, V\) are unitary matrices and \(\Sigma\) is a diagonal matrix with singular values on the diagonal.
+        Moreover, let the \(\sigma_{11}\) entry of \(\Sigma\) be \(\sigma_1\) and the \(\sigma_{nn}\) entry of \(\Sigma\) be \(\sigma_n\).
+        Let \(\vec{v}\) be the vector such that \(\|\vec{v}\|_2 = 1\) and \(\max\limits_{\|x\|_2 = 1}\|Ax\|_2 = \|Av\|_2\). And we denote \(V^*\vec{v} = \vec{u} = [u_1, \dots, u_n]^T\).
+        Hence, we have
+        \[
+        \|Av\|_2  = \|U\Sigma V^*v\|_2 = \|\Sigma\vec{u}\|_2 = \left\|\begin{bmatrix}u_1\sigma_1\\ \vdots \\ u_n\sigma_n \end{bmatrix}\right\|_2 = \sqrt{\sum_{i=1}^{n}u_i^2\sigma_i^2} \leq \sqrt{\sum_{i=1}^{n}u_i^2\sigma_1^2} = \sigma_1\sqrt{\sum_{i=1}^{n}u_i^2}
+        \]
+        Since \(V^*\) is unitary and \(\|\vec{v}\|_2 = 1\), we have that \(\|\vec{u}\|_2 = \|V^*\vec{v}\|_2 = \|\vec{v}\| = 1\). Therefore, we have \(\sum_{i=1}^{n}u_i^2 = 1\).
+        Thus, we get \(\|Av\|_2 \leq \sigma_1\).
+        Suppose that \(V = \begin{bmatrix} \vec{v_1} & \vec{v_2} & \cdots & \vec{v_n} \end{bmatrix}\) where \(\vec{v_i}\) is the column vector of \(V\).
+        Then, we have \(V^* = \begin{bmatrix} \vec{v_1}^* \\ \vec{v_2}^* \\ \vdots \\ \vec{v_n}^* \end{bmatrix}\). Since \(V\) is unitary, the columns of \(V\) are orthonormal.
+        Thus, we have
+        \[
+        \begin{align}
+        \sigma_1 = \|\Sigma\cdot \vec{e_1}\|_2 = \|U\Sigma\cdot \vec{e_1}\|_2 = \|U\Sigma V^*\vec{v_1}\|_2 = \|A\vec{v_1}\|_2 \leq \max_{\|x\|_2 = 1}\|Ax\|_2.
+        \end{align}
+        \]
+        Hence, we showed that \(\sigma_1 = \max_{\|x\|_2 = 1}\|Ax\|_2\).
         <p>
-            <b>Solution (b).</b>
-            Firstly, we know that \(\sigma_1 = \max_{\|x\|_2 = 1}\|Ax\|_2\) and \(\sigma_n = \min_{\|x\|_2 = 1}\|Ax\|_2\).
-            Suppose that \(\lambda_1\) is the eigenvalue such that \(|\lambda_1| = \max_{\lambda\in\Lambda(A)}|\lambda|\) and \(v_1\) is the corresponding eigenvector where \(\|v_1\|_2 = 1\).
+      <p>
+      Now, we showed that \(\sigma_n = \min\limits_{\|x\|_2 = 1}\|Ax\|_2\). We will use the same \(SVD\) of \(A\).
+      Then, we can get
+      \[
+      \min_{\|x\|_2 = 1}\|Ax\|_2 \leq \|U\Sigma V^*\vec{v_n}\|_2 = \|\Sigma V^*\vec{v_n}\|_2 = \|\Sigma\vec{e_n}\|_2 = \left\|\begin{bmatrix} 0 \\ \vdots \\ 0 \\ \sigma_n \end{bmatrix}\right\|_2 = \sigma_n.
+      \]
+      Similarly, we let \(\vec{v}\) be the vector such that \(\|\vec{v}\|_2 = 1\) and \(\min\limits_{\|x\|_2 = 1}\|Ax\|_2 = \|Av\|_2\). And we denote \(V^*\vec{v} = \vec{u} = [u_1, \dots, u_n]^T\).
+        Hence, we have
+        \[
+        \|Av\|_2  = \|U\Sigma V^*v\|_2 = \|\Sigma\vec{u}\|_2 = \left\|\begin{bmatrix}u_1\sigma_1\\ \vdots \\ u_n\sigma_n \end{bmatrix}\right\|_2 = \sqrt{\sum_{i=1}^{n}u_i^2\sigma_i^2} \geq \sqrt{\sum_{i=1}^{n}u_i^2\sigma_n^2} = \sigma_n\sqrt{\sum_{i=1}^{n}u_i^2}
+        \]
+        Since \(V^*\) is unitary and \(\|\vec{v}\|_2 = 1\), we have that \(\|\vec{u}\|_2 = \|V^*\vec{v}\|_2 = \|\vec{v}\| = 1\). Therefore, we have \(\sum_{i=1}^{n}u_i^2 = 1\).
+      Thus, we get \(\|Av\|_2 \geq \sigma_n\). Therefore, we have \(\sigma_n = \min_{\|x\|_2 = 1}\|Ax\|_2\). \( \blacksquare \)
+      </p>
+        <p>
+            <b>Proof (b).</b>
+            Firstly, we know that \(\sigma_1 = \max\limits_{\|x\|_2 = 1}\|Ax\|_2\) and \(\sigma_n = \min\limits_{\|x\|_2 = 1}\|Ax\|_2\).
+            Suppose that \(\lambda_1\) is the eigenvalue such that \(|\lambda_1| = \max\limits_{\lambda\in\Lambda(A)}|\lambda|\) and \(v_1\) is the corresponding eigenvector where \(\|v_1\|_2 = 1\).
             Thus, we have
             \[
             \sigma_1 = \max_{\|x\|_2 = 1}\|Ax\|_2\geq \|Av_1\|_2 = \|\lambda_1v_1\|_2 = |\lambda_1|\cdot \|v_1\|_2 = |\lambda_1|.
@@ -2336,6 +2370,12 @@
             \[
             \sigma_n = \min_{\|x\|_2 = 1}\|Ax\|_2\leq \|Av_2\|_2 = \|\lambda_1v_1\|_2 = |\lambda_2|\cdot \|v_2\|_2 = |\lambda_2|.
             \]
+          Now, suppose that \(A\) is hermitian. Then, we have \(A = A^*\). Then we want to show that we have \(A\) is unitarily diagonalizable.
+          For any square matrix (A), it has schur form as \(A = URU^*\), where \(U\) is unitary and \(T\) is upper triangular.
+            Since \(A = A^*\), we have \(A = URU^* = (URU^*)^* = UR^*U^* = A^*\). Since \(U\) is unitary, we have \(R = R^*\).
+          Since \(R\) is an upper triangular matrix and \(R^*\) is a lower triangular matrix, we have \(R\) is a diagonal matrix.
+          Therefore, we have \(A = URU^* = UDU^*\), where \(D\) is a diagonal matrix and \(U\) is unitary. Hence, the entries of \(D\) are the eigenvalues of \(A\).
+            Since \(A = UDU^*\), we have \(A\) is unitarily diagonalizable.
         </p>
     </section>
 

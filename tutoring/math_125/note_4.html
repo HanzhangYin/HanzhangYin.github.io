@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <!--It is a link for MathJax-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!--link for the font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!--link for the font-->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet" />
+  <!--link for the font-->
+  <link rel="stylesheet" type="text/css" href="tutoring_style.css" />
+  <!--It is a link for css structure-->
+  <title>Note 4</title>
+</head>
+
+<body>
+  <div class="top-bar"></div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <span class="visually-hidden">Menu</span>
+  </label>
+  <nav class="navbar">
+    <a href="#derivative_general_exponential">Derivatives of General Exponential Function</a>
+    <a href="#rate_of_change">Rate of Change</a>
+    <a href="#higher_order_derivative">Higher Order Derivative</a>
+    <a href="#trigonometric_functions">Trigonometric Functions</a>
+    <a href="#squeeze_theorem">Squeeze Theorem</a>
+
+    <!--            <a href="#References">References</a>-->
+  </nav>
+  <script src="click.js"></script>
+  <!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+  <h1>Note 4</h1>
+
+  
+  <section id = 'implicit_differentiation'>
+    <h2>Implicit Differentiation</h2>
+    <p>
+      So far all the differentiation rules we have learned are for functions that are defined explicitly.
+    </p>
+    <p>
+      We say that \( y \) is defined \(\textit{explicitly}\) as a function of \( x \) if we can use \( x \) to express \( y \).
+    </p>
+    <p>
+      <p>
+    <b>Examples.</b>\(y = 3x^2 + 1\), \(y = x^3 + 1\), \(y = \dfrac{x^2}{e^x}\).
+    </p>
+    <p>
+      We have developed techniques for calculating a derivative \( \frac{dy}{dx} \) when \( y \) is given in terms of \( x \).
+    </p>
+    <p>
+      However, sometimes we cannot use \( x \) to express \( y \). For example,
+      \[
+      y^4 + xy = x^3 - x + 2.
+      \]
+      In this case, we say that \( y \) is defined \(\textit{implicitly}\) as a function of \( x \).
+    </p>
+    <h3>Find \(\dfrac{dy}{dx}\) when the Function is Implicit</h3>
+    <p>
+      
+      If we denote \(f(x, y)\) and \(g(x, y)\) as the equations that defines \(y\) implicitly as a function of \(x\), and
+      \[
+      f(x, y) = g(x, y),
+      \]
+      then we can differentiate both sides of the equation with respect to \(x\).  
+      \[
+      \frac{d}{dx} f(x, y) = \frac{d}{dx} g(x, y).
+      \]
+      Moreover, \(y\) is a function of \(x\), so we can use the chain rule to find \( \frac{dy}{dx} \).
+    </p>
+    <p>
+      <b>Example.</b>  Find the derivative of \( y \) with respect to \( x \) if \( y^4 + xy = x^3 - x + 2 \).
+    </p>
+    <p>
+      <b>Solution.</b>
+      Let the left hand side be \( f(x, y) = y^4 + xy \) and the right hand side be \( g(x, y) = x^3 - x + 2 \).  
+      Then we have
+      \[
+      f(x, y) = g(x, y).
+      \]
+      Differentiating both sides with respect to \( x \), we have
+      \[
+      \frac{d}{dx} f(x, y) = \frac{d}{dx} g(x, y).  
+      \]
+      \[
+      \frac{d}{dx} (y^4 + xy) = \frac{d}{dx} (x^3 - x + 2).
+      \]
+      \[
+      \frac{d}{dx} (x^3 - x + 2) = 3x^2 - 1.
+      \]
+      \[
+      \frac{d}{dx} (y^4 + xy) = 4y^3 \frac{dy}{dx} + y + x \frac{dy}{dx}.
+      \]
+      Since the derivative of the left hand side is equal to the derivative of the right hand side, we have
+      \[
+      4y^3 \frac{dy}{dx} + y + x \frac{dy}{dx} = 3x^2 - 1.
+      \]
+      \[
+      \frac{dy}{dx} (4y^3 + x) = 3x^2 - y - 1.
+      \]
+      \[
+      \frac{dy}{dx} = \frac{3x^2 - y - 1}{4y^3 + x}.
+      \]
+    </p>
+  </section>
+
+<section id = "derivative_general_exponential">
+  <h2>Derivatives of General Exponential Function</h2>
+  <p>
+    <b>Theorem.</b>
+    \[
+    \frac{d}{dx} e^x = e^x.
+    \]
+  </p>
+  <p>
+ <b>Theorem.</b>
+    If \( a \) is a positive constant, then
+    \[
+    \frac{d}{dx} a^x = a^x \ln a.
+    \]
+  </p>
+  <p>
+    We can briefly talk about why the derivative of \( a^x \) is \( a^x\ln(a) \).
+    Suppose that \(y = a^x\), then
+    \[
+    \begin{align}
+    \ln y = \ln(a^x) = x \ln (a), \\
+    \dfrac{d}{dx} \ln y = \dfrac{d}{dx} x \ln(a), \\
+    \frac{1}{y} \frac{dy}{dx} = \ln(a), \\
+    \frac{dy}{dx} = y \ln(a), \\
+    \frac{dy}{dx} = a^x \ln(a).
+    \end{align}
+    \]
+  </p>
+  <p>
+    <b>Remark.</b> The same techniques can be applied to some complicated functions.
+  </p>
+  <p>
+    <b>Example.</b>
+    Find the derivative of \( y = (\sin(x))^{x^3 - 8x + 15} \).
+  </p>
+  <p>
+    <b>Solution.</b>
+    \[
+    \ln(y) = \ln((\sin(x))^{x^3 - 8x + 15}) = (x^3 - 8x + 15) \ln(\sin(x)).
+    \]
+    Then, we take derivative of both sides with respect to \( x \).
+    \[
+    \begin{align}
+    \frac{1}{y} \frac{dy}{dx} &= (x^3 - 8x + 15) \frac{d}{dx} \ln(\sin(x)) + \ln(\sin(x)) \frac{d}{dx} (x^3 - 8x + 15) \\
+    \frac{1}{y} \frac{dy}{dx} &= (x^3 - 8x + 15) \frac{\cos(x)}{\sin(x)} + \ln(\sin(x)) (3x^2 - 8) \\
+    \frac{dy}{dx} &= y \left((x^3 - 8x + 15) \frac{\cos(x)}{\sin(x)} + \ln(\sin(x)) (3x^2 - 8)\right)\\
+    \end{align}
+    \]
+    Eventually, we plug in \(y = (\sin(x))^{x^3 - 8x + 15}\) to get the derivative.
+    \[
+    \frac{dy}{dx} = (\sin(x))^{x^3 - 8x + 15} \left((x^3 - 8x + 15) \frac{\cos(x)}{\sin(x)} + \ln(\sin(x)) (3x^2 - 8)\right).
+    \]
+  </p>
+</section>
+  
+  <br>
+
+
+  <section id = 'rate_of_change'>
+    <h2>Rate of Change</h2>
+    <h3>Velocity and Position</h3>
+    <p>
+      <b>Definition (Velocity).</b>
+      The velocity of an object is the rate of change of its position with respect to time.
+    </p>
+    <p>
+      <b>Remark.</b> Most of the time, we denote the position of an object as \( s(t) \), where \(t\) is the time.
+    </p>
+    <p>
+      <b>Definition (Acceleration).</b>
+    The acceleration of an object is the rate of change of its velocity with respect to time.
+    </p>
+    <p>
+      <b>Remark.</b>  Most of the time, we denote the velocity of an object as \( v(t) \), where \(t\) is the time.
+    </p>
+    <br>
+    <h3>Velocity</h3>
+    <p>
+      The velocity of an object is the \(\textbf{instantaneous velocity}\).
+    </p>
+    <p>
+      <b>Theorem.</b>
+      If \(s(t)\) is the position of an object at time \(t\), then the velocity of the object at time \(t\) is
+      \[
+      v(t) = s'(t) = \dfrac{d}{dt}s(t).
+      \]
+    </p>
+    <br>
+    <h3>Acceleration</h3>
+    <p>
+      The acceleration of an object is the \(\textbf{instantaneous acceleration}\).
+      </p>
+    <p>
+      <b>Definition.</b>
+      If \(v(t)\) is the position of an object at time \(t\), then the acceleration of the object at time \(t\) is
+      \[
+      a(t) = v'(t) = \dfrac{d}{dt}v(t).
+      \]
+    </p>
+
+    <br>
+
+    <h3 id = 'motion'>Motion Under the Influence of Gravity</h3>
+    <p>
+      Given that \(s(t)\) measures the height of an object tossed in the air vertically, we have
+      \[
+      s(t) = s_0 + v_0 t - \frac{1}{2} g t^2,
+      \]
+      where
+    </p>
+    <ul>
+        <li>\(s_0\) is the initial position.</li>
+        <li>\(v_0\) is the initial speed.</li>
+        <li>\(-g\) is the acceleration (Earth: \(g\approx 9.8m/s^2\) or \(g\approx 32\,fts/s^2\)).</li>
+  </ul>
+    <p>
+      Given that \(s(t)\) measures the height of an object tossed in the air vertically, we have
+      \[
+      s(t) = s_0 + v_0 t - \frac{1}{2} g t^2, 
+      \]
+      \[
+      v(t) = s'(t) = v_0 - g t.
+      \]
+    </p>
+    <p>
+      When will the object hit the maximum height?
+    <p>
+    <p>
+      When the velocity of the object equals to \(0\), the object hits the maximum height.
+    </p>
+    <p>
+      So we need to solve the equation \(v(t) = 0\).
+    </p>
+  </section>
+
+  <br>
+
+  <section id = 'higher_order_derivative'>
+    <h2>Second Derivative</h2>
+    <p>
+      <b>Definition.</b>
+      We say \(g(x)\) is the second derivative of \(f(x)\) if
+      \[
+      g(x) = ((f(x))')' = \dfrac{d}{dx}(f(x))'.
+      \]
+    </p>
+    <p>
+      <b>Remark.</b>
+      The second derivative is the derivative of the derivative. We sometimes denote it as
+      \[
+      g(x) = f''(x) = \dfrac{d^2}{dx^2}(f(x)).
+      \]
+    </p>
+    <p>
+      <b>Example.</b>
+      Find the second derivative of \( f(x) = x^3 + 2x^2 - 3x + 1 \).
+      </p>
+    <p>
+      <b>Solution.</b>
+      \[
+      f'(x) = 3x^2 + 4x - 3,
+      \]
+      \[
+      f''(x) = 6x + 4.
+      \]
+    </p>
+    <br>
+    <h2>Third Derivative</h2>
+    <p>
+      <b>Definition.</b>
+      We say \(g(x)\) is the third derivative of \(f(x)\) if
+      \[
+      g(x) = \dfrac{d}{dx}(f''(x)).
+      \]
+    </p>
+    <p>
+      <b>Remark.</b>
+      The third derivative is the derivative of the derivative. We sometimes denote it as
+      \[
+      g(x) = f'''(x) = \dfrac{d^3}{dx^3}(f(x)).
+      \]
+    </p>
+    <p>
+      <b>Example.</b>
+      Find the second derivative of \( f(x) = x^3 + 2x^2 - 3x + 1 \).
+    </p>
+    <p>
+      <b>Solution.</b>
+      \[
+      \begin{align}
+      f''(x) &= 6x + 4, \\
+      f'''(x) &= 6. \\
+      \end{align}
+      \]
+    </p>
+    <br>
+    <h3>Higher Order Derivative</h3>
+    <p>
+      <b>Definition.</b>[\(n\)th Derivative]
+      We say \(g(x)\) is the \(n\)th derivative of \(f(x)\) if
+      \[
+      g(x) = \dfrac{d}{dx}(f^{(n-1)}(x))
+      \]
+      where \(f^{(n-1)}\) is the \((n-1)\)th derivative.
+    </p>
+    <p>
+      <b>Remark.</b>
+      We denote the \(n\)th derivative as
+      \[
+      g(x) = f^{(n)}(x) = \dfrac{d^n}{dx^n}(f(x)).
+      \]
+    </p>
+    <p>
+      <b>Examples.</b>
+    </p>
+      <ul>
+        <li>\(f^{(1)}(x) = f'(x)\).</li>
+        <li>\(f^{(2)}(x) = f''(x)\).</li>
+        <li>\(f^{(3)}(x) = f'''(x)\).</li>
+      </ul>
+    <p>
+      <b>Remark.</b> We say \(f(x)\) is \(n\) times differentiable if all the derivatives of \(f(x)\) up to the \(n\)th derivative exist.
+      We say \(f^{(n)}(x)\) is a higher order derivative of \(f(x)\) if \(n\geq 2\).
+    </p>
+  </section>
+
+<br>
+
+  <section id = 'trigonometric_functions'>
+    <h2>Derivative of Sine and Cosine</h2>
+    <p>
+      <b>Theorem.</b>
+      The functions \( y = \sin x \) and \( y = \cos x \) are differentiable and
+      \[
+      \frac{d}{dx} \sin x = \cos x \quad \text{and} \quad \frac{d}{dx} \cos x = -\sin x
+      \]
+    </p>
+    <p>
+    For other trigonometric functions, we have
+    </p>
+    <p>
+      \[
+      \frac{d}{dx} \tan x = \sec^2 x, \quad \frac{d}{dx} \sec x = \sec x \tan x
+      \]
+    </p>
+    <p>
+      \[
+      \frac{d}{dx} \cot x = -\csc^2 x, \quad \frac{d}{dx} \csc x = -\csc x \cot x
+      \]
+    </p>
+    </section>
+
+  <br>
+
+  <section id = 'squeeze_theorem'>
+    <h2>Squeeze Theorem</h2>
+    <p>
+      <b>Squeeze Theorem.</b>
+      Assume that for \( x \neq c \) (in some open interval containing \( c \)),
+
+      \[
+      l(x) \leq f(x) \leq u(x) \quad \text{and} \quad \lim_{x \to c} l(x) = \lim_{x \to c} u(x) = L
+      \]
+
+      Then \( \lim\limits_{x \to c} f(x) \) exists and \( \lim\limits_{x \to c} f(x) = L \).
+    </p>
+    <h3>Application of Squeeze Theorem.</h3>
+    <p>
+      If we want to find the limit of \( \dfrac{\sin x}{x} \) as \( x \) approaches \( 0 \), we can use the Squeeze Theorem. But we firstly need to find \(u(x)\) and \(l(x)\).
+    </p>
+    <p>
+      \[
+      \cos \theta \leq \frac{\sin \theta}{\theta} \leq 1 \quad \text{for} \quad -\frac{\pi}{2} < \theta < \frac{\pi}{2}, \quad \theta \neq 0
+      \]
+    </p>
+    <p>
+      Since \( \lim\limits_{\theta \to 0} \cos \theta = 1 \) and \( \lim\limits_{\theta \to 0} 1 = 1 \), we have
+      \[
+      \lim_{\theta\to 0}\cos \theta \leq \lim_{\theta \to 0} \frac{\sin \theta}{\theta} \leq \lim_{\theta \to 0} 1.
+      \]
+      \[
+      1 \leq \lim_{\theta \to 0} \frac{\sin \theta}{\theta} \leq 1.
+      \]
+      So
+      \[
+      \lim\limits_{\theta \to 0} \frac{\sin \theta}{\theta} = 1.
+      \]
+    </p>
+    <p>
+      Now, we want to find the limit of \( \dfrac{1 - \cos \theta}{\theta} \) as \( \theta \) approaches \( 0 \).
+    </p>
+    <p>
+      <b>Solution.</b>
+        \[
+      \begin{align}
+      \lim_{\theta \to 0} \frac{1 - \cos \theta}{\theta} &= \lim_{\theta \to 0} \left(\frac{1 - \cos \theta}{\theta} \cdot \frac{1 + \cos \theta}{1 + \cos \theta}\right) \\
+        &= \lim_{\theta \to 0} \frac{1 - \cos^2 \theta}{\theta(1 + \cos \theta)} \\
+        &= \lim_{\theta \to 0} \frac{\sin^2 \theta}{\theta(1 + \cos \theta)} \\
+      &= \lim_{\theta \to 0} \frac{\sin \theta}{\theta} \cdot \lim_{\theta \to 0} \frac{\sin \theta}{1 + \cos \theta} \\
+      \end{align}
+      \]
+      Since we know that \(\lim\limits_{\theta \to 0} \frac{\sin \theta}{\theta} = 1\), we have
+        \[
+        \lim_{\theta \to 0} \frac{1 - \cos \theta}{\theta} = \lim_{\theta \to 0} \frac{\sin \theta}{\theta} \cdot \lim_{\theta \to 0} \frac{\sin \theta}{1 + \cos \theta} = 1\cdot 0 = 0.
+        \]
+    </p>
+    <p>
+      Thus, we can conclude that
+    </p>
+    <p>
+      <b>Theorem.</b>
+        \[
+        \lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1 \quad \text{and} \quad \lim_{\theta \to 0} \frac{1 - \cos \theta}{\theta} = 0
+        \]
+    </p>
+    <p>
+      We can have the more general form of the theorem above:
+    </p>
+    <p>
+        <b>Theorem.</b>
+      \[
+      \lim_{\theta \to 0} \frac{\sin (c\cdot \theta)}{c\cdot \theta} = 1 \quad \text{and} \quad \lim_{\theta \to 0} \frac{1 - \cos (c\cdot \theta)}{c\cdot \theta} = 0,
+      \]
+      where \(c\) is a nonzero constant.
+    </p>
+  </section>
+
+
+</body>
+
+</html>

@@ -64,6 +64,7 @@
       <a href='#ku_2017_8_6'>KU 2017 (August)</a>
       <a href='#ku_2020_1'>KU 2020 (January)</a>
       <a href='#ku_2021_1_1'>KU 2021 (January) (1)</a>
+      <a href='#january_2022'>KU 2022 (January)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (2)</a>
       <a href='#8_2022'>KU 2022 (August)</a>
@@ -121,7 +122,7 @@
         <a href="https://www.statlect.com/matrix-algebra/algebraic-and-geometric-multiplicity-of-eigenvalues">Source</a>
       </p>
       <p>
-        <b>Remark.</b> For each eigenvalue \(\lambda\),, compute \(\ker(A − \lambda \cdot I)\). This is the
+        <b>Remark.</b> For each eigenvalue \(\lambda\), compute \(\ker(A − \lambda \cdot I)\). This is the
         \(\lambda\)-eigenspace, the vectors in the \(\lambda\)-eigenspace are the \(\lambda\)-eigenvectors.
       </p>
       <p>
@@ -2159,7 +2160,7 @@
 
     <br>
 
-    <h2>KU 2022 (January)</h2>
+    <h2 id = 'january_2022'>KU 2022 (January)</h2>
       <section id = 'ku_2022_1_1'>
         <p>
           \(\textbf{Problem 1.}\)A square matrix \( A \) is called \(\textit{aperiodic}\) if \( A^m = A^n \) for some integers \( m > n \geq 0 \) (by convention \( A^0 = I \)).
@@ -2217,6 +2218,134 @@
     </section>
 
     <br>
+
+    <section id = 'ku_2022_1_2'>
+      <p>
+        <b>Question 2.</b> Recall that a square complex matrix \(A\) is called normal if \(AA^* = A^*A\).
+      </p>
+      <p>
+        <b>a).</b> Prove that \(A\) is normal if and only if it is unitarily equivalent to a diagonal matrix.
+        (You can quote the fact that any square complex matrix is unitarily equivalent to an
+        upper triangular one)
+      </p>
+      <p>
+        <b>b).</b> Prove that a \(2 \times 2\) normal matrix with real entries must be symmetric or has the form
+        \(rB\) where \(B\) is a rotation matrix and \(r\) is a real number.
+      </p>
+      <p>
+        <b>Solution a).</b> Suppose that \(A\) is normal, then we have \(AA^* = A^*A\).
+        We know that any square complex matrix is unitarily equivalent to an upper triangular matrix, we let \(A = URU^*\) where \(U\) is a unitary matrix.
+        Hence, we have \(A^* = UR^*U^*\), where \(R^*\) is the conjugate transpose of \(R\) and it is lower triangular.
+        Then we have
+        \[
+        \begin{align}
+        URU^*UR^*U^* &= UR^*U^*URU^*. \\
+        R^*R &= RR^*
+        \end{align}
+        \]
+        Denote \(R = \begin{pmatrix} r_{ij} \end{pmatrix}\), then we have \(R^* = \begin{pmatrix} l_{ij} \end{pmatrix}\), where \(l_{ij} = \overline{r_{ji}}\).
+        Then we can know that \(r_{ij} = 0\) when \(i \gt j\), and \(l_{ij} = 0\) when \(i \lt j\).
+        Then, we can have the \((i, j)\)th entry of \(RR^*\) is
+        \[
+        \begin{align}
+        RR^*_{ij} &= \sum_{k=1}^n r_{ik}l_{kj} = \sum_{k=1}^n r_{ik}\overline{r_{jk}}\\
+        \end{align}
+        \]
+      </p>
+      <p>
+        <b>Proof b).</b> Suppose that \(A\) is a normal real \(2\times 2\) matrix such as
+        \[
+        A = \begin{pmatrix}
+        a & b\\
+        c & d
+        \end{pmatrix}.
+        \]
+        Then we have \(AA^T = A^TA\), which implies that
+        \[
+        \begin{align}
+        \begin{pmatrix}
+        a & b\\
+        c & d
+        \end{pmatrix}
+        \begin{pmatrix}
+        a & c\\
+        b & d
+        \end{pmatrix} &= \begin{pmatrix}
+        a & c\\
+        b & d
+        \end{pmatrix}
+        \begin{pmatrix}
+        a & b\\
+        c & d
+        \end{pmatrix}\\
+        \begin{pmatrix}
+        a^2 + b^2 & ac + bd\\
+        ac + bd & c^2 + d^2
+        \end{pmatrix} &= \begin{pmatrix}
+        a^2 + c^2 & ab + cd\\
+        ab + cd & b^2 + d^2
+        \end{pmatrix}.
+        \end{align}
+        \]
+        Then we have \(a^2 + b^2 = a^2 + c^2\), which implies that \(b^2 = c^2\).
+        It shows that \( b = \pm c\). If \(b = c\), then we have \(A\) is symmetric.
+        If \(b = -c\), then we have \(A\) has the form
+        \[
+        A = \begin{pmatrix}
+        a & b\\
+        -b & d
+        \end{pmatrix}.
+        \]
+        Then we can get
+        \[
+        \begin{pmatrix}
+        a^2 + b^2 & -ab + bd\\
+        -ab + bd & b^2 + d^2
+        \end{pmatrix} = \begin{pmatrix}
+        a^2 + b^2 & ab - bd\\
+        ab - bd & b^2 + d^2
+        \end{pmatrix}.
+        \]
+        We can have \(-ab + bd = ab - bd\), which implies that \(ab = bd\).
+        Then we have \(b(a - d) = 0\), which implies that \(b = 0\) or \(a = d\).
+        If \(b = 0\), then again we have \(b = c = 0\) and \(A\) is symmetric.
+        If \(b\neq 0\) and \(a = d\), then we have
+        \[
+        A = \begin{pmatrix} a & b \\ -b & a \end{pmatrix}.
+        \]
+        Let \(r^2 = a^2 + b^2\) for some \(t\in \mathbb{R}\), Then, we have \(0\leq \frac{a^2}{r^2}< 1\) since \(b\neq 0\). Hence, we have
+        \(-1\leq \frac{a}{r} < 1\). Now, we can know that there exists \(\theta\) such that \(\cos(\theta) = \frac{a}{t}\) and \(a = r\cos(\theta)\). Now, fix \(r\).
+        Then we have
+        \[
+        \begin{align}
+        a^2 + b^2 = r^2
+        r^2\cos^2(\theta) + b^2 &= r^2\\
+        r^2 &= t^2(1 - \cos^2(\theta))\\
+        b^2 &= r^2\sin^2(\theta)\\
+        \end{align}
+        \]
+        Hence, we know that \(b\) could be \(r\sin(\theta)\) or \(-r\sin(\theta)\). Therefore, we have
+        \[
+        A = \begin{pmatrix}
+        r\cos(\theta) & r\sin(\theta)\\
+        -r\sin(\theta) & r\cos(\theta)
+        \end{pmatrix} = r\begin{pmatrix}
+        \cos(\theta) & \sin(\theta)\\
+        -\sin(\theta) & \cos(\theta)
+        \end{pmatrix}.
+        \]
+        or
+        \[
+        A = \begin{pmatrix}
+        r\cos(\theta) & -r\sin(\theta)\\
+        r\sin(\theta) & r\cos(\theta)
+        \end{pmatrix} = r\begin{pmatrix}
+        \cos(\theta) & -\sin(\theta)\\
+        \sin(\theta) & \cos(\theta)
+        \end{pmatrix}. \blacksquare
+        \]
+      </p>
+    </section>
 
     <section id = 'ku_2022_1_3'>
       <p>
@@ -2302,6 +2431,59 @@
     </p>
     </section> -->
 
+    <section id = 'ku_2022_1_5'>
+      <p>
+        <b>Question 5.</b> Let \( R = \mathbb{Z}^2 \) equipped with the following addition and multiplication rules:
+
+        \[
+        (a, b) + (c, d) = (a + c, b + d) \quad \text{and} \quad (a, b) \times (c, d) = (ac - bd, ad + bc).
+        \]
+
+        Prove that \( R \) is a PID.
+      </p>
+      <p>
+        <b>Proof.</b> Firstly, we want to show that \((R, +)\) forms an abelian group.
+        Since \(\mathbb{Z}\) is an abelian group, we have
+        \[
+        (a, b) + (c, d) = (a + c, b + d) = (c + a, d + b) = (c, d) + (a, b).
+        \]
+        We know that \((0, 0)\in \mathbb{Z}^2\) is the identity elements. Since
+        \[
+        (a, b) + (0, 0) = (a + 0, b + 0) = (a, b),
+        \]
+        For any \((a, b)\in \mathbb{Z}^2\), we have \((-a, -b)\in \mathbb{Z}^2\) such that
+        \[
+        (a, b) + (-a, -b) = (a - a, b - b) = (0, 0).
+        \]
+        Thus, there exists an inverse element for each element in \(\mathbb{Z}^2\).
+        Now, given that \((a, b), (c, d), (e, f)\in \mathbb{Z}^2\), we have
+        \[
+        (a, b) + ((c, d) + (e, f)) = (a, b) + (c + e, d + f) = (a + c + e, b + d + f) = (a + c, b + d) + (e, f) = ((a, b) + (c, d)) + (e, f).
+        \]
+        Thus, we have \((R, +)\) forms an abelian group.
+        Then, we want to show that \(R\) forms a ring. We know that \((1, 0)\in \mathbb{Z}^2\) is the identity element for multiplication since for any \((a, b)\in \mathbb{Z}^2\), we have
+        \[
+        \begin{align}
+        (a, b)\times (1, 0) &= (a\cdot 1 - b\cdot 0, a\cdot 0 + b\cdot 1) = (a, b), \\
+        (1, 0)\times (a, b) &= (1\cdot a - 0\cdot b, 1\cdot b + 0\cdot a) = (a, b).
+        \end{align}
+        \]
+        Now, we want to show that is associative. Given that \((a, b), (c, d), (e, f)\in \mathbb{Z}^2\), we have
+        \[
+        \begin{align}
+        (a, b)\times ((c, d)\times (e, f)) &= (a, b)\times (c\cdot e - d\cdot f, c\cdot f + d\cdot e)\\
+        &= (a\cdot (c\cdot e - d\cdot f) - b\cdot (c\cdot f + d\cdot e), a\cdot (c\cdot f + d\cdot e) + b\cdot (c\cdot e - d\cdot f))\\
+        &= (a\cdot c\cdot e - a\cdot d\cdot f - b\cdot c\cdot f - b\cdot d\cdot e, a\cdot c\cdot f + a\cdot d\cdot e + b\cdot c\cdot e - b\cdot d\cdot f)\\
+        &= (a\cdot c\cdot e - b\cdot d\cdot f - a\cdot d\cdot f - b\cdot c\cdot f, a\cdot c\cdot f + b\cdot d\cdot e + a\cdot d\cdot e - b\cdot c\cdot e)\\
+        &= ((a\cdot c - b\cdot d)\cdot e - (a\cdot d + b\cdot c)\cdot f, (a\cdot c - b\cdot d)\cdot f + (a\cdot d + b\cdot c)\cdot e)\\
+        &= (a\cdot c - b\cdot d, a\cdot d + b\cdot c)\times (e, f)\\
+        &= ((a, b)\times (c, d))\times (e, f).
+        \end{align}
+        \]
+        Then we have \((a, b)\times ((c, d)\times (e, f)) = ((a, b)\times (c, d))\times (e, f)\).
+      </p>
+    </section>
+
 
 
     <h2 id = '8_2022'>KU 2022 (August)</h2>
@@ -2339,10 +2521,40 @@
         2. If \( X \in M_n(\mathbb{R}) \) is an invertible skew-symmetric matrix (i.e., the transpose of \( X \) is equal to \( -X \)), then \( I_n \) (the identity matrix in \( M_n(\mathbb{R}) \)) is \( X \)-consistent.
       </p>
       <p>
-        <b>Solution (1).</b> Firstly, we want to show that if \(X + \alpha Y\) is invertible for all \(\alpha \in \mathbb{R}\), then \(X\) is invertible.
+        <b>Proof (1).</b> Firstly, we want to show that if \(X + \alpha Y\) is invertible for all \(\alpha \in \mathbb{R}\), then \(X\) is invertible.
         We can set \(\alpha = 0\), then we know that \(X + 0\cdot Y = X\) is invertible. Hence, we have \(X\) is invertible.
-        For the other direction (to be continued...).
+        For the other direction, let \(N\) to be a nilpotent \(n\times n\) real matrix, such that \(N^m = 0\) for some \(m > 0\).
+        Hence, we can see that
+        \[
+        (I + \alpha N)\cdot (I - \alpha N + \alpha^2 N^2 - \cdots + (-1)^{m-1}\alpha^{m-1}N^{m-1}) = I - \alpha^m N^m = I,
+        \]
+        for any \(\alpha\in \mathbb{R}\). Thus, we know that \(I + \alpha N\) has an inverse, and it is invertible.
+        Hence, we can know that \(\det(I + \alpha N)\neq 0\) for all \(\alpha\in \mathbb{R}\).
+        Given that \(X\) is invertible, we can know that \(\det(X)\neq 0\). Then,
+        \[
+          \det(X + \alpha X\cdot N) = \det(X)\det(I + \alpha N) \neq 0.
+        \]
+        Thus, we have \(X + \alpha X\cdot N\) is invertible for all \(\alpha\in \mathbb{R}\), and \(X\cdot N\) is \(X\)-consistent. \(\blacksquare\)
       </p>
+      <p>
+        <b>Proof (2).</b> Suppose that \(X\) is an invertible skew-symmetric matrix. Then we have \(X^T = -X\).
+        Suppose that \(\lambda\) is an eigenvalue of \(X\) and \(v\) is the corresponding eigenvector.
+        Then we have \(Xv = \lambda v\) and
+        \[
+        \begin{align}
+         \lambda\langle v, v\rangle = \langle \lambda v, v \rangle = \langle Xv, v \rangle = \langle v, X^T v \rangle &= \langle v, -Xv \rangle = \langle v, -\lambda v \rangle = -\overline{\lambda}\langle  v, v \rangle.\\
+          (\lambda + \overline{\lambda})\langle v, v \rangle &= 0.
+        \end{align}
+        \]
+        Since \(v\) is an eigenvalue, we have \(\lambda\neq 0\) and \(\langle v, v \rangle > 0\).
+        Now, we can know that \(\lambda + \overline{\lambda} = 0\).
+        Assume that \(\lambda\) is real. Then we have \(\lambda + \overline{\lambda} = 2\lambda = 0\), which implies that \(\lambda = 0\).
+        However, we know that \(\lambda\neq 0\) since \(X\) is invertible. Hence, we can know that \(\lambda\) is not real.
+        Then, we can know that \(\lambda\) has to be complex.
+        Since \(\det(X + \alpha I) = \det(X - (-\alpha)I)\), we know \(\det(X + \alpha I) = 0\) if and only if \(-\alpha\) is an eigenvalue of \(X\).
+        Again, we showed that all eigenvalues of \(X\) are complex. Hence, we can know that \(\det(X + \alpha I) \neq 0\) for all \(\alpha\in \mathbb{R}\).
+        Therefore, we showed that \(I\) is \(X\)-consistent. \(\blacksquare\)
+        </p>
     </section>
 
     <br>
