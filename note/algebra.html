@@ -64,6 +64,7 @@
       <a href='#ku_2017_8_6'>KU 2017 (August)</a>
       <a href='#ku_2020_1'>KU 2020 (January)</a>
       <a href='#ku_2021_1_1'>KU 2021 (January) (1)</a>
+      <a href='#ku_2021_8_6'>KU 2021 (August) (6)</a>
       <a href='#january_2022'>KU 2022 (January)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (1)</a>
       <a href='#ku_2022_1_1'>KU 2022 (January) (2)</a>
@@ -2160,6 +2161,49 @@
 
     <br>
 
+    <h2 id = 'august_2021'>KU 2021 (August)</h2>
+    <section id = 'ku_2021_8_6'>
+      <p>
+        <b>Question 6.</b> Let \( A \) be a square matrix over a field \( K \).
+        </p>
+        <p>
+        (a) Show that if \( A \) is diagonalizable, then so is \( p(A) \) for any \( p \in K[x] \).
+        </p>
+        <p>
+        (b) Let \( K \) be the complex numbers. Show that if \( A^r - A = I \) for some \( r > 0 \), then \( A \) is diagonalizable.
+        </p>
+        <p>
+        (c) Is (b) still true over the real numbers?
+      </p>
+        <p>
+            <b>Proof (a).</b> Suppose that \(A\) is diagonalizable, then there exists an invertible matrix \(P\) such that \(P^{-1}AP = D\), where \(D\) is a diagonal matrix.
+            Then we have
+            \[
+            \begin{align}
+            p(A) &= p(PDP^{-1})\\
+            &= Pp(D)P^{-1}.
+            \end{align}
+            \]
+            Since \(D\) is a diagonal matrix, we can know that \(p(D)\) is also a diagonal matrix.
+            Hence, we have \(p(A)\) is diagonalizable.\(\blacksquare\)
+        </p>
+        <p>
+          <b>Proof (b).</b> Firstly, we want to show that \(x^r - x - 1\) is separable over the complex numbers.
+          We took the derivative of \(x^r - x - 1\), we have \(rx^{r-1} - 1\).
+          Then, we want to find the greatest common divisor of \(x^r - x - 1\) and \(rx^{r-1} - 1\) by using the division algorithm.
+            \[
+          \begin{align}
+            x^r - x - 1 &= (rx^{r-1} - 1)\left(\frac1r x\right) + \left(\frac{1-r}{r}\right)x - 1 \\
+            rx^{r-1} - 1 &= \left(\frac{1-r}{r}x - 1\right)\left(\frac{r^2}{1-r}x^{r-2} + \frac{r^3}{(1 - r)^2}x^{r-3} + \cdots + \frac{r^r}{(1 - r)^{r-1}}\right) + \frac{r^r}{1 - r} - 1
+          \end{align}
+            \]
+          Then, we can see that \(\gcd(x^r - x - 1, rx^{r-1} - 1) = 1\). Hence, we can know that \(x^r - x - 1\) is separable over the complex numbers.
+          In other words, we can know that \(x^r - x - 1\) has \(r\) distinct roots in \(\mathbb{C}\).
+          Now, Since \(f(A) = 0\), we denote that \(\mu_A(x)\) as the minimal polynomial of \(A\).
+          Then, we can know that \(\mu_A(x)\) divides \(x^r - x - 1\), which implies that \(\mu_A(x)\) has distinct roots in \(\mathbb{C}\) as well.
+        </p>
+    </section>
+
     <h2 id = 'january_2022'>KU 2022 (January)</h2>
       <section id = 'ku_2022_1_1'>
         <p>
@@ -2471,16 +2515,52 @@
         Now, we want to show that is associative. Given that \((a, b), (c, d), (e, f)\in \mathbb{Z}^2\), we have
         \[
         \begin{align}
-        (a, b)\times ((c, d)\times (e, f)) &= (a, b)\times (c\cdot e - d\cdot f, c\cdot f + d\cdot e)\\
-        &= (a\cdot (c\cdot e - d\cdot f) - b\cdot (c\cdot f + d\cdot e), a\cdot (c\cdot f + d\cdot e) + b\cdot (c\cdot e - d\cdot f))\\
-        &= (a\cdot c\cdot e - a\cdot d\cdot f - b\cdot c\cdot f - b\cdot d\cdot e, a\cdot c\cdot f + a\cdot d\cdot e + b\cdot c\cdot e - b\cdot d\cdot f)\\
-        &= (a\cdot c\cdot e - b\cdot d\cdot f - a\cdot d\cdot f - b\cdot c\cdot f, a\cdot c\cdot f + b\cdot d\cdot e + a\cdot d\cdot e - b\cdot c\cdot e)\\
-        &= ((a\cdot c - b\cdot d)\cdot e - (a\cdot d + b\cdot c)\cdot f, (a\cdot c - b\cdot d)\cdot f + (a\cdot d + b\cdot c)\cdot e)\\
-        &= (a\cdot c - b\cdot d, a\cdot d + b\cdot c)\times (e, f)\\
+        (a, b)\times ((c, d)\times (e, f)) &= (a, b)\times (c e - d f, cf + de)\\
+        &= (a c e - a d f - a d f - b c f, a c f + a d e + b c e - b d f)\\
+        &= (ac - b d, a d + b c)\times (e, f)\\
         &= ((a, b)\times (c, d))\times (e, f).
         \end{align}
         \]
         Then we have \((a, b)\times ((c, d)\times (e, f)) = ((a, b)\times (c, d))\times (e, f)\).
+        Now, we want to see if the multiplication is distributive. Given that \((a, b), (c, d), (e, f)\in \mathbb{Z}^2\), we have
+        \[
+        \begin{align}
+        (a, b)\times ((c, d) + (e, f)) &= (a, b)\times (c + e, d + f)\\
+        &= (ac + ae - bd - bf, ad + af + bc + be)\\
+        &= (ac - bd, ad + bc) + (ae - bf, af + be)\\
+        &= (a, b)\times (c, d) + (a, b)\times (e, f).
+        \end{align}
+        \]
+        Then we have \((a, b)\times ((c, d) + (e, f)) = (a, b)\times (c, d) + (a, b)\times (e, f)\).
+        Hence, we can conclude that \(R\) forms a ring. Now, we want to show that \(R\) is an integral domain.
+        Suppose that \((a, b), (c, d)\in \mathbb{Z}^2\) such that \((a, b)\times (c, d) = (0, 0)\).
+        Then we have
+        \[
+        \begin{align}
+        (a, b)\times (c, d) &= (ac - bd, ad + bc) = (0, 0)\\
+        ac - bd &= 0\\
+        ad + bc &= 0.
+        \end{align}
+        \]
+        Then we can have
+        \[
+        \begin{align}
+        d(ac - bd) &= acd - bd^2 = 0\\
+        c(ad + bc) &= acd + bc^2 = 0.
+        (acd + bc^2 - acd + bd^2) = bc^2 + bd^2 = 0\\
+        b(c^2 + d^2) &= 0.
+        \end{align}
+        \]
+        Since \(\mathbb{Z}\) is an integral domain, we have \(b = 0\) or \(c^2 + d^2 = 0\).
+        If \(c^2 + d^2 = 0\) and both \(b\) and \(c\) are integers, we can have \(c = 0, d = 0\), which implies that \((c, d) = (0, 0)\).
+        If \(c^2 + d^2\neq 0\), we have \(b = 0\). Moreover, we can conclude that \(c\neq 0\) or \(d\neq 0\).
+        Without loss of generality, we assume that \(c\neq 0\).
+        Then, we can have
+        \[
+        ac - bd = ac = 0.\qquad ad + bc = ad = 0.
+        \]
+        Since \(c\neq 0\) and \(ac = 0\), we can say that \(a = 0\). Hence, we can get \((a, b) = 0\).
+        Now, we want to show that \(R\) is an integral domain.
       </p>
     </section>
 

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4572ab25-48cb-4101-aeed-77e7517dd10e" name="Changes" comment="add new contents" />
+    <list default="true" id="4572ab25-48cb-4101-aeed-77e7517dd10e" name="Changes" comment="add new contents">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algebra.html" beforeDir="false" afterPath="$PROJECT_DIR$/algebra.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,15 +89,8 @@
       <workItem from="1719233504572" duration="2124000" />
       <workItem from="1719265356991" duration="10456000" />
       <workItem from="1719410777824" duration="5571000" />
-      <workItem from="1719435033961" duration="957000" />
-    </task>
-    <task id="LOCAL-00032" summary="update the contents">
-      <option name="closed" value="true" />
-      <created>1718660316041</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1718660316041</updated>
+      <workItem from="1719435033961" duration="1689000" />
+      <workItem from="1719495738598" duration="2530000" />
     </task>
     <task id="LOCAL-00033" summary="update the contents">
       <option name="closed" value="true" />
@@ -480,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719436426720</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="add new contents">
+      <option name="closed" value="true" />
+      <created>1719446183942</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1719446183942</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
