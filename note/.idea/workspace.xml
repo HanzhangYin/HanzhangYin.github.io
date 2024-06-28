@@ -22,12 +22,12 @@
     &quot;assignee&quot;: &quot;HanzhangYin&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/HanzhangYin/HanzhangYin.github.io.git&quot;,
-    &quot;accountId&quot;: &quot;eda1f9c9-9d3d-4a5c-aa6b-f6d650736203&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/HanzhangYin/HanzhangYin.github.io.git",
+    "accountId": "e5b773df-a675-4f5d-b028-e7de16257521"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/numerical_analysis.html" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -58,7 +58,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17890.13" />
       </set>
     </attachedChunks>
   </component>
@@ -89,8 +89,21 @@
       <workItem from="1719233504572" duration="2124000" />
       <workItem from="1719265356991" duration="10456000" />
       <workItem from="1719410777824" duration="5571000" />
+<<<<<<< Updated upstream
       <workItem from="1719435033961" duration="1689000" />
       <workItem from="1719495738598" duration="2530000" />
+=======
+      <workItem from="1719435033961" duration="957000" />
+      <workItem from="1719523286057" duration="41000" />
+    </task>
+    <task id="LOCAL-00032" summary="update the contents">
+      <option name="closed" value="true" />
+      <created>1718660316041</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1718660316041</updated>
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00033" summary="update the contents">
       <option name="closed" value="true" />
