@@ -2110,13 +2110,27 @@
         <b>Proof (ii).</b> Since we already showed each \(C_i\) is diagonalizable, we write \(C_i = P_iD_iP_i^{-1}\), where \(D_i\) is a diagonal matrix and \(P_i\) is an invertible matrix.
         Since \(C_i\) is invertible, we have \(D_i\) is invertible. Then, we can have \(C_i^{-1} = P_iD_i^{-1}P_i^{-1}\), where \(D_i^{-1}\) is a diagonal matrix and \(P_i\) is an invertible matrix.
         Moreover, the diagonal entries of \(D_i^{-1}\) is the reciprocal of the diagonal entries of \(D_i\).
-        Then we have
+        Since the diagonal entries of \(D_i\) are eigenvalues of \(C_i\), we have
         \[
-        \tr(C_i) = \tr(P_iD_iP_i^{-1}) = \tr(D_iP_i^{-1}P_i) = \tr(D_i) = \sum_{j=1}^n d_{jj},
+        \begin{align}
+        \text{trace}(C_i) &= \text{trace}(P_iD_iP_i^{-1}) = \text{trace}(D_iP_i^{-1}P_i) = \text{trace}(D_i) = \sum_{j=1}^n \lambda_j, \\
+        \text{trace}(C_i^{-1}) &= \text{trace}((P_iD_iP_i^{-1})^{-1}) = \text{trace}(P_iD_i^{-1}P_i^{-1}) = \text{trace}(D_i^{-1}P_i^{-1}P_i) = \text{trace}(D_i^{-1}) = \sum_{j=1}^n \frac1{\lambda_j}.
+        \end{align}
         \]
-        where \(d_{jj}\) is the \(j\)-th diagonal entry of \(D_i\).
+        Again, we can know that \((\lambda_i)^r - 1 = 0\), since the eigenvalue is the root of \(x^r - 1\) from the previous part.
+        Then,
         \[
-        \tr(C_i^{-1}) = \tr((P_iD_iP_i^{-1})^{-1}) = \tr(P_iD_i^{-1}P_i^{-1}) = \tr(D_i^{-1}P_i^{-1}P_i) = \tr(D_i^{-1}) = \sum_{j=1}^n \frac1{d_{jj}}.
+        \overline{\lambda_i^r - 1} = \overline{\lambda_i^r} - \overline{1} = \overline{\lambda_i}^r - 1 = 0.
+        \]
+        Thus, we can know that \(\lambda_i^r\) = 1 and \(\overline{\lambda_i}^r = 1\).
+        Hence, we have
+        \[
+        \lambda_i^r\cdot \overline{\lambda_i}^r = (\lambda_i\overline{\lambda_i})^r = 1.
+        \]
+        Since \(\lambda_i\cdot \overline{\lambda_i} = |\lambda_i|^2\geq 0\), we have \((\lambda_i\cdot \overline{\lambda_i} =1\), for every eigenvalue \(\lambda_i\) of \(C_i\).
+        Thus, we have
+        \[
+        \text{trace}(C_i^{-1}) = \sum_{j=1}^n \frac1{\lambda_j} = = \sum_{j=1}^n \frac{\overline{\lambda_j}}{\lambda_j\overline{\lambda_j}} = \sum_{j=1}^n \overline{\lambda_j} = \overline{\sum_{j=1}^n \lambda_j} = \overline{\text{trace}(C_i)}. \blacksquare
         \]
       </p>
     </section>
