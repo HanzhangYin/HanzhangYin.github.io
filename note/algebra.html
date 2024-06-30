@@ -2075,7 +2075,8 @@
 
     <br>
 
-    <h2>KU 2020 (August)</h2>
+    <h2 id = 'august_2020'>KU 2020 (August)</h2>
+    <section id = 'ku_2020_8_1'>
     <p>
       <b>1.</b> Let \( G := \{ I := C_1, C_2, \ldots, C_r \} \) be a finite set of invertible \( n \times n \) complex matrices, such that \( G \) is a finite group under matrix multiplication. Here \( I \) denotes the \( n \times n \) identity matrix.
     </p>
@@ -2089,8 +2090,39 @@
       (iii) Let \( \langle -, - \rangle \) denote the standard inner product on \( \mathbb{C}^n \). Define \( [v, w] := \frac{1}{|G|} \sum_{i=1}^r \langle C_i v, C_i w \rangle \), for all \( v, w \in \mathbb{C}^n \). Prove that \( [ -, - ] \) is an inner product on \( \mathbb{C}^n \) and that \( [v, w] = [C_i v, C_i w] \), for all \( v, w \in \mathbb{C}^n \) and \( C_i \in G \).
     </p>
     <p>
-      <b>Proof.</b>
+      <b>Proof (i).</b> Given that \(G\) is a finite group with order \(r\). Hence, we can see that for any \(C_i\), we have \(C_i^r = I\).
+      Then, we have \(C^r - I = 0\). Let \(f(x) = x^r - 1\) and we have \(f(C_i) = 0\) for any \(i\). Denote the minimal polynomial of \(C_i\) as \(\mu_{C_i}(x)\).
+      We can know that \(\mu_{C_i}(x)\mid f(x)\). Since \(f'(x) = rx^{r-1}\) and
+      \[
+      x^r - 1 = \frac1r x\cdot rx^{r-1} - 1,
+      \]
+      we can know that \(\gcd(f(x), f'(x)) = 1\), which implies that \(x^r - 1\) is separable in \(\mathbb{C}\).
+      Hence, we can know that \(f(x)\) has distinct roots in \(\mathbb{C}\). Given that \(\mu_{C_i}(x)\mid f(x)\), we can know that \(\mu_{C_i}(x)\) has distinct roots in \(\mathbb{C}\).
+      Since the minimal polynomial contains all the eigenvalues of \(C_i\) as roots.
+      Let \(\mu_{C_i}(x) = (x - \lambda_1)(x - \lambda_2)\cdots(x - \lambda_{n_i})\), where \(\lambda_j\) are the eigenvalues of \(C_i\).
+      Since each \(\lambda_j\) is distinct, we have
+      \[
+      V = \ker(C_i - \lambda_1I) \oplus \ker(C_i - \lambda_2I) \oplus \cdots \oplus \ker(C_i - \lambda_{n_i}I).
+      \]
+      Since the algebraic multiplicity of each eigenvalue is equal to the geometric multiplicity, we have \(C_i\) is diagonalizable. \(\blacksquare\)
     </p>
+      <p>
+        <b>Proof (ii).</b> Since we already showed each \(C_i\) is diagonalizable, we write \(C_i = P_iD_iP_i^{-1}\), where \(D_i\) is a diagonal matrix and \(P_i\) is an invertible matrix.
+        Since \(C_i\) is invertible, we have \(D_i\) is invertible. Then, we can have \(C_i^{-1} = P_iD_i^{-1}P_i^{-1}\), where \(D_i^{-1}\) is a diagonal matrix and \(P_i\) is an invertible matrix.
+        Moreover, the diagonal entries of \(D_i^{-1}\) is the reciprocal of the diagonal entries of \(D_i\).
+        Then we have
+        \[
+        \tr(C_i) = \tr(P_iD_iP_i^{-1}) = \tr(D_iP_i^{-1}P_i) = \tr(D_i) = \sum_{j=1}^n d_{jj},
+        \]
+        where \(d_{jj}\) is the \(j\)-th diagonal entry of \(D_i\).
+        \[
+        \tr(C_i^{-1}) = \tr((P_iD_iP_i^{-1})^{-1}) = \tr(P_iD_i^{-1}P_i^{-1}) = \tr(D_i^{-1}P_i^{-1}P_i) = \tr(D_i^{-1}) = \sum_{j=1}^n \frac1{d_{jj}}.
+        \]
+      </p>
+    </section>
+
+    <br>
+
     <h2>KU 2021 (January)</h2>
     <section id = 'ku_2021_1_1'>
       <p>
