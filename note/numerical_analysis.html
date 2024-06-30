@@ -70,6 +70,7 @@
       <a href="#january_2019">January 2019</a>
       <a href="#january_2020">January 2020</a>
       <a href="#august_2020">August 2020</a>
+      <a href="#august_2021">August 2021</a>
       <a href="#january_2024">January 2024</a>
       <a href="#References">References</a>
     </nav>
@@ -2380,7 +2381,7 @@
     </section>
 
 
-    <h2>Qualify Exam Problems (August 2021)</h2>
+    <h2 id = 'august_2021'>Qualify Exam Problems (August 2021)</h2>
     <section>
       <p>
         <b>Problem 2.</b> (Radau's formula.) Consider a numerical integration rule of the form
@@ -2404,9 +2405,28 @@
         \[ \int_{0}^{1} f(t) \, dt = \frac{1}{2} = a \cdot 0 + b \cdot c = b \cdot c. \]
         Let \( f(t) = t^2 \). Then, we have
         \[ \int_{0}^{1} f(t) \, dt = \frac{1}{3} = a \cdot 0 + b \cdot c^2 = b \cdot c^2. \]
-        Thus, we can see that \(\frac12\cdot c = bc\cdotc = \frac{1}{3}\). Then, we have
+        Thus, we can see that \(\frac12\cdot c = bc\cdot c = \frac{1}{3}\). Then, we have
         \[
         c = \frac{2}{3}, b = \frac{3}{4}, a = \frac{1}{4}.
+        \]
+        Hence, we have
+        \[
+        \int_{0}^{1} f(t) \, dt \approx \frac{1}{4} f(0) + \frac{3}{4} f\left(\frac{2}{3}\right).
+        \]
+      </p>
+      <p>
+        <b>Solution (b).</b>
+        Let \( f(t) = t^3 \). Then, we have
+        \[
+        \begin{align}
+        \int_{0}^{1} f(t) \, dt &= \frac{1}{4}, \\
+        \frac14 \cdot 0 + \frac34 \cdot \left(\frac23\right)^3 &= \frac29.
+        \end{align}
+        \]
+        Hence, we can see that \(\int_{0}^{1} f(t) \, dt \neq \frac14 f(0) + \frac34 f\left(\frac23\right)\) when \( f(t) = t^3 \).
+        Thus, we can see that \(r= 2\), and it should have the form of
+        \[
+        \int_{0}^{1} f(t) \, dt = \frac{1}{4} f(0) + \frac{3}{4} f\left(\frac{2}{3}\right) + D f^{(3)}(\xi).
         \]
       </p>
     </section>
@@ -2448,7 +2468,7 @@
 
     <br>
 
-    <h2>Qualify Exam Problems (August 2022)</h2>
+    <h2 id = 'august_2022'>Qualify Exam Problems (August 2022)</h2>
     <section id="ku_2022_8_1">
       <p>
         \(\textbf{Problem 1. }\)Consider the interpolation problem: Find a
