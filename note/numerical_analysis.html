@@ -2380,6 +2380,37 @@
         </p>
     </section>
 
+    <h2 id = 'january_2021'>Qualify Exam Problems (January 2021)</h2>
+    <section id = 'ku_2021_1_1'>
+      <p>
+        <b>Problem 1.</b> In this problem, we investigate the numerical method
+
+        \[ u_{n+1} = \frac{4u_n - u_{n-1}}{3} + \frac{2h}{3} f(t_{n+1}, u_{n+1}) \quad (1) \]
+
+        for solving the initial value problem \( y'(t) = f(t, y(t)), \, y(t_0) = y_0 \) and \( t \in [t_0, t_0 + T] \). Here \( h = T/N, \, t_n = t_0 + nh \) for \( n = 0, 1, \ldots, N \), with \( u_0 = y_0 \). We assume that \( f(t, y) \) is continuous on \([t_0, t_0 + T] \times \mathbb{R}\) and satisfies the Lipschitz condition with constant \( L > 0 \):
+
+        \[ |f(t, y) - f(t, z)| \le L |y - z|, \quad \forall t \in [t_0, t_0 + T], \quad \forall y, z \in \mathbb{R}. \]
+      </p>
+      <p>
+        (a) State whether the method (1) is single-step or multi-step, and whether it is implicit or explicit.
+      </p>
+      <p>
+        (b) How would you compute the value \( u_1 \approx y(t_1) \)?
+      </p>
+      <p>
+        (c) State and prove whether the method (1) is consistent, zero-stable and/or convergent.
+      </p>
+      <p>
+        <b>Solution (a).</b> Firstly, we can know that the method (1) is multistep and implicit.
+      </p>
+      <p>
+        <b>Solution (b).</b>
+      </p>
+      <p>
+        <b>Solution (c).</b>
+      </p>
+    </section>
+
 
     <h2 id = 'august_2021'>Qualify Exam Problems (August 2021)</h2>
     <section>
@@ -2427,6 +2458,15 @@
         Thus, we can see that \(r= 2\), and it should have the form of
         \[
         \int_{0}^{1} f(t) \, dt = \frac{1}{4} f(0) + \frac{3}{4} f\left(\frac{2}{3}\right) + D f^{(3)}(\xi).
+        \]
+        When \(f(t) = t^3\), we can see that \(f^{(4)}(t) = \frac16\). Then, we have
+        \[
+        \begin{align}
+        \int_{0}^{1} f(t) \, dt &= \frac{1}{4} f(0) + \frac{3}{4} f\left(\frac{2}{3}\right) + \frac16D, \\
+        \frac14  &=  \frac29 + \frac16D, \\
+        \frac{1}{36} &= \frac{1}{6}D, \\
+        D &= \frac16.
+        \end{align}
         \]
       </p>
     </section>
