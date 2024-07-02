@@ -2209,9 +2209,29 @@
         0 &= (D - I)^n\\
         \end{align}
         \]
-        Thus, we can see that \(D - I = 0\), which implies that \(D = I\).
-        Hence, we have \(P^{-1}(I + N)P = D = I\).
-        Then we have \(I + N = PIP^{-1} = I\). Therefore, we have \(N = 0\).\(\blacksquare\)
+        Given that \(D\) and \(I\) are diagonal matrices, we can know that \(D - I\) is also a diagonal matrix.
+        Suppose that
+        \[
+        D - I = \begin{pmatrix}
+        a_{11} & 0 & \cdots & 0\\
+        0 & a_{22} & \cdots & 0\\
+        \vdots & \vdots & \ddots & \vdots\\
+        0 & 0 & \cdots & a_{mm}
+        \end{pmatrix}.
+        \]
+        Hence, we can know that
+        \[
+        (D - I)^n = \begin{pmatrix}
+        a_{11}^n & 0 & \cdots & 0\\
+        0 & a_{22}^n & \cdots & 0\\
+        \vdots & \vdots & \ddots & \vdots\\
+        0 & 0 & \cdots & a_{mm}^n
+        \end{pmatrix}.
+        \]
+        Since \((D - I)^n = 0\), we can know that \(a_{ii}^n = 0\) for all \(i\).
+        Since \(a_{ii}\) is in a field, we can know that \(a_{ii} = 0\) for all \(i\).
+        Hence, we have \(D - I = 0\), which implies that \(D = I\).
+        Hence, we have \(I + N = P^{-1}DP = P^{-1}IP = I\), which implies that \(N = 0\). \(\blacksquare\)
       </p>
     </section>
 
