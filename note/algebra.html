@@ -2239,6 +2239,49 @@
 
     <section>
       <p>
+        <b>Question 3.</b>
+      </p>
+      <p>
+        (a) Let \( A \) be a real \( n \times n \) matrix such that \( A^2 = 3A \). Prove that \( A \) is similar (over the real numbers) to a diagonal matrix whose diagonal entries are 3 or 0.
+      </p>
+      <p>
+        (b) Let \( A = \begin{bmatrix}
+        2 & 1 & 1 \\
+        1 & 2 & -1 \\
+        1 & -1 & 2
+        \end{bmatrix} \) (note that \( A^2 = 3A \)). Find a real matrix \( S \) so that \( S^{-1} A S \) has the form as in part (a).
+      </p>
+      <p>
+        <b>Proof (a).</b> Given that \(A^2 = 3A\), we can know that \(A^2 - 3A = 0\). Set \(f(x) = x^2 - 3x\), then we have \(f(A) = 0\).
+        Hence, we can know that minimal polynomial of \(A\), \(\mu_A(x)\mid f(x)\). Since \(f(x) = x(x - 3)\), we can know that \(\mu_A(x)\) can be \(x(x - 3)\), \(x\) or \(x - 3\).
+        If \(\mu_A(x) = x\), then we can know that \(A = 0\), which is a diagonal matrix with all diagonal entries are \(0\).
+        If \(\mu_A(x) = x - 3\), then we can know that \(A = 3I\), which is a diagonal matrix with all diagonal entries are \(3\).
+        If \(\mu_A(x) = x(x - 3)\), we can see that \(\gcd(x, x - 3) = 1\), which implies that \(\mathbb{R}^n = \ker(A) \oplus \ker(A - 3I)\).
+        Hence, we can know that geometric multiplicity of each eigenvalue is equal to the algebraic multiplicity of each eigenvalue, which implies that \(A\) is diagonalizable.
+        And the diagonal matrix is the form as in the question. \(\blacksquare\)
+      </p>
+      <p>
+        <b>Solution (b).</b> Given that \(A^2 = 3A\), and \(A\neq 0\) and \(A - 3I\neq 0\), we can know that the minimal polynomial of \(A\) is \(x(x - 3)\).
+        Hence, \(A\) has eigenvalues \(0\) and \(3\). Hence, we need to find the eigenvectors of \(A\).
+        When the eigenvalue is \(0\), let its eigenvector be \(v_1 = [a, b, c]^T\) and we will have \(A\cdot v_1 = 0\).
+        Then we have
+        \[
+        \begin{align}
+        2a + b + c &= 0,\\
+        a + 2b - c &= 0,\\
+        a - b + 2c &= 0.
+        \end{align}
+        \]
+        Hence, we can find one eigenvector, which is \([1, -1, -1]^T\).
+        When the eigenvalue is \(3\), let its eigenvector be \(v_2 = [d, e, f]^T\) and we will have \(A\cdot v_2 = 3v_2\).
+        Then we have
+      </p>
+    </section>
+
+    <br>
+
+    <section>
+      <p>
         <b>Question 5.</b> Find the Galois group of \( x^3 + x + 2021 \) over \( \mathbb{Q} \). (2021 = 43 × 47)
       </p>
       <p>
@@ -2277,30 +2320,6 @@
 
     <br>
 
-    <section>
-      <p>
-        <b>Question 3.</b>
-      </p>
-      <p>
-        (a) Let \( A \) be a real \( n \times n \) matrix such that \( A^2 = 3A \). Prove that \( A \) is similar (over the real numbers) to a diagonal matrix whose diagonal entries are 3 or 0.
-      </p>
-      <p>
-        (b) Let \( A = \begin{bmatrix}
-        2 & 1 & 1 \\
-        1 & 2 & -1 \\
-        1 & -1 & 2
-        \end{bmatrix} \) (note that \( A^2 = 3A \)). Find a real matrix \( S \) so that \( S^{-1} A S \) has the form as in part (a).
-      </p>
-      <p>
-        <b>Proof (a).</b> Given that \(A^2 = 3A\), we can know that \(A^2 - 3A = 0\). Set \(f(x) = x^2 - 3x\), then we have \(f(A) = 0\).
-        Hence, we can know that minimal polynomial of \(A\), \(\mu_A(x)\mid f(x)\). Since \(f(x) = x(x - 3)\), we can know that \(\mu_A(x)\) can be \(x(x - 3)\), \(x\) or \(x - 3\).
-        If \(\mu_A(x) = x\), then we can know that \(A = 0\), which is a diagonal matrix with all diagonal entries are \(0\).
-        If \(\mu_A(x) = x - 3\), then we can know that \(A = 3I\), which is a diagonal matrix with all diagonal entries are \(3\).
-        If \(\mu_A(x) = x(x - 3)\), we can see that \(\gcd(x, x - 3) = 1\), which implies that \(\mathbb{R}^n = \ker(A) \oplus \ker(A - 3I)\).
-        Hence, we can know that geometric multiplicity of each eigenvalue is equal to the algebraic multiplicity of each eigenvalue, which implies that \(A\) is diagonalizable.
-        And the diagonal matrix is the form as in the question. \(\blacksquare\)
-      </p>
-    </section>
 
     <h2 id = 'august_2021'>KU 2021 (August)</h2>
     <section id = 'ku_2021_8_6'>
