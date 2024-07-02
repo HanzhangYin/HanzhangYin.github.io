@@ -1563,6 +1563,39 @@
 
     <br>
 
+    <h2 id = 'january_2015'>KU 2015 (January)</h2>
+    <section id = 'ku_2015_1_2'>
+      <p>
+        <b>Problem 2.</b>Prove that a group of order \(435=3\cdot 5\cdot 29\) must be abelian.
+      </p>
+      <p>
+        <b>Proof.</b> Given that \(435 = 3\cdot 5\cdot 29\), we can know that there exists a sylow 3-subgroup \(G\), sylow 5-subgroup \(H\), and sylow 29-subgroup \(K\).
+        And the sylow 3-subgroup has order of \(3\), which is a prime. Hence, we can know that the sylow 3-subgroup is cyclic and isomorphic to \( \mathbb{Z}/3\mathbb{Z} \).
+        For the similar reason, we can have the sylow 5-subgroup is cyclic and isomorphic to \( \mathbb{Z}/5\mathbb{Z} \) and the sylow 29-subgroup is cyclic and isomorphic to \( \mathbb{Z}/29\mathbb{Z} \).
+        Suppose that \(g\neq e\in G\cap H\), then we can know that \(g\) has order either \(3\) or \(5\), but cannot be both. Thus, we can know that \(G\cap H = \{e\}\).
+        For the similar reason, we can have \(H\cap K = \{e\}\) and \(G\cap K = \{e\}\).
+        Now, according to the \(\textbf{Third Sylow's Theorem}\), we can know that the number of sylow 3-subgroup, sylow 5-subgroup, and sylow 29-subgroup are \(3a + 1\), \(5b + 1\), \(29c + 1\) for some \(a, b, c\in \mathbb{Z}\).
+        Moreover, we have \(3a + 1 \mid 435\), \(5b + 1 \mid 435\), and \(29c + 1 \mid 435\). Hence, we can conclude that \(a = b = c = 0\).
+        And the number of the sylow 3-subgroup, sylow 5-subgroup, and sylow 29-subgroup are \(1\), \(1\), and \(1\), respectively.
+        For any \(g\) in our original group, we can know that \(gGg^{-1}\) is a group of order \(3\) and there is only one subgroup of order \(3\), which is \(G\). Hence, we can know that \(gGg^{-1} = G\), which implies that \(G\) is normal in our original group.
+        Similarly, we can know that \(H\) and \(K\) are normal in our original group. The inner direct product of two normal subgroups are normal. Hence, we can know that \(G H\) is normal in our original group.
+        Besides that, we can have
+        \[
+        \begin{align}
+        |GH| = \frac{|G||H|}{|G\cap H|} = 15,
+        |GHK| = \frac{|GH||K|}{|GH\cap K|} = 435.
+        \end{align}
+        \]
+        Thus, we know that our original group is \(GHK\).
+        Since we know that both \(G\) and \(H\) are normal and \(G\cap H = \{e\}\), we can know that \(GH = G\times H\).
+        Since \(GH\) and \(K\) are normal, and \(GH\cap K = \{e\}\), we can know that \(GHK = GH\times K\).
+        Thus, we can know that \(GHK = G\times H\times K = \mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}\times \mathbb{Z}/29\mathbb{Z}\).
+        Since \(\mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}\times \mathbb{Z}/29\mathbb{Z}\) is abelian, we can know that our original group is abelian. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
     <h2>KU 2015 (August)</h2>
     <section id = 'ku_2015_8_6'>
       <p>
