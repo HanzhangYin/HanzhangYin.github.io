@@ -2442,6 +2442,12 @@
           In other words, we can know that \(x^r - x - 1\) has \(r\) distinct roots in \(\mathbb{C}\).
           Now, Since \(f(A) = 0\), we denote that \(\mu_A(x)\) as the minimal polynomial of \(A\).
           Then, we can know that \(\mu_A(x)\) divides \(x^r - x - 1\), which implies that \(\mu_A(x)\) has distinct roots in \(\mathbb{C}\) as well.
+          Hence, we can write \(\mu_A(x) = (x - \lambda_1)\cdots(x - \lambda_m)\), where each \(\lambda_i\) is the distinct eigenvalues of \(A\).
+          Then, we will have
+          \[
+          \mathbb{C}^n = \ker(A - \lambda_1I) \oplus \cdots \oplus \ker(A - \lambda_mI).
+          \]
+          In that case, we can know that the geometric multiplicity of each eigenvalue is equal to the algebraic multiplicity of each eigenvalue and \(A\) is diagonalizable. \(\blacksquare\)
         </p>
     </section>
 
