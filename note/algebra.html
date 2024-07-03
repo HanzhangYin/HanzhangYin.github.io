@@ -2273,8 +2273,33 @@
         \end{align}
         \]
         Hence, we can find one eigenvector, which is \([1, -1, -1]^T\).
-        When the eigenvalue is \(3\), let its eigenvector be \(v_2 = [d, e, f]^T\) and we will have \(A\cdot v_2 = 3v_2\).
-        Then we have
+        When the eigenvalue is \(3\), let its eigenvector be \(v_2 = [d, e, f]^T\) and we will have \((A - 3I)\cdot v_2 = 0\).
+        \[
+        \begin{align}
+        -d + e + f &= 0,\\
+        d - e - f &= 0,\\
+        d - e - f &= 0.
+        \end{align}
+        \]
+        Then, we have two eigenvectors \([1, 1, 0]^T\) and \([0, -1, 1]^T\).
+        Suppose that
+        \[
+        \begin{align}
+        S &= \begin{bmatrix}
+        1 & 1 & 0\\
+        -1 & 1 & -1\\
+        -1 & 0 & 1
+        \end{bmatrix},\\
+        \det(S) &= 1\cdot 1\cdot 1  - 1\cdot ((-1)\cdot 1 - (-1)\cdot(- 1)) = 1 - 1\cdot (-2) = 3\neq 0.
+        \end{align}
+        \]
+        Then, we have
+        \[S^{-1}AS = \begin{bmatrix}
+        0 & 0 & 0\\
+        0 & 3 & 0\\
+        0 & 0 & 3
+        \end{bmatrix}.
+        \]
       </p>
     </section>
 
