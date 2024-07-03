@@ -62,7 +62,9 @@
       <a href="#ku_2016_1_5">KU 2016 (January)</a>
       <a href="#ku_2016_8_4">KU 2016 (August)</a>
       <a href='#ku_2017_8_6'>KU 2017 (August)</a>
+      <a href='#august_2018'>KU 2018 (August)</a>
       <a href='#ku_2020_1'>KU 2020 (January)</a>
+      <a href='#august_2020'>KU 2020 (August)</a>
       <a href='#ku_2021_1_1'>KU 2021 (January) (1)</a>
       <a href='#ku_2021_8_6'>KU 2021 (August) (6)</a>
       <a href='#january_2022'>KU 2022 (January)</a>
@@ -1919,6 +1921,35 @@
 
     <br>
 
+    <h2 id = 'august_2018'>KU 2018 (August)</h2>
+    <section id = 'ku_2018_8_4'>
+      <p>
+        <b>4.</b> Let \( p > 0 \) be a prime number and set \( F := \mathbb{Z}/p\mathbb{Z} \), the field with \( p \) elements. Find the number of \( 2 \times 2 \) matrices with entries in \( F \) such that \( A^2 = I \).
+      </p>
+      <p>
+      <b>Solution.</b>  Given that \(A^2 = I\), we have \(A^2 - I = 0\). Hence, we set \(f(x) = x^2 - 1 = (x - 1)(x + 1)\). Then, we have \(f(A) = 0\).
+      Thus, we can know that the minimal polynomial of \(A\), \(\mu_A(x)\), divides \(f(x)\). Hence, we have two possibilities: either it is \(x - 1\) or \(x + 1\) or \(f(x)\).
+      If the minimal polynomial of \(A\) is \(x - 1\), then we can have \(A - I = 0\), which means that \(A = I\).
+      If the minimal polynomial of \(A\) is \(x + 1\), then we can have \(A + I = 0\), which means that \(A = -I = (p - 1)I\).
+      If \(p = 2\), then we can know that \(A = I\) is the solution for both case where \(\mu_A(x) = x - 1\) and \(\mu_A(x) = x + 1\).
+        If \(\mu_A(x) = (x - 1)(x + 1)\), then we can know that \(\gcd(x - 1, x + 1) = 1\), when \(p>2\).
+        Hence, we can have two eigenvalues, which are \(1\) and \(p - 1\). And \(F^2 = \ker(A - I) \oplus \ker(A + I)\).
+        Then, we can know that \(A\) is diagonalizable over \(F\). Thus, we can write \(A = PDP^{-1}\), where
+        \[
+        D = \begin{bmatrix}
+        1 & 0 \\
+        0 & p - 1 \\
+        \end{bmatrix}.
+        \]
+        And \(P\) is an invertible matrix with entries in \(F\). Denote \(P = [\vec{v_1}, \vec_{v_2}]\), where \(\vec{v_1}\) and \(\vec{v_2}\) are the eigenvectors of \(A\).
+        Besides, that \(\vec{v_1}, \vec{v_2}\) should be independent. Hence, for \(\vec{v_1}\in F^2\), we can know that it cannot be \(0\). Thus, there are \(p^2 - 1\) choices for \(\vec{v_1}\).
+        For \(\vec{v_2}\in F^2\), we can know that it cannot be a multiple of \(\vec{v_1}\). Hence, there are \(p^2 - p\) choices for \(\vec{v_2}\).
+        Then, we will have \((p^2 - 1)(p^2 - p)\) choices for \(P\). Hence, the number of \(2 \times 2\) matrices with entries in \(F\) such that \(A^2 = I\) is \(2 + (p^2 - 1)(p^2 - p)\) when \(p > 2\).
+        When \(p=2\), there is only one matrix, which is the identity one.
+      </p>
+
+    </section>
+
     <h2>KU 2019 (January)</h2>
     <section id = 'ku_2019_1_6'>
       <p>
@@ -2252,6 +2283,12 @@
         Hence, we have \(D - I = 0\), which implies that \(D = I\).
         Hence, we have \(I + N = P^{-1}DP = P^{-1}IP = I\), which implies that \(N = 0\). \(\blacksquare\)
       </p>
+    </section>
+
+    <br>
+
+    <section>
+
     </section>
 
     <br>
