@@ -1928,7 +1928,7 @@
       </p>
       <p>
       <b>Solution.</b>  Given that \(A^2 = I\), we have \(A^2 - I = 0\). Hence, we set \(f(x) = x^2 - 1 = (x - 1)(x + 1)\). Then, we have \(f(A) = 0\).
-      Thus, we can know that the minimal polynomial of \(A\), \(\mu_A(x)\), divides \(f(x)\). Hence, we have two possibilities: either it is \(x - 1\) or \(x + 1\) or \(f(x)\).
+      Thus, we can know that the minimal polynomial of \(A\), \(\mu_A(x)\), divides \(f(x)\). Hence, we have three possibilities: \(x - 1\) or \(x + 1\) or \(f(x)\).
       If the minimal polynomial of \(A\) is \(x - 1\), then we can have \(A - I = 0\), which means that \(A = I\).
       If the minimal polynomial of \(A\) is \(x + 1\), then we can have \(A + I = 0\), which means that \(A = -I = (p - 1)I\).
       If \(p = 2\), then we can know that \(A = I\) is the solution for both case where \(\mu_A(x) = x - 1\) and \(\mu_A(x) = x + 1\).
@@ -1941,7 +1941,7 @@
         0 & p - 1 \\
         \end{bmatrix}.
         \]
-        And \(P\) is an invertible matrix with entries in \(F\). Denote \(P = \begin{bmatrix}\vec{v_1} & \vec_{v_2}\end{bmatrix}\), where \(\vec{v_1}\) and \(\vec{v_2}\) are the eigenvectors of \(A\).
+        And \(P\) is an invertible matrix with entries in \(F\). Denote \(P = [\vec{v_1}, \vec{v_2}]\), where \(\vec{v_1}\) and \(\vec{v_2}\) are the eigenvectors of \(A\).
         Besides, that \(\vec{v_1}, \vec{v_2}\) should be independent. Hence, for \(\vec{v_1}\in F^2\), we can know that it cannot be \(0\). Thus, there are \(p^2 - 1\) choices for \(\vec{v_1}\).
         For \(\vec{v_2}\in F^2\), we can know that it cannot be a multiple of \(\vec{v_1}\). Hence, there are \(p^2 - p\) choices for \(\vec{v_2}\).
         Then, we will have \((p^2 - 1)(p^2 - p)\) choices for \(P\). Hence, the number of \(2 \times 2\) matrices with entries in \(F\) such that \(A^2 = I\) is \(2 + (p^2 - 1)(p^2 - p)\) when \(p > 2\).
