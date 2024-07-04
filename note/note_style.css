@@ -132,7 +132,7 @@
       transition: opacity 0.2s;
     }
 
-     .tooltip-link:hover .tooltip-text {
+  .tooltip-text {
       visibility: visible;
       opacity: 1;
     }
