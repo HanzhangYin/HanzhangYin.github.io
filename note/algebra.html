@@ -1639,9 +1639,13 @@
 
     <h2>KU 2016 (January)</h2>
     <section id = 'ku_2016_1_5'>
-    <p>
+      <div class = 'question-box-container'>
+      <div class = 'question-box'>
+      <p>
       <b>Problem 5.</b> Let \( V \) be a finite dimensional vector space over the field \( F \) and \( T : V \to V \) is a linear transformation. Suppose that \( \chi_T(x) \), the characteristic polynomial of \( T \), factors as \( \chi_T(x) = p_1(x)^{f_1} \cdots p_r(x)^{f_r} \), where each \( p_i(x) \) is irreducible over \( F \). Prove that the minimal polynomial of \( T \) equals \( p_1(x)^{e_1} \cdots p_r(x)^{e_r} \), where for each \( 1 \leq i \leq r \), \( e_i \) is the first exponent for which the kernel of \( p_i(T)^{e_i} \) equals the kernel of \( p_i(T)^{e_i+1} \).
     </p>
+      </div>
+      </div>
     <p>
       <b>Proof.</b> We will prove it with mathematical contradiction. Given that the characteristic polynomial of \( T \) is \( \chi_T(x) = p_1(x)^{f_1} \cdots p_r(x)^{f_r} \), where each \( p_i(x) \) is irreducible over \( F \).
       Then we have the minimal polynomial of \( T \) is \( p_1(x)^{e_1} \cdots p_r(x)^{e_r} \), where \( 1 \leq e_i \leq f_i \) for each \(i\). By the following theorem:
@@ -1699,9 +1703,13 @@
       </p>
     </section>
     <section id = 'ku_2016_8_4'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>4.</b> Let \( A \) be an \( n \times n \) matrix over a field \( F \). Prove \( \det(A) \) equals \( (-1)^n \) times the constant term of the characteristic polynomial of \( A \).
       </p>
+            </div>
+        </div>
       <p>
         <b>Proof.</b> Since the characteristic polynomial of \( A \) is \( \chi_A(x) = \det(xI - A) \), which is a polynomial of degree \( n \) with variable \( x \).
         And we know that \(\det(-A) = (-1)^n\det(A)\). Hence, we plug in \(x = 0\), we have
@@ -1716,6 +1724,8 @@
 
     <h2 id = 'ku_2017_1'>KU 2017 (January)</h2>
     <section>
+      <div class = 'question-box-container'>
+        <div class = 'question_box'>
       <p>
         <b>5.</b> Let \( A \) be an \( n \times n \) matrix over the field \( F \) and \( F^n \) denote the vector space of column vectors of length \( n \). Suppose \( A \) is idempotent, i.e., \( A^2 = A \).
       </p>
@@ -1725,6 +1735,8 @@
       <p>
         (ii) If \( F = \mathbb{Z}_p \), how many idempotent \( 3 \times 3 \) matrices are there?
       </p>
+        </div>
+        </div>
       <p>
         <b>Proof (i).</b> Given that \(A^2 = A\), we have \(A^2 - A = A(A - I) = 0\). Hence, we define \(p(x) = x(x - 1)\).
         If \(p(x)\) is the minimal polynomial of \(A\), then we can know that
@@ -1894,6 +1906,8 @@
 
     <h2 id = 'ku_2017_8'>KU 2017 (August)</h2>
     <section id = 'ku_2017_8_6'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         \(\textbf{Problem 6. }\) Consider the matrix \( A = \begin{bmatrix}
           0 & 1 & 0 & 1 \\
@@ -1903,6 +1917,8 @@
           \end{bmatrix} \), with entries in \( \mathbb{C} \).
         Find \( J \), the Jordan canonical form for \( A \) and an invertible matrix \( P \) such that \( J = P^{-1}AP \).
       </p>
+            </div>
+        </div>
       <p>
         \(\textbf{Solution. }\)We firstly find the characteristic polynomial of \(A\).
         \[
@@ -1956,9 +1972,13 @@
 
     <h2 id = 'august_2018'>KU 2018 (August)</h2>
     <section id = 'ku_2018_8_4'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>4.</b> Let \( p > 0 \) be a prime number and set \( F := \mathbb{Z}/p\mathbb{Z} \), the field with \( p \) elements. Find the number of \( 2 \times 2 \) matrices with entries in \( F \) such that \( A^2 = I \).
       </p>
+            </div>
+        </div>
       <p>
       <b>Solution.</b>  Given that \(A^2 = I\), we have \(A^2 - I = 0\). Hence, we set \(f(x) = x^2 - 1 = (x - 1)(x + 1)\). Then, we have \(f(A) = 0\).
       Thus, we can know that the minimal polynomial of \(A\), \(\mu_A(x)\), divides \(f(x)\). Hence, we have three possibilities: \(x - 1\) or \(x + 1\) or \(f(x)\).
@@ -1985,6 +2005,8 @@
 
     <h2>KU 2019 (January)</h2>
     <section id = 'ku_2019_1_6'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>6.</b> Let \( V \) be a finite dimensional vector space over the field \( F \) and suppose \( T : V \rightarrow V \) is a linear operator on \( V \).
       </p>
@@ -1999,6 +2021,8 @@
           (iii) If \( V = \mathbb{R}^4 \), give an example where \( T \) has only finitely many \( T \)-invariant subspaces. Hint: It may be useful to consider the case that \( T \) is a normal operator on \( \mathbb{R}^4 \).
         </li>
       </ul>
+            </div>
+        </div>
       <p>
         <b>Proof (i).</b>
         Since \(\mu_T(x) = x^2 - x = x(x - 1)\), then we can know that
@@ -2012,10 +2036,14 @@
 
     <h2>KU 2019 (August)</h2>
     <section id = 'ku_2019_8_2'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>Problem 2.</b> Let \(V\) be a finite dimensional vector space over the complex numbers and \(T\) a linear operator on \(V\) such that the subspaces of \(V\) generated by all the eigenvectors is one dimensional.
         Prove that the minimal polynomial of \(T\) is \((x − \lambda)^n\) where \(n\) is the dimension of \(V\) .
       </p>
+            </div>
+        </div>
       <p>
         <b>Proof.</b> Given that the subspaces of \(V\) generated by all the eigenvectors is one dimensional, we can know that the basis of the subspace is \(\{v\}\), where \(v\) is the eigenvector of \(T\).
         Then we have \(T(v) = \lambda v\), where \(\lambda\) is the correspondent eigenvalue of \(v\). Hence, if \(v'\) is an eigenvector of \(T\). Then, we can know that \(v' = cv\) for some \(c\in\mathbb{C}\).
@@ -2031,6 +2059,8 @@
 
     <h2 id = 'ku_2020_1'>KU 2020 (January)</h2>
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>2.</b> Let \( T : \mathbb{R}^3 \rightarrow \mathbb{R}^3 \) be a linear operator.
       </p>
@@ -2056,6 +2086,8 @@
         \]
         Prove that \( T \) is a normal operator and find an orthonormal basis \( B \) for \( \mathbb{R}^3 \) such that the matrix of \( T \) with respect to \( B \) has the form in part (a).
       </p>
+            </div>
+        </div>
       <p>
         <b>Proof (a).</b> Given that the matrix is the linear operator \(T\) respect to the standard basis. We have
         \[
@@ -2171,6 +2203,8 @@
     </section>
 
     <section id = 'ku_2020_1_4'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>4.</b> Given a field \( K \), consider the group \( GL_n(K) \) of invertible \( n \times n \) matrices with entries in \( K \).
       </p>
@@ -2184,6 +2218,8 @@
       <p>
         (c) Use (a) to prove that \( SL_2(\mathbb{F}_3) \) is not isomorphic to the symmetric group \( S_4 \).
       </p>
+            </div>
+        </div>
       <p>
         <b>Proof (a).</b> Let us denote \(S\) as \( \{ \alpha I_n \mid \alpha \in K^\times \} \). Suppose that \(s\in S\), then we can have \(s = \alpha I_n\), for some \(\alpha\in K\setminus\{0\}\).
       Let \(g\in GL_n(K)\), then we have
