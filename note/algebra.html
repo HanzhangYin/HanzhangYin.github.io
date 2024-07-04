@@ -1665,9 +1665,42 @@
     <br>
 
     <h2>KU 2016 (August)</h2>
+    <section id = 'ku_2016_8_1'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+      <p>
+        <b>1.</b> Let \(R\) be a commutative ring with unity. Let \(U(R)\) be the set of units in \(R\).
+      </p>
+      <p>
+        (a) Show that \(U(R)\) is an abelian group under multiplication.
+      </p>
+      <p>
+        (b) Let \(R = \mathbb{Z}[x]/(x^2)\). Show that \(U(R) \cong \mathbb{Z} \times \mathbb{Z}_2\). Justify your answer carefully.
+      </p>
+        </div>
+        </div>
+      <p>
+        <b>Proof (a).</b> Given that \(R\) is a commutative ring with unity and \(U(R)\) is the set of units in \(R\).
+        Hence, we know that \(1\in U(R)\). For any \(a\in U(R)\), we have \(a\cdot a^{-1}\in U(R)\) where \(a^{-1}\in U(R)\) since \(a\) is a unit.
+        For any \(a, b\in U(R)\), we can know that \(ab\in U(R)\) since \(b^{-1}, a^{-1}\in U(R)\) and \(b^{-1}a^{-1}\in U(R)\).
+        Therefore, we can know that \(U(R)\) is a group under multiplication. \(\blacksquare\)
+      </p>
+      <p>
+        <b>Proof (b).</b> Firstly, we can know that \((x^2) = \{f\cdot x^2 \mid f\in \mathbb{Z}[x]\}\).
+        Hence, let \(f = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\), where \(a_i\in \mathbb{Z}\).
+        Hence, we have \(f\cdot x^2 = a_nx^{n+2} + a_{n-1}x^{n+1} + \cdots + a_1x^3 + a_0x^2\).
+        Thus, we can know that \(R = \mathbb{Z}[x]/(x^2) = \{ax + b\,\mid\, a, b\in \mathbb{Z}\}\).
+        Suppose that \(ax + b\in U(R)\), then we can know that there exists \(cx + d\in U(R)\) such that
+        \((ax + b)(cx + d) = 1\). Hence, we have \(acx^2 + (ad + bc)x + bd = (ad + bc)x + bd = 1\), which implies that \(ad + bc = 0\) and \(bd = 1\).
+        Since \(b, d\in \mathbb{Z}\), we can know that \(b = d = -1\) or \(b = d = 1\) in order to make sure \(bd = 1\).
+        Hence, we have \(a + c = 0\), which implies that \(a = -c\).
+        Hence, we can know that \(U(R) = \{ax + 1, bx - 1\,\mid\, a, b\in \mathbb{Z}\}\).
+        Let \(\varphi: U(R) \to \mathbb{Z}\times \mathbb{Z}_2\) be a map such that \(\varphi(ax + 1) = (a, 0)\) and \(\varphi(bx - 1) = (b, 1)\).
+      </p>
+    </section>
     <section id = 'ku_2016_8_4'>
       <p>
-        <b>Problem 4.</b> Let \( A \) be an \( n \times n \) matrix over a field \( F \). Prove \( \det(A) \) equals \( (-1)^n \) times the constant term of the characteristic polynomial of \( A \).
+        <b>4.</b> Let \( A \) be an \( n \times n \) matrix over a field \( F \). Prove \( \det(A) \) equals \( (-1)^n \) times the constant term of the characteristic polynomial of \( A \).
       </p>
       <p>
         <b>Proof.</b> Since the characteristic polynomial of \( A \) is \( \chi_A(x) = \det(xI - A) \), which is a polynomial of degree \( n \) with variable \( x \).
@@ -2134,6 +2167,34 @@
         \end{align}
         \]
         Hence, we have \(a = b = c = 0\), which implies that they are independent. Thus, we have \(\mathcal{B}\) is a basis.
+      </p>
+    </section>
+
+    <section id = 'ku_2020_1_4'>
+      <p>
+        <b>4.</b> Given a field \( K \), consider the group \( GL_n(K) \) of invertible \( n \times n \) matrices with entries in \( K \).
+      </p>
+      <p>
+        (a) Show that the center of \( GL_n(K) \) is \( \{ \alpha I_n \mid \alpha \in K^\times \} \), where \( I_n \) is the \( n \times n \) identity matrix.
+        <i>Hint:</i> Consider the matrix \( I_n + A_{ij} \), where \( A_{ij} \) is the matrix whose \((i,j)\)-th entry is 1, and all other entries are 0.
+      </p>
+      <p>
+        (b) Show that \( |SL_2(\mathbb{F}_3)| = 24 \), where \( \mathbb{F}_3 \) is the field with three elements, and \( SL_2(\mathbb{F}_3) \) is the subgroup of \( GL_2(\mathbb{F}_3) \) of \( 2 \times 2 \) matrices with determinant 1.
+      </p>
+      <p>
+        (c) Use (a) to prove that \( SL_2(\mathbb{F}_3) \) is not isomorphic to the symmetric group \( S_4 \).
+      </p>
+      <p>
+        <b>Proof (a).</b> Let us denote \(S\) as \( \{ \alpha I_n \mid \alpha \in K^\times \} \). Suppose that \(s\in S\), then we can have \(s = \alpha I_n\), for some \(\alpha\in K\setminus\{0\}\).
+      Let \(g\in GL_n(K)\), then we have
+        \[
+        g\cdot s\cdot g^{-1} = g\cdot \alpha I_n\cdot g^{-1} = \alpha g\cdot I_n\cdot g^{-1} = \alpha I_n.
+        \]
+        Hence, we showed that \(s\in Z(GL_n(K))\). Now, suppose that \(z\in Z(GL_n(K))\), then we have
+        \[
+        g\cdot z\cdot g^{-1} = z,
+        \]
+        for any \(g\in GL_n(K)\). Then, we have
       </p>
     </section>
 
