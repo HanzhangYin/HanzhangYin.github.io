@@ -1567,6 +1567,29 @@
     <br>
 
     <h2 id = 'january_2015'>KU 2015 (January)</h2>
+    <section di = 'ku_2015_1_1'>
+      <div class = 'question_box_container'>
+        <div class = 'question_box'>
+          <p>
+            <b>1.</b> Let \( G \) be a finite abelian group of odd order. Prove that for each \( x \in G \), there exists a unique \( y \in G \), such that \( y^2 = x \).
+          </p>
+        </div>
+        </div>
+      <p>
+        <b>Proof.</b> Let \(\varphi: G\to G\) such that \(g\mapsto g^2\) for all \(g\in G\).
+        Firstly, we want to show that \(\varphi\) is well-defined. Suppose that \(g = h\) for some \(g, h\in G\), then we have \(g^2 = h^2\).
+        Then, we want to show that \(\varphi\) is a group homomorphism.
+        For any \(g, h\in G\), we have \(\varphi(gh) = (gh)^2 = g^2h^2 = \varphi(g)\varphi(h)\) since \(G\) is abelian.
+        Now, we want to show that \(\varphi\) is injective.
+        Suppose that \(\varphi(g) = \varphi(h)\) for some \(g, h\in G\), then we have \(g^2 = h^2\).
+        Hence, we can have \(g^2h^{-2} = (gh^{-1})^2 = e\). Given that \(G\) is group of odd order. Hence, we can know that there does not exist any element of even order in \(G\).
+        If \(gh^{-1}\) is an non identity element of \(G\), then we can say that \(gh^{-1}\) has order of \(2\), which is a contradiction.
+        Hence, we have \(gh^{-1} = e\), which implies that \(g = h\). Thus, we showed that \(\varphi\) is injective.
+        Given that \(\varphi: G\to G\) and \(G\) has finite order, according to \(\textbf{Pigeon Hole Principle}\), we can know that \(\varphi\) is surjective.
+        Thus, we can have for any \(x\in G\), there exists an unique \(y\in G\) such that \(y^2 = x\). \(\blacksquare\)
+      </p>
+    </section>
+
     <section id = 'ku_2015_1_2'>
         <div class = 'question_box_container'>
             <div class = 'question_box'>
@@ -1612,12 +1635,38 @@
         </div>
         </div>
       <p>
-        <b>Solution.</b> Let \(\sqrt{2} + \sqrt[3]{2} = \alpha\). Then we have
+        <b>Solution.</b> Let \(\sqrt{2} + \sqrt[3]{2} = 2^{1/2} + 2^{1/3} =  \alpha\). Then we have
         \[
         \begin{align}
-        \alpha^2 = 2 + 2\sqrt{2}\sqrt[3]{2} + 2 = 2 + 2\sqrt{6}, \\
-        \alpha^3 = 2\sqrt{2} + 2\sqrt[3]{4} + 2\sqrt{6} = 2\sqrt{2} + 2\sqrt{3} + 2\sqrt{6}.
+        \alpha &= 0\cdot 1 + 0\cdot 2^{1/6} + 1\cdot 2^{1/3} + 1\cdot 2^{1/2} + 0\cdot 2^{2/3} + 0\cdot 2^{5/6}. \\
+        2^{1/6}\alpha &= 0\cdot 1 + 0\cdot 2^{1/6} + 0\cdot 2^{1/3} + 1\cdot 2^{1/2} + 1\cdot 2^{2/3} + 0\cdot 2^{5/6}. \\
+        2^{1/3}\alpha &= 0\cdot 1 + 0\cdot 2^{1/6} + 0\cdot 2^{1/3} + 0\cdot 2^{1/2} + 1\cdot 2^{2/3} + 1\cdot 2^{5/6}. \\
+        2^{1/2}\alpha &= 2\cdot 1 + 0\cdot 2^{1/6} + 0\cdot 2^{1/3} + 0\cdot 2^{1/2} + 0\cdot 2^{2/3} + 1\cdot 2^{5/6}. \\
+        2^{2/3}\alpha &= 2\cdot 1 + 1\cdot 2^{1/6} + 0\cdot 2^{1/3} + 0\cdot 2^{1/2} + 0\cdot 2^{2/3} + 0\cdot 2^{5/6}. \\
+        2^{5/6}\alpha &= 0\cdot 1 + 2\cdot 2^{1/6} + 2\cdot 2^{1/3} + 0\cdot 2^{1/2} + 0\cdot 2^{2/3} + 0\cdot 2^{5/6}.
         \end{align}
+        \]
+        Then we can get the following equations:
+        \[
+        \begin{align}
+        \alpha\cdot 1 + 0\cdot 2^{1/6} - 1\cdot 2^{1/3} - 1\cdot 2^{1/2} + 0\cdot 2^{2/3} + 0\cdot 2^{5/6} = 0. \\
+        0\cdot 1 + \alpha\cdot 2^{1/6} + 0\cdot 2^{1/3} - 1\cdot 2^{1/2} - 1\cdot 2^{2/3} + 0\cdot 2^{5/6} = 0. \\
+        0\cdot 1 + 0\cdot 2^{1/6} + \alpha\cdot 2^{1/3} + 0\cdot 2^{1/2} - 1\cdot 2^{2/3} -1\cdot 2^{5/6} = 0. \\
+        -2\cdot 1 + 0\cdot 2^{1/6} + 0\cdot 2^{1/3} + \alpha\cdot 2^{1/2} + 0\cdot 2^{2/3} - 1\cdot 2^{5/6} = 0. \\
+        -2\cdot 1 - 2\cdot 2^{1/6} + 0\cdot 2^{1/3} + 0\cdot 2^{1/2} + \alpha\cdot 2^{2/3} + 0\cdot 2^{5/6} = 0. \\
+        0\cdot 1 - 2\cdot 2^{1/6} - 2\cdot 2^{1/3} + 0\cdot 2^{1/2} + 0\cdot 2^{2/3} + \alpha\cdot 2^{5/6} = 0.
+        \end{align}
+        \]
+        Therefore, we can have the minimal polynomial of \( \sqrt{2} + \sqrt[3]{2} \) over \( \mathbb{Q}\) is the determinant of the following matrix:
+        \[
+        \begin{pmatrix}
+        \alpha & 0 & -1 & -1 & 0 & 0 \\
+        0 & \alpha & 0 & -1 & -1 & 0 \\
+        0 & 0 & \alpha & 0 & -1 & -1 \\
+        -2 & 0 & 0 & \alpha & 0 & -1 \\
+        -2 & -2 & 0 & 0 & \alpha & 0 \\
+        0 & -2 & -2 & 0 & 0 & \alpha
+        \end{pmatrix}.
         \]
       </p>
     </section>
