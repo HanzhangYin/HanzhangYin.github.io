@@ -1770,6 +1770,8 @@
 
     <h2>Qualify Exam Problems (August 2017)</h2>
     <section id = "august_2017">
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
       <p>
         <b>Problem 2.</b>
       </P>
@@ -1787,6 +1789,8 @@
           (c) Prove that no Gaussian quadrature formula of the form (1) can be exact for all polynomials of degree \( \leq 4 \).
         </li>
       </ul>
+        </div>
+      </div>
       <p>
         <b>Solution (a).</b>
 <!--        Firstly, we try to find the coefficients and nodes of the Gaussian quadrature formula of the form-->
@@ -1864,6 +1868,8 @@
 
     <h2 id = 'august_2018'> Qualify Exam Problems (August 2018)</h2>
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <b>1.</b> All the questions in this problem are about to use the fixed point iteration to approximate \(\sqrt[3]{5}\).
       <p>
         (a) Prove \(\sqrt[3]{5}\) is a fixed point of the function \( g(x) = x - c \frac{x^3 - 5}{x^2} \), where \( c \) is a fixed constant.
@@ -1874,6 +1880,8 @@
         <p>
             (c) Find a value \( c \) such that the order of convergence is quadratic and prove the quadratic convergence.
         </p>
+            </div>
+        </div>
       <p>
                 <b>Proof (a).</b> We have
                 \[
@@ -1914,6 +1922,8 @@
 
     <h2 id = "january_2019">Qualify Exam Problems (January 2019)</h2>
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <ul>
           <li>
           Derive the two-step Adams-Moulton method
@@ -1923,6 +1933,8 @@
           Study the consistency, zero-stability, absolute stability, and convergence of this method for the initial value problem \( x' = f(t, x(t)) \).
           </li>
       </ul>
+            </div>
+        </div>
       <p>
       <b>Proof.</b>
 
@@ -1930,6 +1942,8 @@
 
       <br>
 
+      <div class = 'question_box_container'>
+        <div class = 'question_box'>
       <p>
         <b>Problem 4.</b> The Lagrange interpolating polynomial \( p_n \in P_n \) that interpolates function \( f \in C([a, b]) \) at distinct points \( x_i \in [a, b], \, i = 0, \ldots, n \) is given as
         \[ p_n(x) = \sum_{i=0}^{n} f(x_i) \ell_i(x), \]
@@ -1951,6 +1965,8 @@
           Note: values \( \beta_i \) are called the barycentric weights, and this alternative Lagrange interpolation formula is known as the barycentric interpolation formula.
         </li>
       </ul>
+        </div>
+        </div>
       <p>
         <b>Proof (b).</b>
         Given that \(\beta_i = \frac{1}{\prod_{\substack{j=0 \\ j \neq i}}^{n} (x_i - x_j)}\), and \(w(x) = \prod_{j=0}^{n} (x - x_j)\), we have
@@ -1978,6 +1994,8 @@
   <br>
 
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>Problem 2.</b>
       </p>
@@ -1995,6 +2013,8 @@
       <p>
         (b) Consider the nonlinear equation \( x^2 - 1 = 0 \). Propose two ways of rewriting this equation as a fixed-point problem \( x = f(x) \) using different functions \( f \). Discuss the convergence (or non-convergence) behavior of the fixed-point iteration \( x_{n+1} = f(x_n) \), \( n = 0,1,2, \ldots \), for each of these two iteration functions.
       </p>
+            </div>
+        </div>
       <p>
         <b>Proof (i).</b>Define \(h(x) = x\) where \(x\in [a, b]\). Hence, we can know that \(h(x)\in C([a, b])\).
         Since \(g(x)\in C([a, b])\), we can know that \(f(x) = g(x) - h(x) = g(x) - x\) is in \(C([a, b])\).
@@ -2018,6 +2038,8 @@
     </section>
 
     <h2 id = 'january_2020'>Qualify Exam Problems (January 2020)</h2>
+    <div class = 'question_box_container'>
+        <div class = 'question_box'>
     <p>
       <b>Problem 4.</b> Let \( A \in \mathbb{C}^{n \times n} \) be a non-singular matrix, and let \( 0 \neq b \in \mathbb{C}^n \) be a fixed vector. Suppose that you have an algorithm for solving \( Ax = b \) that produces an approximate solution \( \tilde{x} (\neq 0) \) that satisfies
 
@@ -2051,6 +2073,8 @@
       \]
         </li>
     </ul>
+        </div>
+    </div>
     <p>
       <b>Proof.</b> Given that \((A + \Delta A) \tilde{x} = b \) and \(A x = b\), we have
       \[
@@ -2084,6 +2108,8 @@
 
     <br>
 
+    <div class = 'question_box_container'>
+        <div class = 'question_box'>
     <p>
       <b>5.</b> Let matrix \( A \in \mathbb{R}^{n \times n} \) be positive definite and matrix \( X \in \mathbb{R}^{n \times k} \) be of full column rank, i.e., \(\text{rank}(X) = k \).
     </p>
@@ -2101,6 +2127,8 @@
           (d) Prove that matrix \( A \) has an LU factorization and the diagonal entries of matrix \( U \) are all positive.
         </li>
     </ul>
+        </div>
+    </div>
     <p>
       <b>Solution (a).</b> We say \(A\) is positive definite if for all \(x\in \mathbb{R}^n\setminus \{0\}\), we have \(x^T A x > 0\).
     </p>
@@ -2171,6 +2199,8 @@
 
     <h2 id = 'august_2020'>Qualify Exam Problems (August 2020)</h2>
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>1</b>. Consider the function \( g(x) = \frac{1}{2}(1 + 2x - x^2) \) defined on the closed interval \([1/2, 3/2]\).
       </p>
@@ -2185,6 +2215,8 @@
           (c) Determine the convergence rate of the fixed point iteration described in 1(b).
         </li>
       </ul>
+            </div>
+        </div>
       <p>
         <b>Proof (a).</b> Suppose that \(a, b\in [1/2, 3/2]\) and \(a\neq b\). Then, we have
         \[
@@ -2225,6 +2257,8 @@
     <br>
 
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>2.</b> (a) Consider the Gaussian quadrature of the form
 
@@ -2258,6 +2292,8 @@
 
         The constant \( D \) and the integer \( s \) need to be provided.
       </p>
+            </div>
+        </div>
       <p>
         <b>Solution (a).</b> Let \(f(x) = 1\), we have
         \[
@@ -2278,6 +2314,8 @@
     <br>
 
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>3.</b> Consider the numerical ODE method
         \[
@@ -2294,6 +2332,8 @@
         <p>
         (c) Derive the order of the local truncation error.
       </p>
+            </div>
+        </div>
       <p>
         <b>Solution (a).</b> This method is implicit and multistep.
       </p>
@@ -2307,6 +2347,8 @@
     <br>
 
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
         <p>
             <b>5.</b> Consider the square matrix \( A\in \mathbb{C}^{n\times n}\).Suppose that \(\sigma_1\) and \(\sigma_n\) are the largest and the smallest singular values of \(A\), respectively. Let \(\|\cdot \|_2\) be the \(2\)-norm.
         </p>
@@ -2323,6 +2365,8 @@
         \]
         Also, prove that both the equalities hold if \(A\) is Hermitian, i.e., \(A\) satisfies \(A = A^*\), where \(A^*\) is the adjoint (conjugate transpose) of \(A\).
         </p>
+            </div>
+        </div>
       <p>
         <b>Proof (a).</b>Firstly, we showed that \(\sigma_1 = \max\limits_{\|x\|_2 = 1}\|Ax\|_2\).
         Since every matrix has \(SVD\), we defined that \(A = U\Sigma V^*\), where \(U, V\) are unitary matrices and \(\Sigma\) is a diagonal matrix with singular values on the diagonal.
@@ -2382,6 +2426,8 @@
 
     <h2 id = 'january_2021'>Qualify Exam Problems (January 2021)</h2>
     <section id = 'ku_2021_1_1'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>Problem 1.</b> In this problem, we investigate the numerical method
 
@@ -2400,6 +2446,8 @@
       <p>
         (c) State and prove whether the method (1) is consistent, zero-stable and/or convergent.
       </p>
+            </div>
+        </div>
       <p>
         <b>Solution (a).</b> Firstly, we can know that the method (1) is multistep and implicit.
       </p>
@@ -2414,6 +2462,8 @@
 
     <h2 id = 'august_2021'>Qualify Exam Problems (August 2021)</h2>
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>Problem 2.</b> (Radau's formula.) Consider a numerical integration rule of the form
 
@@ -2428,6 +2478,8 @@
 
         Determine the constants \( D \) and \( r \).
       </p>
+            </div>
+        </div>
       <p>
         <b>Solution (a).</b>
         Let \( f(t) = 1 \). Then, we have
@@ -2471,8 +2523,13 @@
       </p>
     </section>
 
+    <br>
+
+    <h2>Qualify Exam Problems (January 2022)</h2>
+
     <section>
-      <h2>Qualify Exam Problems (January 2022)</h2>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         1. Consider the iteration \[ x_{n+1} = \frac{1}{2} x_n + \frac{5}{2x_n},
         \quad n = 0, 1, \ldots \]
@@ -2490,7 +2547,8 @@
           Show that the order of convergence of the iteration is quadratic.
         </li>
       </ul>
-      <h2>Solutions</h2>
+            </div>
+        </div>
       <p>
         <b>Proof of 1.</b> Let \(f(x) = \frac{1}{2}x + \frac{5}{2x}\).
         Hence, we can calculate the derivative of \(f(x)\) as \[ f'(x) =
@@ -2510,6 +2568,8 @@
 
     <h2 id = 'august_2022'>Qualify Exam Problems (August 2022)</h2>
     <section id="ku_2022_8_1">
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         \(\textbf{Problem 1. }\)Consider the interpolation problem: Find a
         polynomial of degree less than or equal to three interpolating the table
@@ -2527,6 +2587,8 @@
           function \( f = f(x) \) is sufficiently smooth.
         </li>
       </ul>
+            </div>
+        </div>
       <p>
         \(\textbf{Proof. }\)Firstly, we can observe that for all \(x\), they are
         distinct. Therefore, for arbitrary value of \(f(x)\), we can find a
@@ -2549,6 +2611,8 @@
     </section>
 
     <section>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         \(\textbf{Problem. }\)Let \( A \in \mathbb{C}^{m \times m} \), and \( A
         = U\Sigma V^* \) being a singular value decomposition of \( A \), where
@@ -2566,8 +2630,10 @@
         </li>
         <li>Prove \( \|B\|_2 = \|A\|_2 \).</li>
       </ul>
+            </div>
+        </div>
       <p>
-        \(\textbf{Proof(a). }\) Given \(W\), we have with Unitary Matrices \(U,
+        <b>Proof (a).</b> Given \(W\), we have with Unitary Matrices \(U,
         V\), we can get \[ W^* = \frac{1}{\sqrt{2}} \begin{bmatrix} U^* & V^* \\
         U^* & -V^* \end{bmatrix} \in \mathbb{C}^{2m \times 2m}. \] Then we have
         \begin{align} W^* W &= \frac{1}{2} \begin{bmatrix} U^*U + V^*V & U^*U -
@@ -2582,7 +2648,7 @@
         Therefore, we show that \(W\) is unitary. \[ \tag*{$\square$} \]
       </p>
       <p>
-        \(\textbf{Proof(b). }\)Firstly, we have \[ B^* = \begin{bmatrix} 0 & A^*
+        <b>Proof (b).</b>Firstly, we have \[ B^* = \begin{bmatrix} 0 & A^*
         \\ (A^*)^* & 0 \end{bmatrix} = \begin{bmatrix} 0 & A^* \\ A & 0
         \end{bmatrix} = B. \] Thus, we have \(B\) is Hermitian. To show the
         spectral decomposition, we need to do calculation. \begin{align} W
@@ -2604,7 +2670,7 @@
         \] \[ \tag*{$\square$} \]
       </p>
       <p>
-        \(\textbf{Proof(c).}\) Since we just show that \(W\) is unitary, and we
+        <b>Proof (c).</b> Since we just show that \(W\) is unitary, and we
         are given that \(U\) and \(V\) are unitary, we have \begin{align}
         \|A\|_2 &= \|U\Sigma V^*\|_2 = \|\Sigma\|_2 = \max\sigma_i \\ \|B\|_2 &=
         \left\|W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix}
@@ -2634,8 +2700,10 @@
 
     <br>
 
+    <h2>Qualify Exam Problems (January 2023)</h2>
     <section id = 'january_2023'>
-      <h2>Qualify Exam Problems (January 2023)</h2>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>Problem 4.</b> For \( A \in \mathbb{R}^{n \times n} \) and \( A = A^T \), Rayleigh Quotient Iteration is defined by:
       </p>
@@ -2665,6 +2733,8 @@
                 (b) Assume, in addition, that \( v_1^{(k-1)} \approx 1 \) and \( v_2^{(k-1)} \approx 0 \). Show that \( \|\vec{v}^{(k)} - \vec{e}_1\|_2 \approx \|\vec{v}^{(k-1)} - \vec{e}_1\|_2^3 \), where \( \vec{e}_1 = [1, 0]^T \). What is the significance of this result? <b>Hint:</b> \( \sqrt{1 + x} \approx 1 + x/2 \) for \( x \approx 0 \).
             </li>
         </ul>
+            </div>
+        </div>
       <p>
         <b>Solution (a).</b> For simplicity, we denote \(a = v_1^{(k-1)}\in\mathbb{R}\) and \(b = v_2^{(k-1)}\in\mathbb{R}\). Then, we have
         \[ v^{(k-1)} = [a, b]^T. \]
@@ -2711,8 +2781,11 @@
 
     <br>
 
-    <section id="August_2023">
-      <h2>Qualify Exam Problems (August 2023)</h2>
+    <h2 id="August_2023">Qualify Exam Problems (August 2023)</h2>
+
+    <section id = 'ku_2023_8_3'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         \(\textbf{Problem 3. }\)Consider the \(\theta\)-method \[ y_{n+1} = y_n
         + h \left( \theta f_{n+1} + (1 - \theta) f_n \right), \quad \theta \in
@@ -2730,8 +2803,10 @@
           \(\theta = 0\), \(\frac{1}{2}\), \(1\)?
         </li>
       </ul>
+            </div>
+        </div>
       <p>
-        \(\textbf{Solution (a).}\)To make a method explicit, we only need values
+        <b>Solution (a).</b> To make a method explicit, we only need values
         of \(y_n\) and \(f_n\). Hence, when \(\theta = 0\), we have \[ y_{n+1} =
         y_n + h f_n, \] which is explicit. To make a method implicit, we need
         values of \(f_{n+1}\). Hence, when \(\theta = 1\), we have \[ y_{n+1} =
@@ -2754,7 +2829,9 @@
     <br>
 
     <h2 id = 'january_2024'>Qualify Exam Problems (January 2024)</h2>
-    <section>
+    <section id = 'ku_2024_1_2'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
       <p>
         <b>2.</b> Consider the integral \( I(f) = \int_{-1}^1 f(x) \, dx \).
       </p>
@@ -2778,6 +2855,8 @@
       <p>
         (c) What is the degree of precision of \( G_2(f) \)?
       </p>
+            </div>
+        </div>
       <p>
         <b>Solution (a).</b> Gaussian quadrature is a method to approximate the integral of a function by evaluating the function at specific points and weighting the function values. The weights and points are chosen such that the method is exact for polynomials of a certain degree.
         \[
