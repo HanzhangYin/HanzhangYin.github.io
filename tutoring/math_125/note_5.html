@@ -38,57 +38,112 @@
             <a href="#derivative_general_exponential"
                 >Derivatives of General Exponential Function</a
             >
-            <a href="#rate_of_change">Rate of Change</a>
-            <a href="#higher_order_derivative">Higher Order Derivative</a>
-            <a href="#trigonometric_functions">Trigonometric Functions</a>
-            <a href="#squeeze_theorem">Squeeze Theorem</a>
-
-            <!--            <a href="#References">References</a>-->
+            <a href="#linear_approximation">Linear Approximation</a>
         </nav>
         <script src="click.js"></script>
         <!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
         <h1>Note 5</h1>
 
-        <section id="linear_approximation">Linear Approximation</section>
-        \begin{definition}[Linear Approximation] Linear Approximation of \(
-        \Delta f \) If \( f \) is differentiable at \( x = a \) and \( \Delta x
-        \) is small, then \[ \Delta f \approx f'(a) \Delta x \]
-        \end{definition}\pause \begin{remark} \(\Delta f \) is the actual change
-        in \( f \) and \( f'(a) \Delta x \) is the estimated change.
-        \end{remark} \end{frame} \begin{frame} \frametitle{Inverse Trigonometric
-        Derivatives} \[ \frac{d}{dx} (\sin^{-1} x) = \frac{1}{\sqrt{1 - x^2}} \]
-        \[ \frac{d}{dx} (\tan^{-1} x) = \frac{1}{1 + x^2} \] \[ \frac{d}{dx}
-        (\sec^{-1} x) = \frac{1}{|x| \sqrt{x^2 - 1}} \] \[ \frac{d}{dx}
-        (\cos^{-1} x) = -\frac{1}{\sqrt{1 - x^2}} \] \[ \frac{d}{dx} (\cot^{-1}
-        x) = -\frac{1}{1 + x^2} \] \[ \frac{d}{dx} (\csc^{-1} x) = -\frac{1}{|x|
-        \sqrt{x^2 - 1}} \] \end{frame} \begin{frame} \frametitle{Linearization}
-        \begin{definition}[Linearization] To approximate the function \( f \)
-        itself rather than the change \( \Delta f \), we use the linearization
-        \( L(x) \) centered at \( x = a \), defined by \[ L(x) = f'(a)(x - a) +
-        f(a) \] Notice that \( y = L(x) \) is the equation of the tangent line
-        at \( x = a \). \end{definition} \end{frame} \begin{frame}
-        \frametitle{Extreme Values on an Interval} \begin{definition}[Extreme
-        Values] Let \( f \) be a function on an interval \( I \) and let \( a
-        \in I \). We say that \( f(a) \) is the \begin{itemize} \item
-        \textbf{Absolute minimum} of \( f \) on \( I \) if \( f(a) \leq f(x) \)
-        for all \( x \in I \). \item \textbf{Absolute maximum} of \( f \) on \(
-        I \) if \( f(a) \geq f(x) \) for all \( x \in I \). \end{itemize}
-        \end{definition} \end{frame} \begin{frame} \frametitle{Existence of
-        Extrema on a Closed Interval} A continuous function \( f \) on a closed
-        (bounded) interval \( I = [a, b] \) takes on both a minimum and a
-        maximum value on \( I \). \end{frame} \begin{frame} \frametitle{Local
-        Extrema} \begin{definition}[Local Extrema] We say that \( f(c) \) is a
-        \begin{itemize} \item \textbf{Local minimum} occurring at \( x = c \) if
-        \( f(c) \) is the minimum value of \( f \) on some open interval (in the
-        domain of \( f \)) containing \( c \). \item \textbf{Local maximum}
-        occurring at \( x = c \) if \( f(c) \) is the maximum value of \( f \)
-        on some open interval (in the domain of \( f \)) containing \( c \).
-        \end{itemize} \end{definition} \end{frame} \begin{frame}
-        \frametitle{Critical Points} \begin{definition}[Critical Points] A
-        number \( c \) in the domain of \( f \) is called a \textbf{critical
-        point} if either \( f'(c) = 0 \) or \( f'(c) \) does not exist.
-        \end{definition} \frametitle{Critical Points} \begin{theorem}[Critical
-        Points] If \( f \) has a local maximum or minimum at \( x = c \), then
-        \( c \) is a critical point of \( f \). \end{theorem} \end{frame}
+        <section id="linear_approximation">
+            <h2>Linear Approximation</h2>
+            <p>
+                <b>Definition [Linear Approximation].</b> Linear Approximation
+                of \( \Delta f \) If \( f \) is differentiable at \( x = a \)
+                and \( \Delta x \) is small, then \[ \Delta f \approx f'(a)
+                \Delta x \]
+            </p>
+            <p>
+                <b>Remark.</b> \(\Delta f \) is the actual change in \( f \) and
+                \( f'(a) \Delta x \) is the estimated change.
+            </p>
+        </section>
+
+        <section>
+            <h2>Inverse Trigonometric Derivatives</h2>
+            <p>\[ \frac{d}{dx} (\sin^{-1} x) = \frac{1}{\sqrt{1 - x^2}} \]</p>
+            <p>\[ \frac{d}{dx} (\tan^{-1} x) = \frac{1}{1 + x^2} \]</p>
+            <p>
+                \[ \frac{d}{dx} (\sec^{-1} x) = \frac{1}{|x| \sqrt{x^2 - 1}} \]
+            </p>
+            <p>\[ \frac{d}{dx} (\cos^{-1} x) = -\frac{1}{\sqrt{1 - x^2}} \]</p>
+            <p>\[ \frac{d}{dx} (\cot^{-1} x) = -\frac{1}{1 + x^2} \]</p>
+            <p>
+                \[ \frac{d}{dx} (\csc^{-1} x) = -\frac{1}{|x| \sqrt{x^2 - 1}} \]
+            </p>
+        </section>
+
+        <section>
+            <h2>Linearization</h2>
+            <h3>Definition: Linearization</h3>
+            <p>
+                To approximate the function \( f \) itself rather than the
+                change \( \Delta f \), we use the linearization \( L(x) \)
+                centered at \( x = a \), defined by \[ L(x) = f'(a)(x - a) +
+                f(a) \] Notice that \( y = L(x) \) is the equation of the
+                tangent line at \( x = a \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Extreme Values on an Interval</h2>
+            <h3>Definition: Extreme Values</h3>
+            <p>
+                Let \( f \) be a function on an interval \( I \) and let \( a
+                \in I \). We say that \( f(a) \) is the
+            </p>
+            <ul>
+                <li>
+                    <strong>Absolute minimum</strong> of \( f \) on \( I \) if
+                    \( f(a) \leq f(x) \) for all \( x \in I \).
+                </li>
+                <li>
+                    <strong>Absolute maximum</strong> of \( f \) on \( I \) if
+                    \( f(a) \geq f(x) \) for all \( x \in I \).
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Existence of Extrema on a Closed Interval</h2>
+            <p>
+                A continuous function \( f \) on a closed (bounded) interval \(
+                I = [a, b] \) takes on both a minimum and a maximum value on \(
+                I \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Local Extrema</h2>
+            <h3>Definition: Local Extrema</h3>
+            <p>We say that \( f(c) \) is a</p>
+            <ul>
+                <li>
+                    <strong>Local minimum</strong> occurring at \( x = c \) if
+                    \( f(c) \) is the minimum value of \( f \) on some open
+                    interval (in the domain of \( f \)) containing \( c \).
+                </li>
+                <li>
+                    <strong>Local maximum</strong> occurring at \( x = c \) if
+                    \( f(c) \) is the maximum value of \( f \) on some open
+                    interval (in the domain of \( f \)) containing \( c \).
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Critical Points</h2>
+            <h3>Definition: Critical Points</h3>
+            <p>
+                A number \( c \) in the domain of \( f \) is called a
+                <strong>critical point</strong> if either \( f'(c) = 0 \) or \(
+                f'(c) \) does not exist.
+            </p>
+
+            <h3>Theorem: Critical Points</h3>
+            <p>
+                If \( f \) has a local maximum or minimum at \( x = c \), then
+                \( c \) is a critical point of \( f \).
+            </p>
+        </section>
     </body>
 </html>
