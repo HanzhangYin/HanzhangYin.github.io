@@ -1798,6 +1798,36 @@
         Let \(\varphi: U(R) \to \mathbb{Z}\times \mathbb{Z}_2\) be a map such that \(\varphi(ax + 1) = (a, 0)\) and \(\varphi(bx - 1) = (b, 1)\).
       </p>
     </section>
+
+    <br>
+
+    <section id = 'ku_2016_8_2'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            2. Recall that a splitting field for a polynomial \( f(x) \) over a field \( F \) is a smallest (in terms of degree) extension \( K \) of \( F \) such that \( f(x) \) factors completely in \( K[x] \). Let \( F = \mathbb{Z}_2 \).
+          </p>
+          <p>
+            (a) Prove that \( K = F[t]/(t^3 + t + 1) \) is a field of order 8.
+          </p>
+          <p>
+            (b) Prove that \( K \) is a splitting field for \( f(x) = x^7 - 1 \) over \( F \).
+            </p>
+        </div>
+        </div>
+      <p>
+        <b>Proof (a).</b> Firstly, we want to show that \(t^3 + t + 1\) is irreducible in \(F[t]\) by contradiction.
+        Suppose that \(t^3 + t + 1 = (t + a)(t^2 + bt + c)\) for some \(a, b, c\in F\).
+        Then we know that \(t^3 + t + 1\) has a root in \(F\), which is \(-a\).
+        However, \(1^3 + 1 + 1 = 1\) and \(0^3 + 0 + 1 = 1\). Hence, we can know that \(t^3 + t + 1\) has no root in \(F\), which is a contradiction.
+        Thus, we can know that \(t^3 + t + 1\) is irreducible in \(F[t]\). Hence, we have \(K = F[t]/(t^3 + t + 1)\) is a field.
+        Hence, the element in \(K\) is of the form \(a + bt + ct^2\) where \(a, b, c\in F\).
+        Each \(a, b, c\) has two choices, which implies that \(K\) has \(2^3 = 8\) elements. Therefore, we can know that \(K\) is a field of order 8. \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
     <section id = 'ku_2016_8_4'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
