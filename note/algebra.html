@@ -2394,7 +2394,48 @@
         \text{trace}(C_i^{-1}) = \sum_{j=1}^n \frac1{\lambda_j} = = \sum_{j=1}^n \frac{\overline{\lambda_j}}{\lambda_j\overline{\lambda_j}} = \sum_{j=1}^n \overline{\lambda_j} = \overline{\sum_{j=1}^n \lambda_j} = \overline{\text{trace}(C_i)}. \blacksquare
         \]
       </p>
+      <p>
+        <b>Solution (c).</b>Firstly, we want to show that \([v, v]\geq 0\) for any \(v\).
+        Given that
+        \[
+        [v, v] = \frac{1}{|G|}\sum_{i = 1}^r \langle C_i v, C_i v \rangle = \frac{1}{|G|}\sum_{i = 1}^r \|C_iv\|^2 \geq 0.
+        \]
+        Then, we want to show that \([v, v] = 0\) if and only if \(v = 0\).
+        Suppose that \([v, v] = 0\), then we have \(\|C_iv\|^2 = 0\) for all \(i\), which implies that \(C_i v = 0\) for all \(i\).
+      </p>
     </section>
+
+    <br>
+
+    <section id = 'ku_2020_8_2>'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+    <p>
+      <b>2.</b> Let \( T \) be a linear operator on a finite dimensional complex inner product space \( V \). Recall that \( T \) is a normal operator if \( TT^* = T^*T \), where \( T^* \) denotes the adjoint of \( T \). Prove that \( T \) is a normal operator if and only if \( \|T(v)\| = \|T^*(v)\| \), for all \( v \in V \). (Hint: use the fact that \( T^*T - TT^* \) is self-adjoint.) Give an example of a normal operator on a three-dimensional complex space that is not self-adjoint.
+    </p>
+        </div>
+      </div>
+          <p>
+            <b>Proof.</b> Suppose that \(T\) is a normal operator. Then, we have \(TT^* = T^*T\). Let \(v\in V\), then we have
+            \[
+            \|T(v)\|^2 = \langle T(v), T(v) \rangle = \langle T^*T(v), v \rangle = \langle TT^*(v), v \rangle = \langle T^*(v), T^*(v) \rangle = \|T^*(v)\|^2.
+            \]
+            Hence, we have \(\|T(v)\| = \|T^*(v)\|\) for all \(v\in V\).
+            For the other direction, let \(v\) be any vector in \(V\), then we have \(\|T(v)\| = \|T^*(v)\|\), which implies that \(\|T(v)\|^2 = \|T^*(v)\|^2\).
+            Then, we have
+            \[
+            \begin{align}
+            \|T(v)\|^2 - \|T^*(v)\|^2 &= 0\\
+            \langle T(v), T(v) \rangle - \langle T^*(v), T^*(v) \rangle &= 0\\
+            \langle T^*T(v), v \rangle + \langle -TT^*(v), v \rangle &= 0\\
+            \langle T^*T(v) - TT^*(v), v \rangle &= 0 \\
+            \langle (T^*T - TT^*)(v), v \rangle &= 0.
+            \end{align}
+            \]
+            Since \(v\) is any vector, it forces \((T^*T - TT^*)(v) = 0\). Again, because of \(v\) is any vector, we can have \(T^*T - TT^* = 0\), which implies that \(T\) is a normal operator. \(\blacksquare\)
+          </p>
+    </section>
+
 
     <br>
 
