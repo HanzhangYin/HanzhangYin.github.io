@@ -1868,7 +1868,35 @@
       </p>
       <p>
         <b>Proof (b).</b> We know that if \(G\) is a cyclic group, any subgroup of a cyclic group is cyclic. Since \(\text{Inn}(G)\) is a subgroup of \(\text{Aut}(G)\) and \(\text{Aut}(G)\) is cyclic, we can know that \(\text{Inn}(G)\) is cyclic.
-        And we already showed that \(\text{Inn}(G)\}
+        And we already showed that \(\text{Inn}(G)\} \cong G/Z(G)\). Hence, we can know that \(G/Z(G)\) is cyclic. Since \(G/Z(G)\) is cyclic, we can know that \(G/Z(G) = \langle aZ(G)\rangle\) for some \(a\in G\).
+        Hence, for any \(g\in G\), we can know that \(gZ(G) = (aZ(G))^n = a^nZ(G)\) for some \(n\in \mathbb{Z}\).
+        Thus, we have \(Z(G) = (a^{-1})^ngZ(G) = a^{-n}gZ(G)\), which implies that there exists \(z\in Z(G)\) such that \(a^{-n}g = z\).
+        Hence, we have \(g = za^n = a^nz\) for some \(z\in Z(G)\) and \(n\in \mathbb{Z}\). Now, suppose that \(g = a^nz_1\) and \(h = a^mz_2\) for some \(n, m\in \mathbb{Z}\) and \(z_1, z_2\in Z(G)\).
+        Then we have
+        \[
+        gh = a^nz_1a^mz_2 = (a^nz_1a^m)z_2 = z_2a^nz_1a^m = z_2a^na^mz_1 = z_2a^{n+m}z_1 = z_2a^ma^nz_1 = a^mz_2a^nz_1 = hg.
+        \]
+        Therefore, we can know that \(G\) is abelian. \(\blacksquare\)
+      </p>
+      <p>
+        <b>Solution (c).</b> Suppose that \(G\) is a finite group and there exists a prime \(p\) such that \(\text{Aut}(G) = \mathbb{Z}_p\).
+        We know that \(\mathbb{Z}_p\) is a cyclic group. Based on part (b), we can know that \(G\) is an abelian group. Assume that \(G\neq \mathbb{Z}_2\).
+        In that case, we can know there exists \(g\in G\) such that \(g^{-1}\neq g\).
+        Now define \(\varphi: G\to G\) such that \(\varphi(g) = g^{-1}\). Firstly, we can see that \(\varphi\) is well-defined since if \(g = h\), we will have \(g^{-1} = h^{-1}\).
+        Now, we want to show that \(\varphi\) is a group homomorphism. Suppose that \(g, h\in G\), then we have
+        \[
+        \varphi(h)\cdot \varphi(g) = \varphi(g)\circ\varphi(h) = g^{-1}\circ h^{-1} = (hg)^{-1} = (gh)^{-1} = \varphi(gh).
+        \]
+        Hence, we can know that \(\varphi\) is a group homomorphism. Suppose that \(\varphi(g) = \varphi(h)\), then we have \(g^{-1} = h^{-1}\), which implies that \(g = h\).
+        It shows that \(\varphi\) is injective. Given that \(G\) is a finite group, we can know that \(\varphi\) is surjective by the \(\textbf{Pigeonhole Principle}\).
+        It means that \(\varphi) is an automorphism of \(G\). For any \(g\in G\), we have \(\varphi^{2}(g) = g\), which implies that \(\varphi\) has order of \(2\).
+        Hence, we can know that \(2\mid |\mathbb{Z}_p| = p\). If \(p\neq 2\), we can know that it is impossible that \(2\mid p\) since \(p\) is a prime number.
+        Hence, \(p\) has to be \(2\) when \(G\neq \mathbb{Z}_2\). Let \(G = \mathbb{Z}_3\). For any \(\varphi\in \text{Aut}(G)\), we have \(\varphi(0) = 0\), \(\varphi(1) = 1\) and \(\varphi(2) = 2\), which implies that \(\varphi\) is the identity automorphism.
+        Besides that \(\varpsi\in \text{Aut}(G)\) such that \(\varpsi(0) = 0\), \(\varpsi(1) = 2\) and \(\varpsi(2) = 1\), which implies that \(\varpsi\) has order of \(2\).
+        And those are the only automorphisms of \(\mathbb{Z}_3\), which means \(\text{Aut}(\mathbb{Z}_3) = \mathbb{Z}_2\).
+        When \(G = \mathbb{Z}_2\), let \(\varphi\in \text{Aut}(G)\) such that \(\varphi(0) = 0\) and \(\varphi(1) = 1\).
+        Then we have \(\varphi\) is the identity automorphism and it is the only automorphism of \(\mathbb{Z}_2\). Same for \(G = \mathbb{Z}_1\).
+        Thus, we can know that the only possible \(p\) is \(2\).
       </p>
     </section>
 
