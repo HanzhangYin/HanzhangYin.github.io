@@ -1666,39 +1666,61 @@
         </div>
         </div>
       <p>
-        <b>Solution.</b> Let \(\sqrt{2} + \sqrt[3]{2} = 2^{1/2} + 2^{1/3} =  \alpha\). Then we have
+        <b>Solution.</b> Let \( \alpha = \sqrt{2} + \sqrt[3]{2} \). Then we have
         \[
         \begin{align}
-        \alpha &= 0\cdot 1 + 0\cdot 2^{1/6} + 1\cdot 2^{1/3} + 1\cdot 2^{1/2} + 0\cdot 2^{2/3} + 0\cdot 2^{5/6}. \\
-        2^{1/6}\alpha &= 0\cdot 1 + 0\cdot 2^{1/6} + 0\cdot 2^{1/3} + 1\cdot 2^{1/2} + 1\cdot 2^{2/3} + 0\cdot 2^{5/6}. \\
-        2^{1/3}\alpha &= 0\cdot 1 + 0\cdot 2^{1/6} + 0\cdot 2^{1/3} + 0\cdot 2^{1/2} + 1\cdot 2^{2/3} + 1\cdot 2^{5/6}. \\
-        2^{1/2}\alpha &= 2\cdot 1 + 0\cdot 2^{1/6} + 0\cdot 2^{1/3} + 0\cdot 2^{1/2} + 0\cdot 2^{2/3} + 1\cdot 2^{5/6}. \\
-        2^{2/3}\alpha &= 2\cdot 1 + 1\cdot 2^{1/6} + 0\cdot 2^{1/3} + 0\cdot 2^{1/2} + 0\cdot 2^{2/3} + 0\cdot 2^{5/6}. \\
-        2^{5/6}\alpha &= 0\cdot 1 + 2\cdot 2^{1/6} + 2\cdot 2^{1/3} + 0\cdot 2^{1/2} + 0\cdot 2^{2/3} + 0\cdot 2^{5/6}.
+        \alpha - \sqrt{2} &= \sqrt[3]{2} \\
+        (\alpha - \sqrt{2})^3 &= 2 \\
+        \alpha^3 - 3\alpha^2\sqrt{2} + 6\alpha - 2\sqrt{2} &= 2 \\
+        -3\alpha^2\sqrt{2} - 2\sqrt{2} &= 2 - \alpha^3 - 6\alpha \\
+        \sqrt{2}(-3\alpha^2 - 2) &= 2 - \alpha^3 - 6\alpha \\
+        \sqrt{2} &= \frac{2 - \alpha^3 - 6\alpha}{-3\alpha^2 - 2} \\
+        &= \frac{\alpha^3 + 6\alpha - 2}{3\alpha^2 + 2}.
         \end{align}
         \]
-        Then we can get the following equations:
+        Hence, we can know that \( \sqrt{2} \) is in the field \( \mathbb{Q}(\alpha) \).
+        And we have \(\mathbb{Q}(\sqrt{2}) \subset \mathbb{Q}(\alpha)\).
+        Since \(\mathbb{Q}(\sqrt{2})\subset \mathbb{Q}(\sqrt{2}, \sqrt{3})\).
+        Given that \(\sqrt{2} + \sqrt[3]{2}\) is in the field \(\mathbb{Q}(\sqrt{2}, \sqrt[3]{2})\), we can know that \(\mathbb{Q}(\sqrt{2} + \sqrt[3]{2}) \subset \mathbb{Q}(\sqrt{2}, \sqrt[3]{2})\).
+        Since \(\sqrt{2}\in \mathbb{Q}(\sqrt{2} + \sqrt[3]{2})\), we can know that \(\sqrt[3]{2} = (\sqrt{2} + \sqrt[3]{2}) - \sqrt{2}\) is in the field \(\mathbb{Q}(\sqrt{2} + \sqrt[3]{2})\).
+        Thus, we have \(\mathbb{Q}(\sqrt{2}, \sqrt[3]{2}) \subset \mathbb{Q}(\sqrt{2} + \sqrt[3]{2})\).
+        Therefore, we can know that \(\mathbb{Q}(\sqrt{2} + \sqrt[3]{2}) = \mathbb{Q}(\sqrt{2}, \sqrt[3]{2})\).
+        We know \([\mathbb{Q}(\sqrt{2}): \mathbb{Q}] = 2\) since \(x^2 - 2\) is an irreducible polynomial over \(\mathbb{Q}\) and \(\sqrt{2}\) is a root of \(x^2 - 2\) (i.e \(x^2 - 2\) is the minimal polynomial of \(\sqrt{2}\) over \(\mathbb{Q}\)).
+        And \(\sqrt[3]{2}\notin \mathbb{Q}(\sqrt{2})\) since there is no \(a, b\in \mathbb{Q}\) such that \(a + b\sqrt{2} = \sqrt[3]{2}\).
+        Let \(f(x)= x^3 - 2\) and we want to show that \(f(x)\) is irreducible over \(\mathbb{Q}(\sqrt{2})\) by contradiction.
+        Suppose that \(f(x)\) is reducible over \(\mathbb{Q}(\sqrt{2})\), then we can have \(f(x) = (x + a)(x^2 + bx + c)\) for some \(a, b, c\in \mathbb{Q}(\sqrt{2})\).
+        Hence, \(f(x)\) has a root in \( \mathbb{Q}(\sqrt{2}) \). We know that \(\sqrt[3]{2}\) is a root of \(f(x)\) but \(\sqrt[3]{2}\notin \mathbb{Q}(\sqrt{2})\).
+        And \(f(x)\) has two other roots in \(\mathbb{C}\), which is a contradiction. Hence, we have \(f(x)\) is irreducible over \(\mathbb{Q}(\sqrt{2})\).
+        Thus, we can know that
+        \[
+        \mathbb{Q}(\sqrt{2})[x]/(x^3 - 2) \cong \mathbb{Q}(\sqrt{2})[\sqrt[3]{2}].
+        \]
+        Since \(\sqrt[3]{2}\) is algebraic over \(\mathbb{Q}(\sqrt{2})\), we have \( \mathbb{Q}(\sqrt{2})[\sqrt[3]{2}] = \mathbb{Q}(\sqrt{2})(\sqrt[3]{2}) = \mathbb{Q}(\sqrt{2}, \sqrt[3]{2}) = \mathbb{Q}(\sqrt{2} + \sqrt[3]{2})\).
+        Given that \(x^3 - 2\) is the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Q}(\sqrt{2})\), we can conclude that \([\mathbb{Q}(\sqrt{2}, \sqrt[3]{2}): \mathbb{Q}(\sqrt{2})] = 3\).
+        Then, we have
         \[
         \begin{align}
-        \alpha\cdot 1 + 0\cdot 2^{1/6} - 1\cdot 2^{1/3} - 1\cdot 2^{1/2} + 0\cdot 2^{2/3} + 0\cdot 2^{5/6} = 0. \\
-        0\cdot 1 + \alpha\cdot 2^{1/6} + 0\cdot 2^{1/3} - 1\cdot 2^{1/2} - 1\cdot 2^{2/3} + 0\cdot 2^{5/6} = 0. \\
-        0\cdot 1 + 0\cdot 2^{1/6} + \alpha\cdot 2^{1/3} + 0\cdot 2^{1/2} - 1\cdot 2^{2/3} -1\cdot 2^{5/6} = 0. \\
-        -2\cdot 1 + 0\cdot 2^{1/6} + 0\cdot 2^{1/3} + \alpha\cdot 2^{1/2} + 0\cdot 2^{2/3} - 1\cdot 2^{5/6} = 0. \\
-        -2\cdot 1 - 2\cdot 2^{1/6} + 0\cdot 2^{1/3} + 0\cdot 2^{1/2} + \alpha\cdot 2^{2/3} + 0\cdot 2^{5/6} = 0. \\
-        0\cdot 1 - 2\cdot 2^{1/6} - 2\cdot 2^{1/3} + 0\cdot 2^{1/2} + 0\cdot 2^{2/3} + \alpha\cdot 2^{5/6} = 0.
+        [\mathbb{Q}(\sqrt{2} + \sqrt[3]{2}): \mathbb{Q}] &= [\mathbb{Q}(\sqrt{2}, \sqrt[3]{2}): \mathbb{Q}] \\
+        &=[\mathbb{Q}(\sqrt{2}, \sqrt[3]{2}): \mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}): \mathbb{Q}] \\
+        &= 3\cdot 2 = 6.
         \end{align}
         \]
-        Therefore, we can have the minimal polynomial of \( \sqrt{2} + \sqrt[3]{2} \) over \( \mathbb{Q}\) is the determinant of the following matrix:
+        Now, we know that the minimal polynomial of \(\sqrt{2} + \sqrt[3]{2}\) over \(\mathbb{Q}\) is degree \(6\).
+        We already had
         \[
-        \begin{pmatrix}
-        \alpha & 0 & -1 & -1 & 0 & 0 \\
-        0 & \alpha & 0 & -1 & -1 & 0 \\
-        0 & 0 & \alpha & 0 & -1 & -1 \\
-        -2 & 0 & 0 & \alpha & 0 & -1 \\
-        -2 & -2 & 0 & 0 & \alpha & 0 \\
-        0 & -2 & -2 & 0 & 0 & \alpha
-        \end{pmatrix}.
+        \sqrt{2} = \frac{\alpha^3 + 6\alpha - 2}{3\alpha^2 + 2}.
         \]
+        Then, we square both sides and simplify it,
+        \[
+        \begin{align}
+        2 &= \frac{(\alpha^3 + 6\alpha - 2)^2}{(3\alpha^2 + 2)^2} \\
+        2(3\alpha^2 + 2)^2 &= (\alpha^3 + 6\alpha - 2)^2 \\
+        2(9\alpha^4 + 12\alpha^2 + 4) &= \alpha^6 + 12\alpha^4 - 4\alpha^3 + 36\alpha^2 - 24\alpha + 4 \\
+        18\alpha^4 + 24\alpha^2 + 8 &= \alpha^6 + 12\alpha^4 - 4\alpha^3 + 36\alpha^2 - 24\alpha + 4 \\
+        \alpha^6 - 6\alpha^4 - 4\alpha^3 + 12\alpha^2 - 24\alpha - 4 &= 0.
+        \end{align}
+        \]
+        Since \(x^6 - 6x^4 - 4x^3 + 12x^2 - 24x - 4\) had degree of \(6\) and \(\sqrt{2} + \sqrt[3]{2}\) is a root of \(x^6 - 6x^4 - 4x^3 + 12x^2 - 24x - 4\), we can know that \(x^6 - 6x^4 - 4x^3 + 12x^2 - 24x - 4\) is the minimal polynomial of \(\sqrt{2} + \sqrt[3]{2}\) over \(\mathbb{Q}\).
       </p>
     </section>
 
