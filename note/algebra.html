@@ -2240,6 +2240,69 @@
     </section>
 
     <h2>KU 2019 (January)</h2>
+
+    <section id = 'ku_2019_1_6'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
+                <p>
+                    <b>2.</b> Let \( R \) denote the ring \( \mathbb{C}[t, t^{-1}] \) of Laurent polynomials over \( \mathbb{C} \).
+                </p>
+                <p>
+                    (i) Give a rigorous proof that \( R \) is isomorphic to \( \mathbb{C}[x, y]/(xy - 1) \).
+                </p>
+                <p>
+                    (ii) Show that every ideal in \( R \) is a principal ideal.
+                </p>
+                <p>
+                    (iii) Give an example (with proof) of a non-zero prime ideal in \( R \).
+                </p>
+            </div>
+        </div>
+        <p>
+            <b>Proof (i).</b> Firstly, we want to define a map \(\varphi: \mathbb{C}[x, y]\to \mathbb{C}[t, t^{-1}]\) such that
+            \[
+            \varphi(f(x, y)) = f(t, t^{-1}).
+            \]
+            Hence, we want to show tht \(\varphi\) is a ring homomorphism. Firstly, we can know that \(\varphi\) is well-define since if \(g(x, y) = h(x, y)\). then we will have \(g(t, t^{-1}) = h(t, t^{-1})\).
+            Then, we can know that \(\varphi\) is a ring homomorphism since
+            \[
+            \begin{align}
+                \varphi(g(x, y) + h(x, y)) &= g(t, t^{-1}) + h(t, t^{-1}) = \varphi(g(x, y)) + \varphi(h(x, y)), \\
+                \varphi(g(x, y)h(x, y)) &= g(t, t^{-1})h(t, t^{-1}) = \varphi(g(x, y))\varphi(h(x, y)).
+            \end{align}
+            \]
+            For any \(f(t, t^{-1})\in \mathbb{C}[t, t^{-1}]\), we can know that
+            \[
+                f(t, t^{-1}) = \sum_{i = -n}^{m} a_i t^i,\text{ where }n, m\in \mathbb{N}.
+            \]
+            In general, lets assume that \(n\neq 0\). Then, we can get that
+            \[
+            \begin{align}
+                f(t, t^{-1}) &= \sum_{i = -n}^{m} a_i t^i = a_{-n}t^{-n} + \dots + a_{-1}t^{-1} + a_0 + a_1t + \dots + a_m t^m, \\
+                &= a_{-n}(t^{-1})^n + a_{-n+1}(t^{-1})^{n-1} + \dots + a_{-1}t^{-1} + a_0 + a_1t + \dots + a_m t^m, \\
+            \end{align}
+            \]
+            Then, we can see that when
+            \[
+            f(x, y)= a_{-n}(y)^n + a_{-n+1}(y)^{n-1} + \dots + a_{-1}y + a_0 + a_1x + \dots + a_m x^m, \\
+            \]
+            we have
+            \[
+            \varphi(f(x, y)) = f(t, t^{-1}).
+            \]
+            It shows that \(\varphi\) is surjective.
+            Now, we want to show that \(\ker(\varphi) = (xy - 1)\).
+            Suppose that \(f(x,y)\in (xy - 1)\), then \(f(x, y) = g(x, y)(xy - 1)\) for some \(g(x, y)\in \mathbb{C}[x, y]\). Then, we can know that
+            \[
+            \varphi(f(x, y)) = f(t, t^{-1}) = g(t, t^{-1})(t\cdot t^{-1} - 1) = g(t, t^{-1})(1 - 1) = 0.
+            \]
+            Thus, we showed that \((xy - 1)\subset \ker(\varphi)\).
+        </p>
+
+    </section>
+
+    <br>
+
     <section id = 'ku_2019_1_6'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
@@ -2269,6 +2332,9 @@
         Thus, we can see that \(\ker(T-I)\) is a \(T\)-invariant complement of \(\ker(T)\).
       </p>
     </section>
+
+    <br>
+
 
     <h2>KU 2019 (August)</h2>
     <section id = 'ku_2019_8_2'>
