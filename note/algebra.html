@@ -2425,6 +2425,25 @@
         <b>Proof (i).</b> Firstly, we can know that \(x\in [x]\) since \(exe^{-1} = exe = x\). Thus, if \([x]\) has exactly one element, then we can know that \(gxg^{-1} = x\) for all \(g\in G\). Hence, we have \(x = gxg^{-1}\) for all \(g\in G\), which implies that \(x\in Z(G)\).
         If \(x\in Z(G)\), then we have that \(gxg^{-1} = x\) for all \(g\in G\), which implies that \(\{x\} = [x]\). Thus, we can know that \([x]\) has exactly one element. \(\blacksquare\)
       </p>
+      <p>
+          <b>Proof (ii).</b> Since he number of elements in \([x]\) is the number of elements in the orbits.
+          We define the map \(\varphi: [x]\to G/C_G(x))\) by \(\varphi(gxg^{-1}) = gC_G(x)\). Firstly, we can know that the map is surjective since for any \(gC_G(x)\), we have \(gxg^{-1}\in [x]\) such that
+          \[
+            \varphi(gxg^{-1}) = gC_G(x).
+          \]
+          Now, suppose that \(gC_G(x) = hC_G(x)\). Then, we have \(h^{-1}g\in C_G(x)\), which implies that \(h^{-1}gxg^{-1}h = x\).
+          Hence, we have
+          \[
+          \begin{align}
+          h^{-1}gxg^{-1}h &= x\\
+          h(h^{-1}gxg^{-1}h)h^{-1} &= hxh^{-1}\\
+          gxg^{-1} &= hxh^{-1}.
+          \]
+         Thus, we can know that the map is injective. Hence, we can know that the number of elements in \([x]\) equals \(|G/C_G(x)| = |G:C_G(x)|\). \(\blacksquare\)
+      </p>
+      <p>
+          <b></b>
+      </p>
     </section>
 
     <h2 id = 'ku_2020_1'>KU 2020 (January)</h2>
