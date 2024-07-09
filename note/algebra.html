@@ -2438,11 +2438,28 @@
           h^{-1}gxg^{-1}h &= x\\
           h(h^{-1}gxg^{-1}h)h^{-1} &= hxh^{-1}\\
           gxg^{-1} &= hxh^{-1}.
+        \end{align}
           \]
          Thus, we can know that the map is injective. Hence, we can know that the number of elements in \([x]\) equals \(|G/C_G(x)| = |G:C_G(x)|\). \(\blacksquare\)
       </p>
       <p>
-          <b></b>
+          <b>Proof (iii).</b>We define a map \(\varphi: G\to \text{Aut}(N)\) by \(\varphi(g) = gng^{-1}\). The reason that \(\varphi(g)\) is a group automorphism of \(N\) is \(N\) is normal in \(G\).
+        We can see that \(\varphi\) is well-defined since for any \(g = h\in G\), we have \(gng^{-1} = hnh^{-1}\).
+        Then, we can know that \(\varphi\) is a group homomorphism since for any \(g, h\in G\), we have
+        \[
+        \varphi(g)\varphi(h) = \varphi(g)\circ \varphi(h) = ghnh^{-1}g^{-1} = (gh)n(gh)^{-1} = \varphi(gh).
+        \]
+        Hence, we can see that the image of \(\varphi\), \(\varphi(G)\), is a subgroup of \(\text{Aut}(N)\).
+        Given that \(N\) has order of \(3\), we have \(N\cong \mathbb{Z}/3\mathbb{Z}\), which implies that \(N\) is cyclic.
+        Hence, any non-trivial element is a generator of \(N\). Thus, we have \(N = \{e, x, x^2\}\), where \(x, x^2\) are the generators of \(N\).
+        Once we know where \(x\) is mapped to, we can know where \(x^2\) is mapped to since \(\varphi\) is a group homomorphism.
+        There are only two options, either \(x\to x\) or \(x\to x^2\). Hence, we can see that \(|\text{Aut}(N)| = 2\), which implies that \(\mathbb{Z}/2\mathbb{Z}\cong \text{Aut}(N)\).
+        Since \(\varphi(G)\) is a subgroup of \(\text{Aut}(N)\), we have \(|\varphi(G)| = 1\) or \(2\).
+        According to the \(\textbf{First Isomorphism Theorem}\), we have \(G/\ker(\varphi) \cong \varphi(G)\)\).
+        Since \(|\varphi(G)| = |G/\ker(\varphi)| = [G:\ker(\varphi)]\), we have \([G:\ker(\varphi)] = 1\) or \(2\).
+        Given that \([G:\ker(\varphi)]\mid |G|\) and \(|G|\) is odd, we have \([G:\ker(\varphi)] = 1\).
+        Thus, we can see that \(\varphi(G) = \{e\}\), which implies that \(\ker(\varphi) = G\). And \(\ker(\varphi) = \{g\in G\mid \varphi(g) = e\}\), which implies that \(gng^{-1} = n\) for all \(n\in N\).
+        Therefore, we can get that \(N\leq Z(G)\). \(\blacksquare\)
       </p>
     </section>
 
