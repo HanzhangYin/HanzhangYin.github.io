@@ -1959,6 +1959,48 @@
     <br>
 
     <h2 id = 'ku_2017_1'>KU 2017 (January)</h2>
+    <section id = 'ku_2017_1_5'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+        <p>
+          <b>1.</b> Let \( G \) be a finite group with \( |G| = p^n \), \( p \) prime.
+        </p>
+          <p>
+          (i) Prove that \( Z(G) \), the center of \( G \), is non-trivial.
+          </p>
+          <p>
+            (ii) Prove that if \( N \subseteq G \) is a normal subgroup of order \( p \), then \( N \subseteq Z(G) \). Hint: Let \( G \) act on \( N \).
+          </p>
+          <p>
+            (iii) Give an example of a non-abelian group of order \( p^n \) whose center contains more than one normal subgroup of order \( p \).
+          </p>
+      </div>
+      </div>
+      <p>
+        <b>Proof (i).</b>
+      </p>
+      <p>
+        <b>Proof (ii).</b> Firstly, we define a map \(\varphi: G\to \text{Aut}(N)\) such that \(\varphi(g) = f_g = gng^{-1}\) for any \(g\in G\) and \(n\in N\).
+        The reason that \(f_g\) is in \(\text{Aut}(G)\) is \(N\) is a normal subgroup such that \(gNg^{-1} = N\).
+        We can see that \(\varphi\) is well-defined since if \(g = h\), we will have \(f_g = f_h\).
+        Suppose that \(g, h\in G\), we will have
+        \[
+        \varphi(g)\varphi(h) = \varphi(g)\circ\varphi(h) = f_g\circ f_h = f_g(hnh^{-1}) = g h n h^{-1}g^{-1} = (gh)n(gh)^{-1} = f_{gh}(n) = \varphi(gh),
+        \]
+        which implies that \(\varphi\) is a group homomorphism. Hence, we can see that \(\varphi(G)\) is a subgroup of \(\text{Aut}(N)\).
+        Given that \(N\) is a subgroup of order \(p\), we have \(N\cong \mathbb{Z}_p\). Hence, we have \(N\) is cyclic.
+        For any \(f\in \text{Aut}(N)\), any nontrivial \(g\in N\) is a generator of \(N\), and once determine \(f(g)\), we can determine \(f\) completely.
+        Hence, there will be \(p - 1\) automorphisms of \(N\) since each nontrivial element has \(p-1\) choices to be mapped. Thus, we can know that \(|\text{Aut}(N)| = p - 1\).
+        Since \(\varphi(G)\) is a subgroup of \(\text{Aut}(G)\), we have \(|\varphi(G)|\) divides \(|\text{Aut}(N)|\), which implies that \(|\varphi(G)|\) divides \(p - 1\).
+        By the \(\textbf{First Isomorphism Theorem}\), we have \(G/\ker(\varphi) \cong \varphi(G)\).
+        Since \(|G/\ker(\varphi)| = [G:\ker(\varphi)]\), we have \(|G/\ker(\varphi)|\) divides \(p^n\). Hence, we have \(|G/\ker(\varphi)| = p^k\) for some \(0\leq k\leq n\).
+        Since \(|\varphi(G)|\) divides \(p - 1\) and \(|G/\ker(\varphi)| = |\varphi(G)| = p^k\), we have \(p^k\mid p-1\). Thus, \(p^k\leq p-1\), which implies that \(k = 0\).
+        Thus, we can know that \(|\varphi(G)| = 1\), which implies that \(\varphi(G) \subset \text{Aut}(N)\) is trivial. Hence, we can know that \(gng^{-1} = n\) for any \(g\in G\) and \(n\in N\), which implies that \(N\subset Z(G)\). \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
     <section>
       <div class = 'question-box-container'>
         <div class = 'question-box'>
