@@ -2251,6 +2251,38 @@
 
     <br>
 
+
+    <h2 id = 'january_2018'>KU 2018 (January)</h2>
+    <section id = 'ku_2018_1_1'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
+              <p>
+                <b>Question 1.</b> Let \( R = \mathbb{C}[x, y, z] \) be the ring of polynomials in 3 variables over the complex numbers.
+              </p>
+              <p>
+                (a) Show that \( I = (x, y) \) is a prime ideal in \( R \).
+              </p>
+              <p>
+                (b) Let \( J = (x^2, y^2) \). Prove that for any collection of polynomials \( \{f_1, f_2, \ldots, f_n\} \) such that the product \( f_1 f_2 \cdots f_n \) is in \( J \), we can find a subset of at most 3 polynomials whose product is already in \( J \).
+              </p>
+              <p>
+                (c) Let \( K = (x^2 y^2, y^2 z^2, z^2 x^2) \). Prove that for any collection of polynomials \( \{f_1, f_2, \ldots, f_n\} \) such that the product \( f_1 f_2 \cdots f_n \) is in \( K \), we can find a subset of at most 9 polynomials whose product is already in \( K \).
+              </p>
+            </div>
+        </div>
+      <p>
+        <b>Proof (a).</b> We will prove that \(I\) is a prime ideal in \(R\) by contrapositive. Suppose that \(f, g\in R\) and neither \(f\) nor \(g\) is in \(I\).
+        Then, we can know that \(f\) and \(g\) do not contain a term such as \(az^n\) or \(b\), where \(a, b\in \mathbb{C}\) since there is no \(h\in R\) such that \(xh = az^n\) or \(yh = az^n\) or \(xh = b\) or \(yh = b\).
+        Thus, we can write \(f = f' + a_nz^n + a_{n-1}z^{n-1} + \dots + a_1z_1 + a_0\) and \(g = g' + b_mz^m + b_{m-1}z^{m-1} + \dots + b_1z_1 + b_0\), where \(f', g'\in R\).
+        Then, we have
+        \[
+        fg = f'g' +(a_nz^n + a_{n-1}z^{n-1} + \dots + a_1z_1 + a_0)g' + (b_mz^m + b_{m-1}z^{m-1} + \dots + b_1z_1 + b_0)f' a_nb_mz^{n+m}+ \dots + a_1b_1z^2 + a_0b_0,
+        \]
+        where contains some term \(az^{t}\) or \(b\).
+        Thus, we can know that \(fg\notin I\). Therefore, we showed that \(I\) is a prime ideal. \(\blacksquare\)
+      </p>
+    </section>
+
     <h2 id = 'august_2018'>KU 2018 (August)</h2>
     <section id = 'ku_2018_8_4'>
         <div class = 'question-box-container'>
