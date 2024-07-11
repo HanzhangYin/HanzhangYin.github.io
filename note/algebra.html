@@ -2004,7 +2004,67 @@
 
     <br>
 
-    <section>
+    <section id = 'ku_2017_1_4'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>4.</b> Let \( f(x) := x^3 - 9x + 3 \in \mathbb{Q}[x] \) and \( \alpha \) a root of \( f(x) \).
+          </p>
+          <p>
+            (i) Prove that \( f(x) \) is irreducible over \( \mathbb{Q} \).
+          </p>
+          <p>
+            (ii) In the field \( \mathbb{Q}(\alpha) \), write \( (3\alpha^2 + 2\alpha + 1)^{-1} \) in terms of the basis \( 1, \alpha, \alpha^2 \).
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Proof (i).</b>
+      </p>
+      <p>
+        <b>Solution (ii).</b>
+        Since \(\alpha^3 - 9\alpha + 3 = 0\), we have \(\alpha^3 = 9\alpha - 3\) and \(\alpha^4 = 9\alpha^2 - 3\alpha\).
+        Suppose that \((3\alpha^2 + 2\alpha + 1)^{-1} = x\alpha^2 + y\alpha + z\) for some \(x, y, z\in \mathbb{Q}\).
+        Then we have
+        \[
+        \begin{align}
+        (3\alpha^2 + 2\alpha + 1)(x\alpha^2 + y\alpha + z) &= 1 \\
+        3x\alpha^4 + (3y + 2x)\alpha^3 + (3z + 2y + z)\alpha^2 + (2z + y)\alpha + z &= 1\\
+        3x(9\alpha^2 - 3\alpha) + (3y + 2x)(9\alpha - 3) + (3z + 2y + z)\alpha^2 + (2z + y)\alpha + z &= 1\\
+        (28x + 3z + 2y)\alpha^2 + (28y + 9x + 2z)\alpha -6x - 9y + z &= 1 \\
+        (28x + 3z + 2y)\alpha^2 + (28y + 9x + 2z)\alpha -6x - 9y + z - 1&= 0.
+        \end{align}
+        \]
+      Since \(\alpha^2, \alpha, 1\) form a basis of \( \mathbb{Q}(\alpha) \), we have
+        \[
+        \begin{align}
+        28x + 3z + 2y &= 0 \tag*{(1)}\\
+        28y + 9x + 2z &= 0 \tag*{(2)}\\
+        -6x - 9y + z - 1 &= 0 \tag*{(3)}
+        \end{align}
+        \]
+        From \((3)\), we have \(z = 6x + 9y + 1\). Plug it into \((1)\) and \((2)\), we have
+        \[
+        \begin{align}
+        46x + 27y + 3 &= 0, \\
+        21x + 46y + 2 &= 0.
+        \end{align}
+        \]
+        Hence, we have
+        \[
+        \begin{align}
+        x &= -\frac{84}{1549}, \\
+        y &= -\frac{29}{1549}, \\
+        z &= \frac{784}{1549}.
+        \end{align}
+        \]
+        Therefore, we have \((3\alpha^2 + 2\alpha + 1)^{-1} = -\frac{84}{1549}\alpha^2 - \frac{29}{1549}\alpha + \frac{784}{1549}\).
+      </p>
+
+    </section>
+    <br>
+
+    <section id = 'ku_2017_1_5'>
       <div class = 'question-box-container'>
         <div class = 'question-box'>
       <p>
@@ -2252,6 +2312,73 @@
     <br>
 
     <h2 id = 'august_2018'>KU 2018 (August)</h2>
+    <section id = 'ku_2018_8_3'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>3.</b> Let \( F = \mathbb{Z}/2\mathbb{Z} \) denote the field with two elements and set \( f(x) = x^5 + x^2 + 1 \in F[x] \).
+          </p>
+          <p>
+            (a) Show that \( f(x) \) is irreducible over \( F \).
+          </p>
+          <p>
+            (b) Let \( \alpha \) be a root of \( f(x) \) in some larger field. Express the element \( \alpha \cdot (\alpha^4 + \alpha + 1)^{-1} \) in \( F(\alpha) \) as a polynomial in \( \alpha \) over \( F \) of minimal degree.
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Proof (a).</b> We will show that \(f(x)\) is irreducible over \(F\) by contradiction. Suppose that \(f(x)\) is reducible over \(F\).
+        Then we have two possibilities:
+        \[
+        \begin{align}
+        f(x) &= (x + a)(x^4 + bx^3 + cx^2 + dx + e),\\
+        f(x) &= (x^2 + ax + b)(x^3 + cx^2 + dx + e).\\
+        \end{align}
+        \]
+        For the first case, we can know that \(f(x)\) has a root in \(\mathbb{Z}/2\mathbb{Z}\).
+        However, \(f(0) = 0^5 + 0^2 + 1 = 1\) and \(f(1) = 1^5 + 1^2 + 1 = 1\), which implies that \(f(x)\) has no root in \(\mathbb{Z}/2\mathbb{Z}\).
+        Hence, it leaves us with the second case.
+        Then we have
+        \[
+        \begin{align}
+        f(x) &= (x^2 + ax + b)(x^3 + cx^2 + dx + e)\\
+        &= x^5 + (a + c)x^4 + (b + ac + d)x^3 + (ad + bc + e)x^2 + (ae + bd)x + be.
+        &= x^5 + x^2 + 1.
+        \end{align}
+        \]
+        Then we have
+        \[
+        \begin{align}
+        be &= 1, \\
+        ae + bd &= 0, \\
+        ad + bc + e &= 1, \\
+        b + ac + d &= 0, \\
+        a + c &= 0.
+        \end{align}
+        \]
+        Since \(be = 1\), we can have \(b = e = 1\). Then we rewrite the above equations as
+        \[
+        \begin{align}
+        a + c &= 0, \\
+        1 + ac +d &= 0, \\
+        ad + c + 1 &= 1, \\
+        a + d &= 0.
+        \end{align}
+        \]
+        Since \(a + c = 0\) and \(a, c\in \mathbb{Z}/2\mathbb{Z}\), we can know that \(a = e\). By the similar reason, since \(a + d = 0\), we have \(a = d\).
+        Now, we can know that \(a = c = d\), and we replace \(c\) and \(d\) with \(a\) and get
+        \[
+        \begin{align}
+        1 + a^2 + a &= 0, \\
+        a^2 + a + 1 &= 1. \\
+        \end{align}
+        \]
+        Now, we see that \(a^2 + a + 1 \neq a^2 + a + 1\), which is a contradiction. Therefore, we can conclude that \(f(x)\) is irreducible over \(F\). \(\blacksquare\)
+      </p>
+    </section>
+
+    <br>
+
     <section id = 'ku_2018_8_4'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
@@ -3000,7 +3127,6 @@
         \begin{align}
         f(x) &= f'(x)\left(\frac13x\right) + \left(\frac23 x + 2021\right) \\
         f'(x) &= \left(\frac23 x + 2021\right)\left(\frac92x - \frac{54567}{4}\right) + \frac{110279911}{4}\\
-        \frac23 x + 2021 &= \frac{110279911}{4}\left(\frac{8}{330839733}x + \frac{8084}{110279911}\right) + 0\\
         \end{align}
         \]
         Then we can know that the <b>GCD</b> of \(f(x)\) and \(f'(x)\) is \(1\). Hence, we can know that the polynomial is separable.
