@@ -2565,6 +2565,46 @@
       </p>
     </section>
 
+    <section id = 'ku_2019_8_5'>
+        <div class = 'question-box-container'>
+        <div class = 'question-box'>
+        <p>
+            <b>5.</b> Consider the ring \(R = \mathbb{Q}[x, y, z]/I\), where \(I = (x^2y - z^5)\).
+        </p>
+        <p>
+            (i) Prove that \(R\) is not a field. Then decide whether \(R\) is an integral domain, and justify your answer.
+        </p>
+        <p>
+            (ii) Given \(f\in \mathbb{Q}[x, y, z]\), let \(\overline{f}\) denote the element \(f + I\) of \(R\). Is the ideal \(J = (\bar x, \bar y)\) a prime ideal of \(R\)?
+            Prove your answer.
+        </p>
+        <p>
+            (iii) Show that \(\overline{z^5} \in J^2\), but that \(\overline{z^4}\notin J^2\).
+        </p>
+        </div>
+        </div>
+        <p>
+            <b>Proof (i).</b> We know that \(\mathbb{Q}[x, y, z]/I\) is a field if and only if \(I\) is a maximal ideal.
+            We know that \((x^2y - z^5)\subset (x^2y - z^5, z)\) since \(x^2y - z^5 = 1\cdot (x^2y - z^5) + 0\cdot z\).
+            Now, I want to show that \((x^2y - z^5, z)\) is a proper ideal of \(\mathbb{Q}[x, y, z]\).
+            Firstly, for any \(f\neq 0\in \(\mathbb{Q}[x, y, z]\), we can know that \(f\cdot (x^2y - z^5)\) does not contain a term of constant.
+            Similarly, we can know that \(g\cdot z\) is a polynomial without constant term for any \(g\neq 0\in \mathbb{Q}[x, y, z]\).
+            Hence, we can know that if \(f\cdot (x^2y - z^5) + g\cdot z\neq 0\), then \(f\cdot (x^2y - z^5) + g\cdot z\notin \mathbb{Q}\).
+            In other words, if \(i\in (x^2y - z^5, z)\), then \(i\) is not a unit.
+            Thus, we have \((x^2y - z^5, z)\neq \mathbb{Q}[x, y, z]\), which implies that \((x^2y - z^5, z)\) is a proper ideal.
+            Then, we can conclude that \((x^2y - z^5)\) is not a maximal ideal. Therefore we can know that \(R\) is not a field. \(\blacksquare\)
+        </p>
+        <p>
+            Now, we want to show that \(R\) is an integral domain.
+        </p>
+        <p>
+            <b>Proof (i).</b> We know that \(\mathbb{Q}[x, y, z]/I\) is an integral domain if \(I\) is a prime ideal.
+            Since \(\mathbb{Q}[x, y, z] = \mathbb{Q}[x, z][y]\), we can know that \(x^2y - z^5\) is a degree \(1\) polynomial of \(\mathbb{Q}[x, z][y]\).
+            Hence, \(x^2y - z^5\) is irreducible, which implies that \(x^2y - z^5\) is prime. Thus, we can know that \(I = (x^2y - z^5)\)  is a prime ideal.
+            Therefore, we have \(R\) is an integral domain. \(\blacksquare\)
+        </p>
+    </section>
+
     <section>
       <div class = 'question-box-container'>
         <div class = 'question-box'>
