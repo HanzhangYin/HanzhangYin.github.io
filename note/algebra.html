@@ -1621,7 +1621,7 @@
         If \(gh^{-1}\) is an non identity element of \(G\), then we can say that \(gh^{-1}\) has order of \(2\), which is a contradiction.
         Hence, we have \(gh^{-1} = e\), which implies that \(g = h\). Thus, we showed that \(\varphi\) is injective.
         Given that \(\varphi: G\to G\) and \(G\) has finite order, according to \(\textbf{Pigeon Hole Principle}\), we can know that \(\varphi\) is surjective.
-        Thus, we can have for any \(x\in G\), there exists an unique \(y\in G\) such that \(y^2 = x\). \(\blacksquare\)
+        Thus, we can have for any \(x\in G\), there exists a unique \(y\in G\) such that \(y^2 = x\). \(\blacksquare\)
       </p>
     </section>
 
@@ -1847,7 +1847,7 @@
       <div class = 'question-box-container'>
         <div class = 'question-box'>
           <p>
-            2. Recall that a splitting field for a polynomial \( f(x) \) over a field \( F \) is a smallest (in terms of degree) extension \( K \) of \( F \) such that \( f(x) \) factors completely in \( K[x] \). Let \( F = \mathbb{Z}_2 \).
+            2. Recall that a splitting field for a polynomial \( f(x) \) over a field \( F \) is the smallest (in terms of degree) extension \( K \) of \( F \) such that \( f(x) \) factors completely in \( K[x] \). Let \( F = \mathbb{Z}_2 \).
           </p>
           <p>
             (a) Prove that \( K = F[t]/(t^3 + t + 1) \) is a field of order 8.
@@ -1937,7 +1937,7 @@
         Besides that \(\psi\in \text{Aut}(G)\) such that \(\psi(0) = 0\), \(\psi(1) = 2\) and \(\psi(2) = 1\), which implies that \(\psi\) has order of \(2\).
         And those are the only automorphisms of \(\mathbb{Z}_3\), which means \(\text{Aut}(\mathbb{Z}_3) = \mathbb{Z}_2\).
         When \(G = \mathbb{Z}_2\), let \(\varphi\in \text{Aut}(G)\) such that \(\varphi(0) = 0\) and \(\varphi(1) = 1\).
-        Then we have \(\varphi\) is the identity automorphism and it is the only automorphism of \(\mathbb{Z}_2\). Same for \(G = \mathbb{Z}_1\).
+        Then we have \(\varphi\) is the identity automorphism, and it is the only automorphism of \(\mathbb{Z}_2\). Same for \(G = \mathbb{Z}_1\).
         Thus, we can know that the only possible \(p\) is \(2\).
       </p>
     </section>
@@ -2636,7 +2636,7 @@
             Hence, we can know that if \(f\cdot (x^2y - z^5) + g\cdot z\neq 0\), then \(f\cdot (x^2y - z^5) + g\cdot z\notin \mathbb{Q}\).
             In other words, if \(i\in (x^2y - z^5, z)\), then \(i\) is not a unit.
             Thus, we have \((x^2y - z^5, z)\neq \mathbb{Q}[x, y, z]\), which implies that \((x^2y - z^5, z)\) is a proper ideal.
-            Then, we can conclude that \((x^2y - z^5)\) is not a maximal ideal. Therefore we can know that \(R\) is not a field. \(\blacksquare\)
+            Then, we can conclude that \((x^2y - z^5)\) is not a maximal ideal. Therefore, we can know that \(R\) is not a field. \(\blacksquare\)
         </p>
         <p>
             Now, we want to show that \(R\) is an integral domain.
@@ -2689,7 +2689,7 @@
         If \(x\in Z(G)\), then we have that \(gxg^{-1} = x\) for all \(g\in G\), which implies that \(\{x\} = [x]\). Thus, we can know that \([x]\) has exactly one element. \(\blacksquare\)
       </p>
       <p>
-          <b>Proof (ii).</b> Since he number of elements in \([x]\) is the number of elements in the orbits.
+          <b>Proof (ii).</b> Since the number of elements in \([x]\) is the number of elements in the orbits.
           We define the map \(\varphi: [x]\to G/C_G(x))\) by \(\varphi(gxg^{-1}) = gC_G(x)\). Firstly, we can know that the map is surjective since for any \(gC_G(x)\), we have \(gxg^{-1}\in [x]\) such that
           \[
             \varphi(gxg^{-1}) = gC_G(x).
@@ -2939,8 +2939,10 @@
         \end{align}
         \]
         Thus, we can know that \(K(\sqrt{\alpha}, \sqrt{\beta}) = K(\sqrt{\alpha})\). Then, we have \(\sqrt{\beta}\in K(\sqrt{\alpha})\), which implies that \(\sqrt{\beta} = a + b\sqrt{\alpha}\) for some \(a, b\in K\).
-        Then, we have \(\beta = a^2 + 2ab\sqrt{\alpha} + b^2\alpha\). Since \(\sqrt{\alpha}\) is linearly independent with 1, we have \(a = 0\).
-        Then, we have \(\beta = b^2\alpha\), which implies that \(\alpha\beta\) is a square in \(K\). \(\blacksquare\)
+        Firstly, we can know that \(b\neq 0\) since \(\sqrt{\beta}\in K\) if \(b = 0\).
+        Then, we have \(\beta = a^2 + 2ab\sqrt{\alpha} + b^2\alpha\in K\). Since \(a^2 + b^2\alpha\in K\), we have \(2ab\sqrt{\alpha}\in K\). Since \(b\neq 0\) and \(K\) is not of characteristic 2, we have \(2b\neq 0\).
+        Hence, we have \((2b)^{-1}\in K\). Thus, we have \(a\sqrt{\alpha} = 2ab\sqrt{\alpha}(2b)^{-1}\in K\).
+        Then, we can know that \(\sqrt{\alpha}\sqrt{\beta} = \sqrt{\alpha}(a + b\sqrt{\alpha}) = a\sqrt{\alpha} + b\alpha\in K\). \(\blacksquare\)
       </p>
     </section>
 
@@ -3070,7 +3072,7 @@
       <p>
         <b>Proof (a).</b> Suppose that \(n\) is an odd number and there exists a subgroup of \(G\), \(H\), such that the order is \(n\).
         Then, we can know that \([G:H] = 3\). Since \(n\) is an odd number, we can know that \(2\not\mid n\), which implies that \(3\) is the smallest prime dividing \(3n\).
-        Hence, we can conclude that that \(H\) is normal in \(G\). \(\blacksquare\)
+        Hence, we can conclude that \(H\) is normal in \(G\). \(\blacksquare\)
       </p>
     </section>
 
