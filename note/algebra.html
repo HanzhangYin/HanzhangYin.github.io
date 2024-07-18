@@ -2936,7 +2936,31 @@
       <p>
           <b>Proof (c).</b> Firstly, according to part (a), we have \(Z(GL_2(\mathbb{F}_3)) = \{ \alpha I_2 \mid \alpha\in \mathbb{F}_3\setminus\{0\} \}\).
           And we can know that \(Z(GL_2(\mathbbf{F}_3))\subset Z(SL_2(\mathbb{F]_3)\). Hence, we have \(\{I_2, 2\cdot I_2\}\subset Z(SL_2(\mathbb{F]_3)\).
-          In other words, \(|Z(SL_2(\mathbb{F}_3))|\geq 2\). Now, we want to look at the center of \(S_4\).
+          In other words, \(|Z(SL_2(\mathbb{F}_3))|\geq 2\). Now, we want to look at the center of \(S_4\). We start from \(2\)-cycles of \(S_4\),
+          Let \((a, b)\in S_4\) where \(a, b\in \{1, 2, 3, 4}\). Hence, we can know that there exists \(c\in \{1, 2, 3, 4\}\) such that \(c\neq a\) and \(c\neq b\).
+          Then, there exists \(\sigma\in S_4\) such that \(\sigma (a) = c\). Hence, we have
+          \[
+          \sigma\cdot (a, b)\cdot \sigma^{-1} = (\sigma(a), \sigma(b)) = (c, \sigma(b))\neq (a, b).
+          \]
+          Hence, we can know that there is no \(2\)-cycle in the center of \(S_4\).
+          Now, we want to look at the \(3\)-cycles of \(S_4\). Suppose that \((a, b, c)\in S_4\), where \(a, b, c\in \{1, 2, 3, 4\}\).
+          Then, we can know that there exists \(d\in \{1, 2, 3, 4\}\) such that \(d\neq a\), \(d\neq b\), and \(d\neq c\).
+          Then, there exists \(\sigma\in S_4\) such that \(\sigma(a) = d\). Hence, we have
+            \[
+            \sigma\cdot (a, b, c)\cdot \sigma^{-1} = (\sigma(a), \sigma(b), \sigma(c)) = (d, \sigma(b), \sigma(c))\neq (a, b, c).
+            \]
+            Hence, there is no \(3\)-cycle in the center of \(S_4\).
+            Now, we want to look at the \(4\)-cycles of \(S_4\). Suppose that \((a, b, c, d)\in S_4\), where \(a, b, c, d\in \{1, 2, 3, 4\}\).
+            Then, we can know that there exists \(\sigma\in S_4\) where \(\sigma = (b, c)\). Hence, we can know that
+            \[
+            \sigma\cdot (a, b, c, d)\cdot \sigma^{-1} = (a, c, b, d)\neq (a, b, c, d).
+            \]
+            Hence, there is no \(4\)-cycle in the center of \(S_4\).
+            The last category is the disjoint product of two \(2\)-cycles. Suppose that \((a, b)(c, d)\in S_4\), where \(a, b, c, d\in \{1, 2, 3, 4\}\).
+            Then, we can know that there exists \(\sigma\in S_4\) such that \(\sigma = (b, c)\).
+            We hae \(\sigma\cdot (a, b)(c, d)\sigma^{-1} = (a, c)\neq (b, d)\). Hence, there is no disjoint product of two \(2\)-cycles in the center of \(S_4\).
+            We can know that the center of \(S_4\) is trivial. Hence, we have \(Z(S_4) = \{I_4\}\), which implies that \(|Z(S_4)|\lt |Z(SL_2(\mathbb{F}_3))|\).
+            Therefore, we can know that \(SL_2(\mathbb{F}_3)\not\cong S_4\). \(\blacksquare\)
       </p>
     </section>
 
