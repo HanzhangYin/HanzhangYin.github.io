@@ -3030,6 +3030,151 @@
       </p>
     </section>
 
+    <section id = 'ku_2023_8_4'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>4</b>. Suppose \(A\in\mathbb{C}^{n\times n}\). Let \(\sigma_1\) and \(\sigma_n\) be the largest and smallest singular values of \(A\), respectively.
+          </p>
+          <p>
+            (a) Prove \(\|Ax\|_2\geq \sigma_n\|x\|_2\) for any \(x\in \mathbb{C}^n\).
+          </p>
+          <p>
+            (b) Prove that if \(B\in \mathbb{C}^{n\times n}\) is singular, then \(\|A - B\|_2\geq \sigma_n\).
+          </p>
+          <p>
+            (c) Show there exists a singular matrix \(B\in \mathbb{C}^{n\times n}\) such that \(\|A - B\|_2 = \sigma_n\).
+          </p>
+          <p>
+          (d) Let \(\lambda\) be an eigenvalue of \(A\). Prove
+            \[
+            \sigma_n\leq |\lambda_n|\leq \sigma_1.
+            \]
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Proof (a).</b> Firstly, we denote \(A\) as SVD such as \(A = U\Sigma V^*\).
+        Hence, we will have
+        \[
+        \|Ax\|_2 = \|U\Sigma V^* x\|_2 =  \|\Sigma V^* x\|_2,
+        \]
+        for \(U\) is unitary.
+        We denote \(V^*x = v = \begin{bmatrix} v_1 \\ \vdots \\ v_n\end{bmatrix}\). Then, we can get
+        \[
+        \|Ax\|_2 = \|\Sigma v\|_2 = \left\|\begin{bmatrix} \sigma_1\cdot v_1 \\ \vdots \sigma_n\cdot v_n \end{bmatrix}\right\|_2 = \sqrt{(\sigma_1^2\cdot v_1\cdot \overline{v_1} + \dots + \sigma_n^2\cdot v_n\cdot \overline{v_n}} = = \sqrt{(\sigma_1^2\cdot \|v_1\|_2^2 + \dots + \sigma_n^2\cdot \|v_n\|^2} \geq \sqrt{\sigma_n^2\cdot \|v_1\|^2 + dots + \sigma_n^2\cdot \|v_n\|^2} = \sigma_n\|v\|_2.
+        \]
+        Since \(V\) is unitary, we can know that \(V^*\) is unitary and \(\|v\|_2 = \|V^* x\|_2 = \|x\|_2\).
+        Therefore, we can conclude that
+        \[
+        \|Ax\|_2\geq \sigma_n\|v\|_2 = \sigma_n\|x\|_2. \blacksquare
+        \]
+      </p>
+      <p>
+        <b>Proof (b).</b> Given that \(B\) is singular, it contains an eigenvalue of \(0\). Let \(v\) be the eigenvector correspondent to \(0\) where \(\|v\|_2 = 1\).
+        Hence, we have
+        \[
+        \|A - B\|_2 = \max_{\|x\|=1}\|(A - B)x\|_2 \geq \|(A - B)v\|_2 = \|Ax - Bv\|_2 = \|Ax - 0\cdot v\|_2  = \|Av\|_2.
+        \]
+        We will borrow the notation from the previous part: \(A = U\Sigma V^*\).
+        Then, we have
+        \[
+        \|Av\|_2 = \|U\Sigma V^* v\|_2 = \|\Sigma V^* v\|_2.
+        \]
+        We denote \(u = V^*v = \begin{bmatrix} u_1 \\ \vdots \\ u_n \end{bmatrix}\). Thus, we have \(\|u\|_2 = \|V^*v\|_2 = \|v\|_2 = 1\) for \(V\) is unitary.
+        \[
+        \|\Sigma V^*v\|_2 = \|\Sigma u\|_2 = \sqrt{(\sigma_1^2\cdot u_1\cdot \overline{u_1} + \dots + \sigma_n^2 u_n\cdot \overline{u_n})} = \sqrt{(\sigma_1^2\cdot \|u_1\|_2^2 + \dots + \sigma_n^2 \|u_n\|_2^2)} \geq \sqrt{(\sigma_n^2\cdot \|u_1\|_2^2 + \dots + \sigma_n^2 \|u_n\|_2^2)} = \sigma_n\|u\|_2 = \sigma_n.
+        \]
+        Thus, we can know that \(\|A-B\|_2\geq \sigma_n\). \(\blacksquare\)
+      </p>
+      <p>
+        <b>Proof (c).</b> Given that \(A = U\Sigma V^*\) where
+        \[
+        \Sigma = \begin{bmatrix}
+        \sigma_1 & 0 & \dots & 0 \\
+        0 & \sigma_2 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}.
+        \]
+        Let \(B = U\Sigma' V^*\) where
+        \[
+        \Sigma' = \begin{bmatrix}
+        \sigma_1 & 0 & \dots & 0 \\
+        0 & \sigma_2 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & 0 \\
+        \end{bmatrix}.
+        \]
+        In that case, we can know that \(\det(B) = \det(U)\det(\Sigma')\det(V^*) = 1\cdot 0\cdot 1 = 0\), which implies that \(B\) is singular.
+        Then, we can get
+        \[
+        \|A - B\|_2 = \|U\Sigma V^* - U\Sigma' V^*\|_2 = \|U(\Sigma - \Sigma')V^*\|_2 = \|\Sigma - \Sigma'\|_2 = \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\right\|_2
+        \]
+        Let \(v = \begin{bmatrix} v_1 \\ \vdots \\ v_n \end{bmatrix} \in \mathbb{C}^n\) such that \(\|v\|_2 = 1\) and \(\|Av\|_2 = \max\limits_{\|x\|_2=1}\|Ax\|_2\).
+        \[
+        \|A - B\|_2 = \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\right\|_2 =
+        \max_{\|x\|=1}\left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\cdot x\right\|_2 = \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\cdot \begin{bmatrix} v_1 \\ \vdots \\ v_n \end{bmatrix}\right\|_2 =
+        \left\|\begin{bmatrix} 0 \\ \vdots \\ \sigma_nv_n \end{bmatrix}\right\|_2  = \sigma_n\|v_n\|_2 \leq
+        \sigma_n(\sqrt{\|v_1\|_2^2 + \dots + \|v_n\|_2^2) = \sigma_n.
+        \]
+        Hence, we have \(\|A- B\|_2\leq \sigma_n\).
+        Now, let \(u = \vec{e_n}\).
+        \[
+        \|A - B\|_2 = \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\right\|_2 = \max_{\|x\|=1}\left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\cdot x\right\|_2 \geq \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\cdot \begin{bmatrix} 0 \\ \vdots \\ 1 \end{bmatrix}\right\|_2 =
+        \left\|\begin{bmatrix} 0 \\ \vdots \\ \sigma_n \end{bmatrix}\right\|_2  = \sigma_n.
+        \]
+        Therefore, we have \(\|A - B\|_2 = \sigma_n\). \(\blacksquare\)
+      </p>
+      <p>
+        <b>Proof (d).</b> Since \(\lambda\) is the eigenvalue of \(A\), we denote \(v\) as the eigenvector of \(A\) which is correspondent to \(\lambda\) and \(\|v\|_2 = 1\).
+        From part (a), we can know that \(\|Ax\|_2\geq \sigma_n\|x\|_2\). Thus, we have \(|\lambda| = |\lambda|\|v\|_2 = \|\lambda v\|_2 = \|Av\|_2 \geq \sigma_n\|v\|_2 = \sigma_n\).
+        For the other direction, we have
+        \[
+        \sigma_1 = \|A\|_2 = \max_{\|x\|=1\} \|Ax\|_2 \geq \|Av\|_2 = |\lambda|\|v\|_2 = |\lambda|.
+        \]
+        Therefore, we have
+        \[
+        \sigma_n\leq |\lambda|\leq \sigma_1. \blacksquare
+        \]
+      </p>
+    </section>
+
     <br>
 
     <h2 id = 'january_2024'>Qualify Exam Problems (January 2024)</h2>
