@@ -72,6 +72,10 @@
       <a href="#august_2020">August 2020</a>
       <a href="#january_2021">January 2021</a>
       <a href="#august_2021">August 2021</a>
+      <a href="#january_2022">January 2022</a>
+      <a href="#august_2022">August 2022</a>
+      <a href="#january_2023">January 2023</a>
+      <a href="#august_2023">August 2023</a>
       <a href="#january_2024">January 2024</a>
       <a href="#References">References</a>
     </nav>
@@ -2678,7 +2682,7 @@
 
     <br>
 
-    <h2>Qualify Exam Problems (January 2022)</h2>
+    <h2 id = 'january_2022'>Qualify Exam Problems (January 2022)</h2>
 
     <section>
         <div class = 'question-box-container'>
@@ -2860,6 +2864,8 @@
       </p>
     </section>
 
+    <h2 id = 'august_2023'>Qualify Exam Problems (August 2023)</h2>
+
     <section id = 'ku_2023_8_6'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
@@ -2870,16 +2876,22 @@
         non-negative diagonal. Define \[ W = \frac{1}{\sqrt{2}} \begin{bmatrix}
         U & U \\ V & -V \end{bmatrix} \in \mathbb{C}^{2m \times 2m}. \]
       </p>
-      <ul>
-        <li>Prove \( W \) is unitary.</li>
-        <li>
-          Let \[ B = \begin{bmatrix} 0 & A \\ A^* & 0 \end{bmatrix} \in
+      <p>
+        <b>(a).</b> Prove \( W \) is unitary.
+        </p>
+        <p>
+          <b>(b).</b> Let \[ B = \begin{bmatrix} 0 & A \\ A^* & 0 \end{bmatrix} \in
           \mathbb{C}^{2m \times 2m}. \] Prove \( B \) is Hermitian and have the
           spectral decomposition \[ B = W \begin{bmatrix} \Sigma & 0 \\ 0 &
           -\Sigma \end{bmatrix} W^*. \]
-        </li>
-        <li>Prove \( \|B\|_2 = \|A\|_2 \).</li>
-      </ul>
+          Prove \( \|B\|_2 = \|A\|_2 \).
+        </p>
+              <p>
+                <b>(c).</b> Let \( \tilde{\sigma} \) be a singular value of \( \tilde{A} = A + E \), where \( E \in \mathbb{C}^{m \times m} \). Prove there exists a singular value \( \sigma \) of \( A \) such that
+                \[
+                |\tilde{\sigma} - \sigma| \leq \|E\|_2.
+                \]
+            </p>
             </div>
         </div>
       <p>
@@ -2920,7 +2932,7 @@
         \] \[ \tag*{$\square$} \]
       </p>
       <p>
-        <b>Proof (c).</b> Since we just show that \(W\) is unitary, and we
+        Since we just show that \(W\) is unitary, and we
         are given that \(U\) and \(V\) are unitary, we have \begin{align}
         \|A\|_2 &= \|U\Sigma V^*\|_2 = \|\Sigma\|_2 = \max\sigma_i \\ \|B\|_2 &=
         \left\|W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix}
