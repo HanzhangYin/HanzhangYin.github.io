@@ -4726,8 +4726,18 @@
       \]
     </p>
     <p>
-      \(\textbf{Solution(2). }\)We need to determine \(\text{Gal}(K/\mathbb{Q})\).
-      Since we know that \(|\text{Gal}(K/\mathbb{Q})|\leq [K: \mathbb{Q}] = 4\).
+      \(\textbf{Solution(2). }\)We need to determine \(\text{Gal}(K/ \mathbb{Q})\). Firslty, we know that \(x^2 - 4\) has \(4\) distinct roots.
+      Hence, we can know that \(|\text{Gal}(K/\mathbb{Q})| = [K: \mathbb{Q}] = 4\).
+      We know there are two group of order \(4\), which are \(\mathbb{Z}_4\) and \(\mathbb{Z}_2\times\mathbb{Z}_2\). Now, we list all the automorphisms:
+      \[
+      \begin{align}
+        \sigma_1(\sqrt{2}) &= \sqrt{2}, \sigma_1(i) = i\\
+        \sigma_2(\sqrt{2}) &= -\sqrt{2}, \sigma_2(i) = -i\\
+        \sigma_3(\sqrt{2}) &= -\sqrt{2}, \sigma_3(i) = i\\
+        \sigma_4(\sqrt{2}) &= \sqrt{2}, \sigma_4(i) = -i.
+        \end{align}
+      \]
+      Thus, we can see that for any \(\sigma_i\), we have \(\sigma_i^2 = \text{id}\). Therefore, we have \(\text{Gal}(K/\mathbb{Q}) \cong \mathbb{Z}_2\times\mathbb{Z}_2\).
     </p>
   </section>
 
