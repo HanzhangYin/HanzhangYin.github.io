@@ -2789,11 +2789,82 @@
       <p>\(\textbf{Solution.}\)</p>
     </section>
 
-    <section>
+    <section id = 'ku_2022_8_4'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>4.</b> Prove the Bauer-Fike Theorem:
+
+            Let \( A \) be an \( n \times n \) matrix with a complete set of linearly independent eigenvectors and suppose the \( V^{-1}AV = D \) where \( V \) is nonsingular and \( D \) is diagonal. Let \( \delta A \) be a perturbation of \( A \) and let \( \mu \) be an eigenvalue of \( A + \delta A \). Then \( A \) has an eigenvalue \( \lambda \) such that
+            \[
+            |\mu - \lambda| \leq \kappa_p(V) \|\delta A\|_p, \quad 1 \leq p \leq \infty
+            \]
+            where \( \kappa_p(V) \) is the \( p \)-norm condition number of \( V \).
+          </p>
+        </div>
+        </div>
+      <p>
+        <b>Proof.</b> If there exists \(\lambda\in \Lambda(A)\) and \(\mu\in \Lambda(A+\delta A)\) such that \(\mu = \lambda\), then we are done.
+        If there is no such \(\lambda\) or \(\mu\), then we can know that \(|\lambda - \mu|>0\) for any \( \lambda \in \Lambda(A) \) and \( \mu \in \Lambda(A+\delta A) \).
+        Since \(\mu\) is an eigenvalue of \(A + \delta A\), we have
+        \[
+        \begin{align}
+        \det(A + \delta A - \mu I) &= 0, \\
+        \det(V)\det(A + \delta A - \mu I)\det(V^{-1}) &= 0, \\
+        \det(V(A + \delta A - \mu I)V^{-1}) &= 0, \\
+        \det(VAV^{-1} + V\delta AV^{-1} - \mu I) &= 0, \\
+        \det(D + V\delta AV^{-1} - \mu I) &= 0, \\
+        \det(V\delta AV^{-1} + D - \mu I ) &= 0, \\
+        \end{align}
+        \]
+        Since \(D\) is diagonal and \(D = \begin{bmatrix} \lambda_1 & & \\ & \ddots & \\ & & \lambda_n \end{bmatrix}\), we have
+        \[
+        D - \mu I = \begin{bmatrix} \lambda_1 - \mu & & \\ & \ddots & \\ & & \lambda_n - \mu \end{bmatrix}.
+        \]
+        Based on the assumption that there is no \(\lambda = \mu\), we can know that none of diagonal entries of \(D - \mu I\) is zero, which implies that \(\det(D - \mu I) \neq 0\).
+        Hence, we can know that \((D - \mu I)^{-1}\) exists. Thus, we have
+        \[
+        \begin{align}
+        \det(V\delta AV^{-1} + D - \mu I ) &= 0, \\
+        \det((D - \mu I)((D - \mu I)^{-1}V\delta AV^{-1} + I) ) &= 0, \\
+        \det(D - \mu I)\det((D - \mu I)^{-1}V\delta AV^{-1} + I) &= 0. \\
+        \end{align}
+        \]
+        Since, we can know that \(\det(D - \mu I) \neq 0\), we have
+        \[
+        \det((D - \mu I)^{-1}V\delta AV^{-1} + I) = 0.
+        \]
+        Therefore, we can know that \(-1\) is an eigenvalue of \((D - \mu I)^{-1}V\delta AV^{-1}\).
+        We know that if \(\lambda\) is an eigenvalue of \(M\), then \(\|M\|_p\geq |\lambda|\) for any \(p\).
+        Hence, we have
+        \[
+        \begin{align}
+        1 = |-1|\leq \|(D - \mu I)^{-1}V\delta A V^{-1}\|_p\leq \|(D - \mu I)^{-1}\|_p\|V\delta A V^{-1}\|_p.
+        \end{align}
+        \]
+        Since every eigenvalue of \(D - \mu I\) is nonzero, we can know that \(\|(D - \mu I)^{-1}\|_p>0\).
+        Hence, we have that
+        \[
+        \dfrac{1}{\|(D - \mu I)^{-1}\|_p}\leq \|V\delta A V^{-1}\|_p.
+        \]
+        Since
+        \[
+          (D - \mu I)^{-1} = \begin{bmatrix} \frac{1}{\lambda_1 - \mu} & & \\ & \ddots & \\ & & \frac{1}{\lambda_n - \mu} \end{bmatrix},
+        \]
+        we have \(\|(D - \mu I)^{-1}\|_p = \max\limits_{1\leq i\leq n} \left|\dfrac{1}{\lambda_i - \mu}\right|_p = \dfrac{1}{\min\limits_{1\leq i\leq n} |\lambda_i - \mu|}\).
+        Then, we can get
+        \[
+        \min\limits_{1\leq i\leq n} |\lambda_i - \mu| = \dfrac{1}{\frac{1}{\min\limits_{1\leq i\leq n} |\lambda_i - \mu|}} = \dfrac{1}{\|(D - \mu I)^{-1}\|_p} \leq \|V\delta A V^{-1}\|_p\leq \|V\|_p\|\delta A\|_p\|V^{-1}\|_p = \kappa_p(V)\|\delta A\|_p.
+        \]
+        Therefore, there exists an eigenvalue \(\lambda\) of \(A\) such that \(|\mu - \lambda| \leq \kappa_p(V) \|\delta A\|_p\). \( \blacksquare \)
+      </p>
+    </section>
+
+    <section id = 'ku_2023_8_6'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
       <p>
-        <b>Problem.</b> Let \( A \in \mathbb{C}^{m \times m} \), and \( A
+        <b>6.</b> Let \( A \in \mathbb{C}^{m \times m} \), and \( A
         = U\Sigma V^* \) being a singular value decomposition of \( A \), where
         \( U, V \in \mathbb{C}^{m \times m} \) are unitary and \( \Sigma \) is
         non-negative diagonal. Define \[ W = \frac{1}{\sqrt{2}} \begin{bmatrix}
