@@ -4116,11 +4116,66 @@
         </div>
         </div>
       <p>
-        \(textbf{Proof (i).}\) By Eisenstein's criterion, we choose \(p = 5\), then we have \(f(x) = x^4 + 5\) is irreducible over \(\mathbb{Z}\).
+        <b>Proof (i).</b> By Eisenstein's criterion, we choose \(p = 5\), then we have \(f(x) = x^4 + 5\) is irreducible over \(\mathbb{Z}\).
         If \(f(x)\) is irreducible over \( \mathbb{Z} \), then it is irreducible over \( \mathbb{Q} \). \(\blacksquare\)
       </p>
       <p>
-        <b>Proof (ii).</b>
+        <b>Proof (ii).</b> Firstly, we can know that \(x^4 + 5 = (x^2 - \sqrt{5}i)(x^2 + \sqrt{5}i)\).
+        We know that \(i = 0 + 1\cdot i = \cos(\pi/2) + \sin(\pi/2)i = e^{\pi i/2}\), then \((\sqrt{5}i)^{1/2} = \sqrt[4]{5}e^{\pi i/4} = \frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i\).
+        Similarly, \(-i = 0 + (-1)\cdot i = \cos(-\pi/2) + \sin(-\pi/2)i = e^{-\pi i/2}\), then \((-\sqrt{5}i)^{1/2} = \sqrt[4]{5}e^{-\pi i/4} = \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i\).
+        Thus, we have
+        \[
+        x^4 + 5 = \left(x + \frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right)\left(x - \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right)\left(x + \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right)\left(x - \frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right).
+        \]
+        Thus, we can know that the splitting field of \(x^4 + 5\) is \(\mathbb{Q}\left(\frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i, \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right)\).
+        Then, we want to show that \(\mathbb{Q}\left(\frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i, \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right) = \mathbb{Q}\left(\sqrt[4]{5}\sqrt{2}, i\right)\).
+        Since
+        \[
+        \begin{align}
+        \sqrt[4]{5}\sqrt{2} &= \frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i + \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i,\\
+        \sqrt[4]{5}\sqrt{2}i &= \frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i - \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i,\\
+        i &= \dfrac{\sqrt[4]{5}\sqrt{2}i}{\sqrt[4]{5}\sqrt{2}},
+        \end{align}
+        \]
+        we have \(\mathbb{Q}\left(\sqrt[4]{5}\sqrt{2}, i\right)\subset \mathbb{Q}\left(\frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i, \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right)\).
+        It is not hard to see that \(\mathbb{Q}\left(\frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i, \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right) \subset \mathbb{Q}\left(\sqrt[4]{5}\sqrt{2}, i\right)\).
+        Therefore, we have \(\mathbb{Q}\left(\frac{\sqrt[4]{5}\sqrt{2}}{2} + \frac{\sqrt[4]{5}\sqrt{2}}{2}i, \frac{\sqrt[4]{5}\sqrt{2}}{2} - \frac{\sqrt[4]{5}\sqrt{2}}{2}i\right) = \mathbb{Q}\left(\sqrt[4]{5}\sqrt{2}, i\right)\).
+        After that, we want to show that \(x^4 - 20\) is the minimal polynomial of \(\sqrt[4]{5}\sqrt{2}\) over \(\mathbb{Q}\). It is not hard to see that \(\sqrt[4]{5}\sqrt{2}\) is a root of \(x^4 - 20\).
+        Then, we can know that there does not exists a root of \(x^4 - 20\) in \(\mathbb{Q}\), which implies that \(x^2 - 20\) cannot be factored as \((x + a)(x^3 + bx + cx + d)\) where \(a, b, c, d\in \mathbb{Q}\).
+        We suppose that \(x^4 - 20 = (x^2 + ax + b)(x^2 + cx + d)\). Then we have
+        \[
+        (x^2 + ax + b)(x^2 + cx + d) = x^4 + (a + c)x^3 + (b + d + ac)x^2 + (ad + bc)x + bd = x^4 - 20.
+        \]
+        Hence, we have
+        \[
+        \begin{align}
+        a + c &= 0, \\
+        b + d + ac &= 0, \\
+        ad + bc &= 0, \\
+        bd &= 20.
+        \end{align}
+        \]
+        Then, we can know that \(a = -c\) and \(ad + bc = ad - ab = a(d - b) = 0\).
+        In that case, we have either \(a = 0\) or \(d - b = 0\). Suppose that (a = 0\). Then, we have \(c = 0\) as well.
+        And \(b + d + ac = b + d = 0\), which implies that \(b = -d\). And \(bd = -b^2 = 20\), which is impossible if \(b\in \mathbb{Q}\).
+        Then, if \(d - b = 0\), which means that \(d = b\). We can get \(bd = b^2 = 20\). However, \(20\) is not a perfect square in \(\mathbb{Q}\), which is a contradiction.
+        Thus, we can know that \(x^2 - 20\) is irreducible in \(\mathbb{Q}\) and it is a minimal polynomial of \(\sqrt[4]{5}\sqrt{2}\). Then, we will have
+        \[
+        \mathbb{Q}(\sqrt[4]{5}\sqrt{2})\cong \mathbb{Q}[x]/(x^4 - 20),
+        \]
+        Hence, \([\mathbb{Q}(\sqrt[4]{5}\sqrt{2}): Q] = 4\).
+        For the similar reason, we can know that \(x^2 + 1\) has no root in \(\mathbb{R}\), and \(\mathbb{Q}(\sqrt[4]{5}\sqrt{2})\subset \mathbb{R}\).
+        Hence, \(x^2 + 1\) is irreducible over \(\mathbb{Q}(\sqrt[4]{5}\sqrt{2})\), which implies that it is the minimal polynomial of \(i\) over \(\mathbb{Q}(\sqrt[4]{5}\sqrt{2})\).
+        Then, we can have
+        \[
+        \mathbb{Q}(\sqrt[4]{5}\sqrt{2})[x]/(x^2 + 1)\cong \mathbb{Q}(\sqrt[4]{5}\sqrt{2})(i) = \mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i)
+        \]
+        And we can see that \([\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i): \mathbb{Q}(\sqrt[4]{5}\sqrt{2})] = 2\).
+        In that case,
+        \[
+        [\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i): \mathbb{Q}] = [\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i): \mathbb{Q}(\sqrt[4]{5}\sqrt{2})][\mathbb{Q}(\sqrt[4]{5}\sqrt{2}):\mathbb{Q}] = 2\cdot 4 = 8.
+        \]
+        Thus, we can know that there are \(8\) elements in the basis of the splitting field.
       </p>
     </section>
 
