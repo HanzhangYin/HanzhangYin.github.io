@@ -3117,26 +3117,29 @@
         \end{bmatrix}\right\|_2
         \]
         Let \(v = \begin{bmatrix} v_1 \\ \vdots \\ v_n \end{bmatrix} \in \mathbb{C}^n\) such that \(\|v\|_2 = 1\) and \(\|Av\|_2 = \max\limits_{\|x\|_2=1}\|Ax\|_2\).
+        Then, we can get
         \[
-        \|A - B\|_2 = \left\|\begin{bmatrix}
+        \begin{align}
+        \|A - B\|_2 &= \left\|\begin{bmatrix}
         0 & 0 & \dots & 0 \\
         0 & 0 & \dots & 0 \\
         \vdots & 0 & \ddots & 0 \\
         0 & \dots & 0 & \sigma_n \\
-        \end{bmatrix}\right\|_2 =
-        \max_{\|x\|=1}\left\|\begin{bmatrix}
+        \end{bmatrix}\right\|_2
+        = \max_{\|x\|_2=1}\left\|\begin{bmatrix}
         0 & 0 & \dots & 0 \\
         0 & 0 & \dots & 0 \\
         \vdots & 0 & \ddots & 0 \\
         0 & \dots & 0 & \sigma_n \\
-        \end{bmatrix}\cdot x\right\|_2 = \left\|\begin{bmatrix}
+        \end{bmatrix}\cdot x\right\|_2
+        = \left\|\begin{bmatrix}
         0 & 0 & \dots & 0 \\
         0 & 0 & \dots & 0 \\
         \vdots & 0 & \ddots & 0 \\
-        0 & \dots & 0 & \sigma_n \\
-        \end{bmatrix}\cdot \begin{bmatrix} v_1 \\ \vdots \\ v_n \end{bmatrix}\right\|_2 =
-        \left\|\begin{bmatrix} 0 \\ \vdots \\ \sigma_nv_n \end{bmatrix}\right\|_2  = \sigma_n\|v_n\|_2 \leq
-        \sigma_n(\sqrt{\|v_1\|_2^2 + \dots + \|v_n\|_2^2) = \sigma_n.
+        0 & \dots & 0 & \sigma_n
+        \end{bmatrix}\cdot \begin{bmatrix} v_1 \\ \vdots \\ v_n \end{bmatrix}\right\|_2 \\
+        &= \left\|\begin{bmatrix} 0 \\ \vdots \\ \sigma_nv_n \end{bmatrix}\right\|_2 = \sigma_n\|v_n\|_2 \leq \sigma_n(\sqrt{\|v_1\|_2^2 + \dots + \|v_n\|_2^2}) = \sigma_n.
+        \end{align}
         \]
         Hence, we have \(\|A- B\|_2\leq \sigma_n\).
         Now, let \(u = \vec{e_n}\).
@@ -3163,7 +3166,10 @@
       </p>
       <p>
         <b>Proof (d).</b> Since \(\lambda\) is the eigenvalue of \(A\), we denote \(v\) as the eigenvector of \(A\) which is correspondent to \(\lambda\) and \(\|v\|_2 = 1\).
-        From part (a), we can know that \(\|Ax\|_2\geq \sigma_n\|x\|_2\). Thus, we have \(|\lambda| = |\lambda|\|v\|_2 = \|\lambda v\|_2 = \|Av\|_2 \geq \sigma_n\|v\|_2 = \sigma_n\).
+        From part (a), we can know that \(\|Ax\|_2\geq \sigma_n\|x\|_2\). Thus, we have
+        \[
+        |\lambda| = |\lambda|\|v\|_2 = \|\lambda v\|_2 = \|Av\|_2 \geq \sigma_n\|v\|_2 = \sigma_n.
+        \]
         For the other direction, we have
         \[
         \sigma_1 = \|A\|_2 = \max_{\|x\|=1\} \|Ax\|_2 \geq \|Av\|_2 = |\lambda|\|v\|_2 = |\lambda|.
