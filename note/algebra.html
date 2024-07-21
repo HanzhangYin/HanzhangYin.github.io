@@ -4176,6 +4176,42 @@
         [\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i): \mathbb{Q}] = [\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i): \mathbb{Q}(\sqrt[4]{5}\sqrt{2})][\mathbb{Q}(\sqrt[4]{5}\sqrt{2}):\mathbb{Q}] = 2\cdot 4 = 8.
         \]
         Thus, we can know that there are \(8\) elements in the basis of the splitting field.
+        Then,
+        \[
+        \begin{align}
+        (\sqrt[4]{5}\sqrt{2})^2 &= 2\sqrt{5} \\
+        (\sqrt[4]{5}\sqrt{2})^3 &= 2\sqrt{5}\sqrt[4]{5}\sqrt{2} = 2\sqrt[4]{5^3}\sqrt{2} \\
+        (\sqrt[4]{5}\sqrt{2})^4 &= 2\sqrt[4]{5^3}\sqrt{2}\sqrt[4]{5}\sqrt{2} = 20 \\
+        \end{align}
+        \]
+        Hence, we can know that the basis of \(\mathbb{Q}(\sqrt[4]{5}\sqrt{2})\) is \(\{1, \sqrt[4]{5}\sqrt{2}, \sqrt{5}, \sqrt[4]{5^3}\sqrt{2}\}\).
+        Then, we know the elements in \(\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i)\) is in the form of \(a + b\cdot i\) where \(a, b\in mathbb{Q}(\sqrt[4]{5}\sqrt{2})\).
+        Hence, we have the basis of \(\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i)\) as is \(\{1, \sqrt[4]{5}\sqrt{2}, \sqrt{5}, \sqrt[4]{5^3}\sqrt{2}, i, \sqrt[4]{5}\sqrt{2}i, \sqrt{5}i, \sqrt[4]{5^3}\sqrt{2}i\}\).
+      </p>
+      <p>
+        <b>Proof (iii).</b> Firstly, we can know that \(x^4 + 5\) has \(4\) distinct root in the splitting field. Hence, the order of its galois group should be the same as the degree fo the splitting field, which is \(8\).
+        Besides that, the element of \(\text{Gal}(\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i)\) send the roots of \(x^4 + 5\) to the roots.
+        Hence, we have several options for the automorphisms:
+        \[
+        \begin{align}
+        \text{id}: \text{id}(\sqrt[4]{5}\sqrt{2}) &= \sqrt[4]{5}\sqrt{2}, \text{id}(i) = i\\
+        \sigma_1: \sigma_1(\sqrt[4]{5}\sqrt{2}) &= -\sqrt[4]{5}\sqrt{2}, \sigma_1(i) = -i\\
+        \sigma_2: \sigma_2(\sqrt[4]{5}\sqrt{2}) &= \sqrt[4]{5}\sqrt{2}, \sigma_2(i) = -i\\
+        \sigma_3: \sigma_3(\sqrt[4]{5}\sqrt{2}) &= -\sqrt[4]{5}\sqrt{2}, \sigma_3(i) = i\\
+        \sigma_4: \sigma_4(\sqrt[4]{5}\sqrt{2}) &= \sqrt[4]{5}\sqrt{2}i, \sigma_4(i) = i\\
+        \sigma_5: \sigma_5(\sqrt[4]{5}\sqrt{2}) &= -\sqrt[4]{5}\sqrt{2}i, \sigma_5(i) = -i\\
+        \sigma_6: \sigma_6(\sqrt[4]{5}\sqrt{2}) &= -\sqrt[4]{5}\sqrt{2}i, \sigma_6(i) = i\\
+        \sigma_7: \sigma_7(\sqrt[4]{5}\sqrt{2}) &= \sqrt[4]{5}\sqrt{2}i, \sigma_7(i) = -i\\
+        \end{align}
+        \]
+        Then, we want to show that it is not an abelian group.
+        \[
+        \begin{align}
+        \sigma_6(\sigma_7(\sqrt[4]{5}\sqrt{2})) &= \sigma_6(\sqrt[4]{5}\sqrt{2}i) = \sigma_6(\sqrt[4]{5}\sqrt{2})\sigma_6(i) = -\sqrt[4]{5}\sqrt{2}i\cdot i = \sqrt[4]{5}\sqrt{2}\\
+        \sigma_7(\sigma_6(\sqrt[4]{5}\sqrt{2})) &= \sigma_7(-\sqrt[4]{5}\sqrt{2}i) = -\sigma_7(\sqrt[4]{5}\sqrt{2})\sigma_6(i) = -\sqrt[4]{5}\sqrt{2}i\cdot (-i) = -\sqrt[4]{5}\sqrt{2}
+        \end{align}
+        \]
+        Thus, we can see that \(\sigma_6\circ \sigma_7\neq \sigma_7\circ\sigma_6\), which implies that \(\text{Gal}(\mathbb{Q}(\sqrt[4]{5}\sqrt{2}, i)\) is not abelian. \(\blacksquare\)
       </p>
     </section>
 
