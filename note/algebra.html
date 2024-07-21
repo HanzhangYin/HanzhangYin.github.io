@@ -2465,6 +2465,33 @@
       \end{bmatrix}.
       \]
       Then, we have \(a_2 = \frac16\) and \(b_2 = 0\). Hence, we let \(\vec{v_2} = \begin{bmatrix}1/6 \\ 0 \\ 0 \\ 0\end{bmatrix}\).
+      Similarly, we have \(A\cdot \vec{v_4} = \vec{v_3} + \vec{v_4}\), and
+        \[
+        A\cdot \vec{v_4}
+          = \begin{bmatrix}
+          1 & 0 & 0 & 0 \\
+          0 & 1 & 0 & 0 \\
+          6 & 0 & 1 & 0 \\
+          0 & 2 & 0 & 1 \\
+          \end{bmatrix}\begin{bmatrix}
+          a_4 \\ b_4 \\ c_4 \\ d_4
+          \end{bmatrix} = \begin{bmatrix}
+          a_4 \\ b_4 \\ 6a_4 + c_4 \\ 2b_4 + d_4
+          \end{bmatrix} = \begin{bmatrix}
+          a_4 \\ b_4 \\ c_4 \\ 1 + d_4
+        \end{bmatrix}.
+        \]
+        Then, we have \(a_4 = 0\) and \(b_4 = \frac12\). Hence, we let \(\vec{v_4} = \begin{bmatrix}0 \\ \frac{1}{2} \\ 0 \\ 0\end{bmatrix}\).
+      Thus, we have
+      \[
+      P = \begin{bmatrix}
+        0 & 1/6 & 0 & 0 \\
+        0 & 0 & 0 & 1/2 \\
+        1 & 0 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        \end{bmatrix},
+        \]
+      which is non-singular. Hence, we have \(P^{-1}AP = J_A\).
     </section>
 
     <h2 id = 'august_2018'>KU 2018 (August)</h2>
