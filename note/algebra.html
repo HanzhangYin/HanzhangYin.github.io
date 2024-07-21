@@ -2348,7 +2348,8 @@
       <div class = 'question-box-container'>
         <div class = 'question-box'>
           <p>
-            <b>Question 5.</b> Let \( V \) be the vector space of all polynomials of degree at most 3 over the complex numbers and \( T: V \to V \) be the linear transformation \( T(f) = f + f'' \). Describe, with proof, the Jordan Canonical Form of \( T \).
+            <b>Question 5.</b> Let \( V \) be the vector space of all polynomials of degree at most 3 over the complex numbers and \( T: V \to V \) be the linear transformation \( T(f) = f + f'' \).
+            Describe, with proof, the Jordan Canonical Form of \( T \).
           </p>
         </div>
       </div>
@@ -2374,9 +2375,70 @@
         0 & 2 & 0 & 1 \\
         \end{bmatrix}.
         \]
-        Hence, we can know that the characteristic polynomial of \(T\) is \((x - 1)^4\) and its minimal polynomial \(\mu_T(x)\mid (x - 1)^4\).
-        It is not hard to see that \(A - I\neq 0\).
+        Hence, we can know that the characteristic polynomial of \(T\) is \((x - 1)^4\) and its minimal polynomial \(\mu_A(x)\mid (x - 1)^4\).
+        It is not hard to see that \(A - I\neq 0\). Through calculation, we have \((A - I)^2 = 0\). Hence, \(\mu_A(x) = (x - 1)^2\) and \(\ker((A - I)^2) = \mathbb{C}^4\).
+        Then, we try to find the eigenvectors of \(A\). Let \(v\) be the eigenvector \(\begin{bmatrix}a \\ b \\ c \\ d\end{bmatrix}\) such that \((A - I)v = 0\).
+        \[
+        \begin{align}
+        \begin{bmatrix}
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 \\
+        6 & 0 & 0 & 0 \\
+        0 & 2 & 0 & 0 \\
+        \end{bmatrix}\begin{bmatrix}
+        a \\ b \\ c \\ d
+        \end{bmatrix} &= \begin{bmatrix}
+        0 \\ 0 \\ 0 \\ 0
+        \end{bmatrix} \\
+        \begin{bmatrix}
+        0 \\ 0 \\ 6a \\ 2b
+        \end{bmatrix} &= \begin{bmatrix}
+        0 \\ 0 \\ 0 \\ 0
+        \end{bmatrix}.
+        \end{align}
+        \]
       </p>
+      Hence, we can know that \(a = b = 0\), then we can know that the \(\ker(A - I) = \text{Span}(\vec{e_3}, \vec{e_4})\), which means that \(\dim\ker(A - I) = 2\).
+      Then, we can know that the number of the Jordan block is \(\dim(\ker(A - I)^2) - \dim(\ker(A - I)) = 4 - 2 = 2\).
+      Hence, we have the Jordan Canonical Form of \(A\) as
+      \[
+      J_A = \begin{bmatrix}
+        1 & 1 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 1 \\
+        0 & 0 & 0 & 1 \\
+        \end{bmatrix}.
+        \]
+      Now, we want to find \(P\in \mathbb{C}^{4\times 4}\) such that \(P^{-1}AP = J_A\).
+      Suppose that \(P = [\vec{v_1}, \vec{v_2}, \vec{v_3}, \vec{v_4}\).
+      Then, we have
+      \[
+        \begin{align}
+        AP &= PJ_A \\
+        \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        6 & 0 & 1 & 0 \\
+        0 & 2 & 0 & 1 \\
+        \end{bmatrix}\begin{bmatrix}
+        a_1 & a_2 & a_3 & a_4 \\
+        b_1 & b_2 & b_3 & b_4 \\
+        c_1 & c_2 & c_3 & c_4 \\
+        d_1 & d_2 & d_3 & d_4 \\
+        \end{bmatrix} &= \begin{bmatrix}
+      a_1 & a_2 & a_3 & a_4 \\
+      b_1 & b_2 & b_3 & b_4 \\
+      c_1 & c_2 & c_3 & c_4 \\
+      d_1 & d_2 & d_3 & d_4 \\
+      \end{bmatrix}\begin{bmatrix}
+        1 & 1 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 1 \\
+        0 & 0 & 0 & 1 \\
+        \end{bmatrix}.
+        \end{align}
+        \]
+        Then, we have
     </section>
 
     <h2 id = 'august_2018'>KU 2018 (August)</h2>
