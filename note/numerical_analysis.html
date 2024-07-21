@@ -2867,8 +2867,8 @@
     <br>
 
 
-    <h2>Qualify Exam Problems (January 2023)</h2>
-    <section id = 'january_2023'>
+    <h2 id = 'january_2023'>Qualify Exam Problems (January 2023)</h2>
+    <section id = 'ku_2023_1_4'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
       <p>
@@ -2965,6 +2965,41 @@
         \begin{align}
       v^{(k)} &= \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{\sqrt{1 - \varepsilon^2}^6 + \varepsilon^6} \\ \dfrac{- \varepsilon^3}{\sqrt{1 - \varepsilon^2}^6 + \varepsilon^6} \end{bmatrix} = \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{(1 - \varepsilon^2)^3 + \varepsilon^6} \\ \dfrac{- \varepsilon^3}{(1 - \varepsilon^2)^3 + \varepsilon^6} \end{bmatrix}= \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{1 - 3\varepsilon^2 + 3\varepsilon^4 - \varepsilon^6 + \varepsilon^6} \\ \dfrac{- \varepsilon^3}{1 - 3\varepsilon^2 + 3\varepsilon^4 - \varepsilon^6+ \varepsilon^6} \end{bmatrix}= \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{1 - 3\varepsilon^2 + 3\varepsilon^4} \\ \dfrac{- \varepsilon^3}{1 - 3\varepsilon^2 + 3\varepsilon^4 } \end{bmatrix},\\
         v^{(k)} - e_1 &= \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{1 - 3\varepsilon^2 + 3\varepsilon^4}-1 \\ \dfrac{- \varepsilon^3}{1 - 3\varepsilon^2 + 3\varepsilon^4 } \end{bmatrix},\\
+        \end{align}
+        \]
+      </p>
+    </section>
+
+    <section id = 'ku_2023_1_6'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>6.</b> (a) State the Gerschgorin circle theorem. (HINT: Don't forget to state both parts of the theorem.)
+          </p>
+          <p>
+            (b) Suppose that \( D \in \mathbb{R}^{n \times n} \) is diagonal and \( E \in \mathbb{R}^{n \times n} \) is any matrix. Use the Gerschgorin circle theorem to show that if
+            \[
+            \|E\|_\infty < \min_{i \neq j} \left| \frac{d_{ii} - d_{jj}}{2} \right|,
+            \]
+            then there is an ordering of the eigenvalues of \( D + E \), \( \mu_1, \mu_2, \mu_3, \ldots, \mu_n \) such that
+            \[
+            |d_{ii} - \mu_i| < \|E\|_\infty
+            \]
+            for all \( i = 1, 2, 3, \ldots, n \). (HINT: First show that the \( i \)-th Gerschgorin disk is contained in the disk with center \( d_{ii} \) and radius \( \sum_{j=1}^{n} |e_{ij}| \).)
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Proof (b).</b>Firstly, we can know that
+        \[
+        \|E\|_{\infty} = \max_{k\in\{1, 2, \dots, n\}}\sum_{i = 1}^n |e_{ki}|.
+        \]
+        According to the \(\textbf{Gerschgorin circle theorem}\), if all disks are disjoint, we can know there exists an eigenvalue \(\mu_i\) of \(D + E\) such that
+        \[
+        \begin{align}
+        |\mu_i - (d_ii + e_ii)| &\leq |e_{i,1}| + \dots + |e_{i, i-1}| + |e_{i, i+1}| + \dots + |e_{i, n}| \\
+        |\mu_i - d_ii| - |e_ii|\leq |\mu_i - d_ii - e_ii| &\leq |e_{i,1}| + \dots + |e_{i, i-1}| + |e_{i, i+1}| + \dots + |e_{i, n}| \\
+        |\mu_i - d_ii| &\leq |e_{i,1}| + \dots + |e_{i, i-1}| + |e_{i, i}| + |e_{i, i+1}| + \dots + |e_{i, n}| \leq \|E\|_\infty.
         \end{align}
         \]
       </p>
