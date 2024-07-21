@@ -2439,7 +2439,32 @@
         \end{bmatrix}.
         \end{align}
         \]
-        Then, we have
+        Then, let \(\vec{v_1} = \vec{e_3}\) and \(\vec{v_3} = \vec{e_4}\). Then, we have
+      \[
+      P = \begin{bmatrix}
+        0 & a_2 & 0 & a_4 \\
+        0 & b_2 & 0 & b_4 \\
+        1 & c_2 & 0 & c_4 \\
+        0 & d_2 & 1 & d_4 \\
+        \end{bmatrix}.
+        \]
+      Since \(A\vec{v_2} = \vec{v_1} + \vec{v_2} = \vec{e_3} + \vec{v_2}\), and
+      \[
+      A\cdot \vec{v_2}
+        = \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        6 & 0 & 1 & 0 \\
+        0 & 2 & 0 & 1 \\
+        \end{bmatrix}\begin{bmatrix}
+        a_2 \\ b_2 \\ c_2 \\ d_2
+        \end{bmatrix} = \begin{bmatrix}
+        a_2 \\ b_2 \\ 6a_2 + c_2 \\ 2b_2 + d_2
+        \end{bmatrix} = \begin{bmatrix}
+        a_2 \\ b_2 \\ 1 + c_2 \\ d_2
+      \end{bmatrix}.
+      \]
+      Then, we have \(a_2 = \frac16\) and \(b_2 = 0\). Hence, we let \(\vec{v_2} = \begin{bmatrix}1/6 \\ 0 \\ 0 \\ 0\end{bmatrix}\).
     </section>
 
     <h2 id = 'august_2018'>KU 2018 (August)</h2>
