@@ -2609,7 +2609,44 @@
       \alpha^5 + \alpha^2 &= -1 = 1, \\
       \alpha(\alpha^4 + \alpha) &= 1. \\
       \]
-      Thus, we can \(\alpha^{-1} = \alpha^4 + \alpha\).
+      Thus, we can \(\alpha^{-1} = \alpha^4 + \alpha\). Meanwhile, we have
+      \[
+        \begin{align}
+        \alpha^5 + \alpha^2 + \alpha + 1 &= \alpha \\
+        \alpha^5 + \alpha^2 + \alpha &= \alpha  - 1 = \alpha + 1 \\
+        \alpha(\alpha^4 + \alpha + 1) &= \alpha + 1 \\
+        (\alpha^4 + \alpha + 1) &= \dfrac{\alpha + 1}{\alpha} \\
+        (\alpha^4 + \alpha + 1)^{-1} &= \dfrac{\alpha}{\alpha + 1} = \alpha(\alpha + 1)^{-1} \\
+        \end{align}
+      \]
+      It shows that we need to find \(\alpha(\alpha + 1)^{-1}\). Given that
+      \[
+      \begin{align}
+      (\alpha + 1)(\alpha + 1) &= \alpha^2 + 2\alpha + 1 = \alpha^2 + 1 = \alpha^5 \\
+      (\alpha + 1)\dfrac{\alpha + 1}{\alpha^5} &= (\alpha + 1)(\alpha + 1)(\alpha^5)^{-1} = 1.
+      \end{align}
+      \]
+      Since we know that \(\alpha^{-1} = \alpha^4 + \alpha\), we have
+      \[
+      \begin{align}
+      {\alpha^5}^{-1} &= {\alpha^{-1}}^{5} \\
+        &= (\alpha^4 + \alpha)^5 = \alpha^5(\alpha^3 + 1)^5 = (\alpha^2 + 1)\cdot \(\alpha^3 + 1)^4\cdot (\alpha^3 + 1) \\
+        &= (\alpha^2 + 1)(\alpha^3 + 1)\(\alpha^3 + 1)^2\(\alpha^3 + 1)^2 \\
+        &= (\alpha^5 + \alpha^2 + \alpha^3 + 1)(\alpha^6 + 1)^2 \\
+        &= (\alpha^3)(\alpha^{12} + 1) \\
+        &= \alpha^3(\alpha^5\cdot \alpha^5\cdot \alpha^2 + 1) \\
+        &= \alpha^3((\alpha^2 + 1)^2\cdot \alpha^2 + 1) \\
+        &= \alpha^3(\alpha^6 + \alpha^2 + 1) \\
+        &= \alpha^3(\alpha\cdot \alpha^5 + \alpha^2 + 1) \\
+        &= \alpha^3(\alpha(\alpha^2 + 1) + \alpha^2 + 1) \\
+        &= \alpha^3(\alpha^3 + \alpha^2 + \alpha + 1) \\
+        &= \alpha^6 + \alpha^5 + \alpha^4 + \alpha^3 \\
+        &= \alpha(\alpha^2 + 1) + \alpha^2 + 1 + \alpha^4 + \alpha^3 \\
+        &= \alpha^3 + \alpha^2 + \alpha + 1 + \alpha^4 + \alpha^3 \\
+        &= \alpha^4 + \alpha^2 + \alpha + 1 \\
+        \end{align}
+      \]
+
       </p>
     </section>
 
