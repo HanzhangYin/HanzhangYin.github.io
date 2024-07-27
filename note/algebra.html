@@ -1728,6 +1728,40 @@
       </p>
     </section>
 
+    <section id = 'ku_2015_1_6'>
+        <div class = 'question-box-container'>
+          <div class = 'question-box'>
+              <p>
+                  <b>6></b> Let \( A \) be an \( n \times n \) matrix with entries in \( \mathbb{R} \), the field of real numbers.
+                  Let \( \phi_A : \mathbb{R}^n \to \mathbb{R}^n \) be the linear transformation defined by \( \phi_A(v) = A \cdot v \), for each column vector \( v \in \mathbb{R}^n \). Set \( W := \{v \in \mathbb{R}^n \mid \phi_A(v) = v\} \) and assume that \( \dim \ker(\phi_A) + \dim W = n \).
+              </p>
+              <p>
+                  (i) Give the minimal polynomial for \( A \).
+              </p>
+              <p>
+                  (ii) Describe all possible Jordan canonical forms for \( A \).
+              </p>
+              <p>
+                  (iii) Prove that if \( A \) is a symmetric matrix, then \( W \) is orthogonal to \( \ker(\phi_A) \). Assume that \( \mathbb{R}^n \) is endowed with its standard inner product.
+              </p>
+          </div>
+        </div>
+        <p>
+        <b>Solutions (i).</b> Suppose that \(v\in \ker(A)\cap W\). Then we have \(A\cdot v = v = 0\), whcih implies that \(W\cap \ker(\phi_A) = 0\).
+        Besides that, with \( \dim \ker(\phi_A) + \dim W = n \), we can know that \( \ker(\phi_A)\oplus W = \mathbb{R}^n \).
+        Since we know that \(\ker(\phi_A)\oplus \text{Range](\phi_A) = \mathbb{R}^n\), we can know that \(\text{Range}(\phi_A) = W\).
+        Hence, for any \(v\in \mathbb{R}^n\), we can write \(v = v_1 + v_2\), where \(v_1\in \ker(\phi_A)\) and \(v_2\in W\).
+        Then, we have \(A\cdot v = Av_1 + Av_2 = Av_2 = v_2\). And \(A(Av) = A(Av_1 + Av_2) = A(Av_2) = Av_2 = v_2\).
+        Thus, we can get
+        \[
+        A^2\cdot v - A\cdot v= (A^2 - A)\cdot v = 0, \text{ for all } v\in \mathbb{R}^n.
+        \]
+        Hence, we can know that \(A^2 - A = 0\). Then, we can conclude that the minimal polynomial \(\mu_A \mid x^2 - x\).
+        Suppose that \(\mu_A\) is a polynomial of degree \(1\). Then we can know that \(\mu_A = x\) or \(\mu_A = x - 1\).
+        If \(\mu_A\) is a polynomial of degree \(2\), then we can know that \(\mu_A = x(x - 1)\).
+        </p>
+    </section>
+
     <h2>KU 2015 (August)</h2>
     <section id = 'ku_2015_8_6'>
         <div class = 'question-box-container'>
