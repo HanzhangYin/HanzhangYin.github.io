@@ -1243,7 +1243,7 @@
         0 = \sum_{i=0}^k [a_i x_i - h b_i f(t_i, x_i)] \tag{(15)}
         \]
 
-        Because we have assumed that \( x_i = x(t_i) \) for \( i < k \), the result of subtracting Equation (15) from Equation (14) will be
+        Because we have assumed that \( x_i = x(t_i) \) for \( i \lt k \), the result of subtracting Equation (15) from Equation (14) will be
 
         \[
         Lx = a_k [x(t_k) - x_k] - h b_k [f(t_k, x(t_k)) - f(t_k, x_k)] \tag{(16)}
@@ -3219,8 +3219,10 @@
           <p>
             <b>(b).</b> Let \[ B = \begin{bmatrix} 0 & A \\ A^* & 0 \end{bmatrix} \in
             \mathbb{C}^{2m \times 2m}. \] Prove \( B \) is Hermitian and have the
-            spectral decomposition \[ B = W \begin{bmatrix} \Sigma & 0 \\ 0 &
-            -\Sigma \end{bmatrix} W^*. \]
+            spectral decomposition
+            \[
+            B = W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix} W^*.
+            \]
             Prove \( \|B\|_2 = \|A\|_2 \).
           </p>
           <p>
@@ -3286,11 +3288,35 @@
         \(\|B\|_2 = \|A\|_2\). \[ \tag*{$\square$} \]
       </p>
       <p>
-        For the second part, we already knew that
+        <b>Proof (c).</b>We already knew that
       \[
       B = W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix} W^*.
       \]
-      Thus, we can know that \(B\) is diagonalizable. According to \(\textbf{Bauer-Fike theorem}\), we can know that there exists an eigenvalue
+      Let us define \(\tilde{B}\) such as
+      \[
+      \begin{align}
+        \tilde{B} &:= \begin{bmatrix} 0 & \tilde{A} \\ (\tilde{A})^* & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 0 & A + E \\ A^* + E^* & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 0 & A \\ A^* & 0 \end{bmatrix} + \begin{bmatrix} 0 & E \\ E^* & 0 \end{bmatrix} \\
+        &= W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix} W^* + \begin{bmatrix} 0 & E \\ E^* & 0 \end{bmatrix} \\
+        \end{align}
+      \]
+      We denote \(\begin{bmatrix} 0 & E \\ E^* & 0 \end{bmatrix}\) as \(F\).
+      According to part (a), we can know that \(\tilde{A}\) has SVD \(\tilde{U}\tilde{\Sigma}\tilde{V}^*\) and
+      \[
+      \tilde{A} = \tilde{W}\begin{bmatrix} \tilde{\Sigma} & 0 \\ 0 & -\tilde{Sigma} \end{bmatrix}\tilde{W}^*,
+      \]
+      where \(\tilde{W}\) is unitary.
+      According to \(\textbf{Bauer-Fiker Theorem}\), we can know that if \(\tilde{\sigma}\) is an eigenvalue of \(\tilde{B}\), there is an eigenvalue \(\sigma\) of \(B\)
+      such that
+      \[
+      |\tilde{\sigma} - \sigma|\leq \Kappa(\tilde{W})\|\|F\|_2.
+      \]
+      According to part (b), we can know that \(\|F\|_2 = \|E\|_2\). Hence, we have
+      \[
+      |\tilde{\sigma} - \sigma|\leq \Kappa(\tilde{W})\|\|E\|_2 = \|\tilde{W}\|_2\|\tilde{W}^{-1}\|_2\|E\|_2 = \|E\|_2,
+      \]
+      for \(\tilde{W}\) is unitary.
       </p>
     </section>
 
