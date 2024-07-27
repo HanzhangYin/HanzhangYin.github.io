@@ -3317,6 +3317,34 @@
       |\tilde{\mu} - \mu|\leq \kappa(\tilde{W})\|\|E\|_2 = \|\tilde{W}\|_2\|\tilde{W}^{-1}\|_2\|E\|_2 = \|E\|_2,
       \]
       for \(\tilde{W}\) is unitary.
+      We know that \(\tilde{\mu}\) is an entry of \(\tilde{\Sigma}\) or \(-\tilde{\Sigma}\).
+      If \(\mu\geq 0\), then we can know that \(\tilde{\mu} = \tilde{\sigma}\).
+      Then, we can know that
+      \[
+      |\tilde{\sigma} - \mu|\leq \|E\|_2.
+      \]
+      After that, we will discuss the case that \(\mu\geq 0\). Similarly, we can know that \(\mu = \sigma\). Hence, we have
+      \[
+        |\tilde{\sigma} - \sigma|\leq \|E\|_2.
+      \]
+      If \(\mu\lt 0\), then we can know that \(\mu = -\sigma\) for some singular value \(\sigma\). Hence, we have
+        \[
+            |\tilde{\sigma} - \sigma|\leq|\tilde{\sigma} + \sigma|\leq \|E\|_2.
+        \]
+      for both \(\tilde{\sigma}\) and \(\sigma\) are positive.
+      If \(\tilde{\mu}\lt 0\), then we can know that \(\tilde{\mu} = -\tile{\sigma}\). Hence, we have
+      \[
+        |\tilde{\mu} - \mu| = | -\tilde{\sigma} - \mu| = |\tilde{\mu} + \mu|\leq \|E\|_2.
+      \]
+      If \(\mu\geq 0\), then we can know that \(\mu = \sigma\) for some \(\sigma\). Hence, we have
+        \[
+            |\tilde{\sigma} - \sigma|< |\tilde{\sigma} + \sigma| =|\tilde{\sigma} + \mu|\leq \|E\|_2.
+        \]
+        for both \(\tilde{\sigma}\) and \(\sigma\) are positive.
+        If \(\mu\lt 0\), then we can know that \(\mu = -\sigma\) for some singular value \(\sigma\). Hence, we have
+        \[
+            |\tilde{\sigma} - \sigma| = |\tilde{\sigma} + \mu|\leq \|E\|_2. \tag*{\(\blacksquare\)}
+        \]
       </p>
     </section>
 
