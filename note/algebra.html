@@ -1810,19 +1810,19 @@
                 (b) Assume that \(B\) has \(n\) distinct eigenvalues. Prove that \(A\) is diagonalizable.
             </p>
             </div>
-            <p>
-                <b>Proof (a).</b> (to be continued...)
-            </p>
-            <p>
-                <b>Proof (b).</b> Given that \(B\) has \(n\) distinct eigenalues and they are \(\lambda_1, \dots, \lambda_n\).
-                Thus, we can know that \(\ker(A-\lambda_1 I)\oplus \dots \oplus \ker(A - \lambda_nI) = \mathbb{C}^n\).
-                Hence, we can know that any two eigenvectos correspondent to different eigenvalues are orthogonal to each other. \
-                Here is the proof: Suppose that \(v\in \ker(A-\lambda_vI)\) and \(w\in \ker(A-\lambda_wI)\).
-                \[
-                \lambda Bv, w\lambda
-                \]
-            </p>
         </div>
+      <p>
+        <b>Proof (a).</b> (to be continued...)
+      </p>
+      <p>
+        <b>Proof (b).</b> Given that \(B\) has \(n\) distinct eigenvalues, and they are \(\lambda_1, \dots, \lambda_n\).
+        Thus, we can know that \(\ker(A-\lambda_1 I)\oplus \dots \oplus \ker(A - \lambda_nI) = \mathbb{C}^n\).
+        Hence, we can know that any two eigenvectors correspondent to different eigenvalues are orthogonal to each other. \
+        Here is the proof: Suppose that \(v\in \ker(A-\lambda_vI)\) and \(w\in \ker(A-\lambda_wI)\).
+        \[
+        \lambda Bv, w\lambda
+        \]
+      </p>
     </section>
     <section id = 'ku_2015_8_6'>
         <div class = 'question-box-container'>
@@ -1845,7 +1845,7 @@
         <b>Solution (a).</b> Let \(A\) be the \(n \times n\) matrix over \(\mathbb{C}\) all of whose entries equal \(1\).
         Then, we can know that \(A^2 = nA\). Thus, we have \(A^2 - nA = 0\), which implies that \(\mu_A \mid x^2 - nx = x(x - n)\).
         If \(\mu_A\) is the polynomial of degree \(1\), the \(\mu_A = x\) or \(\mu_A = x - n\). However, we know that
-        \(A\neq 0\) and \(A - n\codt I\neq 0\), which is the contradiciton. Therefore, we can know that \(\mu_A = x(x - n)\).
+        \(A\neq 0\) and \(A - n\cdot I\neq 0\), which is the contradiction. Therefore, we can know that \(\mu_A = x(x - n)\).
       </p>
       <p>
         <b>Solution (b).</b> According to the minimal polynomial, we can know that it only has two eigenvalues, \(0\) and \(n\).
@@ -1862,10 +1862,9 @@
       \[
         B_n  = A_n - I_n = PDP^{-1} - PI_nP^{-1} = P(D - I_n)P^{-1}.
       \]
-      It is not hard to see that \(D - I_n\) is a diagonal matrix, which means that \(B_n\) is diagolizable.
+      It is not hard to see that \(D - I_n\) is a diagonal matrix, which means that \(B_n\) is diagonalizable.
       Again, since the diagonal entries of \(D\) is either \(0\) or \(n\), we can know that \(D - I_n\) is the diagonal matrix with diagonal entries of \(-1\) or \(n-1\).
       Therefore, the Jordan Canonical Form of \(B_n\) is the diagonal matrix with diagonal entries of \(-1\) or \(n-1\).
-      </p>
       </p>
       <p>
         <b>Solution (c (2)).</b> Let \(A_n\) to denote the \(n\times n\) matrix with all entries equal to 1.
@@ -1905,6 +1904,7 @@
         <p>
             (a) Prove that the characteristic of \(F\) is not zero.
         </p>
+          <p>
             (b) Prove that there exists a field \(L\) between \(F\) and \(E\) such that \([E : L]\) equals the characteristic of \(F\) .
         </p>
         </div>
