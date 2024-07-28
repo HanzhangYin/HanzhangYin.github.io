@@ -4253,41 +4253,20 @@
       </p>
     </section>
 
-    <section id = "ku_2022_8_17_2">
-      <div class = 'question-box-container'>
-          <div class = 'question-box'>
-    <p>
-    \(\textbf{Question 2.}\) For \(a, b \in \mathbb{C}\). Let \(M(a, b)\) be the matrix
-    \(
-    \begin{pmatrix}
-    0 & 1 & 0 \\
-    0 & 0 & 1 \\
-    0 & a & b \\
-    \end{pmatrix}.
-    \)
-    Find the Jordan canonical form of \(M(a, b)\) (depending on the values \(a, b\)).
-    </p>
-          </div>
-      </div>
-    <p>
-      \(\textbf{Solution. }\)We can get the characteristic polynomial of \(M(a, b)\) is \(\chi_{M(a, b)}(x)=x^3-bx^2-ax = x(x^2 - bx - a)\).
-    </p>
-    </section>
-
     <section id = 'ku_2022_1_5'>
-        <div class = 'question-box-container'>
-            <div class = 'question-box'>
-      <p>
-        <b>Question 5.</b> Let \( R = \mathbb{Z}^2 \) equipped with the following addition and multiplication rules:
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>Question 5.</b> Let \( R = \mathbb{Z}^2 \) equipped with the following addition and multiplication rules:
 
-        \[
-        (a, b) + (c, d) = (a + c, b + d) \quad \text{and} \quad (a, b) \times (c, d) = (ac - bd, ad + bc).
-        \]
+            \[
+            (a, b) + (c, d) = (a + c, b + d) \quad \text{and} \quad (a, b) \times (c, d) = (ac - bd, ad + bc).
+            \]
 
-        Prove that \( R \) is a PID.
-      </p>
-            </div>
+            Prove that \( R \) is a PID.
+          </p>
         </div>
+      </div>
       <p>
         <b>Proof.</b> Firstly, we want to show that \((R, +)\) forms an abelian group.
         Since \(\mathbb{Z}\) is an abelian group, we have
@@ -4366,6 +4345,54 @@
         Now, we want to show that \(R\) is an integral domain.
       </p>
     </section>
+
+    <section id = 'ku_2022_1_6'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>Question 6.</b> Let \( E/F \) be an algebraic field extension, assuming the characteristic of \( F \) is \( p > 0 \).
+            Let \( E' \) be the collection of elements \( x \in E \) such that \( x^q \in F \) for some power \( q = p^n \) (q may depend on \( x \)).
+            <p>
+            (a) Prove that \( E' \) is a field.
+            </p>
+            <p>
+            (b) Prove that the extension \([E : E']\) is separable.
+          </p>
+        </div>
+      </div>
+      <p>
+        Firstly, we can know that \(0\in E'\) since \(0\in E\) and \(0^q = 0\in F\) for any \(q = p^n\).
+        For the similar reason, we can see that \(1\in E'\) since \(1\in E\) and \(1^q = 1\in F\) for any \(q = p^n\).
+        Now, suppose that \(x\in E'\), which implies that \(x^q\in F\) for some \(q = p^m\). If \(p = 2\). Then, we can know that \(x + x = 2x = 0\), which implies that \(x = -x\).
+        Hence, the additive inverse exists in \(E'\) for all \(x\in E'\) for \(p = 2\). If \(p\neq 2\), then \(p\) is an odd prime.
+        Since we already have \(x\in E'\) where \(x^q\in F\) and \(q = p^m\), we can know that \(q\) is also an odd number.
+        Then we have \((-x)^q = (-1)^qx^q = -x^q = -x\in F\). Thus, we can know that the additive inverse exists in \(E'\) for all \(x\in E'\).
+      </p>
+    </section>
+
+
+    <section id = "ku_2022_8_2">
+      <div class = 'question-box-container'>
+          <div class = 'question-box'>
+    <p>
+    \(\textbf{Question 2.}\) For \(a, b \in \mathbb{C}\). Let \(M(a, b)\) be the matrix
+    \(
+    \begin{pmatrix}
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+    0 & a & b \\
+    \end{pmatrix}.
+    \)
+    Find the Jordan canonical form of \(M(a, b)\) (depending on the values \(a, b\)).
+    </p>
+          </div>
+      </div>
+    <p>
+      \(\textbf{Solution. }\)We can get the characteristic polynomial of \(M(a, b)\) is \(\chi_{M(a, b)}(x)=x^3-bx^2-ax = x(x^2 - bx - a)\).
+    </p>
+    </section>
+
+
 
 
 
