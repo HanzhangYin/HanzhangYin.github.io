@@ -1751,7 +1751,7 @@
         <div class = 'question-box-container'>
           <div class = 'question-box'>
               <p>
-                  <b>6></b> Let \( A \) be an \( n \times n \) matrix with entries in \( \mathbb{R} \), the field of real numbers.
+                  <b>6.</b> Let \( A \) be an \( n \times n \) matrix with entries in \( \mathbb{R} \), the field of real numbers.
                   Let \( \phi_A : \mathbb{R}^n \to \mathbb{R}^n \) be the linear transformation defined by \( \phi_A(v) = A \cdot v \), for each column vector \( v \in \mathbb{R}^n \). Set \( W := \{v \in \mathbb{R}^n \mid \phi_A(v) = v\} \) and assume that \( \dim \ker(\phi_A) + \dim W = n \).
               </p>
               <p>
@@ -1815,8 +1815,9 @@
     </div>
       <p>
         <b>Solution (a).</b> Let \(A\) be the \(n \times n\) matrix over \(\mathbb{C}\) all of whose entries equal \(1\).
-        Then, we can know that \(A^2 = nA\). Let \(e_1\) be the first standard basis vector in \(\mathbb{C}^n\).
-        Hence, we have \(A^2\cdot e_1 - n\cdot e_1 = 0\). This implies that the minimal polynomial of \(A\) is \(x^2 - nx\).
+        Then, we can know that \(A^2 = nA\). Thus, we have \(A^2 - nA = 0\), which implies that \(\mu_A \mid x^2 - nx = x(x - n)\).
+        If \(\mu_A\) is the polynomial of degree \(1\), the \(\mu_A = x\) or \(\mu_A = x - n\). However, we know that
+        \(A\neq 0\) and \(A - n\codt I\neq 0\), which is the contradiciton. Therefore, we can know that \(\mu_A = x(x - n)\).
       </p>
       <p>
         <b>Solution (b).</b> Firstly, we factor the minimal polynomial of \(A\), which is \(x^2 - nx = x(x - n)\).
