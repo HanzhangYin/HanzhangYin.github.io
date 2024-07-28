@@ -1821,9 +1821,26 @@
       </p>
       <p>
         <b>Solution (b).</b> According to the minimal polynomial, we can know that it only has two eigenvalues, \(0\) and \(n\).
+        Then we try to find the dimension of the eigenspace of \(0\) and \(n\). Since we can see that \(\text{dim}\ker(A-0\cdot I) = n-1\).
+        Besides that, we can know that \(\text{dim}\ker(A - n\cdot I)\geq 1\), which means that \(\text{dim}\ker(A-0\cdot I)+\text{dim}\ker(A-n\cdot I)\geq n\).
+        We also have \(\(\text{dim}\ker(A-0\cdot I)+\text{dim}\ker(A-n\cdot I)\leq n\), which implies that \(\text{dim}\ker(A-0\cdot I)+\text{dim}\ker(A-n\cdot I)= n\).
+        Then, we can know that the geometric Multiplicity equals to the algebraic multiplicity. Hence, the Jordan canonical form of \(A\) is the diagonal matrix with \(0\) and \(n\) on the diagonal.
       </p>
       <p>
-        <b>Solution (c).</b> Let \(A_n\) to denote the \(n\times n\) matrix with all entries equal to 1.
+      <b>Solution (c (1)).</b> Let \(A_n\) to denote the \(n\times n\) matrix with all entries equal to 1.
+      Then, we denote \(B_n\) as \(A_n - I_n\) where \(I_n\) is the identity matrix of size \(n\times n\).
+      Since, we know that \(A_n\) has diagonlization in the form of \(A = PDP^{-1}\) where \(D\) is the diagonal matrix with \(0\) and \(n\) on the diagonal entries.
+      Hence, we can know that
+      \[
+        B_n  = A_n - I_n = PDP^{-1} - PI_nP^{-1} = P(D - I_n)P^{-1}.
+      \]
+      It is not hard to see that \(D - I_n\) is a diagonal matrix, which means that \(B_n\) is diagolizable.
+      Again, since the diagonal entries of \(D\) is either \(0\) or \(n\), we can know that \(D - I_n\) is the diagonal matrix with diagonal entries of \(-1\) or \(n-1\).
+      Therefore, the Jordan Canonical Form of \(B_n\) is the diagonal matrix with diagonal entries of \(-1\) or \(n-1\).
+      </p>
+      </p>
+      <p>
+        <b>Solution (c (2)).</b> Let \(A_n\) to denote the \(n\times n\) matrix with all entries equal to 1.
         Then, we denote \(B_n\) as \(A_n - I_n\) where \(I_n\) is the identity matrix of size \(n\times n\).
         Let \(e_1\) to be the first standard basis vector in \(\mathbb{C}^n\).
         Then we have \(B\cdot e_1 = [0, 1, 1, \ldots, 1]^T\).
@@ -1838,6 +1855,12 @@
         \end{align}
         \]
         Therefore, we can have the minimal polynomial of \(B_n\) is \(x^2 - (n-2)x - (n-1)\).
+        By Quadratic Formular, we can find the two roots of the minimal polynomial, which are \(n-1\) and \(-1\).
+        Hence, we can know that \(\mu_{B_n} = (x - (n-1))(x + 1)\). Now, we try to find the dimension of the eigenspace of \(-1\).
+        Since \(\ker(B_n -(-1)\cdot I) = \ker(A_n) \) and we already knew that \(\text{dim}\ker(A_n) = n-1\), \(\text{dim}\ker(B_n -(-1)\cdot I) = n-1 \).
+        By the similar reason, we can know that \(\text{dim}\ker(B_n - (n-1)\cdot I)\geq 1\) and it shows that \(\text{dim}\ker(B_n - (n-1)\cdot I)+\text{dim}\ker(A_n)\geq n\).
+        With the condition that \(\text{dim}\ker(B_n - (n-1)\cdot I)+\text{dim}\ker(A_n)\leq n\), we have \(\text{dim}\ker(B_n - (n-1)\cdot I)+\text{dim}\ker(A_n)= n\).
+        Again, the geometric Multiplicity equals to the algebraic multiplicity, we the Jordan canonical form of \(B_n\) os the diagonal matrix with \(-1\) and \(n-1\) on the diagonal.
       </p>
     </section>
 
