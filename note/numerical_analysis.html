@@ -2915,6 +2915,24 @@
         where each \(R_i\) is a row vector of \(R\) and each \(Q_i\) is a column vector of \(Q\).
         We denote the product of \(RQ\) as \(\tilde{A}\) (i.e. \(\tilde{A} = RQ\)).
         Then, we have
+        \[
+        \tilde{A}_{ij} = R_iQ_j = \sum_{k=1}^{n} R_{ik}Q_{kj}.
+        \]
+        When \(i-1>j\), we have
+        \[
+        \begin{align}
+        \tilde{A}_{ij} &= \sum_{k=1}^{n} R_{ik}Q_{kj} \\
+        &= R_{i1}Q_{1j} + \dots + R_{i,i-1}Q_{i-1,j} + R_{ii}Q_{ij} + \dots + R_{in}Q_{nj} \\
+        &= \sum_{k=1}^{i-1} R_{ik}Q_{kj} + \sum_{k=i}^{n} R_{ik}Q_{kj} \\
+        \end{align}
+        \]
+        For \(\sum\limits_{k=1}^{i-1} R_{ik}Q_{kj}\), every \(R_{ik} = 0\) for \(i > k\). Thus, we have \(\sum\limits_{k=1}^{i-1} R_{ik}Q_{kj} = 0\).
+        For \(\sum\limits_{k=i}^{n} R_{ik}Q_{kj}\), every \(Q_{kj} = 0\) for \(j < i-1\). Thus, we have \(\sum\limits_{k=i}^{n} R_{ik}Q_{kj} = 0\).
+        In that case, we have
+        \[
+        \tilde{A}_{ij} = \sum_{k=1}^{i-1} R_{ik}Q_{kj} + \sum_{k=i}^{n} R_{ik}Q_{kj} = 0 + 0 = 0.
+        \]
+        Hence, we can know that \(\tilde{A} = RQ\) is an upper Hessenberg matrix. \( \blacksquare \)
       </p>
     </section>
 
