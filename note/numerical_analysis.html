@@ -2864,6 +2864,49 @@
       </p>
     </section>
 
+    <section id = 'ku_2022_8_5'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>5.</b> Let \( A \) be a real unreduced upper Hessenberg matrix of order \( n \).
+          </p>
+          <p>
+            (a) Show that \( A \) can be factored into \( A = QR \), where \( R \) is upper triangular and \( Q = H_1 \cdots H_{n-1} \) orthogonal with each \( H_k \) being a Householder matrix:
+            \[ H_k = I - 2 w^{(k)} \left(w^{(k)}\right)^T \quad 1 \leq k \leq n-1. \]
+          </p>
+          <p>
+            (b) Show that the orthogonal matrix \( Q \) in Question 5a is an upper Hessenberg matrix.
+          </p>
+          <p>
+            (c) Show that the product \( RQ \) is also an upper Hessenberg matrix.
+          </p>
+          <p>
+            (d) Describe the \( QR \) method for computing all of the eigenvalues of matrix \( A \).
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Proof (a).</b>
+      </p>
+      <p>
+        <b>Proof (b).</b>
+      </p>
+      <p>
+        <b>Proof (c).</b> Given that \(R\) is an upper triangular matrix and \(Q\) is an upper Hessenberg matrix by the previous part, we have
+        \[
+        \begin{align}
+        R &= \begin{cases}
+        R_{ij}\in \mathbb{R}, & i \leq j, \\
+        R_{ij} = 0, & i > j.
+        \end{cases}\\
+        Q &= \begin{cases}
+        Q_{ij}\in \mathbb{R}, & i-1 \leq j, \\
+        Q_{ij} = 0, & i-1 > j.
+        \end{cases}
+        \]
+      </p>
+    </section>
+
     <br>
 
 
