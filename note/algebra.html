@@ -3688,8 +3688,40 @@
       Since \(\mathfrak{m} = (x, y)\), we have \(r/\mathfrak{m} = ax + by + cxy + d + (x, y) = d + \mathfrak{m}\).
       Then, we can know that \(R/\mathfrak{m} \cong k\), which is a field. Thus, \(\mathfrak{m}\) is a maximal ideal.
       Suppose that \(J\) is a proper ideal of \(R\). Then, we can know that \(J\) does not contain a unit of \(R\).
-      If \(j\in J\), then \(j = ax + by + cxy\), where \(a, b, c\in k\). Thus, we can know that \(j\in \mathfrak{m} = (x, y)\).
-      Therefore, we can know any proper ideal is contained in \(\mathfrak{m}\), which implies that \(\mathfrak{m}\) is the only maximal ideal of \(R\). \(\blacksquare\)
+      If \(j\in J\), we want to show that \(j = ax + by + cxy\), where \(a, b, c\in k\) by contradiction.
+      Suppose that \(j = ax + by + cxy + d\) where \(d\neq 0\). Then we can know that
+      \[
+      j\cdot xy = dxy \in J.
+      \]
+      Since \(d\neq 0\), we have \(d^{-1}\in k\). Thus, \(dxy\cdot d^{-1} = xy\in J\).
+      If \(xy\in J\) and \(ax + by + cxy + d\in J\), then
+      \[
+      \begin{align}
+      ax + by + cxy + d - c\cdot xy = ax + by + d\in J, \\
+      (ax + by + d)\cdot x = ax^2 + bxy + dx = bxy + dx\in J, \\
+      bxy + dx - b\cdot xy = dx\in J, \\
+      dx\cdot d^{-1} = x\in J.
+      \end{align}
+      \]
+      Now, we have \(xy, x\in J\). Thus, we can know that
+      \[
+      \begin{align}
+      ax + by + cxy + d - ax - cxy = by + d\in J, \\
+      (by + d)\cdot y = by^2 + dy = dy\in J, \\
+      dy\cdot d^{-1} = y\in J.
+        \end{align}
+      \]
+      Again, we have \(x, y, xy\in J\).
+      Thus,
+      \[
+      d = ax + by + cxy + d - ax - by - cxy \in J.
+      \]
+      Since \(d\neq 0\), \(d\) is a unit in \(J\), which is a contradiction since \(J\) does not contain a unit.
+      Hence, we can know that if \(J\) is a proper ideal of \(R\), then \(j = ax + by + cxy\in (x, y)\).
+      Hence, we can know that \(J\subset (x, y)\).
+      We know that every proper ideal of \(R\) is contained in a maximal ideal of \(R\).
+      Suppose that \(T\) is a maximal ideal of \(R\), then we can know that \(T\) is a proper ideal of \(R\).
+      Hence, we can know that \(T\subset (x, y)\). Since \(T\) is a maximal ideal, we have \(T = (x, y)\).
     </p>
   </section>
 
