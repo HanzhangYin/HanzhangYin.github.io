@@ -3063,6 +3063,19 @@
         </div>
       </div>
       <p>
+        <b>Solution (a).</b><b>Theorem [Row version Gerschgorin’s Theorem]</b> Let \( A \in \mathbb{C}^{m \times m} \). Consider \( m \) disks in the complex plane:
+        \[ D_i = \left\{ z \mid |z - a_{ii}| \leq \sum_{j \neq i} |a_{ij}| = |a_{i1}| + \ldots + |a_{i,i-1}| + |a_{i,i+1}| + \ldots + |a_{im}| \right\}. \]
+        Then we have the following results.
+      </p>
+      <ul>
+        <li>
+          Any eigenvalue \( \lambda \in \Lambda(A) \) must lie in at least one of these disks.
+        </li>
+        <li>
+          Suppose the \( m \) disks form \( n \) disjoint regions \( \mathcal{R}_1, \ldots, \mathcal{R}_n \), and each \( \mathcal{R}_k \) (\( 1 \leq k \leq n \)) is connected and consists of \( p_k \) disks. Then for each \( k \) from 1 to \( n \), exactly \( p_k \) eigenvalues of \( A \) are in \( \mathcal{R}_k \).
+        </li>
+      </ul>
+      <p>
         <b>Proof (b).</b>Firstly, we can know that
         \[
         \|E\|_{\infty} = \max_{k\in\{1, 2, \dots, n\}}\sum_{i = 1}^n |e_{ki}|.
