@@ -3597,7 +3597,7 @@
 
     <br>
 
-    <section>
+    <section id = 'ku_2021_1_3'>
       <div class = 'question-box-container'>
         <div class = 'question-box'>
       <p>
@@ -3667,7 +3667,28 @@
       </p>
     </section>
 
-    <br>
+  <section id = 'ku_2021_1_4'>
+    <div class = 'question-box-container'>
+      <div class = 'question-box'>
+        <p>
+          <b>Question 4.</b> Let \( k \) be a field and \( R = k[X, Y] / I \) where \( I \) is the ideal \( (X^2, Y^2) \). Let \( x, y \) be the image of \( X, Y \) in \( R \).
+        </p>
+        <p>
+          (a) Prove that \( R \) has only one maximal ideal \(\mathfrak{m} = (x, y) \).
+        </p>
+        <p>
+          (b) Prove that any ideal of \( R \) strictly contained in \(\mathfrak{m} \) is principal.
+        </p>
+      </div>
+    </div>
+    <p>
+      <b>Proof (a)</b> Firstly, we want to show that \(\mathfrak{m} = (x, y)\) is a maximal ideal.
+      Since \(R = k[X, Y]/(X^2, Y^2)\), if \(r\in R\), then \(r = f(X, Y) + (X^2, Y^2)\), where \(f(X, Y) = aX + bY + cXY + d\) where \(a, b, c, d\in k\).
+      Hence, \(r = f(X, Y) + (X^2, Y^2) = aX + bY + cXY + d+ (X^2, Y^2) = aX + (X^2, Y^2) + bY + (X^2, Y^2) + cXY + (X^2, Y^2) + d + (X^2, Y^2)= ax + by + cxy + d\) since \(x, y\) are the images of \(X, Y\) in \(R\).
+      Since \(\mathfrak{m} = (x, y)\), we have \(r/\mathfrak{m} = ax + by + cxy + d + (x, y) = d + \mathfrak{m}\).
+      Then, we can know that \(R/\mathfrak{m} \cong k\), which is a field. Thus, \(\mathfrak{m}\) is a maximal ideal.
+    </p>
+  </section>
 
     <section id = 'ku_2021_1_5'>
         <div class = 'question-box-container'>
