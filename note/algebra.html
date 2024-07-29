@@ -3597,7 +3597,7 @@
 
     <br>
 
-    <section>
+    <section id = 'ku_2021_1_3'>
       <div class = 'question-box-container'>
         <div class = 'question-box'>
       <p>
@@ -3667,7 +3667,64 @@
       </p>
     </section>
 
-    <br>
+  <section id = 'ku_2021_1_4'>
+    <div class = 'question-box-container'>
+      <div class = 'question-box'>
+        <p>
+          <b>Question 4.</b> Let \( k \) be a field and \( R = k[X, Y] / I \) where \( I \) is the ideal \( (X^2, Y^2) \). Let \( x, y \) be the image of \( X, Y \) in \( R \).
+        </p>
+        <p>
+          (a) Prove that \( R \) has only one maximal ideal \(\mathfrak{m} = (x, y) \).
+        </p>
+        <p>
+          (b) Prove that any ideal of \( R \) strictly contained in \(\mathfrak{m} \) is principal.
+        </p>
+      </div>
+    </div>
+    <p>
+      <b>Proof (a)</b> Firstly, we want to show that \(\mathfrak{m} = (x, y)\) is a maximal ideal.
+      Since \(R = k[X, Y]/(X^2, Y^2)\), if \(r\in R\), then \(r = f(X, Y) + (X^2, Y^2)\), where \(f(X, Y) = aX + bY + cXY + d\) where \(a, b, c, d\in k\).
+      Hence, \(r = f(X, Y) + (X^2, Y^2) = aX + bY + cXY + d+ (X^2, Y^2) = aX + (X^2, Y^2) + bY + (X^2, Y^2) + cXY + (X^2, Y^2) + d + (X^2, Y^2)= ax + by + cxy + d\) since \(x, y\) are the images of \(X, Y\) in \(R\).
+      Since \(\mathfrak{m} = (x, y)\), we have \(r/\mathfrak{m} = ax + by + cxy + d + (x, y) = d + \mathfrak{m}\).
+      Then, we can know that \(R/\mathfrak{m} \cong k\), which is a field. Thus, \(\mathfrak{m}\) is a maximal ideal.
+      Suppose that \(J\) is a proper ideal of \(R\). Then, we can know that \(J\) does not contain a unit of \(R\).
+      If \(j\in J\), we want to show that \(j = ax + by + cxy\), where \(a, b, c\in k\) by contradiction.
+      Suppose that \(j = ax + by + cxy + d\) where \(d\neq 0\). Then we can know that
+      \[
+      j\cdot xy = dxy \in J.
+      \]
+      Since \(d\neq 0\), we have \(d^{-1}\in k\). Thus, \(dxy\cdot d^{-1} = xy\in J\).
+      If \(xy\in J\) and \(ax + by + cxy + d\in J\), then
+      \[
+      \begin{align}
+      ax + by + cxy + d - c\cdot xy = ax + by + d\in J, \\
+      (ax + by + d)\cdot x = ax^2 + bxy + dx = bxy + dx\in J, \\
+      bxy + dx - b\cdot xy = dx\in J, \\
+      dx\cdot d^{-1} = x\in J.
+      \end{align}
+      \]
+      Now, we have \(xy, x\in J\). Thus, we can know that
+      \[
+      \begin{align}
+      ax + by + cxy + d - ax - cxy = by + d\in J, \\
+      (by + d)\cdot y = by^2 + dy = dy\in J, \\
+      dy\cdot d^{-1} = y\in J.
+        \end{align}
+      \]
+      Again, we have \(x, y, xy\in J\).
+      Thus,
+      \[
+      d = ax + by + cxy + d - ax - by - cxy \in J.
+      \]
+      Since \(d\neq 0\), \(d\) is a unit in \(J\), which is a contradiction since \(J\) does not contain a unit.
+      Hence, we can know that if \(J\) is a proper ideal of \(R\), then \(j = ax + by + cxy\in (x, y)\).
+      Hence, we can know that \(J\subset (x, y)\).
+      We know that every proper ideal of \(R\) is contained in a maximal ideal of \(R\).
+      Suppose that \(T\) is a maximal ideal of \(R\), then we can know that \(T\) is a proper ideal of \(R\).
+      Hence, we can know that \(T\subset (x, y)\). Since \(T\) is a maximal ideal, the only proper ideal contains \(T\) is \(T\) itself.
+      Thus, \(T = (x, y)\). Hence, we can know that \(R\) has only one maximal ideal \((x, y)\). \(\blacksquare\)
+    </p>
+  </section>
 
     <section id = 'ku_2021_1_5'>
         <div class = 'question-box-container'>
@@ -3770,6 +3827,52 @@
             \end{bmatrix}.
             \]
         </p>
+    </section>
+
+    <section id = 'ku_2021_8_2'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>Question 2.</b> In this question, all rings are commutative with unity. Let \( R \) be a ring and \( A, B \) be subrings of \( R \). Let \( AB \) denote the collection of elements of the form \( \sum a_i b_i \) where the sum is finite and \( a_i \in A, b_i \in B \).
+          <p>
+            (a) Prove that \( AB \) is a commutative ring.
+        </p>
+          <p>
+            (b) Let \( R = \mathbb{C}[x] \), where \( \mathbb{C} \) is the complex numbers. Suppose \( A, B \) are subrings of \( R \) such that \( AB = R \). Show that at least one of \( A, B \) contains a polynomial whose lowest term has degree one (for instance \( x^3 - 2x \)).
+          </p>
+          <p>
+            (c) Assume the same situation as (b). Must one of \( A, B \) be equal to \( R \)?
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Proof (a).</b> Given that \(A\) and \(B\) are two commutative subrings of \(R\) with unity and \(AB = \{ \sum a_i b_i \mid a_i \in A, b_i \in B \}\).
+        We can know that \(0\in AB\) since \(0 = 0\cdot 0\) and \(1\in AB\) since \(1\cdot 1 = 1\).
+        Then, we want to show that \(AB\) is commutative group under addition. Suppose that \(\alpha = \sum a_i b_i\) and \(\beta = \sum a_i' b_i'\).
+        Given that \(a_i\in A\), we can know that \(-a_i\in A\) since \(A\) is a ring, thus
+        we have \(-\alpha = -\sum a_ib_i = \sum (-a_i)b_i\in AB\). Since \(AB\subset R\), we can see that \(\alpha + \beta = \beta + \alpha\).
+        For the similar reason (i.e. \(AB\subset R\)\), we can have \(\alpha + (\beta + \gamma) = (\alpha + \beta) + \gamma\) for any \(\alpha, \beta, \gamma\in AB\).
+        Then, we want to show that \(AB\) is closed under multiplication. Suppose that \(\alpha = \sum a_i b_i\) and \(\beta = \sum a_i' b_i'\).
+        Then, we have \(\alpha\beta = (\sum a_i b_i)\cdot( \sum a_i' b_i' )\)
+        After that,
+      </p>
+      <p>
+        <b>Proof (b).</b> We will prove it with mathematical contradiction. Suppose that neither \(A\) nor \(B\) contains a polynomial whose lowest term has degree one and \(AB = \mathbb{C}[x]\).
+        Suppose that \(a = a_nx^{n} + a_{n-1}x^{n-1} + \dots + a_2x^2 + a_0\) and \(b = b_mx^{m} + b_{m-1}x^{m-1} + \dots + b_2x^2 + b_0\).
+        Then we can know that
+        \[
+        a\cdot b = a_nb_mx^{n+m} + (a_nb_{m-1} + a_{n-1}b_m)x^{n+m-1} + \dots + a_2b_2x^4 + (a_2b_0 + a_0b_2)x^2 + a_0b_0.
+        \]
+        Given that \(AB = R\) for any \(f(x)\in \mathbb{C}[x]\) there exists \(g\in A, h\in B\) such that \(gh = f(x)\).
+        In that case, if \(f(x)\) is a polynomial whose lowest term has degree one, then there exists \(g\in A\) or \(h\in B\) such that
+        \[
+        gh = f(x) = a_nx^{n} + a_{n-1}x^{n-1} + \dots + a_2x^2 + a_0,
+        \]
+        which does not contain a polynomial where one of its terms has degree one. Therefore, it is a contradiction, and we can know that at least one of \(A\) or \(B\) contains a polynomial whose lowest term has degree one. \(\blacksquare\)
+      </p>
+      <p>
+        <b>Solution (c).</b>
+\      </p>
     </section>
 
     <section id = 'ku_2021_8_3'>
