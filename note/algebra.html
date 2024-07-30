@@ -2945,10 +2945,19 @@
       According to \(\textbf{Tower Theorem}\), we have
       \[
       [L(\alpha) : K] = [L(\alpha) : L][L : K] \leq n \cdot m.
-
-      This implies that the minimal polynomial of \( \alpha \) over \( K \) is degree \( n \). As \( \alpha \) is a root of \( f \), the minimal polynomial of \( \alpha \) must divide \( f \). As they have the same degree, they must be equal (up to a multiplicative constant), so as the minimal polynomial is irreducible, \( f \) must be irreducible.
-
-        So it suffices to prove this equality. We can do this by proving the reverse inequality \( [K(\alpha) : k] \geq mn \). In fact, we show that \( mn \mid [K(\alpha) : k] \). This is where the relative primeness comes into play. As \( m \) and \( n \) are relatively prime, to prove that \( mn \mid [K(\alpha) : k] \) it suffices to prove that \( m \mid [K(\alpha) : k] \) and \( n \mid [K(\alpha) : k] \). For the first of these, observe that \( m = [K : k] \mid [K(\alpha) : k] \). For the second, we have \( [k(\alpha) : k] = n \) by irreducibility of \( f \) over \( k \). Furthermore, \( [k(\alpha) : k] \mid [K(\alpha) : k] \) so we are done.
+      \]
+        Now, for the other direction, we want to show that \([L(\alpha) : K]\geq mn\).
+        Firstly, we have \([L(\alpha) : K] = [L(\alpha) : L][L : K]\), which implies that \(m = [L : K] \mid [L(\alpha) : K]\).
+        Secondly, since \(L\) is an extension of \(K\), we can know that \(L(\alpha)\) is an extension of \(K(\alpha)\). Hence, we have
+        \( [L(\alpha) : K] = [L(\alpha) : K(\alpha)][K(\alpha) : K]\), which implies that \(n = [K(\alpha) : K] \mid [L(\alpha) : K]\).
+        Since \(\gcd(n, m) = 1\), we can know that \(mn \mid [L(\alpha) : K]\), which implies that \(mn \leq [L(\alpha) : K]\).
+        Thus, we showed that
+        \[
+        [L(\alpha) : K] = mn.
+        \]
+        Since \([L(\alpha) : K] = [L(\alpha) : L][L : K] = [L(\alpha) : L]\cdot m = mn\), we can know that \([L(\alpha) : L] = n\).
+        In that case, we can know that the minimal polynomial of \(\alpha\) over \(L\) has degree of \(n\), which is \(f(x)\).
+        Since \(f(x)\) is the minimal polynomial of \(\alpha\) over \(L\), we can know that \(f(x)\) is irreducible in \(L[x]\). \(\blacksquare\)
       </p>
     </section>
 
