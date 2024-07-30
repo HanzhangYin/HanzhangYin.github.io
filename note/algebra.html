@@ -2927,7 +2927,40 @@
 
     </section>
 
-    <br>
+    <section id = 'ku_2019_1_3'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+        <p>
+          <b>3.</b> Consider a field \( K \), and an irreducible polynomial \( f(x) \in K[x] \).
+          Prove that if \( L \) is a field extension of \( K \) such that \([L : K] \) is relatively prime to the degree of \( f(x) \), then \( f(x) \) remains irreducible in \( L[x] \).
+        </p>
+        </div>
+      </div>
+      <p>
+        <b>Proof.</b> Suppose that \( [L : K] = m \) and \(f(x)\) is an irreducible polynomial over \(K\) where its degree is \(n\) and \(\gcd(n, m) = 1\).
+      Suppose that \(\alpha\) is a root of \(f(x)\) in \(L\). Then, we can know that \(f(x)\) is a minimal polynomial of \(\alpha\).
+      And \(K(\alpha) = K[x]/(f(x))\) is a field extension of \(K\), which has degree of \(n\) (i.e. \( [K(\alpha) : K] = n \)) since the minimal polynomial of \(\alpha\) is \(f(x)\), which has degree of \(n\).
+      Since \(L\) is an extension of \(K\), if \(f(x)\) is irreducible in \(L[x]\), then we have \( [L(\alpha) : L] = n \).
+      If \(f(x)\) is reducible in \(L[x]\), then we have \( [L(\alpha) : L] < n \). In general we have \( [L(\alpha) : L] \leq n \).
+      According to \(\textbf{Tower Theorem}\), we have
+      \[
+      [L(\alpha) : K] = [L(\alpha) : L][L : K] \leq n \cdot m.
+      \]
+        Now, for the other direction, we want to show that \([L(\alpha) : K]\geq mn\).
+        Firstly, we have \([L(\alpha) : K] = [L(\alpha) : L][L : K]\), which implies that \(m = [L : K] \mid [L(\alpha) : K]\).
+        Secondly, since \(L\) is an extension of \(K\), we can know that \(L(\alpha)\) is an extension of \(K(\alpha)\). Hence, we have
+        \( [L(\alpha) : K] = [L(\alpha) : K(\alpha)][K(\alpha) : K]\), which implies that \(n = [K(\alpha) : K] \mid [L(\alpha) : K]\).
+        Since \(\gcd(m, n)\cdot \text{lcm}(m, n) = mn\) and \(\gcd(m, n) = 1\), we can know that \(\text{lcm(m, n) = mn}\).
+        Since \(n\mid [L(\alpha) : K]\) and \(m \mid [L(\alpha) : K]\), we can know that \([L(\alpha) : K]\) is the common multiple of \(m\) and \(n\) and \(mn \mid [L(\alpha) : K]\), which implies that \(mn \leq [L(\alpha) : K]\).
+        Thus, we showed that
+        \[
+        [L(\alpha) : K] = mn.
+        \]
+        Since \([L(\alpha) : K] = [L(\alpha) : L][L : K] = [L(\alpha) : L]\cdot m = mn\), we can know that \([L(\alpha) : L] = n\).
+        In that case, we can know that the minimal polynomial of \(\alpha\) over \(L\) has degree of \(n\), which is \(f(x)\).
+        Since \(f(x)\) is the minimal polynomial of \(\alpha\) over \(L\), we can know that \(f(x)\) is irreducible in \(L[x]\). \(\blacksquare\)
+      </p>
+    </section>
 
     <section id = 'ku_2019_1_6'>
         <div class = 'question-box-container'>
