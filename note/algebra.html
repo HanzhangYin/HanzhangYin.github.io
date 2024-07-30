@@ -2950,7 +2950,8 @@
         Firstly, we have \([L(\alpha) : K] = [L(\alpha) : L][L : K]\), which implies that \(m = [L : K] \mid [L(\alpha) : K]\).
         Secondly, since \(L\) is an extension of \(K\), we can know that \(L(\alpha)\) is an extension of \(K(\alpha)\). Hence, we have
         \( [L(\alpha) : K] = [L(\alpha) : K(\alpha)][K(\alpha) : K]\), which implies that \(n = [K(\alpha) : K] \mid [L(\alpha) : K]\).
-        Since \(\gcd(n, m) = 1\), we can know that \(mn \mid [L(\alpha) : K]\), which implies that \(mn \leq [L(\alpha) : K]\).
+        Since \(\gcd(m, n)\cdot \text{lcm}(m, n) = mn\) and \(\gcd(m, n) = 1\), we can know that \(\text{lcm(m, n) = mn}\).
+        Since \(n\mid [L(\alpha) : K]\) and \(m \mid [L(\alpha) : K]\), we can know that \([L(\alpha) : K]\) is the common multiple of \(m\) and \(n\) and \(mn \mid [L(\alpha) : K]\), which implies that \(mn \leq [L(\alpha) : K]\).
         Thus, we showed that
         \[
         [L(\alpha) : K] = mn.
