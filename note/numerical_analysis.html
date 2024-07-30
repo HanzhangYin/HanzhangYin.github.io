@@ -2525,15 +2525,49 @@
         </div>
     </div>
     <p>
-        <b>Proof (a).</b> Suppose that the inital vector we pick is \(v = \begin{bmatrix} x \\ y \end{bmatrix}\) such that \(\|v\|_2=1\).
+        <b>Solution (a).</b> Suppose that the inital vector we pick is \(v = \begin{bmatrix} x \\ y \end{bmatrix}\) such that \(\|v\|_2=1\).
         Thus, we can find the Rayleigh quotient of \(A\) as
         \[
         r = \frac{v^*Av}{v^*v} = \frac{2\epsilon xy + y^2a}{x^2 + y^2} = 2\epsilon xy + ay^2.
         \]
         Then, we want to find th \(QR\) factorization of
         \[
-        A - rI = \begin{bmatrix} -r & \epsilon \\ \epsilon & a - r \end{bmatrix} = QR.
+        \begin{align}
+        A - rI &= \begin{bmatrix} -r & \epsilon \\ \epsilon & a - r \end{bmatrix} \\
+        &= \begin{bmatrix} -2\epsilon xy - ay^2 & \epsilon \\ \epsilon & a - 2\epsilon xy - ay^2 \end{bmatrix}.
+        \end{align}
         \]
+      We will use Given rotation to find the \(QR\) factorization of \(A - rI\).
+      We have
+      \[
+      \begin{bmatrix}
+      c & -s \\
+        s & c
+      \end{bmatrix}\cdot
+        \begin{bmatrix}
+        -2\epsilon xy - ay^2 \\ \epsilon
+      \end{bmatrix} =
+      \begin{bmatrix}
+      r \\ 0
+        \end{bmatrix}.
+      \]
+      Since \(r = \sqrt{(-2\epsilon xy - ay^2)^2 + \epsilon^2} = \sqrt{4\epsilon^2x^2y^2 + a^2y^4 + 4\epsilon^2y^2 + \epsilon^2}\), we have
+      \[
+      c = \frac{-2\epsilon xy - ay^2}{r} \quad \text{and} \quad s = \frac{\epsilon}{r}.
+      \]
+      Then, we have our \(R\) as
+      \[
+      Q = \begin{bmatrix}
+      \frac{-2\epsilon xy - ay^2}{r} & -\frac{\epsilon}{r} \\
+      \frac{\epsilon}{r} & \frac{-2\epsilon xy - ay^2}{r}
+      \end{bmatrix}\cdot \begin{bmatrix}
+        -2\epsilon xy - ay^2 & \epsilon \\
+        \epsilon & a - 2\epsilon xy - ay^2
+        \end{bmatrix} = \begin{bmatrix}
+        r & 0 \\
+        0 & -\frac{2\epsilon xy + ay^2}{r}
+        \end{bmatrix}.
+      \]
     </p>
     </section>
 
