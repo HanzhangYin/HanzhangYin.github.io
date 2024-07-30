@@ -21,7 +21,7 @@
     />
     <!--link for the font-->
     <link rel="stylesheet" type="text/css" href="note_style.css" />
-    <!--It is a link for css structure-->
+    <!--It is a link for CSS structure-->
     <script src="highlight.js"></script>
     <!--It is a link for highlight.js-->
     <title>Numerical Analysis</title>
@@ -214,7 +214,7 @@
         </li>
       </ul>
       <p>
-        <b>convergence Criteria.</b> The method typically converges if the
+        <b>Convergence Criteria.</b> The method typically converges if the
         initial guess \( x_0 \) is sufficiently close to the actual root, and \(
         f(x) \) is continuously differentiable in the neighborhood of the root.
       </p>
@@ -599,7 +599,7 @@
         Consequently, the integration formula (10.6), (10.7) will give the exact result for every polynomial of degree \( 2n + 1 \).
       </p>
         <p>
-            <b><i>"Introduction to Numerical Analysis", page. 282.</i></b>
+            <b><i>"Introduction to Numerical Analysis," page. 282.</i></b>
         </p>
       <p>
         <b>Theorem on Gaussian Formula with Error Term</b>
@@ -2042,7 +2042,37 @@
       </p>
     </section>
 
-    <h2 id = 'january_2020'>Qualify Exam Problems (January 2020)</h2>
+    <h2 id = 'august_2019'>Qualifying Exam Problems (August 2019)</h2>
+    <section id = 'ku_2019_1_5'>
+    <div class = 'question_box_container'>
+        <div class = 'question-box'>
+          <p>
+            <b>Problem 5.</b> Suppose \( A \in \mathbb{C}^{m \times n} \) with \( m \geq n \).
+          </p>
+          <p>
+            (a) Show that matrix \( A^*A \) is always Hermitian positive semi-definite.
+          </p>
+          <p>
+            (b) Show that \( \|A^*A\|_2 = \|A\|_2^2 \).
+          </p>
+          <p>
+            (c) Show that if \( \operatorname{rank}(A) = n \) then \( A^*A \) is invertible and \( \|A(A^*A)^{-1}A^*\|_2 = 1 \).
+          </p>
+          <p>
+            (d) Let \( A^\dagger \in \mathbb{C}^{n \times m} \) be the pseudoinverse (the Moore-Penrose inverse) of matrix \( A \) and suppose that \( \operatorname{rank}(A) = n \). Show that
+            \[
+            A^\dagger = (A^*A)^{-1}A^*.
+            \]
+          </p>
+        </div>
+    </div>
+      <p>
+        <b>Proof (a).</b>
+      </p>
+    </section>
+
+
+    <h2 id = 'january_2020'>Qualifying Exam Problems (January 2020)</h2>
     <div class = 'question_box_container'>
         <div class = 'question_box'>
     <p>
@@ -2368,13 +2398,13 @@
         \[
         \max_{\lambda\in\Lambda(A)}|\lambda|\leq \sigma_1, \qquad \min_{\lambda\in\Lambda(A)}|\lambda|\geq \sigma_n.
         \]
-        Also, prove that both the equalities hold if \(A\) is Hermitian, i.e., \(A\) satisfies \(A = A^*\), where \(A^*\) is the adjoint (conjugate transpose) of \(A\).
+        Also prove that both the equalities hold if \(A\) is Hermitian, i.e., \(A\) satisfies \(A = A^*\), where \(A^*\) is the adjoint (conjugate transpose) of \(A\).
         </p>
             </div>
         </div>
       <p>
         <b>Proof (a).</b>Firstly, we showed that \(\sigma_1 = \max\limits_{\|x\|_2 = 1}\|Ax\|_2\).
-        Since every matrix has \(SVD\), we defined that \(A = U\Sigma V^*\), where \(U, V\) are unitary matrices and \(\Sigma\) is a diagonal matrix with singular values on the diagonal.
+        Since every matrix has a \(SVD\), we defined that \(A = U\Sigma V^*\), where \(U, V\) are unitary matrices and \(\Sigma\) is a diagonal matrix with singular values on the diagonal.
         Moreover, let the \(\sigma_{11}\) entry of \(\Sigma\) be \(\sigma_1\) and the \(\sigma_{nn}\) entry of \(\Sigma\) be \(\sigma_n\).
         Let \(\vec{v}\) be the vector such that \(\|\vec{v}\|_2 = 1\) and \(\max\limits_{\|x\|_2 = 1}\|Ax\|_2 = \|Av\|_2\). And we denote \(V^*\vec{v} = \vec{u} = [u_1, \dots, u_n]^T\).
         Hence, we have
@@ -2881,7 +2911,7 @@
             (c) Show that the product \( RQ \) is also an upper Hessenberg matrix.
           </p>
           <p>
-            (d) Describe the \( QR \) method for computing all of the eigenvalues of matrix \( A \).
+            (d) Describe the \( QR \) method for computing all the eigenvalues of matrix \( A \).
           </p>
         </div>
       </div>
@@ -2940,7 +2970,7 @@
     <br>
 
 
-    <h2 id = 'january_2023'>Qualify Exam Problems (January 2023)</h2>
+    <h2 id = 'january_2023'>Qualifying Exam Problems (January 2023)</h2>
     <section id = 'ku_2023_1_4'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
@@ -3047,7 +3077,7 @@
       <div class = 'question-box-container'>
         <div class = 'question-box'>
           <p>
-            <b>6.</b> (a) State the Gerschgorin circle theorem. (HINT: Don't forget to state both parts of the theorem.)
+            <b>6.</b> (a) State the Gerschgorin circle theorem. (HINT: Please state both parts of the theorem.)
           </p>
           <p>
             (b) Suppose that \( D \in \mathbb{R}^{n \times n} \) is diagonal and \( E \in \mathbb{R}^{n \times n} \) is any matrix. Use the Gerschgorin circle theorem to show that if
