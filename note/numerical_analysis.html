@@ -2525,10 +2525,14 @@
         </div>
     </div>
     <p>
-        <b>Proof (a).</b> Suppose that the inital vector we pick is \(v = \begin{bmatrix} x \\ y \end{bmatrix}\).
+        <b>Proof (a).</b> Suppose that the inital vector we pick is \(v = \begin{bmatrix} x \\ y \end{bmatrix}\) such that \(\|v\|_2=1\).
         Thus, we can find the Rayleigh quotient of \(A\) as
         \[
-        r = \frac{v^*Av}{v^*v} = \frac{x^2\epsilon + y^2a}{x^2 + y^2}.
+        r = \frac{v^*Av}{v^*v} = \frac{2\epsilon xy + y^2a}{x^2 + y^2} = 2\epsilon xy + ay^2.
+        \]
+        Then, we want to find th \(QR\) factorization of
+        \[
+        A - rI = \begin{bmatrix} -r & \epsilon \\ \epsilon & a - r \end{bmatrix} = QR.
         \]
     </p>
     </section>
