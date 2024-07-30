@@ -2425,9 +2425,10 @@
         <p>
             <b>Proof (c).</b> Suppose that \(A\) has two \(LU\) factorizations, i.e., \(A = L_1U_1 = L_2U_2\), where \(L_1, L_2\) are lower triangular matrices and \(U_1, U_2\) are upper triangular matrices.
             Given the Guassian elimination, we know that both \(L_1\) and \(L_2\) have 1's on the diagonal.
-            Thus, we can know that \(\det(L_1) = \det(L_2) = 1\). Since \(\det(L_1U_1) = \det(L_2U_2)\), we have \(\det(L_1)\det(U_1) = \det(L_2)\det(U_2)\).
-            Then, we can get \(\det(U_1) = \det(U_2) = \det(A) >0\).
-=
+            And the inverse of \(L_1\) is the matrix such as all the diagonal entries are 1 and if \((i, j)\)-entry of \(L_1\) is \(l_{ij}\) where \(i\neq j\), then the \((i, j)\)-entry of the inverse of \(L_1\) is \(-l_{ij}\).
+            Hence, we can know that the inverse of \(L_1\) is also a lower triangular matrix.
+            Given that \(L_1U_1 = L_2U_2\), we have \(L_1^{-1}L_2 = U_1U_2^{-1}\).
+            Since we can know that \(L_1U_1 = L_2U_2\), we have \(L_1^{-1}L_2 = U_1U_2^{-1}\). (to be continued ... )
         </p>
     </section>
 
