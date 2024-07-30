@@ -3043,7 +3043,7 @@
         </p>
     </section>
 
-    <section>
+    <section id = 'ku_2019_8_4'>
       <div class = 'question-box-container'>
         <div class = 'question-box'>
           <p>
@@ -3099,6 +3099,29 @@
         Given that \([G:\ker(\varphi)]\mid |G|\) and \(|G|\) is odd, we have \([G:\ker(\varphi)] = 1\).
         Thus, we can see that \(\varphi(G) = \{e\}\), which implies that \(\ker(\varphi) = G\). And \(\ker(\varphi) = \{g\in G\mid \varphi(g) = e\}\), which implies that \(gng^{-1} = n\) for all \(n\in N\).
         Therefore, we can get that \(N\leq Z(G)\). \(\blacksquare\)
+      </p>
+    </section>
+
+    <section id = 'ku_2019_8_6'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>6.</b> Consider the polynomial \( p(x) = x^3 - 2 \in \mathbb{Q}[x] \). Find \( \alpha, \beta \in \mathbb{C} \) for which \( F = \mathbb{Q}(\alpha, \beta) \) is a splitting field for \( p(x) \), and prove that this is the case. Then find, with justification, the degree of the field extension \( \mathbb{Q} \subseteq F \).
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Solution (6).</b> Firstly, we want to find the all the roots of \(p(x)\).
+        Suppose that \(a\) is the root of \(p(x)\). Then we have \(p(a) = a^3 - 2 = 0\) and \(a^3 = 2\).
+        Hence, we can know that \(a^3\) is a cube of \(2\). Thus, we can know that \(a = \sqrt[3]{2}\), which is a real number.
+        Now, if \(a^3 = 2\cos(2\pi) + 2\sin(2\pi)i = 2(\cos(2\pi) + sin(2\pi)i) = 2e^{2\pi i}\), then we have \(a = \sqrt[3]{2}e^{2\pi i/3}\).
+        Hence, \(a = \sqrt[3]{2}(\cos(2pi/3) + \sin(2\pi/3)i) = \sqrt[3]{2}(-1/2 + \sqrt{3}/2i)\).
+        Similarly, we can have \(a^3 = 2\cos(-2\pi) + 2\sin(-2\pi)i = 2e^{-2\pi i}\), which implies that \(a = \sqrt[3]{2}e^{-2\pi i/3}\).
+        Hence, we have \(a = \sqrt[3]{2}(\cos(-2pi/3) + \sin(-2\pi/3)i) = \sqrt[3]{2}(-1/2 - \sqrt{3}/2i)\).
+        Then, we have the three distinct roots of \(p(x)\), which are
+        \[
+        a_1 = \sqrt[3]{2},\quad a_2 = \sqrt[3]{2}(-1/2 + \sqrt{3}/2i),\quad a_3 = \sqrt[3]{2}(-1/2 - \sqrt{3}/2i).
+        \]
       </p>
     </section>
 
