@@ -1782,8 +1782,10 @@
         <p>
         <b>Solution (ii).</b> If \(\mu_A = x\), then we have \(A = 0\). Hence, the Jordan canonical form of \(A\) is \(0\).
         If \(\mu_A = x - 1\), then we have \(A = I\). Hence, the Jordan canonical form of \(A\) is \(I\).
-        If \(\mu_A = x(x - 1)\), then we have the Jordan canonical form of \(A\) could be any diagonal matrix with eigenvalues \(0\) and \(1\).
-        If \(A\) is not diagonalizable, (to be continued...)
+        If \(\mu_A = x(x - 1)\), then we want to prove that the Jordan Canonical Form of \(A\) is a diagonal matrix with \(0\) and \(1\) on the diagonal entries.
+          Since \(W = \{v\in \mathbb{R}^n \mid Av = v\}\), we can know that \(W = \ker(A - I)\).
+          Given that \(\text{dim}\ker(A) + \text{dim}W = n\), we have \(\text{dim}\ker(A - 0\cdot I) + \text{dim}\ker(A - I) = n\).
+          Thus, we can know that \(A\) is diagonalizable. Hence, the Jordan Canonical Form of \(A\) is a diagonal matrix with \(0\) and \(1\) on the diagonal entries.
         </p>
         <p>
         <b>Proof (iii).</b> Suppose that \(A\) is a symmetric matrix. Then we have \(A = A^T = A^*\) since \(A\) is a real matrix.
