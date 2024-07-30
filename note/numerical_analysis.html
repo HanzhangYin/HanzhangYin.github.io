@@ -2292,7 +2292,7 @@
 
     <br>
 
-    <section>
+    <section id = 'ku_2020_8_2'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
       <p>
@@ -2349,7 +2349,7 @@
 
     <br>
 
-    <section>
+    <section id = 'ku_2020_8_3'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
       <p>
@@ -2380,7 +2380,53 @@
       </p>
     </section>
 
-    <br>
+    <section id = 'ku_2020_8_4'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
+                <p>
+                    <b>4.</b> Suppose that the real square matrix \( A = [a_{ij}] \in \mathbb{R}^{n \times n} \) has the properties
+                    \[
+                    a_{ii} > \sum_{j=1, j \neq i}^{n} |a_{ij}| = |a_{i1}| + \ldots + |a_{i,i-1}| + |a_{i,i+1}| + \ldots + |a_{in}|, \quad i = 1, 2, \ldots, n.
+                    \]
+                </p>
+                <p>
+                    (a) Prove that each eigenvalue of \( A \) has a positive real part.
+                </p>
+                <p>
+                    (b) Prove \( \det A > 0 \).
+                </p>
+                <p>
+                    (c) Prove that \( A \) has a unique LU factorization \( A = LU \), where \( L \) is unit lower triangular and \( U \) is upper triangular. Also, prove that all the diagonal entries of \( U \) are positive.
+                </p>
+            </div>
+        </div>
+        <p>
+            <b>Proof (a).</b> Since \(a_{ii} > \sum_{j=1, j \neq i}^{n} |a_{ij}| = |a_{i1}| + \ldots + |a_{i,i-1}| + |a_{i,i+1}| + \ldots + |a_{in}|\) for \(i = 1, 2, \ldots, n\).
+            According to \(\textbf{the Gershgorin circle theorem}\), we have each eigenvalue of \(A\) \(\mu\) is in at least one of the Gershgorin discs, which is defined as
+            \[
+                |\mu- a_{ii}| \leq \sum_{j=1, j \neq i}^{n} |a_{ij}|.
+            \]
+            Since \(a_ii>0\) and the radius of the dist is less than \(a_ii\), we can know that each disk is only in the right half plane.
+            Therefore, each eigenvalue of \(A\) has a positive real part. \(\blacksquare\)
+        </p>
+        <p>
+            <b>Proof (b).</b> Suppose that \(\lambda_1, \lambda_2, \dots, \lambda_n\) are the eigenvalues of \(A\).
+            If each \(\lambda_i\) is real, then we can know that each \(\lambda_i>0\), and hence \(\det A = \lambda_1\lambda_2\cdots\lambda_n > 0\).
+            If there exists some complex eigenvalue, then we want to show that the complex conjugate of the eigenvalue is also the eigenvalue of \(A\).
+            Suppose that \(p(x) = \text{det}(A - xI)\) is the characteristic polynomial of \(A\) and \(\lambda\) is a complex eigenvalue of \(A\).
+            Firstly, we have \(p(x) = x^n + a_{n-1}x^{n-1} + \ldots + a_1x + a_0\), where \(a_i \in \mathbb{R}\).
+            Then we can know that \(p(\lambda) = \lambda^n + a_{n-1}\lambda^{n-1} + \ldots + a_1\lambda + a_0 = 0\).
+            Since \(\overline{p(\lambda)} = \overline{0} = 0\), we have
+            \[
+            \overline{p(\lambda)} = \overline{\lambda^n + a_{n-1}\lambda^{n-1} + \ldots + a_1\lambda + a_0} = \overline{\lambda}^n + a_{n-1}\overline{\lambda}^{n-1} + \ldots + a_1\overline{\lambda} + a_0 = 0.
+            \]
+            Therefore, we can know that the complex conjugate of the eigenvalue is also the eigenvalue of \(A\). And \(\lambda\cdot \overline{\lambda} = a^2 + b^2 >0\), where \(\lambda = a + bi\).
+            Hence, we can know that \(\det A > 0\). \(\blacksquare\)
+        </p>
+        <p>
+            <b>Proof (c).</b>
+        </p>
+    </section>
 
     <section>
         <div class = 'question-box-container'>
