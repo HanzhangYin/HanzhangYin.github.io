@@ -3088,6 +3088,21 @@
         |\mu_i - d_{ii}| &\leq |e_{i,1}| + \dots + |e_{i, i-1}| + |e_{i, i}| + |e_{i, i+1}| + \dots + |e_{i, n}| \leq \|E\|_\infty.
         \end{align}
         \]
+        Now, we want to show that each disk is disjoint.
+        We pick two \( i \) and \( j \) such that \( i \neq j \). Suppose that disk \(D_i\) is centered at \((0, d_{ii} + e_{ii})\) and has radius \(r_i = \sum_{k\neq i} |e_{ik}|\). Disk \(D_j\) is centered at \((0, d_{jj} + e_{jj})\) and has radius \(r_j = \sum_{k\neq j} |e_{jk}|\).
+        Then, we have
+        \[
+        \begin{align}
+        \|E\|_\infty\leq \|E\|_\infty + \dfrac{|e_{ii} - e_{jj}|}{2} &< \dfrac{|d_{ii} - d_{jj}|}{2} + \dfrac{|e_{ii} - e_{jj}|}{2} \leq \dfrac{|d_{ii} + e_{ii} - (d_{jj} + e_{jj})|}{2} \\
+        r_i = \sum_{k\neq i} |e_{ik}|<\|E\|_\infty &< \dfrac{|d_{ii} + e_{ii} - (d_{jj} + e_{jj})|}{2} \\
+        r_j = \sum_{k\neq j} |e_{jk}|<\|E\|_\infty &< \dfrac{|d_{ii} + e_{ii} - (d_{jj} + e_{jj})|}{2}.
+        \end{align}
+        \]
+        Thus, we can know that the disks are disjoint. Therefore, we can know that there exists an ordering of the eigenvalues of \( D + E \), \( \mu_1, \mu_2, \mu_3, \ldots, \mu_n \) such that
+        \[
+        |d_{ii} - \mu_i| < \|E\|_\infty
+        \]
+        for all \( i = 1, 2, 3, \ldots, n \) by the second part of the \(\textbf{Gerschgorin circle theorem}\). \( \blacksquare \)
       </p>
     </section>
 
