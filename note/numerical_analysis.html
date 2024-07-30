@@ -162,8 +162,7 @@
     <section id = 'orders_of_convergence'>
       <h2>Orders of Convergence</h2>
       <p>
-        Let \(\{x_n\}\) be a sequence of real numbers tending to a limit \( x^* \). We say that the rate of convergence is at least <b>linear</b> if there are a constant \( c < 1 \) and an integer \( N \) such that
-
+        Let \(\{x_n\}\) be a sequence of real numbers tending to a limit \( x^* \). We say that the rate of convergence is at least <b>linear</b> if there are a constant \( c \lt 1 \) and an integer \( N \) such that
         \[
         |x_{n+1} - x^*| \le c |x_n - x^*| \quad (n \ge N)
         \]
@@ -2424,7 +2423,11 @@
             Hence, we can know that \(\det A > 0\). \(\blacksquare\)
         </p>
         <p>
-            <b>Proof (c).</b>
+            <b>Proof (c).</b> Suppose that \(A\) has two \(LU\) factorizations, i.e., \(A = L_1U_1 = L_2U_2\), where \(L_1, L_2\) are lower triangular matrices and \(U_1, U_2\) are upper triangular matrices.
+            Given the Guassian elimination, we know that both \(L_1\) and \(L_2\) have 1's on the diagonal.
+            Thus, we can know that \(\det(L_1) = \det(L_2) = 1\). Since \(\det(L_1U_1) = \det(L_2U_2)\), we have \(\det(L_1)\det(U_1) = \det(L_2)\det(U_2)\).
+            Then, we can get \(\det(U_1) = \det(U_2) = \det(A) >0\).
+=
         </p>
     </section>
 
