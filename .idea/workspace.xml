@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/numerical_analysis.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/numerical_analysis.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +25,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/HanzhangYin/HanzhangYin.github.io.git",
-    "accountId": "eda1f9c9-9d3d-4a5c-aa6b-f6d650736203"
+    "accountId": "e5b773df-a675-4f5d-b028-e7de16257521"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -79,6 +82,7 @@
       <workItem from="1718492458951" duration="6549000" />
       <workItem from="1718560262062" duration="7400000" />
       <workItem from="1722180928558" duration="4000" />
+      <workItem from="1722264486459" duration="1349000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -368,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718581187567</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="update">
+      <option name="closed" value="true" />
+      <created>1722264640418</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1722264640418</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
