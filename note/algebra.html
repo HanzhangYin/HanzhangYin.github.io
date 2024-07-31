@@ -2515,7 +2515,9 @@
       <div class = 'question-box-container'>
         <div class = 'question-box'>
           <p>
-            <b>Question 4.</b> 1. Let \( V \) be a finite dimensional vector space over a field \( F \) and \( T : V \to V \) be a linear transformation. Let \( F[T] \) denote the ring of all linear transformations on \( V \) that can be expressed as a polynomial in \( T \). Assume that no nonzero subspace of \( V \) is mapped into itself by \( T \).
+            <b>Question 4.</b> 1. Let \( V \) be a finite dimensional vector space over a field \( F \) and \( T : V \to V \) be a linear transformation.
+            Let \( F[T] \) denote the ring of all linear transformations on \( V \) that can be expressed as a polynomial in \( T \).
+            Assume that no nonzero subspace of \( V \) is mapped into itself by \( T \).
           </p>
           <p>
             (a) If \( 0 \ne S \in F[T] \), show that the null space of \( S \) is zero.
@@ -2529,7 +2531,11 @@
         </div>
       </div>
       <p>
-        <b>Proof (a).</b> We will prove that the null space of \(S\) is zero by contradiction. Firstly, we can know that all polynomials in \(F[T]\) has degree at most \(n\).
+        <b>Proof (a).</b> We will prove that the null space of \(S\) is zero by contradiction.
+        Since \(T\) does not map nonzero subspace of \(V\) into itself, we can know that there are only two \(T\)-invariant subspaces of \(V\): \(\{0\}\) and \(V\).
+        Hence, we can know that \(T\) is an irreducible operator. If \(T\) is an irreducible operator, then we can know that the minimal polynomial of \(T\) is irreducible and \(T\) is cyclic.
+        It means that \(V = \langle T, v\rangle\) for some \(v\in V\).
+        Firstly, we can know that all polynomials in \(F[T]\) has degree at most \(n\).
         Suppose that \(\text{Null}(S) \ne \{0\}\). Then, we can find a nonzero vector \(v\in V\) such that \(Sv = 0\).
         And we have \(\text{Null}(S) = \{0, v_1, v_2, \dots \}\). (to be continued ...)
       </p>
