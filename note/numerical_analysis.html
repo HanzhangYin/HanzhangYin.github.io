@@ -2424,7 +2424,7 @@
         </p>
         <p>
             <b>Proof (c).</b> Suppose that \(A\) has two \(LU\) factorizations, i.e., \(A = L_1U_1 = L_2U_2\), where \(L_1, L_2\) are lower triangular matrices and \(U_1, U_2\) are upper triangular matrices.
-            Given the Guassian elimination, we know that both \(L_1\) and \(L_2\) have 1's on the diagonal.
+            Given the Gaussian elimination, we know that both \(L_1\) and \(L_2\) have 1's on the diagonal.
             And the inverse of \(L_1\) is the matrix such as all the diagonal entries are 1 and if \((i, j)\)-entry of \(L_1\) is \(l_{ij}\) where \(i\neq j\), then the \((i, j)\)-entry of the inverse of \(L_1\) is \(-l_{ij}\).
             Hence, we can know that the inverse of \(L_1\) is also a lower triangular matrix.
             Given that \(L_1U_1 = L_2U_2\), we have \(L_1^{-1}L_2 = U_1U_2^{-1}\).
@@ -2525,7 +2525,7 @@
         </div>
     </div>
     <p>
-        <b>Solution (a).</b> Suppose that the inital vector we pick is \(v = \begin{bmatrix} x \\ y \end{bmatrix}\) such that \(\|v\|_2=1\).
+        <b>Solution (a).</b> Suppose that the initial vector we pick is \(v = \begin{bmatrix} x \\ y \end{bmatrix}\) such that \(\|v\|_2=1\).
         Thus, we can find the Rayleigh quotient of \(A\) as
         \[
         r = \frac{v^*Av}{v^*v} = \frac{2\epsilon xy + y^2a}{x^2 + y^2} = 2\epsilon xy + ay^2.
