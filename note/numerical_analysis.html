@@ -2067,7 +2067,29 @@
         </div>
     </div>
       <p>
-        <b>Proof (a).</b>
+        <b>Proof (a).</b> Let \(x\in \mathbb{C}^n\) and we denote \(Ax = y\in \mathbb{C}^m\). Then, we have
+        \[
+        x^*A^*Ay = (Ax)^*(Ax) = \|Ax\|_2^2 = \|y\|_2^2\geq 0,
+        \]
+        for any \(x\in \mathbb{R}^n\). Thus, we can know that \(A^*A\) is Hermitian positive semi-definite. \( \blacksquare \)
+      </p>
+      <p>
+        <b>Proof (b).</b> We denote the SVD of \(A\) as \(A = U\Sigma V^*\), where \(U\in \mathbb{C}^{m\times m}\) and \(V\in \mathbb{C}^{n\times n}\) are unitary matrices, and \(\Sigma\in \mathbb{R}^{m\times n}\) is a diagonal matrix with non-negative real numbers on the diagonal.
+        Suppose that \(\Sigma_{1,1}\geq \Sigma_{2,2}\geq \cdots \geq \Sigma_{n,n} \geq 0\).
+        Since the 2-norm of a matrix is the largest singular value of the matrix, we have \(\|A\|_2 = \Sigma_{1,1}\).
+        Besides that, we can know that \(\Sigma_{1, 1}^2 \geq \Sigma_{2, 2}^2 \geq \cdots \geq \Sigma_{n, n}^2 \geq 0\).
+        \[
+        A^*A = V\Sigma^*U^*U\Sigma V^* = V\Sigma^*\Sigma V^* = V\Sigma\Sigma V^* = V\Sigma^2 V^*.
+        \]
+        Since \(\Sigma_{1, 1}^2\) is the \((1, 1)\)-entry of \(\Sigma^2\), we can know that \(\|\Sigma^2\|_2 = \Sigma_{1, 1}^2\).
+        Then, we can get
+        \[
+        \|A^*A\|_2 = \|V\Sigma^2 V^*\|_2 &= \|\Sigma^2\|_2 = \|\Sigma^2\|_2 = \Sigma_{1, 1}^2.
+        \]
+        Thus, we can know that
+        \[
+        \|A^*A\|_2 = \|A\|_2^2. \tag*{\(\blacksquare\)}
+        \]
       </p>
     </section>
 
