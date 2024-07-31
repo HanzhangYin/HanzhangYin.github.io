@@ -3170,12 +3170,16 @@
         Then, we have
         \[
         \begin{align}
-        \|E\|_\infty\leq \|E\|_\infty + \dfrac{|e_{ii} - e_{jj}|}{2} &< \dfrac{|d_{ii} - d_{jj}|}{2} + \dfrac{|e_{ii} - e_{jj}|}{2} \leq \dfrac{|d_{ii} + e_{ii} - (d_{jj} + e_{jj})|}{2} \\
-        r_i = \sum_{k\neq i} |e_{ik}|<\|E\|_\infty &< \dfrac{|d_{ii} + e_{ii} - (d_{jj} + e_{jj})|}{2} \\
-        r_j = \sum_{k\neq j} |e_{jk}|<\|E\|_\infty &< \dfrac{|d_{ii} + e_{ii} - (d_{jj} + e_{jj})|}{2}.
+        2\|E\|_\infty - |e_{ii}| - |e_{jj}| \leq 2\|E\|_\infty - |e_{ii} - e_{jj}| &< |d_{ii} - d_{jj}| - |e_{ii} - e_{jj}| \leq |d_{ii} + e_{ii} - (d_{jj} + e_{jj})| \\
+        r_i + r_j + |e_{ii}| + |e_jj| &\leq 2\|E\|_\infty, \\
+        r_i + r_j &\leq 2\|E\|_\infty - |e_{ii}| - |e_{jj}|.
         \end{align}
         \]
-        Thus, we can know that the disks are disjoint. Therefore, we can know that there exists an ordering of the eigenvalues of \( D + E \), \( \mu_1, \mu_2, \mu_3, \ldots, \mu_n \) such that
+        Thus, we have
+        \[
+        r_i + r_j\leq |d_{ii} + e_{ii} - (d_{jj} + e_{jj})|,
+        ]
+        and we can know that the disks are disjoint. Therefore, there exists an ordering of the eigenvalues of \( D + E \), \( \mu_1, \mu_2, \mu_3, \ldots, \mu_n \) such that
         \[
         |d_{ii} - \mu_i| < \|E\|_\infty
         \]
