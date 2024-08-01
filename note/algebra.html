@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
-    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for CSS structure-->
     <title>Algebra</title>
   </head>
   <body>
@@ -160,7 +160,7 @@
         <b>Definition.</b> Suppose \( V \) is finite-dimensional and \( T \in \mathcal{L}(V) \). Then the <b>minimal polynomial</b> of \( T \) is the unique monic polynomial \( p \in \mathcal{P}(F) \) of smallest degree such that \( p(T) = 0 \).
       </p>
       <p>
-        <i><b>"Linear Algebra Done Right (4th Edition)", Page 145</b></i>
+        <i><b>"Linear Algebra Done Right (Forth Edition)", Page 145</b></i>
       </p>
       <p>
         <b>Definition (Order Ideal).</b>
@@ -2531,12 +2531,12 @@
         \[
         \epsilon^4 + \epsilon^3 + \epsilon^2 + \epsilon + 1 = 0.
         \]
-        Now we denote \(p(x) = x^4 + x^3 + x^2 + x + 1\). We can know that \(p(\epsilon) = 0\) and we want to show that \(p(x)\) is irreducible over \(\mathbb{Q}\) by contradiciton.
+        Now we denote \(p(x) = x^4 + x^3 + x^2 + x + 1\). We can know that \(p(\epsilon) = 0\) and we want to show that \(p(x)\) is irreducible over \(\mathbb{Q}\) by contradiction.
         Suppose that \(p(x)\) is reducible. Then we can get that
         \[
         p(x + 1) = \dfrac{(x + 1)^5 - 1}{x + 1 - 1} = \dfrac{x^5 + 5x^4 + 10x^3 + 10x^2 + 5x + 1 - 1}{x} = x^4 + 5x^3 + 10x^2 + 10x + 5.
         \]
-        According to the \(\textbf{Eisentein's Criirion}\), we can know that \(p(x + 1)\) is irreducible.
+        According to the \(\textbf{Eisenstein's Criterion}\), we can know that \(p(x + 1)\) is irreducible.
         If \(p(x)\) is reducible, then we can have \(p(x) = f(x)g(x)\) where \(f(x), g(x)\in \mathbb{Q}[x]\) and \(f(x)\) and \(g(x)\) are non-constant.
         Hence, we can have \(p(x + 1) = f(x + 1)g(x + 1)\), which implies that \(p(x+1)\) is reducible. Hence, it is a contradiction.
         Now, we have shown that \(p(x) = x^4 + x^3 + x^2 + x +1 \) is irreducible and \(\epsilon\) is a root of \(p(x)\). It means that \(p(x)\) is a minimal polynomial of \(\epsilon\).
@@ -2546,7 +2546,7 @@
           <b>Solution (b).</b> Since we know that \(\epsilon\) is a primitive \(5^{\text{th}}\) root of unity, we can know that \(\epsilon, \epsilon^2, \epsilon^3, \epsilon^4, 1\) are the roots of \(x^5 - 1\).
           However, none of elements of \(\{\epsilon^2, \epsilon^3, \epsilon^4\}\) is a root of \(x - 1\). We can know that \(\epsilon^2, \epsilon^3, \epsilon^4\) are roots of \(p(x)\).
           It is not hard to see that \(\{\epsilon^2, \epsilon^3, \epsilon^4\}\subset \mathbb{Q}(\epsilon)\), which implies that \(\mathbb{Q}(\epsilon)\) is a splitting field of \(p(x)\).
-          Again, since \(\epsilon\) is the \(5^{\text{th}}\) root of unity, \(\epsilon^2, \epsilon^3, \epsilon^4\) are all different, which implies that \(p(x)\) is seperatble.
+          Again, since \(\epsilon\) is the \(5^{\text{th}}\) root of unity, \(\epsilon^2, \epsilon^3, \epsilon^4\) are all different, which implies that \(p(x)\) is separable.
           Thus, we can know that \(\mathbb{Q}(\epsilon)\) is galois and \(|\text{Gal}(\mathbb{Q}(\epsilon)/\mathbb{Q})| = [\mathbb{Q}(\epsilon): \mathbb{Q}] = 4\).
           Since \(\text{Gal}(\mathbb{Q}(\epsilon)/\mathbb{Q})\) is a group of order \(4\), and all groups of order \(4\) are either isomorphic to \(\mathbb{Z}/4\mathbb{Z}\) or \(\mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\).
           Since both of them have subgroups of order \(2\), according to \(\textbf{Galois Correspondence Theorem}\), there exists a Intermediate Field \(K\) such that \([F : K] = 2\).
