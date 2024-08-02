@@ -3536,7 +3536,7 @@
       </div>
       <p>
         <b>Solution (a).</b> Firstly, we want to find all the maximal ideals of \(\mathbb{Z}/12\mathbb{Z}\).
-        According to the \(Correspondence Theorem of Rings\), we can know the maximal ideals \(M\) of \(\mathbb{Z}\), which contains \(12\mathbb{Z}\) can be mapped to \(M/\langle 12 \rangle\) in \(\mathbb{Z}/12\mathbb{Z}\), which is a maximal ideal of \(\mathbb{Z}/12\mathbb{Z}\).
+        According to the \(\textbt{Correspondence Theorem of Rings}\), we can know the maximal ideals \(M\) of \(\mathbb{Z}\), which contains \(12\mathbb{Z}\) can be mapped to \(M/\langle 12 \rangle\) in \(\mathbb{Z}/12\mathbb{Z}\), which is a maximal ideal of \(\mathbb{Z}/12\mathbb{Z}\).
         Since \(\mathbb{Z}\) is a PID, any ideal \(I\) of \(\mathbb{Z}\) can be written as \(a\mathbb{Z}\) where \(a\in \mathbb{Z}\).
         If \(12\mathbb{Z}\subset a\mathbb{Z}\), we can know that \(a\mid 12\). Thus, we can know that \(\mathbb{Z}, 2\mathbb{Z}, 3\mathbb{Z}, 4\mathbb{Z}, 6\mathbb{Z}, 12\mathbb{Z}\) are ideals containing \(12\mathbb{Z}\).
         And \(a\mathbb{Z}\) is a maximal ideal if and only if \(a\mathbb{Z}\) is a prime ideal since \(\mathbb{Z}\) is a PID.
@@ -3560,6 +3560,9 @@
       </p>
       <p>
         For the other direction, suppose that \(rs - 1\) is a unit for any \(s\in R\). Then, we can know that \(r\cdot 1 - 1 = r- 1\) is a unit.
+        Then, we can know that \(r\) is not a unit by contradiction. Suppose that \(r\) is a unit then there exists \(a\in R\) such that \(ra = 1\).
+        It means that \(ra - 1 = 0\) for some \(a\in R\), which implies that \(ra - 1\) is not a unit. Thus, it is a contradiction. Thus, \(r\) is not a unit.
+        Then, we can know that \(\langle r\rangle\) is a proper ideal of \(R\), which means that \(ra\) is not a unit for any \(a\in R\).
       </p>
     </section>
 
