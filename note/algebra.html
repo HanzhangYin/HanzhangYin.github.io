@@ -3552,7 +3552,27 @@
         \]
         In that case, we can know that \(\langle x^2, y - 5\rangle \subset \langle x, y - 5\rangle\).
         Now, we want to show that \(\langle x, y - 5\rangle\) is a maximal ideal by showing that \(\mathbb{Q}[x, y]/\langle x, y - 5\rangle\) is a field.
-        Firstly, we can know that \(\mathbb{Q}[x, y]/(x, y - 5) \cong \mathbb{Q}[y](y - 5)\).
+        Out first step is to show that \(\mathbb{Q}[x, y]/(x, y - 5) \cong \mathbb{Q}[y](y - 5)\).
+        Define a map \(\psi: \mathbb{Q}[x, y]/(x, y-5)\to \mathbb{Q}[y](y - 5)\) such that \(\psi(f(x, y) + (x, y - 5)) = f(0, y) + (y - 5)\).
+        Let \(g(x, y), f(x, y)\in \mathbb{Q}[x, y]\), we can have
+        \[
+        \begin{align}
+        \psi(g(x, y) + f(x, y) + (x, y-5)) &= g(0, y) + f(0, y) + (y - 5),\\
+        \psi(g(x, y)\cdot f(x, y) + (x, y - 5)) &= g(0, y)\cdot f(0, y) + (y - 5).
+        \end{align}
+        \]
+        Hence, we can know that \(\psi\) is a ring homomorphism.
+        Since \(\ker(\psi) = \{f(x, y) + (x, y-5) \mid f(0, y) \in (y-5)\}\), we can know that \(f(0, y) = (y-5) g(y)\) for some \(g(y)\in \mathbb{Q}[y]\).
+        It means that \(f(x, y) = x\cdot h(x, y) + (y - 5)\cdot g(y)\) for some \(h(x, y)\in \mathbb{Q}[x, y]\), which implies that \(f(x, y)\in \langle x, y - 5\rangle\).
+        Hence, we have \(\ker(\psi) = \langle x, y - 5\rangle\), which is trivial and we are able to conclude that \(\psi\) is an injective ring homomorphism.
+        Now, for any \(f(y) + (y-5)\in \mathbb{Q}[y]\), we define \(f(x, y) = f(y) + x\). Then, we can have
+        \[
+        \psi(f(x, y) + (x, y-5) = f(0, y) + (y - 5) = f(y) + (y - 5).
+        \]
+        Hence, we have \(\psi\) is also a surjective ring homomorphism. And we can know that \(\psi\) is an isomorphism. Therefore, we have
+        \[
+        \mathbb{Q}[x, y]/(x, y-5)\cong \mathbb{Q}[y](y - 5).
+        \]
         Then, we will use the \(\textbf{First Isomorphism Theorem}\) to show that \(\mathbb{Q}[y](y - 5)\) is a field.
         We define a map \(\varphi: \mathbb{Q][y]\to \mathbb{Q}\) such that \(\varphi(f(x)) = f(5)\).
         Let \(f(y), g(y)\in \mathbb{Q}[y]\). We can get
