@@ -3594,7 +3594,23 @@
         \mathbb{Q}[y]/\ker(\varphi) = \mathbb{Q}[y]/\langle y - 5\rangle \cong \mathbb{Q}.
         \]
         Hence, we have shown that \(\mathbb{Q}[x, y]/\langle x, y - 5\rangle \cong \mathbb{Q}/\langle y - 5\rangle \cong \mathbb{Q}\), which is a field.
-        And we can conclude that \(\langle x, y - 5\rangle \) is a maximal ideal.
+        And we can conclude that \(\langle x, y - 5\rangle \) is a maximal ideal. Now, we want to show that if \((x^2, y-5)\subset M\) where \(M\) is a maximal ideal,
+        we can have \(x\in M\) by contradiction.
+        Suppose that \(x\notin M\) and \(\langle x^2, y-5\rangle \subset M\). Hence, we can know that \(M\neq M + \langle x\rangle\) since \(0\in M\) and \(x\in \langle x\rangle\) and \( 0 + x = x\in M + \langle x\rangle \).
+        Given that \(M\) is a maximal ideal, we can conclude that \(M + \langle x \rangle  = R = \mathbb{Q}[x, y]\).
+        Since \(1\in \mathbb{Q}[x, y]\), there exists \(f(x, y)\in \mathbb{Q}[x, y]\) and \(m(x, y)\in M\) such that
+        \[
+        \begin{align}
+        m(x, y) + x\cdot f(x, y) &= 1, \\
+        m(x, y) &= 1 - x\cdot f(x, y), \\
+        x\cdot m(x, y) &= x - x^2\cdot f(x, y).
+        \end{align}
+        \]
+        Since \(m(x, y)\in M\), we have \(x\cdot m(x, y)\in M\) and \(x - x^2 \cdot f(x, y)\in M\). Again, we know that \(x^2\in M\) by assumption, so we have \(x^2 \cdot f(x, y)\in M\).
+        Hence, \(x - x^2\cdot f(x, y) + x^2\cdot f(x, y) = x\in M\), which is a contradiction. Therefore, we can know that \(x\in M\).
+        In that case, we can know that for any maximal ideal containing \((x^2, y-5)\), it must contain \(x\) and \(y - 5\). Therefore, we can know that \(\langle x, y-5\rangle \subset M\) for all maximal ideals \(M\) containing \((x^2, y-5)\).
+        And \(\langle x, y-5\rangle\) is a maximal ideal, which implies that there is only one maximal ideal containing \((x^2, y-5)\), which is \(\langle x, y-5\rangle\).
+        According to the \(\textbf{Correspondence Theorem of Rings}\), we can know that \(J(\mathbb{Q}[x, y]/\langle x^2, y-5\rangle) = \langle x, y-5\rangle/\langle x^2, y-5\rangle \).
       </p>
       <p>
         <b>Proof (b).</b> We firstly showed that if \(r\in J(R)\), then we can know that \(rs - 1\) for any \(s\in R\).
