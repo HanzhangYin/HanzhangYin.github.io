@@ -3562,7 +3562,15 @@
         For the other direction, suppose that \(rs - 1\) is a unit for any \(s\in R\). Then, we can know that \(r\cdot 1 - 1 = r- 1\) is a unit.
         Then, we can know that \(r\) is not a unit by contradiction. Suppose that \(r\) is a unit then there exists \(a\in R\) such that \(ra = 1\).
         It means that \(ra - 1 = 0\) for some \(a\in R\), which implies that \(ra - 1\) is not a unit. Thus, it is a contradiction. Thus, \(r\) is not a unit.
-        Then, we can know that \(\langle r\rangle\) is a proper ideal of \(R\), which means that \(ra\) is not a unit for any \(a\in R\).
+        Then, we can know that \(\langle r\rangle\) is a proper ideal of \(R\).
+        Now, we want to show that \(\langle r \rangle \subset M\) for any maximal ideal \(M\) by contradiction.
+        Suppose that there exists a maximal ideal \(M\) such that \(\langle r \rangle \not\subset M\).
+        Then, we can know that \(\langle r \rangle + M \) is an ideal strictly containing \(M\).
+        Since \(M\) is a maximal ideal, we can know that \(\langle r \rangle + M = R\).
+        Thus, we can know that there exists \(m\in M\) and \(ra\in \langle r \rangle\) such that \(mb + rab = 1\) for some \(b\in R\).
+        It shows that \(rab - 1 = -mb\). Since \(rab - 1\) is a unit by assumption, we can know that \(-mb\) is a unit.
+        However, \(-mb\in M\) and \(M\) is a proper ideal, which implies that \(-mb\) is not a unit. Thus, it is a contradiction.
+        Therefore, \(\langle r \rangle \subset M\) for any maximal ideal \(M\). Hence, we can know that \(r\in J(R)\). \(\blacksquare\)
       </p>
     </section>
 
