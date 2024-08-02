@@ -3546,6 +3546,35 @@
       </p>
       <p>
         Now, we want to identity all the maximal ideals of \(\mathbb{Q}[x, y]/\langle x^2, y - 5 \rangle\).
+        Firstly, we know that if \(a(x, y)\in \langle x^2, y - 5\rangle\), then
+        \[
+        a(x, y) = f(x, y)\cdot x^2 + g(x, y)\cdot (y - 5) = x\cdot (x\cdot f(x, y)) + g(x, y)\cdot (y - 5) \in \langle x, y - 5\rangle.
+        \]
+        In that case, we can know that \(\langle x^2, y - 5\rangle \subset \langle x, y - 5\rangle\).
+        Now, we want to show that \(\langle x, y - 5\rangle\) is a maximal ideal by showing that \(\mathbb{Q}[x, y]/\langle x, y - 5\rangle\) is a field.
+        Firstly, we can know that \(\mathbb{Q}[x, y]/(x, y - 5) \cong \mathbb{Q}[y](y - 5)\).
+        Then, we will use the \(\textbf{First Isomorphism Theorem}\) to show that \(\mathbb{Q}[y](y - 5)\) is a field.
+        We define a map \(\varphi: \mathbb{Q][y]\to \mathbb{Q}\) such that \(\varphi(f(x)) = f(5)\).
+        Let \(f(y), g(y)\in \mathbb{Q}[y]\). We can get
+        \[
+        \begin{align}
+        \varphi(f(y) + g(y)) &= f(5) + g(5),\\
+        \varphi(f(y)\cdot g(y)) &= f(5)\cdot g(5).
+        \end{align}
+        \]
+        Hence, we can know that \(\varphi\) is a ring homomorphism.
+        For any \(q\in \mathbb{Q}\), we also have \(q\in \mathbb{Q}[y]\) and \(\varphi(q) = q\) for any \(q\in \mathbb{Q}\).
+        Thus, we can see that \(\varphi\) is a surjective ring homomorphism. Now, we want to show that \(\ker(\varphi) = \langle y - 5\rangle\).
+        Suppose that \(h(y)\in \langle y - 5\rangle\), we can know that \(h(y) = (y - 5)\cdot k(y)\) where \(k(y)\in \mathbb{Q}[y]\).
+        Then, we have \(\varphi(h(y)) = h(5) = 0\), which implies that \(h(y)\in \ker(\varphi)\) and \(\langle y - 5\rangle \subset \ker(\varphi)\).
+        For the other direction, suppose that \(f(y)\in \ker(\varphi)\), then we have \(f(5) = 0\), which implies that \(f(y) = (y - 5)\cdot g(y)\) where \(g(y)\in \mathbb{Q}[y]\).
+        Hence, we can know that \(f(y)\in \langle y - 5\rangle\) and \(\ker(\varphi) \subset \langle y - 5\rangle\). Then, we have \(\ker(\varphi) = \langle y - 5\rangle\).
+        According to the \(\textbf{First Isomorphism Theorem}\), we can know that
+        \[
+        \mathbb{Q}[y]/\ker(\varphi) = \mathbb{Q}[y]/\langle y - 5\rangle \cong \mathbb{Q}.
+        \]
+        Hence, we have shown that \(\mathbb{Q}[x, y]/\langle x, y - 5\rangle \cong \mathbb{Q}/\langle y - 5\rangle \cong \mathbb{Q}\), which is a field.
+        And we can conclude that \(\langle x, y - 5\rangle \) is a maximal ideal.
       </p>
       <p>
         <b>Proof (b).</b> We firstly showed that if \(r\in J(R)\), then we can know that \(rs - 1\) for any \(s\in R\).
