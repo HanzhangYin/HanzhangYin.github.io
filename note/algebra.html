@@ -3980,7 +3980,35 @@
       </div>
     </div>
     <p>
-      <b>Proof (a)</b> Firstly, we want to show that \(\mathfrak{m} = (x, y)\) is a maximal ideal.
+      <b>Proof (a) (v1).</b> Firstly, we know that if \(a(X, Y)\in (X^2, Y^2)\), we can have
+      \[
+      a(X, Y) = X^2f(X, Y) + Y^2g(X, Y) = X(Xf(X, Y)) + Y(Yg(X, Y))\in (X, Y).
+      \]
+      Thus, we can know that \((X^2, Y^2)\subset (X, Y)\). Then, we can see that \(k[X, Y]/(X, Y)\) is isomorphic to \(k\), which is a field.
+      It shows that \((X, Y)\) is a maximal ideal. Now, we want to show that any maximal ideal of \(k[x, y]\) containing \((X^2, Y^2)\) contains \(X\) and \(Y\) by contradiction.
+      Suppose that \(M\) is a maximal ideal containing \((X^2, Y^2)\) but it does not contain \(X\) or \(Y\).
+      Hence, we can know that \(M + (X)\) is an ideal strictly containing \(M\) and \(M + (Y)\) is an ideal strictly containing \(M\).
+      Given that \(M\) is a maximal ideal, we can have \(M + (X) = M + (Y) = k[X, Y]\).
+      In that case, we have \(m_1(X, Y)\in M\) and \(f(X, Y)\in k[X, Y]\) such that
+      \[
+      \begin{align}
+        m_1(X, Y) + f(X, Y)X &= 1, \\
+      m_1(X, Y) &= 1 - f(X, Y)X.
+      \end{align}
+      \]
+      Since \(m_1(X, Y)\in M\), we have \(X\cdot m_1(X, Y) = X - X^2f(X, Y)\in M\). Given that \(X^2\in M\), we can know that \(X^2f(X, Y)\in M\).
+      Thus, we have
+      \[
+      X = X - X^2f(X, Y) + X^2f(X, Y)\in M,
+      \]
+      which is a contradiction. Hence, we can have \(x\in M\). For the similar reason, we can also show that \(y\in M\).
+      Thus, for any maximal ideal of \(k[X, Y]\) containing \((X^2, Y^2)\) contains \((X, Y)\).
+      And we already showed that \((X, Y)\) is a maximal ideal, we can know that \((X, Y)\) is the only maximal ideal containing \((X^2, Y^2)\).
+      According to the \(\textbf{Correspondence Theorem of Rings}\), any maximal ideal containing \((X^2, Y^2)\) is in one-to-one correspondence with the maximal ideal of \(k[X, Y]/(X^2, Y^2)\).
+        Hence, we can know that \(R\) has only one maximal ideal \((X, Y) + (X^2, Y^2) = (x, y)\). \(\blacksquare\)
+    </p>
+    <p>
+      <b>Proof (a) (v2)</b> Firstly, we want to show that \(\mathfrak{m} = (x, y)\) is a maximal ideal.
       Since \(R = k[X, Y]/(X^2, Y^2)\), if \(r\in R\), then \(r = f(X, Y) + (X^2, Y^2)\), where \(f(X, Y) = aX + bY + cXY + d\) where \(a, b, c, d\in k\).
       Hence, \(r = f(X, Y) + (X^2, Y^2) = aX + bY + cXY + d+ (X^2, Y^2) = aX + (X^2, Y^2) + bY + (X^2, Y^2) + cXY + (X^2, Y^2) + d + (X^2, Y^2)= ax + by + cxy + d\) since \(x, y\) are the images of \(X, Y\) in \(R\).
       Since \(\mathfrak{m} = (x, y)\), we have \(r/\mathfrak{m} = ax + by + cxy + d + (x, y) = d + \mathfrak{m}\).
