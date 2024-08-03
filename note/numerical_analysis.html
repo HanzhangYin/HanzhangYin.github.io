@@ -3329,8 +3329,8 @@
             Suppose that \(p - x_{n-1} = e\), then we can know that
             \[
             \begin{align}
-            f(x_{n-1}) &= f(p - e) = f(p) + f'(p)(-e) + \frac{f''(p)(-e)^2}{2} + O(e^3) = \frac{f''(p)e^2}{2} + \mathcal{O}(e^3), \\
-            f'(x_{n-1}) &= f'(p) + f''(p)(-e) + O(e^2) = f''(p)e + O(e^2).
+            f(x_{n-1}) &= f(p - e) = f(p) + f'(p)(-e) + \frac{f''(p)(-e)^2}{2} + \mathcal{O}(e^3) = \frac{f''(p)e^2}{2} + \mathcal{O}(e^3), \\
+            f'(x_{n-1}) &= f'(p) + f''(p)(-e) + \mathcal{O}(e^2) = f''(p)e + \mathcal{O}(e^2).
             \end{align}
             \]
             According to the Newton's method, we have \(x_{n} = x_{n-1} - \dfrac{f(x_{n-1})}{f'(x_{n-1})}\).
@@ -3338,7 +3338,8 @@
             \[
             \begin{align}
             p - x_{n} &= p - x_{n-1} + \frac{f(x_{n-1})}{f'(x_{n-1})} \\
-            &= e - \dfrac{f(x_{n-1})}{f'(x_{n-1})} = e - \dfrac{\frac{f''(p)e^2}{2} + O(e^3)}{f''(p)e + O(e^2)} = \dfrac{f''(p)e^2 + \mathcal{O}(e^2)}{f''(p)e + \mathcal{O}(e^2)} - \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{f''(p)e + \mathcal{O}(e^2)}
+            &= e - \dfrac{f(x_{n-1})}{f'(x_{n-1})} = e - \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{f''(p)e + \mathcal{O}(e^2)} = \dfrac{f''(p)e^2 + \mathcal{O}(e^3)}{f''(p)e + \mathcal{O}(e^2)} - \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{f''(p)e + \mathcal{O}(e^2)}, \\
+            &= \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{f''(p)e + \mathcal{O}(e^2)},
             \end{align}
             \]
         </p>
