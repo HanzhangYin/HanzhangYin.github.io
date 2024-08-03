@@ -2449,8 +2449,14 @@
             Given the Gaussian elimination, we know that both \(L_1\) and \(L_2\) have 1's on the diagonal.
             And the inverse of \(L_1\) is the matrix such as all the diagonal entries are 1 and if \((i, j)\)-entry of \(L_1\) is \(l_{ij}\) where \(i\neq j\), then the \((i, j)\)-entry of the inverse of \(L_1\) is \(-l_{ij}\).
             Hence, we can know that the inverse of \(L_1\) is also a lower triangular matrix.
-            Given that \(L_1U_1 = L_2U_2\), we have \(L_1^{-1}L_2 = U_1U_2^{-1}\).
-            Since we can know that \(L_1U_1 = L_2U_2\), we have \(L_1^{-1}L_2 = U_1U_2^{-1}\). (to be continued ... )
+            If the inverse of a upper triangular matrix exists, then the inverse is also a upper triangular matrix.
+            Since \(\det(A) = \det(L_1)\det(U_1) = \det(L_2)\det(U_2)\), we have \(\det(U_1) = \det(U_2) = \det(A)>0\).
+            Thus, we can know that \(U_2^{-1}\) exists and \(U_1U_2^{-1} = L_2L_1^{-1}\).
+            Since the product of two lower triangular matrices is a lower triangular matrix, \(L_2L_1^{-1}\) is lower triangular.
+            Since the product of two upper triangular matrices is a upper triangular matrix, \(U_1U_2^{-1}\) is upper triangular.
+            Given that \(U_1U_2^{-1}\) is both lower triangular and upper triangular, we can know that \(U_1U_2^{-1}\) is a diagonal matrix.
+            Since \(L_2\cdot L_1^{-1}\) has all the diagonal entries of \(1\), we can know that \(U_1U_2^{-1}\) has all the diagonal entries of \(1\).
+            Then we have \(U_1U_2^{-1} = I\), which implies that \(U_1 = U_2\).
         </p>
     </section>
 
