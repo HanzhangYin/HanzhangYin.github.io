@@ -862,7 +862,7 @@
 
     <br>
 
-    <section id="initial_value_problems">
+    <section id = "initial_value_problems">
       <h2>Initial value problems for ODEs</h2>
       <p>
         Our model is an initial-value problem written in the form \[
@@ -1198,7 +1198,7 @@
       </p>
     </section>
 
-    <section id="stability">
+    <section id = "stability">
       <h2>Root Condition</h2>
       <p>
         <b>Definition.</b> The roots of the first characteristic polynomial lie in the closed unit disc and those on the unit circle are simple is often called the Root Condition.
@@ -1344,7 +1344,7 @@
       <p></p>
     </section>
 
-    <section id="qr_factorization">
+    <section id = "qr_factorization">
       <h2>QR Factorization</h2>
       <h3>Reduced QR Factorization</h3>
       <p>
@@ -3375,9 +3375,9 @@
             &= e + \dfrac{f(x_{n-1})}{f'(x_{n-1})} = e + \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{-f''(p)e + \mathcal{O}(e^2)} = \dfrac{-f''(p)e^2 + \mathcal{O}(e^3)}{-f''(p)e + \mathcal{O}(e^2)} + \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{-f''(p)e + \mathcal{O}(e^2)}, \\
             &= \dfrac{-\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{f''(p)e + \mathcal{O}(e^2)}, \\
             \dfrac{p - x_{n}}{p - x_{n-1}} &= \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{f''(p)e^2 + \mathcal{O}(e^3)}, \\
-            &= \dfrac{(\frac{f''(p)e^2}{2} + \mathcal{O}(e^3))/e^2}{(f''(p)e^2 + \mathcal{O}(e^3))/e^2} \\
-            &= \dfrac{\frac{f''(p)}{2} + \mathcal{O}(e)}{f''(p) + \mathcal{O}(e)}.\\
-            \left|\dfrac{p - x_{n}}{p - x_{n-1}}\right| &= \left|\dfrac{\frac{f''(p)}{2} + \mathcal{O}(e)}{f''(p) + \mathcal{O}(e)}\right|.
+            &= \dfrac{(-\frac{f''(p)e^2}{2} + \mathcal{O}(e^3))/e^2}{(-f''(p)e^2 + \mathcal{O}(e^3))/e^2} \\
+            &= \dfrac{-\frac{f''(p)}{2} + \mathcal{O}(e)}{-f''(p) + \mathcal{O}(e)}.\\
+            \left|\dfrac{p - x_{n}}{p - x_{n-1}}\right| &= \left|\dfrac{-\frac{f''(p)}{2} + \mathcal{O}(e)}{-f''(p) + \mathcal{O}(e)}\right|.
             \end{align}
             \]
             Since \(e\to 0\) when \(n\to \infty\), we have
