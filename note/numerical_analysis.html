@@ -555,6 +555,34 @@
 
     <br>
 
+    <section id = 'change_of_intervals'>
+      <h2>Change of Intervals</h2>
+      <p>
+        Suppose that a numerical integration formula is given:
+
+        \[ \int_c^d f(t) \, dt \approx \sum_{i=0}^n A_i f(t_i). \]
+        Let us assume that it is exact for all polynomials of degree \( m \) or less. If we want to integrate the function \( f \) over the interval \([a, b]\), we can use the change of interval formula.
+        We first define a linear function \(\lambda\) of \( t \) such that if \( t \) traverses \([c, d]\), \(\lambda(t)\) will traverse \([a, b]\). The function \(\lambda\) is given explicitly by
+        \[ \lambda(t) = \frac{b - a}{d - c} t + \frac{ad - bc}{d - c}. \]
+        Now in the integral
+
+        \[ \int_a^b f(x) \, dx \]
+
+        we make the change of variable \( x = \lambda(t) \). Then \( dx = \lambda'(t) \, dt = (b-a)(d-c)^{-1} \, dt \), and so we have
+
+        \[ \int_a^b f(x) \, dx = \frac{b - a}{d - c} \int_c^d f(\lambda(t)) \, dt \]
+
+        \[ \approx \frac{b - a}{d - c} \sum_{i=0}^n A_i f(\lambda(t_i)) \]
+
+        Hence, we have
+
+        \[ \int_a^b f(x) \, dx \approx \frac{b - a}{d - c} \sum_{i=0}^n A_i f \left( \frac{b - a}{d - c} t_i + \frac{ad - bc}{d - c} \right) \]
+
+        Observe that, because \(\lambda\) is linear, \( f(\lambda(t)) \) is a polynomial in \( t \) if \( f \) is a polynomial, and the degrees are the same. Hence, the new formula is exact for polynomials of degree \( m \).
+        For Simpson’s rule, this procedure yields Equation (6) as a consequence of Equation (5) using \( \lambda(t) = (b - a)t + a \).
+      </p>
+    </section>
+
     <section id="gaussian_quadrature">
       <h2>Gaussian Quadrature</h2>
       <p>
@@ -2056,10 +2084,10 @@
             (b) Show that \( \|A^*A\|_2 = \|A\|_2^2 \).
           </p>
           <p>
-            (c) Show that if \( \operatorname{rank}(A) = n \) then \( A^*A \) is invertible and \( \|A(A^*A)^{-1}A^*\|_2 = 1 \).
+            (c) Show that if \( \text{rank}(A) = n \) then \( A^*A \) is invertible and \( \|A(A^*A)^{-1}A^*\|_2 = 1 \).
           </p>
           <p>
-            (d) Let \( A^\dagger \in \mathbb{C}^{n \times m} \) be the pseudoinverse (the Moore-Penrose inverse) of matrix \( A \) and suppose that \( \operatorname{rank}(A) = n \). Show that
+            (d) Let \( A^\dagger \in \mathbb{C}^{n \times m} \) be the pseudoinverse (the Moore-Penrose inverse) of matrix \( A \) and suppose that \( \text{rank}(A) = n \). Show that
             \[
             A^\dagger = (A^*A)^{-1}A^*.
             \]
@@ -2449,11 +2477,11 @@
             Given the Gaussian elimination, we know that both \(L_1\) and \(L_2\) have 1's on the diagonal.
             And the inverse of \(L_1\) is the matrix such as all the diagonal entries are 1 and if \((i, j)\)-entry of \(L_1\) is \(l_{ij}\) where \(i\neq j\), then the \((i, j)\)-entry of the inverse of \(L_1\) is \(-l_{ij}\).
             Hence, we can know that the inverse of \(L_1\) is also a lower triangular matrix.
-            If the inverse of a upper triangular matrix exists, then the inverse is also a upper triangular matrix.
+            If the inverse of an upper triangular matrix exists, then the inverse is also an upper triangular matrix.
             Since \(\det(A) = \det(L_1)\det(U_1) = \det(L_2)\det(U_2)\), we have \(\det(U_1) = \det(U_2) = \det(A)>0\).
             Thus, we can know that \(U_2^{-1}\) exists and \(U_1U_2^{-1} = L_2L_1^{-1}\).
             Since the product of two lower triangular matrices is a lower triangular matrix, \(L_2L_1^{-1}\) is lower triangular.
-            Since the product of two upper triangular matrices is a upper triangular matrix, \(U_1U_2^{-1}\) is upper triangular.
+            Since the product of two upper triangular matrices is an upper triangular matrix, \(U_1U_2^{-1}\) is upper triangular.
             Given that \(U_1U_2^{-1}\) is both lower triangular and upper triangular, we can know that \(U_1U_2^{-1}\) is a diagonal matrix.
             Since \(L_2\cdot L_1^{-1}\) has all the diagonal entries of \(1\), we can know that \(U_1U_2^{-1}\) has all the diagonal entries of \(1\).
             Then we have \(U_1U_2^{-1} = I\), which implies that \(U_1 = U_2\).
