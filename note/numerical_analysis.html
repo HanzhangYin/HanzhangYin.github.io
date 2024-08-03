@@ -354,7 +354,7 @@
         <p>
             \(\textbf{Definition. }\) A mapping \( F \) of a metric space \( (X, d) \)
             into itself is called a <b>contraction</b> if there exists a constant \(
-            k \) with \( 0 \leq k < 1 \) such that \[ d(F(x), F(y)) \leq k d(x, y)
+            k \) with \( 0 \leq k \lt 1 \) such that \[ d(F(x), F(y)) \leq k d(x, y)
             \] for all \( x, y \) in \( X \).
         </p>
       <p>
@@ -3314,6 +3314,35 @@
     <br>
 
     <h2 id="august_2023">Qualify Exam Problems (August 2023)</h2>
+
+    <section id = 'ku_2023_8_1'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
+                <p>
+                    <b>1.</b> Suppose that \( p \) is a double zero of the function \( f \). Thus \( f(p) = f'(p) = 0 \ne f''(p) \). Show that if \( f'' \) is continuous, then in Newton's method we shall have
+
+                    \[ \lim_{n \to \infty} \frac{|p - p_n|}{|p - p_{n-1}|} = \frac{1}{2}. \]
+                </p>
+            </div>
+        </div>
+        <p>
+            Suppose that \(p - x_{n-1} = e\), then we can know that
+            \[
+            \begin{align}
+            f(x_{n-1}) &= f(p - e) = f(p) + f'(p)(-e) + \frac{f''(p)(-e)^2}{2} + O(e^3) = \frac{f''(p)e^2}{2} + O(e^3), \\
+            f'(x_{n-1}) &= f'(p) + f''(p)(-e) + O(e^2) = f''(p)e + O(e^2).
+            \end{align}
+            ]
+            According to the Newton's method, we have \(x_{n} = x_{n-1} - \dfrac{f(x_{n-1})}{f'(x_{n-1})}\).
+            Then, we can know that
+            \[
+            \begin{align}
+            p - x_{n} &= p - x_{n-1} + \frac{f(x_{n-1})}{f'(x_{n-1})} \\
+            &= e - \dfrac{f(x_{n-1})}{f'(x_{n-1})} = e - \dfrac{\frac{f''(p)e^2}{2} + O(e^3)}{f''(p)e + O(e^2)} = e - \frac{e}{2} + O(e^2) = \frac{e}{2} + O(e^2).
+            \end{align}
+            \]
+        </p>
+    </section>
 
     <section id = 'ku_2023_8_3'>
         <div class = 'question-box-container'>
