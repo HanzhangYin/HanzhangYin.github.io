@@ -3462,7 +3462,14 @@
         Thus, the error term is \( \frac{1}{15750}f^{(6)}(\xi) \) for some \( \xi \in (-1, 1) \).
       </p>
       <p>
-        <b>Solution (c).</b> We will apply the change of the interval from \([-1, 1]\) to \([x_i, x_{i+1}]\)
+        <b>Solution (c).</b> We will apply the change of the interval from \([-1, 1]\) to \([x_i, x_{i+1}]\).
+        Firstly, we define \(\lambda(t) = \dfrac{x_{i+1} - x_i}{2}t + \dfrac{x_{i+1} + x_i}{2}\) for \(t\in[-1, 1]\).
+        Then, we have \(\lambda(1) = x_{i+1}\) and \(\lambda(-1) = x_i\).
+        Hence, we have
+        \[
+        \int_{x_i}^{x_{i+1}} f(x) \, dx = \int_{-1}^1 f(\lambda(t))\lambda'(t) \, dt \approx \frac{5}{9} f \left( -\sqrt{\frac{3}{5}} \right) + \frac{8}{9} f(\lambda(0)) + \frac{5}{9} f \left( \sqrt{\frac{3}{5}} \right).
+        \]
+        Then, we have
       </p>
     </section>
 
