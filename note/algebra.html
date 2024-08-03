@@ -2199,8 +2199,17 @@
             </div>
         </div>
         <p>
-        <b>Proof (i).</b> Given that \(a\) is not a unit, we can know that \(a^n\) will never a unit for any \(n\geq 1\).
-
+        <b>Proof (i).</b> Given that \(a\) is not a unit, we can know that \(a^n\) will never be a unit for any \(n\geq 1\).
+        In that case, we have \(ar\) is not a unit for any \(r\in R\). It is because if \(ar\) is a unit, then there exists \(s\in S\) such that
+        \((ar)s = a(rs) = 1\), which implies \(a\) is a unit. Thus, we can know that \(aR\) does not contain a unit; hence, \(aR\) is a proper ideal.
+        Now, we want to show that \(aR\) is a maximal ideal by contradiction. Suppose that \(aR\) is not a maximal ideal.
+        Since every proper ideal is contained in a maximal ideal. Thus, we can know that \(aR\) is contained in a maximal ideal \(M\) such that \(aR\neq M\).
+        Hence, there exists \(m\in M\) such that \(m\) is not a unit and \(m\notin aR\).
+        However, we know that \(m = ua^n\) for some unit \(u\) and \(n\geq 0\) by assumption, which means that \(m\in aR\). It is a contradiction.
+        Hence, we can know that \(aR\) is a maximal ideal.
+       Actually, for any nonunit \(r\in R\), we have \(r = ua^n\) for some unit \(u\) and \(n\geq 0\), which implies that \(r\in aR\).
+      In short, \(aR\) contains all the nonunits in \(R\). And we know that every maximal ideal is a proper ideal. In other words, every element in each maximal ideal is a nonunit.
+     Hence, if \(M\) is a maximal ideal of \(R\), we have \(M\subset aR\), which implies that \(M = aR\). Therefore, \(aR\) is the only maximal ideal. \(\blacksquare\)
         </p>
     </section>
 
