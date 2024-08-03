@@ -3346,6 +3346,13 @@
             \left|\dfrac{p - x_{n}}{p - x_{n-1}}\right| &= \left|\dfrac{\frac{f''(p)}{2} + \mathcal{O}(e)}{f''(p) + \mathcal{O}(e)}\right|.
             \end{align}
             \]
+            Since \(e\to 0\) when \(n\to \infty\), we have
+            \[
+            \begin{align}
+            \lim_{n\to\infty}\left|\dfrac{p - x_{n}}{p - x_{n-1}}\right| &= \lim_{n\to\infty}\left|\dfrac{\frac{f''(p)}{2} + \mathcal{O}(e)}{f''(p) + \mathcal{O}(e)}\right|, \\
+            &= \left|\dfrac{\frac{f''(p)}{2}}{f''(p)}\right| = \frac{1}{2}. \tag*{\(\blacksquare\)}
+            \end{align}
+            \]
         </p>
     </section>
 
