@@ -3391,6 +3391,48 @@
         </p>
     </section>
 
+    <section id = 'ku_2023_8_2'>
+        <div class = 'question-box-container'>
+          <div class = 'question-box'>
+            <p>
+              2. (a) Consider a numerical integration rule of the form
+
+              \[ \int_{-1}^1 f(x) \, dx \approx A f \left( -\sqrt{\frac{3}{5}} \right) + B f(0) + C f \left( \sqrt{\frac{3}{5}} \right) \]
+
+              What is the linear system that must be solved in order to determine the coefficients \( A, B, C \) so that the formula has a possibly highest degree of precision? Solve for \( A, B, C \). What is the degree of precision?
+            </p>
+            <p>
+              (b) Find the error term for the rule.
+            </p>
+            <p>
+              (c) Derive the composite quadrature rule resulting from the application of the rule in Question (2a) to the general integral \( \int_a^b f(x) \, dx \) on a uniform partition \( x_0 = a \lt x_1 \lt \cdots \lt x_n = b \).
+            </p>
+            <p>
+              (d) Derive the error term for the composite rule. It is required that the error term does not contain summations.
+            </p>
+          </div>
+        </div>
+      <p>
+        <b>Solution (a).</b> To determine the coefficients \( A, B, C \), we need to solve the following linear system:
+        \[
+        \begin{align}
+        \int_{-1}^1 1 \, dx &= A + B + C, \\
+        \int_{-1}^1 x \, dx &= -\sqrt{\frac{3}{5}} A + 0 + \sqrt{\frac{3}{5}} C, \\
+        \int_{-1}^1 x^2 \, dx &= \left( -\sqrt{\frac{3}{5}} \right)^2 A + 0^2 + \left( \sqrt{\frac{3}{5}} \right)^2 C.
+        \end{align}
+        \]
+        Solving the system, we have
+        \[
+        \begin{align}
+        A + B + C &= 2, \\
+        -\sqrt{\frac{3}{5}} A + \sqrt{\frac{3}{5}} C &= 0, \\
+        \frac{3}{5} A + \frac{3}{5} C &= \frac{2}{3}.
+        \end{align}
+        \]
+        From the second equation, we have \( A = C \). Substituting this into the third equation, we have \( A = C = \frac{5}{9} \). Then, we have \( B = \frac{8}{9} \). Therefore, the formula has a degree of precision 2.
+      </p>
+    </section>
+
     <section id = 'ku_2023_8_3'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
