@@ -3433,11 +3433,16 @@
         \[
         \int_{-1}^1 f(x) \, dx \approx \frac{5}{9} f \left( -\sqrt{\frac{3}{5}} \right) + \frac{8}{9} f(0) + \frac{5}{9} f \left( \sqrt{\frac{3}{5}} \right).
         \]
+        Then we try to find the degree of precision.
         \[
         \begin{align}
-        \int_{-1}^1 x^3 \, dx &\approx \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^3 + \frac{8}{9} 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^3, \\
+        \int_{-1}^1 x^3 \, dx &= \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^3 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^3 = 0, \\
+        \int_{-1}^1 x^4 \, dx &= \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^4 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^4 = \frac{2}{5}, \\
+        \int_{-1}^1 x^5 \, dx &= \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^5 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^5 = 0, \\
+        \int_{-1}^1 x^6 \, dx = \frac{2}{7} &\neq \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^6 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^6 = \frac{5}{25}.
         \end{align}
         \]
+        Thus, the degree of precision is \(6\).
       </p>
     </section>
 
