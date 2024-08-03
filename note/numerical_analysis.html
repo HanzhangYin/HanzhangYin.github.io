@@ -3057,12 +3057,14 @@
         \[
         A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1,n-1} & a_{1,n} \\ a_{2,1} & a_{2,2} & \cdots & a_{2,n-1} & a_{2,n} \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & \cdots & a_{n-1,n-1} & a_{n-1,n} \\ 0 & 0 & \cdots & a_{n, n-1} & a_{n,n} \end{bmatrix},
         \]
-        We denote the first column of \(A\) as \(\begin{bmatrix} a_{11} \\ a_{21} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\). Then, we can construct a Householder matrix \(H_1\) such that
+        We denote the first column of \(A\) as \(a_1 = \begin{bmatrix} a_{11} \\ a_{21} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\).
+        And we define \(v_1 = \begin{bmatrix} a_{11} + \|a_1\|_2 \\ a_{21} \\ 0 \\ \vdots \\ 0 \end{bmatrix} = \begin{bmatrix} v_{11} \\ v_{12} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\).
+        Then, we can construct a Householder matrix \(H_1\) such that
         \[
         \begin{align}
         H_1 &= I - 2w^{(1)}(w^{(1)})^T \\
         &= I - 2\dfrac{v^{(1)}(v^{(1)})^T}{(v^{(1)})^Tv^{(1)}}, \\
-        &= I - \frac{2}{\|v_{11}\|^2_2 + \|a_{22}\|_2^2}\begin{bmatrix} v_{11} \\ v_{12} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\begin{bmatrix} v_{11} & v_{12} & 0 & \cdots & 0 \end{bmatrix} \\
+        &= I - \frac{2}{\|v_{11}\|^2_2 + \|v_{22}\|_2^2}\begin{bmatrix} v_{11} \\ v_{12} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\begin{bmatrix} v_{11} & v_{12} & 0 & \cdots & 0 \end{bmatrix} \\
         &= \begin{bmatrix} 1 & 0 & 0 & \cdots & 0 \\ 0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & 1 \end{bmatrix} - \dfrac{2}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2}\begin{bmatrix} v_{11} \\ v_{12} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\begin{bmatrix} v_{11} & v_{12} & 0 & \cdots & 0 \end{bmatrix} \\
         &= \begin{bmatrix} 1-\dfrac{2v_{11}^2}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2} & -\dfrac{2v_{11}v_{12}}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2} & 0 & \cdots & 0 \\ -\dfrac{2v_{11}v_{12}}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2} & 1-\dfrac{2v_{12}^2}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2} & 0 & \cdots & 0 \\ 0 & 0 & -1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & -1 \end{bmatrix} \\
         \end{align}
