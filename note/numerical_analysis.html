@@ -3448,8 +3448,14 @@
         <b>Solution (b).</b> We can know the error term is in the form of \(Cf^{(6)}(\xi)\) for some \(\xi\in(-1, 1)\) since the degree of precision is 5. Then, we have
         And we already found that
         \[
+        \int_{-1}^1 x^6 \, dx = \frac{2}{7} \neq \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^6 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^6 = \frac{5}{25}.
+        \]
+        Hence, we have
+        \[
         \begin{align}
-        \int_{-1}^1 x^6 \, dx &= \frac{2}{7} \neq \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^6 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^6 = \frac{5}{25}.
+        \int_{-1}^1 x^6 \, dx  - \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^6 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^6 &= \frac{2}{7} - \frac{5}{25} = \frac{10}{35} - \frac{7}{35} = \frac{3}{35} = \frac{3}{35}f^{(6)}(\xi), \\
+        \left| \int_{-1}^1 x^6 \, dx  - \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^6 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^6 \right| &= \left| \frac{3}{35}f^{(6)}(\xi) \right| \leq \frac{3}{35} \|f^{(6)}\|_\infty.
+        \end{align}
         \]
       </p>
     </section>
