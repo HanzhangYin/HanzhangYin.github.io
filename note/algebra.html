@@ -2135,6 +2135,29 @@
       </p>
     </section>
 
+    <section id = 'ku_2016_8_5'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
+            <p>
+                5. Let \( V \) denote the complex vector space of complex polynomials having degree at most five, endowed with the usual inner product. In other words, for \( f(x), g(x) \in V \), \(\langle f(x), g(x) \rangle := \int_0^1 f(x) \overline{g(x)} \, dx \).
+            </p>
+            <p>
+                (a) Find an orthonormal basis for the space \( W \) spanned by \( x + x^2, x^2 + x^3, x^3, x^3 + x^4 \).
+            </p>
+            <p>
+                (b) Find (with proof) a self adjoint operator \( T : W \to W \) that is not the identity map.</p>
+            </p>
+            </div>
+        </div>
+        <p>
+            <b>Solution (a).</b> We will first find an orthogonal basis for \( W \). Let \( v_1 = x + x^2 \), \( v_2 = x^2 + x^3 \), \( v_3 = x^3 \), and \( v_4 = x^3 + x^4 \) by \(\textbf{Gram-Schmidt orthogonalization}\).
+            We normalize \(v_1\) firstly and have
+            \[
+                u_1 = \dfrac{v_1}{\|v_1\| } = \dfrac{x + x^2}{\sqrt{\langle x + x^2, x + x^2 \rangle}} = \dfrac{x + x^2}{\sqrt{\int_0^1 (x + x^2)(x + x^2) \, dx}} = \dfrac{x + x^2}{\sqrt{\dfrac{7}{6}}}.
+            \]
+        </p>
+    </section>
+
     <br>
 
     <h2 id = 'january_2017'>KU 2017 (January)</h2>
