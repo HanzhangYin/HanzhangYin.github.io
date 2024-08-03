@@ -3057,7 +3057,16 @@
         \[
         A = \begin{bmatrix} A_1 & A_2 & \cdots & A_{n-1} & A_n \\ 0 & A_2 & \cdots & A_{n-1} & A_n \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & \cdots & A_{n-1} & A_n \\ 0 & 0 & \cdots & 0 & A_n \end{bmatrix},
         \]
-        where \(A_i \in \mathbb{R}^{(n-i+1)\times (n-i+1)}\). We can write \(Q\) as
+        We denote the first column of \(A\) as \(\begin{bmatrix} a_{11} \\ a_{21} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\). Then, we can construct a Householder matrix \(H_1\) such that
+        \[
+        \begin{align}
+        H_1 &= I - 2w^{(1)}(w^{(1)})^T \\
+        &= I - 2\dfrac{v^{(1)}(v^{(1)})^T}{(v^{(1)})^Tv^{(1)}}, \\
+        &= I - \frac{2}{\sqrt{\|a_{11}\|^2_2 + \|a_{22}\|_2^2} }\begin{bmatrix} a_{11} \\ a_{21} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\begin{bmatrix} a_{11} & a_{21} & 0 & \cdots & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 1 & 0 & 0 & \cdots & 0 \\ 0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & 1 \end{bmatrix} - \dfrac{2}{\|a_{11}\|^2_2 + \|a_{21}\|^2_2}\begin{bmatrix} a_{11} \\ a_{21} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\begin{bmatrix} a_{11} & a_{21} & 0 & \cdots & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 1 & 0 & 0 & \cdots & 0 \\ 0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & 1 \end{bmatrix} - \begin{bmatrix} \dfrac{2a_{11}^2}{\|a_{11}\|^2_2 + \|a_{21}\|^2_2} & \dfrac{2a_{11}a_{21}}{\|a_{11}\|^2_2 + \|a_{21}\|^2_2} & 0 & \cdots & 0 \\ \dfrac{2a_{11}a_{21}}{\|a_{11}\|^2_2 + \|a_{21}\|^2_2} & \dfrac{2a_{21}^2}{\|a_{11}\|^2_2 + \|a_{21}\|^2_2} & 0 & \cdots & 0 \\ 0 & 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & 1 \end{bmatrix} \\
+        \end{align}
+        ]
       </p>
       <p>
         <b>Proof (c).</b> Given that \(R\) is an upper triangular matrix and \(Q\) is an upper Hessenberg matrix by the previous part, we have
