@@ -2153,8 +2153,20 @@
             <b>Solution (a).</b> We will first find an orthogonal basis for \( W \). Let \( v_1 = x + x^2 \), \( v_2 = x^2 + x^3 \), \( v_3 = x^3 \), and \( v_4 = x^3 + x^4 \) by \(\textbf{Gram-Schmidt orthogonalization}\).
             We normalize \(v_1\) firstly and have
             \[
-                u_1 = \dfrac{v_1}{\|v_1\| } = \dfrac{x + x^2}{\sqrt{\langle x + x^2, x + x^2 \rangle}} = \dfrac{x + x^2}{\sqrt{\int_0^1 (x + x^2)(x + x^2) \, dx}} = \dfrac{x + x^2}{\sqrt{\dfrac{7}{6}}}.
+                u_1 = \dfrac{v_1}{\|v_1\| } = \dfrac{x + x^2}{\sqrt{\langle x + x^2, x + x^2 \rangle}} = \dfrac{x + x^2}{\sqrt{\int_0^1 (x + x^2)(x + x^2) \, dx}} = \dfrac{x + x^2}{\sqrt{\dfrac{31}{30}}}.
             \]
+            Then we have
+            \[
+            \begin{align}
+                u_2 &= v_2 - \langle v_2, u_1 \rangle u_1 \\
+                &= x^2 + x^3 - \dfrac{1}{31} \int_0^1 (x^2 + x^3)(x + x^2) \, dx \dfrac{x + x^2}{\sqrt{\dfrac{31}{30}}} \\
+                &= x^2 + x^3 - \dfrac{1}{31} \int_0^1 (x^3 + x^4 + x^4 + x^5) \, dx \dfrac{x + x^2}{\sqrt{\dfrac{31}{30}}} \\
+                &= x^2 + x^3 - \dfrac{1}{31} \left[ \dfrac{1}{6} + \dfrac{1}{10} + \dfrac{1}{10} + \dfrac{1}{14} \right] \dfrac{x + x^2}{\sqrt{\dfrac{31}{30}}} \\
+                &= x^2 + x^3 - \dfrac{1}{31} \left[ \dfrac{1}{6} + \dfrac{1}{10} + \dfrac{1}{10} + \dfrac{1}{14} \right] \dfrac{x + x^2}{\sqrt{\dfrac{31}{30}}} \\
+                &= x^2 + x^3 - \dfrac{1}{31} \left[ \dfrac{5}{21} \right] \dfrac{x + x^2}{\sqrt{\dfrac{31}{30}}} \\
+                &= x^2 + x^3 - \dfrac{5}{651} \dfrac{x + x^2}{\sqrt{\dfrac{31}{30}}}.
+            \end{align}
+            ]
         </p>
     </section>
 
