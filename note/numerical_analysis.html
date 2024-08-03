@@ -2458,6 +2458,21 @@
             Since \(L_2\cdot L_1^{-1}\) has all the diagonal entries of \(1\), we can know that \(U_1U_2^{-1}\) has all the diagonal entries of \(1\).
             Then we have \(U_1U_2^{-1} = I\), which implies that \(U_1 = U_2\).
         </p>
+        <p>
+            For the second part, we will use induction to show that all diagonal entries of \(U\) are positive.
+            Given the process of Gaussian elimination, we know that
+            \[
+            L_1 = \begin{bmatrix}
+            1 & 0 & 0 & \cdots & 0\\
+            l_{21} & 1 & 0 & \cdots & 0\\
+            l_{31} & 0 & 1 & \cdots & 0\\
+            \vdots & \vdots & \vdots & \ddots & \vdots\\
+            l_{n1} & 0 & 0 & \cdots & 1
+            \end{bmatrix}.
+            \]
+            Thus, we can know that the the first diagonal entry of \(U\) is the first diagonal entry of \(L_1\cdot A\), which is the first diagonal entry of \(A\).
+            Since the first diagonal entry of \(A\), say \(a_{11}\), is positive by assumption, we can know that the first diagonal entry of \(U\) is positive.
+        </p>
     </section>
 
     <section id = 'ku_2020_8_5'>
