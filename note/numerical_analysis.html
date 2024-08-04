@@ -3478,6 +3478,20 @@
         \int_a^b f(x)\, dx \approx \sum_{i=0}^{n-1} \left[\dfrac{x_{i+1} - x_i}{2} \left( \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\left(-\sqrt{\frac{3}{5}}\right) + \dfrac{x_{i+1} + x_i}{2} \right) + \dfrac{8}{9} f\left(\dfrac{x_{i+1} + x_i}{2}\right) + \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\sqrt{\frac{3}{5}} + \dfrac{x_{i+1} + x_i}{2}\right) \right)\right].
         \]
       </p>
+      <p>
+        <b>Solution (d).</b> We already found that the error term is in the form of \( \frac{1}{15750}f^{(6)}(\xi) \) for some \( \xi \in (-1, 1) \) when we try to approximate \( \int_{-1}^1 f(x) \, dx \). Hence, we have error term for
+        \[
+        \int_{x_i}^{x_{i+1}} f(x)\, dx = \dfrac{x_{i+1} - x_i}{2} \left( \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\left(-\sqrt{\frac{3}{5}}\right) + \dfrac{x_{i+1} + x_i}{2} \right) + \dfrac{8}{9} f\left(\dfrac{x_{i+1} + x_i}{2}\right) + \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\sqrt{\frac{3}{5}} + \dfrac{x_{i+1} + x_i}{2}\right) \right) + \dfrac{x_{i+1} - x_i}{31500}f^{(6)}\left(\dfrac{x_{i+1} - x_i}{2}\xi+ \dfrac{x_{i+1} - x_i}{2}\right).
+        \]
+        Hence, the error term for approximating \(\displaystyle \int_{x_i}^{x_{i+1}} f(x)\, dx\) is
+        \[
+        E_i = \dfrac{x_{i+1} - x_i}{31500}f^{(6)}\left(\dfrac{x_{i+1} - x_i}{2}\xi+ \dfrac{x_{i+1} - x_i}{2}\right),\text{ for some } \xi\in(-1, 1).
+        \]
+        Hence, we can say that the error term for approximating \(\displaystyle \int_{x_i}^{x_{i+1}} f(x)\, dx\) is
+        \[
+        E_i = \dfrac{x_{i+1} - x_i}{31500}f^{(6)}\left(\eta_i\right),\text{ for some } \eta_i\in(x_{i}, x_{i+1}).
+        \]
+      </p>
     </section>
 
     <section id = 'ku_2023_8_3'>
