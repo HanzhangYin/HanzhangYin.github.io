@@ -2158,8 +2158,17 @@
         &= 0 + f'(p)(-e) + 0 + \cdots + 0 + \frac{f^{(m)}(p)}{m!}(-e)^{m} + \mathcal{O}(e^{m+1}) \\
         &= f'(p)(-e) + \frac{f^{(m)}(p)}{m!}(-e)^{m} + \mathcal{O}(e^{m+1}). \\
         f'(x_{n-1}) &= f'(p) + f''(p)(-e) + \cdots + \frac{f^{(m-1)}(p)}{(m-2)!}(-e)^{m-2} + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m}) \\
-        &= f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m}).
+        &= f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m}),
         \end{align}
+        \]
+        for \(f''(p) = \cdots = f^{(m-1)}(p) = 0\).
+        Then, we have
+        \[
+        \begin{align}
+        p - x_n &= p - x_{n-1} + \frac{f(x_{n-1})}{f'(x_{n-1})} \\
+        &= e + \frac{f'(p)(-e) + \frac{f^{(m)}(p)}{m!}(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m})} \\
+        \end{align}
+        \]
       </p>
     </section>
 
