@@ -3068,7 +3068,7 @@
 
     <h2 id = 'august_2018'>KU 2018 (August)</h2>
 
-    <section id = 'ku_2018_8_1'>
+    <section id = 'ku_2018_8_2'>
       <div class = 'question-box-container'>
         <div class = 'question-box'>
           <p>
@@ -3106,6 +3106,23 @@
         \]
         Thus, we can know that both \(f(x)\) and \(g(x)\) are continuous real function and
         Hence, we can know that \(f(x)\cdot g(x)\in I_{1/2} \cap I_{\pi/4}\), but \(f(x)\) and \(g(x)\) are not in \(I_{1/2}\cap I_{\pi/4}\).
+      </p>
+      <p>
+        <b>Solution (b).</b> \(\langle 2, x^2 + x + 1 \rangle\) is a maximal ideal.
+      </p>
+      <p>
+      <b>Proof.</b>Since \(\mathbb{Z}[x]\) has division algorithm, we can know if \(p(x)\in \mathbb{Z}[x]\), then we have
+      \[
+      p(x) = q(x)(x^2 + x + 1) + r(x), \text{ where } \deg(r(x)) < \deg(x^2 + x + 1).
+      \]
+      In other words, \(r(x) = ax + b\), where \(a, b\in \mathbb{Z}\).
+      Since \(2\in \langle 2, x^2 + x + 1\rangle\), we can know that \(r(x) = ax + b\) only has three possibilities: \(r(x) = 0, r(x) = x, r(x) = 1, r(x) = x+1\).
+      Thus, we have
+      \[
+      \mathbb{Z}[x]/\langle 2, x^2 + x + 1\rangle = \{0, 1, x, x + 1\}.
+      \]
+      And \(x(x + 1) = x^2 + x = -1 = 1\), which implies that \(x\) and \(x + 1\) are units.
+      Thus, we can see that \(\langle 2, x^2 + x + 1\rangle\) is a maximal ideal. \(\blacksquare\)
       </p>
     </section>
 
