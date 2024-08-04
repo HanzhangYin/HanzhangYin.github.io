@@ -375,7 +375,7 @@
 
     <section id = 'smith_normal_form'>
       <p>
-        <b>Proposition.</b> Let \( K_A \) be the column space of an \( m \times n \) matrix \( A \) and let \( B = PAQ \) where \( P \) and \( Q \) are invertible matrices. Then \( K_A \simeq K_B \). Moreover, \(\mathbb{Z}^m / K_A \cong \mathbb{Z}^m / K_B \).
+        <b>Proposition.</b> Let \( K_A \) be the column space of an \( m \times n \) matrix \( A \) and let \( B = PAQ \) where \( P \) and \( Q \) are invertible matrices. Then \( K_A \cong K_B \). Moreover, \(\mathbb{Z}^m / K_A \cong \mathbb{Z}^m / K_B \).
       </p>
       <p>
         <b>Proof.</b> Given that \(K_A\) is the column space of an \(m \times n\) matrix \(A\) over \(\mathbb{Z}\).
@@ -2624,6 +2624,26 @@
         \]
         where contains some term \(az^{t}\) or \(b\).
         Thus, we can know that \(fg\notin I\). Therefore, we showed that \(I\) is a prime ideal. \(\blacksquare\)
+      </p>
+    </section>
+
+    <section id = 'ku_2018_1_2'>
+      <div class = 'question-box-container'>
+        <div class = 'question-box'>
+          <p>
+            <b>Question 2.</b> Consider \( G := \mathbb{Z} \times \mathbb{Z} \) regarded as an abelian group.
+          </p>
+          <p>
+            a) Find an element \((a,b) \ne (0,0)\) such that the factor group \( G / \langle (a,b) \rangle \) is torsion free, i.e., there are no elements of finite order.
+          </p>
+          <p>
+            b) Suppose \( a, b \in \mathbb{Z} \) are nonzero. Set \( H_1 := \langle (a,0) \rangle \) and \( H_2 := \langle (0,b) \rangle \). Prove that \( G / (H_1 \times H_2) \) is isomorphic to \( \mathbb{Z} / \langle \text{GCD}(a,b) \rangle \times \mathbb{Z} / \langle \text{LCM}(a,b) \rangle \).
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Solution (a).</b> Let \((a , b) = (1, 0)\). Then we have \(G/\langle (1, 0) \rangle \cong \mathbb{Z} \times \{0\} \cong \mathbb{Z}\).
+        We know that \(\mathbb{Z}\) is torsion free since there are no elements of finite order in \(\mathbb{Z}\).
       </p>
     </section>
 
