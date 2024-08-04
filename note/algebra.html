@@ -372,6 +372,21 @@
 
     <br>
 
+    <section id = 'smith_normal_form'>
+      <p>
+        <b>Proposition.</b> Let \( K_A \) be the column space of an \( m \times n \) matrix \( A \) and let \( B = PAQ \) where \( P \) and \( Q \) are invertible matrices. Then \( K_A \simeq K_B \). Moreover, \(\mathbb{Z}^n / K_A \cong \mathbb{Z}^n / K_B \).
+      </p>
+      <p>
+        <b>Proof.</b> Given that \(K_A\) is the column space of an \(m \times n\) matrix \(A\) over \(\mathbb{Z}\).
+        If \(y\in K_A\), then we can know that there exists \(x\in \mathbb{Z}^n\) such that \(y = Ax\).
+        Given that \(Q\) is an invertible matrix, we can know that \(y = Ax = A(Q^{-1}Q)x = (AQ)(Q^{-1}x)\), where \(Q^{-1}x\in \mathbb{Z}^n\).
+        Hence, we can know that \(y\in K_{AQ}\). Thus, we have \(K_A \subseteq K_{AQ}\).
+        For the other direction, we can know that if \(y\in K_{AQ}\), there exists \(x\in \mathbb{Z}^n\) such that \(y = AQx\).
+        Since \(Qx\in \mathbb{Z}^n\), we can know that \(y = AQx = A(Qx)\), which implies that \(y\in K_A\) and \(K_{AQ} \subseteq K_A\).
+        Thus, we can know that \(K_A = K_{AQ}\). Thus, we can know that \(\mathbb{Z}^n/K_A = \mathbb{Z}^n/K_{AQ}\).
+      </p>
+    </section>
+
     <section id = 'normal_subgroup'>
       <h2>Normal Subgroup</h2>
       <p>
@@ -1683,7 +1698,7 @@
       </div>
       <p>
           <b>Proof (i).</b> Given that \(I\) is a proper ideal, we can know that \(1\notin I\).
-          Hence, we have \(1 + I\in R/I\), which implies that the multiplicative ientity exists in \(R/I\).
+          Hence, we have \(1 + I\in R/I\), which implies that the multiplicative identity exists in \(R/I\).
           And it is not hard to see that \(0 + I = I\in R/I\), which implies that the additive identity exists in \(R/I\).
       </p>
     </section>
@@ -2262,8 +2277,8 @@
         Hence, there exists \(m\in M\) such that \(m\) is not a unit and \(m\notin aR\).
         However, we know that \(m = ua^n\) for some unit \(u\) and \(n\geq 0\) by assumption, which means that \(m\in aR\). It is a contradiction.
         Hence, we can know that \(aR\) is a maximal ideal.
-        Actually, for any nonunit \(r\in R\), we have \(r = ua^n\) for some unit \(u\) and \(n\geq 0\), which implies that \(r\in aR\).
-        In short, \(aR\) contains all the nonunits in \(R\). And we know that every maximal ideal is a proper ideal. In other words, every element in each maximal ideal is a nonunit.
+        Actually, for any non-unit \(r\in R\), we have \(r = ua^n\) for some unit \(u\) and \(n\geq 0\), which implies that \(r\in aR\).
+        In short, \(aR\) contains all the non-units in \(R\). And we know that every maximal ideal is a proper ideal. In other words, every element in each maximal ideal is a non-unit.
         Hence, if \(M\) is a maximal ideal of \(R\), we have \(M\subset aR\), which implies that \(M = aR\). Therefore, \(aR\) is the only maximal ideal. \(\blacksquare\)
         </p>
     </section>
