@@ -2713,12 +2713,12 @@
         \end{bmatrix}.
         \]
         Now, we want to show that \(K_A = K_{PAQ}\) where \(P\) and \(Q\) are invertible.
-        Given that \(K_A\) is the column space of an \(m \times n\) matrix \(A\) over \(\mathbb{Z}\).
-        If \(y\in K_A\), then we can know that there exists \(x\in \mathbb{Z}^n\) such that \(y = Ax\).
-        Given that \(Q\) is an invertible matrix, we can know that \(y = Ax = A(Q^{-1}Q)x = (AQ)(Q^{-1}x)\), where \(Q^{-1}x\in \mathbb{Z}^n\).
+        Given that \(K_A\) is the column space of matrix \(A\) over \(\mathbb{Z}\).
+        If \(y\in K_A\), then we can know that there exists \(x\in \mathbb{Z}^2\) such that \(y = Ax\).
+        Given that \(Q\) is an invertible matrix, we can know that \(y = Ax = A(Q^{-1}Q)x = (AQ)(Q^{-1}x)\), where \(Q^{-1}x\in \mathbb{Z}^2\).
         Hence, we can know that \(y\in K_{AQ}\). Thus, we have \(K_A \subseteq K_{AQ}\).
-        For the other direction, we can know that if \(y\in K_{AQ}\), there exists \(x\in \mathbb{Z}^n\) such that \(y = AQx\).
-        Since \(Qx\in \mathbb{Z}^n\), we can know that \(y = AQx = A(Qx)\), which implies that \(y\in K_A\) and \(K_{AQ} \subseteq K_A\).
+        For the other direction, we can know that if \(y\in K_{AQ}\), there exists \(x\in \mathbb{Z}^2\) such that \(y = AQx\).
+        Since \(Qx\in \mathbb{Z}^2\), we can know that \(y = AQx = A(Qx)\), which implies that \(y\in K_A\) and \(K_{AQ} \subseteq K_A\).
         Thus, we can know that \(K_A = K_{AQ}\).
         Now, we want to show that \(K_A \cong K_{PA}\).
         We define a map \( \phi: K_A \to K_{PA} \) by \( \phi(x) = Px \). Since \(P\) is invertible, we can know that \( \phi \) is a bijection.
