@@ -2723,6 +2723,20 @@
         Now, we want to show that \(K_A \cong K_{PA}\).
         We define a map \( \phi: K_A \to K_{PA} \) by \( \phi(x) = Px \). Since \(P\) is invertible, we can know that \( \phi \) is a bijection.
         Hence, we can know that \( K_A \cong K_{PA} \). Thus, we can know that \(K_A\cong K_{PA} = K_{PAQ}\).
+        Thus, we can get
+        \[
+        H_1\times H_2 = \langle (a, b), (0, b)\rangle \cong K_A \cong K_{PAQ} \cong \langle (d, 0), (0, a'd)\rangle = d\mathbb{Z}\oplus a'd\mathbb{Z}.
+        \]
+        Since \(\{(1, 0), (0, 1)\}\) is a basis of \(G = \mathbb{Z}\times \mathbb{Z}\), we can know that \(G = \langle (1, 0), (0, 1)\rangle = \mathbb{Z}\oplus \mathbb{Z}\).
+        Therefore, we have
+        \[
+        G/(H_1\times H_2) = \mathbb{Z}\oplus \mathbb{Z}/(d\mathbb{Z}\oplus a'd\mathbb{Z}) = \mathbb{Z}/d\mathbb{Z}\oplus \mathbb{Z}/a'd\mathbb{Z} = \mathbb{Z}/\langle \gcd(a, b)\rangle \oplus \mathbb{Z}/\langle a'b\rangle.
+        \]
+        Since we know that \(\gcd(a, b)\cdot \text{lcm}(a, b) = ab\), we have that \(a'b = \dfrac{ab}{d} = \text{lcm}(a, b)\).
+        Then, we get
+        \[
+        G/(H_1\times H_2) \cong \mathbb{Z}/\langle \gcd(a, b)\rangle \oplus \mathbb{Z}/\langle \text{lcm}(a, b) \rangle. \tag*{\(\blacksquare\)}
+        \]
       </p>
     </section>
 
