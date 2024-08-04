@@ -2645,6 +2645,85 @@
         <b>Solution (a).</b> Let \((a , b) = (1, 0)\). Then we have \(G/\langle (1, 0) \rangle \cong \mathbb{Z} \times \{0\} \cong \mathbb{Z}\).
         We know that \(\mathbb{Z}\) is torsion free since there are no elements of finite order in \(\mathbb{Z}\).
       </p>
+      <p>
+        <b>Proof (b).</b> We want to show that \(\left\langle (a, 0), (0, b)\right\rangle = \left\langle (a, b), (0, b)\right\rangle\).
+        We have \(\left\langle (a, 0), (0, b)\right\rangle \subset \left\langle (a, b), (0, b)\right\rangle\)
+        since \((a, 0) + (0, b) = (a, b)\).
+        And we get that \(\left\langle (a, b), (0, b)\right\rangle \subset \left\langle (a, 0), (0, b)\right\rangle\)
+        since \((a, b) - (0, b) = (a, 0)\). Thus, we have \(\left\langle (a, 0), (0, b)\right\rangle = \left\langle (a, b), (0, b)\right\rangle\).
+        It is not hard to see that \(\left\langle (a, b), (0, b)\right\rangle \cong \left\langle \begin{bmatrix} a \\ b \end{bmatrix}, \begin{bmatrix} 0 \\ b\end{bmatrix}\right\rangle \).
+        Define \(K_A\) as the column space of \(M\) where
+        \[
+        A = \begin{bmatrix}
+        a & 0 \\
+        b & b \\
+        \end{bmatrix}.
+        \]
+        Thus, we can know that \(K_A\cong \left\langle \begin{bmatrix} a \\ b \end{bmatrix}, \begin{bmatrix} 0 \\ b\end{bmatrix}\right\rangle \cong \langle (a, b), (0, b) \rangle\).
+        We denote \(d = \gcd(a, b)\), then there exists \(x, y\in \mathbb{Z}\) such that \(d = ax + by\) according to \( \textbf{Bézout's Identity}\).
+        And we denote that \(a'  = a/d\in \mathbb{Z}\) and \(b' = b/d\in \mathbb{Z}\).
+        We define a matrix
+        \[
+        P = \begin{bmatrix}
+        x & y \\
+        b' & -a' \\
+        \end{bmatrix}.
+        \]
+        And \(\det(P) = -a'x - yb' = - (a/d)x - (b/d)y = -(ax + by)/d = -d/d = -1\), which implies that \(P\) is invertible.
+        Hence, we can get that
+        \[
+        PA =
+        \begin{bmatrix}
+        x & y \\
+        b' & -a' \\
+        \end{bmatrix} \begin{bmatrix}
+        a & 0 \\
+        b & b \\
+        \end{bmatrix} = \begin{bmatrix}
+        d & by \\
+        ab' - a'b & -a'b \\
+        \end{bmatrix} = \begin{bmatrix}
+        d & by \\
+        \frac{ab}{d} - \frac{ab}{d} & -a'b \\
+        \end{bmatrix} = \begin{bmatrix}
+        d & by \\
+        0 & -a'b \\
+        \end{bmatrix}.
+        \]
+        Then we define \(Q\) such that
+        \[
+        Q = \begin{bmatrix}
+        1 & -b'y \\
+        0 & 1 \\
+        \end{bmatrix}.
+        \]
+        We can see that \(Q\) is invertible since \(\det(Q) = 1\ne 0\).
+        Now we have
+        \[
+        PAQ = \begin{bmatrix}
+        d & by \\
+        0 & -a'b \\
+        \end{bmatrix}\cdot
+        \begin{bmatrix}
+        1 & -b'y \\
+        0 & 1 \\
+        \end{bmatrix} = \begin{bmatrix}
+        d & 0 \\
+        0 & a'd \\
+        \end{bmatrix}.
+        \]
+        Now, we want to show that \(K_A = K_{PAQ}\) where \(P\) and \(Q\) are invertible.
+        Given that \(K_A\) is the column space of an \(m \times n\) matrix \(A\) over \(\mathbb{Z}\).
+        If \(y\in K_A\), then we can know that there exists \(x\in \mathbb{Z}^n\) such that \(y = Ax\).
+        Given that \(Q\) is an invertible matrix, we can know that \(y = Ax = A(Q^{-1}Q)x = (AQ)(Q^{-1}x)\), where \(Q^{-1}x\in \mathbb{Z}^n\).
+        Hence, we can know that \(y\in K_{AQ}\). Thus, we have \(K_A \subseteq K_{AQ}\).
+        For the other direction, we can know that if \(y\in K_{AQ}\), there exists \(x\in \mathbb{Z}^n\) such that \(y = AQx\).
+        Since \(Qx\in \mathbb{Z}^n\), we can know that \(y = AQx = A(Qx)\), which implies that \(y\in K_A\) and \(K_{AQ} \subseteq K_A\).
+        Thus, we can know that \(K_A = K_{AQ}\).
+        Now, we want to show that \(K_A \cong K_{PA}\).
+        We define a map \( \phi: K_A \to K_{PA} \) by \( \phi(x) = Px \). Since \(P\) is invertible, we can know that \( \phi \) is a bijection.
+        Hence, we can know that \( K_A \cong K_{PA} \). Thus, we can know that \(K_A\cong K_{PA} = K_{PAQ}\).
+      </p>
     </section>
 
     <section id = 'ku_2018_1_3'>
