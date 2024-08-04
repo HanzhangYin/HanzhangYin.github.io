@@ -2168,11 +2168,21 @@
         p - x_n &= p - x_{n-1} + \frac{f(x_{n-1})}{f'(x_{n-1})} \\
         &= e + \dfrac{f'(p)(-e) + \frac{f^{(m)}(p)}{m!}(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m})} \\
         &= \dfrac{f'(p)e -\frac{f^{(m)}(p)}{(m-1)!}(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m})} + \dfrac{f'(p)(-e) + \frac{f^{(m)}(p)}{m!}(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m})} \\
-        &= \dfrac{f'(p)e -\frac{f^{(m)}(p)}{(m-1)!}(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m})} + \dfrac{f'(p)(-e) + \frac{f^{(m)}(p)}{m!}(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m})} \\
         &= \dfrac{ \frac{f^{(m)}(p)}{m!}(-e)^{m}-\frac{f^{(m)}(p)}{(m-1)!}(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m})} \\
         &= \dfrac{\left(\frac{f^{(m)}(p)}{m!}(-e)^{m}-\frac{f^{(m)}(p)}{(m-1)!}(-e)^{m} + \mathcal{O}(e^{m+1})\right)m!}{\left(f'(p) + \frac{f^{(m)}(p)}{(m-1)!}(-e)^{m-1} + \mathcal{O}(e^{m})\right)m!} \\
-        &= \dfrac{f^{(m)}(p)(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p)m! + f^{(m)}(p)(-e)^{m-1}m! + \mathcal{O}(e^{m})m!} \\
+        &= \dfrac{f^{(m)}(p)(-e)^{m}-mf^{(m)}(p)(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p)m! + mf^{(m)}(p)(-e)^{m-1} + \mathcal{O}(e^{m})} \\
+        \dfrac{p - x_{n}}{p - x_{n-1}} &= \dfrac{f^{(m)}(p)(-e)^{m}-mf^{(m)}(p)(-e)^{m} + \mathcal{O}(e^{m+1})}{f'(p)m! + mf^{(m)}(p)(-e)^{m-1} + \mathcal{O}(e^{m})}\cdot \dfrac{1}{e^m} \\
+        &= \dfrac{f^{(m)}(p)(-1)^{m}-mf^{(m)}(p)(-1)^{m} + \mathcal{O}(e)}{f'(p)m! + mf^{(m)}(p)(-e)^{m-1} + \mathcal{O}(e^{m})} \\
+        &= (-1)^{m}\dfrac{f^{(m)}(p)-mf^{(m)}(p) + \mathcal{O}(e)}{f'(p)m! + mf^{(m)}(p)(-e)^{m-1} + \mathcal{O}(e^{m})} \\
         \end{align}
+        \]
+        Hence, we have
+        \[
+        \left|\dfrac{p - x_{n}}{p - x_{n-1}}\right| = \left|\dfrac{f^{(m)}(p)-mf^{(m)}(p) + \mathcal{O}(e)}{f'(p)m! + mf^{(m)}(p)(-e)^{m-1} + \mathcal{O}(e^{m})}\right| = \dfrac{|f^{(m)}(p)-mf^{(m)}(p) + \mathcal{O}(e)|}{|f'(p)m! + mf^{(m)}(p)(-e)^{m-1} + \mathcal{O}(e^{m})|}.
+        \]
+        Since \(\lim_{n\to\infty} e = 0\), we have
+        \[
+        \lim_{n\to\infty} \left|\dfrac{p - x_{n}}{p - x_{n-1}}\right| = \dfrac{|f^{(m)}(p)-mf^{(m)}(p)|}{|f'(p)m!|} = \dfrac{m - 1}{m!} \left| \dfrac{f^{(m)}(p)}{f'(p)} \right|. \tag*{\(\blacksquare\)}
         \]
       </p>
     </section>
@@ -2180,8 +2190,8 @@
 
 
     <section id = 'ku_2020_1_4'>
-    <div class = 'question_box_container'>
-        <div class = 'question_box'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
     <p>
       <b>Problem 4.</b> Let \( A \in \mathbb{C}^{n \times n} \) be a non-singular matrix, and let \( 0 \neq b \in \mathbb{C}^n \) be a fixed vector. Suppose that you have an algorithm for solving \( Ax = b \) that produces an approximate solution \( \tilde{x} (\neq 0) \) that satisfies
 
@@ -2197,8 +2207,7 @@
 
       with any consistent matrix norm \( \|\cdot\| \).
     </p>
-    <ul>
-      <li>
+          <p>
       (a) Prove that for every \( \epsilon > 0 \)
 
       \[
@@ -2206,15 +2215,14 @@
       \]
 
       where \( x \in \mathbb{C}^n \) is the exact solution of \( Ax = b \), and \( \kappa(A) \) is the condition number of \( A \).
-        </li>
-        <li>
+          </p>
+          <p>
       (b) Suppose that (a) holds asymptotically as \( \epsilon \to 0 \). Prove that
 
       \[
       \frac{\|\tilde{x} - x\|}{\|x\|} \leq \kappa(A) \epsilon + \mathcal{O}(\epsilon^2), \quad \text{as} \quad \epsilon \to 0.
       \]
-        </li>
-    </ul>
+        </p>
         </div>
     </div>
     <p>
