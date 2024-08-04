@@ -3467,9 +3467,16 @@
         Then, we have \(\lambda(1) = x_{i+1}\) and \(\lambda(-1) = x_i\).
         Hence, we have
         \[
-        \int_{x_i}^{x_{i+1}} f(x) \, dx = \int_{-1}^1 f(\lambda(t))\lambda'(t) \, dt \approx \frac{5}{9} f \left( -\sqrt{\frac{3}{5}} \right) + \frac{8}{9} f(\lambda(0)) + \frac{5}{9} f \left( \sqrt{\frac{3}{5}} \right).
+        \begin{align}
+        \int_{x_i}^{x_{i+1}} f(x) \, dx &= \int_{-1}^1 f(\lambda(t))\lambda'(t) \, dt \\
+        &= \dfrac{x_{i+1} - x_i}{2} \int_{-1}^1 f\left(\dfrac{x_{i+1} - x_i}{2}t + \dfrac{x_{i+1} + x_i}{2}\right)\, dt, \\
+        &\approx \dfrac{x_{i+1} - x_i}{2} \left( \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\left(-\sqrt{\frac{3}{5}}\right) + \dfrac{x_{i+1} + x_i}{2} \right) + \dfrac{8}{9} f\left(\dfrac{x_{i+1} + x_i}{2}\right) + \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\sqrt{\frac{3}{5}} + \dfrac{x_{i+1} + x_i}{2}\right) \right).
+        \end{align}
         \]
         Then, we have
+        \[
+        \int_a^b f(x)\, dx \approx \sum_{i=0}^{n-1} \left[\dfrac{x_{i+1} - x_i}{2} \left( \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\left(-\sqrt{\frac{3}{5}}\right) + \dfrac{x_{i+1} + x_i}{2} \right) + \dfrac{8}{9} f\left(\dfrac{x_{i+1} + x_i}{2}\right) + \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\sqrt{\frac{3}{5}} + \dfrac{x_{i+1} + x_i}{2}\right) \right)\right].
+        \]
       </p>
     </section>
 
