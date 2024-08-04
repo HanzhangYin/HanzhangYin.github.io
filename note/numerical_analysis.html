@@ -3487,9 +3487,13 @@
         \[
         E_i = \dfrac{x_{i+1} - x_i}{31500}f^{(6)}\left(\dfrac{x_{i+1} - x_i}{2}\xi+ \dfrac{x_{i+1} - x_i}{2}\right),\text{ for some } \xi\in(-1, 1).
         \]
-        Hence, we can say that the error term for approximating \(\displaystyle \int_{x_i}^{x_{i+1}} f(x)\, dx\) is
+        Given we have uniformly partitions, we can say that the error term for approximating \(\displaystyle \int_{x_i}^{x_{i+1}} f(x)\, dx\) is
         \[
-        E_i = \dfrac{x_{i+1} - x_i}{31500}f^{(6)}\left(\eta_i\right),\text{ for some } \eta_i\in(x_{i}, x_{i+1}).
+        E_i = \dfrac{h}{31500}f^{(6)}\left(\eta_i\right),\text{ for some } \eta_i\in(x_{i}, x_{i+1}).
+        \]
+        Suppose that \(f\) is smooth. In that case, the error term for the composite rule is
+        \[
+        E = \sum_{i=0}^{n-1} E_i = \sum_{i=0}^{n-1} \dfrac{h}{31500}f^{(6)}\left(\eta_i\right) = \dfrac{h}{31500}\sum_{i=0}^{n-1} f^{(6)}\left(\eta_i\right) = \dfrac{h}{31500}f^{(6)}\left(\eta\right),\text{ for some } \eta\in(a, b).
         \]
       </p>
     </section>
