@@ -2790,7 +2790,7 @@
 
 
     <h2 id = 'august_2021'>Qualify Exam Problems (August 2021)</h2>
-    <section>
+    <section id = 'ku_2021_8_2'>
         <div class = 'question-box-container'>
             <div class = 'question-box'>
       <p>
@@ -2852,7 +2852,51 @@
       </p>
     </section>
 
-    <br>
+    <section id = 'ku_2021_8_3'>
+        <div class = 'question-box-container'>
+          <div class = 'question-box'>
+            <p>
+              <b>Problem 3.</b> In this problem, we investigate Heun’s method
+
+              \[ y_{n+1} = y_n + \frac{h}{2} \left[ f(t_n, y_n) + f \left(t_{n+1}, y_n + h f(t_n, y_n) \right) \right] \]
+
+              for solving the initial value problem \( y' = f(t, y) \) for \( t \in [t_0, t_0 + T] \) with \( y(t_0) = y_0 \), where \( h = T/N \), \( t_n = t_0 + nh \) for \( n = 0, 1, \ldots, N \) and \( N > 0 \) the number of timesteps. We assume that \( f(t, y) \) is continuous on \([t_0, t_0 + T] \times \mathbb{R} \) and satisfies the Lipschitz condition with constant \( L > 0 \):
+
+              \[ |f(t, y) - f(t, z)| \leq L |y - z|, \quad \forall t \in [t_0, t_0 + T], \quad \forall y, z \in \mathbb{R}. \]
+            </p>
+            <p>
+              (a) State whether this method is explicit or implicit, one-step or multi-step.
+            </p>
+            <p>
+              (b) Show that the local truncation error is \( O(h^2) \). Is the scheme consistent, what is its order?
+            </p>
+            <p>
+              (c) State and prove whether the method (1) is zero-stable and/or convergent.
+            </p>
+          </div>
+        </div>
+      <p>
+        <b>Solution (a).</b> The method is implicit and one-step.
+      </p>
+      <p>
+        We know the local truncation error term can denoted as the following:
+        \[
+        L_e = y_{n+1} - y_n - \frac{h}{2} \left[ f(t_n, y_n) + f \left(t_{n+1}, y_n + h f(t_n, y_n) \right) \right].
+        \]
+        We will use \(\textbf{Taylor's Expansion}\) to find the local truncation error term.
+        \[
+        \begin{align}
+        y_{n+1} &= y(t_{n+1}) = y(t_n + h) = y(t_n) + hy'(t_n) + \frac{h^2}{2}y''(t_n) + \mathcal{O}(h^3), \\
+        &= y_n + h(f(t_n, y_n)) + \frac{h^2}{2}f'(t_n, y_n) + \mathcal{O}(h^3). \\
+        f \left(t_{n+1}, y_n + h f(t_n, y_n) \right) &= f(t_n + h, y_n + h f(t_n, y_n)) = f(t_n, y_n) + h \dfrac{\partial f}{\partial t}(t_n, y_n) + h \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) + \mathcal{O}(h^2), \\
+        L_e &= y_n + h(f(t_n, y_n)) + \frac{h^2}{2}f'(t_n, y_n) - y_n - \frac{h}{2} \left[ f(t_n, y_n) + f(t_n, y_n) + h \dfrac{\partial f}{\partial t}(t_n, y_n) + h \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) + \mathcal{O}(h^2)\right], \\
+        &= \frac{h^2}{2}f'(t_n, y_n) - \frac{h^2}{2} \left[ \dfrac{\partial f}{\partial t}(t_n, y_n) + \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) \right] + \mathcal{O}(h^3).
+        \end{align}
+        \]
+        Hence, we can see that the local truncation error is \(O(h^2)\) since \(h^2\) cannot be eliminated.
+      </p>
+    </section>
+
 
     <section id = 'ku_2021_8_6'>
       <div class = 'question-box-container'>
