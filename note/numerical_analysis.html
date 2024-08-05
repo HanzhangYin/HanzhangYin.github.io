@@ -2879,7 +2879,7 @@
         <b>Solution (a).</b> The method is implicit and one-step.
       </p>
       <p>
-        We know the local truncation error term can denoted as the following:
+        <b>Solution (b).</b> We know the local truncation error term can denoted as the following:
         \[
         L_e = y_{n+1} - y_n - \frac{h}{2} \left[ f(t_n, y_n) + f \left(t_{n+1}, y_n + h f(t_n, y_n) \right) \right].
         \]
@@ -2899,6 +2899,11 @@
         \lim_{h\to 0} L_e = \lim_{h\to 0} \left( \frac{h^2}{2}f'(t_n, y_n) - \frac{h^2}{2} \left[ \dfrac{\partial f}{\partial t}(t_n, y_n) + \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) \right] + \mathcal{O}(h^3) \right) = 0.
         \]
         Therefore, we can know that the scheme is consistent.
+      </p>
+      <p>
+        <b>Solution (c).</b> We find the characteristic equation of the scheme, which is \(p(z) = z - 1\).
+        It is not hard to see that the root of \(p(z)\) is \(1\). Hence, the root is in the unit circle and simple, which implies that it is zero-stable.
+        According to the previous part, we can know that the scheme is consistent. Hence, we can conclude that it is convergent.
       </p>
     </section>
 
