@@ -2894,6 +2894,11 @@
         \end{align}
         \]
         Hence, we can see that the local truncation error is \(O(h^2)\) since \(h^2\) cannot be eliminated.
+        And we have
+        \[
+        \lim_{h\to 0} L_e = \lim_{h\to 0} \left( \frac{h^2}{2}f'(t_n, y_n) - \frac{h^2}{2} \left[ \dfrac{\partial f}{\partial t}(t_n, y_n) + \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) \right] + \mathcal{O}(h^3) \right) = 0.
+        \]
+        Therefore, we can know that the scheme is consistent.
       </p>
     </section>
 
