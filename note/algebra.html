@@ -1878,10 +1878,9 @@
             Now, we can know that \(IR\cap\mathbb{Z} = I\).
         </p>
         <p>
-            <b>Proof (c).</b> We will prove it with contrapositive. Suppose that \(J\cap \mathbb{Z} = 0\).
-            Hence, for any \(j\in J\), we have \(j = a + b\alpha + c\alpha^2\), where \(a, b, c\in \mathbb{Z}\) where \(a = b = 0\), or
-            \(b\neq 0\) or \(c\neq 0\). Thus, we can know that \(J\cap \mathbb{Z} \neq 0\).
-            If we have \(b\neq 0\) or \(c\neq 0\), we can know that \(j\neq 0\).
+            <b>Proof (c).</b> Suppose that \(J\) is a non-zero ideal \(\{0\}\neq J\subseteq R\).
+            Hence, for any \(j\in J\), we have \(j = a + b\alpha + c\alpha^2\), where \(a, b, c\in \mathbb{Z}\).
+            If we have \(a \neq 0\) and \(b\neq 0\) and \(c\neq 0\), we can know that \(j\neq 0\).
             Since \(x^3 + 2\) is irreducible over \(\mathbb{Q}\) and \(\alpha\) is a root of \(x^3 + 2\), we can know that \(x^3 + 2\) is the minimal polynomial of \(\alpha\) over \(\mathbb{Q}\).
             Given that \(\mathbb{Q}\) is a field, we can know that \(\mathbb{Q}(\alpha)\cong \mathbb{Q}[x]/(x^3 + 2)\) is a field.
             Since \(j\neq 0\), we can know that \(j\) is a unit in \(\mathbb{Q}(\alpha)\).
@@ -1890,9 +1889,10 @@
             \[
             \begin{align}
             1 = jj^{-1} &= (a + b\alpha + c\alpha^2)\left(\frac{a_0}{a_1} + \frac{b_0}{b_1}\alpha + \frac{c_0}{c_1}\alpha^2\right)\\
-            a_1b_1c_1 &= (a + b\alpha + c\alpha^2)\left(a_0b_1c_1 + b_0a_1c_1\alpha + a_1b_1c_0\alpha^2\right)\in \mathbb{Z}
+            0\neq a_1b_1c_1 &= (a + b\alpha + c\alpha^2)\left(a_0b_1c_1 + b_0a_1c_1\alpha + a_1b_1c_0\alpha^2\right)\in \mathbb{Z}
             \end{align}
             \]
+            Thus, we can know that \(J\cap \mathbb{Z}\neq \{0\}\). \(\blacksquare\)
         </p>
     </section>
 
