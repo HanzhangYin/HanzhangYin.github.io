@@ -1885,6 +1885,14 @@
             Since \(x^3 + 2\) is irreducible over \(\mathbb{Q}\) and \(\alpha\) is a root of \(x^3 + 2\), we can know that \(x^3 + 2\) is the minimal polynomial of \(\alpha\) over \(\mathbb{Q}\).
             Given that \(\mathbb{Q}\) is a field, we can know that \(\mathbb{Q}(\alpha)\cong \mathbb{Q}[x]/(x^3 + 2)\) is a field.
             Since \(j\neq 0\), we can know that \(j\) is a unit in \(\mathbb{Q}(\alpha)\).
+            Then, there exists \(j^{-1} = \frac{a_0}{a_1} + \frac{b_0}{b_1}\alpha + \frac{c_0}{c_1}\alpha^2\), where \(a_0, a_1, b_0, b_1, c_0, c_1\in \mathbb{Z}\) and \(a_1, b_1, c_1\neq 0\).
+            Hence, we have
+            \[
+            \begin{align}
+            1 = jj^{-1} &= (a + b\alpha + c\alpha^2)\left(\frac{a_0}{a_1} + \frac{b_0}{b_1}\alpha + \frac{c_0}{c_1}\alpha^2\right)\\
+            a_1b_1c_1 &= (a + b\alpha + c\alpha^2)\left(a_0b_1c_1 + b_0a_1c_1\alpha + a_1b_1c_0\alpha^2\right)\in \mathbb{Z}
+            \end{align}
+            \]
         </p>
     </section>
 
