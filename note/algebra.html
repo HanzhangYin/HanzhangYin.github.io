@@ -1915,7 +1915,18 @@
                 R/pR = \{a + b\alpha + c\alpha^2\mid a, b, c\in \mathbb{Z}/p\mathbb{Z}\}.
             \]
             Now, we want to show that \(R/pR\cong \mathbb{Z}/p\mathbb{Z}[x]/(x^3 + 2)\).
-                    </p>
+            Given that \(\alpha\) is a root of \(x^3 + 2\) over \(\mathbb{Q}\) and we know that \(\alpha\in\mathbb{C}\).
+            Suppose \(x^3 + 2\) is not the minimal polynomial of \(\alpha\) over \(\mathbb{Z}/p\mathbb{Z}\).
+            Then, we have \(f(x) = x^2 + cx + d\in\mathbb{Z}/p\mathbb{Z}\) such that \(f(\alpha) = 0\).
+            We know there are two roots of \(x^3 + 2\) in \(\mathbb{C}\), which are \(\alpha_1 = \sqrt[3]{2}e^{\pi i/3}\) and \(\alpha_2 = \sqrt[3]{2}e^{-\pi i/3}\).
+            We can know that \(\alpha_1^2\) has a factor of \(3^{2/3}\) and \(\alpha_2^2\) has a factor of \(3^{2/3}\) as well,
+            which implies that \(\alpha^2 + c\alpha\notin \mathbb{Z}/p\mathbb{Z}\) for any \(c\in \mathbb{Z}/p\mathbb{Z}\).
+            Hence, we can know that \(x^3 + 2\) is the minimal polynomial of \(\alpha\) over \(\mathbb{Z}/p\mathbb{Z}\).
+            Thus, we have \(\mathbb{Z}/p\mathbb{Z}[x]/(x^3 + 2)\) is a field and \(\mathbb{Z}/p\mathbb{Z}[x]/(x^3 + 2)=\{a + b\alpha + c\alpha^2\mid a, b, c\in \mathbb{Z}/p\mathbb{Z}\}\).
+            Thus, we can know that \(R/pR\cong \mathbb{Z}/p\mathbb{Z}[x]/(x^3 + 2)\). Hence, we have \(pR\) is a maximal ideal.
+            Given that \(P\) is a prime ideal, which implies that it is a proper ideal, and \(pR\subset P\), we can know that \(P = pR\).
+            Hence, we can know that \(P\) is a maximal ideal. \(\blacksquare\)
+        </p>
     </section>
 
     <section id = 'ku_2015_8_5'>
