@@ -1897,9 +1897,20 @@
         <p>
             <b>Proof (d).</b> Suppose that \(P\) is a non-zero prime ideal in \(R\).
             Then, we want to show that \(P\cap \mathbb{Z}\) is an ideal of \(\mathbb{Z}\).
-            It is not hard to see that \(\mathbb{Z}\cdot \mathbb{Z}\subseteq \mathbb{Z}\).
-            Since \(\mathbb{Z}\subseteq R\) and \(PR\subseteq R\), we can know that \(P\mathbb{Z}\subseteq P\).
-            Since \(\mathbb{Z}\subset \mathbb{Z}\) and \(P\mathbb{Z}\subset \mathbb{P}).
+            Since \(0\in P\) and \(0\in \mathbb{Z}\), we have \(0\in P\cap\mathbb{Z}\).
+            If \(a\in P\cap \mathbb{Z}\), we can know that \(-a\in P\) since \(P\) is an ideal of \(R\), which implies it is an additive subgroup of \(R\).
+            Also, \(-a\in \mathbb{Z}\), we can know that \(-a\in P\cap \mathbb{Z}\).
+            It is clear that \(P\cap \mathbb{Z}\) is abelian, associative, and closed under both addition and multiplication by the definition of an ideal.
+            Hence, we can know that \(P\cap \mathbb{Z}\) is an additive subgroup of \(\mathbb{Z}\).
+            Then if \(p\in P\cap\mathbb{Z}\), we can know that \(p\cdot\mathbb{Z}\subseteq\mathbb{Z}\) and \(pP\subset P\).
+            THus, \(P\cap\mathbb{Z}\) is an ideal of \(\mathbb{Z}\).
+            We know that \(\mathbb{Z}\) is a PID, which implies that \(P\cap\mathbb{Z} = \langle q\rangle\) for some \(q\in \mathbb{Z}\).
+            Now, we want to show that \(P\cap \mathbb{Z}\) is a prime ideal of \(\mathbb{Z}\).
+            If \(ab\in P\), where \(a, b\in \mathbb{Z}\), we have \(a, b\in R\) and \(a\in P\) or \(b\in P) since \(P\) is a prime ideal of \(R\).
+            It shows that we have either \(a\in P\) or \(b\in P) where \(a, b\in \mathbb{Z}\). Hence, we can know that \(P\cap \mathbb{Z}\) is a prime ideal of \(\mathbb{Z}\).
+            Thus, we can know that \(P\cap \mathbb{Z} = \langle p\rangle\) for some prime number \(p\in \mathbb{Z}\).
+            It means that \(p\in P\), and all elements of \(R/P\) should have the form of \(a + b\alpha + c\alpha^2\) where \(a, b, c\in\mathbb{Z}/p\mathbb{Z}\).
+            \(\blacksquare\)
         </p>
     </section>
 
