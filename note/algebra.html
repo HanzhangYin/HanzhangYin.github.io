@@ -2072,7 +2072,19 @@
       </div>
     </div>
     <p>
-      <b>Solution (i).</b> The dual space \( V^* \) is the set of all linear transformations from \( V \) to \( F \).
+        <b>Solution (i).</b> The dual space \( V^* \) is the set of all linear transformations from \( V \) to \( F \).
+    </p>
+    <p>
+        <b>Proof (ii).</b> Firstly, we define \(L_v\) to be a map from \(V^*\) to \(F\) such that \(L_v(f) = f(v)\) where \(v\in V\) for all \(f \in V^*\).
+        Then, we define a map \(\Phi : V \to V^{**}\) such that \(\Phi(v) = L_v\) for all \(v \in V\).
+        Firstly, we show that \(\Phi\) is linear. Let \(v_1, v_2 \in V\) and \(c \in F\). If \(f\in V'\), then
+        \[
+        \begin{align}
+        \Phi(v_1 + v_2)(f) &= f(v_1 + v_2) = f(v_1) + f(v_2) = L_{v_1}(f) + L_{v_2}(f) = \Phi(v_1)(f) + \Phi(v_2)(f), \\
+        \Phi(cv_1)(f) &= f(cv_1) = cf(v_1) = cL_{v_1}(f) = c\Phi(v_1)(f).
+        \end{align}
+        ]
+        After that, we can know that \(\Phi\) is injective.
     </p>
   </section>
 
