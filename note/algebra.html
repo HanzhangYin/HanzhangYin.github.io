@@ -6789,29 +6789,29 @@
       </div>
     </div>
     <p>
-      \(\textbf{Proof. }\)Firstly, given that \(R\) is an integral domain, \(\mathcal{J}\) satisfies the ascending chain
-      condition implies that
-      there is a maximal element in \(\mathcal{J}\) (i.e. a maximal ideal in \(\mathcal{J}\)). We also know that a
-      maximal ideal is a prime ideal.
-      For any principal ideal of \(R\), we can denote it as \(\langle r\rangle\) for some \(r\in R\) where \(r\neq 0\).
-      Then, we can know that \(\langle r\rangle \subset (R, \frac{1}{r})\) since \(r\cdot \frac{1}{r} = 1\in R\).
-      Hence, we can know that any principal ideal is contained in an ideal in \(\mathcal{J}\).
-      Since every ideal in \(\mathcal{J}\) is principal, and it satisfies the ascending chain condition, we can know
-      that
-      the collection of principal ideals in \(R\) satisfies the ascending chain condition.
-      According to \(\textbf{Proposition A}\), we can know it implies that every non-zero and non-unit element in \(R\)
-      can be written as a finite product of irreducible elements.
-      Now, suppose that \(\langle r\rangle \subset (R, \frac{1}{r})\). For any \(s\in (R, \frac{1}{r})\), we can know
-      that \(s\cdot \frac{1}{r} \in R\).
-      Then we have \(\frac{s}{r} = t\) for some \(t\in R\). Hence, we have \(s = tr\in \langle r\rangle \).
-      Hence, we show that \(\langle r\rangle = (R, \frac{1}{r})\). Suppose that there is an ideal \(I\in \mathcal{J}\)
-      such that \(\langle q\rangle \subset I\), where \(q\) is irreducible in \(R\).
-      Since every ideal in \(\mathcal{J}\) is principal, we can know that \(I = \langle m\rangle\) for some \(m\in R\).
-      Since \(q\in \langle m\rangle\), we can k
-      now that \(q = rm\) for some \(r\in R\). Since \(q\) is irreducible, we can know that either \(m\) or \(r\) is a
-      unit in \(R\).
-      If \(m\) is a unit, then we have \(I = R\). If \(r\) is a unit, then we have \(I = \langle q\rangle\).
-      Thus, we can know that \(\langle q\rangle \) is a maximal ideal in \(\mathcal{J}\).
+      Let \(\mathcal{P}\) be the set of all principal ideals of \(R\). We will prove that \(\mathcal{P} = \mathcal{J}\cup\{0\}\).
+      Since \(\mathcal{J}\) is a set of principal ideals of \(R\) by assumption, we can know that \(\mathcal{J}\cup\{0\}\subset \mathcal{P}\).
+      Now, let \(r\in R\) and \(r\) is not a unit or zero. Hence, we can know that \(r^{-1}\notin R\).
+      However, we have \(r^{-1}\in K\) since \(K\) is the field of fractions of \(R\).
+      We have \(r\in (R: r^{-1})\) since \(r\cdot r^{-1} = 1\in R\), which implies that \(\langle r\rangle \subset (R: r^{-1})\).
+      If \(x\in (R: r^{-1})\), we know that \(xr^{-1} = s\in R\) for some \(s\in R\).
+      Hence, we have \(x = sr\in \langle r\rangle), which implies that \((R: r^{-1})\subset \langle r\rangle\).
+      Now, we have \(\langle r\rangle = (R: r^{-1})\) when \(r\) is not a unit or zero. It is not hard to see that \((R: \alpha)=R\) when \(\alpha\in R\).
+      Thus, we can know that \(\mathcal{P} = \mathcal{J}\cup\{0\}\).
+      Since \(\mathcal{J}\) satisfies the ascending chain condition, we can know that \(\mathcal{J}\cup \{0\}\) satisfies the ascending chain condition as well
+      (i.e. add \(\{0\}\) to the chain as the least element). Hence, we can know that \(\mathcal{P}\) satisfies the ascending chain condition.
+      Once the ascending chain condition holds on the principal ideals of \(R\), we can know that every element of \(R\) is a product of irreducible elements.
+      Now, we need to show that every irreducible element is prime. Let \(p\in R\) be an irreducible element.
+      Suppose that \(p\mid ab\) where \(a, b\in R\) and, without loss of generality, we can assume that \(p\nmid b\).
+      If \(p\nmid b\), we can know that \(b/p\notin R\).
+      But, we know that \((R: b/p)\) is a principal ideal of \(R\) since \(b/p\in K\) and assumption. So we will show that \((R: b/p) = \langle p\rangle\).
+      If \(s\in\langle p\rangle\), we have \(s = pr\) for some \(r\in R\). Hence, \(s\cdot b/p = pr\cdot b/p = rb\in R\), which implies that \(s\in (R: b/p)\) and \(\langle p\rangle\subset (R: b/p)\).
+      Based on the assumption, let \((R: b/p)= \langle k\rangle \) for some \(k\in R\). Then, we have \(\langle p\rangle \subset \langle k\rangle\).
+      Thus, we can know that \(k\mid p\). Since \(p\) is irreducible, we have \(pu = k\) for some unit \(u\in R\).
+      It means that \(\langle p\rangle = \langle k\rangle = (R: b/p)\).
+      Since \(p\mid ab\), we have \(ab/p\in R\). Thus, we know that \(a\in (R: b/p)\).
+      It shows that \(a\in \langle p\rangle\), which means that \(p\mid a\). Hence, we can know that every irreducible element is prime.
+      Therefore, we can know that \(R\) is a UFD.
     </p>
   </section>
 
