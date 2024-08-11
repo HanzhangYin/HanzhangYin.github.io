@@ -19,12 +19,12 @@
     &quot;assignee&quot;: &quot;HanzhangYin&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/HanzhangYin/HanzhangYin.github.io.git",
-    "accountId": "e5b773df-a675-4f5d-b028-e7de16257521"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HanzhangYin/HanzhangYin.github.io.git&quot;,
+    &quot;accountId&quot;: &quot;e5b773df-a675-4f5d-b028-e7de16257521&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -80,6 +80,7 @@
       <workItem from="1718560262062" duration="7400000" />
       <workItem from="1722180928558" duration="4000" />
       <workItem from="1722264486459" duration="1959000" />
+      <workItem from="1723416261273" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
