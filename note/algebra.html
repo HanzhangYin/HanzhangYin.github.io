@@ -2435,6 +2435,31 @@
       \(E\) such that \([E:L] = p\). \(\blacksquare\)
     </p>
   </section>
+
+  <section id = 'ku_2016_1_3'>
+  <div class = 'question-box-container'>
+    <div class = 'question-box'>
+      <p>
+          <b>3.</b> Let \(K\) be a field and R a commutative integral domain containing \(K\). Assume that \(R\) is a finite dimensional
+          vector space over \(K\). Prove that \(R\) is a field.
+      </p>
+    </div>
+  </div>
+  <p>
+      Let \(r\) be any nonzero element in \(R\). And define the map \(\phi_r: R \to R\) by \(\phi_r(x) = rx\).
+      Since \(\phi_r(x + y) = r(x + y) = rx + ry = \phi_r(x) + \phi_r(y)\) and \(\phi_r(k\cdot x) = rk\cdot x = k\cdot rx = k\phi_r(x)\),
+        we can know that \(\phi_r\) is a \(K\)-linear transformation.
+        According to \(\textbf{Fundamental Theorem of Linear Algebra}\), we have \(\dim V = \dim \text{Im}(\phi_r) + \dim \text{Ker}(\phi_r)\).
+        Given that \(R\) is an integral domain, we can know that \(\ker(\phi_r) = \{0\}\) since \(r\neq 0\).
+        Thus, we can know that \(\dim \ker(\phi_r) = 0\). Hence, we have \(\dim \text{Im}(\phi_r) = \dim R\).
+        Given that \(\text{Im}(\phi_r)\) is a subspace of \(R\), we can know that \(\text{Im}(\phi_r) = R\).
+        Hence, we can know that \(1\in \text{Im}(\phi_r)\). In other words, there exists an element \(s\in R\) such that
+        \(rs = 1\). Thus, we can know that \(r\) is a unit in \(R\) if \(r\neq 0\).
+        In other words, we can know that \(R\) is a field. \(\blacksquare\)
+  </p>
+  </section>
+
+
   <section id='ku_2016_1_5'>
     <div class='question-box-container'>
       <div class='question-box'>
