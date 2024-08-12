@@ -7386,13 +7386,16 @@
       For the other direction, we want to show that \(\ker(\phi) \subset \langle x^3 - 2\rangle\).
       Since \(x^3 - 2\) is irreducible in \(\mathbb{Z}[x]\), and we can know that there is no polynomial with degree
       less than \(3\) in \(\ker(\phi)\).
+      For the other direction, suppose that \(g(x)\in \mathbb{Z}[x]\) such that \(g(\sqrt[3]{2}) = 0\).
       Since \(\mathbb{Z}\) is a Unique Factorization Domain by the Fundamental Theorem of Arithmetic, we can know that
       \(\mathbb{Z}[x]\) is a Unique Factorization Domain.
-      Let \(f(x)\in \ker(\phi)\). Then we have \(f(x) = (x^3 - 2)g(x) + r(x)\) for some \(g(x), r(x)\in \mathbb{Z}[x]\)
-      such that \(\deg(r(x)) \lt 3\).
-      Hence, we have \(f(\sqrt[3]{2}) = 0 + r(\sqrt[3]{2}) = 0\), which implies that \(r(x) = 0\). Therefore, we have
-      \(f(x) = (x^3 - 2)g(x)\), which implies that \(f(x)\in \langle x^3 - 2\rangle\).
-      Therefore, we have \(\ker(\phi) = \langle x^3 - 2\rangle\). \(\blacksquare\)
+      Hence, \(g(x) = p_1(x)^{e_1}\cdots p_k(x)^{e_k}\) for some irreducible polynomials \(p_1(x), \ldots, p_k(x)\) in \(\mathbb{Z}[x]\).
+      We know that \(g(\sqrt[3]{2}) = 0\) if and only if \(p_1(\sqrt[3]{2}) = 0\) or \(\ldots\) or \(p_k(\sqrt[3]{2}) = 0\) since \(\mathbb{Z}[x]\) is an integral domain.
+      Without loss of generality, we can assume that \(p_i(\sqrt[3]{2}) = 0\).
+      Since \(p_i(x)\in\mathbb{Z}[x]\) is irreducible, and \(\sqrt[3]{2}\) is a root of \(p_i(x)\), \(p_i(x)\) is the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Q}\).
+      We know that the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Q}\) is \(x^3 - 2\), which is unique.
+      Thus, we have \(p_i(x) = x^3 - 2\). Hence, we have \(x^3 - 2\mid g(x)\) and \(g(x)\in \langle x^3 - 2\rangle\).
+      Therefore, we have \(\ker(\phi) \subset \langle x^3 - 2\rangle\). Hence, we have \(\ker(\phi) = \langle x^3 - 2\rangle\). \(\blacksquare\)
     </p>
     <p>
       \(\textbf{Solution 2. }\) We want to find primes \(p, q\in \mathbb{Z}\) such that \(pR\) is a prime ideal and
