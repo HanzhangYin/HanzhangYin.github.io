@@ -7406,10 +7406,13 @@
       know that \(2\) is not prime in \(R\).
       Since \(pR\) is a prime ideal if and only if \(p\) is a prime in \(R\), we can know that \(2R\) is not a prime
       ideal in \(R\).
-      Now, we want to show that \(3\) is still prime in \(R\).
-      Suppose that \(3 = (a + b\sqrt[3]{2} + c\sqrt[3]{2}^2)(d + e\sqrt[3]{2} + f\sqrt[3]{2}^2)\) for some \(a, b, c, d,
-      e, f\in \mathbb{Z}\).
-      Then we have
+      Now, we want to show that \(7\) is still prime in \(R\).
+      Since \(R = \mathbb{Z}[\sqrt[3]{2}]\), and \(R/\langle 7\rangle = \mathbb{Z}/7\mathbb{Z}[\sqrt[3]{2}]\).
+      Now, we want to show that \(\mathbb{Z}/7\mathbb{Z}[\sqrt[3]{2}]\) is a field.
+      Since \(\mathbb{Z}/7\mathbb{Z}\) is a field for \(7\) is a prime.
+      Since there is no \(\alpha\in \mathbb{Z}/7\mathbb{Z}\) such that \(\alpha^3 - 2 = 0\). We can know that \(x^3 - 2\) is the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Z}/7\mathbb{Z}\).
+        Since \(x^3 - 2\) is irreducible in \(\mathbb{Z}/7\mathbb{Z}[x]\), we can know that \(\mathbb{Z}/7\mathbb{Z}[\sqrt[3]{2}]\) is a field.
+        Hence, we can know that \(\langle 7\rangle\) is a maximal ideal, which implies it is a prime ideal. Hence, \(7\) is prime in \(R\).
     </p>
 
   </section>
