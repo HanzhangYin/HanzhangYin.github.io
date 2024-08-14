@@ -4117,7 +4117,7 @@
       = n \)) since the minimal polynomial of \(\alpha\) is \(f(x)\), which has degree of \(n\).
       Since \(L\) is an extension of \(K\), if \(f(x)\) is irreducible in \(L[x]\), then we have \( [L(\alpha) : L] = n
       \).
-      If \(f(x)\) is reducible in \(L[x]\), then we have \( [L(\alpha) : L] < n \). In general we have \( [L(\alpha) :
+      If \(f(x)\) is reducible in \(L[x]\), then we have \( [L(\alpha) : L] \lt n \). In general we have \( [L(\alpha) :
         L] \leq n \). According to \(\textbf{Tower Theorem}\), we have \[ [L(\alpha) : K]=[L(\alpha) : L][L : K] \leq n
         \cdot m. \] Now, for the other direction, we want to show that \([L(\alpha) : K]\geq mn\). Firstly, we have
         \([L(\alpha) : K]=[L(\alpha) : L][L : K]\), which implies that \(m=[L : K] \mid [L(\alpha) : K]\). Secondly,
@@ -4131,6 +4131,31 @@
         can know that the minimal polynomial of \(\alpha\) over \(L\) has degree of \(n\), which is \(f(x)\). Since
         \(f(x)\) is the minimal polynomial of \(\alpha\) over \(L\), we can know that \(f(x)\) is irreducible in
         \(L[x]\). \(\blacksquare\) </p>
+  </section>
+
+  <section id = 'ku_2019_1_5'>
+  <div class = 'question-box-container'>
+    <div class = 'question-box'>
+      5. Let \( V \) be a vector space over an infinite field \(F\) and \( v_1, \ldots, v_n \in V \) be finitely many non-zero vectors. Prove that there exists \( f \in V^* \) such that \( f(v_i) \ne 0 \), for all \( 1 \leq i \leq n \). Here \( V^* \) denotes the dual space of \( V \).
+    </div>
+  </div>
+  <p>
+      <b>Proof.</b> We will prove it with mathematical induction on \( n \).
+      When \(n = 1\), we know that there exists \( f \in V^* \) such that \( f(v_1) \neq 0 \) given that \( v_1 \neq 0 \).
+      It is because if all \( f \in V^* \) satisfies \( f(v_1) = 0 \), then we have \( v_1 = 0 \), which is a contradiction.
+      Now, we assume that the statement is true for \( n  \) where \( n \geq 1 \) and we want to show that the statement is true for \( n + 1 \).
+      Let \(f\in V^*\) such that \(f(v_i) \neq 0\) for all \(1 \leq i \leq n\).
+      If \(f(v_{n+1})\neq 0\), then we are done.
+      If \(f(v_{n+1}) = 0\), then we need to build a new \(h\in V^*\) such that \(h(v_i) \neq 0\) for all \(1 \leq i \leq n+1\).
+      Firstly, we know that there exists \(g\in V^*\) such that \(g(v_{n+1}) \neq 0\) since \(v_{n+1} \neq 0\) from the base case.
+      Now, we denote \(c_i\in F\) such that \(c_ig(v_i) = f(v_i)\).
+      If \(g(v_i)\neq 0\) for \(1\leq i\leq n\), then we can know that \(c_i\) is unique.
+      If \(g(v_i) = 0\) for some \(i\), then there exists no \(c_i\in F\) such that \(c_ig(v_i) = f(v_i)\) since \(f(v_i) \neq 0\).
+      Then, we define \(C = \{c_{n_1}, \ldots, c_{n_k}\}\) where \(1 \leq n_1 \lt \ldots \lt n_k \leq n\).
+      Hence, we can know that \(C\) is a finite set. Besides that, we can know there exists infinitely many \(c\in F\) such that \(cg(v_{n+1})\neq 0\).
+      Hence, pick non-zero \(a\in F\) such that \(a\neq c_i\) for all \(c_i\in C\) and define \(h = f - a\cdot g\in V^*\).
+      In that case, we can know that \(h(v_i) \neq 0\) for all \(1 \leq i \leq n+1\).
+  </p>
   </section>
 
   <section id='ku_2019_1_6'>
