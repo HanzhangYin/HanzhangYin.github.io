@@ -3587,15 +3587,7 @@
       </div>
     </div>
     <p>
-      <b>Proof (a).</b> We will prove that the null space of \(S\) is zero by contradiction.
-      Since \(T\) does not map nonzero subspace of \(V\) into itself, we can know that there are only two
-      \(T\)-invariant subspaces of \(V\): \(\{0\}\) and \(V\).
-      Hence, we can know that \(T\) is an irreducible operator. If \(T\) is an irreducible operator, then we can know
-      that the minimal polynomial of \(T\) is irreducible and \(T\) is cyclic.
-      It means that \(V = \langle T, v\rangle\) for some \(v\in V\).
-      Firstly, we can know that all polynomials in \(F[T]\) has degree at most \(n\).
-      Suppose that \(\text{Null}(S) \ne \{0\}\). Then, we can find a nonzero vector \(v\in V\) such that \(Sv = 0\).
-      And we have \(\text{Null}(S) = \{0, v_1, v_2, \dots \}\). (to be continued ...)
+      <b>Proof (a).</b>
     </p>
     <p>
       <b>Proof (b).</b> Firstly, we define a map \(\phi: F[x]\to F[T]\) such that \(\phi(f(x)) = f(T)\).
@@ -3620,7 +3612,7 @@
         Now, we want to show that \(\mu(x)\) is irreducible by contradiction.
         Suppose that \(\mu(x)\) is reducible and \(F[x]\) is a PID (i.e. UFD) for \(F\) is a field,
         we set \(\mu(x) = (f_1(x))^{e_1}\cdots (f_k(x))^{e_k}\) for some \(f_i(x)\in F[x]\) such that \(f_i(x)\) is irreducible.
-        Then, we can get \(V = \ker((f_1(x))^{e_1})\oplus\cdots\oplus \ker((f_k(x))^{e_k})\), where each \(\ker((f_i(x))^{e_i})\) is \(T\)-invariant.
+        Then, we can get \(V = \ker((f_1(T))^{e_1})\oplus\cdots\oplus \ker((f_k(T))^{e_k})\), where each \(\ker((f_i(T))^{e_i})\) is \(T\)-invariant.
         It contradicts the assumption that no nonzero subspace of \(V\) is mapped into itself by \(T\). Thus, we can know that \(\mu(x)\) is irreducible.
         Given that \(\mu(x)\) is irreducible and \(F[x]\) is a PID, we can know that \(\langle \mu(x)\rangle\) is a maximal ideal.
         Therefore, we can know that \(F[T]\) is a field. \(\blacksquare\)
