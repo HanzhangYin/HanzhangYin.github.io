@@ -6842,7 +6842,22 @@
       It means that \(\langle p\rangle = \langle k\rangle = (R: b/p)\).
       Since \(p\mid ab\), we have \(ab/p\in R\). Thus, we know that \(a\in (R: b/p)\).
       It shows that \(a\in \langle p\rangle\), which means that \(p\mid a\). Hence, we can know that every irreducible element is prime.
-      Therefore, we can know that \(R\) is a UFD. \(\blacksquare\)
+      Once we know that every irreducible is prime, we want to show that the unqiuess of factorization holds in \(R\).
+      Since every element is a product of irreducible elements, we assume that
+        \[a = p_1p_2\cdots p_n = q_1q_2\cdots q_m\]
+        where \(p_i, q_j\) are irreducible elements of \(R\).
+        We also know that \(p_i, q_j\) are prime elements of \(R\).
+        Hence, we can know that \(p_1\mid q_1q_2\cdots q_m\).
+        If \(p_1\not\mid q_1\), we can know that \(p_1\mid q_2\cdots q_m\).
+        By repeating this process, we can know that \(p_1\mid q_i\) for some \(i\).
+        And \(q_i\) is irreducible, which implies that \(u_1p_1 = q_i\) for some unit \(u_1\in R\).
+        In that case, we rearrange the expression of \(q_1q_2\cdots q_m\) and have \(u_1p_1q_1\cdots q_m = p_1p_2\cdots p_n\).
+        Similarly, we can know that \(p_2\mid q_j\) for some \(j\), which implies that \(q_j = u_2p_2\) for some unit \(u_2\in R\).
+        Since it is a finite product, we can know that, by repeating this process, it will eventually reach the end.
+        If \(n\lt m\), we have \(p_1\cdot p_n = up_1\cdot p_nq_{n+1}\cdots q_m\) for some unit \(u\in R\).
+        We can have \(p_1\cdot p_n - up_1\cdot p_nq_{n+1}\cdots q_m = p_1\cdot p_n(1-uq_{n+1}\cdots q_m) = 0\).
+        Thus, we have \(1-uq_{n+1}\cdots q_m = 0\), which implies that \(uq_{n+1}\cdots q_m = 1\). It is a contradiction since \(q_{n+1}\cdots q_m\) is a product of irreducible elements.
+        For the other direction, we can have the same result. Thus, we can know that the uniqueness of factorization holds in \(R\). \(\blacksquare\)
     </p>
   </section>
 
