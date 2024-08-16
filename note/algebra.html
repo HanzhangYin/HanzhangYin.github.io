@@ -3598,10 +3598,32 @@
       And we have \(\text{Null}(S) = \{0, v_1, v_2, \dots \}\). (to be continued ...)
     </p>
     <p>
-      <b>Proof (b).</b> Since we know that if \(S\in F[T]\) is not zero, then its null space is \(\{0\}\).
-      Hence, we can know that \(S\) is invertible. Thus, we can know that for any \(S\neq 0\in F[T]\), \(S^{-1}\)
-      exists.
-      Thus, we can know that \(F[T]\) is a field. \(\blacksquare\)
+      <b>Proof (b).</b> Firstly, we define a map \(\phi: F[x]\to F[T]\) such that \(\phi(f(x)) = f(T)\).
+      Then, we want to firstly show that \(\phi\) is a ring homomorphism.
+        Let \(f(x), g(x)\in F[x]\). Then, we have
+        \[
+          \begin{aligned}
+            \phi(f(x) + g(x)) &= \phi(f(x) + g(x)) = f(T) + g(T) = \phi(f(x)) + \phi(g(x)), \\
+            \phi(f(x)g(x)) &= \phi(f(x)g(x)) = f(T)g(T) = \phi(f(x))\phi(g(x)).
+          \end{aligned}
+        \]
+        Both properties directly follow from the properties of addition and multiplication of polynomials.
+        Therefore, we can know that \(\phi\) is a ring homomorphism.
+        Let \(S\in F[T]\). Then, we can know that \(S = f(T)\) for some \(f(x)\in F[x]\).
+        Therefore, we can know that \(\phi\) is surjective.
+        Suppose that \(\mu(x)\) is the minimal polynomial of \(T\). We want to show that \(\langle \mu(x)\rangle = \ker(\phi)\).
+        Since \(\mu(T) = 0\) for the properties of the minimal polynomial, we can see that \(\mu(x)\in \ker(\phi)\), which implies that \(\langle \mu(x)\rangle \subseteq \ker(\phi)\).
+        For the other direction, let \(g(x)\in \ker(\phi)\). Then, we have \(g(T) = 0\), which implies that \(\mu(x)\mid g(x)\).
+        Hence, for any \(g(x)\in \ker(\phi)\), we can know that \(g(x)\in \langle \mu(x)\rangle\), which implies that \(\ker(\phi) \subseteq \langle \mu(x)\rangle\).
+        Thus, we have \(\langle \mu(x)\rangle = \ker(\phi)\).
+        By the first isomorphism theorem, we can know that \(F[T]\cong F[x]/\langle \mu(x)\rangle\).
+        Now, we want to show that \(\mu(x)\) is irreducible by contradiction.
+        Suppose that \(\mu(x)\) is reducible and \(F[x]\) is a PID (i.e. UFD) for \(F\) is a field,
+        we set \(\mu(x) = (f_1(x))^{e_1}\cdots (f_k(x))^{e_k}\) for some \(f_i(x)\in F[x]\) such that \(f_i(x)\) is irreducible.
+        Then, we can get \(V = \ker((f_1(x))^{e_1})\oplus\cdots\oplus \ker((f_k(x))^{e_k})\), where each \(\ker((f_i(x))^{e_i})\) is \(T\)-invariant.
+        It contradicts the assumption that no nonzero subspace of \(V\) is mapped into itself by \(T\). Thus, we can know that \(\mu(x)\) is irreducible.
+        Given that \(\mu(x)\) is irreducible and \(F[x]\) is a PID, we can know that \(\langle \mu(x)\rangle\) is a maximal ideal.
+        Therefore, we can know that \(F[T]\) is a field. \(\blacksquare\)
     </p>
   </section>
 
