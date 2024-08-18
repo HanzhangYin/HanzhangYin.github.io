@@ -2547,6 +2547,22 @@
       \]
       Hence, we have \( A^* = \overline{A}^T \). Therefore, the matrix of \( T^* \) with respect to \( B \) is the conjugate transpose of the matrix of \( T \) with respect to \( B \). \(\blacksquare\)
       </p>
+      <p>
+          <b>Solution (b).</b> If \(T\) is Hermitian, then we have \(T^* = T\). Hence, the matrix of \(T\) is equal to the matrix of \(T^*\).
+          Then, we can know that \(A = A^*\) and \(A\) is diagonalizable since \(AA^* = A^*A\), which implies that \(A\) is normal.
+          Besides that, we can know that all eigenvalues of \(A\) is real and here is the proof:
+          Let \(\lambda\) be an eigenvalue of \(A\) and \(v\) be an eigenvector of \(A\) corresponding to \(\lambda\). Then we have
+          \[
+          \begin{align*}
+          \langle Av, v \rangle &= \langle \lambda v, v \rangle  = \lambda \langle v, v \rangle, \\
+          \langle v, Av \rangle &= \langle v, \lambda v \rangle = \overline{\lambda} \langle v, v \rangle, \\
+          \lambda \langle v, v \rangle &= \overline{\lambda} \langle v, v \rangle,
+          (\lambda - \overline{\lambda})\langle v, v \rangle = 0.
+          \end{align*}
+          \]
+          We know that \(v\neq 0\), which implies that \(\langle v, v\rangle >0\).
+          Hence, we can know that \(\lambda - \overline{\lambda} = 0\), which implies that \(\lambda\) is real.
+      </p>
   </section>
 
   <br>
