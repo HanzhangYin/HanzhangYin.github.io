@@ -1687,6 +1687,19 @@
 
     <section id = 'norm'>
         <h2>Norms</h2>
+        <p>
+            <b>Definition (Forbenius norm)</b>. For a matrix \( A \in \mathbb{C}^{m \times n} \), the Forbenius norm is defined as
+            \[
+            \|A\|_F = \sqrt{\sum_{i = 1}^m \sum_{j = 1}^n |a_{ij}|^2}.
+            \]
+        </p>
+        <p>
+            <b>Definition (\(p\)-norm)</b>. For a matrix \( A \in \mathbb{C}^{m \times n} \), the \(p\)-norm is defined as
+            \[
+            \|A\|_p = \max_{x \neq 0} \frac{\|Ax\|_p}{\|x\|_p} = \max_{\|x\|_p = 1} \|Ax\|_p,
+            \]
+            where \(x\) is a vector in \(\mathbb{C}^n\).
+        </p>
       <p>
         <b>Theorem.</b> For any \( A \in \mathbb{C}^{m \times n} \) and unitary \( Q \in \mathbb{C}^{m \times m} \), we have
         \[
@@ -1695,6 +1708,12 @@
       </p>
       <p>
         <i><b>"Numerical Linear Algebra", Page. 23</b></i>
+      </p>
+      <p>
+        <b>Theorem.</b> For any \( A \in \mathbb{C}^{m \times n} \) and unitary \( Q \in \mathbb{C}^{n \times n} \), we have
+        \[
+        \|AQ\|_2 = \|A\|_2, \quad \|AQ\|_F = \|A\|_F.
+        \]
       </p>
     </section>
 
