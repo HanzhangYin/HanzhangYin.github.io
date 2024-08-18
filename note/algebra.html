@@ -2514,6 +2514,39 @@
     In other words, \(\ker(p_i(T)^{e_i-1}) = \ker(p_i(T)^{e_i})\) (to be continued...)
   </section>
 
+  <section id = 'ku_2016_1_6'>
+      <div class = 'question-box-container'>
+          <div class = 'question-box'>
+          <p>
+              <b>6.</b> Let \( V \) be a finite dimensional inner product space over \( \mathbb{C} \) and \( T: V \to V \) a linear transformation. Write \( T^* \) for the adjoint of \( T \) and let \( B \) denote an orthonormal basis for \( V \).
+          </p>
+          <p>
+              (a) Prove that the matrix of \( T^* \) with respect to \( B \) is the conjugate transpose of the matrix of \( T \) with respect to \( B \).
+          </p>
+            <p>
+              (b) Let \( A \) denote the matrix of \( T \) with respect to \( B \). What properties does \( A \) have if \( T \) is: (i) Hermitian or (ii) Unitary.
+          </p>
+          </div>
+      </div>
+      <p>
+      <b>Proof (a).</b> Let \( B = \{v_1, v_2, \ldots, v_n\} \) be an orthonormal basis for \( V \).
+      Let \( A \) be the matrix of \( T \) with respect to \( B \) and \( A^* \) be the matrix of \( T^* \) with respect to \( B \). Then we have
+      \[
+        [T(v_i)]_B = \begin{bmatrix} a_{1i} \\ a_{2i} \\ \vdots \\ a_{ni} \end{bmatrix} \quad \text{and} \quad [T^*(v_j)]_B = \begin{bmatrix} b_{1i} \\ b_{2i} \\ \vdots \\ b_{ni} \end{bmatrix}
+      \]
+      By the definition of adjoint, we have
+      \[
+      \begin{align*}
+      \langle T(v_i), v_j \rangle &= \langle v_i, T^*(v_j) \rangle \\
+      (a_{1i}v_1 + \dots + a_{ni}v_n)^*v_j &= v_i^*(\overline{b_{1j}}v_1 + \dots + \overline{b_{nj}}v_n) \\
+        a_{1i}v_1^*v_j + \dots + a_{ni}v_n^*v_j &= v_i^*\overline{b_{1j}}v_1 + \dots + v_i^*\overline{b_{nj}}v_n \\
+        a_{ji}v_j^*v_j &= \overline{b_{ij}}v_i^*v_i \\
+        a_{ji} &= \overline{b_{ij}}
+        \end{align*}
+      \]
+      </p>
+  </section>
+
   <br>
 
   <h2>KU 2016 (August)</h2>
