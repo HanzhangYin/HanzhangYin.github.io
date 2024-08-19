@@ -2514,6 +2514,57 @@
     In other words, \(\ker(p_i(T)^{e_i-1}) = \ker(p_i(T)^{e_i})\) (to be continued...)
   </section>
 
+  <section id = 'ku_2016_1_6'>
+      <div class = 'question-box-container'>
+          <div class = 'question-box'>
+          <p>
+              <b>6.</b> Let \( V \) be a finite dimensional inner product space over \( \mathbb{C} \) and \( T: V \to V \) a linear transformation. Write \( T^* \) for the adjoint of \( T \) and let \( B \) denote an orthonormal basis for \( V \).
+          </p>
+          <p>
+              (a) Prove that the matrix of \( T^* \) with respect to \( B \) is the conjugate transpose of the matrix of \( T \) with respect to \( B \).
+          </p>
+            <p>
+              (b) Let \( A \) denote the matrix of \( T \) with respect to \( B \). What properties does \( A \) have if \( T \) is: (i) Hermitian or (ii) Unitary.
+          </p>
+          </div>
+      </div>
+      <p>
+      <b>Proof (a).</b> Let \( B = \{v_1, v_2, \ldots, v_n\} \) be an orthonormal basis for \( V \).
+      Let \( A \) be the matrix of \( T \) with respect to \( B \) and \( A^* \) be the matrix of \( T^* \) with respect to \( B \). Then we have
+      \[
+        [T(v_i)]_B = \begin{bmatrix} a_{1i} \\ a_{2i} \\ \vdots \\ a_{ni} \end{bmatrix} \quad \text{and} \quad [T^*(v_j)]_B = \begin{bmatrix} b_{1j} \\ b_{2i} \\ \vdots \\ b_{nj} \end{bmatrix}
+      \]
+      where \( a_{ij} \) and \( b_{ij} \) are the entries of \( A \) and \( A^* \) respectively.
+      By the definition of adjoint, we have
+      \[
+      \begin{align*}
+      \langle T(v_i), v_j \rangle &= \langle v_i, T^*(v_j) \rangle \\
+      (a_{1i}v_1 + \dots + a_{ni}v_n)^*v_j &= v_i^*(\overline{b_{1j}}v_1 + \dots + \overline{b_{nj}}v_n) \\
+        a_{1i}v_1^*v_j + \dots + a_{ni}v_n^*v_j &= v_i^*\overline{b_{1j}}v_1 + \dots + v_i^*\overline{b_{nj}}v_n \\
+        a_{ji}v_j^*v_j &= \overline{b_{ij}}v_i^*v_i \\
+        a_{ji} &= \overline{b_{ij}}
+        \end{align*}
+      \]
+      Hence, we have \( A^* = \overline{A}^T \). Therefore, the matrix of \( T^* \) with respect to \( B \) is the conjugate transpose of the matrix of \( T \) with respect to \( B \). \(\blacksquare\)
+      </p>
+      <p>
+          <b>Solution (b).</b> If \(T\) is Hermitian, then we have \(T^* = T\). Hence, the matrix of \(T\) is equal to the matrix of \(T^*\).
+          Then, we can know that \(A = A^*\) and \(A\) is diagonalizable since \(AA^* = A^*A\), which implies that \(A\) is normal.
+          Besides that, we can know that all eigenvalues of \(A\) is real and here is the proof:
+          Let \(\lambda\) be an eigenvalue of \(A\) and \(v\) be an eigenvector of \(A\) corresponding to \(\lambda\). Then we have
+          \[
+          \begin{align*}
+          \langle Av, v \rangle &= \langle \lambda v, v \rangle  = \lambda \langle v, v \rangle, \\
+          \langle v, Av \rangle &= \langle v, \lambda v \rangle = \overline{\lambda} \langle v, v \rangle, \\
+          \lambda \langle v, v \rangle &= \overline{\lambda} \langle v, v \rangle,
+          (\lambda - \overline{\lambda})\langle v, v \rangle = 0.
+          \end{align*}
+          \]
+          We know that \(v\neq 0\), which implies that \(\langle v, v\rangle >0\).
+          Hence, we can know that \(\lambda - \overline{\lambda} = 0\), which implies that \(\lambda\) is real.
+      </p>
+  </section>
+
   <br>
 
   <h2>KU 2016 (August)</h2>
