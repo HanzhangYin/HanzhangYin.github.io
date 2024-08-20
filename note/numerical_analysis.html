@@ -3205,6 +3205,17 @@
         </p>
         <p>
             <b>Proof (b).</b>
+            We know that
+            \[
+            x_n = x_0 + (x_1 - x_0) + (x_2 - x_1) + \ldots + (x_n - x_{n-1})
+            \]
+            Hence, we want to show that \(\lim_{n\to\infty}x_n\) exists.
+            Since \(x_n = x_0 + \sum\limits_{k=1}^{n}(x_k - x_{k-1})\), we can prove the series exsits to show that the limit exists.
+            Since \(x_{n} - x_{n-1} = f(x_{n-1}) - f(x_{n-2})\) and we have \(|f(x) - f(y)| \leq L|x - y|\), we can have
+            \[
+            |x_{n} - x_{n-1}| = |f(x_{n-1}) - f(x_{n-2})| \leq L|x_{n-1} - x_{n-2}| = L|f(x_{n-2}) - f(x_{n-3})| \leq L^2|x_{n-2} - x_{n-3}| \leq \ldots \leq L^{n-1}|x_1 - x_0|
+            \ldots \leq L^{n-1}|x_1 - x_0|
+            \]
         </p>
     </section>
 
