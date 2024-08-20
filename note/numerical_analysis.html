@@ -3163,6 +3163,41 @@
       <p>\(\textbf{Solution.}\)</p>
     </section>
 
+    <section id = 'ku_2022_8_2'>
+        <div class = 'question-box-container'>
+            <div class = 'question-box'>
+                <p>
+                    <b>2.</b> A fixed point of function \( f \) is a number \( x^* \) satisfying
+
+                    \[ f(x^*) = x^*. \]
+
+                    The functional iteration is defined as: \( x_{n+1} = f(x_n) \), \( n = 0, 1, 2, \ldots \) for a given initial approximation \( x_0 \). Suppose that \( f \) is arbitrarily differentiable on an interval \([a, b]\).
+                </p>
+                <p>
+                    <b>(a)</b> State and justify sufficient condition(s) under which there exists a fixed point in \([a, b]\).
+                </p>
+                <p>
+                    <b>(b)</b> State and justify additional condition(s) under which there exists a unique fixed point in \([a, b]\).
+                </p>
+                <p>
+                    <b>(c)</b> Prove that, under the conditions stated in Question 2b, for any \( x_0 \in [a, b] \) the functional iteration produces a sequence of points \(\{x_n\}\) which converges to the fixed point of \( f \).
+                </p>
+                <p>
+                    <b>(d)</b> Prove that the sequence \(\{x_n\}\) converges linearly (or faster) to the unique fixed point.
+                </p>
+            </div>
+        </div>
+        <p>
+            <b>Solution (a).</b> We want to make sure that there exists \(\alpha, \beta\in [a, b]\) such that  \(g(\alpha) := f(\alpha) - \alpha \leq 0\) and \(g(\beta) := f(\beta) - \beta \geq 0\).
+            Then we can know that there exists a fixed point in \([a, b]\).
+        </p>
+        <p>
+            <b>Proof (a).</b> We know that \(f(x)\) is continuous on \([a, b]\), so we have \(g(x):= f(x) - x\) is continuous on \([a, b]\).
+           Without loss of generality, we assume that \(\alpha<\beta\\). Given that \(g(\alpha)\leq 0\) and \(g(\beta)\geq 0\), by the intermediate value theorem, there exists \(c\in [a, b]\) such that
+              \(g(c) = 0\), which implies that there exists a fixed point in \([a, b]\). \( \blacksquare \)
+        </p>
+    </section>
+
     <section id = 'ku_2022_8_3'>
       <div class = 'question-box-container'>
         <div class = 'question-box'>
