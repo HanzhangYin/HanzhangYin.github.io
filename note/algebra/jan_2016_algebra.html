@@ -1,0 +1,172 @@
+<h1>KU 2016 (January)</h1>
+
+<section id='ku_2016_1_2'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>2.</b> Let \(F\) be a field and \(f(x)\) an irreducible, separable polynomial over \(F\). Write \(E\) for
+                the splitting field of
+                \(f(x)\) over \(F\), and suppose that \(\alpha\) and \(\alpha + 1\) are roots of \(f(x)\).
+            </p>
+            <p>
+                (a) Prove that the characteristic of \(F\) is not zero.
+            </p>
+            <p>
+                (b) Prove that there exists a field \(L\) between \(F\) and \(E\) such that \([E : L]\) equals the
+                characteristic of \(F\) .
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> We will prove it with contradiction. Suppose that \(F\) has characteristic \(0\). Since \(E\)
+        ist he splitting field of \(f(x)\), which is irreducible, we can know that there exists an isomorphism
+        \(\sigma:E\to E\)
+        such that \(\sigma(\alpha) = \alpha + 1\) given that \(\alpha\) and \(\alpha + 1\) are two roots of \(f(x)\) and
+        \(\sigma(a) = a\) for any \(a\in F\).
+        Since, we can know that the \(\sigma\) sends the roots of \(f(x)\) to the roots of \(f(x)\), then we have
+        \[
+        \begin{align}
+        \sigma(\alpha + 1) &= \sigma(\alpha) + \alpha(1) = \alpha + 1 + 1 = \alpha + 2\\
+        \sigma(\alpha + 2) &= \sigma(\alpha) + \alpha(2) = \alpha + 1 + 2 = \alpha + 3\\
+        \vdots\\
+        \sigma(\alpha + n) &= \sigma(\alpha) + \alpha(n) = \alpha + 1 + n = \alpha + n+1\\
+        \vdots \\
+        \end{align}
+        \]
+        Given that the characteristic of \(F\) is \(0\), we can know that \(\alpha + n\) is a root of \(f(x)\) for any
+        \(n\in \mathbb{N}\).
+        In that case, \(f(x)\) has infinitely many roots, which is a contradiction. Hence, we can know that the
+        characteristic of \(F\) is not \(0\). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (b).</b> Given that \(F\) does not have characteristic \(0\), we can know that the characteristic of
+        \(F\) is \(p\), where \(p\) is a prime number.
+        According to part (a), we can know that \(f(x)\) contains the following roots:
+        \[
+        \alpha, \alpha + 1, \alpha + 2, \ldots, \alpha + p - 1.
+        \]
+        Fix the following the isomorphism we found in part (a), which is \(\sigma:E\to E\).
+        Then we have
+        \[
+        \sigma(\alpha) = \alpha + 1, \sigma(\alpha + 1) = \alpha + 2, \ldots, \sigma(\alpha + p - 1) = \alpha.
+        \]
+        In other words, we have \(\sigma^p(\alpha) = \alpha\). Hence, we can know that \(\sigma\in \text{Gal}(E/F)\) has
+        order \(p\).
+        Thus, we can know that \(\langle \sigma \rangle\) is a subgroup of \(\text{Gal}(E/F)\) with order \(p\).
+        According to the \(\textbf{Galois Correspondence}\), we can know that there exists a field \(L\) between \(F\) and
+        \(E\) such that \([E:L] = p\). \(\blacksquare\)
+    </p>
+</section>
+
+<section id = 'ku_2016_1_3'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>3.</b> Let \(K\) be a field and R a commutative integral domain containing \(K\). Assume that \(R\) is a finite dimensional
+                vector space over \(K\). Prove that \(R\) is a field.
+            </p>
+        </div>
+    </div>
+    <p>
+        Let \(r\) be any nonzero element in \(R\). And define the map \(\phi_r: R \to R\) by \(\phi_r(x) = rx\).
+        Since \(\phi_r(x + y) = r(x + y) = rx + ry = \phi_r(x) + \phi_r(y)\) and \(\phi_r(k\cdot x) = rk\cdot x = k\cdot rx = k\phi_r(x)\),
+        we can know that \(\phi_r\) is a \(K\)-linear transformation.
+        According to \(\textbf{Fundamental Theorem of Linear Algebra}\), we have \(\dim V = \dim \text{Im}(\phi_r) + \dim \text{Ker}(\phi_r)\).
+        Given that \(R\) is an integral domain, we can know that \(\ker(\phi_r) = \{0\}\) since \(r\neq 0\).
+        Thus, we can know that \(\dim \ker(\phi_r) = 0\). Hence, we have \(\dim \text{Im}(\phi_r) = \dim R\).
+        Given that \(\text{Im}(\phi_r)\) is a subspace of \(R\), we can know that \(\text{Im}(\phi_r) = R\).
+        Hence, we can know that \(1\in \text{Im}(\phi_r)\). In other words, there exists an element \(s\in R\) such that
+        \(rs = 1\). Thus, we can know that \(r\) is a unit in \(R\) if \(r\neq 0\).
+        In other words, we can know that \(R\) is a field. \(\blacksquare\)
+    </p>
+</section>
+
+
+<section id='ku_2016_1_5'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>Problem 5.</b> Let \( V \) be a finite dimensional vector space over the field \( F \) and \( T : V \to V
+                \) is a linear transformation. Suppose that \( \chi_T(x) \), the characteristic polynomial of \( T \), factors
+                as \( \chi_T(x) = p_1(x)^{f_1} \cdots p_r(x)^{f_r} \), where each \( p_i(x) \) is irreducible over \( F \).
+                Prove that the minimal polynomial of \( T \) equals \( p_1(x)^{e_1} \cdots p_r(x)^{e_r} \), where for each \(
+                1 \leq i \leq r \), \( e_i \) is the first exponent for which the kernel of \( p_i(T)^{e_i} \) equals the
+                kernel of \( p_i(T)^{e_i+1} \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> We will prove it with mathematical contradiction. Given that the characteristic polynomial of \( T
+        \) is \( \chi_T(x) = p_1(x)^{f_1} \cdots p_r(x)^{f_r} \), where each \( p_i(x) \) is irreducible over \( F \).
+        Then we have the minimal polynomial of \( T \) is \( p_1(x)^{e_1} \cdots p_r(x)^{e_r} \), where \( 1 \leq e_i \leq
+        f_i \) for each \(i\). By the following theorem:
+    </p>
+    <p>
+        <b>Theorem.</b>
+        Let \( V \) be a finite-dimensional vector space, \( T \) an operator on \( V \), and assume the minimal
+        polynomial of \( T \) is \( \mu_T(x) = p_1(x)^{e_1} \cdots p_t(x)^{e_t} \), where the polynomials \( p_i(x) \) are
+        irreducible and distinct.
+        For each \( i \), let
+        \[
+        V_i = V(p_i) = \{ v \in V \mid p_i(T)^{e_i}(v) = 0 \} = \text{Ker}(p_i(T)^{e_i}).
+        \]
+        Then each of the spaces \( V_i \) is \( T \)-invariant and
+        \[
+        V = V_1 \oplus V_2 \oplus \cdots \oplus V_t.
+        \]
+    </p>
+    Now, suppose that \(e_i\) is not the first exponent for which the kernel of \(p_i(T)^{e_i}\) equals the kernel of
+    \(p_i(T)^{e_i+1}\).
+    In other words, \(\ker(p_i(T)^{e_i-1}) = \ker(p_i(T)^{e_i})\) (to be continued...)
+</section>
+
+<section id = 'ku_2016_1_6'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>6.</b> Let \( V \) be a finite dimensional inner product space over \( \mathbb{C} \) and \( T: V \to V \) a linear transformation. Write \( T^* \) for the adjoint of \( T \) and let \( B \) denote an orthonormal basis for \( V \).
+            </p>
+            <p>
+                (a) Prove that the matrix of \( T^* \) with respect to \( B \) is the conjugate transpose of the matrix of \( T \) with respect to \( B \).
+            </p>
+            <p>
+                (b) Let \( A \) denote the matrix of \( T \) with respect to \( B \). What properties does \( A \) have if \( T \) is: (i) Hermitian or (ii) Unitary.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Let \( B = \{v_1, v_2, \ldots, v_n\} \) be an orthonormal basis for \( V \).
+        Let \( A \) be the matrix of \( T \) with respect to \( B \) and \( A^* \) be the matrix of \( T^* \) with respect to \( B \). Then we have
+        \[
+        [T(v_i)]_B = \begin{bmatrix} a_{1i} \\ a_{2i} \\ \vdots \\ a_{ni} \end{bmatrix} \quad \text{and} \quad [T^*(v_j)]_B = \begin{bmatrix} b_{1j} \\ b_{2i} \\ \vdots \\ b_{nj} \end{bmatrix}
+        \]
+        where \( a_{ij} \) and \( b_{ij} \) are the entries of \( A \) and \( A^* \) respectively.
+        By the definition of adjoint, we have
+        \[
+        \begin{align*}
+        \langle T(v_i), v_j \rangle &= \langle v_i, T^*(v_j) \rangle \\
+        (a_{1i}v_1 + \dots + a_{ni}v_n)^*v_j &= v_i^*(\overline{b_{1j}}v_1 + \dots + \overline{b_{nj}}v_n) \\
+        a_{1i}v_1^*v_j + \dots + a_{ni}v_n^*v_j &= v_i^*\overline{b_{1j}}v_1 + \dots + v_i^*\overline{b_{nj}}v_n \\
+        a_{ji}v_j^*v_j &= \overline{b_{ij}}v_i^*v_i \\
+        a_{ji} &= \overline{b_{ij}}
+        \end{align*}
+        \]
+        Hence, we have \( A^* = \overline{A}^T \). Therefore, the matrix of \( T^* \) with respect to \( B \) is the conjugate transpose of the matrix of \( T \) with respect to \( B \). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Solution (b).</b> If \(T\) is Hermitian, then we have \(T^* = T\). Hence, the matrix of \(T\) is equal to the matrix of \(T^*\).
+        Then, we can know that \(A = A^*\) and \(A\) is diagonalizable since \(AA^* = A^*A\), which implies that \(A\) is normal.
+        Besides that, we can know that all eigenvalues of \(A\) is real and here is the proof:
+        Let \(\lambda\) be an eigenvalue of \(A\) and \(v\) be an eigenvector of \(A\) corresponding to \(\lambda\). Then we have
+        \[
+        \begin{align*}
+        \langle Av, v \rangle &= \langle \lambda v, v \rangle  = \lambda \langle v, v \rangle, \\
+        \langle v, Av \rangle &= \langle v, \lambda v \rangle = \overline{\lambda} \langle v, v \rangle, \\
+        \lambda \langle v, v \rangle &= \overline{\lambda} \langle v, v \rangle,
+        (\lambda - \overline{\lambda})\langle v, v \rangle = 0.
+        \end{align*}
+        \]
+        We know that \(v\neq 0\), which implies that \(\langle v, v\rangle >0\).
+        Hence, we can know that \(\lambda - \overline{\lambda} = 0\), which implies that \(\lambda\) is real.
+    </p>
+</section>
