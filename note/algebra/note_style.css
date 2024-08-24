@@ -225,7 +225,7 @@
     padding: 10px;
     border-radius: 50%;
     text-decoration: none;
-    transition: right 0.3s, opacity 0.3s;
+    transition: right 0.2s, opacity 0.2s;
     opacity: 0;
   }
 
