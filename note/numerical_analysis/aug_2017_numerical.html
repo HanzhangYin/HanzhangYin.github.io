@@ -1,0 +1,63 @@
+<h1>Qualify Exam Problems (August 2017)</h1>
+<section id = 'ku_2017_8_2'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>Problem 2.</b>
+            </P>
+            <ul>
+                <li>
+                    (a) Find the coefficients and nodes of a Gaussian quadrature formula of the form
+                    \[
+                    \int_a^b f(x) \, dx \approx A_0 f(x_0) + A_1 f(x_1). \tag{1}
+                    \]
+                </li>
+                <li>
+                    (b) What is the degree of (algebraic) precision of the formula (1) with the found coefficients and nodes?
+                </li>
+                <li>
+                    (c) Prove that no Gaussian quadrature formula of the form (1) can be exact for all polynomials of degree \( \leq 4 \).
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b>
+        Firstly, we set \(f(x) = 1\), we have
+        \[
+        \int_a^b f(x) \, dx = b - a =  A_0 + A_1.
+        \]
+        Given that \(A_0\) and \(A_1\) are the same, we have \(A_0 = A_1 = \frac{b - a}{2}\).
+        Now, set \(f(x) = x\), we have
+        \[
+        \int_a^b x \, dx = \frac{b^2}{2} - \frac{a^2}{2} = \frac{(b-a)\cdot (b + a)}{2}= \frac{b - a}{2} x_0 + \frac{b - a}{2} x_1.
+        \]
+        Thus, we get \(x_0 + x_1 = b+a\), which implies that \(x_0 = b + a - x_1\).
+        Then, we set \(f(x) = x^2\), we have
+        \[
+        \int_a^b x^2 \, dx = \frac{b^3}{3} - \frac{a^3}{3} = \frac{(b-a)\cdot (b^2 + ab + a^2)}{3} = \frac{b - a}{2} x_0^2 + \frac{b - a}{2} x_1^2.
+        \]
+        It shows that
+        \[
+        \frac{2\cdot (b^2 + ab + a^2)}{3} = x_0^2 + x_1^2.
+        \]
+        We substitute \(x_0 = b + a - x_1\) into the equation above, we get
+        \[
+        \begin{align}
+        \frac{2\cdot (b^2 + ab + a^2)}{3} &= (b + a - x_1)^2 + x_1^2 \\
+        \frac{2\cdot ((a + b)^2 - ab)}{3}&= (b + a)^2 - 2x_1(b+a) + 2x_1^2 \\
+        2x_1^2 - 2x_1(b+a) + (b + a)^2  &- \frac{2\cdot ((a + b)^2 - ab)}{3} = 0 \\
+        2x_1^2 - 2(b+a)x_1 + \frac{(a + b)^2}{3} + \frac{2ab}{3} &= 0 \\
+        \end{align}
+        \]
+        Now, using the quadratic formula, we have
+        \[
+        x_1 = \frac{2(b+a) \pm \sqrt{4(b+a)^2 - 4\cdot 2\cdot \left(\frac{(a + b)^2}{3} + \frac{2ab}{3}\right)}}{4} = \frac{b+a \pm \sqrt{\frac13b^2 - \frac23ab + \frac13a^2}}{2} = \frac{b+a \pm \frac{\sqrt{3}}{3}(b-a)}{2}.
+        \]
+        Hence, we have \(x_0 = \frac{b+a}{2} - \frac{\sqrt{3}(b-a)}{6}\), and \(x_1 = \frac{b+a}{2} + \frac{\sqrt{3}(b-a)}{6}\).
+        Therefore, we have
+        \[
+        \int_a^b f(x) \, dx \approx \frac{b - a}{2} f\left(\frac{b+a}{2} - \frac{\sqrt{3}(b-a)}{6}\right) + \frac{b - a}{2} f\left(\frac{b+a}{2} + \frac{\sqrt{3}(b-a)}{6}\right).
+        \]
+    </p>
+</section>
