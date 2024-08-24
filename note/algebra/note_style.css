@@ -226,6 +226,30 @@
     font-family:  'Spectral', serif;
   }
 
+  .next-page-arrow {
+    position: fixed;
+    top: 50%;
+    right: -50px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: right 0.3s, opacity 0.3s;
+    opacity: 0;
+  }
+
+  body:hover .next-page-arrow {
+    right: 10px;
+    opacity: 1;
+  }
+
+  .next-page-arrow:hover {
+    background-color: #0056b3;
+  }
+
   .navbar {
     overflow: hidden; 
     background-color: transparent;
