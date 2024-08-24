@@ -187,6 +187,23 @@
 /* define styles for larger screens */
 
 @media screen and (min-width: 600px) {
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 5px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
   .nav-toggle {
     display: none; /* hide the checkbox */
   }
