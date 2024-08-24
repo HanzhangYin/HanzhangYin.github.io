@@ -82,6 +82,23 @@
     #about-me {
         display: block; /*Let about me section automatically show up when the page loads*/
     }
+
+    a[id="about-me"]:target ~ #about-me{
+        transform:translate3d(0,0,0);
+    }
+    a[id="tutoring"]:target ~ #tutoring{
+        transform:translate3d(0,-100%,0);
+    }
+    a[id="note"]:target ~ #note{
+        transform:translate3d(0,-200%,0);
+    }
+    a[id="contact"]:target ~ #contact{
+        transform:translate3d(0,-300%,0);
+    }
+    a[id="research"]:target ~ #research{
+        transform:translate3d(0,-400%,0);
+    }
+
     h1 {
         text-align: right;
         font-family: 'Spectral', serif;
