@@ -1,0 +1,286 @@
+
+
+<h2 id='january_2015'>KU 2015 (January)</h2>
+<section id='ku_2015_1_1'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>1.</b> Let \( G \) be a finite abelian group of odd order. Prove that for each \( x \in G \), there exists
+                a unique \( y \in G \), such that \( y^2 = x \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Let \(\varphi: G\to G\) such that \(g\mapsto g^2\) for all \(g\in G\).
+        Firstly, we want to show that \(\varphi\) is well-defined. Suppose that \(g = h\) for some \(g, h\in G\), then we
+        have \(g^2 = h^2\).
+        Then, we want to show that \(\varphi\) is a group homomorphism.
+        For any \(g, h\in G\), we have \(\varphi(gh) = (gh)^2 = g^2h^2 = \varphi(g)\varphi(h)\) since \(G\) is abelian.
+        Now, we want to show that \(\varphi\) is injective.
+        Suppose that \(\varphi(g) = \varphi(h)\) for some \(g, h\in G\), then we have \(g^2 = h^2\).
+        Hence, we can have \(g^2h^{-2} = (gh^{-1})^2 = e\). Given that \(G\) is group of odd order. Hence, we can know
+        that there does not exist any element of even order in \(G\).
+        If \(gh^{-1}\) is an non identity element of \(G\), then we can say that \(gh^{-1}\) has order of \(2\), which is
+        a contradiction.
+        Hence, we have \(gh^{-1} = e\), which implies that \(g = h\). Thus, we showed that \(\varphi\) is injective.
+        Given that \(\varphi: G\to G\) and \(G\) has finite order, according to \(\textbf{Pigeon Hole Principle}\), we can
+        know that \(\varphi\) is surjective.
+        Thus, we can have for any \(x\in G\), there exists a unique \(y\in G\) such that \(y^2 = x\). \(\blacksquare\)
+    </p>
+</section>
+
+<section id='ku_2015_1_2'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>2.</b>Prove that a group of order \(435=3\cdot 5\cdot 29\) must be abelian.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Given that \(435 = 3\cdot 5\cdot 29\), we can know that there exists a sylow 3-subgroup \(G\), sylow
+        5-subgroup \(H\), and sylow 29-subgroup \(K\).
+        And the sylow 3-subgroup has order of \(3\), which is a prime. Hence, we can know that the sylow 3-subgroup is
+        cyclic and isomorphic to \( \mathbb{Z}/3\mathbb{Z} \).
+        For the similar reason, we can have the sylow 5-subgroup is cyclic and isomorphic to \( \mathbb{Z}/5\mathbb{Z} \)
+        and the sylow 29-subgroup is cyclic and isomorphic to \( \mathbb{Z}/29\mathbb{Z} \).
+        Suppose that \(g\neq e\in G\cap H\), then we can know that \(g\) has order either \(3\) or \(5\), but cannot be
+        both. Thus, we can know that \(G\cap H = \{e\}\).
+        For the similar reason, we can have \(H\cap K = \{e\}\) and \(G\cap K = \{e\}\).
+        Now, according to the \(\textbf{Third Sylow's Theorem}\), we can know that the number of sylow 3-subgroup, sylow
+        5-subgroup, and sylow 29-subgroup are \(3a + 1\), \(5b + 1\), \(29c + 1\) for some \(a, b, c\in \mathbb{Z}\).
+        Moreover, we have \(3a + 1 \mid 435\), \(5b + 1 \mid 435\), and \(29c + 1 \mid 435\). Hence, we can conclude that
+        \(a = b = c = 0\).
+        And the number of the sylow 3-subgroup, sylow 5-subgroup, and sylow 29-subgroup are \(1\), \(1\), and \(1\),
+        respectively.
+        For any \(g\) in our original group, we can know that \(gGg^{-1}\) is a group of order \(3\) and there is only one
+        subgroup of order \(3\), which is \(G\). Hence, we can know that \(gGg^{-1} = G\), which implies that \(G\) is
+        normal in our original group.
+        Similarly, we can know that \(H\) and \(K\) are normal in our original group. The inner direct product of two
+        normal subgroups are normal. Hence, we can know that \(G H\) is normal in our original group.
+        Besides that, we can have
+        \[
+        \begin{align}
+        |GH| = \frac{|G||H|}{|G\cap H|} = 15,
+        |GHK| = \frac{|GH||K|}{|GH\cap K|} = 435.
+        \end{align}
+        \]
+        Thus, we know that our original group is \(GHK\).
+        Since we know that both \(G\) and \(H\) are normal and \(G\cap H = \{e\}\), we can know that \(GH = G\times H\).
+        Since \(GH\) and \(K\) are normal, and \(GH\cap K = \{e\}\), we can know that \(GHK = GH\times K\).
+        Thus, we can know that \(GHK = G\times H\times K = \mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}\times
+        \mathbb{Z}/29\mathbb{Z}\).
+        Since \(\mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}\times \mathbb{Z}/29\mathbb{Z}\) is abelian, we can
+        know that our original group is abelian. \(\blacksquare\)
+    </p>
+</section>
+
+<section id=;ku_2015_1_3'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>3.</b> Let \( k = \mathbb{Z}/2\mathbb{Z} \) and set \( R := k[X, Y] \), the polynomial ring in two
+                variables over \( k \). Let \( I \subseteq R \) be a proper ideal.
+            </p>
+            <p>
+                (i) Explain why \( R/I \) is a vector space over \( k \).
+            </p>
+            <p>
+                (ii) Let \( q \) be a fixed power of two and suppose that \( f_1, \ldots, f_n \) is a set of generators for \(
+                I \). Set \( I^{[q]} \) to be the ideal generated by \( f_1^q, \ldots, f_n^q \). Prove that \( I^{[q]} \) is
+                an ideal of \( R \) that does not depend upon the set of generators chosen.
+            </p>
+            <p>
+                (iii) Compute the dimension of \( R/I^{[q]} \) as a vector space over \( k \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (i).</b> Given that \(I\) is a proper ideal, we can know that \(1\notin I\).
+        Hence, we have \(1 + I\in R/I\), which implies that the multiplicative identity exists in \(R/I\).
+        And it is not hard to see that \(0 + I = I\in R/I\), which implies that the additive identity exists in \(R/I\).
+    </p>
+</section>
+
+<section id='ku_2015_1_4'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>4.</b> Find the minimal polynomial of \( \sqrt{2} + \sqrt[3]{2} \) over \( \mathbb{Q} \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution.</b> Let \( \alpha = \sqrt{2} + \sqrt[3]{2} \). Then we have
+        \[
+        \begin{align}
+        \alpha - \sqrt{2} &= \sqrt[3]{2} \\
+        (\alpha - \sqrt{2})^3 &= 2 \\
+        \alpha^3 - 3\alpha^2\sqrt{2} + 6\alpha - 2\sqrt{2} &= 2 \\
+        -3\alpha^2\sqrt{2} - 2\sqrt{2} &= 2 - \alpha^3 - 6\alpha \\
+        \sqrt{2}(-3\alpha^2 - 2) &= 2 - \alpha^3 - 6\alpha \\
+        \sqrt{2} &= \frac{2 - \alpha^3 - 6\alpha}{-3\alpha^2 - 2} \\
+        &= \frac{\alpha^3 + 6\alpha - 2}{3\alpha^2 + 2}.
+        \end{align}
+        \]
+        Hence, we can know that \( \sqrt{2} \) is in the field \( \mathbb{Q}(\alpha) \).
+        And we have \(\mathbb{Q}(\sqrt{2}) \subset \mathbb{Q}(\alpha)\).
+        Since \(\mathbb{Q}(\sqrt{2})\subset \mathbb{Q}(\sqrt{2}, \sqrt{3})\).
+        Given that \(\sqrt{2} + \sqrt[3]{2}\) is in the field \(\mathbb{Q}(\sqrt{2}, \sqrt[3]{2})\), we can know that
+        \(\mathbb{Q}(\sqrt{2} + \sqrt[3]{2}) \subset \mathbb{Q}(\sqrt{2}, \sqrt[3]{2})\).
+        Since \(\sqrt{2}\in \mathbb{Q}(\sqrt{2} + \sqrt[3]{2})\), we can know that \(\sqrt[3]{2} = (\sqrt{2} +
+        \sqrt[3]{2}) - \sqrt{2}\) is in the field \(\mathbb{Q}(\sqrt{2} + \sqrt[3]{2})\).
+        Thus, we have \(\mathbb{Q}(\sqrt{2}, \sqrt[3]{2}) \subset \mathbb{Q}(\sqrt{2} + \sqrt[3]{2})\).
+        Therefore, we can know that \(\mathbb{Q}(\sqrt{2} + \sqrt[3]{2}) = \mathbb{Q}(\sqrt{2}, \sqrt[3]{2})\).
+        We know \([\mathbb{Q}(\sqrt{2}): \mathbb{Q}] = 2\) since \(x^2 - 2\) is an irreducible polynomial over
+        \(\mathbb{Q}\) and \(\sqrt{2}\) is a root of \(x^2 - 2\) (i.e \(x^2 - 2\) is the minimal polynomial of
+        \(\sqrt{2}\) over \(\mathbb{Q}\)).
+        And \(\sqrt[3]{2}\notin \mathbb{Q}(\sqrt{2})\) since there is no \(a, b\in \mathbb{Q}\) such that \(a + b\sqrt{2}
+        = \sqrt[3]{2}\).
+        Let \(f(x)= x^3 - 2\) and we want to show that \(f(x)\) is irreducible over \(\mathbb{Q}(\sqrt{2})\) by
+        contradiction.
+        Suppose that \(f(x)\) is reducible over \(\mathbb{Q}(\sqrt{2})\), then we can have \(f(x) = (x + a)(x^2 + bx +
+        c)\) for some \(a, b, c\in \mathbb{Q}(\sqrt{2})\).
+        Hence, \(f(x)\) has a root in \( \mathbb{Q}(\sqrt{2}) \). We know that \(\sqrt[3]{2}\) is a root of \(f(x)\) but
+        \(\sqrt[3]{2}\notin \mathbb{Q}(\sqrt{2})\).
+        And \(f(x)\) has two other roots in \(\mathbb{C}\), which is a contradiction. Hence, we have \(f(x)\) is
+        irreducible over \(\mathbb{Q}(\sqrt{2})\).
+        Thus, we can know that
+        \[
+        \mathbb{Q}(\sqrt{2})[x]/(x^3 - 2) \cong \mathbb{Q}(\sqrt{2})[\sqrt[3]{2}].
+        \]
+        Since \(\sqrt[3]{2}\) is algebraic over \(\mathbb{Q}(\sqrt{2})\), we have \( \mathbb{Q}(\sqrt{2})[\sqrt[3]{2}] =
+        \mathbb{Q}(\sqrt{2})(\sqrt[3]{2}) = \mathbb{Q}(\sqrt{2}, \sqrt[3]{2}) = \mathbb{Q}(\sqrt{2} + \sqrt[3]{2})\).
+        Given that \(x^3 - 2\) is the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Q}(\sqrt{2})\), we can conclude
+        that \([\mathbb{Q}(\sqrt{2}, \sqrt[3]{2}): \mathbb{Q}(\sqrt{2})] = 3\).
+        Then, we have
+        \[
+        \begin{align}
+        [\mathbb{Q}(\sqrt{2} + \sqrt[3]{2}): \mathbb{Q}] &= [\mathbb{Q}(\sqrt{2}, \sqrt[3]{2}): \mathbb{Q}] \\
+        &=[\mathbb{Q}(\sqrt{2}, \sqrt[3]{2}): \mathbb{Q}(\sqrt{2})][\mathbb{Q}(\sqrt{2}): \mathbb{Q}] \\
+        &= 3\cdot 2 = 6.
+        \end{align}
+        \]
+        Now, we know that the minimal polynomial of \(\sqrt{2} + \sqrt[3]{2}\) over \(\mathbb{Q}\) is degree \(6\).
+        We already had
+        \[
+        \sqrt{2} = \frac{\alpha^3 + 6\alpha - 2}{3\alpha^2 + 2}.
+        \]
+        Then, we square both sides and simplify it,
+        \[
+        \begin{align}
+        2 &= \frac{(\alpha^3 + 6\alpha - 2)^2}{(3\alpha^2 + 2)^2} \\
+        2(3\alpha^2 + 2)^2 &= (\alpha^3 + 6\alpha - 2)^2 \\
+        2(9\alpha^4 + 12\alpha^2 + 4) &= \alpha^6 + 12\alpha^4 - 4\alpha^3 + 36\alpha^2 - 24\alpha + 4 \\
+        18\alpha^4 + 24\alpha^2 + 8 &= \alpha^6 + 12\alpha^4 - 4\alpha^3 + 36\alpha^2 - 24\alpha + 4 \\
+        \alpha^6 - 6\alpha^4 - 4\alpha^3 + 12\alpha^2 - 24\alpha - 4 &= 0.
+        \end{align}
+        \]
+        Since \(x^6 - 6x^4 - 4x^3 + 12x^2 - 24x - 4\) had degree of \(6\) and \(\sqrt{2} + \sqrt[3]{2}\) is a root of
+        \(x^6 - 6x^4 - 4x^3 + 12x^2 - 24x - 4\), we can know that \(x^6 - 6x^4 - 4x^3 + 12x^2 - 24x - 4\) is the minimal
+        polynomial of \(\sqrt{2} + \sqrt[3]{2}\) over \(\mathbb{Q}\).
+    </p>
+</section>
+
+<section id='ku_2015_1_5'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>5.</b> Let \( V \) be a vector space over the field \( F \).
+            </p>
+            <p>
+                (i) Define the dual space \( V^* \).
+            </p>
+            <p>
+                (ii) Prove that the canonical map \( V \to V^{**} \) is an isomorphism when \( V \) is finite dimensional over
+                \( F \).
+            </p>
+            <p>
+                (iii) Give an example to show that (ii) may fail if \( V \) is not finite dimensional.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (i).</b> The dual space \( V^* \) is the set of all linear transformations from \( V \) to \( F \).
+    </p>
+    <p>
+        <b>Proof (ii).</b> Firstly, we define \(L_v\) to be a map from \(V^*\) to \(F\) such that \(L_v(f) = f(v)\) where \(v\in V\) for all \(f \in V^*\).
+        Then, we define a map \(\Phi : V \to V^{**}\) such that \(\Phi(v) = L_v\) for all \(v \in V\).
+        Firstly, we show that \(\Phi\) is linear. Let \(v_1, v_2 \in V\) and \(c \in F\). If \(f\in V'\), then
+        \[
+        \begin{align}
+        \Phi(v_1 + v_2)(f) &= f(v_1 + v_2) = f(v_1) + f(v_2) = L_{v_1}(f) + L_{v_2}(f) = \Phi(v_1)(f) + \Phi(v_2)(f), \\
+        \Phi(cv_1)(f) &= f(cv_1) = cf(v_1) = cL_{v_1}(f) = c\Phi(v_1)(f).
+        \end{align}
+        ]
+        After that, we want to know that \(\Phi\) is injective. Let \(v \in V\) such that \(\Phi(v) = 0\).
+        Since \(\Phi(v) = L_v(f) = f(v) = 0\) for all \(f \in V^*\), we can know that \(v = 0\).
+        Then, we can get that \(\ker(\Phi) = \{0\}\) and \(\Phi\) is injective and invertible.
+        Since \(\dim(V) = \dim(V^*)\) and \(\dim(V^*) = \dim(V^{**}) \) and \(\Phi\) is invertible, we can know that \(\Phi\) is an isomorphism.
+        Therefore, we have \(V \cong V^{**}\). \(\blacksquare\)
+    </p>
+</section>
+
+<section id='ku_2015_1_6'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>6.</b> Let \( A \) be an \( n \times n \) matrix with entries in \( \mathbb{R} \), the field of real
+                numbers.
+                Let \( \phi_A : \mathbb{R}^n \to \mathbb{R}^n \) be the linear transformation defined by \( \phi_A(v) = A
+                \cdot v \), for each column vector \( v \in \mathbb{R}^n \). Set \( W := \{v \in \mathbb{R}^n \mid \phi_A(v) =
+                v\} \) and assume that \( \dim \ker(\phi_A) + \dim W = n \).
+            </p>
+            <p>
+                (i) Give the minimal polynomial for \( A \).
+            </p>
+            <p>
+                (ii) Describe all possible Jordan canonical forms for \( A \).
+            </p>
+            <p>
+                (iii) Prove that if \( A \) is a symmetric matrix, then \( W \) is orthogonal to \( \ker(\phi_A) \). Assume
+                that \( \mathbb{R}^n \) is endowed with its standard inner product.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solutions (i).</b> Suppose that \(v\in \ker(A)\cap W\). Then we have \(A\cdot v = v = 0\), which implies that
+        \(W\cap \ker(\phi_A) = 0\).
+        Besides that, with \( \dim \ker(\phi_A) + \dim W = n \), we can know that \( \ker(\phi_A)\oplus W = \mathbb{R}^n
+        \).
+        Since we know that \(\ker(\phi_A)\oplus \text{Range}(\phi_A) = \mathbb{R}^n\), we can know that
+        \(\text{Range}(\phi_A) = W\).
+        Hence, for any \(v\in \mathbb{R}^n\), we can write \(v = v_1 + v_2\), where \(v_1\in \ker(\phi_A)\) and \(v_2\in
+        W\).
+        Then, we have \(A\cdot v = Av_1 + Av_2 = Av_2 = v_2\). And \(A(Av) = A(Av_1 + Av_2) = A(Av_2) = Av_2 = v_2\).
+        Thus, we can get
+        \[
+        A^2\cdot v - A\cdot v= (A^2 - A)\cdot v = 0, \text{ for all } v\in \mathbb{R}^n.
+        \]
+        Hence, we can know that \(A^2 - A = 0\). Then, we can conclude that the minimal polynomial \(\mu_A \mid x^2 - x\).
+        Suppose that \(\mu_A\) is a polynomial of degree \(1\). Then we can know that \(\mu_A = x\) or \(\mu_A = x - 1\).
+        If \(\mu_A\) is a polynomial of degree \(2\), then we can know that \(\mu_A = x(x - 1)\).
+    </p>
+    <p>
+        <b>Solution (ii).</b> If \(\mu_A = x\), then we have \(A = 0\). Hence, the Jordan canonical form of \(A\) is
+        \(0\).
+        If \(\mu_A = x - 1\), then we have \(A = I\). Hence, the Jordan canonical form of \(A\) is \(I\).
+        If \(\mu_A = x(x - 1)\), then we want to prove that the Jordan Canonical Form of \(A\) is a diagonal matrix with
+        \(0\) and \(1\) on the diagonal entries.
+        Since \(W = \{v\in \mathbb{R}^n \mid Av = v\}\), we can know that \(W = \ker(A - I)\).
+        Given that \(\text{dim}\ker(A) + \text{dim}W = n\), we have \(\text{dim}\ker(A - 0\cdot I) + \text{dim}\ker(A - I)
+        = n\).
+        Thus, we can know that \(A\) is diagonalizable. Hence, the Jordan Canonical Form of \(A\) is a diagonal matrix
+        with \(0\) and \(1\) on the diagonal entries.
+    </p>
+    <p>
+        <b>Proof (iii).</b> Suppose that \(A\) is a symmetric matrix. Then we have \(A = A^T = A^*\) since \(A\) is a real
+        matrix.
+        Let \(w\in W\) and \(v\in \ker(\phi_A)\). Then we have
+        \[
+        \langle w, v\rangle = \langle Aw, v\rangle = \langle w, A^*v\rangle = \langle w, Av\rangle = \langle w, 0\rangle =
+        0.
+        \]
+        Hence, we can know that \(W\) is orthogonal to \(\ker(\phi_A)\). \[\tag*{\(\blacksquare\)}\]
+    </p>
+</section>
