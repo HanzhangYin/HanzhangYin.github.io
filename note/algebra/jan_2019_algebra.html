@@ -1,0 +1,167 @@
+<h2>KU 2019 (January)</h2>
+
+<section id='ku_2019_1_2'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>2.</b> Let \( R \) denote the ring \( \mathbb{C}[t, t^{-1}] \) of Laurent polynomials over \( \mathbb{C}
+                \).
+            </p>
+            <p>
+                (i) Give a rigorous proof that \( R \) is isomorphic to \( \mathbb{C}[x, y]/(xy - 1) \).
+            </p>
+            <p>
+                (ii) Show that every ideal in \( R \) is a principal ideal.
+            </p>
+            <p>
+                (iii) Give an example (with proof) of a non-zero prime ideal in \( R \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (i).</b> Firstly, we want to define a map \(\varphi: \mathbb{C}[x, y]\to \mathbb{C}[t, t^{-1}]\) such
+        that
+        \[
+        \varphi(f(x, y)) = f(t, t^{-1}).
+        \]
+        Hence, we want to show tht \(\varphi\) is a ring homomorphism. Firstly, we can know that \(\varphi\) is
+        well-define since if \(g(x, y) = h(x, y)\). then we will have \(g(t, t^{-1}) = h(t, t^{-1})\).
+        Then, we can know that \(\varphi\) is a ring homomorphism since
+        \[
+        \begin{align}
+        \varphi(g(x, y) + h(x, y)) &= g(t, t^{-1}) + h(t, t^{-1}) = \varphi(g(x, y)) + \varphi(h(x, y)), \\
+        \varphi(g(x, y)h(x, y)) &= g(t, t^{-1})h(t, t^{-1}) = \varphi(g(x, y))\varphi(h(x, y)).
+        \end{align}
+        \]
+        For any \(f(t, t^{-1})\in \mathbb{C}[t, t^{-1}]\), we can know that
+        \[
+        f(t, t^{-1}) = \sum_{i = -n}^{m} a_i t^i,\text{ where }n, m\in \mathbb{N}.
+        \]
+        In general, lets assume that \(n\neq 0\). Then, we can get that
+        \[
+        \begin{align}
+        f(t, t^{-1}) &= \sum_{i = -n}^{m} a_i t^i = a_{-n}t^{-n} + \dots + a_{-1}t^{-1} + a_0 + a_1t + \dots + a_m t^m, \\
+        &= a_{-n}(t^{-1})^n + a_{-n+1}(t^{-1})^{n-1} + \dots + a_{-1}t^{-1} + a_0 + a_1t + \dots + a_m t^m, \\
+        \end{align}
+        \]
+        Then, we can see that when
+        \[
+        f(x, y)= a_{-n}(y)^n + a_{-n+1}(y)^{n-1} + \dots + a_{-1}y + a_0 + a_1x + \dots + a_m x^m, \\
+        \]
+        we have
+        \[
+        \varphi(f(x, y)) = f(t, t^{-1}).
+        \]
+        It shows that \(\varphi\) is surjective.
+        Now, we want to show that \(\ker(\varphi) = (xy - 1)\).
+        Suppose that \(f(x,y)\in (xy - 1)\), then \(f(x, y) = g(x, y)(xy - 1)\) for some \(g(x, y)\in \mathbb{C}[x, y]\).
+        Then, we can know that
+        \[
+        \varphi(f(x, y)) = f(t, t^{-1}) = g(t, t^{-1})(t\cdot t^{-1} - 1) = g(t, t^{-1})(1 - 1) = 0.
+        \]
+        Thus, we showed that \((xy - 1)\subset \ker(\varphi)\).
+        Suppose that \(f(x, y)\neq 0\) and \(f(x, y)\in \ker(\varphi)\).
+    </p>
+
+</section>
+
+<section id='ku_2019_1_3'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>3.</b> Consider a field \( K \), and an irreducible polynomial \( f(x) \in K[x] \).
+                Prove that if \( L \) is a field extension of \( K \) such that \([L : K] \) is relatively prime to the degree
+                of \( f(x) \), then \( f(x) \) remains irreducible in \( L[x] \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Suppose that \( [L : K] = m \) and \(f(x)\) is an irreducible polynomial over \(K\) where its degree
+        is \(n\) and \(\gcd(n, m) = 1\).
+        Suppose that \(\alpha\) is a root of \(f(x)\) in \(L\). Then, we can know that \(f(x)\) is a minimal polynomial of
+        \(\alpha\).
+        And \(K(\alpha) = K[x]/(f(x))\) is a field extension of \(K\), which has degree of \(n\) (i.e. \( [K(\alpha) : K]
+        = n \)) since the minimal polynomial of \(\alpha\) is \(f(x)\), which has degree of \(n\).
+        Since \(L\) is an extension of \(K\), if \(f(x)\) is irreducible in \(L[x]\), then we have \( [L(\alpha) : L] = n
+        \).
+        If \(f(x)\) is reducible in \(L[x]\), then we have \( [L(\alpha) : L] \lt n \). In general we have \( [L(\alpha) :
+        L] \leq n \). According to \(\textbf{Tower Theorem}\), we have \[ [L(\alpha) : K]=[L(\alpha) : L][L : K] \leq n
+        \cdot m. \] Now, for the other direction, we want to show that \([L(\alpha) : K]\geq mn\). Firstly, we have
+        \([L(\alpha) : K]=[L(\alpha) : L][L : K]\), which implies that \(m=[L : K] \mid [L(\alpha) : K]\). Secondly,
+        since \(L\) is an extension of \(K\), we can know that \(L(\alpha)\) is an extension of \(K(\alpha)\). Hence, we
+        have \( [L(\alpha) : K]=[L(\alpha) : K(\alpha)][K(\alpha) : K]\), which implies that \(n=[K(\alpha) : K] \mid
+        [L(\alpha) : K]\). Since \(\gcd(m, n)\cdot \text{lcm}(m, n)=mn\) and \(\gcd(m, n)=1\), we can know that
+        \(\text{lcm(m, n)=mn}\). Since \(n\mid [L(\alpha) : K]\) and \(m \mid [L(\alpha) : K]\), we can know that
+        \([L(\alpha) : K]\) is the common multiple of \(m\) and \(n\) and \(mn \mid [L(\alpha) : K]\), which implies
+        that \(mn \leq [L(\alpha) : K]\). Thus, we showed that \[ [L(\alpha) : K]=mn. \] Since \([L(\alpha) :
+        K]=[L(\alpha) : L][L : K]=[L(\alpha) : L]\cdot m=mn\), we can know that \([L(\alpha) : L]=n\). In that case, we
+        can know that the minimal polynomial of \(\alpha\) over \(L\) has degree of \(n\), which is \(f(x)\). Since
+        \(f(x)\) is the minimal polynomial of \(\alpha\) over \(L\), we can know that \(f(x)\) is irreducible in
+        \(L[x]\). \(\blacksquare\) </p>
+</section>
+
+<section id = 'ku_2019_1_5'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            5. Let \( V \) be a vector space over an infinite field \(F\) and \( v_1, \ldots, v_n \in V \) be finitely many non-zero vectors. Prove that there exists \( f \in V^* \) such that \( f(v_i) \ne 0 \), for all \( 1 \leq i \leq n \). Here \( V^* \) denotes the dual space of \( V \).
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> We will prove it with mathematical induction on \( n \).
+        When \(n = 1\), we know that there exists \( f \in V^* \) such that \( f(v_1) \neq 0 \) given that \( v_1 \neq 0 \).
+        It is because if all \( f \in V^* \) satisfies \( f(v_1) = 0 \), then we have \( v_1 = 0 \), which is a contradiction.
+        Now, we assume that the statement is true for \( n  \) where \( n \geq 1 \) and we want to show that the statement is true for \( n + 1 \).
+        Let \(f\in V^*\) such that \(f(v_i) \neq 0\) for all \(1 \leq i \leq n\).
+        If \(f(v_{n+1})\neq 0\), then we are done.
+        If \(f(v_{n+1}) = 0\), then we need to build a new \(h\in V^*\) such that \(h(v_i) \neq 0\) for all \(1 \leq i \leq n+1\).
+        Firstly, we know that there exists \(g\in V^*\) such that \(g(v_{n+1}) \neq 0\) since \(v_{n+1} \neq 0\) from the base case.
+        Now, we denote \(c_i\in F\) such that \(c_ig(v_i) = f(v_i)\).
+        If \(g(v_i)\neq 0\) for \(1\leq i\leq n\), then we can know that \(c_i\) is unique.
+        If \(g(v_i) = 0\) for some \(i\), then there exists no \(c_i\in F\) such that \(c_ig(v_i) = f(v_i)\) since \(f(v_i) \neq 0\).
+        Then, we define \(C = \{c_{n_1}, \ldots, c_{n_k}\}\) where \(1 \leq n_1 \lt \ldots \lt n_k \leq n\).
+        Hence, we can know that \(C\) is a finite set. Besides that, we can know there exists infinitely many \(c\in F\) such that \(cg(v_{n+1})\neq 0\).
+        Hence, pick non-zero \(a\in F\) such that \(a\neq c_i\) for all \(c_i\in C\) and define \(h = f - a\cdot g\in V^*\).
+        In that case, we can know that \(h(v_i) \neq 0\) for all \(1 \leq i \leq n+1\).  \(\blacksquare\)
+    </p>
+</section>
+
+<section id='ku_2019_1_6'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>6.</b> Let \( V \) be a finite dimensional vector space over the field \( F \) and suppose \( T : V
+                \rightarrow V \) is a linear operator on \( V \).
+            </p>
+            <ul>
+                <li>
+                    (i) Prove that if the minimal polynomial of \( T \) is \( x^2 - x \), then the kernel of \( T \) has a \( T
+                    \)-invariant complement.
+                </li>
+                <li>
+                    (ii) Give an example where \( V \) has a proper \( T \)-invariant subspace \( W \) such that \( W \) does
+                    not have a \( T \)-invariant complement.
+                </li>
+                <li>
+                    (iii) If \( V = \mathbb{R}^4 \), give an example where \( T \) has only finitely many \( T \)-invariant
+                    subspaces. Hint: It may be useful to consider the case that \( T \) is a normal operator on \( \mathbb{R}^4
+                    \).
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <b>Proof (i).</b>
+        Since \(\mu_T(x) = x^2 - x = x(x - 1)\), then we can know that
+        \[
+        V = \ker(T) \oplus \ker(T - I),
+        \]
+        where \(\ker(T)\) and \(\ker(T - I)\) are \(T\)-invariant subspaces.
+        Thus, we can see that \(\ker(T-I)\) is a \(T\)-invariant complement of \(\ker(T)\). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Solution (ii).</b> Let \(T\) be a linear operator such that \(T = 0\).
+    </p>
+    <p>
+
+    </p>
+</section>

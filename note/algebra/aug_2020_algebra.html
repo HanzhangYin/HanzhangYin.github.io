@@ -1,0 +1,250 @@
+<h1>KU 2020 (August)</h1>
+
+<section id='ku_2020_8_1'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>1.</b> Let \( G := \{ I := C_1, C_2, \ldots, C_r \} \) be a finite set of invertible \( n \times n \)
+                complex matrices, such that \( G \) is a finite group under matrix multiplication. Here \( I \) denotes the \(
+                n \times n \) identity matrix.
+            </p>
+            <p>
+                (i) Prove that each \( C_i \) is diagonalizable.
+            </p>
+            <p>
+                (ii) Show that \( \text{trace}(C_i^{-1}) = \overline{\text{trace}(C_i)} \), for all \( i \), where \(
+                \overline{z} \) denotes the complex conjugate of \( z \in \mathbb{C} \).
+            </p>
+            <p>
+                (iii) Let \( \langle -, - \rangle \) denote the standard inner product on \( \mathbb{C}^n \). Define \( [v, w]
+                := \frac{1}{|G|} \sum_{i=1}^r \langle C_i v, C_i w \rangle \), for all \( v, w \in \mathbb{C}^n \). Prove that
+                \( [ -, - ] \) is an inner product on \( \mathbb{C}^n \) and that \( [v, w] = [C_i v, C_i w] \), for all \( v,
+                w \in \mathbb{C}^n \) and \( C_i \in G \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (i).</b> Given that \(G\) is a finite group with order \(r\). Hence, we can see that for any \(C_i\), we
+        have \(C_i^r = I\).
+        Then, we have \(C^r - I = 0\). Let \(f(x) = x^r - 1\) and we have \(f(C_i) = 0\) for any \(i\). Denote the minimal
+        polynomial of \(C_i\) as \(\mu_{C_i}(x)\).
+        We can know that \(\mu_{C_i}(x)\mid f(x)\). Since \(f'(x) = rx^{r-1}\) and
+        \[
+        x^r - 1 = \frac1r x\cdot rx^{r-1} - 1,
+        \]
+        we can know that \(\gcd(f(x), f'(x)) = 1\), which implies that \(x^r - 1\) is separable in \(\mathbb{C}\).
+        Hence, we can know that \(f(x)\) has distinct roots in \(\mathbb{C}\). Given that \(\mu_{C_i}(x)\mid f(x)\), we
+        can know that \(\mu_{C_i}(x)\) has distinct roots in \(\mathbb{C}\).
+        Since the minimal polynomial contains all the eigenvalues of \(C_i\) as roots.
+        Let \(\mu_{C_i}(x) = (x - \lambda_1)(x - \lambda_2)\cdots(x - \lambda_{n_i})\), where \(\lambda_j\) are the
+        eigenvalues of \(C_i\).
+        Since each \(\lambda_j\) is distinct, we have
+        \[
+        V = \ker(C_i - \lambda_1I) \oplus \ker(C_i - \lambda_2I) \oplus \cdots \oplus \ker(C_i - \lambda_{n_i}I).
+        \]
+        Since the algebraic multiplicity of each eigenvalue is equal to the geometric multiplicity, we have \(C_i\) is
+        diagonalizable. \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (ii).</b> Since we already showed each \(C_i\) is diagonalizable, we write \(C_i = P_iD_iP_i^{-1}\),
+        where \(D_i\) is a diagonal matrix and \(P_i\) is an invertible matrix.
+        Since \(C_i\) is invertible, we have \(D_i\) is invertible. Then, we can have \(C_i^{-1} = P_iD_i^{-1}P_i^{-1}\),
+        where \(D_i^{-1}\) is a diagonal matrix and \(P_i\) is an invertible matrix.
+        Moreover, the diagonal entries of \(D_i^{-1}\) is the reciprocal of the diagonal entries of \(D_i\).
+        Since the diagonal entries of \(D_i\) are eigenvalues of \(C_i\), we have
+        \[
+        \begin{align}
+        \text{trace}(C_i) &= \text{trace}(P_iD_iP_i^{-1}) = \text{trace}(D_iP_i^{-1}P_i) = \text{trace}(D_i) =
+        \sum_{j=1}^n \lambda_j, \\
+        \text{trace}(C_i^{-1}) &= \text{trace}((P_iD_iP_i^{-1})^{-1}) = \text{trace}(P_iD_i^{-1}P_i^{-1}) =
+        \text{trace}(D_i^{-1}P_i^{-1}P_i) = \text{trace}(D_i^{-1}) = \sum_{j=1}^n \frac1{\lambda_j}.
+        \end{align}
+        \]
+        Again, we can know that \((\lambda_i)^r - 1 = 0\), since the eigenvalue is the root of \(x^r - 1\) from the
+        previous part.
+        Then,
+        \[
+        \overline{\lambda_i^r - 1} = \overline{\lambda_i^r} - \overline{1} = \overline{\lambda_i}^r - 1 = 0.
+        \]
+        Thus, we can know that \(\lambda_i^r\) = 1 and \(\overline{\lambda_i}^r = 1\).
+        Hence, we have
+        \[
+        \lambda_i^r\cdot \overline{\lambda_i}^r = (\lambda_i\overline{\lambda_i})^r = 1.
+        \]
+        Since \(\lambda_i\cdot \overline{\lambda_i} = |\lambda_i|^2\geq 0\), we have \((\lambda_i\cdot
+        \overline{\lambda_i} =1\), for every eigenvalue \(\lambda_i\) of \(C_i\).
+        Thus, we have
+        \[
+        \text{trace}(C_i^{-1}) = \sum_{j=1}^n \frac1{\lambda_j} = = \sum_{j=1}^n
+        \frac{\overline{\lambda_j}}{\lambda_j\overline{\lambda_j}} = \sum_{j=1}^n \overline{\lambda_j} =
+        \overline{\sum_{j=1}^n \lambda_j} = \overline{\text{trace}(C_i)}. \blacksquare
+        \]
+    </p>
+    <p>
+        <b>Solution (c).</b>Firstly, we want to show that \([v, v]\geq 0\) for any \(v\).
+        Given that
+        \[
+        [v, v] = \frac{1}{|G|}\sum_{i = 1}^r \langle C_i v, C_i v \rangle = \frac{1}{|G|}\sum_{i = 1}^r \|C_iv\|^2 \geq 0.
+        \]
+        Then, we want to show that \([v, v] = 0\) if and only if \(v = 0\).
+        Suppose that \([v, v] = 0\), then we have \(\|C_iv\|^2 = 0\) for all \(i\), which implies that \(C_i v = 0\) for
+        all \(i\).
+    </p>
+</section>
+
+<br>
+
+<section id='ku_2020_8_2>'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>2.</b> Let \( T \) be a linear operator on a finite dimensional complex inner product space \( V \). Recall
+                that \( T \) is a normal operator if \( TT^* = T^*T \), where \( T^* \) denotes the adjoint of \( T \). Prove
+                that \( T \) is a normal operator if and only if \( \|T(v)\| = \|T^*(v)\| \), for all \( v \in V \). (Hint:
+                use the fact that \( T^*T - TT^* \) is self-adjoint.) Give an example of a normal operator on a
+                three-dimensional complex space that is not self-adjoint.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Suppose that \(T\) is a normal operator. Then, we have \(TT^* = T^*T\). Let \(v\in V\), then we have
+        \[
+        \|T(v)\|^2 = \langle T(v), T(v) \rangle = \langle T^*T(v), v \rangle = \langle TT^*(v), v \rangle = \langle
+        T^*(v), T^*(v) \rangle = \|T^*(v)\|^2.
+        \]
+        Hence, we have \(\|T(v)\| = \|T^*(v)\|\) for all \(v\in V\).
+        For the other direction, let \(v\) be any vector in \(V\), then we have \(\|T(v)\| = \|T^*(v)\|\), which implies
+        that \(\|T(v)\|^2 = \|T^*(v)\|^2\).
+        Then, we have
+        \[
+        \begin{align}
+        \|T(v)\|^2 - \|T^*(v)\|^2 &= 0\\
+        \langle T(v), T(v) \rangle - \langle T^*(v), T^*(v) \rangle &= 0\\
+        \langle T^*T(v), v \rangle + \langle -TT^*(v), v \rangle &= 0\\
+        \langle T^*T(v) - TT^*(v), v \rangle &= 0 \\
+        \langle (T^*T - TT^*)(v), v \rangle &= 0.
+        \end{align}
+        \]
+        Since \(v\) is any vector, it forces \((T^*T - TT^*)(v) = 0\). Again, because of \(v\) is any vector, we can have
+        \(T^*T - TT^* = 0\), which implies that \(T\) is a normal operator. \(\blacksquare\)
+    </p>
+</section>
+
+
+<br>
+
+<section id='ku_2020_8_4'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>4.</b> Let \( G \) be a group of order \( 3n \) where \( n \) is an odd number.
+            </p>
+            <p>
+                (a) Prove that any subgroup of order \( n \) in \( G \) is normal.
+            </p>
+            <p>
+                (b) Give an example, with full justification, to show that the statement in part (a) is no longer true if \( n
+                \) is even.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Suppose that \(n\) is an odd number and there exists a subgroup of \(G\), \(H\), such that the
+        order is \(n\).
+        Then, we can know that \([G:H] = 3\). Since \(n\) is an odd number, we can know that \(2\not\mid n\), which
+        implies that \(3\) is the smallest prime dividing \(3n\).
+        Hence, we can conclude that \(H\) is normal in \(G\). \(\blacksquare\)
+    </p>
+</section>
+
+<section id='ku_2020_8_5'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>5.</b> Let \( R \) be a PID. Let \( I \) be a nonzero proper ideal in \( R \) and \( S = R/I \). Prove that
+                the following are equivalent:
+            </p>
+            <p>
+                (a) \( S \) is indecomposable. (Namely, \( S \) cannot be written as direct sum of two non-zero ideals \( S =
+                I \oplus J \).)
+            </p>
+            <p>
+                (b) \( I = (f^n) \) where \( f \) is a prime element and \( n \) is some positive integer.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Firstly, we want to show one direction, namely, (a) implies (b), by contradiction.
+        Suppose that \(I = (f^n)\) where \(f\) is a prime element and \(n\) is some positive integer.
+        According to the \(\textbf{Correspondence Theorem of Rings}\), we know that the maximal ideal of \(R\) containing
+        \(I\) can be mapped to maximal ideal of \(S\).
+        Suppose that \(\mathcal{m}\) is a maximal ideal of \(R\) containing \(I\), then we have \(f^n\in \mathcal{m}\).
+        We also know that \(\mathcal{m}\) is a maximal ideal, which implies that \(\mathcal{m}\) is a prime ideal.
+        Thus, we can know that \(f\in \mathcal{m}\). In that case, we can know that \(\mathcal{m}\) contains \(f\).
+        Hence, we can know that \((f)\subset \mathcal{m}\). Since \(f\) is prime, we have \((f)\) is a prime ideal.
+        Given that \(R\) is a PID, we can know that \((f)\) is a maximal ideal. Thus, we can know that the only maximal
+        ideal containing \(I\) is \((f)\).
+        In that case, we can know that \((f)/(f^n)\) is the only maximal ideal of \(S\). Now suppose that \(S = J\oplus
+        K\) where \(J\) and \(K\) are non-zero ideals of \(S\).
+        Hence, we want to show that \(J\) and \(K\) are proper ideals. If \(J\) is a whole ring, we can know and \(J\cap K
+        = K = \{0\}\), which is a contradiction.
+        Now, we know that \(J\) and \(K\) are both proper ideal of \(S\) and there is only one maximal ideal of \(S\),
+        which is \((f)/(f^n)\).
+        Thus, \(J\subset (f)/(f^n)\) and \(K\subset (f)/(f^n)\). Then, we can know that \(J + K\subset (f)/(f^n)\), since
+        \((f)/(f^n)\) is a ring.
+        Moreover, we can know that \(J + K\) is a proper ideal of \(S\), which is a contradiction. Hence, we can know that
+        \(S\) is indecomposable.
+    </p>
+</section>
+
+<br>
+
+<section id='ku_2020_8_6'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>Question 6.</b> Construct a field \( F \) with nine elements, with full justification. Then prove that the
+                map \( f : F \to F \) defined by \( f(\alpha) = \alpha^3 \), for all \( \alpha \in F \), is an automorphism
+                (i.e., an isomorphism from \( F \) to itself).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution.</b> We can know that \(F_3 = \mathbb{Z}/3\mathbb{Z}\) is a field with three elements.
+        Moreover, \(p(x) = x^2 + 1\) is an irreducible polynomial over \(\mathbb{Z}/3\mathbb{Z}\). We can show that
+        \(p(x)\) is irreducible by contradiction.
+        Suppose that \(p(x) = (x - a)(x -b)\), which implies that there exists roots in \(\mathbb{Z}/3\mathbb{Z}\).
+        However, we have \(p(0) = 1, p(1) = 2, p(2) = 2\), which implies that \(p(x)\) has no roots in
+        \(\mathbb{Z}/3\mathbb{Z}\).
+        Thus, we can know that \(p(x)\) is irreducible over \(\mathbb{Z}/3\mathbb{Z}\).
+        Hence, the elements of \(F_3[x]/(p(x))\) are of the form \(a + bx\), where \(a, b\in \mathbb{Z}/3\mathbb{Z}\).
+        Hence, there are \(3\cdot 3 = 9\) elements in \(F_3[x]/(p(x))\). Since \(i^2 + 1 = 0\), we can know that
+        \[
+        F = \mathbb{Z}/3\mathbb{Z}[x]/(x^2 + 1)\cong \mathbb{Z}/3\mathbb{Z}[i].
+        \]
+    </p>
+    <p>
+        <b>Proof.</b> Now, we want to show that \(f: F\to F\) defined by \(f(\alpha) = \alpha^3\) is an automorphism.
+        Firstly, we can see that \(f\) is well-defined since for any \(a = b\in F\) we have \(f(a) = a^3 = b^3 = f(b)\).
+        Then, we want to show that \(f\) is a homomorphism. Let \(a, b\in F\), then we have
+        \[
+        f(a)f(b) = a^3b^3 = (ab)^3 = f(ab).
+        \]
+        Now, we want to show that \(f\) is injective. Suppose that \(f(a) = f(b)\) for some \(a, b\in F\).
+        We will have
+        \[
+        \begin{align}
+        a^3 &= b^3 \\
+        a^3\cdot b^{-3} &= 1 \\
+        (ab^{-1})^3 &= 1.
+        \end{align}
+        \]
+        Since we know that \(F\setminus\{0\}\) is a group under multiplication with order of \(8\).
+        Given that \((ab^{-1})^3 = 1\), we can know that \(ab^{-1}\) has order either \(1\) or \(3\).
+        If \(ab^{-1}\) has order of \(3\), then we can know that \(3\mid 8\), which is a contradiction.
+        Hence, we know that \(ab^{-1} = 1\), which implies that \(a = b\). And we have \(f\) is injective.
+        Since \(f\) is a map from \(F\) to \(F\) and \(F\) is finite, we can know that \(f\) is surjective by
+        \(\textbf{the pigeonhole principle}\).
+        Therefore, we have \(f\) is an automorphism. \(\blacksquare\)
+    </p>
+</section>

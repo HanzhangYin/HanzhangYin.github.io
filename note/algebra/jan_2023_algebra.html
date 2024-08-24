@@ -1,0 +1,196 @@
+<h1>KU 2023 (January)</h1>
+
+<section id='ku_2023_1_1'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                \(\textbf{Problem 1. }\) Suppose that \( A \) and \( B \) are \( n \times n \) matrices over the complex
+                numbers.
+            </p>
+            <ul>
+                <li>
+                    Prove that if \( A \) and \( B \) are similar, then \( A \) and \( B \) have the same minimal and
+                    characteristic polynomials.
+                </li>
+                <li>
+                    Determine, with justification, whether the converse of (i) holds when \( n = 3 \). What about when \( n = 4
+                    \)?
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        \(\textbf{Proof(1). }\)Suppose that \(A\) and \(B\) are two similar \(n\times n\) matrices.
+        Then we have \(A = PBP^{-1}\) for some invertible \(n\times n\) matrices over \(\mathbb{C}\).
+        Suppose the characteristic polynomial of \(A\) is \(\chi_A(x)\). Then we have
+        Hence, we have
+        \[
+        \begin{align}
+        \chi_A(x) &= \text{det}(xI - A)\\
+        &= \text{det}(xI - PBP^{-1})\\
+        &= \text{det}(PxIP^{-1} - PBP^{-1})\\
+        &= \text{det}(P(xI - B)P^{-1})\\
+        &= \text{det}(P)\text{det}(xI - B)\text{det}(P^{-1})\\
+        &= \text{det}{P}\text{det}{P^{-1}}\text{det}(xI - B)\\
+        &= \text{det}(PP^{-1})\text{det}(xI - B)\\
+        &= \text{det}(I)\text{det}(xI - B)\\
+        &= \text{det}(xI - B)\\
+        &= \chi_B(x).
+        \end{align}
+        \]
+        Thus, we show that the characteristic polynomial of \(A\) and \(B\) are the same.
+        Now we need to show that the minimal polynomial of \(A\) and \(B\) are the same.
+        Suppose that the minimal polynomial of \(A\) is \(\mu_A(x):=(x-\lambda_1)^{e_1}\cdots(x - \lambda_m)^{e_m}\)
+        and the minimal polynomial of \(B\) is \(\mu_B(x):=(x-\lambda_1)^{f_1}\cdots(x - \lambda_m)^{f_m}\).
+        Then we have
+        \[
+        \begin{align}
+        \mu_A(A) &= 0\\
+        \mu_A(PBP^{-1}) &= (\lambda_1I - PBP^{-1})^{e_1}\cdots(\lambda_mI - PBP^{-1})^{e_m}\\
+        &= (P\lambda_1IP^{-1} - PBP^{-1})^{e_1}\cdots(P\lambda_mIP^{-1} - PBP^{-1})^{e_m}\\
+        &= P(\lambda_1I - B)^{e_1}P^{-1}\cdots P(\lambda_mI - B)^{e_m}P^{-1}\\
+        &= P(\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m}P^{-1}\\
+        P(\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m}P^{-1} &= 0\\
+        (\lambda_1I - B)^{e_1}\cdots(\lambda_mI - B)^{e_m} &= P^{-1}0P = 0\\
+        \end{align}
+        \]
+        Thus, we can know that \(e_i\geq f_i\) for \(i = 1, \ldots, m\). Similarly, we can know that
+        \[
+        \begin{align}
+        \mu_B(B) &= 0\\
+        \mu_B(P^{-1}AP) &= (\lambda_1I - P^{-1}AP)^{f_1}\cdots(\lambda_mI - P^{-1}AP)^{f_m}\\
+        &= (P^{-1}\lambda_1IP - P^{-1}AP)^{f_1}\cdots(P^{-1}\lambda_mIP - P^{-1}AP)^{f_m}\\
+        &= P^{-1}(\lambda_1I - A)^{f_1}P\cdots P^{-1}(\lambda_mI - A)^{f_m}P\\
+        &= P^{-1}(\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m}P\\
+        P^{-1}(\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m}P &= 0\\
+        (\lambda_1I - A)^{f_1}\cdots(\lambda_mI - A)^{f_m} &= P0P^{-1} = 0\\
+        \end{align}
+        \]
+        Thus, we can know that \(e_i\leq f_i\) for \(i = 1, \ldots, m\). Hence, we have \(e_i = f_i\) for \(i = 1, \ldots,
+        m\).
+        Therefore, we show that they share the same minimal polynomial.\(\blacksquare\)
+    </p>
+    <p>
+        \(\textbf{Solution 2.}\) The converse of (i) does hold when \(n = 3\).
+        The converse of (i) does not hold when \(n = 4\).
+    </p>
+</section>
+
+<br>
+
+<section id='ku_2023_1_4'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>Problem 4.</b>Recall that a group \(G\) is said to be solvable if there exists a sequence of subgroups
+                \[
+                \{e\} = G_0\subset G_2\subset \dots \subset G_{n-1}\subset G_n = G,
+                \]
+                such that for each \(i\), \(G_i\) is a normal subgroup of \(G_{i+1}\) and the factor group \(G_{i+1}/G_i\) is
+                abelian. Prove
+            </p>
+            <ul>
+                <li>
+                    If \(G\) is solvable, then any quotient group of \(G\) is solvable.
+                </li>
+                <li>
+                    If \(H, K\subset G\) are normal subgroups and both are solvable, prove that \(HK\) is solvable. What is just
+                    one of \(H, K\)are normal?
+                    Verify this, or give a counterexample.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<section id='ku_2023_1_5'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>Problem 5.</b> Let \( R \) be an integral domain with quotient field (i.e., field of fractions) \( K \).
+                Let \( \mathcal{J} \) denote the collection of ideals \( (R : \alpha) \) such that \( \alpha \in K \), where
+                \( (R : \alpha) := \{ r \in R \mid r\alpha \in R \} \). Show that \( R \) is a UFD if the following conditions
+                hold (15 points):
+            </p>
+            <ul>
+                <li>
+                    The ideals in \( \mathcal{J} \) satisfy the ascending chain condition.
+                </li>
+                <li>
+                    Every ideal in \( \mathcal{J} \) is principal.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Let \(\mathcal{P}\) be the set of all principal ideals of \(R\). We will prove that \(\mathcal{P} = \mathcal{J}\cup\{0\}\).
+        Since \(\mathcal{J}\) is a set of principal ideals of \(R\) by assumption, we can know that \(\mathcal{J}\cup\{0\}\subset \mathcal{P}\).
+        Now, let \(r\in R\) and \(r\) is not a unit or zero. Hence, we can know that \(r^{-1}\notin R\).
+        However, we have \(r^{-1}\in K\) since \(K\) is the field of fractions of \(R\).
+        We have \(r\in (R: r^{-1})\) since \(r\cdot r^{-1} = 1\in R\), which implies that \(\langle r\rangle \subset (R: r^{-1})\).
+        If \(x\in (R: r^{-1})\), we know that \(xr^{-1} = s\in R\) for some \(s\in R\).
+        Hence, we have \(x = sr\in \langle r\rangle\), which implies that \((R: r^{-1})\subset \langle r\rangle\).
+        Now, we have \(\langle r\rangle = (R: r^{-1})\) when \(r\) is not a unit or zero. It is not hard to see that \((R: \alpha)=R\) when \(\alpha\in R\).
+        Thus, we can know that \(\mathcal{P} = \mathcal{J}\cup\{0\}\).
+        Since \(\mathcal{J}\) satisfies the ascending chain condition, we can know that \(\mathcal{J}\cup \{0\}\) satisfies the ascending chain condition as well
+        (i.e. add \(\{0\}\) to the chain as the least element). Hence, we can know that \(\mathcal{P}\) satisfies the ascending chain condition.
+        Once the ascending chain condition holds on the principal ideals of \(R\), we can know that every element of \(R\) is a product of irreducible elements.
+        Now, we need to show that every irreducible element is prime. Let \(p\in R\) be an irreducible element.
+        Suppose that \(p\mid ab\) where \(a, b\in R\) and, without loss of generality, we can assume that \(p\nmid b\).
+        If \(p\nmid b\), we can know that \(b/p\notin R\).
+        But, we know that \((R: b/p)\) is a principal ideal of \(R\) since \(b/p\in K\) according to the assumption. So we will show that \((R: b/p) = \langle p\rangle\).
+        If \(s\in\langle p\rangle\), we have \(s = pr\) for some \(r\in R\). Hence, \(s\cdot b/p = pr\cdot b/p = rb\in R\), which implies that \(s\in (R: b/p)\) and \(\langle p\rangle\subset (R: b/p)\).
+        Based on the assumption, let \((R: b/p)= \langle k\rangle \) for some \(k\in R\). Then, we have \(\langle p\rangle \subset \langle k\rangle\).
+        Thus, we can know that \(k\mid p\). Since \(p\) is irreducible, we have \(pu = k\) for some unit \(u\in R\).
+        It means that \(\langle p\rangle = \langle k\rangle = (R: b/p)\).
+        Since \(p\mid ab\), we have \(ab/p\in R\). Thus, we know that \(a\in (R: b/p)\).
+        It shows that \(a\in \langle p\rangle\), which means that \(p\mid a\). Hence, we can know that every irreducible element is prime.
+        Once we know that every irreducible is prime, we want to show that the uniqueness of factorization holds in \(R\).
+        Since every element is a product of irreducible elements, we assume that
+        \[a = p_1p_2\cdots p_n = q_1q_2\cdots q_m\]
+        where \(p_i, q_j\) are irreducible elements of \(R\).
+        We also know that \(p_i, q_j\) are prime elements of \(R\).
+        Hence, we can know that \(p_1\mid q_1q_2\cdots q_m\).
+        If \(p_1\not\mid q_1\), we can know that \(p_1\mid q_2\cdots q_m\).
+        By repeating this process, we can know that \(p_1\mid q_i\) for some \(i\).
+        And \(q_i\) is irreducible, which implies that \(u_1p_1 = q_i\) for some unit \(u_1\in R\).
+        In that case, we rearrange the expression of \(q_1q_2\cdots q_m\) and have \(u_1p_1q_1\cdots q_m = p_1p_2\cdots p_n\).
+        Similarly, we can know that \(p_2\mid q_j\) for some \(j\), which implies that \(q_j = u_2p_2\) for some unit \(u_2\in R\).
+        Since it is a finite product, we can know that, by repeating this process, it will eventually reach the end.
+        If \(n\lt m\), we have \(p_1\cdot p_n = up_1\cdot p_nq_{n+1}\cdots q_m\) for some unit \(u\in R\).
+        We can have \(p_1\cdot p_n - up_1\cdot p_nq_{n+1}\cdots q_m = p_1\cdot p_n(1-uq_{n+1}\cdots q_m) = 0\).
+        Thus, we have \(1-uq_{n+1}\cdots q_m = 0\), which implies that \(uq_{n+1}\cdots q_m = 1\). It is a contradiction since \(q_{n+1}\cdots q_m\) is a product of irreducible elements.
+        For the other direction, we can have the same result. Thus, we can know that the uniqueness of factorization holds in \(R\). \(\blacksquare\)
+    </p>
+</section>
+
+<br>
+
+<section id='ku_2023_1_6'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                \(\textbf{Problem 6.}\) Show that \(\mathbb{Q}(\sqrt[3]{2})\) is not contained in \(\mathbb{Q}(\epsilon)\) for
+                any root of unity \(\epsilon \in \mathbb{C}\).
+            </p>
+        </div>
+    </div>
+    <p>
+        \(\textbf{Proof. }\) We will prove it with mathematical contradiction. Suppose that it is true that
+        \(\mathbb{Q}(\sqrt[3]{2})\) is contained in \(\mathbb{Q}(\epsilon)\) for some \(n\)th root of unity \(\epsilon \in
+        \mathbb{C}\).
+        Firstly, we know that \(\mathbb{Q}(\epsilon)\cong \mathbb{Q}/\Phi_n(x)\), where \(\Phi_n(x)\) is the \(n\)th
+        cyclotomic polynomial. Since \(\Phi_n(x)\) is irreducible over \(\mathbb{Q}\), we can know that \(\Phi_n(x)\) is
+        separable over \(\mathbb{Q}\) since any irreducible polynomial over a characteristic zero field is separable.
+        Then, we can know that \(\mathbb{Q}(\epsilon)\) is a galois extension over \(\mathbb{Q}\).
+        Since \(\mathbb{Q}(\sqrt[3]{2})\) is a subfield of \(\mathbb{Q}(\epsilon)\), we can know that
+        \(\mathbb{Q}(\sqrt[3]{2})\) is a galois extension over \(\mathbb{Q}\).
+        The minimal polynomial of \(\sqrt[3]{2}\) is \(x^3 - 2\), which is irreducible over \(\mathbb{Q}\).
+        However, we can know that \(x^3 - 2\) is not separable over \(\mathbb{Q}\) since it does not contain the complex
+        roots in \(\mathbb{Q}(\sqrt[3]{2})\).
+        Hence, we have a contradiction. Therefore, we can know that \(\mathbb{Q}(\sqrt[3]{2})\) is not contained in
+        \(\mathbb{Q}(\epsilon)\) for any root of unity \(\epsilon \in \mathbb{C}\).\(\blacksquare\)
+    </p>
+</section>

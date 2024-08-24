@@ -1,0 +1,67 @@
+<h1>KU January 2024</h1>
+
+<section>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                \(\textbf{Problem 6. }\)Consider the ring extension \(\mathbb{Z} \subseteq R\), where \(R :=
+                \mathbb{Z}[\sqrt[3]{2}]\) denotes the smallest subring of \(\mathbb{R}\) containing \(\mathbb{Z}\) and the
+                real cube root of \(2\).
+            </p>
+            <ul>
+                <li>Find, with proof, the kernel of the surjective ring homomorphism \(\phi : \mathbb{Z}[x] \to R\) taking
+                    \(f(x)\) in \(\mathbb{Z}[x]\) to \(f(\sqrt[3]{2})\) in \(R\).</li>
+                <li>Find primes \(p, q \in \mathbb{Z}\) such that \(pR\) is a prime ideal and \(qR\) is not a prime ideal.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        \(\textbf{Solution 1. }\) We want to find the kernel of the surjective ring homomorphism \(\phi : \mathbb{Z}[x]
+        \to R\).
+        Since \(\ker(\phi)\) is the set of all polynomials \(f(x)\) in \(\mathbb{Z}[x]\) such that \(f(\sqrt[3]{2}) = 0\),
+        we have
+        \[
+        \ker(\phi) := \{f(x) \in \mathbb{Z}[x] \mid f(\sqrt[3]{2}) = 0\}.
+        \]
+        We know that \(x^3 - 2\) is the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Z}\).
+        Since \(x^3 - 2\) is irreducible in \(\mathbb{Z}[x]\) by using the Eisenstein's criterion with \(p = 2\), we have
+        \[
+        \ker(\phi) = \langle x^3 - 2\rangle.
+        \]
+        \(\textbf{Proof. }\) For one direction, we want to show that \(\langle x^3 - 2\rangle \subset \ker(\phi)\).
+        For any \(f(x)\in \langle x^3 - 2\rangle\), we have \(f(x) = (x^3 - 2)g(x)\) for some \(g(x)\in \mathbb{Z}[x]\).
+        Then we have \(f(\sqrt[3]{2}) = ((\sqrt[3]{2})^3 - 2)g(\sqrt[3]{2}) = 0\). Hence, we have \(f(x)\in \ker(\phi)\).
+        For the other direction, we want to show that \(\ker(\phi) \subset \langle x^3 - 2\rangle\).
+        Since \(x^3 - 2\) is irreducible in \(\mathbb{Z}[x]\), and we can know that there is no polynomial with degree
+        less than \(3\) in \(\ker(\phi)\).
+        For the other direction, suppose that \(g(x)\in \mathbb{Z}[x]\) such that \(g(\sqrt[3]{2}) = 0\).
+        Since \(\mathbb{Z}\) is a Unique Factorization Domain by the Fundamental Theorem of Arithmetic, we can know that
+        \(\mathbb{Z}[x]\) is a Unique Factorization Domain.
+        Hence, \(g(x) = p_1(x)^{e_1}\cdots p_k(x)^{e_k}\) for some irreducible polynomials \(p_1(x), \ldots, p_k(x)\) in \(\mathbb{Z}[x]\).
+        We know that \(g(\sqrt[3]{2}) = 0\) if and only if \(p_1(\sqrt[3]{2}) = 0\) or \(\ldots\) or \(p_k(\sqrt[3]{2}) = 0\) since \(\mathbb{Z}[x]\) is an integral domain.
+        Without loss of generality, we can assume that \(p_i(\sqrt[3]{2}) = 0\).
+        Since \(p_i(x)\in\mathbb{Z}[x]\) is irreducible, and \(\sqrt[3]{2}\) is a root of \(p_i(x)\), \(p_i(x)\) is the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Q}\).
+        We know that the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Q}\) is \(x^3 - 2\), which is unique.
+        Thus, we have \(p_i(x) = x^3 - 2\). Hence, we have \(x^3 - 2\mid g(x)\) and \(g(x)\in \langle x^3 - 2\rangle\).
+        Therefore, we have \(\ker(\phi) \subset \langle x^3 - 2\rangle\). Hence, we have \(\ker(\phi) = \langle x^3 - 2\rangle\). \(\blacksquare\)
+    </p>
+    <p>
+        \(\textbf{Solution 2. }\) We want to find primes \(p, q\in \mathbb{Z}\) such that \(pR\) is a prime ideal and
+        \(qR\) is not a prime ideal.
+        Since \(\mathbb{Z}[\sqrt[3]{2}] = \{a + b\sqrt[3]{2} + c(\sqrt[3]{2})^2 \mid a, b, c\in \mathbb{Z}\}\), we have
+        \(\sqrt[3]{2}, \sqrt[3]{2}^2\in R\).
+        Since \(\sqrt[3]{2}\cdot\sqrt[3]{2}^2 = 2\), and \(2\not\mid \sqrt[3]{2}\) and \(2\not\mid \sqrt[3]{2}^2\), we can
+        know that \(2\) is not prime in \(R\).
+        Since \(pR\) is a prime ideal if and only if \(p\) is a prime in \(R\), we can know that \(2R\) is not a prime
+        ideal in \(R\).
+        Now, we want to show that \(7\) is still prime in \(R\).
+        Since \(R = \mathbb{Z}[\sqrt[3]{2}]\), and \(R/\langle 7\rangle = \mathbb{Z}/7\mathbb{Z}[\sqrt[3]{2}]\).
+        Now, we want to show that \(\mathbb{Z}/7\mathbb{Z}[\sqrt[3]{2}]\) is a field.
+        Since \(\mathbb{Z}/7\mathbb{Z}\) is a field for \(7\) is a prime.
+        Since there is no \(\alpha\in \mathbb{Z}/7\mathbb{Z}\) such that \(\alpha^3 - 2 = 0\). We can know that \(x^3 - 2\) is the minimal polynomial of \(\sqrt[3]{2}\) over \(\mathbb{Z}/7\mathbb{Z}\).
+        Since \(x^3 - 2\) is irreducible in \(\mathbb{Z}/7\mathbb{Z}[x]\), we can know that \(\mathbb{Z}/7\mathbb{Z}[\sqrt[3]{2}]\) is a field.
+        Hence, we can know that \(\langle 7\rangle\) is a maximal ideal, which implies it is a prime ideal. Hence, \(7\) is prime in \(R\).
+    </p>
+
+</section>
