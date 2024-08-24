@@ -1867,38 +1867,6 @@
       </div>
       <p>
         <b>Solution (a).</b>
-<!--        Firstly, we try to find the coefficients and nodes of the Gaussian quadrature formula of the form-->
-<!--        \[-->
-<!--        \int_{-1}^{1} f(x) \, dx \approx A_0 f(x_0) + A_1 f(x_1).-->
-<!--        \]-->
-<!--        Set \(f(x) = 1\), we have-->
-<!--        \[-->
-<!--        \begin{align}-->
-<!--        \int_{-1}^{1} 1 \, dx = A_0 + A_1 \\-->
-<!--        2 = A_0 + A_1.-->
-<!--        \end{align}-->
-<!--        \]-->
-<!--        Set \(f(x) = x\), we have-->
-<!--        \[-->
-<!--        \begin{align}-->
-<!--        \int_{-1}^{1} x \, dx = A_0 x_0 + A_1 x_1 \\-->
-<!--        0 = A_0 x_0 + A_1 x_1 \tag*{(2)}-->
-<!--        \end{align}-->
-<!--        \]-->
-<!--        Set \(f(x) = x^2\), we have-->
-<!--        \[-->
-<!--        \begin{align}-->
-<!--        \int_{-1}^{1} x^2 \, dx = A_0 x_0^2 + A_1 x_1^2 \\-->
-<!--        \frac{2}{3} = A_0 x_0^2 + A_1 x_1^2 \tag*{(3)}-->
-<!--        \end{align}-->
-<!--        \]-->
-<!--        Since \(A_0\) and \(A_1\) have the same weight, we can set \(A_0 = A_1\). Thus, we have \(A_0 = A_1 = 1\).-->
-<!--        From (2), we have \(x_0 + x_1 = 0\), which implies that \(x_0 = -x_1\).-->
-<!--        From (3), we have \(x_0^2 + x_1^2 = 2x_1^2 = \frac23 \), which implies that \(x_1 = \frac{\sqrt{3}}{3}\) and \(x_0 = -\frac{\sqrt{3}}{3}\).-->
-<!--        Thus, we can see that-->
-<!--        \[-->
-<!--        \int_{-1}^{1} f(x) \, dx \approx f\left(-\frac{\sqrt{3}}{3}\right) + f\left(\frac{\sqrt{3}}{3}\right).-->
-<!--        \]-->
         Firstly, we set \(f(x) = 1\), we have
         \[
           \int_a^b f(x) \, dx = b - a =  A_0 + A_1.
