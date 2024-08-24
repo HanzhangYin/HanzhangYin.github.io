@@ -214,27 +214,32 @@
     font-family:  'Spectral', serif;
   }
 
-  .next-page-arrow {
+  .next-page-bar {
     position: fixed;
-    top: 50%;
+    top: 0;
     right: -50px;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: white;
-    background-color: #565656;
-    padding: 10px;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: right 0.2s, opacity 0.2s;
+    width: 50px; /* Width of the vertical bar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #565656; /* Background color of the vertical bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s, opacity 0.3s;
     opacity: 0;
   }
 
-  body:hover .next-page-arrow {
-    right: 10px;
+  .next-page-bar i {
+    font-size: 24px;
+    color: white;
+  }
+
+  /* Show vertical bar when hovering over right edge */
+  body:hover .next-page-bar {
+    right: 0;
     opacity: 1;
   }
 
-  .next-page-arrow:hover {
+  .next-page-bar:hover {
     background-color: #565656;
   }
 
