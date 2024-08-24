@@ -5,7 +5,7 @@ document.addEventListener('mousemove', function (event) {
     const rightEdgeThreshold = 100; // distance from right edge to trigger the arrow
 
     if (window.innerWidth - event.clientX < rightEdgeThreshold) {
-        arrow.style.right = '10px';
+        arrow.style.right = '20px';
         arrow.style.opacity = '1';
     } else {
         arrow.style.right = '-50px';
