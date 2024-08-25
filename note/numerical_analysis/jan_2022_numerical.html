@@ -1,0 +1,66 @@
+<h1>Qualify Exam Problems (January 2022)</h1>
+
+<section id = 'ku_2022_1_1'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>1.</b> Consider the iteration \[ x_{n+1} = \frac{1}{2} x_n + \frac{5}{2x_n},
+                \quad n = 0, 1, \ldots \]
+            </p>
+            <ul>
+                <li>
+                    Show that if \(x_0 > 0\), then \(x_n \geq \sqrt{5}\) for \(n =
+                    1,2,\ldots\).
+                </li>
+                <li>
+                    se the Contractive Mapping Theorem to show that the iteration is
+                    convergent.
+                </li>
+                <li>
+                    Show that the order of convergence of the iteration is quadratic.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <b>Proof of 1.</b> Let \(f(x) = \frac{1}{2}x + \frac{5}{2x}\).
+        Hence, we can calculate the derivative of \(f(x)\) as \[ f'(x) =
+        \frac{1}{2} - \frac{5}{2x^2} = \frac{1}{2}\left(1 - \frac{5}{x^2}\right)
+        \] Since \(x_0 > 0\), we just assume that \(x>0\). When \( 0 \lt x \leq
+        \sqrt{5} \), we have \( f'(x) \lt 0 \). When \( x \geq \sqrt{5} \), we
+        have \( f'(x) \geq 0 \). Thus, we can know that when \( x = \sqrt{5} \),
+        \( f(x) \) is at minimum for \( f(x) \) where \( x \geq 0 \). Then, \[
+        \min f(x) = f(\sqrt{5}) = \frac{1}{2} \sqrt{5} + \frac{5}{2\sqrt{5}} =
+        \frac{1}{2} \sqrt{5} + \frac{1}{2} \sqrt{5} = \sqrt{5}. \] Therefore, we
+        have \( f(x) \geq \sqrt{5} \). In other words, if \( x_0 > 0 \), then \(
+        x_n \geq \sqrt{5} \). \[ \tag*{$\square$} \]
+    </p>
+</section>
+
+<br>
+
+<section id = 'ku_2022_1_4'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>4.</b> Let \( A = [a_{ij}] \in \mathbb{R}^{n \times n} \) be a real, square matrix which is strictly diagonally dominant, i.e.
+                \[ a_{ii} > \sum_{j=1, j \neq i}^{n} |a_{ij}|, \quad i = 1, 2, \ldots, n. \]
+            </p>
+            <p>
+                <b>(a)</b> Prove that each eigenvalue of \( A \) has a positive real part.
+            </p>
+            <p>
+                <b>(b)</b> Show that \( \det A > 0 \).
+            </p>
+            <p>
+                <b>(c)</b> Prove that \( A \) has a unique LU factorization \( A = LU \), where \( L \) is unit lower triangular and \( U \) is upper triangular. Prove that all diagonal entries of \( U \) are strictly positive.
+            </p>
+            <p>
+                <b>(d)</b> Describe the main steps of a practical algorithm (based on LU factorization) for solving the linear system \( Ax = b \) for some vector \( b \in \mathbb{R}^n \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> According to \(\textbf{
+    </p>
+</section>

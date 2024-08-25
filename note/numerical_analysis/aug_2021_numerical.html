@@ -1,0 +1,226 @@
+<h1>Qualify Exam Problems (August 2021)</h1>
+
+<section id = 'ku_2021_8_2'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>Problem 2.</b> (Radau's formula.) Consider a numerical integration rule of the form
+
+                \[ \int_{0}^{1} f(t) \, dt \approx a f(0) + b f(c). \]
+            </p>
+            <p>
+                (a) Find \( a, b, c \) such that this quadrature rule has the highest order of precision.
+            </p>
+            <p>
+                (b) The quadrature rule above has an error formula of the form
+                \[ \int_{0}^{1} f(t) \, dt = a f(0) + b f(c) + D f^{(r+1)}(\xi), \quad \xi \in (0, 1). \]
+
+                Determine the constants \( D \) and \( r \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b>
+        Let \( f(t) = 1 \). Then, we have
+        \[ \int_{0}^{1} f(t) \, dt = 1 = a + b. \]
+        Let \( f(t) = t \). Then, we have
+        \[ \int_{0}^{1} f(t) \, dt = \frac{1}{2} = a \cdot 0 + b \cdot c = b \cdot c. \]
+        Let \( f(t) = t^2 \). Then, we have
+        \[ \int_{0}^{1} f(t) \, dt = \frac{1}{3} = a \cdot 0 + b \cdot c^2 = b \cdot c^2. \]
+        Thus, we can see that \(\frac12\cdot c = bc\cdot c = \frac{1}{3}\). Then, we have
+        \[
+        c = \frac{2}{3}, b = \frac{3}{4}, a = \frac{1}{4}.
+        \]
+        Hence, we have
+        \[
+        \int_{0}^{1} f(t) \, dt \approx \frac{1}{4} f(0) + \frac{3}{4} f\left(\frac{2}{3}\right).
+        \]
+    </p>
+    <p>
+        <b>Solution (b).</b>
+        Let \( f(t) = t^3 \). Then, we have
+        \[
+        \begin{align}
+        \int_{0}^{1} f(t) \, dt &= \frac{1}{4}, \\
+        \frac14 \cdot 0 + \frac34 \cdot \left(\frac23\right)^3 &= \frac29.
+        \end{align}
+        \]
+        Hence, we can see that \(\int_{0}^{1} f(t) \, dt \neq \frac14 f(0) + \frac34 f\left(\frac23\right)\) when \( f(t) = t^3 \).
+        Thus, we can see that \(r= 2\), and it should have the form of
+        \[
+        \int_{0}^{1} f(t) \, dt = \frac{1}{4} f(0) + \frac{3}{4} f\left(\frac{2}{3}\right) + D f^{(3)}(\xi).
+        \]
+        When \(f(t) = t^3\), we can see that \(f^{(4)}(t) = \frac16\). Then, we have
+        \[
+        \begin{align}
+        \int_{0}^{1} f(t) \, dt &= \frac{1}{4} f(0) + \frac{3}{4} f\left(\frac{2}{3}\right) + \frac16D, \\
+        \frac14  &=  \frac29 + \frac16D, \\
+        \frac{1}{36} &= \frac{1}{6}D, \\
+        D &= \frac16.
+        \end{align}
+        \]
+    </p>
+</section>
+
+<section id = 'ku_2021_8_3'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>Problem 3.</b> In this problem, we investigate Heun’s method
+
+                \[ y_{n+1} = y_n + \frac{h}{2} \left[ f(t_n, y_n) + f \left(t_{n+1}, y_n + h f(t_n, y_n) \right) \right] \]
+
+                for solving the initial value problem \( y' = f(t, y) \) for \( t \in [t_0, t_0 + T] \) with \( y(t_0) = y_0 \), where \( h = T/N \), \( t_n = t_0 + nh \) for \( n = 0, 1, \ldots, N \) and \( N > 0 \) the number of timesteps. We assume that \( f(t, y) \) is continuous on \([t_0, t_0 + T] \times \mathbb{R} \) and satisfies the Lipschitz condition with constant \( L > 0 \):
+
+                \[ |f(t, y) - f(t, z)| \leq L |y - z|, \quad \forall t \in [t_0, t_0 + T], \quad \forall y, z \in \mathbb{R}. \]
+            </p>
+            <p>
+                (a) State whether this method is explicit or implicit, one-step or multistep.
+            </p>
+            <p>
+                (b) Show that the local truncation error is \( O(h^2) \). Is the scheme consistent, what is its order?
+            </p>
+            <p>
+                (c) State and prove whether the method (1) is zero-stable and/or convergent.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> The method is implicit and one-step.
+    </p>
+    <p>
+        <b>Solution (b).</b> We know the local truncation error term can denoted as the following:
+        \[
+        L_e = y_{n+1} - y_n - \frac{h}{2} \left[ f(t_n, y_n) + f \left(t_{n+1}, y_n + h f(t_n, y_n) \right) \right].
+        \]
+        We will use \(\textbf{Taylor's Expansion}\) to find the local truncation error term.
+        \[
+        \begin{align}
+        y_{n+1} &= y(t_{n+1}) = y(t_n + h) = y(t_n) + hy'(t_n) + \frac{h^2}{2}y''(t_n) + \mathcal{O}(h^3), \\
+        &= y_n + h(f(t_n, y_n)) + \frac{h^2}{2}f'(t_n, y_n) + \mathcal{O}(h^3). \\
+        f \left(t_{n+1}, y_n + h f(t_n, y_n) \right) &= f(t_n + h, y_n + h f(t_n, y_n)) = f(t_n, y_n) + h \dfrac{\partial f}{\partial t}(t_n, y_n) + h \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) + \mathcal{O}(h^2), \\
+        L_e &= y_n + h(f(t_n, y_n)) + \frac{h^2}{2}f'(t_n, y_n) - y_n - \frac{h}{2} \left[ f(t_n, y_n) + f(t_n, y_n) + h \dfrac{\partial f}{\partial t}(t_n, y_n) + h \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) + \mathcal{O}(h^2)\right], \\
+        &= \frac{h^2}{2}f'(t_n, y_n) - \frac{h^2}{2} \left[ \dfrac{\partial f}{\partial t}(t_n, y_n) + \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) \right] + \mathcal{O}(h^3).
+        \end{align}
+        \]
+        Hence, we can see that the local truncation error is \(O(h^2)\) since \(h^2\) cannot be eliminated.
+        And we have
+        \[
+        \lim_{h\to 0} L_e = \lim_{h\to 0} \left( \frac{h^2}{2}f'(t_n, y_n) - \frac{h^2}{2} \left[ \dfrac{\partial f}{\partial t}(t_n, y_n) + \dfrac{\partial f}{\partial y}(t_n, y_n)f(t_n, y_n) \right] + \mathcal{O}(h^3) \right) = 0.
+        \]
+        Therefore, we can know that the scheme is consistent and its order is \(2\).
+    </p>
+    <p>
+        <b>Solution (c).</b> We find the characteristic equation of the scheme, which is \(p(z) = z - 1\).
+        It is not hard to see that the root of \(p(z)\) is \(1\). Hence, the root is in the unit circle and simple, which implies that it is zero-stable.
+        According to the previous part, we can know that the scheme is consistent. Hence, we can conclude that it is convergent.
+    </p>
+</section>
+
+
+<section id = 'ku_2021_8_6'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                Problem 6. Consider the first step of the QR algorithm for solving the eigenvalue problem
+
+                \[
+                QR = A - \sigma I, \quad A^{(1)} = RQ + \sigma I.
+                \]
+            </p>
+            <p>
+                (a) Show that \(A^{(1)} = Q^*AQ\) and that \(A\), \(A^{(1)}\) have the same eigenvalues.
+            </p>
+            <p>
+                Now, let \(A = \begin{bmatrix} 0 & \sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{bmatrix}\) with \(\sin(\theta) \neq 0\).
+            </p>
+            <p>
+                (b) Compute the matrix \(A^{(1)}\) generated by performing one QR step with no shift.
+            </p>
+            <p>
+                (c) Compute the matrix \(\tilde{A}^{(1)}\) generated by performing one QR step with the Rayleigh quotient, \(\sigma = e_2^T A e_2\).
+            </p>
+            <p>
+                (d) Show that the \((2,1)\) entry of matrix \(\tilde{A}^{(1)}\) is of order \(\mathcal{O}(\theta^3)\) for small \(\theta\).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b>
+        Given that \(QR = A - \sigma I\), we have \(A = QR + \sigma I\). Since \(A^{(1)} = Q^*AQ = Q^*(QR + \sigma I)Q = RQ + \sigma I\) for \(Q\) is unitary.
+        Suppose that \(\lambda\) is the eigenvalue of \(A\) and \(v\) is the correspondent eigenvector.
+        Hence, we have
+        \[
+        \begin{align}
+        Av &= \lambda v\\
+        (QR + \sigma I)v &= \lambda v\\
+        QRv + \sigma v &= \lambda v\\
+        QRv &= (\lambda - \sigma)v \\
+        Q^*QRv = Rv &= Q^*(\lambda - \sigma)v = (\lambda - \sigma)Q^*v \\
+        RQQ^*v &= (\lambda - \sigma)Q^*v = \lambda Q^*v - \sigma Q^*v \\
+        RQQ^*v + \sigma Q^*v &= \lambda Q^* v \\
+        (RQ + \sigma I)Q^*v &= \lambda Q^*v \\
+        A^{(1)}Q^*v &= \lambda Q^*v.
+        \end{align}
+        \]
+        Let \(u = Q^*v\). Since \(v\) is the eigenvector of \(A\), we have \(\|v\|_2 \neq 0\).
+        Hence, \(\|u\|_2 = \|Q^*v\|_2 = \|v\|_2 \neq 0\). Therefore, we have \(u\neq 0\), which implies that \(\lambda\) is the eigenvalue of \(A^{(1)}\) and \(u\) is its corresponding eigenvector. \( \blacksquare \)
+    </p>
+    <p>
+        <b>Solution (b).</b> In order to compute \(A^{(1)}\), we firstly need to find the \(QR\) factorization of \(A\). We will use given rotation to find the \(QR\) factorization of \(A\).
+        Let \(Q = \begin{bmatrix} c &-r \\ r & c \end{bmatrix}\) such that
+        \[
+        \begin{bmatrix} c &-s \\ s & c \end{bmatrix}\cdot \begin{bmatrix} 0 \\ \sin(\theta) \end{bmatrix} = \begin{bmatrix} r \\ 0 \end{bmatrix}.
+        \]
+        Thus, we can know that \(r = \sqrt{0 + \sin(\theta)} = |\sin(\theta)|\). Here, we let \(r = \sin(\theta)\).
+        Then, \(c = 0/r = 0\) and \(r = -\sin(\theta)/r = -1\). Therefore, we have
+        \[
+        Q = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}.
+        \]
+        Then, we have
+        \[
+        \begin{align}
+        R &= Q^*A = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} \begin{bmatrix} 0 & \sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{bmatrix} = \begin{bmatrix} \sin(\theta) & \cos(\theta) \\ 0 & -\sin(\theta) \end{bmatrix}. \\
+        A &= QR = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} \sin(\theta) & \cos(\theta) \\ 0 & -\sin(\theta) \end{bmatrix}. \\
+        A^{(1)} &= RQ = \begin{bmatrix} \sin(\theta) & \cos(\theta) \\ 0 & -\sin(\theta) \end{bmatrix} \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} \cos(\theta) & -\sin(\theta) \\ -\sin(\theta) & 0 \end{bmatrix}.
+        \end{align}
+        \]
+    </p>
+    <p>
+        <b>Solution (c).</b> In order to compute \(\tilde{A}^{(1)}\), we firstly need to find the Rayleigh quotient of \(A\).
+        \[
+        \sigma = e_2^T A e_2 = \begin{bmatrix} 0 & 1 \end{bmatrix} \begin{bmatrix} 0 & \sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \cos(\theta).
+        \]
+        Now, we want to find the \(QR\) factorization of \(A - \sigma I\), where \(\sigma = \cos(\theta)\) by given rotation.
+        \[
+        A - \sigma I = \begin{bmatrix} 0 & \sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{bmatrix} - \cos(\theta) \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} -\cos(\theta) & \sin(\theta) \\ \sin(\theta) & 0 \end{bmatrix}.
+        \]
+        Let \(Q = \begin{bmatrix} c & -s \\ s & c \end{bmatrix}\) such that
+        \[
+        \begin{bmatrix} c & -s \\ s & c \end{bmatrix} \begin{bmatrix} -\cos(\theta) \\ \sin(\theta) \end{bmatrix} = \begin{bmatrix} r \\ 0 \end{bmatrix}.
+        \]
+        Hence, we have \(r = \sqrt{(-\cos(\theta))^2 + \sin(\theta)^2} = 1\), and \(c = -\cos(\theta)/r = -\cos(\theta)\), \(s = \sin(\theta)/r = \sin(\theta)\).
+        Hence, we have \(Q = \begin{bmatrix} -\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & -\cos(\theta) \end{bmatrix}\).
+        Then, we have
+        \[
+        \begin{align}
+        R &= Q^*A = \begin{bmatrix} -\cos(\theta) & \sin(\theta) \\ -\sin(\theta) & -\cos(\theta) \end{bmatrix} \begin{bmatrix} -\cos(\theta) & \sin(\theta) \\ \sin(\theta) & 0 \end{bmatrix} = \begin{bmatrix} 1 & -\cos(\theta)\sin(\theta) \\ 0 & -\sin(\theta)^2 \end{bmatrix}. \\
+        A &= QR = \begin{bmatrix} -\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & -\cos(\theta) \end{bmatrix} \begin{bmatrix} 1 & -\cos(\theta)\sin(\theta) \\ 0 & -\sin(\theta)^2 \end{bmatrix} = \begin{bmatrix} \cos(\theta) & -\sin(\theta) \\ -\sin(\theta) & 0 \end{bmatrix}. \\
+        A^{(1)} &= RQ + \sigma I \\
+        &= \begin{bmatrix} 1 & -\cos(\theta)\sin(\theta) \\ 0 & -\sin(\theta)^2 \end{bmatrix} \begin{bmatrix} -\cos(\theta) & -\sin(\theta) \\ \sin(\theta) & -\cos(\theta) \end{bmatrix} + \cos(\theta) \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \\
+        &= \begin{bmatrix}
+        -\cos(\theta) - \cos(\theta)\sin^2(\theta) & -sin^3(\theta) \\
+        -\sin^3(\theta) & \sin(\theta)^2\cos(\theta)
+        \end{bmatrix} +
+        \begin{matrix}
+        \cos(\theta) & 0 \\
+        0 & \cos(\theta)
+        \end{matrix} \\
+        &= \begin{bmatrix}
+        - \cos(\theta)\sin^2(\theta)  & -\sin^3(\theta) \\
+        -\sin^3(\theta) & \sin(\theta)^2\cos(\theta) + \cos(\theta)
+        \end{bmatrix} \\
+        \end{align}
+        \]
+    </p>
+</section>

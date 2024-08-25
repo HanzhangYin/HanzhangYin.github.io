@@ -1,0 +1,51 @@
+<h1>Numerical Analysis Qualifying Examination (August 2019)</h1>
+
+<section id = 'ku_2019_1_5'>
+    <div class = 'question_box_container'>
+        <div class = 'question-box'>
+            <p>
+                <b>Problem 5.</b> Suppose \( A \in \mathbb{C}^{m \times n} \) with \( m \geq n \).
+            </p>
+            <p>
+                (a) Show that matrix \( A^*A \) is always Hermitian positive semi-definite.
+            </p>
+            <p>
+                (b) Show that \( \|A^*A\|_2 = \|A\|_2^2 \).
+            </p>
+            <p>
+                (c) Show that if \( \text{rank}(A) = n \) then \( A^*A \) is invertible and \( \|A(A^*A)^{-1}A^*\|_2 = 1 \).
+            </p>
+            <p>
+                (d) Let \( A^\dagger \in \mathbb{C}^{n \times m} \) be the pseudoinverse (the Moore-Penrose inverse) of matrix \( A \) and suppose that \( \text{rank}(A) = n \). Show that
+                \[
+                A^\dagger = (A^*A)^{-1}A^*.
+                \]
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Let \(x\in \mathbb{C}^n\) and we denote \(Ax = y\in \mathbb{C}^m\). Then, we have
+        \[
+        x^*A^*Ax = (Ax)^*(Ax) = \|Ax\|_2^2 = \|y\|_2^2\geq 0,
+        \]
+        for any \(x\in \mathbb{R}^n\). Thus, we can know that \(A^*A\) is Hermitian positive semi-definite. \( \blacksquare \)
+    </p>
+    <p>
+        <b>Proof (b).</b> We denote the SVD of \(A\) as \(A = U\Sigma V^*\), where \(U\in \mathbb{C}^{m\times m}\) and \(V\in \mathbb{C}^{n\times n}\) are unitary matrices, and \(\Sigma\in \mathbb{R}^{m\times n}\) is a diagonal matrix with non-negative real numbers on the diagonal.
+        Suppose that \(\Sigma_{1,1}\geq \Sigma_{2,2}\geq \cdots \geq \Sigma_{n,n} \geq 0\).
+        Since the 2-norm of a matrix is the largest singular value of the matrix, we have \(\|A\|_2 = \Sigma_{1,1}\).
+        Besides that, we can know that \(\Sigma_{1, 1}^2 \geq \Sigma_{2, 2}^2 \geq \cdots \geq \Sigma_{n, n}^2 \geq 0\).
+        \[
+        A^*A = V\Sigma^*U^*U\Sigma V^* = V\Sigma^*\Sigma V^* = V\Sigma\Sigma V^* = V\Sigma^2 V^*.
+        \]
+        Since \(\Sigma_{1, 1}^2\) is the \((1, 1)\)-entry of \(\Sigma^2\), we can know that \(\|\Sigma^2\|_2 = \Sigma_{1, 1}^2\).
+        Then, we can get
+        \[
+        \|A^*A\|_2 = \|V\Sigma^2 V^*\|_2 = \|\Sigma^2\|_2 = \|\Sigma^2\|_2 = \Sigma_{1, 1}^2.
+        \]
+        Thus, we can know that
+        \[
+        \|A^*A\|_2 = \|A\|_2^2. \tag*{\(\blacksquare\)}
+        \]
+    </p>
+</section>

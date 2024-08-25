@@ -1,0 +1,84 @@
+<h1>Qualify Exam Problems (January 2024)</h1>
+
+<section id = 'ku_2024_1_2'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>2.</b> Consider the integral \( I(f) = \int_{-1}^1 f(x) \, dx \).
+            </p>
+            <p>
+                (a) Give a description of the Gaussian quadrature.
+            </p>
+            <p>
+                (b) The two-node Gaussian quadrature has the expression
+                \[
+                G_2(f) = w_1 f \left( -\frac{1}{\sqrt{3}} \right) + w_2 f \left( \frac{1}{\sqrt{3}} \right)
+                \]
+
+                and the error has the form
+
+                \[
+                E(f) = I(f) - G_2(f) = C f^{(m)}(\xi).
+                \]
+
+                Determine \( w_1, w_2, C \), and \( m \).
+            </p>
+            <p>
+                (c) What is the degree of precision of \( G_2(f) \)?
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> Gaussian quadrature is a method to approximate the integral of a function by evaluating the function at specific points and weighting the function values. The weights and points are chosen such that the method is exact for polynomials of a certain degree.
+        \[
+        \int_a^b f(x)w(x)dx \approx \sum_{i=1}^n w_i f(x_i).
+        \]
+    </p>
+    <p>
+        <b>Solution (b).</b> Set \(f(x) = 1\), we have
+        \[
+        \begin{align*}
+        I(f) &= \int_{-1}^1 1 \, dx = 2, \\
+        G_2(f) &= w_1 f \left( -\frac{1}{\sqrt{3}} \right) + w_2 f \left( \frac{1}{\sqrt{3}} \right) = w_1 + w_2 = 2.
+        \end{align*}
+        \]
+        Now, set \(f(x) = x\), we have
+        \[
+        \begin{align*}
+        I(f) &= \int_{-1}^1 x \, dx = 0, \\
+        G_2(f) &= w_1 f \left( -\frac{1}{\sqrt{3}} \right) + w_2 f \left( \frac{1}{\sqrt{3}} \right) = w_1 \left( -\frac{1}{\sqrt{3}} \right) + w_2 \left( \frac{1}{\sqrt{3}} \right) = 0.
+        \end{align*}
+        \]
+        Hence, we can get \(w_1 = w_2 = 1\). Now, set \(f(x) = x^2\), we have
+        \[
+        \begin{align*}
+        I(f) &= \int_{-1}^1 x^2 \, dx = \frac{2}{3}, \\
+        G_2(f) &= f \left( -\frac{1}{\sqrt{3}} \right) + f \left( \frac{1}{\sqrt{3}} \right) = \left( -\frac{1}{\sqrt{3}} \right)^2 + \left( \frac{1}{\sqrt{3}} \right)^2 = \frac{2}{3}.
+        \end{align*}
+        \]
+        Hence, we can know that the approximation is exact when the degree is 2. Then, we set \(f(x) = x^3\), we have
+        \[
+        \begin{align*}
+        I(f) &= \int_{-1}^1 x^3 \, dx = 0, \\
+        G_2(f) &= f \left( -\frac{1}{\sqrt{3}} \right) + f \left( \frac{1}{\sqrt{3}} \right) = \left( -\frac{1}{\sqrt{3}} \right)^3 + \left( \frac{1}{\sqrt{3}} \right)^3 = 0.
+        \end{align*}
+        \]
+        Thus, we again have the approximation is exact when the degree is \(3\). After that, we set \(f(x) = x^4\), we have
+        \[
+        \begin{align*}
+        I(f) &= \int_{-1}^1 x^4 \, dx = \frac{2}{5}, \\
+        G_2(f) &= f \left( -\frac{1}{\sqrt{3}} \right) + f \left( \frac{1}{\sqrt{3}} \right) = \left( -\frac{1}{\sqrt{3}} \right)^4 + \left( \frac{1}{\sqrt{3}} \right)^4 = \frac{2}{9}.
+        \end{align*}
+        \]
+        Now we can see that \(I(f) - G_2(f) \neq 0\) when the degree is 4. Hence, we can know tht \(m = 4\).
+        Once, we know that \(w_1 = w_2 = 1\), and \(m = 4\), we can find the constant \(C\).
+        Let \(f(x) = x^4\), we have
+        \[
+        I(f) - G_2(f) = \frac25 - \frac29 = \frac{8}{45} = C f^{(4)}(\xi),
+        \]
+        for some \(\xi \in (-1, 1)\). Since \(f^{(4)}(x) = 24\) when \(f(x) = x^4\), we have \(f^{(4)}(\xi) = 24\). Therefore, we have \(C = \dfrac{8}{45 \cdot 24} = \dfrac{1}{135}\).
+    </p>
+    <p>
+        <b>Solution (c).</b> The degree of precision of \(G_2(f)\) is 3 because the approximation is exact when \(f(x) = 1, x, x^2, x^3\) but not exact when \(f(x) = x^4\).
+    </p>
+</section>

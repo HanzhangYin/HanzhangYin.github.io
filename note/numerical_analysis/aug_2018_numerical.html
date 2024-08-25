@@ -1,0 +1,53 @@
+<h1> Qualify Exam Problems (August 2018)</h1>
+
+<section id = 'ku_2018_8_1'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <b>1.</b> All the questions in this problem are about to use the fixed point iteration to approximate \(\sqrt[3]{5}\).
+            <p>
+                (a) Prove \(\sqrt[3]{5}\) is a fixed point of the function \( g(x) = x - c \frac{x^3 - 5}{x^2} \), where \( c \) is a fixed constant.
+            </p>
+            <p>
+                (b) Determine the possible values of \( c \) to ensure convergence of \( x_{n+1} = x_n - c \frac{x_n^3 - 5}{x_n^2} \).
+            </p>
+            <p>
+                (c) Find a value \( c \) such that the order of convergence is quadratic and prove the quadratic convergence.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> We have
+        \[
+        \begin{align}
+        g(\sqrt[3]{5}) &= \sqrt[3]{5} - c \frac{5 - 5}{5} = \sqrt[3]{5} - c \cdot 0 = \sqrt[3]{5}.
+        \end{align}
+        \]
+        Thus, \(\sqrt[3]{5}\) is a fixed point of the function \( g(x) = x - c \frac{x^3 - 5}{x^2} \). \(\square\)
+    </p>
+    <p>
+        <b>Solution (b).</b>
+        Let \(x_n = x\) and \(x_{n+1} = x - c \frac{x^3 - 5}{x^2}\). Since \(x^3 - 5 = (x - \sqrt[3]{5})(x^2 + \sqrt[3]{5}x + (\sqrt[3]{5})^2)\), we have
+        Then, we have
+        \[
+        \begin{align}
+        \left|\dfrac{x - c \frac{x^3 - 5}{x^2} - \sqrt[3]{5}}{x - \sqrt[3]{5}}\right| = \left|1 - c \dfrac{x^2 + \sqrt[3]{5}x + (\sqrt[3]{5})^2}{x^2}\right|
+        \end{align}
+        \]
+        In order to make the iteration converge, we need to have \(\lim\limits_{n \to \infty} \left|\dfrac{x_{n+1} - \sqrt[3]{5}}{x_n - \sqrt[3]{5}}\right| < 1\).
+        Since it will converge when \(n\to \infty\), we have \(x\to \sqrt[3]{5}\). Thus, we have
+        \[
+        \begin{align}
+        \lim_{n \to \infty} \left|1 - c \dfrac{x^2 + \sqrt[3]{5}x + (\sqrt[3]{5})^2}{x^2}\right| < 1 \\
+        \lim_{x\to \sqrt[3]{5}} \left|1 - c \dfrac{x^2 + \sqrt[3]{5}x + (\sqrt[3]{5})^2}{x^2} \right| < 1 \\
+        \left|1 - c \dfrac{(\sqrt[3]{5})^2 + (\sqrt[3]{5})^2 + (\sqrt[3]{5})^2}{(\sqrt[3]{5})^2}\right| < 1 \\
+        \left|1 - c \dfrac{3(\sqrt[3]{5})^2}{(\sqrt[3]{5})^2}\right| = \left|1 - 3c \right| < 1 \\
+        -1 < 1 - 3c < 1 \\
+        0< c < \frac{2}{3}.
+        \end{align}
+        \]
+        Hence, in order to let the iteration converge, we need to have \(0 < c < \frac{2}{3}\).
+    </p>
+    <p>
+        <b>Solution (c).</b>
+    </p>
+</section>

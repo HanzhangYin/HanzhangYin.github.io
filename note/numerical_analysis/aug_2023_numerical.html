@@ -1,0 +1,490 @@
+<h1>Qualify Exam Problems (August 2023)</h1>
+
+<section id = 'ku_2023_8_1'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>1.</b> Suppose that \( p \) is a double zero of the function \( f \). Thus \( f(p) = f'(p) = 0 \ne f''(p) \). Show that if \( f'' \) is continuous, then in Newton's method we shall have
+
+                \[ \lim_{n \to \infty} \frac{|p - p_n|}{|p - p_{n-1}|} = \frac{1}{2}. \]
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Suppose that \(p - x_{n-1} = e\), then we can know that
+        \[
+        \begin{align}
+        f(x_{n-1}) &= f(p - e) = f(p) + f'(p)(-e) + \frac{f''(p)(-e)^2}{2} + \mathcal{O}(e^3) = \frac{f''(p)e^2}{2} + \mathcal{O}(e^3), \\
+        f'(x_{n-1}) &= f'(p) + f''(p)(-e) + \mathcal{O}(e^2) = -f''(p)e + \mathcal{O}(e^2).
+        \end{align}
+        \]
+        According to the Newton's method, we have \(x_{n} = x_{n-1} - \dfrac{f(x_{n-1})}{f'(x_{n-1})}\).
+        Then, we can know that
+        \[
+        \begin{align}
+        p - x_{n} &= p - x_{n-1} + \frac{f(x_{n-1})}{f'(x_{n-1})} \\
+        &= e + \dfrac{f(x_{n-1})}{f'(x_{n-1})} = e + \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{-f''(p)e + \mathcal{O}(e^2)} = \dfrac{-f''(p)e^2 + \mathcal{O}(e^3)}{-f''(p)e + \mathcal{O}(e^2)} + \dfrac{\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{-f''(p)e + \mathcal{O}(e^2)}, \\
+        &= \dfrac{-\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{f''(p)e + \mathcal{O}(e^2)}, \\
+        \dfrac{p - x_{n}}{p - x_{n-1}} &= \dfrac{-\frac{f''(p)e^2}{2} + \mathcal{O}(e^3)}{-f''(p)e^2 + \mathcal{O}(e^3)}, \\
+        &= \dfrac{(-\frac{f''(p)e^2}{2} + \mathcal{O}(e^3))/e^2}{(-f''(p)e^2 + \mathcal{O}(e^3))/e^2} \\
+        &= \dfrac{-\frac{f''(p)}{2} + \mathcal{O}(e)}{-f''(p) + \mathcal{O}(e)}.\\
+        \left|\dfrac{p - x_{n}}{p - x_{n-1}}\right| &= \left|\dfrac{-\frac{f''(p)}{2} + \mathcal{O}(e)}{-f''(p) + \mathcal{O}(e)}\right|.
+        \end{align}
+        \]
+        Since \(e\to 0\) when \(n\to \infty\), we have
+        \[
+        \begin{align}
+        \lim_{n\to\infty}\left|\dfrac{p - x_{n}}{p - x_{n-1}}\right| &= \lim_{n\to\infty}\left|-\dfrac{\frac{f''(p)}{2} + \mathcal{O}(e)}{-f''(p) + \mathcal{O}(e)}\right|, \\
+        &= \dfrac{\frac{f''(p)}{2}}{f''(p)}\\
+        &= \frac{1}{2}. \tag*{\(\blacksquare\)}
+        \end{align}
+        \]
+    </p>
+</section>
+
+<section id = 'ku_2023_8_2'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                2. (a) Consider a numerical integration rule of the form
+
+                \[ \int_{-1}^1 f(x) \, dx \approx A f \left( -\sqrt{\frac{3}{5}} \right) + B f(0) + C f \left( \sqrt{\frac{3}{5}} \right) \]
+
+                What is the linear system that must be solved in order to determine the coefficients \( A, B, C \) so that the formula has a possibly highest degree of precision? Solve for \( A, B, C \). What is the degree of precision?
+            </p>
+            <p>
+                (b) Find the error term for the rule.
+            </p>
+            <p>
+                (c) Derive the composite quadrature rule resulting from the application of the rule in Question (2a) to the general integral \( \int_a^b f(x) \, dx \) on a uniform partition \( x_0 = a \lt x_1 \lt \cdots \lt x_n = b \).
+            </p>
+            <p>
+                (d) Derive the error term for the composite rule. It is required that the error term does not contain summations.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> To determine the coefficients \( A, B, C \), we need to solve the following linear system:
+        \[
+        \begin{align}
+        \int_{-1}^1 1 \, dx &= A + B + C, \\
+        \int_{-1}^1 x \, dx &= -\sqrt{\frac{3}{5}} A + 0 + \sqrt{\frac{3}{5}} C, \\
+        \int_{-1}^1 x^2 \, dx &= \left( -\sqrt{\frac{3}{5}} \right)^2 A + 0^2 + \left( \sqrt{\frac{3}{5}} \right)^2 C.
+        \end{align}
+        \]
+        Solving the system, we have
+        \[
+        \begin{align}
+        A + B + C &= 2, \\
+        -\sqrt{\frac{3}{5}} A + \sqrt{\frac{3}{5}} C &= 0, \\
+        \frac{3}{5} A + \frac{3}{5} C &= \frac{2}{3}.
+        \end{align}
+        \]
+        From the second equation, we have \( A = C \). Substituting this into the third equation, we have \( A = C = \frac{5}{9} \). Then, we have \( B = \frac{8}{9} \). Therefore, we have the formula
+        \[
+        \int_{-1}^1 f(x) \, dx \approx \frac{5}{9} f \left( -\sqrt{\frac{3}{5}} \right) + \frac{8}{9} f(0) + \frac{5}{9} f \left( \sqrt{\frac{3}{5}} \right).
+        \]
+        Then we try to find the degree of precision.
+        \[
+        \begin{align}
+        \int_{-1}^1 x^3 \, dx &= \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^3 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^3 = 0, \\
+        \int_{-1}^1 x^4 \, dx &= \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^4 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^4 = \frac{2}{5}, \\
+        \int_{-1}^1 x^5 \, dx &= \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^5 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^5 = 0, \\
+        \int_{-1}^1 x^6 \, dx = \frac{2}{7} &\neq \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^6 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^6 = \frac{5}{25}.
+        \end{align}
+        \]
+        Thus, the degree of precision is \(5\).
+    </p>
+    <p>
+        <b>Solution (b).</b> We can know the error term is in the form of \(Cf^{(6)}(\xi)\) for some \(\xi\in(-1, 1)\) since the degree of precision is 5. Then, we have
+        And we already found that
+        \[
+        \int_{-1}^1 x^6 \, dx = \frac{2}{7} \neq \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^6 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^6 = \frac{5}{25}.
+        \]
+        Hence, we have
+        \[
+        \begin{align}
+        \int_{-1}^1 x^6 \, dx  - \frac{5}{9} \left( -\sqrt{\frac{3}{5}} \right)^6 + \frac{8}{9}\cdot 0 + \frac{5}{9} \left( \sqrt{\frac{3}{5}} \right)^6 &= \frac{2}{7} - \frac{6}{25} = \frac{8}{175} = C f^{(6)}(\xi), \\
+        f^{(6)}(x) &= 720 \\
+        720C &= \frac{8}{175} \\
+        C &= \frac{8}{175\cdot 720} = \frac{1}{15750}.
+        \end{align}
+        \]
+        Thus, the error term is \( \frac{1}{15750}f^{(6)}(\xi) \) for some \( \xi \in (-1, 1) \).
+    </p>
+    <p>
+        <b>Solution (c).</b> We will apply the change of the interval from \([-1, 1]\) to \([x_i, x_{i+1}]\).
+        Firstly, we define \(\lambda(t) = \dfrac{x_{i+1} - x_i}{2}t + \dfrac{x_{i+1} + x_i}{2}\) for \(t\in[-1, 1]\).
+        Then, we have \(\lambda(1) = x_{i+1}\) and \(\lambda(-1) = x_i\).
+        Hence, we have
+        \[
+        \begin{align}
+        \int_{x_i}^{x_{i+1}} f(x) \, dx &= \int_{-1}^1 f(\lambda(t))\lambda'(t) \, dt \\
+        &= \dfrac{x_{i+1} - x_i}{2} \int_{-1}^1 f\left(\dfrac{x_{i+1} - x_i}{2}t + \dfrac{x_{i+1} + x_i}{2}\right)\, dt, \\
+        &\approx \dfrac{x_{i+1} - x_i}{2} \left( \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\left(-\sqrt{\frac{3}{5}}\right) + \dfrac{x_{i+1} + x_i}{2} \right) + \dfrac{8}{9} f\left(\dfrac{x_{i+1} + x_i}{2}\right) + \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\sqrt{\frac{3}{5}} + \dfrac{x_{i+1} + x_i}{2}\right) \right).
+        \end{align}
+        \]
+        Then, we have
+        \[
+        \int_a^b f(x)\, dx \approx \sum_{i=0}^{n-1} \left[\dfrac{x_{i+1} - x_i}{2} \left( \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\left(-\sqrt{\frac{3}{5}}\right) + \dfrac{x_{i+1} + x_i}{2} \right) + \dfrac{8}{9} f\left(\dfrac{x_{i+1} + x_i}{2}\right) + \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\sqrt{\frac{3}{5}} + \dfrac{x_{i+1} + x_i}{2}\right) \right)\right].
+        \]
+    </p>
+    <p>
+        <b>Solution (d).</b> We already found that the error term is in the form of \( \frac{1}{15750}f^{(6)}(\xi) \) for some \( \xi \in (-1, 1) \) when we try to approximate \( \int_{-1}^1 f(x) \, dx \). Hence, we have error term for
+        \[
+        \int_{x_i}^{x_{i+1}} f(x)\, dx = \dfrac{x_{i+1} - x_i}{2} \left( \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\left(-\sqrt{\frac{3}{5}}\right) + \dfrac{x_{i+1} + x_i}{2} \right) + \dfrac{8}{9} f\left(\dfrac{x_{i+1} + x_i}{2}\right) + \dfrac{5}{9} f\left( \dfrac{x_{i+1} - x_i}{2}\sqrt{\frac{3}{5}} + \dfrac{x_{i+1} + x_i}{2}\right) \right) + \dfrac{x_{i+1} - x_i}{31500}f^{(6)}\left(\dfrac{x_{i+1} - x_i}{2}\xi+ \dfrac{x_{i+1} - x_i}{2}\right).
+        \]
+        Hence, the error term for approximating \(\displaystyle \int_{x_i}^{x_{i+1}} f(x)\, dx\) is
+        \[
+        E_i = \dfrac{x_{i+1} - x_i}{31500}f^{(6)}\left(\dfrac{x_{i+1} - x_i}{2}\xi+ \dfrac{x_{i+1} - x_i}{2}\right),\text{ for some } \xi\in(-1, 1).
+        \]
+        Given we have uniformly partitions, we can say that the error term for approximating \(\displaystyle \int_{x_i}^{x_{i+1}} f(x)\, dx\) is
+        \[
+        E_i = \dfrac{h}{31500}f^{(6)}\left(\eta_i\right),\text{ for some } \eta_i\in(x_{i}, x_{i+1}).
+        \]
+        Suppose that \(f\) is smooth. In that case, the error term for the composite rule is
+        \[
+        E = \sum_{i=0}^{n-1} E_i = \sum_{i=0}^{n-1} \dfrac{h}{31500}f^{(6)}\left(\eta_i\right) = \dfrac{h}{31500}\sum_{i=0}^{n-1} f^{(6)}\left(\eta_i\right) = \dfrac{h}{31500}f^{(6)}\left(\eta\right),\text{ for some } \eta\in(a, b).
+        \]
+    </p>
+</section>
+
+<section id = 'ku_2023_8_3'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                \(\textbf{Problem 3. }\)Consider the \(\theta\)-method \[ y_{n+1} = y_n
+                + h \left( \theta f_{n+1} + (1 - \theta) f_n \right), \quad \theta \in
+                [0, 1], \] where \( f_n = f(t_n, y_n) \).
+            </p>
+            <ul>
+                <li>
+                    (a). For which value(s) of \(\theta\) is the \(\theta\)-method
+                    explicit? Implicit?
+                </li>
+                <li>
+                    (b). Find an expression for the local truncation error in terms of
+                    \(\theta\), \(h\), and derivatives of the exact solution \(y(t)\) to
+                    the initial value problem. What are the local truncation errors for
+                    \(\theta = 0\), \(\frac{1}{2}\), \(1\)?
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> To make a method explicit, we only need values
+        of \(y_n\) and \(f_n\). Hence, when \(\theta = 0\), we have \[ y_{n+1} =
+        y_n + h f_n, \] which is explicit. To make a method implicit, we need
+        values of \(f_{n+1}\). Hence, when \(\theta = 1\), we have \[ y_{n+1} =
+        y_n + h f_{n+1}, \] which is implicit.
+    </p>
+    <p>
+        <b>Solution (b).</b> The local truncation error is given by
+        \[\tau_{n+1} = y(t_{n+1}) - y_{n+1} - h(\theta f(t_{n+1}, y(t_{n+1})) +
+        (1 - \theta) f(t_n, y(t_n))).\] When \(\theta = 0\), we have
+        \[\tau_{n+1} = y(t_{n+1}) - y_n - h f(t_n, y(t_n)),\] which is the local
+        truncation error for \(\theta = 0\). When \(\theta = \frac{1}{2}\), we
+        have \[\tau_{n+1} = y(t_{n+1}) - y_n - \frac{h}{2} (f(t_{n+1},
+        y(t_{n+1})) + f(t_n, y(t_n))),\] which is the local truncation error for
+        \(\theta = \frac{1}{2}\). When \(\theta = 1\), we have \[\tau_{n+1} =
+        y(t_{n+1}) - y_n - h f(t_{n+1}, y(t_{n+1})),\] which is the local
+        truncation error for \(\theta = 1\).
+    </p>
+</section>
+
+<section id = 'ku_2023_8_4'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>4</b>. Suppose \(A\in\mathbb{C}^{n\times n}\). Let \(\sigma_1\) and \(\sigma_n\) be the largest and smallest singular values of \(A\), respectively.
+            </p>
+            <p>
+                (a) Prove \(\|Ax\|_2\geq \sigma_n\|x\|_2\) for any \(x\in \mathbb{C}^n\).
+            </p>
+            <p>
+                (b) Prove that if \(B\in \mathbb{C}^{n\times n}\) is singular, then \(\|A - B\|_2\geq \sigma_n\).
+            </p>
+            <p>
+                (c) Show there exists a singular matrix \(B\in \mathbb{C}^{n\times n}\) such that \(\|A - B\|_2 = \sigma_n\).
+            </p>
+            <p>
+                (d) Let \(\lambda\) be an eigenvalue of \(A\). Prove
+                \[
+                \sigma_n\leq |\lambda_n|\leq \sigma_1.
+                \]
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Firstly, we denote \(A\) as SVD such as \(A = U\Sigma V^*\).
+        Hence, we will have
+        \[
+        \|Ax\|_2 = \|U\Sigma V^* x\|_2 =  \|\Sigma V^* x\|_2,
+        \]
+        for \(U\) is unitary.
+        We denote \(V^*x = v = \begin{bmatrix} v_1 \\ \vdots \\ v_n\end{bmatrix}\). Then, we can get
+        \[
+        \|Ax\|_2 = \|\Sigma v\|_2 = \left\|\begin{bmatrix} \sigma_1\cdot v_1 \\ \vdots \sigma_n\cdot v_n \end{bmatrix}\right\|_2 = \sqrt{(\sigma_1^2\cdot v_1\cdot \overline{v_1} + \dots + \sigma_n^2\cdot v_n\cdot \overline{v_n}} = = \sqrt{(\sigma_1^2\cdot \|v_1\|_2^2 + \dots + \sigma_n^2\cdot \|v_n\|^2} \geq \sqrt{\sigma_n^2\cdot \|v_1\|^2 + \dots + \sigma_n^2\cdot \|v_n\|^2} = \sigma_n\|v\|_2.
+        \]
+        Since \(V\) is unitary, we can know that \(V^*\) is unitary and \(\|v\|_2 = \|V^* x\|_2 = \|x\|_2\).
+        Therefore, we can conclude that
+        \[
+        \|Ax\|_2\geq \sigma_n\|v\|_2 = \sigma_n\|x\|_2. \blacksquare
+        \]
+    </p>
+    <p>
+        <b>Proof (b).</b> Given that \(B\) is singular, it contains an eigenvalue of \(0\). Let \(v\) be the eigenvector correspondent to \(0\) where \(\|v\|_2 = 1\).
+        Hence, we have
+        \[
+        \|A - B\|_2 = \max_{\|x\|=1}\|(A - B)x\|_2 \geq \|(A - B)v\|_2 = \|Av - Bv\|_2 = \|Av - 0\cdot v\|_2  = \|Av\|_2.
+        \]
+        We will borrow the notation from the previous part: \(A = U\Sigma V^*\).
+        Then, we have
+        \[
+        \|Av\|_2 = \|U\Sigma V^* v\|_2 = \|\Sigma V^* v\|_2.
+        \]
+        We denote \(u = V^*v = \begin{bmatrix} u_1 \\ \vdots \\ u_n \end{bmatrix}\). Thus, we have \(\|u\|_2 = \|V^*v\|_2 = \|v\|_2 = 1\) for \(V\) is unitary.
+        \[
+        \|\Sigma V^*v\|_2 = \|\Sigma u\|_2 = \sqrt{(\sigma_1^2\cdot u_1\cdot \overline{u_1} + \dots + \sigma_n^2 u_n\cdot \overline{u_n})} = \sqrt{(\sigma_1^2\cdot \|u_1\|_2^2 + \dots + \sigma_n^2 \|u_n\|_2^2)} \geq \sqrt{(\sigma_n^2\cdot \|u_1\|_2^2 + \dots + \sigma_n^2 \|u_n\|_2^2)} = \sigma_n\|u\|_2 = \sigma_n.
+        \]
+        Thus, we can know that \(\|A-B\|_2\geq \sigma_n\). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (c).</b> Given that \(A = U\Sigma V^*\) where
+        \[
+        \Sigma = \begin{bmatrix}
+        \sigma_1 & 0 & \dots & 0 \\
+        0 & \sigma_2 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}.
+        \]
+        Let \(B = U\Sigma' V^*\) where
+        \[
+        \Sigma' = \begin{bmatrix}
+        \sigma_1 & 0 & \dots & 0 \\
+        0 & \sigma_2 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & 0 \\
+        \end{bmatrix}.
+        \]
+        In that case, we can know that \(\det(B) = \det(U)\det(\Sigma')\det(V^*) = 1\cdot 0\cdot 1 = 0\), which implies that \(B\) is singular.
+        Then, we can get
+        \[
+        \|A - B\|_2 = \|U\Sigma V^* - U\Sigma' V^*\|_2 = \|U(\Sigma - \Sigma')V^*\|_2 = \|\Sigma - \Sigma'\|_2 = \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\right\|_2
+        \]
+        Let \(v = \begin{bmatrix} v_1 \\ \vdots \\ v_n \end{bmatrix} \in \mathbb{C}^n\) such that \(\|v\|_2 = 1\) and \(\|Av\|_2 = \max\limits_{\|x\|_2=1}\|Ax\|_2\).
+        Then, we can get
+        \[
+        \begin{align}
+        \|A - B\|_2 &= \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\right\|_2
+        = \max_{\|x\|_2=1}\left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\cdot x\right\|_2
+        = \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n
+        \end{bmatrix}\cdot \begin{bmatrix} v_1 \\ \vdots \\ v_n \end{bmatrix}\right\|_2 \\
+        &= \left\|\begin{bmatrix} 0 \\ \vdots \\ \sigma_nv_n \end{bmatrix}\right\|_2 = \sigma_n\|v_n\|_2 \leq \sigma_n(\sqrt{\|v_1\|_2^2 + \dots + \|v_n\|_2^2}) = \sigma_n.
+        \end{align}
+        \]
+        Hence, we have \(\|A- B\|_2\leq \sigma_n\).
+        Now, let \(u = \vec{e_n}\).
+        \[
+        \|A - B\|_2 = \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\right\|_2 = \max_{\|x\|=1}\left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\cdot x\right\|_2 \geq \left\|\begin{bmatrix}
+        0 & 0 & \dots & 0 \\
+        0 & 0 & \dots & 0 \\
+        \vdots & 0 & \ddots & 0 \\
+        0 & \dots & 0 & \sigma_n \\
+        \end{bmatrix}\cdot \begin{bmatrix} 0 \\ \vdots \\ 1 \end{bmatrix}\right\|_2 =
+        \left\|\begin{bmatrix} 0 \\ \vdots \\ \sigma_n \end{bmatrix}\right\|_2  = \sigma_n.
+        \]
+        Therefore, we have \(\|A - B\|_2 = \sigma_n\). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (d).</b> Since \(\lambda\) is the eigenvalue of \(A\), we denote \(v\) as the eigenvector of \(A\) which is correspondent to \(\lambda\) and \(\|v\|_2 = 1\).
+        From part (a), we can know that \(\|Ax\|_2\geq \sigma_n\|x\|_2\). Thus, we have
+        \[
+        |\lambda| = |\lambda|\|v\|_2 = \|\lambda v\|_2 = \|Av\|_2 \geq \sigma_n\|v\|_2 = \sigma_n.
+        \]
+        For the other direction, we have
+        \[
+        \sigma_1 = \|A\|_2 = \max_{\|x\|=1} \|Ax\|_2 \geq \|Av\|_2 = |\lambda|\|v\|_2 = |\lambda|.
+        \]
+        Therefore, we have
+        \[
+        \sigma_n\leq |\lambda|\leq \sigma_1. \blacksquare
+        \]
+    </p>
+</section>
+
+<section id = 'ku_2023_8_6'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>6.</b> Let \( A \in \mathbb{C}^{m \times m} \), and \( A
+                = U\Sigma V^* \) being a singular value decomposition of \( A \), where
+                \( U, V \in \mathbb{C}^{m \times m} \) are unitary and \( \Sigma \) is
+                non-negative diagonal. Define \[ W = \frac{1}{\sqrt{2}} \begin{bmatrix}
+                U & U \\ V & -V \end{bmatrix} \in \mathbb{C}^{2m \times 2m}. \]
+            </p>
+            <p>
+                <b>(a).</b> Prove \( W \) is unitary.
+            </p>
+            <p>
+                <b>(b).</b> Let \[ B = \begin{bmatrix} 0 & A \\ A^* & 0 \end{bmatrix} \in
+                \mathbb{C}^{2m \times 2m}. \] Prove \( B \) is Hermitian and have the
+                spectral decomposition
+                \[
+                B = W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix} W^*.
+                \]
+                Prove \( \|B\|_2 = \|A\|_2 \).
+            </p>
+            <p>
+                <b>(c).</b> Let \( \tilde{\sigma} \) be a singular value of \( \tilde{A} = A + E \), where \( E \in \mathbb{C}^{m \times m} \). Prove there exists a singular value \( \sigma \) of \( A \) such that
+                \[
+                |\tilde{\sigma} - \sigma| \leq \|E\|_2.
+                \]
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Given \(W\), we have with Unitary Matrices \(U,
+        V\), we can get \[ W^* = \frac{1}{\sqrt{2}} \begin{bmatrix} U^* & V^* \\
+        U^* & -V^* \end{bmatrix} \in \mathbb{C}^{2m \times 2m}. \] Then we have
+        \begin{align} W^* W &= \frac{1}{2} \begin{bmatrix} U^*U + V^*V & U^*U -
+        V^*V \\ U^*U - V^*V & U^*U + V^*V \end{bmatrix}\\ &= \frac{1}{2}
+        \begin{bmatrix} I_m + I_m & I_m - I_m \\ I_m - I_m & I_m + I_m
+        \end{bmatrix}\\ &= \frac{1}{2} \begin{bmatrix} 2I_m & 0_m \\ 0_m & 2I_m
+        \end{bmatrix}\\ &= \begin{bmatrix} I_m & 0_m \\ 0_m & I_m \end{bmatrix}
+        \\ &= I_{2m}. \end{align} By the similar process, we have \begin{align}
+        WW^* &= \frac{1}{2} \begin{bmatrix} UU^* + UU^* & UV^* - UV^* \\ VU^* -
+        VU^* & VV^* + VV^* \end{bmatrix}\\ &= \frac{1}{2} \begin{bmatrix} I_m +
+        I_m & 0_m \\ 0_m & I_m + I_m \end{bmatrix}\\ &= I_{2m}. \end{align}
+        Therefore, we show that \(W\) is unitary. \[ \tag*{$\square$} \]
+    </p>
+    <p>
+        <b>Proof (b).</b>Firstly, we have \[ B^* = \begin{bmatrix} 0 & A^*
+        \\ (A^*)^* & 0 \end{bmatrix} = \begin{bmatrix} 0 & A^* \\ A & 0
+        \end{bmatrix} = B. \] Thus, we have \(B\) is Hermitian. To show the
+        spectral decomposition, we need to do calculation. \begin{align} W
+        \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix} W^* &=
+        \frac{1}{2} \begin{bmatrix} U & U \\ V & -V \end{bmatrix}
+        \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix} \begin{bmatrix}
+        U^* & V^* \\ U^* & -V^* \end{bmatrix}\\ &= \frac{1}{2} \begin{bmatrix}
+        U\Sigma & -U\Sigma \\ V\Sigma & V\Sigma \end{bmatrix} \begin{bmatrix}
+        U^* & V^* \\ U^* & -V^* \end{bmatrix}\\ &= \frac{1}{2} \begin{bmatrix}
+        U\Sigma U^* - U\Sigma U^* & U\Sigma V^* + U\Sigma V^* \\ V\Sigma U^* +
+        V\Sigma U^* & V\Sigma V^* - V\Sigma V^* \end{bmatrix}\\ &=
+        \begin{bmatrix} 0 & U\Sigma V^* \\ V\Sigma U^* & 0 \end{bmatrix}\\
+        \end{align} Since \(A = U\Sigma V^*\), which is SVD of \(A\), we know
+        all entries of \(\Sigma\) are real. Thus, we have \(\Sigma =
+        \Sigma^*\). In that case, we have \[ W \begin{bmatrix} \Sigma & 0 \\ 0 &
+        -\Sigma \end{bmatrix} W^* = \begin{bmatrix} 0 & U\Sigma V^* \\ V\Sigma
+        U^* & 0 \end{bmatrix} = \begin{bmatrix} 0 & U\Sigma V^* \\ V\Sigma^* U^*
+        & 0 \end{bmatrix} = \begin{bmatrix} 0 & A \\ A^* & 0 \end{bmatrix} = B.
+        \] \[ \tag*{$\square$} \]
+    </p>
+    <p>
+        Since we just show that \(W\) is unitary, and we
+        are given that \(U\) and \(V\) are unitary, we have \begin{align}
+        \|A\|_2 &= \|U\Sigma V^*\|_2 = \|\Sigma\|_2 = \max\sigma_i \\ \|B\|_2 &=
+        \left\|W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix}
+        W^*\right\|_2 = \left\|\begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma
+        \end{bmatrix}\right\|_2. \end{align} Since \(\begin{bmatrix} I_m & 0 \\
+        0 & -I_m \end{bmatrix}\) is a unitary matrix, and \[ \begin{bmatrix} I_m
+        & 0 \\ 0 & -I_m \end{bmatrix} \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma
+        \end{bmatrix} = \begin{bmatrix} \Sigma_m & 0 \\ 0 & \Sigma_m
+        \end{bmatrix}, \] we have \[ \left\|\begin{bmatrix} \Sigma & 0 \\ 0 &
+        -\Sigma \end{bmatrix}\right\|_2 = \left\|\begin{bmatrix} I_m & 0 \\ 0 &
+        -I_m \end{bmatrix} \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma
+        \end{bmatrix}\right\|_2 = \left\|\begin{bmatrix} \Sigma_m & 0 \\ 0 &
+        \Sigma_m \end{bmatrix}\right\|_2 = \max\sigma_i. \] Therefore, we have
+        \(\|B\|_2 = \|A\|_2\). \[ \tag*{$\square$} \]
+    </p>
+    <p>
+        <b>Proof (c).</b>We already knew that
+        \[
+        B = W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix} W^*.
+        \]
+        Let us define \(\tilde{B}\) such as
+        \[
+        \begin{align}
+        \tilde{B} &:= \begin{bmatrix} 0 & \tilde{A} \\ (\tilde{A})^* & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 0 & A + E \\ A^* + E^* & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 0 & A \\ A^* & 0 \end{bmatrix} + \begin{bmatrix} 0 & E \\ E^* & 0 \end{bmatrix} \\
+        &= W \begin{bmatrix} \Sigma & 0 \\ 0 & -\Sigma \end{bmatrix} W^* + \begin{bmatrix} 0 & E \\ E^* & 0 \end{bmatrix} \\
+        \end{align}
+        \]
+        We denote \(\begin{bmatrix} 0 & E \\ E^* & 0 \end{bmatrix}\) as \(F\).
+        According to part (a), we can know that \(\tilde{A}\) has SVD \(\tilde{U}\tilde{\Sigma}\tilde{V}^*\) and
+        \[
+        \tilde{A} = \tilde{W}\begin{bmatrix} \tilde{\Sigma} & 0 \\ 0 & -\tilde{\Sigma} \end{bmatrix}\tilde{W}^*,
+        \]
+        where \(\tilde{W}\) is unitary.
+        According to \(\textbf{Bauer-Fiker Theorem}\), we can know that if \(\tilde{\sigma}\) is an eigenvalue of \(\tilde{B}\), there is an eigenvalue \(\sigma\) of \(B\)
+        such that
+        \[
+        |\tilde{\mu} - \mu|\leq \kappa(\tilde{W})\|\|F\|_2.
+        \]
+        According to part (b), we can know that \(\|F\|_2 = \|E\|_2\). Hence, we have
+        \[
+        |\tilde{\mu} - \mu|\leq \kappa(\tilde{W})\|\|E\|_2 = \|\tilde{W}\|_2\|\tilde{W}^{-1}\|_2\|E\|_2 = \|E\|_2,
+        \]
+        for \(\tilde{W}\) is unitary.
+        We know that \(\tilde{\mu}\) is \in \(\Lambda(\tilde{B}\), so it is an entry of \(\tilde{\Sigma}\) or \(-\tilde{\Sigma}\).
+        By \(\textbf{
+        If \(\mu\geq 0\), then we can know that \(\tilde{\mu} = \tilde{\sigma}\).
+        Then, we can know that
+        \[
+        |\tilde{\sigma} - \mu|\leq \|E\|_2.
+        \]
+        After that, we will discuss the case that \(\mu\geq 0\). Similarly, we can know that \(\mu = \sigma\). Hence, we have
+        \[
+        |\tilde{\sigma} - \sigma|\leq \|E\|_2.
+        \]
+        If \(\mu\lt 0\), then we can know that \(\mu = -\sigma\) for some singular value \(\sigma\). Hence, we have
+        \[
+        |\tilde{\sigma} - \sigma|\leq|\tilde{\sigma} + \sigma|\leq \|E\|_2.
+        \]
+        for both \(\tilde{\sigma}\) and \(\sigma\) are positive.
+        If \(\tilde{\mu}\lt 0\), then we can know that \(\tilde{\mu} = -\tilde{\sigma}\). Hence, we have
+        \[
+        |\tilde{\mu} - \mu| = | -\tilde{\sigma} - \mu| = |\tilde{\sigma} + \mu|\leq \|E\|_2.
+        \]
+        If \(\mu\geq 0\), then we can know that \(\mu = \sigma\) for some \(\sigma\). Hence, we have
+        \[
+        |\tilde{\sigma} - \sigma|< |\tilde{\sigma} + \sigma| =|\tilde{\sigma} + \mu|\leq \|E\|_2,
+        \]
+        for both \(\tilde{\sigma}\) and \(\sigma\) are positive.
+        If \(\mu\lt 0\), then we can know that \(\mu = -\sigma\) for some singular value \(\sigma\). Hence, we have
+        \[
+        |\tilde{\sigma} - \sigma| = |\tilde{\sigma} + \mu|\leq \|E\|_2. \tag*{\(\blacksquare\)}
+        \]
+    </p>
+</section>

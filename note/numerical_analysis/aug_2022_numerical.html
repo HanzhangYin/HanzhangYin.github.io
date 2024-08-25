@@ -1,0 +1,294 @@
+<h2 id = 'august_2022'>Qualify Exam Problems (August 2022)</h2>
+<section id="ku_2022_8_1">
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                \(\textbf{Problem 1. }\)Consider the interpolation problem: Find a
+                polynomial of degree less than or equal to three interpolating the table
+                \[ \begin{array}{c|cccc} x & 0 & 1 & 7 & 2 \\ \hline f(x) & 51 & 3 & 201
+                & 1 \\ \end{array} \]
+            </p>
+            <ul>
+                <li>
+                    Prove that the solution to the interpolation problem exists and is
+                    unique.
+                </li>
+                <li>Find the interpolation polynomial in Newton's form.</li>
+                <li>
+                    Derive the error for the interpolation polynomial provided that
+                    function \( f = f(x) \) is sufficiently smooth.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Firstly, we can observe that for all \(x\), they are
+        distinct. Therefore, for arbitrary value of \(f(x)\), we can find a
+        unique polynomial of degree less than or equal to \(3\) interpolating
+        the table. \( \blacksquare \)
+    </p>
+    <p>
+        <b>Solution.</b>Here we can use Newton's divided difference method to find the interpolation polynomial.
+        \[
+        \begin{align*}
+        x_0 = 0: & f[x_0] = 51, & f[x_0, x_1] = \frac{3 - 51}{1 - 0} = -48, & f[x_0, x_1, x_2] = \frac{33 - (-48)}{7 - 0} = \frac{81}{7}, & f[x_0, x_1, x_2, x_3]
+        = \frac{7 - 81/7}{2-0} = -\frac{16}{7},\\ x_1 = 1: & f[x_1] = 3, &
+        f[x_1, x_2] = \frac{201 - 3}{7 - 1} = 33, & f[x_1, x_2, x_3] = \frac{40
+        - 33}{1-0} = 7, & \\ x_2 = 7: & f[x_2] = 201, & f[x_2, x_3] = \frac{1 -
+        201}{2 - 7} = 40, & & \\ x_3 = 2: & f[x_3] = 1, & & & \\ \end{align*} \]
+        Therefore, we have \[ p(x) = 51 + (-48)(x-0) + \frac{81}{7}(x-0)(x-1) -
+        \frac{16}{7}(x-0)(x-1)(x-7). \]
+    </p>
+    <p>\(\textbf{Solution.}\)</p>
+</section>
+
+<section id = 'ku_2022_8_2'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>2.</b> A fixed point of function \( f \) is a number \( x^* \) satisfying
+
+                \[ f(x^*) = x^*. \]
+
+                The functional iteration is defined as: \( x_{n+1} = f(x_n) \), \( n = 0, 1, 2, \ldots \) for a given initial approximation \( x_0 \). Suppose that \( f \) is arbitrarily differentiable on an interval \([a, b]\).
+            </p>
+            <p>
+                <b>(a)</b> State and justify sufficient condition(s) under which there exists a fixed point in \([a, b]\).
+            </p>
+            <p>
+                <b>(b)</b> State and justify additional condition(s) under which there exists a unique fixed point in \([a, b]\).
+            </p>
+            <p>
+                <b>(c)</b> Prove that, under the conditions stated in Question 2b, for any \( x_0 \in [a, b] \) the functional iteration produces a sequence of points \(\{x_n\}\) which converges to the fixed point of \( f \).
+            </p>
+            <p>
+                <b>(d)</b> Prove that the sequence \(\{x_n\}\) converges linearly (or faster) to the unique fixed point.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> We want to make sure that there exists \(\alpha, \beta\in [a, b]\) such that  \(g(\alpha) := f(\alpha) - \alpha \leq 0\) and \(g(\beta) := f(\beta) - \beta \geq 0\).
+        Then we can know that there exists a fixed point in \([a, b]\).
+    </p>
+    <p>
+        <b>Proof (a).</b> We know that \(f(x)\) is continuous on \([a, b]\), so we have \(g(x):= f(x) - x\) is continuous on \([a, b]\).
+        Without loss of generality, we assume that \(\alpha<\beta\\). Given that \(g(\alpha)\leq 0\) and \(g(\beta)\geq 0\), by the intermediate value theorem, there exists \(c\in [a, b]\) such that
+        \(g(c) = 0\), which implies that there exists a fixed point in \([a, b]\). \( \blacksquare \)
+    </p>
+    <p>
+        <b>Solution (b).</b> Let \(f(x): [a, b]\to[a, b]\) be a function such that for any \(x, y\in [a, b]\) we have
+        \[
+        |f(x) - f(y)| \leq L|x - y|,
+        \]
+        where \(L\) is a constant such that \(0\leq L \lt 1\). Then we can know that there exists a unique fixed point in \([a, b]\).
+    </p>
+    <p>
+        <b>Proof (b).</b>
+        We know that
+        \[
+        x_n = x_0 + (x_1 - x_0) + (x_2 - x_1) + \ldots + (x_n - x_{n-1})
+        \]
+        Hence, we want to show that \(\lim_{n\to\infty}x_n\) exists.
+        Since \(x_n = x_0 + \sum\limits_{k=1}^{n}(x_k - x_{k-1})\), we can prove the series exists to show that the limit exists.
+        Since \(x_{n} - x_{n-1} = f(x_{n-1}) - f(x_{n-2})\) and we have \(|f(x) - f(y)| \leq L|x - y|\), we can have
+        \[
+        |x_{n} - x_{n-1}| = |f(x_{n-1}) - f(x_{n-2})| \leq L|x_{n-1} - x_{n-2}| = L|f(x_{n-2}) - f(x_{n-3})| \leq L^2|x_{n-2} - x_{n-3}| \leq \ldots \leq L^{n-1}|x_1 - x_0|
+        \]
+        And we have
+        \[
+        x_n = x_0 +
+        \]
+    </p>
+</section>
+
+<section id = 'ku_2022_8_3'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>3.</b> Consider the numerical method
+
+                \[ y_{n+1} = y_n + \frac{h}{2} [y'_n + y'_{n+1}] + \frac{h^2}{12} [y''_n - y''_{n+1}] \]
+
+                for solving the initial value problem \( y' = f(t, y) \), \( y(t_0) = y_0 \) where \( y'_n = f(t_n, y_n) \) and
+
+                \[ y''_n = \frac{\partial f(t_n, y_n)}{\partial t} + f(t_n, y_n) \frac{\partial f(t_n, y_n)}{\partial y} \].
+
+                Show
+            </p>
+            <p>
+                (a) the method is fourth-order, and
+            </p>
+            <p>
+                (b) the region of absolute stability contains the entire negative real axis.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> By \(\textbf{Taylor's Expansion}\), we have
+        \[
+        \begin{align}
+        y_{n+1} &= y(t_{n+1}) = y(t_n + h) = y(t_n) + hy'(t_n) + \frac{h^2}{2}y''(t_n) + \frac{h^3}{6}y'''(t_n) + \mathcal{O}(h^4), \\
+        \end{align}
+        \]
+    </p>
+</section>
+
+<section id = 'ku_2022_8_4'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>4.</b> Prove the Bauer-Fike Theorem:
+
+                Let \( A \) be an \( n \times n \) matrix with a complete set of linearly independent eigenvectors and suppose the \( V^{-1}AV = D \) where \( V \) is nonsingular and \( D \) is diagonal. Let \( \delta A \) be a perturbation of \( A \) and let \( \mu \) be an eigenvalue of \( A + \delta A \). Then \( A \) has an eigenvalue \( \lambda \) such that
+                \[
+                |\mu - \lambda| \leq \kappa_p(V) \|\delta A\|_p, \quad 1 \leq p \leq \infty
+                \]
+                where \( \kappa_p(V) \) is the \( p \)-norm condition number of \( V \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> If there exists \(\lambda\in \Lambda(A)\) and \(\mu\in \Lambda(A+\delta A)\) such that \(\mu = \lambda\), then we are done.
+        If there is no such \(\lambda\) or \(\mu\), then we can know that \(|\lambda - \mu|>0\) for any \( \lambda \in \Lambda(A) \) and \( \mu \in \Lambda(A+\delta A) \).
+        Since \(\mu\) is an eigenvalue of \(A + \delta A\), we have
+        \[
+        \begin{align}
+        \det(A + \delta A - \mu I) &= 0, \\
+        \det(V)\det(A + \delta A - \mu I)\det(V^{-1}) &= 0, \\
+        \det(V(A + \delta A - \mu I)V^{-1}) &= 0, \\
+        \det(VAV^{-1} + V\delta AV^{-1} - \mu I) &= 0, \\
+        \det(D + V\delta AV^{-1} - \mu I) &= 0, \\
+        \det(V\delta AV^{-1} + D - \mu I ) &= 0, \\
+        \end{align}
+        \]
+        Since \(D\) is diagonal and \(D = \begin{bmatrix} \lambda_1 & & \\ & \ddots & \\ & & \lambda_n \end{bmatrix}\), we have
+        \[
+        D - \mu I = \begin{bmatrix} \lambda_1 - \mu & & \\ & \ddots & \\ & & \lambda_n - \mu \end{bmatrix}.
+        \]
+        Based on the assumption that there is no \(\lambda = \mu\), we can know that none of diagonal entries of \(D - \mu I\) is zero, which implies that \(\det(D - \mu I) \neq 0\).
+        Hence, we can know that \((D - \mu I)^{-1}\) exists. Thus, we have
+        \[
+        \begin{align}
+        \det(V\delta AV^{-1} + D - \mu I ) &= 0, \\
+        \det((D - \mu I)((D - \mu I)^{-1}V\delta AV^{-1} + I) ) &= 0, \\
+        \det(D - \mu I)\det((D - \mu I)^{-1}V\delta AV^{-1} + I) &= 0. \\
+        \end{align}
+        \]
+        Since, we can know that \(\det(D - \mu I) \neq 0\), we have
+        \[
+        \det((D - \mu I)^{-1}V\delta AV^{-1} + I) = 0.
+        \]
+        Therefore, we can know that \(-1\) is an eigenvalue of \((D - \mu I)^{-1}V\delta AV^{-1}\).
+        We know that if \(\lambda\) is an eigenvalue of \(M\), then \(\|M\|_p\geq |\lambda|\) for any \(p\).
+        Hence, we have
+        \[
+        \begin{align}
+        1 = |-1|\leq \|(D - \mu I)^{-1}V\delta A V^{-1}\|_p\leq \|(D - \mu I)^{-1}\|_p\|V\delta A V^{-1}\|_p.
+        \end{align}
+        \]
+        Since every eigenvalue of \(D - \mu I\) is nonzero, we can know that \(\|(D - \mu I)^{-1}\|_p>0\).
+        Hence, we have that
+        \[
+        \dfrac{1}{\|(D - \mu I)^{-1}\|_p}\leq \|V\delta A V^{-1}\|_p.
+        \]
+        Since
+        \[
+        (D - \mu I)^{-1} = \begin{bmatrix} \frac{1}{\lambda_1 - \mu} & & \\ & \ddots & \\ & & \frac{1}{\lambda_n - \mu} \end{bmatrix},
+        \]
+        we have \(\|(D - \mu I)^{-1}\|_p = \max\limits_{1\leq i\leq n} \left|\dfrac{1}{\lambda_i - \mu}\right|_p = \dfrac{1}{\min\limits_{1\leq i\leq n} |\lambda_i - \mu|}\).
+        Then, we can get
+        \[
+        \min\limits_{1\leq i\leq n} |\lambda_i - \mu| = \dfrac{1}{\frac{1}{\min\limits_{1\leq i\leq n} |\lambda_i - \mu|}} = \dfrac{1}{\|(D - \mu I)^{-1}\|_p} \leq \|V\delta A V^{-1}\|_p\leq \|V\|_p\|\delta A\|_p\|V^{-1}\|_p = \kappa_p(V)\|\delta A\|_p.
+        \]
+        Therefore, there exists an eigenvalue \(\lambda\) of \(A\) such that \(|\mu - \lambda| \leq \kappa_p(V) \|\delta A\|_p\). \( \blacksquare \)
+    </p>
+</section>
+
+<section id = 'ku_2022_8_5'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>5.</b> Let \( A \) be a real unreduced upper Hessenberg matrix of order \( n \).
+            </p>
+            <p>
+                (a) Show that \( A \) can be factored into \( A = QR \), where \( R \) is upper triangular and \( Q = H_1 \cdots H_{n-1} \) orthogonal with each \( H_k \) being a Householder matrix:
+                \[ H_k = I - 2 w^{(k)} \left(w^{(k)}\right)^T \quad 1 \leq k \leq n-1. \]
+            </p>
+            <p>
+                (b) Show that the orthogonal matrix \( Q \) in Question 5a is an upper Hessenberg matrix.
+            </p>
+            <p>
+                (c) Show that the product \( RQ \) is also an upper Hessenberg matrix.
+            </p>
+            <p>
+                (d) Describe the \( QR \) method for computing all the eigenvalues of matrix \( A \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b>
+    </p>
+    <p>
+        <b>Proof (b).</b> Suppose that \(A \) is a real unreduced upper Hessenberg matrix of order \(n\). Then, we can write \(A\) as
+        \[
+        A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1,n-1} & a_{1,n} \\ a_{2,1} & a_{2,2} & \cdots & a_{2,n-1} & a_{2,n} \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & \cdots & a_{n-1,n-1} & a_{n-1,n} \\ 0 & 0 & \cdots & a_{n, n-1} & a_{n,n} \end{bmatrix},
+        \]
+        We denote the first column of \(A\) as \(a_1 = \begin{bmatrix} a_{11} \\ a_{21} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\).
+        And we define \(v^{(1)} = \begin{bmatrix} a_{11} + \|a_1\|_2 \\ a_{21} \\ 0 \\ \vdots \\ 0 \end{bmatrix} = \begin{bmatrix} v_{11} \\ v_{12} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\).
+        Then, we can construct a Householder matrix \(H_1\) such that
+        \[
+        \begin{align}
+        H_1 &= I - 2w^{(1)}(w^{(1)})^T \\
+        &= I - 2\dfrac{v^{(1)}(v^{(1)})^T}{(v^{(1)})^Tv^{(1)}}, \\
+        &= I - \frac{2}{\|v_{11}\|^2_2 + \|v_{22}\|_2^2}\begin{bmatrix} v_{11} \\ v_{12} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\begin{bmatrix} v_{11} & v_{12} & 0 & \cdots & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 1 & 0 & 0 & \cdots & 0 \\ 0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & 1 \end{bmatrix} - \dfrac{2}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2}\begin{bmatrix} v_{11} \\ v_{12} \\ 0 \\ \vdots \\ 0 \end{bmatrix}\begin{bmatrix} v_{11} & v_{12} & 0 & \cdots & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 1-\dfrac{2v_{11}^2}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2} & -\dfrac{2v_{11}v_{12}}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2} & 0 & \cdots & 0 \\ -\dfrac{2v_{11}v_{12}}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2} & 1-\dfrac{2v_{12}^2}{\|v_{11}\|^2_2 + \|v_{12}\|^2_2} & 0 & \cdots & 0 \\ 0 & 0 & -1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & -1 \end{bmatrix} \\
+        &= \begin{bmatrix} H^{(1)}_{1, 1} & H^{(1)}_{1, 2} & 0 & \cdots & 0 \\ H^{(1)}_{2, 1} & H^{(1)}_{2, 2} & 0 & \cdots & 0 \\ 0 & 0 & -1 & \cdots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & -1 \end{bmatrix} \\
+        \end{align}
+        \]
+    </p>
+    <p>
+        <b>Proof (c).</b> Given that \(R\) is an upper triangular matrix and \(Q\) is an upper Hessenberg matrix by the previous part, we have
+        \[
+        \begin{align}
+        R &= \begin{cases}
+        R_{ij}\in \mathbb{R}, & i \leq j, \\
+        R_{ij} = 0, & i > j.
+        \end{cases}\\
+        Q &= \begin{cases}
+        Q_{ij}\in \mathbb{R}, & i-1 \leq j, \\
+        Q_{ij} = 0, & i-1 > j.
+        \end{cases}
+        \end{align}
+        \]
+        Now, we denote \(R\) and \(Q\) as the following:
+        \[
+        \begin{align}
+        R &= \begin{bmatrix} R_1 \\ \vdots \\ R_n \\ \end{bmatrix} \\
+        Q &= \begin{bmatrix} Q_1 & \dots & Q_n \end{bmatrix},
+        \end{align}
+        \]
+        where each \(R_i\) is a row vector of \(R\) and each \(Q_i\) is a column vector of \(Q\).
+        We denote the product of \(RQ\) as \(\tilde{A}\) (i.e. \(\tilde{A} = RQ\)).
+        Then, we have
+        \[
+        \tilde{A}_{ij} = R_iQ_j = \sum_{k=1}^{n} R_{ik}Q_{kj}.
+        \]
+        When \(i-1>j\), we have
+        \[
+        \begin{align}
+        \tilde{A}_{ij} &= \sum_{k=1}^{n} R_{ik}Q_{kj} \\
+        &= R_{i1}Q_{1j} + \dots + R_{i,i-1}Q_{i-1,j} + R_{ii}Q_{ij} + \dots + R_{in}Q_{nj} \\
+        &= \sum_{k=1}^{i-1} R_{ik}Q_{kj} + \sum_{k=i}^{n} R_{ik}Q_{kj} \\
+        \end{align}
+        \]
+        For \(\sum\limits_{k=1}^{i-1} R_{ik}Q_{kj}\), every \(R_{ik} = 0\) for \(i > k\). Thus, we have \(\sum\limits_{k=1}^{i-1} R_{ik}Q_{kj} = 0\).
+        For \(\sum\limits_{k=i}^{n} R_{ik}Q_{kj}\), every \(Q_{kj} = 0\) for \(j \lt i-1\). Thus, we have \(\sum\limits_{k=i}^{n} R_{ik}Q_{kj} = 0\).
+        In that case, we have
+        \[
+        \tilde{A}_{ij} = \sum_{k=1}^{i-1} R_{ik}Q_{kj} + \sum_{k=i}^{n} R_{ik}Q_{kj} = 0 + 0 = 0,
+        \]
+        when \(i-1>j\).
+        Hence, we can know that \(\tilde{A} = RQ\) is an upper Hessenberg matrix. \( \blacksquare \)
+    </p>
+</section>

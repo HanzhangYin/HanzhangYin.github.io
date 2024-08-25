@@ -1,0 +1,78 @@
+<h1>Qualify Exam Problems (January 2021)</h1>
+
+<section id = 'ku_2021_1_1'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>Problem 1.</b> In this problem, we investigate the numerical method
+
+                \[ u_{n+1} = \frac{4u_n - u_{n-1}}{3} + \frac{2h}{3} f(t_{n+1}, u_{n+1}) \quad (1) \]
+
+                for solving the initial value problem \( y'(t) = f(t, y(t)), \, y(t_0) = y_0 \) and \( t \in [t_0, t_0 + T] \). Here \( h = T/N, \, t_n = t_0 + nh \) for \( n = 0, 1, \ldots, N \), with \( u_0 = y_0 \). We assume that \( f(t, y) \) is continuous on \([t_0, t_0 + T] \times \mathbb{R}\) and satisfies the Lipschitz condition with constant \( L > 0 \):
+
+                \[ |f(t, y) - f(t, z)| \le L |y - z|, \quad \forall t \in [t_0, t_0 + T], \quad \forall y, z \in \mathbb{R}. \]
+            </p>
+            <p>
+                (a) State whether the method (1) is single-step or multistep, and whether it is implicit or explicit.
+            </p>
+            <p>
+                (b) How would you compute the value \( u_1 \approx y(t_1) \)?
+            </p>
+            <p>
+                (c) State and prove whether the method (1) is consistent, zero-stable and/or convergent.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> Firstly, we can know that the method (1) is multistep and implicit.
+    </p>
+    <p>
+        <b>Solution (b).</b>
+    </p>
+    <p>
+        <b>Solution (c).</b>
+    </p>
+</section>
+
+<section id = 'ku_2021_1_4'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>Problem 4.</b> Let \( A \in \mathbb{C}^{m \times m} \) be nonsingular and \( 0 \neq b \in \mathbb{C}^m \). Suppose that \( x \) is the solution of \( Ax = b \) and \( \hat{x} \) is an approximation of \( x \). Define
+                \[
+                r = b - A\hat{x} \quad \text{and} \quad \Delta = \frac{r \hat{x}^*}{\hat{x}^* \hat{x}},
+                \]
+                where \( \hat{x}^* \) is the conjugate transpose (adjoint) of \( \hat{x} \).
+            </p>
+            <p>
+                (a) Prove that \( \Delta \) satisfies \( (A + \Delta) \hat{x} = b \).
+            </p>
+            <p>
+                (b) Prove that
+                \[
+                \|\Delta\|_2 = \min_{(A+E)\hat{x} = b} \|E\|_2,
+                \]
+                i.e., \( \Delta \) is a matrix with the smallest 2-norm among all the matrices \( E \) that satisfy \( (A + E) \hat{x} = b \).
+            </p>
+            <p>
+                (c) Prove that
+                \[
+                (\kappa_2(A))^{-1} \frac{\|r\|_2}{\|b\|_2} \leq \frac{\|x - \hat{x}\|_2}{\|x\|_2} \leq (\kappa_2(A)) \frac{\|r\|_2}{\|b\|_2},
+                \]
+                where \( \kappa_2(A) = \|A^{-1}\|_2 \|A\|_2 \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Since
+        \[
+        \begin{align}
+        \left(A + \Delta\right)\hat{x} &= \left(A + \dfrac{r\hat{x}^*}{\hat{x}^*\hat{x}}\right)\hat{x} = A\hat{x} + \dfrac{r\hat{x}^*\hat{x}}{\hat{x}^*\hat{x}} = A\hat{x} + r.
+        \end{align}
+        \]
+        Given that \(r = b - A\hat{x}\), we have
+        \[
+        A\hat{x} + r = b. \blacksquare
+        \]
+    </p>
+</section>

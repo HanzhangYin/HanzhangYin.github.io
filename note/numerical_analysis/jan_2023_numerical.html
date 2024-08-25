@@ -1,0 +1,170 @@
+<h1>Qualifying Exam Problems (January 2023)</h1>
+
+<section id = 'ku_2023_1_4'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>Problem 4.</b> For \( A \in \mathbb{R}^{n \times n} \) and \( A = A^T \), Rayleigh Quotient Iteration is defined by:
+            </p>
+            <p>
+                select \( \vec{v}^{(0)} \in \mathbb{R}^n \) such that \( \|\vec{v}^{(0)}\|_2 = 1 \)
+            </p>
+            <p>
+                for \( k = 1, 2, \ldots \)
+            </p>
+            <p>
+                compute \( \lambda^{(k-1)} = [\vec{v}^{(k-1)}]^T A \vec{v}^{(k-1)} \)
+            </p>
+            <p>
+                solve \( (A - \lambda^{(k-1)}I)\vec{w} = \vec{v}^{(k-1)} \) for \( \vec{w} \)
+            </p>
+            <p>
+                compute \( \vec{v}^{(k)} = \vec{w} / \|\vec{w}\|_2 \).
+            </p>
+            <p>
+                Assume \( A = \begin{bmatrix} d_1 & 0 \\ 0 & d_2 \end{bmatrix} \) with \( d_1 > d_2 \), and \( \vec{v}^{(k-1)} = [v_1^{(k-1)}, v_2^{(k-1)}]^T \) with \( v_1^{(k-1)} \neq 0 \) and \( v_2^{(k-1)} \neq 0 \).
+            </p>
+            <ul>
+                <li>
+                    (a) Express components of \( \vec{v}^{(k)} = [v_1^{(k)}, v_2^{(k)}]^T \) in terms of \( v_1^{(k-1)} \) and \( v_2^{(k-1)} \).
+                </li>
+                <li>
+                    (b) Assume, in addition, that \( v_1^{(k-1)} \approx 1 \) and \( v_2^{(k-1)} \approx 0 \). Show that \( \|\vec{v}^{(k)} - \vec{e}_1\|_2 \approx \|\vec{v}^{(k-1)} - \vec{e}_1\|_2^3 \), where \( \vec{e}_1 = [1, 0]^T \). What is the significance of this result? <b>Hint:</b> \( \sqrt{1 + x} \approx 1 + x/2 \) for \( x \approx 0 \).
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> For simplicity, we denote \(a = v_1^{(k-1)}\in\mathbb{R}\) and \(b = v_2^{(k-1)}\in\mathbb{R}\). Then, we have
+        \[ v^{(k-1)} = [a, b]^T. \]
+        Thus, we have
+        \[
+        \begin{align*}
+        \lambda^{(k-1)} &= [v^{(k-1)}]^T A v^{(k-1)} = [a, b] \begin{bmatrix} d_1 & 0 \\ 0 & d_2 \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix} = [a, b] \begin{bmatrix} d_1 a \\ d_2 b \end{bmatrix} = d_1 a^2 + d_2 b^2, \\
+        A- \lambda^{(k-1)}I &= \begin{bmatrix} d_1 & 0 \\ 0 & d_2 \end{bmatrix} - \begin{bmatrix} d_1 a^2 + d_2 b^2 & 0 \\ 0 & d_1 a^2 + d_2 b^2 \end{bmatrix} = \begin{bmatrix} d_1 - d_1 a^2 - d_2 b^2 & 0 \\ 0 & d_2 - d_1 a^2 - d_2 b^2 \end{bmatrix}. \\
+        \end{align*}
+        \]
+        Since, we have \(v^{(k-1)} = w/\|w\|_2\), we have the norm of \(v^{(k-1)}\) is 1. Therefore, we have \(a^2 + b^2 = 1\). Then, we have
+        \[
+        A- \lambda^{(k-1)}I = \begin{bmatrix} d_1(1 - a^2) - d_2b^2 & 0 \\ 0 & d_2(1 - b^2) -d_1a^2 \end{bmatrix} = \begin{bmatrix} d_1b^2 - d_2b^2 & 0 \\ 0 & d_2a^2 -d_1a^2 \end{bmatrix} = \begin{bmatrix} (d_1 - d_2)b^2 & 0 \\ 0 & (d_2 - d_1)a^2 \end{bmatrix}.
+        \]
+        Since, we know that \(d_1>d_2\) and neither \(a\) nor \(b\) is zero, we have \((d_1 - d_2)b^2\neq 0\) and \((d_2 - d_1)a^2\neq 0\).
+        Thus, we can know that \(A - \lambda^{(k-1)}I\) is non-singular. Therefore, we have the inverse of \(A - \lambda^{(k-1)}I\) as
+        \[
+        (A - \lambda^{(k-1)}I)^{-1} = \begin{bmatrix} \frac{1}{(d_1 - d_2)b^2} & 0 \\ 0 & \frac{1}{(d_2 - d_1)a^2} \end{bmatrix}.
+        \]
+        Then, we have
+        \[
+        w = (A - \lambda^{(k-1)}I)^{-1}v^{(k-1)} = \begin{bmatrix} \frac{1}{(d_1 - d_2)b^2} & 0 \\ 0 & \frac{1}{(d_2 - d_1)a^2} \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} \frac{a}{(d_1 - d_2)b^2} \\ \frac{b}{(d_2 - d_1)a^2} \end{bmatrix}.
+        \]
+        Hence, we have
+        \[
+        \|w\|_2 = \sqrt{\left(\frac{a}{(d_1 - d_2)b^2}\right)^2 + \left(\frac{b}{(d_2 - d_1)a^2}\right)^2} = \sqrt{\frac{a^2}{(d_1 - d_2)^2b^4} + \frac{b^2}{(d_2 - d_1)^2a^4}} = \sqrt{\frac{a^6}{(d_1 - d_2)^2a^4b^4} + \frac{b^6}{(d_2 - d_1)^2a^4b^4}}.
+        \]
+        Given that \(b_1>b_2\),
+        \[
+        \begin{align}
+        \|w\|_2 &= \sqrt{\frac{a^6 + b^6}{(d_1 - d_2)^2a^4b^4}} = \dfrac{\sqrt{a^6 + b^6}}{(d_1 - d_2)a^2b^2}, \\
+        \vec{v}^{(k)} &= \dfrac{\vec{w}}{\|\vec{w}\|_2} = \dfrac{\begin{bmatrix} \frac{a}{(d_1 - d_2)b^2} \\ \frac{b}{(d_2 - d_1)a^2} \end{bmatrix}}{\dfrac{\sqrt{a^6 + b^6}}{(d_1 - d_2)a^2b^2}} = \begin{bmatrix} \dfrac{a^3}{\sqrt{a^6 + b^6}} \\ -\dfrac{b^3}{\sqrt{a^6 + b^6}} \end{bmatrix}.
+        \end{align}
+        \]
+        Thus, we have the components of \( \vec{v}^{(k)} \) in terms of \( v_1^{(k-1)} \) and \( v_2^{(k-1)} \) as
+        \[
+        \begin{align}
+        v_1^{(k)} &= \dfrac{(v_1^{(k)})^3}{\sqrt{(v_1^{(k)})^6 + (v_2^{(k)})^6}}, \\
+        v_2^{(k)} &= -\dfrac{(v_2^{(k)})^3}{\sqrt{(v_1^{(k)})^6 + (v_2^{(k)})^6}}.
+        \end{align}
+        \]
+    </p>
+    <p>
+        <b>Proof (b).</b>Let \(\varepsilon\approx 0\). Then, we have \(\sqrt{1 - \varepsilon^2} \approx 1 - \varepsilon^2/2 \approx 1\) since \(\varepsilon^2 \approx 0\).
+        Hence, we set \(v^{(k-1)} = \begin{bmatrix} \sqrt{1 - \varepsilon^2} \\ \varepsilon \end{bmatrix} \approx \begin{bmatrix} 1 \\ 0 \end{bmatrix}\).
+        Then, we have
+        \[
+        \begin{align}
+        \|v^{(k-1)} - e_1\|_2 &= \left\|\begin{bmatrix} \sqrt{1 - \varepsilon^2} - 1 \\ \varepsilon \end{bmatrix}\right\|_2 \\
+        &= \sqrt{(\sqrt{1 - \varepsilon^2}-1)^2 + \varepsilon^2} \\
+        &= \sqrt{1 - \varepsilon^2 - 2\sqrt{1 - \varepsilon^2} + 1 + \varepsilon^2} \\
+        &= \sqrt{2 - 2\sqrt{1 - \varepsilon^2}} \\
+        &\approx \sqrt{2 - 2(1 - \varepsilon^2/2)} \\
+        &\approx \sqrt{\varepsilon^2} \\
+        &\approx |\varepsilon| \\
+        &\approx 0.
+        \end{align}
+        \]
+        Based on the previous part, we can have
+        \[
+        \begin{align}
+        v^{(k)} &= \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{\sqrt{1 - \varepsilon^2}^6 + \varepsilon^6} \\ \dfrac{- \varepsilon^3}{\sqrt{1 - \varepsilon^2}^6 + \varepsilon^6} \end{bmatrix} = \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{(1 - \varepsilon^2)^3 + \varepsilon^6} \\ \dfrac{- \varepsilon^3}{(1 - \varepsilon^2)^3 + \varepsilon^6} \end{bmatrix}= \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{1 - 3\varepsilon^2 + 3\varepsilon^4 - \varepsilon^6 + \varepsilon^6} \\ \dfrac{- \varepsilon^3}{1 - 3\varepsilon^2 + 3\varepsilon^4 - \varepsilon^6+ \varepsilon^6} \end{bmatrix}= \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{1 - 3\varepsilon^2 + 3\varepsilon^4} \\ \dfrac{- \varepsilon^3}{1 - 3\varepsilon^2 + 3\varepsilon^4 } \end{bmatrix},\\
+        v^{(k)} - e_1 &= \begin{bmatrix} \dfrac{\sqrt{1 - \varepsilon^2}^3}{1 - 3\varepsilon^2 + 3\varepsilon^4}-1 \\ \dfrac{- \varepsilon^3}{1 - 3\varepsilon^2 + 3\varepsilon^4 } \end{bmatrix},\\
+        \end{align}
+        \]
+    </p>
+</section>
+
+<section id = 'ku_2023_1_6'>
+    <div class = 'question-box-container'>
+        <div class = 'question-box'>
+            <p>
+                <b>6.</b> (a) State the Gerschgorin circle theorem. (HINT: Please state both parts of the theorem.)
+            </p>
+            <p>
+                (b) Suppose that \( D \in \mathbb{R}^{n \times n} \) is diagonal and \( E \in \mathbb{R}^{n \times n} \) is any matrix. Use the Gerschgorin circle theorem to show that if
+                \[
+                \|E\|_\infty < \min_{i \neq j} \left| \frac{d_{ii} - d_{jj}}{2} \right|,
+                \]
+                then there is an ordering of the eigenvalues of \( D + E \), \( \mu_1, \mu_2, \mu_3, \ldots, \mu_n \) such that
+                \[
+                |d_{ii} - \mu_i| < \|E\|_\infty
+                \]
+                for all \( i = 1, 2, 3, \ldots, n \). (HINT: First show that the \( i \)-th Gerschgorin disk is contained in the disk with center \( d_{ii} \) and radius \( \sum_{j=1}^{n} |e_{ij}| \).)
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b><b>Theorem [Row version Gerschgorin’s Theorem]</b> Let \( A \in \mathbb{C}^{m \times m} \). Consider \( m \) disks in the complex plane:
+        \[ D_i = \left\{ z \mid |z - a_{ii}| \leq \sum_{j \neq i} |a_{ij}| = |a_{i1}| + \ldots + |a_{i,i-1}| + |a_{i,i+1}| + \ldots + |a_{im}| \right\}. \]
+        Then we have the following results.
+    </p>
+    <ul>
+        <li>
+            Any eigenvalue \( \lambda \in \Lambda(A) \) must lie in at least one of these disks.
+        </li>
+        <li>
+            Suppose the \( m \) disks form \( n \) disjoint regions \( \mathcal{R}_1, \ldots, \mathcal{R}_n \), and each \( \mathcal{R}_k \) (\( 1 \leq k \leq n \)) is connected and consists of \( p_k \) disks. Then for each \( k \) from 1 to \( n \), exactly \( p_k \) eigenvalues of \( A \) are in \( \mathcal{R}_k \).
+        </li>
+    </ul>
+    <p>
+        <b>Proof (b).</b>Firstly, we can know that
+        \[
+        \|E\|_{\infty} = \max_{k\in\{1, 2, \dots, n\}}\sum_{i = 1}^n |e_{ki}|.
+        \]
+        According to the \(\textbf{Gerschgorin circle theorem}\), if all disks are disjoint, we can know there exists an eigenvalue \(\mu_i\) of \(D + E\) such that
+        \[
+        \begin{align}
+        |\mu_i - (d_{ii} + e_{ii})| &\leq |e_{i,1}| + \dots + |e_{i, i-1}| + |e_{i, i+1}| + \dots + |e_{i, n}| \\
+        |\mu_i - d_{ii}| - |e_{ii}|\leq |\mu_i - d_{ii} - e_{ii}| &\leq |e_{i,1}| + \dots + |e_{i, i-1}| + |e_{i, i+1}| + \dots + |e_{i, n}| \\
+        |\mu_i - d_{ii}| &\leq |e_{i,1}| + \dots + |e_{i, i-1}| + |e_{i, i}| + |e_{i, i+1}| + \dots + |e_{i, n}| \leq \|E\|_\infty.
+        \end{align}
+        \]
+        Now, we want to show that each disk is disjoint.
+        We pick two \( i \) and \( j \) such that \( i \neq j \). Suppose that disk \(D_i\) is centered at \((d_{ii} + e_{ii}, 0)\) and has radius \(r_i = \sum\limits_{k\neq i} |e_{ik}|\). Disk \(D_j\) is centered at \((d_{jj} + e_{jj}, 0)\) and has radius \(r_j = \sum\limits_{k\neq j} |e_{jk}|\).
+        Then, we have
+        \[
+        \begin{align}
+        2\|E\|_\infty - |e_{ii}| - |e_{jj}| \leq 2\|E\|_\infty - |e_{ii} - e_{jj}| &< |d_{ii} - d_{jj}| - |e_{ii} - e_{jj}| \leq |d_{ii} + e_{ii} - (d_{jj} + e_{jj})| \\
+        r_i + r_j + |e_{ii}| + |e_{jj}| &\leq 2\|E\|_\infty, \\
+        r_i + r_j &\leq 2\|E\|_\infty - |e_{ii}| - |e_{jj}|.
+        \end{align}
+        \]
+        Thus, we have
+        \[
+        r_i + r_j\lt |d_{ii} + e_{ii} - (d_{jj} + e_{jj})|,
+        \]
+        and we can know that the disks are disjoint. Therefore, there exists an ordering of the eigenvalues of \( D + E \), \( \mu_1, \mu_2, \mu_3, \ldots, \mu_n \) such that
+        \[
+        |d_{ii} - \mu_i| < \|E\|_\infty
+        \]
+        for all \( i = 1, 2, 3, \ldots, n \) by the second part of the \(\textbf{Gerschgorin circle theorem}\). \( \blacksquare \)
+    </p>
+</section>
