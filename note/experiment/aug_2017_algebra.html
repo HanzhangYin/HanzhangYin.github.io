@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for CSS structure-->
+    <title>2017 (August) ALGEBRA QUALIFYING EXAM</title>
+</head>
+
+<body>
+<div class="top-bar"></div>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <span class="visually-hidden">Menu</span>
+</label>
+<nav class="navbar">
+    <a href="algebra.html#linear_transformation">Linear Transformation</a>
+    <a href="algebra.html#multiplicity">Multiplicity</a>
+    <a href="algebra.html#dual_space">Dual Space</a>
+    <a href="algebra.html#linear_minimal_polynomial">Minimal Polynomial</a>
+    <a href="algebra.html#t_complement">\(T\)-Complement</a>
+    <a href="algebra.html#cyclic_operator">Cyclic Operator</a>
+    <a href="algebra.html#indecomposable_operator">Indecomposable Operator</a>
+    <a href="algebra.html#characteristic_polynomial">Characteristic Polynomial</a>
+    <a href="algebra.html#diagonalizable">Diagonalizable</a>
+    <a href="algebra.html#smith_normal_form">Smith Normal Form</a>
+    <a href="algebra.html#normal_subgroup">Normal Subgroup</a>
+    <a href="algebra.html#isomorphism">Isomorphism</a>
+    <a href="algebra.html#center">Center</a>
+    <a href="algebra.html#centralizer">Centralizer</a>
+    <a href="algebra.html#normalizer">Normalizer</a>
+    <a href="algebra.html#stabilizer">Stabilizer</a>
+    <a href="algebra.html#orbit">Orbit</a>
+    <a href="algebra.html#p_group">\(p\)-group</a>
+    <a href="algebra.html#sylow_p_subgroup">Sylow \(p\)-Subgroup</a>
+    <a href="algebra.html#sylow_theorem">Sylow's Theorem</a>
+    <a href="algebra.html#simple_group">Simple Group</a>
+    <a href="algebra.html#solvable_group">Solvable Group</a>
+    <a href="algebra.html#field">Field</a>
+    <a href="algebra.html#integral_domain">Integral Domain</a>
+    <a href="algebra.html#ascending_chain_condition">Ascending Chain Condition</a>
+    <a href="algebra.html#principal_ideal_domain">Principal Ideal Domain</a>
+    <a href="algebra.html#unique_factorization_domain">Unique Factorization Domain</a>
+    <a href="algebra.html#polynomial_ring">Polynomial Ring</a>
+    <a href="algebra.html#division_algorithm_sagemath">Division Algorithm in SageMath</a>
+    <a href="algebra.html#prime_irreducible">Prime and Irreducible</a>
+    <a href="algebra.html#adjoining_element">Adjoining Element</a>
+    <a href="algebra.html#splitting_field">Splitting Field</a>
+    <a href="algebra.html#minimal_polynomial">Minimal Polynomial</a>
+    <a href="algebra.html#field_extension">Field Extension</a>
+    <a href="algebra.html#separable">Separable</a>
+    <a href="algebra.html#algebraic_closure">Algebraic Closure</a>
+    <a href="algebra.html#galois_group">Galois Group</a>
+    <a href="algebra.html#galois_theory">Galois Theory</a>
+    <a href="jan_2015_algebra.html">KU 2015 (January)</a>
+    <a href="aug_2015_algebra.html">KU 2015 (August)</a>
+    <a href="jan_2016_algebra.html">KU 2016 (January)</a>
+    <a href="aug_2016_algebra.html">KU 2016 (August)</a>
+    <a href="jan_2017_algebra.html">KU 2017 (January)</a>
+    <a href='aug_2017_algebra.html'>KU 2017 (August)</a>
+    <a href='jan_2018_algebra.html'>KU 2018 (January)</a>
+    <a href='aug_2018_algebra.html'>KU 2018 (August)</a>
+    <a href='jan_2019_algebra.html'>KU 2019 (January)</a>
+    <a href='aug_2019_algebra.html'>KU 2019 (August)</a>
+    <a href='jan_2020_algebra.html'>KU 2020 (January)</a>
+    <a href='aug_2020_algebra.html'>KU 2020 (August)</a>
+    <a href='jan_2021_algebra.html'>KU 2021 (January)</a>
+    <a href='aug_2021_algebra.html'>KU 2021 (August)</a>
+    <a href='jan_2022_algebra.html'>KU 2022 (January)</a>
+    <a href='aug_2022_algebra.html'>KU 2022 (August)</a>
+    <a href='jan_2023_algebra.html'>KU 2023 (January)</a>
+    <a href='aug_2023_algebra.html'>KU 2023 (August)</a>
+    <a href='jan_2024_algebra.html'>KU 2024 (January)</a>
+</nav>
+<script src="click.js"></script>
+<!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+<script src="highlight.js"></script><!--It is a link for highlight.js-->
+<script src="mathjax_config.js"></script><!--It is a link for mathjax_configuration-->
+
+<h1>KU 2017 (August) ALGEBRA QUALIFYING EXAM</h1>
+
+
+<section>
+    <p>
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts
+        in abstract algebra, and it is not fully completed.
+        Feel free to email me at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions
+        for improvement.
+    </p>
+</section>
+
+<section id='ku_2017_8_2'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>2.</b> Let \( R \) be a unique factorization domain with quotient field \( K \). Write \( R[x] \) and \(
+                K[x] \) respectively, for the polynomial rings over \( R \) and \( K \). Fix \( 0 \ne f(x) \in R[x] \). Let \(
+                I \) denote the principal ideal \( f(x)R[x] \) and \( J \) denote the ideal \( f(x)K[x] \cap R[x] \). Prove
+                that there exists \( 0 \ne a \in R \) such that \( I = aJ \), where \( aJ := \{ aj \mid j \in J \} \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Firstly, we want to show that \(I\subset J\).
+        Suppose that \(a\in I\), we can know that \(a\in f(x)K[x]\) since \(a\in f(x)R[x]\) and \(R[x]\subset K[x]\) for
+        \(K\) is the quotient field of \(R\).
+        Since \(I\) is an ideal of \(R[x]\), we can know that \(a\in R[x]\). Thus, we have \(a\in f(x)K[x]\) and \(a\in
+        R[x]\), which implies that \(a\in J\). Hence, we have \(I\subset J\).
+        Since \(K\) is a field, we can know that \(K[x]\) is a PID. And \(R[x]\) is UFD, for \(R\) is a UFD. Thus, we can
+        know that \(J=(g(x))\) for some \(g(x)\in K[x]\).
+        Since \(J\subset R[x]\), we can know that \(g(x)\in R[x]\) by contradiction. Since \(J\) is also a ideal of
+        \(R[x]\), we can know that \(f(x)\mid g(x)\). Thus, we have \(g(x)=f(x)h(x)\) for some \(h(x)\in R[x]\).
+        Since \(R[x]\) is a UFD, there exists only one \(h(x)\in R[x]\) such that \(g(x)h(x) = f(x)\).
+        Since
+        \[
+        I = \{f(x)r(x)\,|\, r(x)\in R[x]\} = \{g(x)h(x)r(x)\,|\, r(x)\in R[x]\} = \{h(x)(g(x)r(x))\,|\, r(x)\in R[x]\},
+        \]
+        and \(g(x)r(x)\in J\), we have \(I\subset h(x)J\).
+        For the other direction, we know that every \(j(x)\in J\), we have \(j(x) = g(x)r(x)\) for some \(r(x)\in R[x]\).
+        Thus, we have \(h(x)\cdot g(x)r(x) = (g(x)h(x))r(x) = f(x)r(x) \in I\), which implies that \(h(x)J\subset I\).
+        Hence, we can know that \(I = h(x)J\). Since we know that \(f(x)\neq 0\), we can know that \(h(x)\neq 0\) given
+        that \(g(x)h(x) = f(x)\).
+        Thus, we have \(I = h(x)J\neq 0\). Hence, we can know that there exists \(0\neq a\in R\) such that \(I = aJ\).
+        \(\blacksquare\)
+    </p>
+</section>
+
+
+<section id='ku_2017_8_6'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                \(\textbf{Problem 6. }\) Consider the matrix \( A = \begin{bmatrix}
+                0 & 1 & 0 & 1 \\
+                -1 & 1 & 0 & 0 \\
+                -2 & 0 & -1 & -2 \\
+                1 & -1 & 0 & 0 \\
+                \end{bmatrix} \), with entries in \( \mathbb{C} \).
+                Find \( J \), the Jordan canonical form for \( A \) and an invertible matrix \( P \) such that \( J = P^{-1}AP
+                \).
+            </p>
+        </div>
+    </div>
+    <p>
+        \(\textbf{Solution. }\)We firstly find the characteristic polynomial of \(A\).
+        \[
+        \chi_A(x) = x^4 -x^2 = x^2(x+1)(x-1) = (x - 0)^2(x - 1)(x + 1).
+        \]
+        Now we try to determine the minimal polynomial of \(A\), which leaves us two possibilities: \(x^2(x-1)(x+1)\)
+        and \(x(x-1)(x+1)\).
+        We plug in \(A\) to \(x(x-1)(x+1)\) and find that it is not the zero matrix. Thus, we have the minimal
+        polynomial is the same as the characteristic polynomial.
+        Hence, we have the Jordan canonical form of \(A\) is
+        \[
+        J = \begin{bmatrix}
+        0 & 0 & 0 & 0 \\
+        1 & 0 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & -1 \\
+        \end{bmatrix}.
+        \]
+        Now we calculate the eigenvectors of \(A\).
+        Then we have the eigenvectors of \(A\) are \(v_1 = (0, 1, 1, -1)^T\) for eigenvalue \(1\),
+        \(v_2 = (0, 0, 1, 0)^T\) for eigenvalue \(1\), \(v_3 = (1, 1, 0, -1)^T\) for eigenvalue \(0\).
+        We need to find another column vector of \(P\). Suppose that it is \((a, b, c, d)^T\) such that
+        \[
+        A \begin{bmatrix}
+        a \\
+        b \\
+        c \\
+        d \\
+        \end{bmatrix} = v_3 = \begin{bmatrix}
+        1 \\
+        1 \\
+        0 \\
+        -1 \\
+        \end{bmatrix}.
+        \]
+        Then we have \((a, b, c, d)^T = (1, 2, 0, -1)^T\). Hence, we have a matrix such that
+        \[
+        B = \begin{bmatrix}
+        1 & 1 & 0 & 0 \\
+        2 & 1 & 0 & 1 \\
+        0 & 0 & 1 & 1 \\
+        -1 & -1 & 0 & -1 \\
+        \end{bmatrix}.
+        \]
+        Then, we calculate the determinant of \(B\) and find that it is not zero. Hence, we have \(P = B\), where \(A =
+        P^{-1}JP\).
+    </p>
+</section>
+
+</body>
+
+</html>

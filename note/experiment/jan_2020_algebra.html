@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for CSS structure-->
+    <title>KU 2020 (January) ALGEBRA QUALIFYING EXAM</title>
+</head>
+
+<body>
+<div class="top-bar"></div>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <span class="visually-hidden">Menu</span>
+</label>
+<nav class="navbar">
+    <a href="algebra.html#linear_transformation">Linear Transformation</a>
+    <a href="algebra.html#multiplicity">Multiplicity</a>
+    <a href="algebra.html#dual_space">Dual Space</a>
+    <a href="algebra.html#linear_minimal_polynomial">Minimal Polynomial</a>
+    <a href="algebra.html#t_complement">\(T\)-Complement</a>
+    <a href="algebra.html#cyclic_operator">Cyclic Operator</a>
+    <a href="algebra.html#indecomposable_operator">Indecomposable Operator</a>
+    <a href="algebra.html#characteristic_polynomial">Characteristic Polynomial</a>
+    <a href="algebra.html#diagonalizable">Diagonalizable</a>
+    <a href="algebra.html#smith_normal_form">Smith Normal Form</a>
+    <a href="algebra.html#normal_subgroup">Normal Subgroup</a>
+    <a href="algebra.html#isomorphism">Isomorphism</a>
+    <a href="algebra.html#center">Center</a>
+    <a href="algebra.html#centralizer">Centralizer</a>
+    <a href="algebra.html#normalizer">Normalizer</a>
+    <a href="algebra.html#stabilizer">Stabilizer</a>
+    <a href="algebra.html#orbit">Orbit</a>
+    <a href="algebra.html#p_group">\(p\)-group</a>
+    <a href="algebra.html#sylow_p_subgroup">Sylow \(p\)-Subgroup</a>
+    <a href="algebra.html#sylow_theorem">Sylow's Theorem</a>
+    <a href="algebra.html#simple_group">Simple Group</a>
+    <a href="algebra.html#solvable_group">Solvable Group</a>
+    <a href="algebra.html#field">Field</a>
+    <a href="algebra.html#integral_domain">Integral Domain</a>
+    <a href="algebra.html#ascending_chain_condition">Ascending Chain Condition</a>
+    <a href="algebra.html#principal_ideal_domain">Principal Ideal Domain</a>
+    <a href="algebra.html#unique_factorization_domain">Unique Factorization Domain</a>
+    <a href="algebra.html#polynomial_ring">Polynomial Ring</a>
+    <a href="algebra.html#division_algorithm_sagemath">Division Algorithm in SageMath</a>
+    <a href="algebra.html#prime_irreducible">Prime and Irreducible</a>
+    <a href="algebra.html#adjoining_element">Adjoining Element</a>
+    <a href="algebra.html#splitting_field">Splitting Field</a>
+    <a href="algebra.html#minimal_polynomial">Minimal Polynomial</a>
+    <a href="algebra.html#field_extension">Field Extension</a>
+    <a href="algebra.html#separable">Separable</a>
+    <a href="algebra.html#algebraic_closure">Algebraic Closure</a>
+    <a href="algebra.html#galois_group">Galois Group</a>
+    <a href="algebra.html#galois_theory">Galois Theory</a>
+    <a href="jan_2015_algebra.html">KU 2015 (January)</a>
+    <a href="aug_2015_algebra.html">KU 2015 (August)</a>
+    <a href="jan_2016_algebra.html">KU 2016 (January)</a>
+    <a href="aug_2016_algebra.html">KU 2016 (August)</a>
+    <a href="jan_2017_algebra.html">KU 2017 (January)</a>
+    <a href='aug_2017_algebra.html'>KU 2017 (August)</a>
+    <a href='jan_2018_algebra.html'>KU 2018 (January)</a>
+    <a href='aug_2018_algebra.html'>KU 2018 (August)</a>
+    <a href='jan_2019_algebra.html'>KU 2019 (January)</a>
+    <a href='aug_2019_algebra.html'>KU 2019 (August)</a>
+    <a href='jan_2020_algebra.html'>KU 2020 (January)</a>
+    <a href='aug_2020_algebra.html'>KU 2020 (August)</a>
+    <a href='jan_2021_algebra.html'>KU 2021 (January)</a>
+    <a href='aug_2021_algebra.html'>KU 2021 (August)</a>
+    <a href='jan_2022_algebra.html'>KU 2022 (January)</a>
+    <a href='aug_2022_algebra.html'>KU 2022 (August)</a>
+    <a href='jan_2023_algebra.html'>KU 2023 (January)</a>
+    <a href='aug_2023_algebra.html'>KU 2023 (August)</a>
+    <a href='jan_2024_algebra.html'>KU 2024 (January)</a>
+</nav>
+<script src="click.js"></script>
+<!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+<script src="highlight.js"></script><!--It is a link for highlight.js-->
+<script src="mathjax_config.js"></script><!--It is a link for mathjax_configuration-->
+
+<h1>KU 2020 (January) ALGEBRA QUALIFYING EXAM</h1>
+
+<section>
+    <p>
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts
+        in abstract algebra, and it is not fully completed.
+        Feel free to email me at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions
+        for improvement.
+    </p>
+</section>
+
+<section>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>2.</b> Let \( T : \mathbb{R}^3 \rightarrow \mathbb{R}^3 \) be a linear operator.
+            </p>
+            <p>
+                (a) Suppose the matrix of \( T \) with respect to the standard basis of \( \mathbb{R}^3 \) equals
+                \[
+                \begin{pmatrix}
+                \alpha & 0 & 0 \\
+                0 & \beta & -\gamma \\
+                0 & \gamma & \beta
+                \end{pmatrix},
+                \]
+                with \( \alpha, \beta, \gamma \in \mathbb{R} \). Prove that \( T \) is a normal operator.
+            </p>
+            <p>
+                (b) Suppose the matrix of \( T \) with respect to the standard basis is
+                \[
+                A = \begin{pmatrix}
+                1 & 1 & 0 \\
+                0 & 1 & 1 \\
+                1 & 0 & 1
+                \end{pmatrix}.
+                \]
+                Prove that \( T \) is a normal operator and find an orthonormal basis \( B \) for \( \mathbb{R}^3 \) such that
+                the matrix of \( T \) with respect to \( B \) has the form in part (a).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Given that the matrix is the linear operator \(T\) respect to the standard basis. We have
+        \[
+        \begin{align}
+        T(e_1) = \alpha e_1, \\
+        T(e_2) = \beta e_2 + \gamma e_3, \\
+        T(e_3) = -\gamma e_2 + \beta e_3.
+        \end{align}
+        \]
+        Then, we have the transpose \(\begin{pmatrix}
+        \alpha & 0 & 0 \\
+        0 & \beta & \gamma \\
+        0 & -\gamma & \beta
+        \end{pmatrix}\), which is the adjoint of the matrix of \(T\).
+        Thus, we have
+        \[
+        \begin{align}
+        T^*(e_1) &= \alpha e_1, \\
+        T^*(e_2) &= \beta e_2 - \gamma e_3, \\
+        T^*(e_3) &= \gamma e_2 + \beta e_3.
+        \end{align}
+        \]
+        Now, let \(v = a e_1 + b e_2 + c e_3\), then we have
+        \[
+        \begin{align}
+        T^*(T(v)) &= T^*(a\alpha e_1 + b\beta e_2 + b\gamma e_3 - c\gamma e_2 + c\beta e_3)\\
+        &= T^*(a\alpha e_1 + (b\beta - c\gamma) e_2 + (b\gamma + c\beta) e_3)\\
+        &= a\alpha T^*(e_1) + (b\beta - c\gamma) T^*(e_2) + (b\gamma + c\beta) T^*(e_3)\\
+        &= a\alpha \alpha e_1 + (b\beta - c\gamma)(\beta e_2 - \gamma e_3) + (b\gamma + c\beta)(\gamma e_2 + \beta e_3)\\
+        &= a\alpha^2 e_1 + b(\beta^2 + \gamma^2)e_2 + c(\beta^2 + \gamma^2)e_3\\
+        \end{align}
+        \]
+        For the other direction,
+        \[
+        \begin{align}
+        T(T^*(v)) &= T(a\alpha e_1 + b\beta e_2 - b\gamma e_3 + c\gamma e_2 + c\beta e_3)\\
+        &= T(a\alpha e_1 + (b\beta + c\gamma) e_2 + (-b\gamma + c\beta) e_3)\\
+        &= a\alpha T(e_1) + (b\beta + c\gamma) T(e_2) + (-b\gamma + c\beta) T(e_3)\\
+        &= a\alpha \alpha e_1 + (b\beta + c\gamma)(\beta e_2 + \gamma e_3) + (-b\gamma + c\beta)(-\gamma e_2 + \beta
+        e_3)\\
+        &= a\alpha^2 e_1 + b(\beta^2 + \gamma^2)e_2 + c(\beta^2 + \gamma^2)e_3\\
+        \end{align}
+        \]
+        Hence, we can see that \(T^*(T(v)) = T(T^*(v))\) for any \(v\in \mathbb{R}^3\). Therefore, we have \(T\) is a
+        normal operator. \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (b).</b> Similar to part \((a)\), we have
+        \[
+        \begin{align}
+        T(e_1) &= e_1 + e_3, \\
+        T(e_2) &= e_1 + e_2, \\
+        T(e_3) &= e_2 + e_3.
+        \end{align}
+        \]
+        Then we have the adjoint of the matrix of \(T\) is \(\begin{pmatrix}
+        1 & 0 & 1 \\
+        1 & 1 & 0 \\
+        0 & 1 & 1
+        \end{pmatrix}\).
+        Then we have
+        \[
+        \begin{align}
+        T^*(e_1) &= e_1 + e_2, \\
+        T^*(e_2) &= e_2 + e_3, \\
+        T^*(e_3) &= e_1 + e_3.
+        \end{align}
+        \]
+        Now, set \(v = a e_1 + b e_2 + c e_3\), then we have
+        \[
+        \begin{align}
+        T^*(T(v)) &= T^*(a e_1 + a e_3 + b e_1 + b e_2 + c e_2 + c e_3)\\
+        &= T^*((a + b)e_1 + (b + c)e_2 + (a + c)e_3)\\
+        &= (a + b)T^*(e_1) + (b + c)T^*(e_2) + (a + c)T^*(e_3)\\
+        &= (a + b)(e_1 + e_2) + (b + c)(e_2 + e_3) + (a + c)(e_1 + e_3)\\
+        &= (2a + b + c)e_1 + (a + 2b + c)e_2 + (a + b + 2c)e_3.
+        \end{align}
+        \]
+        For the other direction,
+        \[
+        \begin{align}
+        T(T^*(v)) &= T(a e_1 + a e_2 + b e_2 + b e_3 + c e_1 + c e_3)\\
+        &= T((a + c)e_1 + (a + b)e_2 + (b + c)e_3)\\
+        &= (a + c)T(e_1) + (a + b)T(e_2) + (b + c)T(e_3)\\
+        &= (a + c)(e_1 + e_3) + (a + b)(e_1 + e_2) + (b + c)(e_2 + e_3)\\
+        &= (2a + b + c)e_1 + (a + 2b + c)e_2 + (a + b + 2c)e_3.
+        \end{align}
+        \]
+        Hence, we can see that \(T^*(T(v)) = T(T^*(v))\) for any \(v\in \mathbb{R}^3\). Therefore, we have \(T\) is a
+        normal operator.
+        When \(v = ae_1 + be_2 + ce_3\), we have
+        \[
+        T(v) = (a + b)e_1 + (b + c)e_2 + (a + c)e_3.
+        \]
+        Thus, we have \(T(a, b, c) = (a + b, b + c, a + c)\).
+        Since \(T(e_1) + T(e_2) - T(e_3) = e_1 + e_3 + e_1 + e_2 - e_2 - e_3 = 2e_1\), we have \(T(e_1 + e_2 - e_3) =
+        2e_1\).
+        Moreover, we have \(T(e_1) - T(e_2) = -(e_1 + e_2) + e_1 + e_3 = e_3 - e_2\) and \(T(e_3) = e_2 + e_3\).
+        Let \(\mathcal{B} = \{e_1 + e_2 - e_3, e_3, e_1 - e_2\} = \{[1, 1, -1]^T, [0, 0, 1]^T, [-1, 1, 0]^T\}\).
+        We have the matrix of \(T\) with respect to \(\mathbb{B}\) is
+        \[
+        \begin{pmatrix}
+        2 & 0 & 0 \\
+        0 & 1 & -1 \\
+        0 & 1 & 1
+        \end{pmatrix}.
+        \]
+        Now, we only need to show that \(\mathcal{B}\) is a basis.
+        \[
+        \begin{align}
+        a\cdot \begin{pmatrix} 1 \\ 1 \\ -1 \end{pmatrix} + b\cdot \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} + c\cdot
+        \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} &= \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\\
+        \begin{pmatrix} a + b \\ a - b \\ -a + c \end{pmatrix} &= \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\\
+        \end{align}
+        \]
+        Hence, we have \(a = b = c = 0\), which implies that they are independent. Thus, we have \(\mathcal{B}\) is a
+        basis.
+    </p>
+</section>
+
+<section id='ku_2020_1_4'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>4.</b> Given a field \( K \), consider the group \( GL_n(K) \) of invertible \( n \times n \) matrices with
+                entries in \( K \).
+            </p>
+            <p>
+                (a) Show that the center of \( GL_n(K) \) is \( \{ \alpha I_n \mid \alpha \in K^\times \} \), where \( I_n \)
+                is the \( n \times n \) identity matrix.
+                <i>Hint:</i> Consider the matrix \( I_n + A_{ij} \), where \( A_{ij} \) is the matrix whose \((i,j)\)-th entry
+                is 1, and all other entries are 0.
+            </p>
+            <p>
+                (b) Show that \( |SL_2(\mathbb{F}_3)| = 24 \), where \( \mathbb{F}_3 \) is the field with three elements, and
+                \( SL_2(\mathbb{F}_3) \) is the subgroup of \( GL_2(\mathbb{F}_3) \) of \( 2 \times 2 \) matrices with
+                determinant 1.
+            </p>
+            <p>
+                (c) Use (a) to prove that \( SL_2(\mathbb{F}_3) \) is not isomorphic to the symmetric group \( S_4 \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Let us denote \(S\) as \( \{ \alpha I_n \mid \alpha \in K^\times \} \). Suppose that \(s\in S\),
+        then we can have \(s = \alpha I_n\), for some \(\alpha\in K\setminus\{0\}\).
+        Let \(g\in GL_n(K)\), then we have
+        \[
+        g\cdot s\cdot g^{-1} = g\cdot \alpha I_n\cdot g^{-1} = \alpha g\cdot I_n\cdot g^{-1} = \alpha I_n.
+        \]
+        Hence, we showed that \(s\in Z(GL_n(K))\). Now, suppose that \(z\in Z(GL_n(K))\), then we have
+        \[
+        g\cdot z\cdot g^{-1} = z,
+        \]
+        for any \(g\in GL_n(K)\). Then, we have
+    </p>
+    <p>
+        <b>Proof (b).</b> For any \(g\in SL_2(\mathbb{F}_3)\), we can know that
+        \[
+        g = \begin{pmatrix} a & b \\ c & d \end{pmatrix},
+        \]
+        where \(ad - bc = 1\).
+        Hence, we can count the number of combinations such that \(x - y = 1\) where \(x, y\in \mathbb{F}_3\).
+        We have the following combinations:
+        \[
+        \begin{align}
+        0 - 2 &= 1,\\
+        1 - 0 &= 1,\\
+        2 - 1 &= 1
+        \end{align}
+        \]
+        Then, we want to count the number of combinations of \(xy = 0, 1, 2\) where \(x, y\in \mathbb{F}_3\). When \(xy =
+        0\), we have \(5\) combinations, which are
+        \[
+        0\cdot 0, 0\cdot 1, 1\cdot 0, 2\cdot 0, 0\cdot 2.
+        \]
+        When \(xy = 1\), we have \(2\) combinations, which are
+        \[
+        1\cdot 1, 2\cdot 2.
+        \]
+        When \(xy = 2\), we have \(2\) combinations, which are
+        \[
+        1\cdot 2, 2\cdot 1.
+        \]
+        Hence, we can know that there are \(5\cdot 2 = 10\) combinations such that we will have \(0 - 2 = 1\).
+        And there are \(2\cdot 5 = 10\) combinations such that we will have \(1 - 0 = 1\).
+        And there are \(2\cdot 2 = 4\) combinations such that we will have \(2 - 1 = 1\).
+        Therefore, there are \(10 + 10 + 4 = 24\) such elements in \(SL_2(\mathbb{F}_3)\). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (c).</b> Firstly, according to part (a), we have \(Z(GL_2(\mathbb{F}_3)) = \{ \alpha I_2 \mid \alpha\in
+        \mathbb{F}_3\setminus\{0\} \}\).
+        And we can know that \(Z(GL_2(\mathbb{F}_3))\subset Z(SL_2(\mathbb{F}_3)\).
+        Hence, we have \(\{I_2, 2I_2\}\subset Z(SL_2(\mathbb{F}_3))\).
+        In other words, \(|Z(SL_2(\mathbb{F}_3))|\geq 2\). Now, we want to look at the center of \(S_4\). We start from
+        \(2\)-cycles of \(S_4\),
+        Let \((a, b)\in S_4\) where \(a, b\in \{1, 2, 3, 4\}\). Hence, we can know that there exists \(c\in \{1, 2, 3,
+        4\}\) such that \(c\neq a\) and \(c\neq b\).
+        Then, there exists \(\sigma\in S_4\) such that \(\sigma (a) = c\). Hence, we have
+        \[
+        \sigma\cdot (a, b)\cdot \sigma^{-1} = (\sigma(a), \sigma(b)) = (c, \sigma(b))\neq (a, b).
+        \]
+        Hence, we can know that there is no \(2\)-cycle in the center of \(S_4\).
+        Now, we want to look at the \(3\)-cycles of \(S_4\). Suppose that \((a, b, c)\in S_4\), where \(a, b, c\in \{1, 2,
+        3, 4\}\).
+        Then, we can know that there exists \(d\in \{1, 2, 3, 4\}\) such that \(d\neq a\), \(d\neq b\), and \(d\neq c\).
+        Then, there exists \(\sigma\in S_4\) such that \(\sigma(a) = d\). Hence, we have
+        \[
+        \sigma\cdot (a, b, c)\cdot \sigma^{-1} = (\sigma(a), \sigma(b), \sigma(c)) = (d, \sigma(b), \sigma(c))\neq (a, b,
+        c).
+        \]
+        Hence, there is no \(3\)-cycle in the center of \(S_4\).
+        Now, we want to look at the \(4\)-cycles of \(S_4\). Suppose that \((a, b, c, d)\in S_4\), where \(a, b, c, d\in
+        \{1, 2, 3, 4\}\).
+        Then, we can know that there exists \(\sigma\in S_4\) where \(\sigma = (b, c)\). Hence, we can know that
+        \[
+        \sigma\cdot (a, b, c, d)\cdot \sigma^{-1} = (a, c, b, d)\neq (a, b, c, d).
+        \]
+        Hence, there is no \(4\)-cycle in the center of \(S_4\).
+        The last category is the disjoint product of two \(2\)-cycles. Suppose that \((a, b)(c, d)\in S_4\), where \(a, b,
+        c, d\in \{1, 2, 3, 4\}\).
+        Then, we can know that there exists \(\sigma\in S_4\) such that \(\sigma = (b, c)\).
+        We hae \(\sigma\cdot (a, b)(c, d)\sigma^{-1} = (a, c)\neq (b, d)\). Hence, there is no disjoint product of two
+        \(2\)-cycles in the center of \(S_4\).
+        We can know that the center of \(S_4\) is trivial. Hence, we have \(Z(S_4) = \{I_4\}\), which implies that
+        \(|Z(S_4)|\lt |Z(SL_2(\mathbb{F}_3))|\).
+        Therefore, we can know that \(SL_2(\mathbb{F}_3)\not\cong S_4\). \(\blacksquare\)
+    </p>
+</section>
+
+<section id='ku_2020_1_5'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>5.</b> Given a commutative ring \( R \) with 1, the Jacobson radical, \( J(R) \), is the intersection of
+                all maximal ideals of \( R \).
+            </p>
+            <p>
+                (a) Find the Jacobson radical of \( \mathbb{Z}/12\mathbb{Z} \), and of \( \mathbb{Q}[x,y]/\langle x^2, y-5
+                \rangle \), with full justification.
+            </p>
+            <p>
+                (b) Fix an element \( r \) of a commutative ring \( R \) with 1. Prove that \( r \in J(R) \) if and only if
+                for every \( s \in R \), the element \( rs - 1 \) is a unit of \( R \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> Firstly, we want to find all the maximal ideals of \(\mathbb{Z}/12\mathbb{Z}\).
+        According to the \(\textbf{Correspondence Theorem of Rings}\), we can know the maximal ideals \(M\) of
+        \(\mathbb{Z}\), which contains \(12\mathbb{Z}\) can be mapped to \(M/\langle 12 \rangle\) in
+        \(\mathbb{Z}/12\mathbb{Z}\), which is a maximal ideal of \(\mathbb{Z}/12\mathbb{Z}\).
+        Since \(\mathbb{Z}\) is a PID, any ideal \(I\) of \(\mathbb{Z}\) can be written as \(a\mathbb{Z}\) where \(a\in
+        \mathbb{Z}\).
+        If \(12\mathbb{Z}\subset a\mathbb{Z}\), we can know that \(a\mid 12\). Thus, we can know that \(\mathbb{Z},
+        2\mathbb{Z}, 3\mathbb{Z}, 4\mathbb{Z}, 6\mathbb{Z}, 12\mathbb{Z}\) are ideals containing \(12\mathbb{Z}\).
+        And \(a\mathbb{Z}\) is a maximal ideal if and only if \(a\mathbb{Z}\) is a prime ideal since \(\mathbb{Z}\) is a
+        PID.
+        And \(a\mathbb{Z}\) is a prime ideal if and only if \(a\) is a prime in \(\mathbb{Z}\). Hence, we can know that
+        \(2\mathbb{Z}, 3\mathbb{Z}\) are the only maximal ideals containing \(12\mathbb{Z}\).
+        Then, we have \(2\mathbb{Z}/12\mathbb{Z}\) and \(3\mathbb{Z}/12\mathbb{Z}\) are the maximal ideals of
+        \(\mathbb{Z}/12\mathbb{Z}\).
+        Since \(2\mathbb{Z}/12\mathbb{Z} = \{0, 2, 4, 6, 8, 10\}\) and \(3\mathbb{Z}/12\mathbb{Z} = \{0, 3, 6, 9\}\), we
+        have \(J(\mathbb{Z}/12\mathbb{Z}) = 2\mathbb{Z}/12\mathbb{Z}\cap 3\mathbb{Z}/12\mathbb{Z} =
+        6\mathbb{Z}/12\mathbb{Z} = \{0, 6\}\).
+    </p>
+    <p>
+        Now, we want to identity all the maximal ideals of \(\mathbb{Q}[x, y]/\langle x^2, y - 5 \rangle\).
+        Firstly, we know that if \(a(x, y)\in \langle x^2, y - 5\rangle\), then
+        \[
+        a(x, y) = f(x, y)\cdot x^2 + g(x, y)\cdot (y - 5) = x\cdot (x\cdot f(x, y)) + g(x, y)\cdot (y - 5) \in \langle x,
+        y - 5\rangle.
+        \]
+        In that case, we can know that \(\langle x^2, y - 5\rangle \subset \langle x, y - 5\rangle\).
+        Now, we want to show that \(\langle x, y - 5\rangle\) is a maximal ideal by showing that \(\mathbb{Q}[x,
+        y]/\langle x, y - 5\rangle\) is a field.
+        Out first step is to show that \(\mathbb{Q}[x, y]/(x, y - 5) \cong \mathbb{Q}[y](y - 5)\).
+        Define a map \(\psi: \mathbb{Q}[x, y]/\langle x, y-5\rangle\to \mathbb{Q}[y](y - 5)\) such that \(\psi(f(x, y) +
+        (x, y - 5)) = f(0, y) + (y - 5)\).
+        Let \(g(x, y), f(x, y)\in \mathbb{Q}[x, y]\), we can have
+        \[
+        \begin{align}
+        \psi(g(x, y) + f(x, y) + \langle x, y-5\rangle) &= g(0, y) + f(0, y) + (y - 5),\\
+        \psi(g(x, y)\cdot f(x, y) + (x, y - 5)) &= g(0, y)\cdot f(0, y) + (y - 5).
+        \end{align}
+        \]
+        Hence, we can know that \(\psi\) is a ring homomorphism.
+        Since \(\ker(\psi) = \{f(x, y) + \langle x, y-5\rangle \mid f(0, y) \in \langle y-5\rangle\}\), we can know that
+        \(f(0, y) = (y-5) g(y)\) for some \(g(y)\in \mathbb{Q}[y]\).
+        It means that \(f(x, y) = x\cdot h(x, y) + (y - 5)\cdot g(y)\) for some \(h(x, y)\in \mathbb{Q}[x, y]\), which
+        implies that \(f(x, y)\in \langle x, y - 5\rangle\).
+        Hence, we have \(\ker(\psi) = \langle x, y - 5\rangle\), which is trivial and we are able to conclude that
+        \(\psi\) is an injective ring homomorphism.
+        Now, for any \(f(y) + \langle y-5\rangle\in \mathbb{Q}[y]\), we define \(f(x, y) = f(y) + x\). Then, we can have
+        \[
+        \psi(f(x, y) + \langle x, y-5\rangle = f(0, y) + (y - 5) = f(y) + (y - 5).
+        \]
+        Hence, we have \(\psi\) is also a surjective ring homomorphism. And we can know that \(\psi\) is an isomorphism.
+        Therefore, we have
+        \[
+        \mathbb{Q}[x, y]/\langle x, y-5\rangle\cong \mathbb{Q}[y]/\langle y - 5\rangle .
+        \]
+        Then, we will use the \(\textbf{First Isomorphism Theorem}\) to show that \(\mathbb{Q}[y](y - 5)\) is a field.
+        We define a map \(\varphi: \mathbb{Q}[y]\to \mathbb{Q}\) such that \(\varphi(f(x)) = f(5)\).
+        Let \(f(y), g(y)\in \mathbb{Q}[y]\). We can get
+        \[
+        \begin{align}
+        \varphi(f(y) + g(y)) &= f(5) + g(5),\\
+        \varphi(f(y)\cdot g(y)) &= f(5)\cdot g(5).
+        \end{align}
+        \]
+        Hence, we can know that \(\varphi\) is a ring homomorphism.
+        For any \(q\in \mathbb{Q}\), we also have \(q\in \mathbb{Q}[y]\) and \(\varphi(q) = q\) for any \(q\in
+        \mathbb{Q}\).
+        Thus, we can see that \(\varphi\) is a surjective ring homomorphism. Now, we want to show that \(\ker(\varphi) =
+        \langle y - 5\rangle\).
+        Suppose that \(h(y)\in \langle y - 5\rangle\), we can know that \(h(y) = (y - 5)\cdot k(y)\) where \(k(y)\in
+        \mathbb{Q}[y]\).
+        Then, we have \(\varphi(h(y)) = h(5) = 0\), which implies that \(h(y)\in \ker(\varphi)\) and \(\langle y -
+        5\rangle \subset \ker(\varphi)\).
+        For the other direction, suppose that \(f(y)\in \ker(\varphi)\), then we have \(f(5) = 0\), which implies that
+        \(f(y) = (y - 5)\cdot g(y)\) where \(g(y)\in \mathbb{Q}[y]\).
+        Hence, we can know that \(f(y)\in \langle y - 5\rangle\) and \(\ker(\varphi) \subset \langle y - 5\rangle\). Then,
+        we have \(\ker(\varphi) = \langle y - 5\rangle\).
+        According to the \(\textbf{First Isomorphism Theorem}\), we can know that
+        \[
+        \mathbb{Q}[y]/\ker(\varphi) = \mathbb{Q}[y]/\langle y - 5\rangle \cong \mathbb{Q}.
+        \]
+        Hence, we have shown that \(\mathbb{Q}[x, y]/\langle x, y - 5\rangle \cong \mathbb{Q}/\langle y - 5\rangle \cong
+        \mathbb{Q}\), which is a field.
+        And we can conclude that \(\langle x, y - 5\rangle \) is a maximal ideal. Now, we want to show that if \((x^2,
+        y-5)\subset M\) where \(M\) is a maximal ideal,
+        we can have \(x\in M\) by contradiction.
+        Suppose that \(x\notin M\) and \(\langle x^2, y-5\rangle \subset M\). Hence, we can know that \(M\neq M + \langle
+        x\rangle\) since \(0\in M\) and \(x\in \langle x\rangle\) and \( 0 + x = x\in M + \langle x\rangle \).
+        Given that \(M\) is a maximal ideal, we can conclude that \(M + \langle x \rangle = R = \mathbb{Q}[x, y]\).
+        Since \(1\in \mathbb{Q}[x, y]\), there exists \(f(x, y)\in \mathbb{Q}[x, y]\) and \(m(x, y)\in M\) such that
+        \[
+        \begin{align}
+        m(x, y) + x\cdot f(x, y) &= 1, \\
+        m(x, y) &= 1 - x\cdot f(x, y), \\
+        x\cdot m(x, y) &= x - x^2\cdot f(x, y).
+        \end{align}
+        \]
+        Since \(m(x, y)\in M\), we have \(x\cdot m(x, y)\in M\) and \(x - x^2 \cdot f(x, y)\in M\). Again, we know that
+        \(x^2\in M\) by assumption, so we have \(x^2 \cdot f(x, y)\in M\).
+        Hence, \(x - x^2\cdot f(x, y) + x^2\cdot f(x, y) = x\in M\), which is a contradiction. Therefore, we can know that
+        \(x\in M\).
+        In that case, we can know that for any maximal ideal containing \((x^2, y-5)\), it must contain \(x\) and \(y -
+        5\). Therefore, we can know that \(\langle x, y-5\rangle \subset M\) for all maximal ideals \(M\) containing
+        \((x^2, y-5)\).
+        And \(\langle x, y-5\rangle\) is a maximal ideal, which implies that there is only one maximal ideal containing
+        \((x^2, y-5)\), which is \(\langle x, y-5\rangle\).
+        According to the \(\textbf{Correspondence Theorem of Rings}\), we can know that \(J(\mathbb{Q}[x, y]/\langle x^2,
+        y-5\rangle) = \langle x, y-5\rangle/\langle x^2, y-5\rangle \).
+    </p>
+    <p>
+        <b>Proof (b).</b> We firstly showed that if \(r\in J(R)\), then we can know that \(rs - 1\) for any \(s\in R\).
+        We know that if \(m\in M\) where \(M\) is a maximal ideal then we want to show that \(m - 1\notin M\) by
+        contradiction.
+        Suppose that \(m - 1\in M\). We have \(m - 1 + m = - 1\in M\), which implies that \(1\in M\). Since \(M\) is a
+        proper ideal, we know it does not contain a unit.
+        Hence, it is a contradiction. Thus, we can know that \(m - 1\) is not contained in \(M\). Suppose that \(a\in
+        J(R)\), then we can know that \(a\) is in every maximal ideal of \(R\).
+        Hence, we can know that \(a - 1\) is not in any maximal ideal of \(R\).
+        Since \(a - 1\) is not in any maximal ideal, we can know that \(\langle a - 1\rangle \not\subset M\) for any
+        maximal ideal \(M\).
+        Hence, we can know that \(\langle a - 1\rangle\) is not a proper ideal of \(R\), which implies that \(\langle a -
+        1\rangle = R\).
+        Hence, we can know that \(a - 1\) is a unit. Since \(r\in J(R)\) adn \(J(R)\) is an ideal, we can know that that
+        \(rs \in J(R)\) for any \(s \in R\).
+        Since we already showed that \(a - 1\) is a unit if \(a \in J(R)\), we can have \(rs - 1\) is a unit.
+    </p>
+    <p>
+        For the other direction, suppose that \(rs - 1\) is a unit for any \(s\in R\). Then, we can know that \(r\cdot 1 -
+        1 = r- 1\) is a unit.
+        Then, we can know that \(r\) is not a unit by contradiction. Suppose that \(r\) is a unit then there exists \(a\in
+        R\) such that \(ra = 1\).
+        It means that \(ra - 1 = 0\) for some \(a\in R\), which implies that \(ra - 1\) is not a unit. Thus, it is a
+        contradiction. Thus, \(r\) is not a unit.
+        Then, we can know that \(\langle r\rangle\) is a proper ideal of \(R\).
+        Now, we want to show that \(\langle r \rangle \subset M\) for any maximal ideal \(M\) by contradiction.
+        Suppose that there exists a maximal ideal \(M\) such that \(\langle r \rangle \not\subset M\).
+        Then, we can know that \(\langle r \rangle + M \) is an ideal strictly containing \(M\).
+        Since \(M\) is a maximal ideal, we can know that \(\langle r \rangle + M = R\).
+        Thus, we can know that there exists \(m\in M\) and \(ra\in \langle r \rangle\) such that \(mb + rab = 1\) for some
+        \(b\in R\).
+        It shows that \(rab - 1 = -mb\). Since \(rab - 1\) is a unit by assumption, we can know that \(-mb\) is a unit.
+        However, \(-mb\in M\) and \(M\) is a proper ideal, which implies that \(-mb\) is not a unit. Thus, it is a
+        contradiction.
+        Therefore, \(\langle r \rangle \subset M\) for any maximal ideal \(M\). Hence, we can know that \(r\in J(R)\).
+        \(\blacksquare\)
+    </p>
+</section>
+
+</body>
+
+</html>
+
+
+

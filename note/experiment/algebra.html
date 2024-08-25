@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+  <!--link for the font-->
+  <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for CSS structure-->
+  <title>Algebra</title>
+</head>
+
+<body>
+  <div class="top-bar"></div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <span class="visually-hidden">Menu</span>
+  </label>
+  <nav class="navbar">
+    <a href="#linear_transformation">Linear Transformation</a>
+    <a href="#multiplicity">Multiplicity</a>
+    <a href="#dual_space">Dual Space</a>
+    <a href="#linear_minimal_polynomial">Minimal Polynomial</a>
+    <a href="#t_complement">\(T\)-Complement</a>
+    <a href="#cyclic_operator">Cyclic Operator</a>
+    <a href="#indecomposable_operator">Indecomposable Operator</a>
+    <a href="#characteristic_polynomial">Characteristic Polynomial</a>
+    <a href="#diagonalizable">Diagonalizable</a>
+    <a href="#smith_normal_form">Smith Normal Form</a>
+    <a href="#normal_subgroup">Normal Subgroup</a>
+    <a href="#isomorphism">Isomorphism</a>
+    <a href="#center">Center</a>
+    <a href="#centralizer">Centralizer</a>
+    <a href="#normalizer">Normalizer</a>
+    <a href="#stabilizer">Stabilizer</a>
+    <a href="#orbit">Orbit</a>
+    <a href="#p_group">\(p\)-group</a>
+    <a href="#sylow_p_subgroup">Sylow \(p\)-Subgroup</a>
+    <a href="#sylow_theorem">Sylow's Theorem</a>
+    <a href="#simple_group">Simple Group</a>
+    <a href="#solvable_group">Solvable Group</a>
+    <a href="#field">Field</a>
+    <a href="#integral_domain">Integral Domain</a>
+    <a href="#ascending_chain_condition">Ascending Chain Condition</a>
+    <a href="#principal_ideal_domain">Principal Ideal Domain</a>
+    <a href="#unique_factorization_domain">Unique Factorization Domain</a>
+    <a href="#polynomial_ring">Polynomial Ring</a>
+    <a href="#division_algorithm_sagemath">Division Algorithm in SageMath</a>
+    <a href="#prime_irreducible">Prime and Irreducible</a>
+    <a href="#adjoining_element">Adjoining Element</a>
+    <a href="#splitting_field">Splitting Field</a>
+    <a href="#minimal_polynomial">Minimal Polynomial</a>
+    <a href="#field_extension">Field Extension</a>
+    <a href="#separable">Separable</a>
+    <a href="#algebraic_closure">Algebraic Closure</a>
+    <a href="#galois_group">Galois Group</a>
+    <a href="#galois_theory">Galois Theory</a>
+    <a href="jan_2015_algebra.html">KU 2015 (January)</a>
+    <a href="aug_2015_algebra.html">KU 2015 (August)</a>
+    <a href="jan_2016_algebra.html">KU 2016 (January)</a>
+    <a href="aug_2016_algebra.html">KU 2016 (August)</a>
+    <a href="jan_2017_algebra.html">KU 2017 (January)</a>
+    <a href='aug_2017_algebra.html'>KU 2017 (August)</a>
+    <a href='jan_2018_algebra.html'>KU 2018 (January)</a>
+    <a href='aug_2018_algebra.html'>KU 2018 (August)</a>
+    <a href='jan_2019_algebra.html'>KU 2019 (January)</a>
+    <a href='aug_2019_algebra.html'>KU 2019 (August)</a>
+    <a href='jan_2020_algebra.html'>KU 2020 (January)</a>
+    <a href='aug_2020_algebra.html'>KU 2020 (August)</a>
+    <a href='jan_2021_algebra.html'>KU 2021 (January)</a>
+    <a href='aug_2021_algebra.html'>KU 2021 (August)</a>
+    <a href='jan_2022_algebra.html'>KU 2022 (January)</a>
+    <a href='aug_2022_algebra.html'>KU 2022 (August)</a>
+    <a href='jan_2023_algebra.html'>KU 2023 (January)</a>
+    <a href='aug_2023_algebra.html'>KU 2023 (August)</a>
+    <a href='jan_2024_algebra.html'>KU 2024 (January)</a>
+    <a href="#k_state_2022_1">K-State 2022(1)</a>
+    <a href="#References">References</a>
+  </nav>
+  <script src="click.js"></script>
+  <!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+  <script src="highlight.js"></script><!--It is a link for highlight.js-->
+  <script src="mathjax_config.js"></script><!--It is a link for mathjax_configuration-->
+
+
+  <section>
+    <p>
+      My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts
+      in abstract algebra, and it is not fully completed.
+      Feel free to email me at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions
+      for improvement.
+    </p>
+  </section>
+
+  <h1>Algebra</h1>
+
+  <section id='linear_transformation'>
+    <h2>Linear Transformation</h2>
+    <p>
+      <b>Example.</b> Let \( V = \mathbb{R}^3 \) with the standard basis \( B = \{(1, 0, 0), (0, 1, 0), (0, 0, 1)\} \)
+      and let \( W = \mathbb{R}^2 \) with the standard basis \( \mathcal{E} = \{(1, 0), (0, 1)\} \). Let \( \varphi \)
+      be the linear transformation \( \varphi(x, y, z) = (x + 2y, x + y + z) \). Since \( \varphi(1, 0, 0) = (1, 1) \),
+      \( \varphi(0, 1, 0) = (2, 1) \), \( \varphi(0, 0, 1) = (0, 1) \), the matrix \( A = M_{\mathcal{E}, B}(\varphi) \)
+      is the matrix
+      \[
+      \begin{pmatrix}
+      1 & 2 & 0 \\
+      1 & 1 & 1
+      \end{pmatrix}.
+      \]
+    </p>
+  </section>
+
+  <br>
+
+  <section id='dual_space'>
+    <h2>Dual Space</h2>
+    <p>
+      <b>Definition 5.16</b> Let \( V \) be a finite-dimensional vector space over a field \( \mathbb{F} \). The dual
+      space of \( V \), denoted by \( V' \), is \( \mathcal{L}(V, \mathbb{F}) \), that is, the vector space of all
+      linear transformations from \( V \) to \( \mathbb{F} \), the latter regarded as a vector space of dimension one.
+      Elements of \( V' \) are called <b>linear functions</b>.
+    </p>
+  </section>
+
+  <section id='multiplicity'>
+    <h2>Geometric Multiplicity</h2>
+    <p>
+      <b>Definition</b> Let \( A \) be a \( K \times K \) matrix. Let \( \lambda_k \) be one of the eigenvalues of \( A
+      \) and denote its associated eigenspace by \( E_k \). The dimension of \( E_k \) is called the geometric
+      multiplicity of the eigenvalue \( \lambda_k \).
+    </p>
+    <p>
+      <a href="https://www.statlect.com/matrix-algebra/algebraic-and-geometric-multiplicity-of-eigenvalues">Source</a>
+    </p>
+    <p>
+      <b>Remark.</b> For each eigenvalue \(\lambda\), compute \(\ker(A − \lambda \cdot I)\). This is the
+      \(\lambda\)-eigenspace, the vectors in the \(\lambda\)-eigenspace are the \(\lambda\)-eigenvectors.
+    </p>
+    <p>
+      <a href='https://dept.math.lsa.umich.edu/~speyer/LinearAlgebraVideos/Lecture9c.pdf'>Source</a>
+    </p>
+    <p>
+      <b>Remark.</b> Hence, we can know the geometric multiplicity of an eigenvalue is \(\dim(\ker(A - \lambda \cdot I))
+      \).
+    </p>
+    <h2>Algebraic multiplicity</h2>
+    <p>
+      The algebraic multiplicity of the eigenvalue is its multiplicity as a root of the characteristic polynomial.
+    </p>
+    <p>
+      <b>Proposition</b> Let \( A \) be a \( K \times K \) matrix. Let \( \lambda_k \) be one of the eigenvalues of \( A
+      \). Then, the geometric multiplicity of \( \lambda_k \) is less than or equal to its algebraic multiplicity.
+    </p>
+    <p>
+      <a href="https://www.statlect.com/matrix-algebra/algebraic-and-geometric-multiplicity-of-eigenvalues">Source</a>
+    </p>
+
+  </section>
+
+  <br>
+
+  <section id='linear_minimal_polynomial'>
+    <h2>Minimal Polynomial</h2>
+    <p>
+      <b>Definition.</b> Suppose \( V \) is finite-dimensional and \( T \in \mathcal{L}(V) \). Then the <b>minimal
+        polynomial</b> of \( T \) is the unique monic polynomial \( p \in \mathcal{P}(F) \) of smallest degree such that
+      \( p(T) = 0 \).
+    </p>
+    <p>
+      <i><b>"Linear Algebra Done Right (Forth Edition)", Page 145</b></i>
+    </p>
+    <p>
+      <b>Definition (Order Ideal).</b>
+      Let \( T \in \mathcal{L}(V, V) \) and \( v \in V \). The <b>order ideal</b> of \( v \) with respect to \( T \),
+      denoted by \(\text{Ann}(T, v)\), we mean the set of all polynomials \( f(x) \) such that \( v \in \text{Ker}(f(T))
+      \), that is, \( f(T)(v) = 0 \):
+      \[
+      \text{Ann}(T, v) = \{ f(x) \in \mathbb{F}[x] \mid f(T)(v) = 0 \}.
+      \]
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 106</b></i>
+    </p>
+    <p>
+      Note that \(\text{Ann}(T, v)\) contains a monic polynomial \(\mu(x)\) such that every polynomial in
+      \(\text{Ann}(T, v)\) is a multiple of \(\mu(x)\). Recall such a polynomial is called a <b>generator</b> of
+      \(\text{Ann}(T, v)\).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 107</b></i>
+    </p>
+    <p>
+      <b>Definition(Minimal polynomial of \( T \) with respect to \( v \)).</b>
+      Let \( V \) be a finite-dimensional vector space, \( T \) an operator on \( V \), and \( v \) a vector in \( V \).
+      The unique monic generator of \(\text{Ann}(T, v)\) is called the <b>minimal polynomial</b> of \( T \) with respect
+      to \( v \). It is also sometimes referred to as the order of \( v \) with respect to \( T \). It is denoted here
+      by \( \mu_{T, v}(x) \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 107</b></i>
+    </p>
+    <p>
+      <b>Remark.</b> Suppose \( g(x) \in \mathbb{F}[x] \) and \( g(T)(v) = 0 \). Then \( \mu_{T,v}(x) \) divides \( g(x)
+      \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 107</b></i>
+    </p>
+    <p>
+      <b>Definition (\(\langle T, v\rangle\)).</b> Let \( V \) be a finite-dimensional vector space, \( T \) an operator
+      on \( V \), and \( v \) a vector from \( V \). Then the \( T \)-cyclic subspace generated by \( v \) is \(\{
+      f(T)(v) \mid f(x) \in \mathbb{F}[x] \} \). We will denote this by \( \langle T, v \rangle \). By the <b>order of
+        the \( T \)-cyclic subspace</b> \( \langle T, v \rangle \) generated by \( v \), we will mean the polynomial \(
+      \mu_{T,v}(x) \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 109</b></i>
+    </p>
+    <p>
+      <b>Definition.</b> Let \( V \) be a finite-dimensional vector space, \( T \) an operator on \( V \). Then the
+      <b>annihilator ideal</b> of \( T \) on \( V \), denoted by \(\text{Ann}(T, V)\) or just \(\text{Ann}(T)\),
+      consists of all polynomials \( f(x) \) such that \( f(T) \) is the zero operator:
+      \[ \text{Ann}(T) = \{ f(x) \in \mathbb{F}[x] \mid f(T)(v) = 0, \forall v \in V \} \]
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 111</b></i>
+    </p>
+    <p>
+      <b>Definition (Minimal Polynomial).</b>
+      Let \( V \) be a finite-dimensional vector space and \( T \) a linear operator on \( V \). The unique monic
+      polynomial of least degree in \(\text{Ann}(T,V)\) is called the <b>minimal polynomial</b> of \( T \). This
+      polynomial is denoted by \(\mu_T(x)\).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 111</b></i>
+    </p>
+    <p>
+      <b>Theorem.</b> Let \( E/F \) be a field extension.
+    </p>
+    <ul>
+      <li>
+        For each \( A \in M_n(F) \), its minimal polynomial in \( F[T] \) is its minimal polynomial in \( E[T] \).
+      </li>
+      <li>
+        Two matrices in \( M_n(F) \) are conjugate in \( M_n(F) \) if and only if they are conjugate in \( M_n(E) \).
+      </li>
+    </ul>
+    <p>
+      <a href='https://kconrad.math.uconn.edu/blurbs/linmultialg/potdiagonalizable.pdf'><i><b>"POTENTIAL
+            DIAGONALIZABILITY", Keith Conrad</b></i></a>
+    </p>
+    <p>
+      <b>Theorem.</b> Let \( A: V \rightarrow V \) be a linear operator. Then \( A \) is diagonalizable if and only if
+      its minimal polynomial in \( F[T] \) splits in \( F[T] \) and has distinct roots.
+    </p>
+    <p>
+      <a href='https://kconrad.math.uconn.edu/blurbs/linmultialg/minpolyandappns.pdf'><i><b>"THE MINIMAL POLYNOMIAL AND
+            SOME APPLICATIONS," Keith Conrad</b></i></a>
+    </p>
+  </section>
+
+  <br>
+
+  <section id="t_complement">
+    <h2>\(T\)-Complement</h2>
+    <p>
+      <b>Definition.</b> Let \( V \) be a finite-dimensional vector space, \( T \) an operator on \( V \), and \( U \) a
+      \( T \)-invariant subspace.
+      By a <b>\( T \)-complement</b> to \( U \) in \( V \) we shall mean a \( T \)-invariant subspace \( W \) such that
+      \( V = U \oplus W \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 123</b></i>
+    </p>
+  </section>
+
+  <br>
+
+  <section id='cyclic_operator'>
+    <h2>Cyclic Operator</h2>
+    <p>
+      <b>Definition.</b>
+      Let \( V \) be a finite-dimensional vector space and \( T \) an operator on \( V \). \( T \) is said to be a
+      <b>cyclic operator</b> if there is a vector \( v \in V \) such that \( V = \langle T, v \rangle \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 114</b></i>
+    </p>
+  </section>
+
+  <br>
+
+  <section id="indecomposable_operator">
+    <h2>Indecomposable Operator</h2>
+    <p>
+      <b>Definition.</b> Let \( V \) be a finite-dimensional vector space and \( T \) an operator on \( V \). \( T \) is
+      said to be an <b>indecomposable operator</b> if no non-trivial \( T \)-invariant subspace has a \( T \)-invariant
+      complement.
+      In the contrary situation, where there exists non-trivial \( T \)-invariant subspaces \( U \) and \( W \) such
+      that \( V = U \oplus W \), we say \( T \) is decomposable.
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 123</b></i>
+    </p>
+    <p>
+      <b>Definition.</b> Let \( V \) be a non-zero finite-dimensional vector space and \( T \) an operator on \( V \).
+      \( T \) is said to be an <b>irreducible operator</b> if the only \( T \)-invariant subspaces are \( V \) and \(
+      \{0\} \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 124</b></i>
+    </p>
+    <p>
+      <b>Theorem.</b>
+      Let \( V \) be an \( n \)-dimensional vector space and \( T \) an operator on \( V \). Then \( T \) is irreducible
+      if and only if \( T \) is cyclic and \( \mu_T(x) \) is an irreducible polynomial.
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 124</b></i>
+    </p>
+    <p>
+      <b>Theorem.</b> Let \( V \) be a finite-dimensional vector space and \( T \) an operator on \( V \). Assume \( T
+      \) is cyclic and \( \mu_T(x) = p(x)^m \), where \( p(x) \) is an irreducible polynomial and \( m \) is a natural
+      number. Then \( T \) is indecomposable.
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 125</b></i>
+    </p>
+  </section>
+
+  <br>
+
+  <section>
+    <p>
+      <b>Theorem.</b>
+      Let \( V \) be a finite-dimensional vector space, \( T \) an operator on \( V \), and assume the minimal
+      polynomial of \( T \) is \( \mu_T(x) = p_1(x)^{e_1} \cdots p_t(x)^{e_t} \), where the polynomials \( p_i(x) \) are
+      irreducible and distinct.
+      For each \( i \), let
+      \[
+      V_i = V(p_i) = \{ v \in V \mid p_i(T)^{e_i}(v) = 0 \} = \text{Ker}(p_i(T)^{e_i}).
+      \]
+      Then each of the spaces \( V_i \) is \( T \)-invariant and
+      \[
+      V = V_1 \oplus V_2 \oplus \cdots \oplus V_t.
+      \]
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 132</b></i>
+    </p>
+    <p>
+      <b>Theorem.</b> Let \( V \) be a finite-dimensional vector space and \( T \) a linear operator on \( V \) with
+      minimal polynomial \( \mu_T(x) \). Let \( v \) be a vector such that \( \mu_{T,v}(x) = \mu_T(x) \). Then \(
+      \langle T, v \rangle \) has a \( T \)-invariant complement in \( V \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 134</b></i>
+    </p>
+  </section>
+
+  <br>
+
+  <section id='characteristic_polynomial'>
+    <h2>Characteristic Polynomial</h2>
+    <p>
+      <b>Theorem.</b> Let \( V \) be a finite-dimensional vector space and \( T \) a linear operator on \( V \). Then
+      there are vectors \( \vec{w}_1, \vec{w}_2, \ldots, \vec{w}_r \) such that the following hold:
+    </p>
+    <p>
+      i. \( V = \langle T, \mathbf{w}_1 \rangle \oplus \cdots \oplus \langle T, \mathbf{w}_r \rangle \).
+    </p>
+    <p>
+      ii. If \( d_i(x) = \mu_{T, \mathbf{w}_i}(x) \) then \( d_r(x) \mid d_{r-1}(x) \mid \cdots \mid d_1(x) = \mu_T(x)
+      \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 134</b></i>
+    </p>
+    <p>
+      <b>Definition.</b> The polynomials \( d_1(x), d_2(x), \ldots, d_r(x) \) are called the invariant factors of \( T
+      \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 135</b></i>
+    </p>
+    <p>
+      <b>Definition.</b> Let \( V \) be an \( n \)-dimensional vector space and \( T \) be a linear operator on \( V \).
+      The polynomial (of degree \( n \)) obtained by multiplying the invariant factors of \( T \) is called the
+      <b>characteristic polynomial</b> of \( T \). It is denoted by \( \chi_T(x) \).
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 135</b></i>
+    </p>
+    <p>
+      <b>Theorem.</b> Any eigenvalue of a linear operator is a root of its minimal polynomial in \( F[T] \), so the
+      minimal polynomial and characteristic polynomial have the same roots.
+    </p>
+    <p>
+      <a href='https://kconrad.math.uconn.edu/blurbs/linmultialg/minpolyandappns.pdf'><i><b>"THE MINIMAL POLYNOMIAL AND
+            SOME APPLICATIONS", Keith Conrad</b></i></a>
+    </p>
+  </section>
+
+  <br>
+
+  <section id='diagonalizable'>
+    <p>
+      <b>Theorem.</b> Let \( V \) be a finite-dimensional vector space and \( T \) a linear operator on \( V \). Then \(
+      T \) is diagonalizable if and only if \( T \) is completely reducible and \( \mu_T(x) \) factors into linear
+      factors.
+    </p>
+    <p>
+      <i><b>"Advanced Linear Algebra (2nd Edition)", Page 136</b></i>
+    </p>
+    <p>
+      <b>Theorem.</b> A matrix in \( M_n(F) \) is diagonalizable over some extension field of \( F \) if and only if its
+      minimal polynomial in \( F[T] \) is separable.
+    </p>
+    <p>
+      <a href='https://kconrad.math.uconn.edu/blurbs/linmultialg/potdiagonalizable.pdf'>"POTENTIAL DIAGONALIZABILITY",
+        Keith Conrad</a>
+    </p>
+  </section>
+
+  <br>
+
+  <section id='smith_normal_form'>
+    <p>
+      <b>Proposition.</b> Let \( K_A \) be the column space of an \( m \times n \) matrix \( A \) and let \( B = PAQ \)
+      where \( P \) and \( Q \) are invertible matrices. Then \( K_A \cong K_B \). Moreover, \(\mathbb{Z}^m / K_A \cong
+      \mathbb{Z}^m / K_B \).
+    </p>
+    <p>
+      <b>Proof.</b> Given that \(K_A\) is the column space of an \(m \times n\) matrix \(A\) over \(\mathbb{Z}\).
+      If \(y\in K_A\), then we can know that there exists \(x\in \mathbb{Z}^n\) such that \(y = Ax\).
+      Given that \(Q\) is an invertible matrix, we can know that \(y = Ax = A(Q^{-1}Q)x = (AQ)(Q^{-1}x)\), where
+      \(Q^{-1}x\in \mathbb{Z}^n\).
+      Hence, we can know that \(y\in K_{AQ}\). Thus, we have \(K_A \subseteq K_{AQ}\).
+      For the other direction, we can know that if \(y\in K_{AQ}\), there exists \(x\in \mathbb{Z}^n\) such that \(y =
+      AQx\).
+      Since \(Qx\in \mathbb{Z}^n\), we can know that \(y = AQx = A(Qx)\), which implies that \(y\in K_A\) and \(K_{AQ}
+      \subseteq K_A\).
+      Thus, we can know that \(K_A = K_{AQ}\).
+      Now, we want to show that \(K_A \cong K_{PA}\).
+      We define a map \( \phi: K_A \to K_{PA} \) by \( \phi(x) = Px \). Since \(P\) is invertible, we can know that \(
+      \phi \) is a bijection.
+      Hence, we can know that \( K_A \cong K_{PA} \). Thus, we can know that \(K_A\cong K_{PA} = K_{PAQ} = K_B\).
+      Given that \(K_A \cong K_B\), we can know that \(\mathbb{Z}^m/K_A \cong \mathbb{Z}^m/K_B\). \(\blacksquare\)
+    </p>
+  </section>
+
+  <section id='normal_subgroup'>
+    <h2>Normal Subgroup</h2>
+    <p>
+      $\textbf{Definition. }$ Let \(G\) be a group and \(H\) be a subgroup of \(G\).
+      We say that \(H\) is a \(\textit{normal subgroup}\) of \(G\) if \(gH = Hg\) for all \(g\in G\).
+    </p>
+    <p>
+      \(\textbf{Proposition. }\) Let \(\phi : G_1 \to G_2\) be a group homomorphism, with kernel \(K\). Then \(K\) is a
+      normal subgroup of \(G_1\). Conversely, any normal subgroup of \(G_1\) is the kernel of a group homomorphism whose
+      domain is \(G_1\). Thus, normal subgroups are exactly kernels of group homomorphisms.
+    </p>
+    <p>
+      \(\textbf{Theorem. }\)Let \(\phi : G_1 \to G_2\) be a surjective group homomorphism with kernel \(K\). Then there
+      is a one-to-one, and onto correspondence between the subgroups of \(G_1\) containing \(K\) and the subgroups of
+      \(G_2\) given by \(H \mapsto \phi(H)\), for \(H \subseteq G_1\) containing \(K\), and \(L \mapsto \phi^{-1}(L)\),
+      for \(L \subseteq G_2\). Under this correspondence, \(\phi(H)\) is normal in \(G_2\), if \(H\) is normal in
+      \(G_1\) and \(\phi^{-1}(L)\) is normal in \(G_1\), if \(L\) is normal in \(G_2\).
+    </p>
+    <p>
+      \(\textbf{Corollary. }\) Let \( G \) be a group and \( N \) a normal subgroup. Then there is a one-to-one, onto
+      correspondence between the subgroups of \( G \) containing \( N \) and the subgroups of \( G/N \). Under this
+      correspondence, the normal subgroups of \( G \) containing \( N \) correspond to the normal subgroups of \( G/N
+      \).
+    </p>
+    <p>
+      \(\textbf{Theorem. }\) Let \(G\) be a group and \(H \subseteq G\) a subgroup. Assume that \([G : H]\) is the
+      smallest prime dividing the order of \(|G|\). Then \(H\) is normal in \(G\).
+    </p>
+    <p>
+      \(\textbf{Theorem. }\) Let \(G\) be a group and \(H \subset G\) a subgroup. Assume that \([G : H]\) is the
+      smallest prime dividing the order of \(|G|\). Then \(H\) is normal in \(G\).
+    </p>
+    <p>
+      \(\textbf{LaGrange's Theorem.}\) Let \(G\) be a finite group and \(H \subseteq G\) a subgroup. Then
+      \[
+      |G| = |H| \cdot (\text{number of distinct left cosets of } H)\\
+      = |H| \cdot (\text{number of distinct right cosets of } H).
+      \]
+    </p>
+  </section>
+
+  <br>
+
+  <section id="isomorphism">
+    <h2>Isomorphism</h2>
+    <p>
+      \(\textbf{Definition. }\) Let \(G_1\) and \(G_2\) be groups. A bijective function \(\phi: G_1\to G_2\) is called
+      an isomorphism if for all \(a, b\in G_1\), we have
+      \[
+      \phi(ab) = \phi(a)\phi(b).
+      \]
+    </p>
+    <p>
+      \(\textbf{First Isomorphism Theorem. }\)Let \(\phi : G_1 \to G_2\) be a surjective group homomorphism with kernel
+      \(K\). Then \(G_1/K \cong G_2\).
+    </p>
+    <p>
+      \(\textbf{Second Isomorphism Theorem. }\)
+      Let \(K \subseteq N \subseteq G\) be groups such that \(K\) and \(N\) are normal in \(G\). Then \(N/K\) is a
+      normal subgroup of \(G/K\) and \((G/K)/(N/K) \cong G/N\).
+    </p>
+  </section>
+
+  <section id='sage_subgroup'>
+    <h2>Sage Subgroup</h2>
+    <p>
+      Now, we try to define some subgroups in SageMath:
+    </p>
+    <p>
+      For example: \(S_3, \mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2\).
+    </p>
+    <div class="code-box-container">
+      <div class="code-box">
+        <pre><code class="language-python">
+            <span class="comment"># Define the group S3 using AbelianGroup</span>
+            <span class="keyword">sage:</span> <span class="variable">S3</span> = <span
+              class="function">SymmetricGroup</span>(<span class="number">3</span>)
+
+            <span class="comment"># Define the group Z2 x Z2 x Z2 using AbelianGroup</span>
+            <span class="keyword">sage:</span> <span class="variable">Z2xZ2xZ2</span> = <span
+              class="function">AbelianGroup</span>(<span class="bracket">[</span><span class="number">2</span>, <span
+              class="number">2</span>, <span class="number">2</span><span class="bracket">]</span>)
+          </code>
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+
+  <section id="center">
+    <h2>Center</h2>
+    <p>
+      \(\textbf{Definition. }\)Let \(G\) be a group.
+      The set of all elements of \(G\) that commute with every element of \(G\) such that
+      \[
+      Z(G) = \{g\in G\mid gx=xg\text{ for all }x\in G\},
+      \]
+      is called the center of \(G\).
+    </p>
+  </section>
+
+  <br>
+
+
+  <section id="centralizer">
+    <h2>Centralizer</h2>
+    <p>
+      \(\textbf{Definition. }\)Let \(A\) be any subset of a group \(G\). A subset of a\(G\) such that
+      \[
+      C_G(A) = \{g\in G\mid gag^{-1}=a\text{ for all }a\in A\},
+      \]
+      is called the centralizer of \(A\) in \(G\).
+    </p>
+    <P>
+      \(\textbf{Proposition. }\)Let \(A\) be any subset of a group \(G\). Then \(C_G(A)\) is a subgroup of \(G\).
+    </P>
+    <p>
+      \(\textbf{Proof. }\)We will prove it with subgroup criterion. Let \(x, y\in C_G(A)\) and \(a\in A\). Then we have
+      \[
+      yay^{-1}=a\in A.
+      \]
+      Hence,
+      \[
+      \begin{align}
+      y^{-1}yay^{-1}y &= y^{-1}ay = a\in A.
+      \end{align}
+      \]
+      Thus, we have \(y^{-1}\in C_G(A)\). Moreover, we have
+      \[
+      \begin{align}
+      (xy^{-1})a(xy^{-1})^{-1} &= x(y^{-1}ay)x^{-1}\\
+      &= xax^{-1} \\
+      &= a\in A.
+      \end{align}
+      \]
+      Hence, we have \(xy^{-1}\in C_G(A)\). Therefore, \(C_G(A)\) is a subgroup of \(G\). \[ \tag*{\(\square\)} \]
+    </p>
+  </section>
+
+
+  <br>
+
+  <section id="normalizer">
+    <h2>Normalizer</h2>
+    <p>
+      \(\textbf{Definition. }\) Let \(A\) be any set of a group \(G\). A subset of \(G\) such that
+      \[
+      N_G(A) = \{g\in G\mid gAg^{-1}=A\},
+      \]
+      is called the normalizer of \(A\) in \(G\).
+    </p>
+  </section>
+
+  <br>
+
+  <section id="stabilizer">
+    <h2>Stabilizer</h2>
+    <h3>Stabilizer of An Element</h3>
+    <p>
+      \(\textbf{Definition. }\)Let \(G\) be a group and \(x\) be an element. A subset of \(G\) such that
+      \[
+      G_x = \{g\in G\mid gx=x\},
+      \]
+      is called the stabilizer of \(x\) in \(G\).
+    </p>
+    <h3>Stabilizer of A Set</h3>
+    <p>
+      \(\textbf{Definition. }\)Let \(G\) be a group and \(X\) be a set. A subset of \(G\) such that
+      \[
+      G_X = \{g\in G\mid gx=x\text{ for all }x\in X\},
+      \]
+      is called the stabilizer of \(X\) in \(G\).
+    </p>
+  </section>
+
+  <br>
+
+  <section id="orbit">
+    <h2>Orbit</h2>
+    <p>
+      \(\textbf{Definition. }\) Let \(G\) be a group acting on a set \(X\). The orbit of an element \(x\in X\) is the
+      set
+      \[
+      Gx = \{gx\mid g\in G\}.
+      \]
+    </p>
+    <p>
+      \(\textbf{Lemma.}\)Let \(G\) be a group of order \(p^t\), with \(p\) prime, and assume \(G\) acts on the finite
+      set \(X\). If \(r\) denotes the number of orbits with just one element, then \(|X| \equiv r \pmod{p}\).
+    </p>
+    <p>
+      \(\textbf{Proposition.}\) Assume the group \( G \) acts on the set \( X \). Fix \( x \in X \). Then there is a
+      1-1, onto set map between \(\text{orb}(x)\) and the set of distinct left cosets of \( G_x \) given by \( g \cdot x
+      \mapsto gG_x \). In particular, if \(\text{orb}(x)\) or \([G : G_x]\) is finite, then \(\left|\text{orb}(x)\right|
+      = [G : G_x]\), and it follows that \(\left|\text{orb}(x)\right|\) divides \(\left|G\right|\), if \( G \) is
+      finite.
+    </p>
+    <p>
+      <b>Orbit Stabilizer Theorem.</b>
+      Let \( G \) be a group which acts on a finite set \( X \).
+      Let \( x \in X \).
+      Let \( \text{Orb}(x) \) denote the orbit of \( x \).
+      Let \( \text{Stab}(x) \) denote the stabilizer of \( x \) by \( G \).
+      Let \( [G : \text{Stab}(x)] \) denote the index of \( \text{Stab}(x) \) in \( G \).
+      Then:
+      \[
+      |\text{Orb}(x)| = [G : \text{Stab}(x)] = \frac{|G|}{|\text{Stab}(x)|}
+      \]
+    </p>
+    <p>
+      <a href="https://proofwiki.org/wiki/Orbit-Stabilizer_Theorem">Source: Wiki Proof</a>
+    </p>
+    <p>
+      \(\textbf{Class Equation. }\) Let \( G \) be a finite group. Then:
+      \[
+      |G| = |Z(G)| + \sum_{i=1}^r |c(x_i)| = |Z(G)| + \sum_{i=1}^r [G : C_G(x_i)],
+      \]
+      where the sum is taken over the distinct conjugacy classes with more than one element. Here \( Z(G) \) denotes the
+      center of \( G \), where \( Z(G) := \{g \in G \mid gx = xg, \text{ for all } x \in G\} \).
+    </p>
+  </section>
+
+  <br>
+
+  <section id="p_group">
+    <h2>\(p\)-group</h2>
+    <p>
+      \(\textbf{Definition(\(p\)-group). }\)A group \(G\) is called a \(p\)-group if \(|G|=p^n\) (order of \(G\) is
+      \(p^n\)) for some prime \(p\) and some integer \(n\geq 0\).
+    </p>
+    <h2>\(p\)-subgroup</h2>
+    <p>
+      \(\textbf{Definition(\(p\)-subgroup). }\)A subgroup \(H\) of a group \(G\) is called a \(p\)-subgroup if
+      \(|H|=p^n\) for some prime \(p\) and some integer \(n\geq 0\).
+    </p>
+  </section>
+
+  <br>
+
+  <section id="sylow_p_subgroup">
+    <h2>Sylow \(p\)-Subgroup</h2>
+    <p>
+      \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime.
+      If \(G\) is a group of order \(p^nm\) where \(p\not\mid m\),
+      then a subgroup \(H\) of \(G\) such that \(|H|=p^n\) is called a Sylow \(p\)-subgroup of \(G\).
+    </p>
+    <h2>\(Syl_p(G)\)</h2>
+    <p>
+      \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime.
+      The set of all Sylow \(p\)-subgroups of \(G\) is denoted by \(Syl_p(G)\).
+    </p>
+    <h2>\(n_p(G)\)</h2>
+    <p>
+      \(\textbf{Definition. }\)Let \(G\) be a group and \(p\) be a prime.
+      The number of Sylow \(p\)-subgroups of \(G\) is denoted by \(n_p(G)\).
+    </p>
+  </section>
+
+  <br>
+
+  <section id='sylow_theorem'>
+    <h2>Sylow's Theorem</h2>
+    <p>
+      \(\textbf{Sylow's Theorem. }\) Let \( G \) be a group of order \( p^{\alpha} m \), where \( p \) is a prime not
+      dividing \( m \).
+    </p>
+    <ul>
+      <li>
+        \(\textbf{First Sylow's Theorem. }\) Sylow \( p \)-subgroups of \( G \) exist, i.e., \( \text{Syl}_p(G) \neq
+        \emptyset \).
+      </li>
+      <li>
+        \(\textbf{Second Sylow's Theorem.}\) If \( P \) is a Sylow \( p \)-subgroup of \( G \) and \( Q \) is any \( p
+        \)-subgroup of \( G \), then there exists \( g \in G \) such that \( Q \leq gPg^{-1} \), i.e., \( Q \) is
+        contained in some conjugate of \( P \). In particular, any two Sylow \( p \)-subgroups of \( G \) are conjugate
+        in \( G \).
+      </li>
+      <li>
+        \(\textbf{Third Sylow's Theorem.}\) The number of Sylow \( p \)-subgroups of \( G \) is of the form \( 1 + kp
+        \), i.e.,
+        \[ n_p \equiv 1 \mod p .\]
+      </li>
+      Further, \( n_p \) is the index in \( G \) of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \),
+      hence \( n_p \) divides \( m \).
+    </ul>
+  </section>
+
+  <br>
+
+  <section id='direct_product'>
+    <h2>Direct Product</h2>
+    <p>
+      <b>Proposition.</b> Let \( H \) and \( K \) be subgroups of the group \( G \). The number of distinct ways of
+      writing each element of the set \( HK \) in the form \( hk \), for some \( h \in H \) and \( k \in K \), is \( |H
+      \cap K| \). In particular, if \( H \cap K = 1 \), then each element of \( HK \) can be written uniquely as a
+      product \( hk \), for some \( h \in H \) and \( k \in K \).
+    </p>
+    <p>
+      <b>Theorem.</b> Suppose \( G \) is a group with subgroups \( H \) and \( K \) such that
+    </p>
+    <ul>
+      <li>
+        \( H \) and \( K \) are normal in \( G \), and
+      </li>
+      <li>
+        \( H \cap K = 1 \).
+      </li>
+    </ul>
+    <p>
+        Then we have \(HK \cong H\times K\).
+    </p>
+    <p>
+      <i><b>"Abstract Algebra", Dummit & Foote, Third Edition, Page 171</b></i>
+    </p>
+  </section>
+
+  <br>
+
+  <section id='simple_group'>
+    <h2>Simple Group</h2>
+    <p>
+      \(\textbf{Definition. }\) A group \(G\) is \(\textit{simple}\) if \(G\) is nontrivial and the only normal
+      subgroups of \(G\) are \(\{e\}\) and \(G\).
+    </p>
+    <p>
+      \(\textbf{Theorem. }\) Let \(G\) be a simple group of order \(60\). Then \(G\) is isomorphic to \(A_5\).
+    </p>
+    <p>
+      \(\textbf{Theorem. }\) The alternating group \(A_n\) is a simple group for \(n \geq 5\). In other words, there are
+      no proper normal subgroups of \(A_n\), for \(n \geq 5\).
+    </p>
+  </section>
+
+  <br>
+
+  <section id='solvable_group'>
+    <h2>Solvable Group</h2>
+    <p>
+      <b>Definition.</b> A finite group \( G \) is <i><b>solvable</b></i> if there are subgroups
+      \[
+      \{e\} = G_n \subseteq G_{n-1} \subseteq \cdots \subseteq G_1 \subseteq G_0 = G
+      \]
+      such that for \( i = 1, \ldots, n \) we have:
+    </p>
+    <ul>
+      <li>
+        (a) \( G_i \) is normal in \( G_{i-1} \).
+      </li>
+      <li>
+        (b) \( [G_{i-1} : G_i] \) is prime.
+      </li>
+    </ul>
+    <p>
+      \(\textbf{Theorem. }\) Let \( G \) be a finite group with \( |G| = p^n \), with \( p \) prime and \( n \geq 1 \).
+      Then:
+    </p>
+    <ul>
+      <li>
+        (i) \( Z(G) \neq \{e\} \).
+      </li>
+      <li>
+        (ii) There is a sequence of subgroups \( \{e\} \subseteq H_1 \subseteq H_2 \subseteq \cdots \subseteq H_{n-1}
+        \subseteq H_n = G \) such that each \( H_i \) is a normal subgroup of \( H_{i+1} \) and the quotient group \(
+        H_{i+1}/H_i \cong \mathbb{Z}_p \).
+      </li>
+    </ul>
+
+    <br>
+
+    <p>
+      <b>Theorem.</b> Let \(G\) be a group and \(H\) a normal subgroup. Then \(G\) is solvable if and only if \(H\) and
+      \(G/H\) are solvable.
+    </p>
+    <p>
+      <b>Proof.</b> Firstly, we want to show that if \(G\) is solvable, then we have \(H\) is solvable, and \(G/H\) is
+      solvable.
+      Given that \(G\) is solvable and \(H\) is normal. We can know that
+      \[
+      \{e\} = G_0\subset G_1\subset \dots G_r = G,
+      \]
+      where \(G_i\) is normal in \(G_{i+1}\) and \(G_{i+1}/G_i\) is abelian.
+      Now, we define \(H_{i} = H\cap G_i\).
+      Suppose that \(h'\in H_i\), we can know that for any \(h\in H_{i+1}\), we have \(h\cdot h'\cdot h^{-1}\in H\)
+      since \(h, h', h^{-1}\in H\).
+      At the same time, we can know that \(h\cdot h'\cdot h^{-1}\in G_i\), since \(h'\in G_i\) and \(G_i\) is normal in
+      \(G_{i+1}\).
+      Thus, we showed that \(h\cdot h'\cdot h^{-1}\in H\cap G_i = H_i\). Hence, we can know that \(H_i\) is normal in
+      \(H_{i+1}\).
+      Now, we define a map \(\varphi: H_{i+1}/H_i\to G_{i+1}/G_i\) such as
+      \[
+      \varphi(g\cdot H_i) = g\cdot G_i.
+      \]
+      Firstly, we want to show that the map is well-defined.
+      Suppose that \(g\cdot H_i = h\cdot H_i\). Hence, we have \(h^{-1}\cdot g\in H_i\), which implies that \(h^{-1}g\in
+      G_i\) for \(H_i\subset G_i\).
+      Thus, we can know that \(h^{-1}g\cdot G_i \subset G_i\). Hence, for any \(g'\in G_i\) we have
+      \[
+      h^{-1}g\cdot g'\in G_i,
+      \]
+      which implies that
+      \[
+      g\cdot g'\in h\cdot G_i, \text{ for any }g'\in G_i.
+      \]
+      Thus, we have \(g\cdot G_i\subset h\cdot G_i\).
+      Similarly, we can get \(g^{-1}h\in H_i\) from \(g\cdot H_i = h\cdot H_i\). Then, it shows that \(g^{-1}h\in G_i\),
+      which implies that \(h\cdot G_i\subset g\cdot G_i\).
+      Hence, we have \(g\cdot G_i = h\cdot G_i\) (i.e. \(\varphi(g\cdot H_i) = \varphi(h\cdot H_i)\)), and we showed the
+      map is well-defined.
+      Next, we need to show that \(\varphi\) is a homomorphism.
+      Let \(g, h\in H_{i+1}\), we have
+      \[
+      \begin{align}
+      \varphi(g\cdot H_i)\cdot \varphi(h\cdot H_i) &= g\cdot G_i\cdot h\cdot G_i = g\cdot hG_i, \\
+      \varphi(gH_i\cdot hH_i) &= \varphi(g\cdot hH_i) = g\cdot hG_i.
+      \end{align}
+      \]
+      Thus, we have \(\varphi(g\cdot H_i)\cdot \varphi(h\cdot H_i) = \varphi(gH_i\cdot hH_i)\).
+      After that, we want to show that \(\varphi\) is injective.
+      Suppose that \(\varphi(gH_i) = \varphi(hH_i)\) (i.e. \(gG_i = hG_i\)). Hence, we have \(h^{-1}g\in G_i\).
+      Since \(h, g\in H\), we have \(h^{-1}g\in H\), which implies that \(h^{-1}g\in H_i\). Again, we can get
+      \(gH_i\subset hH_i\).
+      By the same process, we can get \(g^{-1}h\in G_i\), which will lead us to \(hH_i\subset gH_i\).
+      Thus, \(gH_i = hH_i\). Hence, \(\varphi\) is injective. It allows us to know that \(\varphi(H_{i+1}/H_i)\) is a
+      subgroup of \(G_{i+1}/G_i\).
+      Since \(G_{i+1}/G_i\) is abelian by assumption, and \(H_{i+1}/H_i\cong \varphi(H_{i+1}/H_i)\subset G_{i+1}/G_i\),
+      we can know that \(H_{i+1}/H_i\) is abelian for subgroup of an abelian group is abelian.
+      Thus, we have
+      \[
+      \{e\} = \{e\}\cap H= H_0\subset H_1\subset \dots H_r = H\cap G,
+      \]
+      where each \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1}/H_i\) is abelian. Therefore, \(H\) is solvable.
+      Now we need to show that \(G/H\) is solvable.
+      We define \(K_i = G_i/H\) and want to show that \(K_i\) is normal in \(K_{i+1}\).
+      Let \(gH\in K_{i+1}\) and \(g'H\in K_i\). We have
+      \[
+      (gH)(g'H)(gH)^{-1} = gHg'Hg^{-1}H = g g'g^{-1}H.
+      \]
+      Since \(G_i\) is normal in \(G_{i+1}\), we have \(g g'g^{-1}\in G_i\), which implies that \(g\cdot g'\cdot g^{-1}H
+      \in G_i/H = K_i\).
+      Hence, we show that \(K_i\) is normal in \(K_{i+1}\).
+      Now, we need to show that \(K_{i+1}/K_i\) is abelian.
+      If \(H\subset G_i\subset G_{i+1}\), we can know \(H\) is normal in \(G_i\) since \(H\) is normal in \(G\).
+      By the Third Isomorphism Theorem, we have
+      \[
+      G_{i+1}/G_i\cong (G_{i+1}/H)/(G_i/H).
+      \]
+      Then, we have \((G_{i+1}/H)/(G_i/H)\) is abelian since \(G_{i+1}/G_i\) is abelian by assumption.
+      (To be continued...)
+      Now, suppose that \(H\) is a normal subgroup of \(G\), and \(H\) and \(G/H\) are solvable.
+      We want to show that \(G\) is solvable. Since \(H\) is solvable, we have
+      \[
+      \{e\} = H_0\subset H_1\subset \dots H_n = H,
+      \]
+      where each \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1}/H_i\) is abelian.
+      Since \(G/H\) is solvable, we have
+      \[
+      H \subset G_1/H\subset \dots \subset G_m/H = G/H,
+      \]
+      where \(H\subset G_i\) for all \(i\).
+      Moreover, we have \(G_i/H\) is normal in \(G_{i+1}/H\) and \((G_{i+1}/H)/(G_i/H)\) is abelian.
+      Since \(G_i/H\) is normal in \(G_{i+1}/H\), let \(g\in G_{i+1}\) and \(g'\in G_i\), we have
+      \[
+      \begin{align}
+      (gH)(g'H)(gH)^{-1} &= gHg'Hg^{-1}H = g g'g^{-1}H\in G_i/H.
+      \end{align}
+      \]
+      It shows that \(g g'g^{-1}\in G_i\), which implies that \(G_i\) is normal in \(G_{i+1}\).
+      Since \((G_1/H)/H\cong G_1/H\), we have \(G_1/H\) is abelian.
+      Thus, we can have a chain such as
+      \[
+      \{e\} = H_0\subset H_1\subset \dots H_n = H\subset G_1\subset \dots \subset G_m = G,
+      \]
+      where each \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1}/H_i\) is abelian, and each \(G_i\) is normal in
+      \(G_{i+1}\) and \(G_{i+1}/G_i\) is abelian.
+      Moreover, \(H\) is normal in \(G_1\) since \(H\) is normal in \(G\), and \(G_1/H\) is abelian.
+      Therefore, we have \(G\) is solvable. \(\blacksquare\)
+    </p>
+    <p>
+      <i><b>"Algebra", Page 19</b></i>
+    </p>
+  </section>
+
+
+  <br>
+
+  <section id='field'>
+    <h2>Field</h2>
+    <h3>Division Ring</h3>
+    <p>
+      \(\textbf{Definition. }\) A <strong>division ring</strong> is a ring \(R\) with identity \(1\) such that every
+      nonzero element of \(R\) is a unit
+      (i.e. every nonzero element of \(R\) has a multiplicative inverse).
+    </p>
+    <p>
+      \(\textbf{Definition. }\) A <strong>field</strong> is a commutative ring \(R\) with identity \(1\) such that every
+      nonzero element of \(R\) is a unit
+      (i.e. commutative division ring).
+    </p>
+  </section>
+
+  <br>
+
+  <section id='ideal'>
+    <p>
+      \(\textbf{Proposition(1). }\) Let \(R\) be a ring with identity \(1\), and \(I\) is an ideal of \(R\). \(R = I\)
+      if and only if \(I\) contains a unit.
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Firstly, suppose that \(R = I\).
+      Since \(R\) is a ring with identity \(1\), then we can know that \(1\) is unit in \(R\).
+      Hence, we can see that \(I\) contains a unit.
+      For the other direction, suppose that \(I\) contains a unit \(u\in R\).
+      Then we can know that there exists an inverse \(u^{-1}\in R\) such that \(u^{-1}u = 1\).
+      Hence, we have for any \(r\in R\),
+      \[
+      r = r(1) = r(u^{-1}u) = (ru^{-1})(u)\in I.
+      \]
+      Therefore, we have \(R\subset I\). Since \(I\subset R\), we have \(R = I\). \(\blacksquare\)
+    </p>
+    <p>
+      <b>Proposition 5.1 (Correspondence Theorem for Rings)</b>. If \( I \) is a proper ideal in a commutative ring \( R
+      \), then there is an inclusion-preserving bijection \(\varphi\) from the set of all ideals \( J \) in \( R \)
+      containing \( I \) to the set of all ideals in \( R/I \), given by
+      \[ \varphi : J \mapsto J/I = \{ a + I \mid a \in J \} \].
+    </p>
+  </section>
+
+  <br>
+
+  <section id='prime'>
+    <p>
+      \(\textbf{Theorem. }\) Suppose that \(p\) is in a ring \(R\). Then \(p\) is prime if and only if \((p)\) is a
+      prime ideal.
+    </p>
+    <p>
+      \(\textbf{Proof. }\) We firstly show that if \(p\) is prime then \((p)\) is a prime ideal. Suppose that \(p\) is
+      prime.
+      Then we have \(p\neq 0\) and \(p\) is not a unit. If \(p\mid ab\) where \(a, b\in R\), then we have \(ab = pr\)
+      for some \(r\in R\).
+      In other words, \(ab\in (p)\). Since \(p\) is prime, we have \(p\mid a\), which implies that \(a = pu\) for some
+      \(u\in R\) (i.e. \(a\in (p)\)),
+      or \(p\mid b\), which implies that \(b = pv\) for some \(v\in R\) (i.e. \(b\in (p)\)). Therefore, we have \((p)\)
+      is a prime ideal.
+      For the other direction, we suppose that \((p)\) is a prime ideal. If \(ab\in (p)\) for some \(a, b\in R\), then
+      we have \(ab = pr\) for some \(r\in R\).
+      Since \((p)\) is a prime ideal, we have \(a\in (p)\) or \(b\in (p)\). Thus, we have \(p\mid a\) or \(p\mid b\).
+      Therefore, \(p\) is prime. \(\blacksquare\)
+    </p>
+  </section>
+
+  <br>
+
+  <section id='homomorphism'>
+    <p>
+      \(\textbf{Corollary. }\) If \(R\) is a field then any nonzero ring homomorphism \(\varphi: R\to S\) is injective.
+    </p>
+    <p>
+      \(\textbf{Proof. }\) Given \(R\) is a field, we can know that the only ideals of \(R\) are \(\{0\}\) and \(R\).
+      We know that \(\ker(\varphi)\) is an ideal of \(R\). Thus, we only have two options, \(\ker(\varphi) = \{0\}\) or
+      \(\ker(\varphi) = R\).
+      Suppose that \(a\in \ker(\varphi)\) where \(a\neq 0\). Since \(R\) is a field, we have \(a^{-1}\in R\). Then we
+      have
+      \[
+      0 = \varphi(a)\cdot \varphi(a^{-1}) = \varphi(aa^{-1}) = \varphi(1) = 1,
+      \]
+      which is a contradiction. Thus, we have \(\ker(\varphi) = \{0\}\). Therefore, \(\varphi\) is injective.
+      \(\blacksquare\)
+    </p>
+  </section>
+
+
+  <br>
+
+  <section id='integral_domain'>
+    <h2>Integral Domain</h2>
+    <p>
+      \(\textbf{Definition. }\) An integral domain is a commutative ring \(R\) with identity \(1\neq 0\) such that
+      \[
+      ab = 0 \implies a = 0 \text{ or } b = 0.
+      \]
+      (i.e. there is no zero divisors in \(R\)).
+    </p>
+    <p>
+      \(\textbf{Statements of principal ideals. }\)For an integral domain \( R \):
+    </p>
+    <ul>
+      <li> \( a \mid b \) if and only if \( \langle b\rangle \subseteq \langle a\rangle \). </li>
+      <li> \( \langle a \rangle= \langle b\rangle \) if and only if \( b = a\cdot u \), for some unit \( u \in R \).
+      </li>
+      <li> \( q \in R \) is irreducible if and only if \( \langle q\rangle \) is maximal among principal ideals. </li>
+      <li> \( p \in R \) is prime if and only if whenever \( ab \in \langle p\rangle \), \( a \in \langle p \rangle \)
+        or \( b \in \langle p \rangle \). </li>
+    </ul>
+    <ul>
+      <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is an integral domain.</li>
+      <li>\(\textbf{Example 2. }\) \(\mathbb{Z}[i]\) (Gaussian Integer) is an integral domain.</li>
+    </ul>
+    <p>
+      \(\textbf{Proof (2).}\) The major part is to show that there is no zero divisor in \(\mathbb{Z}[i]\).
+      Suppose that there exists zero divisors in \(\mathbb{Z}[i]\).
+      Suppose \(a + b i, c + d i\in \mathbb{Z}[i]\) such that \((a + b i)(c + d i) = 0\), where
+      \(a\) or \(b\) is not zero and \(c\) or \(d\) is not zero. Then we have
+      \[
+      \begin{align}
+      (a + bi)(c + di) &= 0\\
+      ac + adi + bci + bdi^2 &= 0\\
+      ac - bd + (ad + bc)i &= 0\\
+      ac - bd &= 0\\
+      ad + bc &= 0\\
+      ac &= bd\\
+      ad &= -bc\\
+      \end{align}
+      \]
+      Then we have
+      \[
+      \begin{align}
+      acd & = bd^2\\
+      acd & = -bc^2\\
+      bd^2 &= -bc^2\\
+      d^2 &= -c^2\\
+      d^2 + c^2 &= 0\\
+      \end{align}
+      \]
+      Since \(d, c\in \mathbb{Z}\), we have \(d = c = 0\). However, we assume that \(c\) or \(d\) is not zero, which is
+      a contradiction.
+    </p>
+    <ul>
+      <li>\(\textbf{Example 3. }\) Quadratic Integer Ring \(\mathbb{Z}(\sqrt{D})\) is an integral domain</li>
+      <li>\(\textbf{Example 4. }\) All fields are integral domains.</li>
+      <li>\(\textbf{Claim 1. }\)\(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
+    </ul>
+    <p>
+      \(\textbf{Proof. }\) suppose that \(2 = (a + b\sqrt{-5})(c + d\sqrt{-5})\) for some \(a, b, c, d\in \mathbb{Z}\).
+      Then we have
+      \[
+      \begin{align}
+      2 &= (a + b\sqrt{-5})(c + d\sqrt{-5})\\
+      2 &= ac - 5bd + (ad + bc)\sqrt{-5}\\
+      \end{align}
+      \]
+      We can see that \(ad + bc = 0\). Then we have
+      \[
+      \begin{align}
+      2 &= ac - 5bd\\
+      2 &= ac - 5bd - (ad + bc)\sqrt{-5}\\
+      2 &= (a - b\sqrt{-5})(c + d\sqrt{-5})\\
+      \end{align}
+      \]
+      In that case, we have
+      \[
+      \begin{align}
+      4 &= 2\cdot 2\\
+      4 &= (a + b\sqrt{-5})(c + d\sqrt{-5})(a - b\sqrt{-5})(c + d\sqrt{-5})\\
+      4 &= (a^2 + 5b^2)(c^2 + 5d^2)\\
+      \end{align}
+      \]
+      Thus, we can see that if \(b\neq 0\), then we have \(a^2 + 5b^2 \geq 5\).
+      Similarly, if \(d\neq 0\), then we have \(c^2 + 5d^2 \geq 5\).
+      Hence, we can see that \(b = d = 0\). Then we have \(2 = ac\).
+      Since \(2\) is a prime number, we have \(a = 1\) and \(c = 2\).
+      Therefore, we have \(2 = (2 + 0\sqrt{-5})(1 + 0\sqrt{-5})\), where one of them is a unit.
+      Then, we have \(2\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\). \( \blacksquare\)
+    </p>
+    <ul>
+      <li>\(\textbf{Claim 2.}\) \(3\) is irreducible in \(\mathbb{Z}(\sqrt{-5})\)</li>
+    </ul>
+    <p>
+      \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example.
+      Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\).
+      Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
+      Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+    </p>
+    <ul>
+      <li>\(\textbf{Claim 2.}\) \(2\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+    </ul>
+    <p>
+      \(\textbf{Proof. }\) To show that \(2\) is not a prime, we only need to come up with an example.
+      Firstly, we can see that \(6 = (1 + 5) = (1 + \sqrt{-5})(1 - \sqrt{-5})\).
+      Then we have \(2\mid 6\). However, we can see that \(2\nmid (1 + \sqrt{-5})\) and \(2\nmid (1 - \sqrt{-5})\).
+      Therefore, we can see that \(2\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+    </p>
+    <ul>
+      <li>\(\textbf{Claim 3.}\) \(3\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+    </ul>
+    <p>
+      \(\textbf{Proof. }\) To show that \(3\) is not a prime, we come up with an example.
+      Firstly, we can see that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\).
+      Then we have \(3\mid 9\). However, we can see that \(3\nmid (2 + \sqrt{-5})\) and \(3\nmid (2 - \sqrt{-5})\).
+      Therefore, we can see that \(3\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\). \(\blacksquare\)
+    </p>
+    <ul>
+      <li>\(\textbf{Claim 3.}\) \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(\sqrt{-5})\)</li>
+    </ul>
+    <p>
+      \(\textbf{Proof. }\)We prove it with contradiction. Suppose that \(2+\sqrt{-5}\) is a prime.
+      We know that \(3\cdot 3 = 9 = (2 + \sqrt{-5})(2 - \sqrt{-5})\).
+      Then we have \(2+\sqrt{-5}\mid 9\), which implies that \(2 + \sqrt{-5}\mid 3\).
+      We know that \(3\) is irreducible in \(\mathbb{Z}(-\sqrt{5})\).
+      Then \(2 + \sqrt{-5}\) is a unit, which is not true, or \(2 + \sqrt{-5}\) multiplied by a unit will be \(3\).
+      There are only two units in \(\mathbb{Z}(-\sqrt{5})\), which are \(\pm 1\).
+      However, \((2 + \sqrt{-5})\cdot 1 \neq 3\) and \(2 + \sqrt{-5}\cdot (-1) \neq 3\).
+      It is a contradiction. Therefore, we can see that \(2 + \sqrt{-5}\) is not a prime in \(\mathbb{Z}(-\sqrt{5})\).
+      \(\blacksquare\)
+    </p>
+  </section>
+
+  <br>
+
+  <section id='prime_irreducible'>
+    <p>
+      \(\textbf{Theorem. }\) Let \(R\) be an integral domain with identity \(1\). Then every prime element of \(R\) is
+      irreducible.
+    </p>
+    <p>
+      Suppose that \(p\) is a prime and \(p = ab\) for some \(a, b\in R\). Then we have \(p\mid ab\). Since \(p\) is
+      prime, we have \(p\mid a\) or \(p\mid b\).
+      Without loss of generality, we can assume that \(p\mid a\). Then we have \(a = pc\) for some \(c\in R\). Then we
+      have
+      \[
+      p = a\cdot b = (pc)\cdot b = p(cb).
+      \]
+      Then we have \(p(1 - cb) = 0\). Since \(R\) is an integral domain, we can know that \(1 - cb = 0\), which implies
+      that \(cb = 1\).
+      Therefore, we have \(b\) is a unit. Thus, we have \(p\) is irreducible. \(\blacksquare\)
+    </p>
+  </section>
+
+  <br>
+
+  <section id='ascending_chain_condition'>
+    <p>
+      \(\textbf{Definition.}\) Given a chain of ideals \(I_1 \subset I_2 \subset \dots\), there exists \(n_0\) such that
+      for all \(n\geq n_0\), \(I_{n_0} =I_n\).
+    </p>
+    <p>
+      \(\textbf{Proposition.}\) The following conditions are equivalent for the commutative ring \( R \):
+    </p>
+    <ul>
+      <li> \( R \) satisfies the ascending chain condition, i.e., given a chain of ideals \( I_1 \subseteq I_2 \subseteq
+        \cdots \), there exists \( n_0 \) such that for all \( n \geq n_0 \), \( I_{n_0} = I_n \). </li>
+      <li> \( R \) satisfies the maximal condition, i.e., any non-empty collection of ideals of \( R \) has a maximal
+        element. </li>
+      <li> Every ideal of \( R \) is finitely generated. </li>
+    </ul>
+  </section>
+
+  <br>
+
+  <section id='principal_ideal_domain'>
+    <h2>Principal Ideal Domain</h2>
+    <ul>
+      <li>\(\textbf{Example 1. }\) \(\mathbb{Z}\) is a principal ideal domain.</li>
+      <li>\(\textbf{Example 2. }\) All fields are principal ideal domains.</li>
+      <li>\(\textbf{Example 3. }\) \(\mathbb{Z}[x]\) is a principal ideal domain.</li>
+      <li>\(\textbf{Example 4. }\) Given \(F\) is a field, we have\(\mathbb{F}[x]\) is a principal ideal domain.</li>
+      <li>\(\textbf{Example 5. }\) All Euclidean domains are principal ideal domains (one of the propositions below)
+      </li>
+    </ul>
+    <p>
+      \(\textbf{Theorem. }\) Let \(R\) be a principal ideal domain, then every prime ideal in \(R\) is maximal.
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Let \(R\) be a principal ideal domain and \((p)\) be a prime ideal in \(R\).
+      Since \(R\) is a principal ideal domain, we find an ideal containing \((p)\) and assume it is \((m)\) (i.e.
+      \((p)\subset (m)\)).
+      Then we can know that \(p\in (m)\), which implies that \(p = mr\) for some \(r\in R\).
+      Then we can get \(mr\in (p)\). Since \(p\) is a prime ideal, we have \(m\in (p)\) or \(r\in (p)\).
+      If \(m\in (p)\), then we have \((m)\subset (p)\). Since \((p)\subset (m)\), we have \((p) = (m)\).
+      If \(r\in (p)\), then we have \(r = ps\) for some \(s\in R\). Then we have \(p =mr = psm\), which implies that \(1
+      = sm\).
+      Hence, we have \(m\) is a unit in \(R\). Thus, we have \((m) = R\).
+      Therefore, we can see that \((p)\) is maximal. \(\blacksquare\)
+    </p>
+    <p>
+      \(\textbf{Proposition. }\) Let \(R\) be a principal ideal domain. Then every irreducible element in \(R\) is
+      prime.
+    </p>
+    <p>
+      \(\textbf{Proof. }\) Suppose that \(p\) is irreducible in \(R\).
+      If \( M \) is any ideal containing \( \langle p\rangle \) then by hypothesis \( M = \langle m\rangle \) is a
+      principal ideal.
+      Since \( p \in \langle m\rangle \), \( p = rm \) for some \( r \in R\).
+      Since \(p\) is irreducible, either \( r \) or \( m \) is a unit.
+      If \(m\) is a unit, we have \(\langle m\rangle = R\). If \(r\) is a unit, we have \(\langle p\rangle = \langle
+      m\rangle \).
+      Thus the only ideals of \(R\) containing \( \langle p\rangle \) are \( \langle p\rangle \) or \( R \).
+      Thus, we can know that \(\langle p\rangle \) is a maximal ideal.
+      Since maximal ideals are prime ideals, we know that \(p\) is prime. \(\blacksquare\)
+    </p>
+    <p>
+      \(\textbf{Proposition. }\)Any euclidean domain is a principal ideal domain.
+    </p>
+    <p>
+      \(\textbf{Note. }\)If \(R\) is a Euclidean Domain, it means that \(R\) has some form of division algorithm.
+    </p>
+    <p>
+      \(\textbf{Proof. }\) Let \(I\) be an ideal in a Euclidean domain \(R\). We will show that there exists an element
+      \(a \in I\) such that \(I = (a)\).
+      Since the well ordering principle, we can choose \(a \in I\) such that \(a \neq 0\) and \(a\) has the smallest
+      norm among all nonzero elements of \(I\). We claim that \(I = (a)\).
+      Let \(x \in I\). We can write \(x = qa + r\), where \(q, r \in R\) and either \(r = 0\) or \(N(r) \lt N(a)\).
+      Since \(x \in I\) and \(a \in I\), we have \(qa + r \in I\). Therefore, \(r \in I\).
+      If \(r = 0\), then \(x = qa \in (a)\). If \(r \neq 0\), then \(N(r) \lt N(a)\).
+      This contradicts the choice of \(a\). Therefore, \(r = 0\) and \(x = qa \in (a)\).
+      Hence, every element of \(I\) can be written as a multiple of \(a\), so \(I = (a)\).
+      Therefore, every ideal in a Euclidean domain is generated by a single element, and hence a Euclidean domain is a
+      principal ideal domain. \(\blacksquare\)
+    </p>
+    <p>
+      \(\textbf{Proposition.}\) Let \( R \) be a commutative ring.
+    <ul>
+      <li>An ideal \( P \subseteq R \) is a prime ideal if and only if \( R/P \) is an integral domain.</li>
+      <li>An ideal \( M \subseteq R \) is a maximal ideal if and only if \( R/M \) is a field.</li>
+    </ul>
+  </section>
+
+
+  <br>
+
+  <section id='unique_factorization_domain'>
+    <h2>Unique Factorization Domain</h2>
+    Let \(R\) be an integral domain. Then the following are equivalent:
+    <ul>
+      <li>Every non-zero, non-unit of \(R\) can be written as a product of prime elements.</li>
+      <li>Every non-zero, non-unit in \(R\) can be written uniquely (up to order and unit multiples) as a product of
+        irreducible elements.</li>
+    </ul>>
+    <p>
+      \(\textbf{Definition. }\) A unique factorization domain is an integral domain \(R\) such that every nonzero
+      non-unit element of \(R\) can be written as a product of irreducible elements of \(R\) in a unique way up to order
+      and units.
+    </p>
+    <p>
+      \(\textbf{Example 1. }\) \(\mathbb{Z}\) is a unique factorization domain.
+    </p>
+    <p>
+      \(\textbf{Example 2. }\) \(\mathbb{Z}[i]\) is a unique factorization domain.
+    </p>
+    <p>
+      \(\textbf{Example 3. }\) \(\mathbb{Z}[\sqrt{D}]\) is a unique factorization domain.
+    </p>
+    <p>
+      \(\textbf{Example 4. }\) \(\mathbb{Z}[x]\) is a unique factorization domain.
+    </p>
+    <p>
+      \(\textbf{Example 5. }\) \(\mathbb{F}[x]\) is a unique factorization domain, where \(\mathbb{F}\) is a field.
+    </p>
+    <p>
+      \(\textbf{Proposition. }\) Let \( a \) and \( b \) be two nonzero elements of the Unique Factorization Domain \( R
+      \) and suppose
+      \[
+      a = up_1^{e_1} p_2^{e_2} \cdots p_n^{e_n} \quad \text{and} \quad b = vp_1^{f_1} p_2^{f_2} \cdots p_n^{f_n}
+      \]
+      are prime factorizations for \( a \) and \( b \), where \( u \) and \( v \) are units, the primes \( p_1, p_2,
+      \ldots, p_n \) are distinct and the exponents \( e_i \) and \( f_i \) are \(\geq 0\). Then the element
+      \[
+      d = p_1^{\min(e_1, f_1)} p_2^{\min(e_2, f_2)} \cdots p_n^{\min(e_n, f_n)}
+      \]
+      (where \( d = 1 \) if all the exponents are 0) is the greatest common divisor of \( a \) and \( b \).
+    </p>
+    <p>
+      \(\textbf{Remark. }\) A ring satisfying Bezout's identity is called a Bézout domain.
+      Not all unique factorization domains are Bézout domains, but all Bézout domains are unique factorization domains.
+    </p>
+  </section>
+
+  <br>
+
+  <section id='polynomial_ring'>
+    <h2>Polynomial Ring</h2>
+    <p>
+      \(\textbf{Theorem. }\) Let \(F\) be a field. The polynomial ring \(F[x]\) is a \(\textit{Euclidean Domain}\).
+      Specifically, if \(a(x)\) and \(b(x)\) are two polynomials in \(F[x]\) with \(b(x)\) nonzero, then there are
+      unique \(q(x)\) and \(r(x)\) in \(F[x]\) such that
+      \[
+      a(x) =q(x)b(x) +r(x)\qquad \text{with}\qquad r(x) = 0 \text{ or } \deg(r(x)) \lt \deg(b(x)).
+      \]
+    </p>
+    <p>
+      \(\textbf{Theorem. }\) Let \(F\) be a field and \( f \in F[x_1, \ldots, x_n] \) be non-constant.
+      Then we say that \(F[X_1, \ldots, x_n]\) is a Unique Factorization Domain.
+      Specifically, there are irreducible polynomials \( g_1, \ldots, g_r \in F[x_1, \ldots, x_n] \) such that
+      \[
+      f = g_1 \cdots g_r.
+      \]
+      Furthermore, if there is a second factorization of \( f \) into irreducible polynomials
+      \[
+      f = h_1 \cdots h_s,
+      \]
+      then \( r = s \) and the \( h_i \)'s can be permuted so that each \( h_i \) is a constant multiple of \( g_i \).
+    </p>
+    <p>
+      \(\textbf{Theorem. }\) Let \(F\) be a field and \( f, g \in F[x] \). Assume that \( g \) is nonzero.
+      Then there are polynomials \( q, r \in F[x] \) such that
+      \[
+      f = qg + r, \quad \text{where } r = 0 \text{ or } \deg(r) \lt \deg(g).
+      \]
+      Furthermore, \( q \) and \( r \) are unique.
+    </p>
+    <p>
+      \(\textbf{Corollary. }\)Let \(F\) be a field. We have \( \alpha \in F \) is a root of a polynomial \( f \in F[x]
+      \) if and only if \( x - \alpha \) is a factor of \( f \) in \( F[x] \)
+    </p>
+    <p>
+      \(\textbf{Definition. }\)To say that a field \( L \) contains \(\textit{all}\) roots of \( f \) means that \( f \)
+      factors as
+      \[
+      f = a_0(x - \alpha_1) \cdots (x - \alpha_n),
+      \]
+      where \( \alpha_1, \ldots, \alpha_n \in L \). When this happens, we say that \( f \) splits completely over \( L
+      \).
+    </p>
+    <p>
+      \(\textbf{Theorem. }\) If \( F \) is a field and \( f \in F[x] \) is non-constant, then the following are
+      equivalent:
+    </p>
+    <ul>
+      <li>
+        The polynomial \( f \) is irreducible over \( F \).
+      </li>
+      <li>
+        The ideal \( (f) = \{ fg \mid g \in F[x] \} \) is a maximal ideal.
+      </li>
+      <li>
+        The quotient ring \( F[x] / (f) \) is a field.
+      </li>
+    </ul>
+    <p>
+      \(\textbf{Definition (Primitive). }\) A polynomial \( f \in F[x] \) is \textit{primitive} if the greatest common
+      divisor of its coefficients is \(1\).
+      (i.e. for all prime elements \(p \in R\), \(p \not\mid f(x)\) in \(R[x]\)).
+    <p>
+      \(\textbf{Proposition.}\) Every nonzero ideal of \(F[x]\) can be written uniquely as \((f)\) where
+      \(f\) is monic.
+    </p>
+    <p>
+      \(\textbf{Proposition A. }\)For a UFD \(R\), if \(p \in R\) is a prime element, then \(p\) is also a prime element
+      in \(R[x]\).
+    </p>
+    <p>
+      \(\textbf{Gauss's lemma.}\) Let \(R\) be a UFD. Then the product of primitive polynomials is primitive.
+    </p>
+    <p>
+      \(\textbf{Proposition B. }\)Suppose \(R\) is a UFD with quotient field \(K\) and \(f(x) \in R[x]\) is primitive.
+      Then \(f(x)\) is irreducible in \(R[x]\) if and only if it is irreducible in \(K[x]\).
+    </p>
+    <p>
+      \(\textbf{Proposition C. }\)Suppose \(R\) is a UFD and \(f(x) \in R[x]\) is primitive and irreducible. Then
+      \(f(x)\) is a prime element.
+    </p>
+    <p>
+      <b>Theorem.</b> Let \( f, g \in F[x] \), and assume that \( g \) is nonzero. Then there are polynomials \( q, r
+      \in F[x] \) such that
+      \[ f = qg + r, \]
+      where \( r = 0 \) or \( \deg(r) < \deg(g) \). Furthermore, \( q \) and \( r \) are unique. </p>
+        <p>
+          <b><i>"Galois Theory", Second Edition, David A. Cox, Page 522</i></b>
+        </p>
+        <p>
+          <b>Corollary.</b> Let \( f \in F[x] \) be non-constant. Then \( f \) has at most \(\deg(f)\) roots in the
+          field \( F \).
+        </p>
+        <p>
+          <b><i>"Galois Theory", Second Edition, David A. Cox, Page 522</i></b>
+        </p>
+  </section>
+
+  <br>
+
+  <section id='division_algorithm_sagemath'>
+    <h2>Do Division Algorithm in SageMath</h2>
+    <p>
+
+    </p>
+    <div class="code-box-container">
+      <div class="code-box">
+        <pre><code>
+            <span class='keyword'>sage:</span> <span class='comment'># Define the polynomial ring over QQ</span>
+            <span class='keyword'>sage:</span> R.<<span class='variable'>x</span>> = QQ['x']
+              <span class='keyword'>sage:</span>
+              <span class='keyword'>sage:</span> <span class='comment'># Define the polynomials</span>
+              <span class='keyword'>sage:</span> f = x^<span class='number'>3</span> + <span
+                class='number'>2</span>*x^<span class='number'>2</span> + <span class='number'>3</span>* + <span
+                class='number'>4</span>
+              <span class='keyword'>sage:</span> g = x + <span class='number'>1</span>
+              <span class='keyword'>sage:</span>
+              <span class='keyword'>sage:</span> <span class='comment'># Perform the division to get quotient and
+                remainder</span>
+              <span class='keyword'>sage:</span> quotient, remainder = f.quo_rem(g)
+              <span class='keyword'>sage:</span>
+              <span class='keyword'>sage:</span> <span class='comment'># Display the results</span>
+              <span class='keyword'>sage:</span> <span class='function'>print</span>("Quotient:", quotient)
+              <span class='outcome'>Quotient: x^2 + x + 2</span>
+              <span class='keyword'>sage:</span> <span class='function'>print</span>("Remainder:", remainder)
+              <span class='outcome'>Remainder: 2</span>
+          </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <section id='adjoining_element'>
+    <h2>Adjoining Element</h2>
+    <p>
+      \(\textbf{Definition.}\) The \(\textit{polynomial ring}\) in the variables \( x_1, x_2, \ldots, x_n \) with
+      coefficients in \( R \), denoted \( R[x_1, x_2, \ldots, x_n] \), is defined inductively by
+      \[
+      R[x_1, x_2, \ldots, x_n] = R[x_1, x_2, \ldots, x_{n-1}][x_n].
+      \]
+    </p>
+    <p>
+      \(\textbf{Adjoining Elements.}\) We next show how to describe some interesting subrings and subfields of a given
+      extension \( F \subset L \).
+      Given \( \alpha_1, \ldots, \alpha_n \in L \), we define
+      \[
+      F[\alpha_1, \ldots, \alpha_n] = \{ h(\alpha_1, \ldots, \alpha_n) \mid h \in F[x_1, \ldots, x_n] \}.
+      \]
+      Hence \( F[\alpha_1, \ldots, \alpha_n] \) consists of all polynomial expressions in \( L \) that can be formed
+      using \( \alpha_1, \ldots, \alpha_n \) with coefficients in \( F \).
+    </p>
+    <p>
+      \(\textbf{Note. }\)Keep in mind that \(F[\alpha_1, \ldots, \alpha_n]\) is a ring, not necessarily a field.
+    </p>
+    <p>
+      For example let Let \(F = \mathbb{Q}\) and \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\) is not a field.
+      We know that \(1 + \sqrt{2} + \sqrt{3}\in \mathbb{Q}[\sqrt{2}+\sqrt{3}]\). However, we can see that
+      \(\frac{1}{1 + \sqrt{2} + \sqrt{3}}\) is not in \(\mathbb{Q}[\sqrt{2}+\sqrt{3}]\).
+    </p>
+    <p>
+      Let
+      \[
+      F(\alpha_1, \ldots, \alpha_n) = \left\{ \frac{\alpha}{\beta} \mid \alpha, \beta \in F[\alpha_1, \ldots, \alpha_n],
+      \beta \neq 0 \right\}.
+      \]
+      Thus \( F(\alpha_1, \ldots, \alpha_n) \) is the set of all rational expressions in the \( \alpha_i \) with
+      coefficients in \( F \).
+    </p>
+    <p>
+      \(\textbf{Lemma. }\)\( F(\alpha_1, \ldots, \alpha_n) \) is the smallest subfield of the field \( L \) containing
+      \( F \) and \( \alpha_1, \ldots, \alpha_n \).
+    </p>
+    <p>
+      \(\textbf{Proof. }\) Let \(L\) be a field containing \(F\) and \(\alpha_1, \ldots, \alpha_n\).
+      Firstly, we show that \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \).
+      Thus, to prove the lemma, we must show that if \( K \) is a subfield of \( L \) containing \( F \) and \(
+      \alpha_1, \ldots, \alpha_n \), then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K \).
+      This is what "smallest" means in the statement of the lemma.
+      Suppose that \( K \subseteq L \) contains \( F \) and \( \alpha_1, \ldots, \alpha_n \).
+      Since \( K \) is closed under multiplication and addition, it follows that \( p(\alpha_1, \ldots, \alpha_n) \in K
+      \) for any polynomial \( p \in F[x_1, \ldots, x_n] \).
+      This shows that \( F[\alpha_1, \ldots, \alpha_n] \subseteq K \). Then \( F(\alpha_1, \ldots, \alpha_n) \subseteq K
+      \) follows immediately, since \( K \) is a field.
+      Since \( F(\alpha_1, \ldots, \alpha_n) \) is a subfield of \( L \) containing \( F \), we get extensions
+      \[
+      F \subseteq F(\alpha_1, \ldots, \alpha_n) \subseteq L.
+      \]
+      We say that \( F(\alpha_1, \ldots, \alpha_n) \) is obtained from \( F \) by adjoining \( \alpha_1, \ldots,
+      \alpha_n \in L \).
+    </p>
+  </section>
+
+  <br>
+
+  <section id='construction_field'>
+    <h2>Construction of Fields</h2>
+    <p>
+      <b>Theorem.</b> For a prime \( p \) and a monic irreducible \( \pi(x) \) in \( \mathbb{F}_p[x] \) of degree \( n
+      \), the ring \( \mathbb{F}_p[x]/(\pi(x)) \) is a field of order \( p^n \).
+    </p>
+    <p>
+      <b>Proof.</b> The cosets mod \( \pi(x) \) are represented by remainders
+      \[ c_0 + c_1 x + \cdots + c_{n-1} x^{n-1}, \quad c_i \in \mathbb{F}_p, \]
+      and there are \( p^n \) of these. Since the modulus \( \pi(x) \) is irreducible, the ring \(
+      \mathbb{F}_p[x]/(\pi(x)) \) is a field using the same proof that \( \mathbb{Z}/(m) \) is a field when \( m \) is
+      prime. \(\blacksquare\)
+    </p>
+    <p>
+      <a href="https://kconrad.math.uconn.edu/blurbs/galoistheory/finitefields.pdf"><b><i>"FINITE FIELDS", Keith
+            Conrad</i></b></a>
+    </p>
+  </section>
+
+  <section id='splitting_field'>
+    <h2>Splitting Field</h2>
+    <p>
+      \(\textbf{Definition 5.1.1}\) Let \( f \in F[x] \) have degree \( n > 0 \). Then an extension \( F \subset L \) is
+      a splitting field of \( f \) over \( F \) if
+    </p>
+    <ul>
+      <li>
+        \( f = c(x - \alpha_1) \cdots (x - \alpha_n) \), where \( c \in F \) and \( \alpha_i \in L \), and
+      </li>
+      <li>
+        \( L = F(\alpha_1, \ldots, \alpha_n) \).
+      </li>
+    </ul>
+    <p>
+      \textbf{Definition.} Let \( K \) be a field and let \( f(x) \) be a polynomial in \( K[x] \). We say that \( f(x)
+      \) \textit{splits} in \( K \) if there are elements \( \alpha_1, \alpha_2, \ldots, \alpha_n \) of \( K \) such
+      that
+      \[
+      f(x) = \lambda(x - \alpha_1)(x - \alpha_2)\ldots(x - \alpha_n).
+      \]
+      We say that a field extension \( L/K \) is a \textit{splitting field} if \( f(x) \) splits in \( L \) and there is
+      no proper intermediary subfield \( M \) in which \( f(x) \) splits.
+    </p>
+    <p>
+      \(\textbf{Definition. }\) For a finite extension of fields \( F \subseteq K \), \( \alpha \in K \) is a
+      \(\textit{primitive element}\) if \( K = F(\alpha) \).
+    </p>
+    <p>
+      \(\textbf{Primitive Element Theorem. }\) Suppose \( F \subseteq K \) is an extension of fields satisfying \( [K :
+      F] \lt \infty \). If \( \mathbb{Q} \subseteq F \), then there exists a primitive element \( \alpha \in K \) such
+      that \( K = F(\alpha) \).
+    </p>
+    <p>
+      \(\textbf{Proposition. }\) Let \( 0 \neq f(x) \in F[x] \) be a non-constant polynomial. The following are
+      equivalent:
+    </p>
+    <ul>
+      <li>
+        \(\text{GCD}(f(x), f'(x)) = 1\)
+      </li>
+      <li>
+        \( f(x) \) and \( f'(x) \) have no root in common (say, in the splitting field of \( f(x) \) over \( F \)).
+      </li>
+      <li>
+        \( f(x) \) has distinct roots in its splitting field over \( F \).
+      </li>
+    </ul>
+    <p>
+      \(\textbf{Corollary. }\) If \( F \) is a field containing \( \mathbb{Q} \) and \( p(x) \in F[x] \) is irreducible,
+      then \( p(x) \) has distinct roots in \( K \), the splitting of \( p(x) \) over \( F \).
+    </p>
+  </section>
+
+  <br>
+
+
+  <section id='minimal_polynomial'>
+    <h2>Minimal Polynomial</h2>
+    <p>
+      \(\textbf{Proposition.}\) Let \(\alpha \in L\) be algebraic over \(F\), and let \(p \in F[x]\) be its minimal
+      polynomial. If \(f \in F[x]\) is a non-constant monic polynomial, then
+      \[
+      f = p \Leftrightarrow f \text{ is a polynomial of minimal degree satisfying } f(\alpha) = 0 \Leftrightarrow f
+      \text{ is irreducible over } F \text{ and } f(\alpha) = 0.
+      \]
+    </p>
+    <p>
+      Let us briefly talk about how to use SageMath to find the minimal polynomial of an element. Suppose that your
+      \(\alpha = \sqrt{2}\).
+    </p>
+    <div class="code-box-container">
+      <div class="code-box">
+        <pre><code>
+            <span class="keyword">sage:</span> <span class="function">var</span>(<span class="string">'a'</span>)
+            <span class="keyword">sage:</span> a <span class="operator">=</span> <span class="function">sqrt</span><span
+              class="group">(</span><span class="number">2</span><span class="group">)</span>; a
+            <span class="outcome">sqrt(2)</span>
+            <span class="keyword">sage:</span> p <span class="operator">=</span> a.minpoly<span class="group">()</span>;
+            p
+            <span class="outcome">x^2 - 2</span>
+          </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <section id='field_extension'>
+    <h2>Field Extension</h2>
+    <p>
+      <b>Proposition.</b> A splitting field of a polynomial of degree \( n \) over \( F \) is of degree at most \( n! \)
+      over \( F \).
+    </p>
+    <p>
+      <i><b>"Abstract Algebra", Page 538</b></i>
+    </p>
+    <p>
+      \(\textbf{Definition. }\) Suppose that \(F\subset K\) and \([K: F]\lt\infty\). We say that \(\alpha\in K\) is a
+      \(\textit{primitive element}\) for \(F\subset K\) if \(K = F(\alpha)\).
+    </p>
+    <p>
+      \(\textbf{Lemma. }\) An extension \(F \subset L\) has degree \([L: F] = 1\) if and only if \(F = L\).
+    </p>
+    <p>
+      \(\textbf{Proposition. }\) Let \(F \subset K\) and \([K: F]\lt\infty, |F| = \infty\).
+      Then there exists a primitive element for \(F\subset K\) if and only if there are only finitely many intermediate
+      fields between \(F\) and \(K\).
+    </p>
+    <p>
+      \(\textbf{Corollary. }\) Suppose that \(\mathbb{Q}\subset F\) and \([K: F]\lt\infty\).
+      Then there are only finitely many intermediate fields between \(F\) and \(K\).
+    </p>
+    <p>
+      \(\textbf{Proposition.}\) Suppose that \([K: F]\lt\infty\). Then every \(\alpha \in K\) is algebraic over \(F\).
+    </p>
+    <p>
+      \(\textbf{Theorem.}\) Suppose that \(F\subset E\subset K\), and \(E\) is algebraic over \(F\) and \(K\) is
+      algebraic over \(E\).
+      Then \(K\) is algebraic over \(F\).
+    </p>
+    <p>
+      \(\textbf{Lemma.}\)
+      Assume that \(F \subset L\) is a field extension, and let \(\alpha \in L\) be algebraic over \(F\) with minimal
+      polynomial \(p \in F[x]\). Then there is a unique ring isomorphism
+      \[
+      F[\alpha] \cong F[x]/(p)
+      \]
+      that is the identity on \(F\) and maps \(\alpha\) to the coset \(x + (p)\).
+    </p>
+    <p>
+      \(\textbf{Proposition.}\)
+      Assume that \(F \subset L\) is a field extension, and let \(\alpha \in L\). Then \(\alpha\) is algebraic over
+      \(F\) if and only if \(F[\alpha] = F(\alpha)\).
+    </p>
+    <p>
+      \(\textbf{Theorem.}\) Let \( F \subseteq K \) be fields such that \( K \) is the splitting field of \( f(x) \)
+      over \( F \). If the irreducible polynomial \( p(x) \in F[x] \) has a root in \( K \), then it splits over \( K
+      \).
+    </p>
+    <p>
+      \(\textbf{Crucial Proposition. }\) Let \( F_1 \subseteq K_1 \), \( F_2 \subseteq K_2 \) be fields, \( p_1(x) \in
+      F_1[x] \), \( p_2(x) \in F_2[x] \) be monic irreducible polynomials of degree \( d \), and \( \alpha_1 \in K_1 \),
+      \( \alpha_2 \in K_2 \) roots of \( p_1(x) \) and \( p_2(x) \), respectively. Suppose \( \sigma : F_1 \to F_2 \) is
+      an isomorphism such that \( p_2(x) = p_1(x)^\sigma \). Then there exists an isomorphism \( \tilde{\sigma} :
+      F_1(\alpha_1) \to F_2(\alpha_2) \) extending \( \sigma \) such that \( \tilde{\sigma}(\alpha_1) = \alpha_2 \).
+      We noted that in the proposition, \( p_1(x)^\sigma \) denotes the polynomial in \( F_2[x] \) obtained by applying
+      \( \sigma \) to the coefficients of \( p_1(x) \).
+    </p>
+  </section>
+
+  <br>
+
+  <section id='separable'>
+    <h2>Separable</h2>
+    <p>
+      \(\textbf{Definition. }\)A polynomial \(f\in F [x]\) is separable if it is non-constant and its roots
+      in a splitting field are all simple.
+    </p>
+    <p>
+      \(\textbf{Theorem. }\)A nonzero polynomial in \(K[X]\) is separable if and only if it is relatively
+      prime to its derivative in \(K[X]\).
+    </p>
+    <p>
+      \(\textbf{Proof. }\)We firstly show that if a nonzero polynomial in \(K[X]\) is separable, then it is relatively
+      prime to its derivative in \(K[X]\).
+      Suppose that \(f(x)\in K[X]\) is separable, then we have \(f(x) = (x - \alpha)h(x)\) for some \(\alpha\) in the
+      extension of \(K\).
+      Note that \((x - \alpha)\) is the distinct factor of \(f\) because of the definition of separable.
+      In other words, \(h(\alpha)\neq 0\).
+      Then we have
+      \[
+      \begin{align}
+      f'(x) &= h(x) + (x - \alpha)h'(x). \\
+      f'(\alpha) &= h(\alpha) + (\alpha - \alpha)h'(\alpha) = h(\alpha) \neq 0. \\
+      \end{align}
+      \]
+      In that case, we can know that \(f\) and \(f'\) do not share the same root, which implies that
+      they do not have the same factor. Hence, we have \(f\) and \(f'\) are relatively prime.
+      For the other direction, we will prove it with contrapositive.
+      Suppose that \(f(x)\) is not separable, given the definition of separable, we can know that \(f(x)\) has a
+      repeated roots.
+      Then we have \(f(x) = (x - \alpha)^2h(x)\) for some \(\alpha\) in the extension of \(K\).
+      Hence, we can get
+      \[
+      \begin{align}
+      f'(x) &= 2(x - \alpha)h(x) + (x - \alpha)^2h'(x)\\
+      f'(\alpha) &= 2(\alpha - \alpha)h(\alpha) + (\alpha - \alpha)^2h'(\alpha) = 0. \\
+      \end{align}
+      \]
+      Therefore, we can know that \(f\) and \(f'\) have some similar factor. Hence, we have \(f\) and \(f'\) are not
+      relatively prime. \(\blacksquare\)
+    </p>
+  </section>
+
+  <br>
+
+  <section id='algebraic_closure'>
+    <h2>Algebraic Closure</h2>
+    <p>
+      \(\textbf{Definition.}\) Let \(F\) be a field and \(K\) be a subfield of \(F\). An element \(\alpha \in F\) is
+      said to be \(\textbf{algebraic over}\) \(K\) if there exists a non-zero polynomial \(f(x) \in K[x]\) such that
+      \(f(\alpha) = 0\). In other words, \(\alpha\) is a root of a non-zero polynomial with coefficients in \(K\).
+    </p>
+    <p>
+      \(\textbf{Definition.}\) An \(\textbf{algebraic extension}\) \(L\) of a field \(K\) is a field extension such that
+      every element of \(L\) is algebraic over \(K\). In other words, if \(L\) is an algebraic extension of \(K\), then
+      for every \(\alpha \in L\), there exists a non-zero polynomial \(f(x) \in K[x]\) such that \(f(\alpha) = 0\).
+    </p>
+    <p>
+      \(\textbf{Definition.}\) A field \(\mathbb{F}\) is algebraically closed if every non-constant polynomial in
+      \(\mathbb{F}[x]\) has a root in \(\mathbb{F}\).
+    </p>
+    <p>
+      \(\textbf{Definition.}\) Let \(F\) be a field. The set of all elements in \(F\) that are algebraic over \(K\) is
+      denoted by \(\overline{K}\) and is called the \(\textbf{algebraic closure}\) of \(K\) in \(F\).
+    </p>
+    <p>
+      \(\textbf{Alternate Definition.}\) An algebraic closure of a field \(F\) is an algebraic extension \(K\) of \(F\)
+      such that every polynomial in \(F[x]\) splits in \(K\).
+    </p>
+    <p>
+      \(\textbf{Theorem.}\) Let \( F \) be a field, then there exists an algebraic closure for \( F \), i.e., a field \(
+      \overline{F} \subseteq F \) such that \( \overline{F} \) is algebraically closed and algebraic over \( F \).
+    </p>
+  </section>
+
+  <br>
+
+  <section id='galois_theory'>
+    <h2>Galois Theory</h2>
+    <p>
+      \(\textbf{Proposition. }\) Let \( F \subset L \) be a finite extension and let \( \sigma \in \text{Gal}(L/F) \).
+      Then:
+    </p>
+    <ul>
+      <li>If \(h \in F[x]\) is a non-constant polynomial with \( \alpha \in L \) as a root, then \( \sigma(\alpha) \) is
+        also a root of \( h \) lying in \( L \).</li>
+      <li>If \(L = F(\alpha_1, \ldots, \alpha_n)\), then \( \sigma \) is uniquely determined by its values on \(
+        \alpha_1, \ldots, \alpha_n \).</li>
+    </ul>
+  </section>
+
+  <br>
+
+  <section id='galois_group'>
+    <h2>Galois Group</h2>
+    <p>
+      <b>Definition.</b> Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is the set
+      \[ \{\sigma: L \rightarrow L \mid \sigma \text{ is an automorphism, } \sigma(a) = a \text{ for all } a \in F\}. \]
+      In other words, \( \text{Gal}(L/F) \) consists of all automorphisms of \( L \) that are the identity on \( F \).
+      The basic structure of \( \text{Gal}(L/F) \) is as follows.
+    </p>
+    <p>
+      <b>Definition.</b> Let \( K / F \) be a finite extension. Then \( K \) is said to be Galois over \( F \) and \( K
+      / F \) is a Galois extension if \( | \text{Aut}(K / F) | = [K : F] \). If \( K / F \) is Galois the group of
+      automorphisms \( \text{Aut}(K / F) \) is called the Galois group of \( K / F \), denoted \( \text{Gal}(K / F) \).
+    </p>
+    <p>
+      <b>Corollary.</b> If \( K \) is the splitting field over \( F \) of a separable polynomial \( f(x) \) then \( K /
+      F \) is Galois.
+    </p>
+    <p>
+      <i><b>"Abstract Algebra", Page 562</b></i>
+    </p>
+    <p>
+      <b>Definition.</b> If \( f(x) \) is a separable polynomial over \( F \), then the Galois group of \( f(x) \) over
+      \( F \) is the Galois group of the splitting field of \( f(x) \) over \( F \).
+    </p>
+    <p>
+      <i><b>"Abstract Algebra", Page 563</b></i>
+    </p>
+    <p>
+      \(\textbf{Theorem. }\) If \( L \) is the splitting field of a separable polynomial in \( F[x] \), then the Galois
+      group of \( f \) over \( F \) has order \( \left| \text{Gal}(L/F) \right| = [L : F] \).
+    </p>
+    <p>
+      \(\textbf{Proposition. }\) Let \( F \subseteq L \) be a finite extension. Then \( \text{Gal}(L/F) \) is a group
+      under composition of functions.
+    </p>
+    <p>
+      \(\textbf{Proof.}\) We need to check the following properties:
+    </p>
+    <ul>
+      <li>
+        \( \text{Gal}(L/F) \) is closed under composition of functions.
+      </li>
+      <li>
+        Suppose that \(\sigma\) and \(\delta\) are in \( \text{Gal}(L/F) \).
+        Then we have \(\sigma(\delta(a)) = \sigma(a) = a\) for all \(a\in F\).
+      </li>
+    </ul>
+    <p>We firstly show that \( \text{Gal}(L/F) \) is closed under composition of functions.</p>
+    <div class="code-box-container">
+      <div class="code-box">
+        <pre><code>
+            <span class="keyword">sage:</span> R.<span class="operator">&lt;</span>x<span class="operator">&gt;</span>
+            <span class="operator">=</span> QQ[]
+
+            <span class="keyword">sage:</span> K.<span class="operator">&lt;</span>a<span class="operator">></span>
+            <span class="operator">=</span> <span class="function">NumberField</span><span class="group">(</span>x<span
+              class="operator">^</span><span class="number">3</span> <span class="operator">+</span> x<span
+              class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span
+              class="number">2</span><span class="group">)</span>
+
+            <span class="keyword">sage:</span> G <span class="operator">=</span> K.galois_group<span
+              class="group">()</span>; G
+            <span class="outcome">Galois group 3T2 (S3) with order 6 of x^3 + x^2 + 2</span>
+
+            <span class="keyword">sage:</span> G.easy_order<span class="group">()</span>
+            <span class="outcome">6</span>
+
+            <span class="keyword">sage:</span> G.list<span class="group">()</span>
+            <span class="outcome">[(),
+              (1,2,3)(4,5,6),
+              (1,3,2)(4,6,5),
+              (1,4)(2,6)(3,5),
+              (1,5)(2,4)(3,6),
+              (1,6)(2,5)(3,4)]</span>
+          </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <section id="k_state_2022_1">
+    <div class='question-box-container'>
+      <div class='question-box'>
+        <p>
+          \(\textbf{K-State 2022(1)}\) Let \( H \) be a subgroup of a group \( G \). Consider the subgroup
+          \[ L = \{ (h, h) \mid h \in H \} \]
+          of \( H \times G \). Prove that \( L \) is a normal subgroup in \( H \times G \) if and only if \( H \) is
+          contained in
+          the center of \( G \).
+        </p>
+      </div>
+    </div>
+    <p>
+      \(\textbf{Proof. }\)Firstly, we show that \( L \) is a normal subgroup in \( H \times G \) if \( H \) is contained
+      in the center of \( G \) (i.e. \(Z(G)\)).
+      Suppose that \(H\subset Z(G)\). Let \((h,g)\in H\times G\) and \((h', h')\in L\). Then
+      \[
+      \begin{align}
+      (h, g)(h', h')(h, g)^{-1} &= (h, g)(h', h')(h^{-1}, g^{-1})\\
+      &= (h, g)(h'h^{-1}, h'g^{-1})\\
+      &= (h h' h^{-1}, g h'g^{-1})\\
+      \end{align}
+      \]
+      Since \(H\subset Z(G)\), we have \(ghg^{-1}=h\) for any \(g\in G\). Thus, we have
+      \[
+      (h, g)(h', h')(h, g)^{-1} = (h h' h^{-1}, h h' h^{-1}) = (h', h')\in L.
+      \]
+      Hence, we show that \(L\) is a normal subgroup in \(H\times G\).
+      Now we show that if \(L\) is a normal subgroup in \(H\times G\), then \(H\subset Z(G)\).
+      Suppose that \(L\) is a normal subgroup in \(H\times G\). Let \(h\in H\) and \(g\in G\). Then
+      \[
+      \begin{align}
+      (h, g)(h_1, h_1)(h, g)^{-1} &= (h_2, h_2)\\
+      \end{align}
+      \]
+      for some \(h_1, h_2\in H\).
+      Since \((e, g)\in H\times G\), we have
+      \[
+      \begin{align}
+      (e, g)(h_1, h_1)(e, g)^{-1} &= (e, g)(h_1, h_1)(e, g^{-1})\\
+      &= (eh_1e, gh_{1}g^{-1})\\
+      &= (h_1, gh_1g^{-1})\\
+      &= (h_2, h_2)\\
+      \end{align}
+      \]
+      Hence, we can get \(h_1=h_2\). Thus, we have \(gh_1g^{-1}=h_1\) for any \(g\).
+      Therefore, we show that \(H\subset Z(G)\). \(\blacksquare\)
+    </p>
+  </section>
+
+  <!-- <section id = 'k_state_2022_4'>
+    <h2>K-State 2022(4)</h2>
+    <p>
+      Let \( R \) be a ring and \( M \) be a left \( R \)-module. For each element \( m \in M \), define
+      \[
+      \text{Ann}_R(m) = \{ r \in R \mid rm = 0 \}.
+      \]
+      Prove that \(\text{Ann}_R(m)\) is a left ideal of \( R \).
+      Give an example of \( R, M, \) and \( m \in M \) such that \(\text{Ann}_R(m)\) is not a right ideal.
+    </p>
+    <p>
+      \(\textbf{Proof. }\)Let \(r\in R \) and \(r'\in \text{Ann}_R(m)\). Then we have \(rr'\in \text{Ann}_R(m)\) since
+      \[
+        (rr')m = r(r'm) = r0 = 0.
+      \]
+      It shows that \(r\text{Ann}_R(m)\subset \text{Ann}_R(m)\) is a left ideal of \(R\).
+    </p>
+    </section> -->
+
+
+  <section id="References">
+    <h2>References</h2>
+    <ul>
+      <li>
+        <a href="https://archive.math.ksu.edu/course?course=qe_algebra">Qualifying Exams Kansas State Mathematics Ph.D.
+          Program (Algebra Archive)</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

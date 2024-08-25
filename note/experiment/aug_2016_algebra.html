@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for CSS structure-->
+    <title>KU 2016 (August) ALGEBRA QUALIFYING EXAM</title>
+</head>
+
+<body>
+<div class="top-bar"></div>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <span class="visually-hidden">Menu</span>
+</label>
+<nav class="navbar">
+    <a href="algebra.html#linear_transformation">Linear Transformation</a>
+    <a href="algebra.html#multiplicity">Multiplicity</a>
+    <a href="algebra.html#dual_space">Dual Space</a>
+    <a href="algebra.html#linear_minimal_polynomial">Minimal Polynomial</a>
+    <a href="algebra.html#t_complement">\(T\)-Complement</a>
+    <a href="algebra.html#cyclic_operator">Cyclic Operator</a>
+    <a href="algebra.html#indecomposable_operator">Indecomposable Operator</a>
+    <a href="algebra.html#characteristic_polynomial">Characteristic Polynomial</a>
+    <a href="algebra.html#diagonalizable">Diagonalizable</a>
+    <a href="algebra.html#smith_normal_form">Smith Normal Form</a>
+    <a href="algebra.html#normal_subgroup">Normal Subgroup</a>
+    <a href="algebra.html#isomorphism">Isomorphism</a>
+    <a href="algebra.html#center">Center</a>
+    <a href="algebra.html#centralizer">Centralizer</a>
+    <a href="algebra.html#normalizer">Normalizer</a>
+    <a href="algebra.html#stabilizer">Stabilizer</a>
+    <a href="algebra.html#orbit">Orbit</a>
+    <a href="algebra.html#p_group">\(p\)-group</a>
+    <a href="algebra.html#sylow_p_subgroup">Sylow \(p\)-Subgroup</a>
+    <a href="algebra.html#sylow_theorem">Sylow's Theorem</a>
+    <a href="algebra.html#simple_group">Simple Group</a>
+    <a href="algebra.html#solvable_group">Solvable Group</a>
+    <a href="algebra.html#field">Field</a>
+    <a href="algebra.html#integral_domain">Integral Domain</a>
+    <a href="algebra.html#ascending_chain_condition">Ascending Chain Condition</a>
+    <a href="algebra.html#principal_ideal_domain">Principal Ideal Domain</a>
+    <a href="algebra.html#unique_factorization_domain">Unique Factorization Domain</a>
+    <a href="algebra.html#polynomial_ring">Polynomial Ring</a>
+    <a href="algebra.html#division_algorithm_sagemath">Division Algorithm in SageMath</a>
+    <a href="algebra.html#prime_irreducible">Prime and Irreducible</a>
+    <a href="algebra.html#adjoining_element">Adjoining Element</a>
+    <a href="algebra.html#splitting_field">Splitting Field</a>
+    <a href="algebra.html#minimal_polynomial">Minimal Polynomial</a>
+    <a href="algebra.html#field_extension">Field Extension</a>
+    <a href="algebra.html#separable">Separable</a>
+    <a href="algebra.html#algebraic_closure">Algebraic Closure</a>
+    <a href="algebra.html#galois_group">Galois Group</a>
+    <a href="algebra.html#galois_theory">Galois Theory</a>
+    <a href="jan_2015_algebra.html">KU 2015 (January)</a>
+    <a href="aug_2015_algebra.html">KU 2015 (August)</a>
+    <a href="jan_2016_algebra.html">KU 2016 (January)</a>
+    <a href="aug_2016_algebra.html">KU 2016 (August)</a>
+    <a href="jan_2017_algebra.html">KU 2017 (January)</a>
+    <a href='aug_2017_algebra.html'>KU 2017 (August)</a>
+    <a href='jan_2018_algebra.html'>KU 2018 (January)</a>
+    <a href='aug_2018_algebra.html'>KU 2018 (August)</a>
+    <a href='jan_2019_algebra.html'>KU 2019 (January)</a>
+    <a href='aug_2019_algebra.html'>KU 2019 (August)</a>
+    <a href='jan_2020_algebra.html'>KU 2020 (January)</a>
+    <a href='aug_2020_algebra.html'>KU 2020 (August)</a>
+    <a href='jan_2021_algebra.html'>KU 2021 (January)</a>
+    <a href='aug_2021_algebra.html'>KU 2021 (August)</a>
+    <a href='jan_2022_algebra.html'>KU 2022 (January)</a>
+    <a href='aug_2022_algebra.html'>KU 2022 (August)</a>
+    <a href='jan_2023_algebra.html'>KU 2023 (January)</a>
+    <a href='aug_2023_algebra.html'>KU 2023 (August)</a>
+    <a href='jan_2024_algebra.html'>KU 2024 (January)</a>
+</nav>
+<script src="click.js"></script>
+<!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+<script src="highlight.js"></script><!--It is a link for highlight.js-->
+<script src="mathjax_config.js"></script><!--It is a link for mathjax_configuration-->
+
+<h1>KU 2016 (August)</h1>
+
+<section>
+    <p>
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts
+        in abstract algebra, and it is not fully completed.
+        Feel free to email me at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions
+        for improvement.
+    </p>
+</section>
+
+<section id='ku_2016_8_1'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>1.</b> Let \(R\) be a commutative ring with unity. Let \(U(R)\) be the set of units in \(R\).
+            </p>
+            <p>
+                (a) Show that \(U(R)\) is an abelian group under multiplication.
+            </p>
+            <p>
+                (b) Let \(R = \mathbb{Z}[x]/(x^2)\). Show that \(U(R) \cong \mathbb{Z} \times \mathbb{Z}_2\). Justify your
+                answer carefully.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Given that \(R\) is a commutative ring with unity and \(U(R)\) is the set of units in \(R\).
+        Hence, we know that \(1\in U(R)\). For any \(a\in U(R)\), we have \(a\cdot a^{-1}\in U(R)\) where \(a^{-1}\in
+        U(R)\) since \(a\) is a unit.
+        For any \(a, b\in U(R)\), we can know that \(ab\in U(R)\) since \(b^{-1}, a^{-1}\in U(R)\) and \(b^{-1}a^{-1}\in
+        U(R)\).
+        Therefore, we can know that \(U(R)\) is a group under multiplication. \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (b).</b> Firstly, we can know that \((x^2) = \{f\cdot x^2 \mid f\in \mathbb{Z}[x]\}\).
+        Hence, let \(f = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\), where \(a_i\in \mathbb{Z}\).
+        Hence, we have \(f\cdot x^2 = a_nx^{n+2} + a_{n-1}x^{n+1} + \cdots + a_1x^3 + a_0x^2\).
+        Thus, we can know that \(R = \mathbb{Z}[x]/(x^2) = \{ax + b\,\mid\, a, b\in \mathbb{Z}\}\).
+        Suppose that \(ax + b\in U(R)\), then we can know that there exists \(cx + d\in U(R)\) such that
+        \((ax + b)(cx + d) = 1\). Hence, we have \(acx^2 + (ad + bc)x + bd = (ad + bc)x + bd = 1\), which implies that
+        \(ad + bc = 0\) and \(bd = 1\).
+        Since \(b, d\in \mathbb{Z}\), we can know that \(b = d = -1\) or \(b = d = 1\) in order to make sure \(bd = 1\).
+        Hence, we have \(a + c = 0\), which implies that \(a = -c\).
+        Hence, we can know that \(U(R) = \{ax + 1, bx - 1\,\mid\, a, b\in \mathbb{Z}\}\).
+        Let \(\varphi: U(R) \to \mathbb{Z}\times \mathbb{Z}_2\) be a map such that \(\varphi(ax + 1) = (a, 0)\) and
+        \(\varphi(bx - 1) = (b, 1)\).
+    </p>
+</section>
+
+<br>
+
+<section id='ku_2016_8_2'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                2. Recall that a splitting field for a polynomial \( f(x) \) over a field \( F \) is the smallest (in terms of
+                degree) extension \( K \) of \( F \) such that \( f(x) \) factors completely in \( K[x] \). Let \( F =
+                \mathbb{Z}_2 \).
+            </p>
+            <p>
+                (a) Prove that \( K = F[t]/(t^3 + t + 1) \) is a field of order 8.
+            </p>
+            <p>
+                (b) Prove that \( K \) is a splitting field for \( f(x) = x^7 - 1 \) over \( F \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a).</b> Firstly, we want to show that \(t^3 + t + 1\) is irreducible in \(F[t]\) by contradiction.
+        Suppose that \(t^3 + t + 1 = (t + a)(t^2 + bt + c)\) for some \(a, b, c\in F\).
+        Then we know that \(t^3 + t + 1\) has a root in \(F\), which is \(-a\).
+        However, \(1^3 + 1 + 1 = 1\) and \(0^3 + 0 + 1 = 1\). Hence, we can know that \(t^3 + t + 1\) has no root in
+        \(F\), which is a contradiction.
+        Thus, we can know that \(t^3 + t + 1\) is irreducible in \(F[t]\). Hence, we have \(K = F[t]/(t^3 + t + 1)\) is a
+        field.
+        Hence, the element in \(K\) is of the form \(a + bt + ct^2\) where \(a, b, c\in F\).
+        Each \(a, b, c\) has two choices, which implies that \(K\) has \(2^3 = 8\) elements. Therefore, we can know that
+        \(K\) is a field of order 8. \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (b).</b> Given that \(K\setminus\{0\}\) is a group of order \(7\) under multiplication. Thus, for any
+        \(x\in K\setminus \{0\}\), we have
+        \(x^7 = 1\).
+        Since each element of \(K\setminus\{0\}\) is root of \(x^7 - 1\), we can conclude that \(K\) is a splitting field
+        for \(f(x) = x^7 - 1\) over \(F\). \(\blacksquare\)
+    </p>
+</section>
+
+<br>
+
+<section id='ku_2016_8_3'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>3.</b> Let \( G \) be a group and \( \text{Aut}(G) \) be the group of automorphisms of \( G \). Recall that
+                for any \( c \in G \), we have an automorphism of \( G \) given by \( f_c(x) = c^{-1}xc \) (such an
+                automorphism is called an inner automorphism of \( G \)). It is not hard to see that \( \text{Inn}(G) \), the
+                collection of inner automorphisms of \( G \), is a subgroup of \( \text{Aut}(G) \).
+            </p>
+            <p>
+                (a) Show that \( G/Z(G) \cong \text{Inn}(G) \). Here \( Z(G) \) is the center of \( G \).
+            </p>
+            <p>
+                (b) Show that if \( \text{Aut}(G) \) is cyclic, then \( G \) is abelian.
+            </p>
+            <p>
+                (c) Find all prime numbers \( p \) such that there is a finite group \( G \) with \( \text{Aut}(G) \cong
+                \mathbb{Z}_p \). (Hint: show that if \( G \) is not \( \mathbb{Z}_2 \), then \( \text{Aut}(G) \) must have an
+                element of order 2).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (a)</b> Firstly, we define a map \(\varphi: G\to \text{Inn}(G)\) such that
+        \[
+        \varphi(g) = f_g(x) = g^{-1}xg.
+        \]
+        Then, we can see that \(\varphi\) is well-defined since if \(g = h\in G\), then we will have \(g^{-1}xg =
+        h^{-1}xh\).
+        Now, we want to show that \(varphi\) is a group homomorphism. Suppose that \(g, h\in G\), then we have
+        \[
+        \varphi(h)\cdot \varphi(g) = \varphi(g)\circ\varphi(h) = f_g\circ f_h(x) = f_g(h^{-1}xh) = g^{-1}h^{-1}xhg =
+        (hg)^{-1}x(hg) = f_{hg}(x) = \varphi(hg).
+        \]
+        Hence, we can know that \(\varphi\) is a group homomorphism. Since for any \(f_g(x)\in \text{Inn}(G)\), we have
+        \(\varphi(g) = f_g(x)\), which implies that \(varphi\) is surjective.
+        Now, we want to figure the kernel of \(\varphi\). In \(\text{Inn}(G)\), we can know that the identity of
+        \(\text{Inn}(G)\) is \(f_e(x) = e^{-1}xe = x\).
+        Hence, for any \(g\in \ker(\varphi)\), we have \(f_g(x) = g^{-1}xg = x\), which implies that \(g\in Z(G)\).
+        In other direction, for any \(z\in Z(G)\), we have \(f_z(x) = z^{-1}xz = x\), which implies that \(z\in
+        \ker(\varphi)\).
+        Thus, we can know that \(\ker(\varphi) = Z(G)\). By the \(\textbf{First Isomorphism Theorem}\), we can know that
+        \(G/Z(G) \cong \text{Inn}(G)\). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (b).</b> We know that if \(G\) is a cyclic group, any subgroup of a cyclic group is cyclic. Since
+        \(\text{Inn}(G)\) is a subgroup of \(\text{Aut}(G)\) and \(\text{Aut}(G)\) is cyclic, we can know that
+        \(\text{Inn}(G)\) is cyclic.
+        And we already showed that \(\text{Inn}(G)\} \cong G/Z(G)\). Hence, we can know that \(G/Z(G)\) is cyclic. Since
+        \(G/Z(G)\) is cyclic, we can know that \(G/Z(G) = \langle aZ(G)\rangle\) for some \(a\in G\).
+        Hence, for any \(g\in G\), we can know that \(gZ(G) = (aZ(G))^n = a^nZ(G)\) for some \(n\in \mathbb{Z}\).
+        Thus, we have \(Z(G) = (a^{-1})^ngZ(G) = a^{-n}gZ(G)\), which implies that there exists \(z\in Z(G)\) such that
+        \(a^{-n}g = z\).
+        Hence, we have \(g = za^n = a^nz\) for some \(z\in Z(G)\) and \(n\in \mathbb{Z}\). Now, suppose that \(g =
+        a^nz_1\) and \(h = a^mz_2\) for some \(n, m\in \mathbb{Z}\) and \(z_1, z_2\in Z(G)\).
+        Then we have
+        \[
+        gh = a^nz_1a^mz_2 = (a^nz_1a^m)z_2 = z_2a^nz_1a^m = z_2a^na^mz_1 = z_2a^{n+m}z_1 = z_2a^ma^nz_1 = a^mz_2a^nz_1 =
+        hg.
+        \]
+        Therefore, we can know that \(G\) is abelian. \(\blacksquare\)
+    </p>
+    <p>
+        <b>Solution (c).</b> Suppose that \(G\) is a finite group and there exists a prime \(p\) such that \(\text{Aut}(G)
+        = \mathbb{Z}_p\).
+        We know that \(\mathbb{Z}_p\) is a cyclic group. Based on part (b), we can know that \(G\) is an abelian group.
+        Assume that \(G\neq \mathbb{Z}_2\).
+        In that case, we can know there exists \(g\in G\) such that \(g^{-1}\neq g\).
+        Now define \(\varphi: G\to G\) such that \(\varphi(g) = g^{-1}\). Firstly, we can see that \(\varphi\) is
+        well-defined since if \(g = h\), we will have \(g^{-1} = h^{-1}\).
+        Now, we want to show that \(\varphi\) is a group homomorphism. Suppose that \(g, h\in G\), then we have
+        \[
+        \varphi(h)\cdot \varphi(g) = \varphi(g)\circ\varphi(h) = g^{-1}\circ h^{-1} = (hg)^{-1} = (gh)^{-1} = \varphi(gh).
+        \]
+        Hence, we can know that \(\varphi\) is a group homomorphism. Suppose that \(\varphi(g) = \varphi(h)\), then we
+        have \(g^{-1} = h^{-1}\), which implies that \(g = h\).
+        It shows that \(\varphi\) is injective. Given that \(G\) is a finite group, we can know that \(\varphi\) is
+        surjective by the \(\textbf{Pigeonhole Principle}\).
+        It means that \(\varphi\) is an automorphism of \(G\). For any \(g\in G\), we have \(\varphi^{2}(g) = g\), which
+        implies that \(\varphi\) has order of \(2\).
+        Hence, we can know that \(2\mid |\mathbb{Z}_p| = p\). If \(p\neq 2\), we can know that it is impossible that
+        \(2\mid p\) since \(p\) is a prime number.
+        Hence, \(p\) has to be \(2\) when \(G\neq \mathbb{Z}_2\). Let \(G = \mathbb{Z}_3\). For any \(\varphi\in
+        \text{Aut}(G)\), we have \(\varphi(0) = 0\), \(\varphi(1) = 1\) and \(\varphi(2) = 2\), which implies that
+        \(\varphi\) is the identity automorphism.
+        Besides that \(\psi\in \text{Aut}(G)\) such that \(\psi(0) = 0\), \(\psi(1) = 2\) and \(\psi(2) = 1\), which
+        implies that \(\psi\) has order of \(2\).
+        And those are the only automorphisms of \(\mathbb{Z}_3\), which means \(\text{Aut}(\mathbb{Z}_3) = \mathbb{Z}_2\).
+        When \(G = \mathbb{Z}_2\), let \(\varphi\in \text{Aut}(G)\) such that \(\varphi(0) = 0\) and \(\varphi(1) = 1\).
+        Then we have \(\varphi\) is the identity automorphism, and it is the only automorphism of \(\mathbb{Z}_2\). Same
+        for \(G = \mathbb{Z}_1\).
+        Thus, we can know that the only possible \(p\) is \(2\).
+    </p>
+</section>
+
+<section id='ku_2016_8_4'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>4.</b> Let \( A \) be an \( n \times n \) matrix over a field \( F \). Prove \( \det(A) \) equals \( (-1)^n
+                \) times the constant term of the characteristic polynomial of \( A \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Since the characteristic polynomial of \( A \) is \( \chi_A(x) = \det(xI - A) \), which is a
+        polynomial of degree \( n \) with variable \( x \).
+        And we know that \(\det(-A) = (-1)^n\det(A)\). Hence, we plug in \(x = 0\), we have
+        \[
+        (-1)^n\det(A) = \det(-A) = \det(0I - A).
+        \]
+        This implies that \( \det(A) \) equals \( (-1)^n \) times the constant term of the characteristic polynomial of \(
+        A \). \(\blacksquare\)
+    </p>
+</section>
+
+<section id='ku_2016_8_5'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                5. Let \( V \) denote the complex vector space of complex polynomials having degree at most five, endowed with
+                the usual inner product. In other words, for \( f(x), g(x) \in V \), \(\langle f(x), g(x) \rangle := \int_0^1
+                f(x) \overline{g(x)} \, dx \).
+            </p>
+            <p>
+                (a) Find an orthonormal basis for the space \( W \) spanned by \( x + x^2, x^2 + x^3, x^3, x^3 + x^4 \).
+            </p>
+            <p>
+                (b) Find (with proof) a self adjoint operator \( T : W \to W \) that is not the identity map.
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (a).</b> We will first find an orthogonal basis for \( W \). Let \( v_1 = x + x^2 \), \( v_2 = x^2 +
+        x^3 \), \( v_3 = x^3 \), and \( v_4 = x^3 + x^4 \) by \(\textbf{Gram-Schmidt orthogonalization}\).
+        We normalize \(v_1\) firstly and have
+        \[
+        u_1 = \dfrac{v_1}{\|v_1\| } = \dfrac{x + x^2}{\sqrt{\langle x + x^2, x + x^2 \rangle}} = \dfrac{x +
+        x^2}{\sqrt{\int_0^1 (x + x^2)(x + x^2) \, dx}} = \dfrac{x + x^2}{\sqrt{\dfrac{31}{30}} = \sqrt{\dfrac{30}{31}}(x +
+        x^2)}.
+        \]
+        Then we have
+        \[
+        \begin{align}
+        u_2 &= v_2 - \langle v_2, u_1 \rangle u_1 \\
+        &= x^2 + x^3 - \sqrt{\dfrac{30}{31}} \int_0^1 (x^2 + x^3)(x + x^2) \, dx (x + x^2)(\sqrt{\dfrac{30}{31}}) \\
+        &= x^2 + x^3 - \dfrac{30}{31} \int_0^1 (x^2+x^3)(x + x^2) \, dx (x + x^2) \\
+        &= -\frac{49}{62}x + x^3 - \dfrac{13}{62} x^2. \\
+        u_3 &= v_3 - \langle v_3, u_1 \rangle u_1 - \langle v_3, u_2 \rangle u_2 \\
+        \end{align}
+        ]
+    </p>
+</section>
+
+</body>
+
+</html>

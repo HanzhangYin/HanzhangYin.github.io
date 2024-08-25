@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <!--link for the font-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for CSS structure-->
+    <title>KU 2019 (August) ALGEBRA QUALIFYING EXAM</title>
+</head>
+
+<body>
+<div class="top-bar"></div>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <span class="visually-hidden">Menu</span>
+</label>
+<nav class="navbar">
+    <a href="algebra.html#linear_transformation">Linear Transformation</a>
+    <a href="algebra.html#multiplicity">Multiplicity</a>
+    <a href="algebra.html#dual_space">Dual Space</a>
+    <a href="algebra.html#linear_minimal_polynomial">Minimal Polynomial</a>
+    <a href="algebra.html#t_complement">\(T\)-Complement</a>
+    <a href="algebra.html#cyclic_operator">Cyclic Operator</a>
+    <a href="algebra.html#indecomposable_operator">Indecomposable Operator</a>
+    <a href="algebra.html#characteristic_polynomial">Characteristic Polynomial</a>
+    <a href="algebra.html#diagonalizable">Diagonalizable</a>
+    <a href="algebra.html#smith_normal_form">Smith Normal Form</a>
+    <a href="algebra.html#normal_subgroup">Normal Subgroup</a>
+    <a href="algebra.html#isomorphism">Isomorphism</a>
+    <a href="algebra.html#center">Center</a>
+    <a href="algebra.html#centralizer">Centralizer</a>
+    <a href="algebra.html#normalizer">Normalizer</a>
+    <a href="algebra.html#stabilizer">Stabilizer</a>
+    <a href="algebra.html#orbit">Orbit</a>
+    <a href="algebra.html#p_group">\(p\)-group</a>
+    <a href="algebra.html#sylow_p_subgroup">Sylow \(p\)-Subgroup</a>
+    <a href="algebra.html#sylow_theorem">Sylow's Theorem</a>
+    <a href="algebra.html#simple_group">Simple Group</a>
+    <a href="algebra.html#solvable_group">Solvable Group</a>
+    <a href="algebra.html#field">Field</a>
+    <a href="algebra.html#integral_domain">Integral Domain</a>
+    <a href="algebra.html#ascending_chain_condition">Ascending Chain Condition</a>
+    <a href="algebra.html#principal_ideal_domain">Principal Ideal Domain</a>
+    <a href="algebra.html#unique_factorization_domain">Unique Factorization Domain</a>
+    <a href="algebra.html#polynomial_ring">Polynomial Ring</a>
+    <a href="algebra.html#division_algorithm_sagemath">Division Algorithm in SageMath</a>
+    <a href="algebra.html#prime_irreducible">Prime and Irreducible</a>
+    <a href="algebra.html#adjoining_element">Adjoining Element</a>
+    <a href="algebra.html#splitting_field">Splitting Field</a>
+    <a href="algebra.html#minimal_polynomial">Minimal Polynomial</a>
+    <a href="algebra.html#field_extension">Field Extension</a>
+    <a href="algebra.html#separable">Separable</a>
+    <a href="algebra.html#algebraic_closure">Algebraic Closure</a>
+    <a href="algebra.html#galois_group">Galois Group</a>
+    <a href="algebra.html#galois_theory">Galois Theory</a>
+    <a href="jan_2015_algebra.html">KU 2015 (January)</a>
+    <a href="aug_2015_algebra.html">KU 2015 (August)</a>
+    <a href="jan_2016_algebra.html">KU 2016 (January)</a>
+    <a href="aug_2016_algebra.html">KU 2016 (August)</a>
+    <a href="jan_2017_algebra.html">KU 2017 (January)</a>
+    <a href='aug_2017_algebra.html'>KU 2017 (August)</a>
+    <a href='jan_2018_algebra.html'>KU 2018 (January)</a>
+    <a href='aug_2018_algebra.html'>KU 2018 (August)</a>
+    <a href='jan_2019_algebra.html'>KU 2019 (January)</a>
+    <a href='aug_2019_algebra.html'>KU 2019 (August)</a>
+    <a href='jan_2020_algebra.html'>KU 2020 (January)</a>
+    <a href='aug_2020_algebra.html'>KU 2020 (August)</a>
+    <a href='jan_2021_algebra.html'>KU 2021 (January)</a>
+    <a href='aug_2021_algebra.html'>KU 2021 (August)</a>
+    <a href='jan_2022_algebra.html'>KU 2022 (January)</a>
+    <a href='aug_2022_algebra.html'>KU 2022 (August)</a>
+    <a href='jan_2023_algebra.html'>KU 2023 (January)</a>
+    <a href='aug_2023_algebra.html'>KU 2023 (August)</a>
+    <a href='jan_2024_algebra.html'>KU 2024 (January)</a>
+</nav>
+<script src="click.js"></script>
+<!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+<script src="highlight.js"></script><!--It is a link for highlight.js-->
+<script src="mathjax_config.js"></script><!--It is a link for mathjax_configuration-->
+
+<h1>KU 2019 (August) ALGEBRA QUALIFYING EXAM</h1>
+
+<section>
+    <p>
+        My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts
+        in abstract algebra, and it is not fully completed.
+        Feel free to email me at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions
+        for improvement.
+    </p>
+</section>
+
+<section id='ku_2019_8_2'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>Problem 2.</b> Let \(V\) be a finite dimensional vector space over the complex numbers and \(T\) a linear
+                operator on \(V\) such that the subspaces of \(V\) generated by all the eigenvectors is one dimensional.
+                Prove that the minimal polynomial of \(T\) is \((x − \lambda)^n\) where \(n\) is the dimension of \(V\) .
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof.</b> Given that the subspaces of \(V\) generated by all the eigenvectors is one dimensional, we can know
+        that the basis of the subspace is \(\{v\}\), where \(v\) is the eigenvector of \(T\).
+        Then we have \(T(v) = \lambda v\), where \(\lambda\) is the correspondent eigenvalue of \(v\). Hence, if \(v'\) is
+        an eigenvector of \(T\). Then, we can know that \(v' = cv\) for some \(c\in\mathbb{C}\).
+        Hence, we have
+        \[
+        T\cdot v' = T\cdot cv = cT\cdot v = c\lambda v = \lambda cv = \lambda v'.
+        \]
+        Thus, we show that there is only one eigenvalue of \(T\), which is \(\lambda\).
+        Then, we can know that the characteristic polynomial of \(T\) is \((x - \lambda)^n\), where \(n\) is the dimension
+        of \(V\).
+        In that case, the minimal polynomial of \(T\) is \((x - \lambda)^m\), where \(m\leq n\) (to be continued...)
+    </p>
+</section>
+
+<section id='ku_2019_8_5'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>5.</b> Consider the ring \(R = \mathbb{Q}[x, y, z]/I\), where \(I = (x^2y - z^5)\).
+            </p>
+            <p>
+                (i) Prove that \(R\) is not a field. Then decide whether \(R\) is an integral domain, and justify your answer.
+            </p>
+            <p>
+                (ii) Given \(f\in \mathbb{Q}[x, y, z]\), let \(\overline{f}\) denote the element \(f + I\) of \(R\). Is the
+                ideal \(J = (\bar x, \bar y)\) a prime ideal of \(R\)?
+                Prove your answer.
+            </p>
+            <p>
+                (iii) Show that \(\overline{z^5} \in J^2\), but that \(\overline{z^4}\notin J^2\).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (i).</b> We know that \(\mathbb{Q}[x, y, z]/I\) is a field if and only if \(I\) is a maximal ideal.
+        We know that \((x^2y - z^5)\subset (x^2y - z^5, z)\) since \(x^2y - z^5 = 1\cdot (x^2y - z^5) + 0\cdot z\).
+        Now, I want to show that \((x^2y - z^5, z)\) is a proper ideal of \(\mathbb{Q}[x, y, z]\).
+        Firstly, for any \(f\neq 0\in \mathbb{Q}[x, y, z]\), we can know that \(f\cdot (x^2y - z^5)\) does not contain a
+        term of constant.
+        Similarly, we can know that \(g\cdot z\) is a polynomial without constant term for any \(g\neq 0\in \mathbb{Q}[x,
+        y, z]\).
+        Hence, we can know that if \(f\cdot (x^2y - z^5) + g\cdot z\neq 0\), then \(f\cdot (x^2y - z^5) + g\cdot z\notin
+        \mathbb{Q}\).
+        In other words, if \(i\in (x^2y - z^5, z)\), then \(i\) is not a unit.
+        Thus, we have \((x^2y - z^5, z)\neq \mathbb{Q}[x, y, z]\), which implies that \((x^2y - z^5, z)\) is a proper
+        ideal.
+        Then, we can conclude that \((x^2y - z^5)\) is not a maximal ideal. Therefore, we can know that \(R\) is not a
+        field. \(\blacksquare\)
+    </p>
+    <p>
+        Now, we want to show that \(R\) is an integral domain.
+    </p>
+    <p>
+        <b>Proof (i).</b> We know that \(\mathbb{Q}[x, y, z]/I\) is an integral domain if \(I\) is a prime ideal.
+        Since \(\mathbb{Q}[x, y, z] = \mathbb{Q}[x, z][y]\), we can know that \(x^2y - z^5\) is a degree \(1\) polynomial
+        of \(\mathbb{Q}[x, z][y]\).
+        Hence, \(x^2y - z^5\) is irreducible, which implies that \(x^2y - z^5\) is prime. Thus, we can know that \(I =
+        (x^2y - z^5)\) is a prime ideal.
+        Therefore, we have \(R\) is an integral domain. \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (ii).</b> We want to show that \(J = (\bar x, \bar y)\) is a prime ideal of \(R\).
+        If \(\bar r\in (\bar x, \bar y)\), we can know that \(\bar r = \bar x\bar f + \bar y\bar g\) for some \(\bar f,
+        \bar g\in R\).
+        Then, we we can know that \(\bar r\) does not contain a term of \(a_nz^n\) for any \(n\in \mathbb{N}\) and
+        \(a_n\in\mathbb{Q}\) (including the case that \(n = 0\).
+        In the other direction, if \(\bar r\) is an element of \(R\) without a term of \(a_nz^n\) for any \(n\in
+        \mathbb{N}\) and \(a_n\in\mathbb{Q}\), then we can
+        know that \(\bar r = \bar x\bar f + \bar y\bar g\) for some \(\bar f, \bar g\in R\).
+        Hence, if \(\bar f, \bar g\in R\) do not contain a term of \(a_nz^n\) for any \(n\in \mathbb{N}\) and
+        \(a_n\in\mathbb{Q}\) (i.e. \(\bar f\notin J, \bar g\notin J\)),
+        then we can know that
+        \(\bar f\cdot \bar g\) does not contain a term of \(a_nz^n\) for any \(n\in \mathbb{N}\) and \(a_n\in\mathbb{Q}\)
+        (i.e. \bar f\bar g\notin J).
+        Therefore, we can know that \(J\) is a prime ideal of \(R\). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (iii).</b> Firstly, we want to show that \(J^2 = ({\bar x}^2, \bar x\bar y, {\bar y}^2)\).
+        Let \(\bar p, \bar q\in J\). Then, we can know that \(\bar p = \bar x\bar f + \bar y\bar g\) and \(\bar q = \bar
+        x\bar h + \bar y\bar k\) for some \(\bar f, \bar g, \bar h, \bar k\in R\).
+        Then, we can know that \(\bar p\bar q = \bar x\bar x\bar f\bar h + \bar x\bar y\bar f\bar k + \bar x\bar y\bar
+        g\bar h + \bar y\bar y\bar g\bar k\).
+        Hence, we can know that \(\bar p\bar q\in ({\bar x}^2, \bar x\bar y, {\bar y}^2)\), which implies that
+        \(J^2\subseteq ({\bar x}^2, \bar x\bar y, {\bar y}^2)\).
+        In the other direction, if \(\bar r\in ({\bar x}^2, \bar x\bar y, {\bar y}^2)\), then we can know that \(\bar r =
+        \bar x\bar x\bar f + \bar x\bar y\bar g + \bar y\bar y\bar h\) for some \(\bar f, \bar g, \bar h\in R\).
+    </p>
+</section>
+
+<section id='ku_2019_8_4'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                4. Recall that if \( G \) is a group and \( x, y \in G \), \( x \) and \( y \) are conjugate if \( y =
+                gxg^{-1} \) for some \( g \in G \), and that conjugacy is an equivalence relation on \( G \). Let \( [x] \)
+                denote the conjugacy class of an element \( x \in G \); i.e., \( [x] = \{gxg^{-1} \mid g \in G\} \).
+            </p>
+            <p>
+                (i) Prove that for \( x \in G \), \( [x] \) has exactly one element if and only if \( x \in Z(G) \), where \(
+                Z(G) \) denotes the center of \( G \).
+            </p>
+            <p>
+                (ii) More generally, prove that the number of elements in \( [x] \) equals \( |G : C_G(x)| \), where \( C_G(x)
+                \) is the centralizer of \( x \) in \( G \), i.e., \( C_G(x) = \{g \in G \mid gxg^{-1} = x\} \). Hint: When is
+                \( gxg^{-1} \) equal to \( hxh^{-1} \)?
+            </p>
+            <p>
+                (iii) Suppose that \( G \) is a finite group of odd order, and suppose that \( N \) is a normal subgroup of \(
+                G \) of order 3. Prove that \( N \leq Z(G) \). Hint: What does the normality of \( N \) say about the
+                conjugacy classes of elements \( x \in N \)? How can one use this to partition \( N \)?
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Proof (i).</b> Firstly, we can know that \(x\in [x]\) since \(exe^{-1} = exe = x\). Thus, if \([x]\) has
+        exactly one element, then we can know that \(gxg^{-1} = x\) for all \(g\in G\). Hence, we have \(x = gxg^{-1}\)
+        for all \(g\in G\), which implies that \(x\in Z(G)\).
+        If \(x\in Z(G)\), then we have that \(gxg^{-1} = x\) for all \(g\in G\), which implies that \(\{x\} = [x]\). Thus,
+        we can know that \([x]\) has exactly one element. \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (ii).</b> Since the number of elements in \([x]\) is the number of elements in the orbits.
+        We define the map \(\varphi: [x]\to G/C_G(x))\) by \(\varphi(gxg^{-1}) = gC_G(x)\). Firstly, we can know that the
+        map is surjective since for any \(gC_G(x)\), we have \(gxg^{-1}\in [x]\) such that
+        \[
+        \varphi(gxg^{-1}) = gC_G(x).
+        \]
+        Now, suppose that \(gC_G(x) = hC_G(x)\). Then, we have \(h^{-1}g\in C_G(x)\), which implies that \(h^{-1}gxg^{-1}h
+        = x\).
+        Hence, we have
+        \[
+        \begin{align}
+        h^{-1}gxg^{-1}h &= x\\
+        h(h^{-1}gxg^{-1}h)h^{-1} &= hxh^{-1}\\
+        gxg^{-1} &= hxh^{-1}.
+        \end{align}
+        \]
+        Thus, we can know that the map is injective. Hence, we can know that the number of elements in \([x]\) equals
+        \(|G/C_G(x)| = |G:C_G(x)|\). \(\blacksquare\)
+    </p>
+    <p>
+        <b>Proof (iii).</b>We define a map \(\varphi: G\to \text{Aut}(N)\) by \(\varphi(g) = gng^{-1}\). The reason that
+        \(\varphi(g)\) is a group automorphism of \(N\) is \(N\) is normal in \(G\).
+        We can see that \(\varphi\) is well-defined since for any \(g = h\in G\), we have \(gng^{-1} = hnh^{-1}\).
+        Then, we can know that \(\varphi\) is a group homomorphism since for any \(g, h\in G\), we have
+        \[
+        \varphi(g)\varphi(h) = \varphi(g)\circ \varphi(h) = g h n h^{-1}g^{-1} = (gh)n(gh)^{-1} = \varphi(gh).
+        \]
+        Hence, we can see that the image of \(\varphi\), \(\varphi(G)\), is a subgroup of \(\text{Aut}(N)\).
+        Given that \(N\) has order of \(3\), we have \(N\cong \mathbb{Z}/3\mathbb{Z}\), which implies that \(N\) is
+        cyclic.
+        Hence, any non-trivial element is a generator of \(N\). Thus, we have \(N = \{e, x, x^2\}\), where \(x, x^2\) are
+        the generators of \(N\).
+        Once we know where \(x\) is mapped to, we can know where \(x^2\) is mapped to since \(\varphi\) is a group
+        homomorphism.
+        There are only two options, either \(x\to x\) or \(x\to x^2\). Hence, we can see that \(|\text{Aut}(N)| = 2\),
+        which implies that \(\mathbb{Z}/2\mathbb{Z}\cong \text{Aut}(N)\).
+        Since \(\varphi(G)\) is a subgroup of \(\text{Aut}(N)\), we have \(|\varphi(G)| = 1\) or \(2\).
+        According to the \(\textbf{First Isomorphism Theorem}\), we have \(G/\ker(\varphi) \cong \varphi(G)\)\).
+        Since \(|\varphi(G)| = |G/\ker(\varphi)| = [G:\ker(\varphi)]\), we have \([G:\ker(\varphi)] = 1\) or \(2\).
+        Given that \([G:\ker(\varphi)]\mid |G|\) and \(|G|\) is odd, we have \([G:\ker(\varphi)] = 1\).
+        Thus, we can see that \(\varphi(G) = \{e\}\), which implies that \(\ker(\varphi) = G\). And \(\ker(\varphi) =
+        \{g\in G\mid \varphi(g) = e\}\), which implies that \(gng^{-1} = n\) for all \(n\in N\).
+        Therefore, we can get that \(N\leq Z(G)\). \(\blacksquare\)
+    </p>
+</section>
+
+
+<section id='ku_2019_8_6'>
+    <div class='question-box-container'>
+        <div class='question-box'>
+            <p>
+                <b>6.</b> Consider the polynomial \( p(x) = x^3 - 2 \in \mathbb{Q}[x] \). Find \( \alpha, \beta \in \mathbb{C}
+                \) for which \( F = \mathbb{Q}(\alpha, \beta) \) is a splitting field for \( p(x) \), and prove that this is
+                the case. Then find, with justification, the degree of the field extension \( \mathbb{Q} \subseteq F \).
+            </p>
+        </div>
+    </div>
+    <p>
+        <b>Solution (6).</b> Firstly, we want to find the all the roots of \(p(x)\).
+        Suppose that \(a\) is the root of \(p(x)\). Then we have \(p(a) = a^3 - 2 = 0\) and \(a^3 = 2\).
+        Hence, we can know that \(a^3\) is a cube of \(2\). Thus, we can know that \(a = \sqrt[3]{2}\), which is a real
+        number.
+        Now, if \(a^3 = 2\cos(2\pi) + 2\sin(2\pi)i = 2(\cos(2\pi) + sin(2\pi)i) = 2e^{2\pi i}\), then we have \(a =
+        \sqrt[3]{2}e^{2\pi i/3}\).
+        Hence, \(a = \sqrt[3]{2}(\cos(2\pi/3) + \sin(2\pi/3)i) = \sqrt[3]{2}(-1/2 + \sqrt{3}/2i)\).
+        Similarly, we can have \(a^3 = 2\cos(-2\pi) + 2\sin(-2\pi)i = 2e^{-2\pi i}\), which implies that \(a =
+        \sqrt[3]{2}e^{-2\pi i/3}\).
+        Hence, we have \(a = \sqrt[3]{2}(\cos(-2\pi/3) + \sin(-2\pi/3)i) = \sqrt[3]{2}(-1/2 - (\sqrt{3}/2)i)\).
+        Then, we have the three distinct roots of \(p(x)\), which are
+        \[
+        a_1 = \sqrt[3]{2},\quad a_2 = \sqrt[3]{2}(-1/2 + (\sqrt{3}/2)i),\quad a_3 = \sqrt[3]{2}(-1/2 - (\sqrt{3}/2)i).
+        \]
+        Thus, we can know that the splitting field of \(p(x)\) is \(F = \mathbb{Q}(a_1, a_2, a_3)\).
+        Since \(a_2 - a_3 = \sqrt[3]{2}\cdot\sqrt{3}i\), we have
+        \[
+        \dfrac{\sqrt[3]{2}\cdot\sqrt{3}i}{\sqrt[3]{2}} = \sqrt{3}i.
+        \]
+        Hence, \(\mathbb{Q}(\sqrt[3]{2}, \sqrt{3}i)\subset \mathbb{Q}(a_1, a_2, a_3)\).
+        It is not hard to see that \(\mathbb{Q}(a_1, a_2, a_3)\subset \mathbb{Q}(\sqrt[3]{2}, \sqrt{3}i)\).
+        Since \(\sqrt{3}i\) is a root of \(x^2 + 3 = 0\). Since there is no rational roots of \(x^2 + 3 = 0\), we can know
+        that \(x^2 + 3\) is irreducible over \(\mathbb{Q}\).
+        Thus, we can know that
+        \[
+        \mathbb{Q}(\sqrt{3}i\) \cong \mathbb{Q}[x]/(x^2 + 3).
+        \]
+        Hence, \(\mathbb{Q}(\sqrt{3}i\)\) has degree \(2\) since the minimal polynomial of \(\sqrt{3}i\) has degree \(2\).
+        Then, we want to show that \(x^3 - 2\) is irreducible over \(\mathbb{Q}(\sqrt{3}i)\) by contradiction.
+        If \(x^3 - 2\) is a reducible polynomial over \(\mathbb{Q}(\sqrt{3}i)\), then we have a root of \(x^3 - 2\) in
+        \(\mathbb{Q}(\sqrt{3}i)\).
+        Since \(\mathbb{Q}(\sqrt{3}i\) = \{a + b\sqrt{3}i\mid a, b\in \mathbb{Q}\), we can know that the root of \(x^3 -
+        2\) is \(a + b\sqrt{3}i\) for some \(a, b\in \mathbb{Q}\).
+        Then suppose that \(a + b\sqrt{3}i) is a root of \(p(x)\),
+        \[
+        \begin{align}
+        (a + b\sqrt{3}i\)^3 &= 2, \\
+        (a^2 + 2ab\sqrt{3}i - 3b^2)(a + b\sqrt{3}i) = 2, \\
+        (a + b\sqrt{3}i\)^3&= a^3 - 9 a b^2 + 3 i \sqrt{3} b (a^2 - b^2) = 2
+        \end{align}
+        \]\Hence, we can know that \(3b(a^2 - b^2)\) =0\), which implies that \(b = 0\) or \(a-b = 0\) or \(a + b = 0\).
+        Given that \(b\neq 0\), or \(a + b\sqrt{3}i = a\) is a root of \(p(x)\), which is a contradiction.
+        Suppose that \(a = b\), then we can have \(a^3 - 9a^3 = -8a^3 = 2\), which implies that \(a^3 = -1/4\), which is a
+        contradiction.
+        Suppose that \(a = -b\), then we can have \(a^3 - 9a^3 = -10a^3 = 2\), which implies that \(a^3 = -1/4\), which is
+        a contradiction.
+        Hence, there exists no roots in \(p(x)\) and \(p(x)\) is irreducible. Then \(\mathbb{Q}(\sqrt{3}i,
+        \sqrt[3]{2})\cong \mathbb{Q}(\sqrt{3}i)[x]/(x^3 - 2)\).
+        Therefore, we have
+        \[
+        [\mathbb{Q}(\sqrt{3}i, \sqrt[3]{2}): \mathbb{Q}(\sqrt{3}i)][\mathbb{Q}(\sqrt{3}i): \mathbb{Q}] = 3\cdot 2 = 6.
+        \]
+    </p>
+</section>
+
+</body>
+
+</html>
