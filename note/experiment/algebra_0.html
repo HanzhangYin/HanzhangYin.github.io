@@ -90,6 +90,25 @@
   <script src="highlight.js"></script><!--It is a link for highlight.js-->
   <script src="mathjax_config.js"></script><!--It is a link for mathjax_configuration-->
 
+  <div id="main-menu-dropdown" class="dropdown-menu">
+    <input type="checkbox" id="main-menu-dropdown-checkbox" role="button" aria-haspopup="true" class="dropdown-checkbox" aria-label="Main menu">
+    <label id="main-menu-dropdown-label" for="main-menu-dropdown-checkbox" class="dropdown-label">
+      <span class="icon menu-icon"></span>
+      <span class="dropdown-label-text">Main menu</span>
+    </label>
+    <div class="dropdown-content">
+      <div id="main-menu-unpinned-container" class="unpinned-container">
+        <div id="main-menu" class="main-menu">
+          <div class="menu-header" data-feature-name="main-menu-pinned">
+            <div class="menu-header-label">Main menu</div>
+            <button class="menu-toggle-button pin-button">move to sidebar</button>
+            <button class="menu-toggle-button unpin-button">hide</button>
+          </div>
+          <!-- Add your menu items here -->
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section>
     <p>
