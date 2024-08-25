@@ -24,7 +24,9 @@
     <div class="line"></div>
     <span class="visually-hidden">Menu</span>
   </label>
-  <div class="sidenav">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#linear_transformation">Linear Transformation</a>
     <a href="#multiplicity">Multiplicity</a>
     <a href="#dual_space">Dual Space</a>
@@ -138,6 +140,8 @@
   </div>
 
   <section>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <script src="opennav.js"></script>
     <p>
       My name is Hanzhang Yin, and I have developed this website as a resource to facilitate the review of key concepts
       in abstract algebra, and it is not fully completed.
