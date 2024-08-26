@@ -33,8 +33,23 @@
     transition: 0.3s;
     padding-top: 20px;
   }
-  
-    body {
+
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+
+  body {
       margin: 0 auto;
       width: 80%;
       font-size: 1em;
