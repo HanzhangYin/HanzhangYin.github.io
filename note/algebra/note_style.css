@@ -215,7 +215,7 @@
       width: 80%; /* Adjust the width as needed */
       /* max-height: 300px; Maximum height before scrolling  */
       overflow: auto;
-      border: 0.5px solid #ddd;
+      border: 1px solid #ddd;
       font-family: monospace;
       box-sizing: border-box; /* Includes padding and border in the width */
     }
@@ -369,9 +369,7 @@
   a:visited {
     color: #e67e22
   }
-  img {
-    max-width: 100%;
-  }
+
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.4em;
   }
