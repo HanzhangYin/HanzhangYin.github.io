@@ -242,29 +242,64 @@
     background-color: #565656;
   }
 
-  .navbar {
-    overflow: hidden; 
-    background-color: transparent;
-    font-family: 'Spectral', serif;
-    left: 10px; /* set the navbar to the left side of the screen */
-    width: 150px; /* set a fixed width for your navbar */
-    height: 80%; /* make it 80% height */
-    position: fixed; /* Enable the navbar to remain in view when scrolling */
-    display: flex; 
-    flex-direction: column; /* make the navbar elements appear in a column */
-    overflow-y: auto; /* make the navbar scrollable */
+  /* The sidebar menu */
+  .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 180px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #202020; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s;
+    padding-top: 20px;
   }
-  
-  .navbar a {
-    font-family: 'Spectral', serif;
-    color: #565656;
-    text-align: left;
-    padding: 11px 10px;
+
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
     text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
   }
-  
-  .navbar a:hover {
-    background-color: #565656;
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .top-left-button {
+    position: fixed; /* Stay in place even when scrolling */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the right */
+    z-index: 1; /* Ensure it stays on top of other elements */
+    font-size: 5px;
+  }
+
+  .top-left-button span {
+    background-color: transparent; /* Button background color */
+    color: black; /* Button text color */
+    padding: 5px 10px; /* Padding inside the button */
+    border-radius: 5px; /* Optional: Rounded corners */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Keep the button inline */
+  }
+
+  .top-left-button span:hover {
+    background-color: #565656; /* Darken background on hover */
+    color: white; /* Change text color on hover */
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    z-index: 100;
+    margin-left: 50px;
     color: white;
   }
 
