@@ -24,7 +24,9 @@
     <div class="line"></div>
     <span class="visually-hidden">Menu</span>
 </label>
-<nav class="navbar">
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="algebra.html#linear_transformation">Linear Transformation</a>
     <a href="algebra.html#multiplicity">Multiplicity</a>
     <a href="algebra.html#dual_space">Dual Space</a>
@@ -82,11 +84,17 @@
     <a href='jan_2023_algebra.html'>KU 2023 (January)</a>
     <a href='aug_2023_algebra.html'>KU 2023 (August)</a>
     <a href='jan_2024_algebra.html'>KU 2024 (January)</a>
-</nav>
+</div>
 <script src="click.js"></script>
 <!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
 <script src="highlight.js"></script><!--It is a link for highlight.js-->
 <script src="mathjax_config.js"></script><!--It is a link for mathjax_configuration-->
+
+
+<div class="top-left-button">
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <script src="opennav.js"></script>
+</div>
 
 <h1>KU 2021 (January) ALGEBRA QUALIFYING EXAM</h1>
 
