@@ -1,3 +1,8 @@
+
+.nav-toggle {
+  display: none; /* hide the checkbox */
+}
+
 /* define styles for smaller screens */
 @media screen and (max-width: 600px) {
     html {
