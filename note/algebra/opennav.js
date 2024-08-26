@@ -1,6 +1,9 @@
 function openNav() {
-    var width = window.innerWidth > 768 ? "250px" : "200px";
-    document.getElementById("mySidenav").style.width = width;
+    if (window.innerWidth > 768) {
+        document.getElementById("mySidenav").style.width = "250px";
+    } else {
+        document.getElementById("mySidenav").style.width = "100%";
+    }
 }
 
 function closeNav() {
