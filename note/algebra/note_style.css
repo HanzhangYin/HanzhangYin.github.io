@@ -49,6 +49,39 @@
     color: #f1f1f1;
   }
 
+  .top-left-button {
+    position: fixed; /* Stay in place even when scrolling */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the right */
+    z-index: 1; /* Ensure it stays on top of other elements */
+    font-size: 5px;
+  }
+
+  .top-left-button span {
+    background-color: transparent; /* Button background color */
+    color: black; /* Button text color */
+    padding: 5px 10px; /* Padding inside the button */
+    border-radius: 5px; /* Optional: Rounded corners */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Keep the button inline */
+  }
+
+  .top-left-button span:hover {
+    background-color: #565656; /* Darken background on hover */
+    color: white; /* Change text color on hover */
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    z-index: 100;
+    margin-left: 50px;
+    color: white;
+  }
+
 
   body {
       margin: 0 auto;
@@ -241,7 +274,7 @@
     position: fixed; /* Stay in place even when scrolling */
     top: 10px; /* Distance from the top */
     left: 10px; /* Distance from the right */
-    z-index: 1; /* Ensure it stays on top of other elements */
+    z-index: 2; /* Ensure it stays on top of other elements */
     font-size: 5px;
   }
 
