@@ -21,72 +21,124 @@
       z-index: 1;  /* This ensures the bar stays on top of other elements */
     }
     
-    .navbar {
-      background-color: #ededed;
-      padding-top: 60px; /* Height of the hamburger menu */
-      font-family: 'Spectral', serif;
-      left: 0; /* set the navbar to the left side of the screen */
-      width: 100%; /* set a full width  */
-      height: 100%; /* make it full height */
-      position: fixed; /* Enable the navbar to remain in view when scrolling */
-      box-sizing: border-box;
-      display: flex;  
-      flex-direction: column; /* make the navbar elements appear in a column */
-      overflow: auto; /* make the navbar scrollable */
-      z-index: 1;
-      transform: translateX(-100%);  /* Initially move the navbar off the screen. */
-      transition: transform 0.2s ease-in-out;  /* Animate the movement. */
-    }
+    /*.navbar {*/
+    /*  background-color: #ededed;*/
+    /*  padding-top: 60px; !* Height of the hamburger menu *!*/
+    /*  font-family: 'Spectral', serif;*/
+    /*  left: 0; !* set the navbar to the left side of the screen *!*/
+    /*  width: 100%; !* set a full width  *!*/
+    /*  height: 100%; !* make it full height *!*/
+    /*  position: fixed; !* Enable the navbar to remain in view when scrolling *!*/
+    /*  box-sizing: border-box;*/
+    /*  display: flex;  */
+    /*  flex-direction: column; !* make the navbar elements appear in a column *!*/
+    /*  overflow: auto; !* make the navbar scrollable *!*/
+    /*  z-index: 1;*/
+    /*  transform: translateX(-100%);  !* Initially move the navbar off the screen. *!*/
+    /*  transition: transform 0.2s ease-in-out;  !* Animate the movement. *!*/
+    /*}*/
 
-    .navbar a {
-      font-family: 'Spectral', serif;
-      color: #565656;
-      text-align: center;
-      padding: 11px 10px;
-      text-decoration: none;
-    }
+    /*.navbar a {*/
+    /*  font-family: 'Spectral', serif;*/
+    /*  color: #565656;*/
+    /*  text-align: center;*/
+    /*  padding: 11px 10px;*/
+    /*  text-decoration: none;*/
+    /*}*/
 
-    .nav-toggle:checked ~ .navbar {
-      transform: translateX(0);  /* When checkbox is checked, move navbar back on screen. */
-    }
+    /*.nav-toggle:checked ~ .navbar {*/
+    /*  transform: translateX(0);  !* When checkbox is checked, move navbar back on screen. *!*/
+    /*}*/
 
-    .nav-toggle {
-      display: none;
-    }
+    /*.nav-toggle {*/
+    /*  display: none;*/
+    /*}*/
     
     
-    .navbar ul {
-      list-style-type: none;
-      padding: 0;
-    }
+    /*.navbar ul {*/
+    /*  list-style-type: none;*/
+    /*  padding: 0;*/
+    /*}*/
     
-    .navbar ul li a {
-      font-family: 'Spectral', serif;
-      color: #565656;
-      text-align: center;
-      display: block;
-      padding: 20px;
-      text-decoration: none;
-    }
+    /*.navbar ul li a {*/
+    /*  font-family: 'Spectral', serif;*/
+    /*  color: #565656;*/
+    /*  text-align: center;*/
+    /*  display: block;*/
+    /*  padding: 20px;*/
+    /*  text-decoration: none;*/
+    /*}*/
     
 
-    .nav-toggle:checked + .icon-burger,
-    .icon-burger {
-      display: block;
-      cursor: pointer;
-      position: fixed;
-      left: 20px;
-      top: 10px;
-      z-index: 2;
-    }
+    /*.nav-toggle:checked + .icon-burger,*/
+    /*.icon-burger {*/
+    /*  display: block;*/
+    /*  cursor: pointer;*/
+    /*  position: fixed;*/
+    /*  left: 20px;*/
+    /*  top: 10px;*/
+    /*  z-index: 2;*/
+    /*}*/
 
-    .icon-burger .line {
-      width: 40px;
-      height: 3px;
-      background-color: #333;
-      margin: 6px 0;
-    }
+    /*.icon-burger .line {*/
+    /*  width: 40px;*/
+    /*  height: 3px;*/
+    /*  background-color: #333;*/
+    /*  margin: 6px 0;*/
+    /*}*/
 
+  /*.overlay {*/
+  /*  height: 100%;*/
+  /*  width: 0;*/
+  /*  position: fixed;*/
+  /*  z-index: 1;*/
+  /*  top: 0;*/
+  /*  left: 0;*/
+  /*  background-color: rgb(0,0,0);*/
+  /*  background-color: rgba(0,0,0, 0.9);*/
+  /*  overflow-x: hidden;*/
+  /*  transition: 0.5s;*/
+  /*}*/
+
+  /*.overlay-content {*/
+  /*  position: relative;*/
+  /*  top: 25%;*/
+  /*  width: 100%;*/
+  /*  text-align: center;*/
+  /*  margin-top: 30px;*/
+  /*}*/
+
+  /*.overlay a {*/
+  /*  padding: 8px;*/
+  /*  text-decoration: none;*/
+  /*  font-size: 36px;*/
+  /*  color: #818181;*/
+  /*  display: block;*/
+  /*  transition: 0.3s;*/
+  /*}*/
+
+  /*.overlay a:hover, .overlay a:focus {*/
+  /*  color: #f1f1f1;*/
+  /*}*/
+
+  /*.overlay .closebtn {*/
+  /*  position: absolute;*/
+  /*  top: 20px;*/
+  /*  right: 45px;*/
+  /*  font-size: 60px;*/
+  /*}*/
+  .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 100%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #202020; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s;
+    padding-top: 20px;
+  }
   
     body {
       margin: 0 auto;
