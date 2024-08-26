@@ -179,8 +179,7 @@
 .code-box .group { color: #4CBB17; }
 .code-box .outcome { color:  #0F52BA ; }
   
-
-  }
+}
 
   
 
@@ -192,9 +191,9 @@
     background-color: #565656;
   }
 
-  .nav-toggle {
-    display: none; /* hide the checkbox */
-  }
+  /*.nav-toggle {*/
+  /*  display: none; !* hide the checkbox *!*/
+  /*}*/
 
   html {
     color: #1a1a1a;

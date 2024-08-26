@@ -1,9 +1,14 @@
+      html {
+        color: #1a1a1a;
+        background-color: #ededed;
+      }
+
+      .nav-toggle {
+        display: none; /* hide the checkbox */
+      }
+
 /* define styles for smaller screens */
 @media screen and (max-width: 600px) {
-    html {
-      color: #1a1a1a;
-      background-color: #ededed;
-    }
 
     .top-bar {
       background: #ededed;  /* Change this to grey color */
@@ -11,7 +16,6 @@
       width: 100%;
       position: fixed;
       top: 0;
-      /* height: 50px; */
       left: 0;
       z-index: 1;  /* This ensures the bar stays on top of other elements */
     }
@@ -178,7 +182,6 @@
 .code-box .operator { color: #DE3163; }
 .code-box .group { color: #4CBB17; }
 .code-box .outcome { color:  #0F52BA ; }
-  
 
   }
 
@@ -187,131 +190,6 @@
 /* define styles for larger screens */
 
 @media screen and (min-width: 600px) {
-
-  /*!* General dropdown styling *!*/
-  /*.dropdown-menu {*/
-  /*  position: relative;*/
-  /*  display: inline-block;*/
-  /*}*/
-
-  /*.dropdown-checkbox {*/
-  /*  display: none;*/
-  /*}*/
-
-  /*.dropdown-label {*/
-  /*  display: flex;*/
-  /*  align-items: center;*/
-  /*  cursor: pointer;*/
-  /*}*/
-
-  /*.icon.menu-icon {*/
-  /*  width: 20px;*/
-  /*  height: 20px;*/
-  /*  background: url('path/to/menu-icon.png') no-repeat center center;*/
-  /*  background-size: contain;*/
-  /*}*/
-
-  /*.dropdown-content {*/
-  /*  display: none;*/
-  /*  position: absolute;*/
-  /*  background-color: white;*/
-  /*  min-width: 200px;*/
-  /*  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);*/
-  /*  z-index: 1;*/
-  /*}*/
-
-  /*.dropdown-checkbox:checked ~ .dropdown-content {*/
-  /*  display: block;*/
-  /*}*/
-
-  /*!* Styling for the menu *!*/
-  /*.main-menu {*/
-  /*  background-color: #f8f9fa;*/
-  /*  border: 1px solid #ddd;*/
-  /*  padding: 10px;*/
-  /*}*/
-
-  /*.menu-header {*/
-  /*  display: flex;*/
-  /*  justify-content: space-between;*/
-  /*  align-items: center;*/
-  /*}*/
-
-  /*.menu-toggle-button {*/
-  /*  background: none;*/
-  /*  border: none;*/
-  /*  cursor: pointer;*/
-  /*  color: #007bff;*/
-  /*}*/
-
-  /*.menu-toggle-button:hover {*/
-  /*  text-decoration: underline;*/
-  /*}*/
-
-  #toc-container {
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #f9f9f9;
-  }
-
-  .vector-pinnable-header-label {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-  .vector-pinnable-header-toggle-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-
-  .vector-pinnable-header-toggle-button:hover {
-    background-color: #0056b3;
-  }
-
-  .vector-toc-contents {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  .vector-toc-list-item {
-    margin: 5px 0;
-  }
-
-  .vector-toc-link {
-    text-decoration: none;
-    color: #007bff;
-  }
-
-  .vector-toc-link:hover {
-    text-decoration: underline;
-  }
-
-  .vector-toc-text {
-    display: flex;
-    align-items: center;
-  }
-
-  .vector-toc-numb {
-    margin-right: 5px;
-    font-weight: bold;
-  }
-
-  .button:hover {
-    background-color: #565656;
-  }
-
-  .nav-toggle {
-    display: none; /* hide the checkbox */
-  }
-
-  html {
-    color: #1a1a1a;
-    background-color: #ededed;
-  }
 
   body {
     /* margin: 0 auto; */
@@ -355,34 +233,6 @@
     background-color: #565656;
   }
 
-  /*.navbar {*/
-  /*  overflow: hidden;*/
-  /*  !*background-color: transparent;*!*/
-  /*  font-family: 'Spectral', serif;*/
-  /*  left: 10px; !* set the navbar to the left side of the screen *!*/
-  /*  width: 150px; !* set a fixed width for your navbar *!*/
-  /*  height: 100%; !* make it 80% height *!*/
-  /*  z-index: 1; !* Stay on top *!*/
-  /*  position: fixed; !* Enable the navbar to remain in view when scrolling *!*/
-  /*  background-color: #202020;*/
-  /*  display: flex;*/
-  /*  flex-direction: column; !* make the navbar elements appear in a column *!*/
-  /*  overflow-y: auto; !* make the navbar scrollable *!*/
-  /*}*/
-  
-  /*.navbar a {*/
-  /*  padding: 6px 8px 6px 16px;*/
-  /*  font-family: 'Spectral', serif;*/
-  /*  color: #565656;*/
-  /*  text-align: left;*/
-  /*  text-decoration: none;*/
-  /*}*/
-  
-  /*.navbar a:hover {*/
-  /*  background-color: #565656;*/
-  /*  color: white;*/
-  /*}*/
-
   /* The sidebar menu */
   .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -416,6 +266,7 @@
     top: 10px; /* Distance from the top */
     left: 10px; /* Distance from the right */
     z-index: 1; /* Ensure it stays on top of other elements */
+    font-size: 5px;
   }
 
   .top-left-button span {
@@ -429,6 +280,7 @@
 
   .top-left-button span:hover {
     background-color: #565656; /* Darken background on hover */
+    color: white; /* Change text color on hover */
   }
 
   /* Position and style the close button (top right corner) */
