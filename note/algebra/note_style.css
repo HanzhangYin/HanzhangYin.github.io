@@ -429,7 +429,7 @@
     max-width: 1500px;
     max-height: 300px; /* Maximum height before scrolling */ 
     overflow: auto;
-    border: 0.5px solid #ddd;
+    border: 1px solid #ddd;
     font-family: monospace;
     box-sizing: border-box; /* Includes padding and border in the width */
   }
@@ -457,7 +457,7 @@
   max-width: 1500px;
   /*max-height: 300px; !* Maximum height before scrolling *!*/
   overflow: auto;
-  border: 0.5px solid #ddd;
+  border: 1px solid #ddd;
   font-family: 'Spectral', serif;
   box-sizing: border-box; /* Includes padding and border in the width */
 }
