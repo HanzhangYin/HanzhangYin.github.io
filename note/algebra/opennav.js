@@ -1,3 +1,10 @@
+// Initially hide the navigation bar when the website is first loaded on a phone screen
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth <= 768) {
+        closeNav();
+    }
+});
+
 function openNav() {
     if (window.innerWidth > 768) {
         document.getElementById("mySidenav").style.width = "250px";
