@@ -27,15 +27,9 @@
     <title>2022 (August) Numerical Analysis Qualifying Examination</title>
 </head>
 <body>
-<div class="top-bar"></div>
-<input type="checkbox" id="nav-toggle" class="nav-toggle" />
-<label for="nav-toggle" class="icon-burger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <span class="visually-hidden">Menu</span>
-</label>
-<nav class="navbar">
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="numerical_analysis.html#binary">Binary</a>
     <a href="numerical_analysis.html#unit_roundoff">Unit Round-off</a>
     <a href="numerical_analysis.html#roundoff_error">Roundoff Error</a>
@@ -80,11 +74,19 @@
     <a href="jan_2023_numerical.html">January 2023</a>
     <a href="aug_2023_numerical.html">August 2023</a>
     <a href="jan_2024_numerical.html">January 2024</a>
-</nav>
+    <a href="numerical_analysis.html#References">References</a>
+</div>
 <script src="click.js"></script>
 <!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
 <script src="mathjax_config.js"></script>
 <!--It is a link for Mathjax configuration-->
+
+<div class="top-bar">
+    <div class="top-left-button">
+        <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <script src="opennav.js"></script>
+    </div>
+</div>
 
 <section>
     <p>
