@@ -57,6 +57,7 @@
     <a href="#algebraic_closure">Algebraic Closure</a>
     <a href="#galois_group">Galois Group</a>
     <a href="#galois_theory">Galois Theory</a>
+    <a href="algebra.html#module">Module</a>
     <a href="jan_2015_algebra.html">KU 2015 (January)</a>
     <a href="aug_2015_algebra.html">KU 2015 (August)</a>
     <a href="jan_2016_algebra.html">KU 2016 (January)</a>
@@ -76,7 +77,6 @@
     <a href='jan_2023_algebra.html'>KU 2023 (January)</a>
     <a href='aug_2023_algebra.html'>KU 2023 (August)</a>
     <a href='jan_2024_algebra.html'>KU 2024 (January)</a>
-    <a href="#k_state_2022_1">K-State 2022(1)</a>
     <a href="#References">References</a>
   </div>
   <script src="click.js"></script>
@@ -1918,6 +1918,26 @@
       Hence, we can get \(h_1=h_2\). Thus, we have \(gh_1g^{-1}=h_1\) for any \(g\).
       Therefore, we show that \(H\subset Z(G)\). \(\blacksquare\)
     </p>
+  </section>
+
+  <section id = 'module'>
+      <h2>Module</h2>
+      <p>
+          Let \( A \) be a ring (commutative, as always). An \( A \)-module is an abelian group \( M \) (written additively) on which \( A \) acts linearly: more precisely, it is a pair \( (M, \mu) \), where \( M \) is an abelian group and \( \mu \) is a mapping of \( A \times M \) into \( M \) such that, if we write \( ax \) for \( \mu(a, x) \) (\( a \in A, x \in M \)), the following axioms are satisfied:
+
+          \[
+          \begin{aligned}
+          a(x + y) &= ax + ay, \\
+          (a + b)x &= ax + bx, \\
+          (ab)x &= a(bx), \\
+          1x &= x \quad (a, b \in A; \, x, y \in M).
+          \end{aligned}
+          \]
+
+          (Equivalently, \( M \) is an abelian group together with a ring homomorphism \( A \to E(M) \), where \( E(M) \) is the ring of endomorphisms of the abelian group \( M \).)
+
+          The notion of a module is a common generalization of several familiar concepts, as the following examples show:
+      </p>
   </section>
 
   <!-- <section id = 'k_state_2022_4'>
