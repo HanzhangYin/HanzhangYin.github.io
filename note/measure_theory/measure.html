@@ -10,23 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet"> <!--link for the font-->
-    <link rel="stylesheet" type="text/css" href="tutoring_style.css"><!--It is a link for css structure-->
+    <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for css structure-->
     <title>Measure Theory</title>
   </head>
   <body>
-    <div class="top-bar"></div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="icon-burger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <span class="visually-hidden">Menu</span>
-    </label>
-    <nav class="navbar">
-      <a href="#algebra">Algebra</a>
+
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="#References">References</a>
-    </nav>
-    <script src="click.js"></script><!--It is a link for click.js, whcih is clicking the link the hamburger menue will disappear-->
+    </div>
+    <script src="click.js"></script>
+    <!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+    <script src="highlight.js"></script><!--It is a link for highlight.js-->
+
+    <div class="top-bar">
+      <div class="top-left-button">
+        <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <script src="opennav.js"></script>
+      </div>
+    </div>
+
     <h1>Measure Theory</h1>
 
     <section id = "algebra">
@@ -34,6 +38,7 @@
     <p>
       \(\textbf{Definition. }\)Let \(X\) be a set. A nonempty family \(\mathcal{A} \subseteq \mathcal{P}(X)\) is called algebra
       on \(X\) if it satisfies the following:
+    </p>
       <ul>
         <li>
           if \(E \in \mathcal{A}\), then \(E^c \in \mathcal{A}\) (\(\mathcal{A}\) is closed under complements),
@@ -42,7 +47,6 @@
           if \((E_i)_{i \in \mathbb{N}}\) is a finite family of sets which belong to \(\mathcal{A}\), then \(\bigcup\limits_{i=1}^{n} E_i \in \mathcal{A}\) (\(\mathcal{A}\) is closed under finite unions).
         </li>
       </ul>
-    </p>
     </section>
 
     <br>
@@ -52,7 +56,8 @@
       <p>
         \(\text{Definition. \}\)  Let \(X\) be a set. A nonempty family \(\mathcal{A} \subseteq \mathcal{P}(X)\) is called \(\sigma\)-algebra
         on \(X\) if it satisfies the following:
-        <ul>
+      </p>
+      <ul>
           <li>
             if \(E \in A\), then \(E^c \in \mathcal{A}\) (\(\mathcal{A}\) is closed under complements),
           </li>
@@ -60,7 +65,6 @@
             if \((E_i)_{i \in \mathbb{N}}\) is a family of sets which belong to \(\mathcal{A}\), then \(\bigcup\limits_{i=1}^{\infty} E_i \in \mathcal{A}\) (\(\mathcal{A}\) is closed under countable unions).
           </li>
         </ul>
-      </p>
     </section>
 
     <br>
@@ -69,7 +73,8 @@
       <h2>Measure</h2>
       <p>
         \(\text{Definition 2.1}\) Let \((X, \mathcal{M})\) be a measurable space. A (positive) measure \(\mu\) is a function \(\mu : \mathcal{M} \to [0, \infty]\) such that
-        <ul>
+      </p>
+      <ul>
           <li>
             \(\mu(\varnothing) = 0\),
           </li>
@@ -80,7 +85,6 @@
         \[
         \mu\left(\bigcup_{i=1}^\infty A_i\right) = \sum_{i=1}^\infty \mu(A_i) \quad \text{(countable additivity)}.
         \]
-      </p>
     </section>
 
     <br>
@@ -89,7 +93,8 @@
       <h2>Outer Measure</h2>
       <p>
         \(\textbf{Definition 3.1}\) Let \(X\) be a set. A set function \(\mu^* : \mathcal{P}(X)\rightarrow [0,\infty]\) is called an outer measure, if it satisfies the following conditions:
-        <ul>
+      </p>
+      <ul>
           <li>
             \(\mu^*(\varnothing)=0\),
           </li>
@@ -101,9 +106,8 @@
           </li>
         </ul>
         \[
-        \mu^* \left(\bigcup_{i=1}^\infty E_i\right) \leq \sum_{i=1}^\infty\mu^*(E_i).\qquad \text{(countable subadditivity)}
+        \mu^* \left(\bigcup_{i=1}^\infty E_i\right) \leq \sum_{i=1}^\infty\mu^*(E_i).\qquad \text{(countable sub-additivity)}
         \]
-      </p>
     </section>
 
     <br>
@@ -125,7 +129,8 @@
       </p>
       <p>
         \(\textbf{Theorem 6.10.}\) Let \((X, \mathcal{A})\) be a measurable space and let \((f_n)_{n\in\mathbb{N}}, f_n:X\to\mathbb{R}\), be a sequence of measurable functions. Then:
-        <ul>
+      </p>
+      <ul>
           <li>
             \(\sup\limits_{n\in\mathbb{N}} f_n\) is measurable,
           </li>
@@ -139,7 +144,6 @@
             \(\liminf\limits_{n\to\infty} f_n\) is measurable.
           </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Corollary 6.11}\) Let \((X,\mathcal{A})\) be a measurable space. If \((f_n)_{n \in \mathbb{N}}, f: X \to \overline{\mathbb{R}}\) is a sequence of measurable functions such that \(f_n \to f\) pointwise, then \(f\) is measurable.
       </p>
@@ -189,7 +193,8 @@
         s = \sum_{i=1}^n a_i \chi_{A_i},
         \]
         where the following conditions hold:
-        <ul>
+      </p>
+      <ul>
           <li>
             \(a_i, a_j \in \mathbb{R}\) for \(i,j = 1,2,\ldots,n\),
           </li>
@@ -200,6 +205,7 @@
             \(X = \bigcup_{i=1}^n A_i\).
           </li>
         </ul>
+      <p>
         Observe that every simple function can be written in a standard form.
       </p>
     </section>
@@ -230,7 +236,8 @@
     <section>
       <p>
         \(\textbf{Proposition 7.4.}\) Let \(f, g \in L^+\) and \(A, B \in \mathcal{A}\). Then:
-        <ul>
+      </p>
+      <ul>
           <li>
             If \(0 \leq f \leq g\), then \(\displaystyle \int_A f \, d\mu \leq \int_A g \, d\mu\).
           </li>
@@ -244,7 +251,6 @@
             If \(\mu(A) = 0\), then \(\displaystyle \int_A f \, d\mu = 0\).
           </li>
         </ul>
-      </p>
       <p>
       \(\textbf{Corollary 7.8}\) If \(f,g \in L^+\) then 
       \[
@@ -519,6 +525,7 @@
     <section id = "Dominated_Convergence_Theorem">
       <p>
       \(\textbf{Theorem 7.22 (Dominated Convergence Theorem)}\) Let \(\{f_n\}_{n \in \mathbb{N}}, f : X \rightarrow \mathbb{R}\) be measurable functions and let \(g \in L^1(\mu) \cap L^+(\mu)\) such that
+      </p>
       <ul>
         <li>
           \(f(x) = \lim_{n \rightarrow \infty} f_n(x)\) for \(\mu\)-a.e. \(x \in X\),
@@ -527,6 +534,7 @@
           \(|f_n(x)| \leq g(x)\) for \(\mu\)-a.e. \(x \in X\) and every \(n \in \mathbb{N}\).
         </li>
       </ul>
+      <p>
         Then \(f \in L^1(\mu)\), \(\displaystyle \int_X |f-f_n| d\mu = 0\), and \(\displaystyle \lim_{n \rightarrow \infty} \int f_n d\mu = \int f d\mu\).
       </p>
       <p>
@@ -589,7 +597,8 @@
     <section id = "Modes_of_Convergence">
       <p>
         \(\textbf{Definition 8.1 (Modes of Convergence)}\)Let \((X,\mathcal{A},\mu)\) be a measure space and let \(\{f_n\}_{n \in \mathbb{N}}, f : X \rightarrow \mathbb{R}\) be measurable functions. We say that:
-        <ul>
+      </p>
+      <ul>
             <li> 
             \(\{f_n\}_{n \in \mathbb{N}}\) converges \(\mu\)-almost everywhere to \(f\) if there exists a set \(N \in A\) with \(\mu(N) = 0\) such that \(f_n(x) \rightarrow f(x)\) for all \(x \in X \setminus N\) (see also Definition 6.12). We denote \(\mu\)-almost everywhere convergence by 
             $$
@@ -623,7 +632,6 @@
                 $$.
             </li>
           </ul>
-      </p>
     </section>
 
     <br>
@@ -631,7 +639,8 @@
     <section>
       <p>
         \(\textbf{Theorem 8.3.}\) Let \((X, \mathcal{A}, \mu)\) be a measure space. Let \(\{f_n\}_{n\in\mathbb{N}}, f:X\to\mathbb{R}\) be measurable functions. Then
-        <ul>
+      </p>
+      <ul>
           <li>
             \(f_n \xrightarrow{\text{a.u.}} f \Rightarrow f_n \xrightarrow{\text{a.e.}} f\),
           </li>   
@@ -639,7 +648,6 @@
             \(f_n \xrightarrow{\text{a.u.}} f \Rightarrow f_n \xrightarrow{\mu} f\).
           </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Proof (1)}\) Since \(f_n\xrightarrow{\text{a.u.}} f\) for all \(k\in \mathbb{N}\) there exists \(B_k\in \mathcal{A}\) such that \(\mu(B_k)\lt\frac{1}{k}\) and \(f_n\rightarrow f\) for \(x\in X\setminus B_k\) uniformly. (It is just the definition) Let 
           $$
@@ -797,7 +805,7 @@
         $$
         \mu\left( \bigcup_{i=1}^\infty C_{i, j_i}\right)\leq \sum_{i=1}^\infty \mu(C_{i, j_i})\lt \sum_{i=1}^\infty \varepsilon\cdot 2^{-i}= \varepsilon\sum_{i=1}^\infty  2^{-i}=\varepsilon
         $$
-        Thereofore, we show that \(f_n\xrightarrow{\text{a.u.}} f\) by the definition. 
+        Therefore, we show that \(f_n\xrightarrow{\text{a.u.}} f\) by the definition.
       </p>
     </section>
 
@@ -986,7 +994,8 @@
     <section>
       <p>
         \(\textbf{Proposition 9.4.}\) Let \((X, A), (Y, B)\) be measurable spaces.
-        <ul>
+      </p>
+      <ul>
           <li>
             If \(E \in \mathcal{A} \times \mathcal{B}\), then \(E_x \in \mathcal{B}\) and \(E_y \in \mathcal{A}\).
           </li>
@@ -994,7 +1003,6 @@
             If \(f\) is \((\mathcal{A} \times \mathcal{B})\)-measurable, then \(f_x\) is \(\mathcal{B}\)-measurable for all \(x \in X\) and \(f_y\) is \(\mathcal{A}\)-measurable for all \(y \in Y\).
           </li>
         </ul>
-      </p>
       <p>
         \(\textbf{Proof (1).}\) Let 
         $$
@@ -1082,7 +1090,8 @@
     <section>
       <p>
         \(\textbf{Definition 9.5.}\) Let \(X\) be a set and let \(\mathcal{C} \subseteq \mathcal{P}(X)\). The collection \(\mathcal{C}\) will be called a monotone class if:
-        <ul>
+      </p>
+      <ul>
           <li>
             For every increasing sequence \((E_j)_{j \in \mathbb{N}}\) with \(E_j \in \mathcal{C}\), we have 
             $$
@@ -1096,7 +1105,6 @@
             $$
           </li>
         </ul>
-      </p>
     </section>
 
     <br>
@@ -1225,6 +1233,7 @@
     <section>
       <p>
         \(\textbf{Lemma 9.10.}\) Let \((X,\mathcal{A})\) be a measurable space. Let \(\mathcal{F} \subseteq \mathcal{A}\) be an algebra such that \(\mathcal{M}(\mathcal{F}) = \mathcal{A}\). Let \(\mu,\nu\) be two measures on \(\mathcal{A}\) such that \(\mu(\mathcal{A}) = \nu(\mathcal{A})\) for all \(A \in \mathcal{F}\).
+      </p>
         <ul>
           <li>
             If \(\mu(X) = \nu(X) \lt \infty\), then \(\mu = \nu\).
@@ -1233,6 +1242,7 @@
             If there exists an increasing sequence \((E_n)_{n \geq 1} \subseteq \mathcal{F}\) such that \(\bigcup\limits_{n=1}^{\infty} E_n = X\)
           </li>
         </ul>
+      <p>
         and \(\mu(E_n) = \nu(E_n) \lt +\infty\), then \(\mu = \nu\).
       </p>
     </section>

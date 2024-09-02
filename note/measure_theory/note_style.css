@@ -1,0 +1,483 @@
+
+.nav-toggle {
+  display: none; /* hide the checkbox */
+}
+
+/* define styles for smaller screens */
+@media screen and (max-width: 600px) {
+    html {
+      color: #1a1a1a;
+      background-color: #ededed;
+    }
+
+    .top-bar {
+      background: #ededed;  /* Change this to grey color */
+      height: 55px;  /* Adjust this to change the height of the bar */
+      width: 100%;
+      position: fixed;
+      top: 0;
+      /* height: 50px; */
+      left: 0;
+      z-index: 1;  /* This ensures the bar stays on top of other elements */
+    }
+
+  .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 100%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #202020; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s;
+    padding-top: 20px;
+  }
+
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    text-align: center; /* Center the links */
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .top-left-button {
+    position: fixed; /* Stay in place even when scrolling */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the right */
+    z-index: 1; /* Ensure it stays on top of other elements */
+    font-size: 5px;
+  }
+
+  .top-left-button span {
+    background-color: transparent; /* Button background color */
+    color: black; /* Button text color */
+    padding: 5px 10px; /* Padding inside the button */
+    border-radius: 5px; /* Optional: Rounded corners */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Keep the button inline */
+  }
+
+  .top-left-button span:hover {
+    background-color: #565656; /* Darken background on hover */
+    color: white; /* Change text color on hover */
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    z-index: 100;
+    margin-left: 50px;
+    color: white;
+  }
+
+
+  body {
+      margin: 0 auto;
+      width: 80%;
+      font-size: 1em;
+      padding: 12px;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+      font-family:  'Spectral', serif;
+    }
+    p {
+      margin: 1em 0;
+    }
+    h1 {
+      font-size: 1.8em;
+      padding-top: 60px; /* Adjust this value to move h1 below the top-bar */
+    }
+
+  b {
+    font-weight: 900; /* You can adjust this value as needed */
+  }
+
+    .tooltip-link {
+      position: relative;
+      display: inline-block;
+      color: #33D1FF;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      width: 80%; /* Width of the tooltip(Box) */
+      background-color: #555;
+      color: #fff;
+      text-align: left;
+      border-radius: 10px;
+      padding: 10px 10px;
+
+      /* Position the tooltip */
+      position: fixed; /* Changed from absolute to fixed */
+      z-index: 1;
+      top: 50%; /* Position at the vertical center of the screen */
+      left: 50%; /* Position at the horizontal center of the screen */
+      transform: translate(-50%, -50%); /* Center the tooltip box */
+    
+      /* Fade-in effect */
+      opacity: 1;
+      transition: opacity 0.2s;
+    }
+
+  .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltip-link:hover {
+      color: orange;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .code-box {
+      background-color:#D0D0D0   ; 
+      padding: 2px 1px;
+      width: 80%; /* Adjust the width as needed */
+      /* max-height: 300px; Maximum height before scrolling  */
+      overflow: auto;
+      border: 1px solid #ddd;
+      font-family: monospace;
+      box-sizing: border-box; /* Includes padding and border in the width */
+    }
+    .code-box-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  .code-box code {
+      color: black;
+  }
+.code-box .keyword { color:  #FF5F1F ; font-weight: bold; }
+.code-box .function { color: #0066ff; }
+.code-box .string { color: #a31515; }
+.code-box .comment { color: #008000; font-style: italic; }
+.code-box .number { color: #ff0000; }
+.code-box .operator { color: #DE3163; }
+.code-box .group { color: #4CBB17; }
+.code-box .outcome { color:  #0F52BA ; }
+  
+}
+
+  
+
+/* define styles for larger screens */
+
+@media screen and (min-width: 600px) {
+
+  .button:hover {
+    background-color: #565656;
+  }
+
+  /*.nav-toggle {*/
+  /*  display: none; !* hide the checkbox *!*/
+  /*}*/
+
+  html {
+    color: #1a1a1a;
+    background-color: #ededed;
+  }
+
+  body {
+    /* margin: 0 auto; */
+    max-width: 50em;
+    padding-left: 350px;  /*push all body content to the right by the width of the navbar */
+    padding-right: 30px;  
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-family:  'Spectral', serif;
+  }
+
+  .next-page-bar {
+    position: fixed;
+    top: 0;
+    right: -50px;
+    width: 50px; /* Width of the vertical bar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #565656; /* Background color of the vertical bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s, opacity 0.3s;
+    opacity: 0;
+  }
+
+  .next-page-bar i {
+    font-size: 24px;
+    color: white;
+  }
+
+  /* Show vertical bar when hovering over right edge */
+  body:hover .next-page-bar {
+    right: 0;
+    opacity: 1;
+  }
+
+  .next-page-bar:hover {
+    background-color: #565656;
+  }
+
+  /* The sidebar menu */
+  .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 180px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #202020; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s;
+    padding-top: 20px;
+  }
+
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .top-left-button {
+    position: fixed; /* Stay in place even when scrolling */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the right */
+    z-index: 2; /* Ensure it stays on top of other elements */
+    font-size: 5px;
+  }
+
+  .top-left-button span {
+    background-color: transparent; /* Button background color */
+    color: black; /* Button text color */
+    padding: 5px 10px; /* Padding inside the button */
+    border-radius: 5px; /* Optional: Rounded corners */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Keep the button inline */
+  }
+
+  .top-left-button span:hover {
+    background-color: #565656; /* Darken background on hover */
+    color: white; /* Change text color on hover */
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    z-index: 100;
+    margin-left: 50px;
+    color: white;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+  a {
+    color: #3498db
+  }
+  a:visited {
+    color: #e67e22
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.4em;
+  }
+  h5, h6 {
+    font-size: 1em;
+    font-style: italic;
+  }
+  h6 {
+    font-weight: normal;
+  }
+  ol, ul {
+    padding-left: 1.7em;
+    margin-top: 1em;
+  }
+  li > ol, li > ul {
+    margin-top: 0;
+  }
+  hr {
+    background-color: #1a1a1a;
+    border: none;
+    height: 1px;
+    margin: 1em 0;
+  }
+  table {
+    margin: 1em 0;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+  table caption {
+    margin-bottom: 0.75em;
+  }
+  tbody {
+    margin-top: 0.5em;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  th {
+    border-top: 1px solid #1a1a1a;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+  }
+  td {
+    padding: 0.125em 0.5em 0.25em 0.5em;
+  }
+  header {
+    margin-bottom: 4em;
+    text-align: center;
+  }
+  #TOC li {
+    list-style: none;
+  }
+  #TOC ul {
+    padding-left: 1.3em;
+  }
+  #TOC > ul {
+    padding-left: 0;
+  }
+  #TOC a:not(:hover) {
+    text-decoration: none;
+  }
+
+  .tooltip-link {
+    position: relative;
+    display: inline-block;
+    color: #33D1FF;
+  }
+
+  .tooltip-text {
+    visibility: hidden;
+    width: 400px; /* Width of the tooltip(Box) */
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px 10px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade-in effect */
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+  
+  .tooltip-link:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .tooltip-link:hover {
+    color: orange;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .code-box {
+    background-color: #D0D0D0   ; 
+    padding: 2px 1px;
+    width: 100%; /* Adjust the width as needed */
+    max-width: 1500px;
+    max-height: 300px; /* Maximum height before scrolling */ 
+    overflow: auto;
+    border: 1px solid #ddd;
+    font-family: monospace;
+    box-sizing: border-box; /* Includes padding and border in the width */
+  }
+  .code-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+.code-box code {
+    color: black;
+}
+.code-box .keyword { color:  #FF5F1F ; font-weight: bold; } /* Keywords */
+.code-box .function { color: #0066ff; } /* Functions */
+.code-box .string { color: #a31515; } /* String literals */
+.code-box .comment { color: #008000; font-style: italic; } /* Comments */
+.code-box .number { color: #ff0000; } /* Numbers */
+.code-box .operator { color: #DE3163; } /* Operators */
+.code-box .group { color: #4CBB17; } /* Parentheses and Brackets */
+.code-box .outcome { color:  #0F52BA ; } /* Outcome */
+}
+.question-box {
+  background-color: #D6EAF8   ;
+  padding: 2px 1px;
+  width: 100%; /* Adjust the width as needed */
+  max-width: 1500px;
+  /*max-height: 300px; !* Maximum height before scrolling *!*/
+  overflow: auto;
+  border: 1px solid #ddd;
+  font-family: 'Spectral', serif;
+  box-sizing: border-box; /* Includes padding and border in the width */
+}
+.question-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  section {
+  width: 100%; /* Adjust this value to change the width of the section */
+  transition: background-color 1s; /* make the transition of the color */
+  }
+
+.highlight {
+    background-color: yellow;
+  }
+
