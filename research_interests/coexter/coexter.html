@@ -17,6 +17,7 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#coxeter_system">Coxeter systems</a>
+    <a href="#bruhat_order">Bruhat order</a>
     <a href="#References">References</a>
   </div>
   <script src="click.js"></script>
@@ -51,13 +52,20 @@
 
 <br>
 
+<section id = "bruhat_order">
+<h2>
+  Bruhat order
+</h2>
+    <p>
+        <b>Definition.</b> Let \( W \) be a Coxeter group with a set of simple reflections \( S \). The Bruhat order on \( W \) is defined by
 
-<!-- <h3>Kostka number</h3>
-Kostka number, \(K_{\lambda\mu}\), is equal to the number of Young tableaux of shape \(\lambda\)  and weight \(\mu\).
+    \[
+    w \leq w' \iff l(w') - l(w) = \# \{ s \in S : w' < ws \}. \tag{2.1}
+    \]
+    </p>
 
-Let \(S\) be a set. A matrix \(m : S\times S\to \{1,2, \dots ,\infty\}\) is called a Coxeter matrix if it satisfies
-$$m(x,y) = m(y,x)$$
-$$m(x,y) = 1\text{ implies }x=y$$ -->
+    <b>Proposition.</b> The Bruhat order is a partial order on \( W \).
+</section>
 
 <br>
 
