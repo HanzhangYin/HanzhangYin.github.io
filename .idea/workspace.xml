@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the reference">
       <change beforePath="$PROJECT_DIR$/research_interests/straightening/straightening.html" beforeDir="false" afterPath="$PROJECT_DIR$/research_interests/straightening/straightening.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,23 +98,7 @@
       <workItem from="1727271906221" duration="395000" />
       <workItem from="1727361374875" duration="23000" />
       <workItem from="1727361405813" duration="670000" />
-      <workItem from="1728162517205" duration="800000" />
-    </task>
-    <task id="LOCAL-00004" summary="add new content">
-      <option name="closed" value="true" />
-      <created>1717275546613</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1717275546613</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add new content">
-      <option name="closed" value="true" />
-      <created>1717356884845</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1717356884845</updated>
+      <workItem from="1728162517205" duration="1143000" />
     </task>
     <task id="LOCAL-00006" summary="fix the typo and add new contents">
       <option name="closed" value="true" />
@@ -493,7 +476,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728163158542</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="update the reference">
+      <option name="closed" value="true" />
+      <created>1728163530123</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1728163530123</updated>
+    </task>
+    <task id="LOCAL-00054" summary="update the reference">
+      <option name="closed" value="true" />
+      <created>1728163658345</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1728163658345</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,6 +513,7 @@
     <MESSAGE value="add to my webiste" />
     <MESSAGE value="add new file" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update the reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the reference" />
   </component>
 </project>

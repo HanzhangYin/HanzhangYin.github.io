@@ -38,7 +38,7 @@
   <p>A filling is called a <strong>numbering</strong> of shape \( \lambda \) if the content of the filling equals \( |\lambda| \times 1 \).
     (Why is numbering a number and content an \( n \)-tuple?)</p>
 
-  <p>We write \( E ≼ F \) if \( \text{rw}(E) \) precedes \( \text{rw}(F) \) lexicographically (what does it mean?)</p>
+  <p>We write \( E \preceq F \) if \( \text{rw}(E) \) precedes \( \text{rw}(F) \) lexicographically (what does it mean?)</p>
 
   <p>What is the reason that there is no column-sorting?</p>
 
@@ -107,6 +107,9 @@
 
   <p>
     <b>Lemma.</b> Suppose that there exists a basis \( \{s_1, \dots, s_n\} \). We can know that \(R_{s_i, s_j} = 0\) when \(i < j\).
+  </p>
+  <p>
+    <b>Proof.</b> Suppose that \(i < j\), then we can know that \(s_j \preceq s_i\) according to the definition.
   </p>
 
 <br>
