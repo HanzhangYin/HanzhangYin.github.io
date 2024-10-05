@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the reference">
-      <change beforePath="$PROJECT_DIR$/research_interests/straightening/straightening.html" beforeDir="false" afterPath="$PROJECT_DIR$/research_interests/straightening/straightening.html" afterDir="false" />
-    </list>
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the reference" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,15 +96,7 @@
       <workItem from="1727271906221" duration="395000" />
       <workItem from="1727361374875" duration="23000" />
       <workItem from="1727361405813" duration="670000" />
-      <workItem from="1728162517205" duration="1143000" />
-    </task>
-    <task id="LOCAL-00006" summary="fix the typo and add new contents">
-      <option name="closed" value="true" />
-      <created>1717450121649</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1717450121649</updated>
+      <workItem from="1728162517205" duration="1486000" />
     </task>
     <task id="LOCAL-00007" summary="fix the typo and add new contents">
       <option name="closed" value="true" />
@@ -492,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728163658345</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="update the reference">
+      <option name="closed" value="true" />
+      <created>1728163901720</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1728163901720</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
