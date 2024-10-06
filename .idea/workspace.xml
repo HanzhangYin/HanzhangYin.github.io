@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the proof" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the proof">
+      <change beforePath="$PROJECT_DIR$/research_interests/straightening/straightening.html" beforeDir="false" afterPath="$PROJECT_DIR$/research_interests/straightening/straightening.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,23 +103,7 @@
       <workItem from="1727361405813" duration="670000" />
       <workItem from="1728162517205" duration="6103000" />
       <workItem from="1728233354822" duration="19000" />
-      <workItem from="1728233397861" duration="4712000" />
-    </task>
-    <task id="LOCAL-00030" summary="correct the solutions">
-      <option name="closed" value="true" />
-      <created>1718561250412</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1718561250412</updated>
-    </task>
-    <task id="LOCAL-00031" summary="add new links">
-      <option name="closed" value="true" />
-      <created>1718561317487</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1718561317487</updated>
+      <workItem from="1728233397861" duration="5162000" />
     </task>
     <task id="LOCAL-00032" summary="fix the typos">
       <option name="closed" value="true" />
@@ -495,7 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728242345901</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728242465106</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1728242465106</updated>
+    </task>
+    <task id="LOCAL-00080" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728242792906</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1728242792907</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
