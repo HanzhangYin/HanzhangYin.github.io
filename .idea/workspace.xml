@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the proof">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research_interests/straightening/straightening.html" beforeDir="false" afterPath="$PROJECT_DIR$/research_interests/straightening/straightening.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,9 @@
     &quot;accountId&quot;: &quot;e5b773df-a675-4f5d-b028-e7de16257521&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/research_interests/straightening/straightening.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -60,7 +63,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.22855.79" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
       </set>
     </attachedChunks>
   </component>
@@ -100,30 +103,7 @@
       <workItem from="1727361405813" duration="670000" />
       <workItem from="1728162517205" duration="6103000" />
       <workItem from="1728233354822" duration="19000" />
-    </task>
-    <task id="LOCAL-00013" summary="add new contents">
-      <option name="closed" value="true" />
-      <created>1717599888988</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1717599888988</updated>
-    </task>
-    <task id="LOCAL-00014" summary="add new links">
-      <option name="closed" value="true" />
-      <created>1717600024783</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1717600024783</updated>
-    </task>
-    <task id="LOCAL-00015" summary="add new links">
-      <option name="closed" value="true" />
-      <created>1717609322072</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1717609322072</updated>
+      <workItem from="1728233397861" duration="365000" />
     </task>
     <task id="LOCAL-00016" summary="add new links">
       <option name="closed" value="true" />
@@ -493,7 +473,31 @@
       <option name="project" value="LOCAL" />
       <updated>1728170523845</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728233484826</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1728233484826</updated>
+    </task>
+    <task id="LOCAL-00063" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728233700701</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1728233700701</updated>
+    </task>
+    <task id="LOCAL-00064" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728233761095</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1728233761095</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
