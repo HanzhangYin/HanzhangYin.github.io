@@ -178,6 +178,23 @@
     \end{align}
     \]
   </p>
+
+  <p>
+    <b>Lemma.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle D_{s_i}, D_{s_j}\rangle = 0\) when \(i > j\).
+  </p>
+  <p>
+    <b>Proof.</b> We will prove it by strong induction. Fix \(j\) and we want to show the base case, \(\langle D_{s_{j+1}}, D_{s_j}\rangle = 0\).
+    Since \(D_{s_{j+1}} = s_{j+1} - \sum_{k=1}^{j} R_{s_{j+1}, s_k}D_{s_k}\), we can know that
+    \[
+    \begin{align}
+    \langle D_{s_{j+1}}, D_{s_j}\rangle &= \langle s_{j+1} - \sum_{k=1}^{j} R_{s_{j+1}, s_k}D_{s_k}, D_{s_j}\rangle \\
+    &= \langle s_{j+1}, D_{s_j}\rangle - \sum_{k=1}^{j} R_{s_{j+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
+    &= 0 - \sum_{k=1}^{j} R_{s_{j+1}, s_k}R_{s_k, s_j} \\
+    &= 0. \text{by the previous lemma}
+    \end{align}
+    \]
+    Then, we can know that \(\langle D_{s_{j+1}}, D_{s_j}\rangle = 0\).
+  </p>
 <br>
 
 <section id = "References">
