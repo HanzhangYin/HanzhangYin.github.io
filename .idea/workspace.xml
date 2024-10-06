@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the letter" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="fix the typo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,30 +105,7 @@
       <workItem from="1728244935258" duration="21000" />
       <workItem from="1728244960958" duration="541000" />
       <workItem from="1728247156140" duration="225000" />
-    </task>
-    <task id="LOCAL-00036" summary="update">
-      <option name="closed" value="true" />
-      <created>1718581187567</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1718581187567</updated>
-    </task>
-    <task id="LOCAL-00037" summary="update">
-      <option name="closed" value="true" />
-      <created>1722264640418</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1722264640418</updated>
-    </task>
-    <task id="LOCAL-00038" summary="update">
-      <option name="closed" value="true" />
-      <created>1723416378813</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1723416378813</updated>
+      <workItem from="1728250196522" duration="502000" />
     </task>
     <task id="LOCAL-00039" summary="update">
       <option name="closed" value="true" />
@@ -498,7 +475,31 @@
       <option name="project" value="LOCAL" />
       <updated>1728247252876</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="update the link">
+      <option name="closed" value="true" />
+      <created>1728250312738</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1728250312738</updated>
+    </task>
+    <task id="LOCAL-00086" summary="update the reference">
+      <option name="closed" value="true" />
+      <created>1728250429755</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1728250429755</updated>
+    </task>
+    <task id="LOCAL-00087" summary="fix the typo">
+      <option name="closed" value="true" />
+      <created>1728250452824</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1728250452824</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,20 +509,20 @@
     <MESSAGE value="add new files and update the contents" />
     <MESSAGE value="add new content" />
     <MESSAGE value="fix the typo and add new contents" />
-    <MESSAGE value="fix the typo" />
     <MESSAGE value="add new contents" />
     <MESSAGE value="correct the solutions" />
     <MESSAGE value="add new links" />
     <MESSAGE value="fix the typos" />
-    <MESSAGE value="update the link" />
     <MESSAGE value="add new notes" />
     <MESSAGE value="add to my webiste" />
     <MESSAGE value="add new file" />
     <MESSAGE value="update" />
-    <MESSAGE value="update the reference" />
     <MESSAGE value="update the title" />
     <MESSAGE value="update the proof" />
     <MESSAGE value="update the letter" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the letter" />
+    <MESSAGE value="update the link" />
+    <MESSAGE value="update the reference" />
+    <MESSAGE value="fix the typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the typo" />
   </component>
 </project>
