@@ -101,39 +101,7 @@
       <workItem from="1727361405813" duration="670000" />
       <workItem from="1728162517205" duration="6103000" />
       <workItem from="1728233354822" duration="19000" />
-      <workItem from="1728233397861" duration="3359000" />
-    </task>
-    <task id="LOCAL-00024" summary="correct the solutions">
-      <option name="closed" value="true" />
-      <created>1718496123655</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1718496123655</updated>
-    </task>
-    <task id="LOCAL-00025" summary="correct the solutions">
-      <option name="closed" value="true" />
-      <created>1718497514637</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1718497514637</updated>
-    </task>
-    <task id="LOCAL-00026" summary="correct the solutions">
-      <option name="closed" value="true" />
-      <created>1718560353180</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1718560353180</updated>
-    </task>
-    <task id="LOCAL-00027" summary="correct the solutions">
-      <option name="closed" value="true" />
-      <created>1718560687616</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1718560687616</updated>
+      <workItem from="1728233397861" duration="4291000" />
     </task>
     <task id="LOCAL-00028" summary="correct the solutions">
       <option name="closed" value="true" />
@@ -495,7 +463,39 @@
       <option name="project" value="LOCAL" />
       <updated>1728239981259</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728240049870</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1728240049870</updated>
+    </task>
+    <task id="LOCAL-00074" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728240104428</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1728240104428</updated>
+    </task>
+    <task id="LOCAL-00075" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728240157554</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1728240157554</updated>
+    </task>
+    <task id="LOCAL-00076" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728241926862</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1728241926862</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

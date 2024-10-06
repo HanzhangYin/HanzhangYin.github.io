@@ -189,11 +189,19 @@
     \begin{align}
     \langle D_{s_{j+1}}, D_{s_j}\rangle &= \langle s_{j+1} - \sum_{k=1}^{j} R_{s_{j+1}, s_k}D_{s_k}, D_{s_j}\rangle \\
     &= \langle s_{j+1}, D_{s_j}\rangle - \sum_{k=1}^{j} R_{s_{j+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
-    &= 0 - \sum_{k=1}^{j} R_{s_{j+1}, s_k}R_{s_k, s_j} \\
-    &= 0. \text{by the previous lemma}
+    &= \langle s_{j+1}, D_{s_j}\rangle - \sum_{k=1}^{j-1} R_{s_{j+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle - R_{s_{j+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle.
     \end{align}
     \]
-    Then, we can know that \(\langle D_{s_{j+1}}, D_{s_j}\rangle = 0\).
+    According to the previous lemma, we can know that \(\langle D_{s_k}, D_{s_j}\rangle = 0\) when \(k < j\).
+    According to the previous lemma, we can know that \(\langle D_{s_j}, D_{s_j}\rangle = 1\).
+    Then we can know that
+    \[
+    \begin{align}
+    \langle D_{s_{j+1}}, D_{s_j}\rangle &= \langle s_{j+1}, D_{s_j}\rangle - R_{s_{j+1}, s_j} \\
+    &= 0.
+    \end{align}
+    \]
+    Then we can know that the base case is true.
   </p>
 <br>
 
