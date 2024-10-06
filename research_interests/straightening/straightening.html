@@ -171,11 +171,10 @@
     Then we can know that
     \[
     \begin{align}
-    \langle D_{s_i}, D_{s_i}\rangle &= \langle s_i - \sum_{k=1}^{i-1} R_{s_i, s_k}D_{s_k}, s_i - \sum_{k=1}^{i-1} R_{s_i, s_k}D_{s_k}\rangle \\
-    &= \langle s_i, s_i\rangle - \sum_{k=1}^{i-1} R_{s_i, s_k}\langle D_{s_k}, s_i\rangle - \sum_{k=1}^{i-1} R_{s_i, s_k}\langle s_i, D_{s_k}\rangle + \sum_{k=1}^{i-1}\sum_{l=1}^{i-1} R_{s_i, s_k}R_{s_i, s_l}\langle D_{s_k}, D_{s_l}\rangle \\
-    &= 1 - \sum_{k=1}^{i-1} R_{s_i, s_k}R_{s_k, s_i} + \sum_{k=1}^{i-1}\sum_{l=1}^{i-1} R_{s_i, s_k}R_{s_i, s_l}\langle D_{s_k}, D_{s_l}\rangle \\
-    &= 1 - \sum_{k=1}^{i-1} R_{s_i, s_k}R_{s_k, s_i} + \sum_{k=1}^{i-1}\sum_{l=1}^{i-1} R_{s_i, s_k}R_{s_i, s_l}\delta_{kl} \\
-    &= 1.
+    \langle D_{s_i}, D_{s_i}\rangle &= \langle s_i - \sum_{k=1}^{i-1} R_{s_i, s_k}D_{s_k}, D_{s_i}\rangle \\
+    &= \langle s_i, D_{s_i}\rangle - \sum_{k=1}^{i-1} R_{s_i, s_k}\langle D_{s_k}, D_{s_i}\rangle \\
+    &= 1 - \sum_{k=1}^{i-1} R_{s_i, s_k}R_{s_k, s_i} \\
+    &= 1. \text{by the previous lemma}
     \end{align}
     \]
   </p>
