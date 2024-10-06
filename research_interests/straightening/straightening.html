@@ -139,7 +139,7 @@
   </p>
 
   <p>
-    <b>Lemma.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle D_{s_i}, D_{s_j}\rangle = 0\) if \(i\neq j\).
+    <b>Lemma.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle D_{s_i}, D_{s_j}\rangle = 0\) if \(i< j\).
   </p>
   <p>
     Given that
@@ -161,15 +161,19 @@
     &= 0.
     \end{align}
     \]
-    For the other case, where \(i>j\), we can know that
+  </p>
+
+  <p>
+    <b>Lemma.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle D_{s_i}, D_{s_i}\rangle = 1\).
+  </p>
+  <p>
+    <b>Proof.</b> For random \(i\), we can know that
     \[
     \begin{align}
-    \langle D_i, D_j\rangle &= \langle a_1s_1 + a_2s_2 + \dots + s_i,  D_j\rangle \\
-    &= \sum_{k=1}^{j-1} a_{k}\langle s_k, D_j\rangle + \langle s_i, D_j\rangle \\
-    &= \sum_{k=1}^{j-1} a_{k}R_{s_k, s_j} + R_{s_i, s_j} \\
-    &= a_jR_{s_j, s_j} + R_{s_i, s_j} \\
-    &= R_{s_i, s_j} \\
-    &= 0.
+    \langle D_{s_i}, D_{s_i}\rangle &= \langle a_1s_1 + a_2s_2 + \dots + s_i,  D_{s_i}\rangle \\
+    &= \sum_{k=1}^{i-1} a_{k}\langle s_k, D_i\rangle + \langle s_i, D_{s_i}\rangle \\
+    &= \sum_{k=1}^{i-1} a_{k}R_{s_k, s_i} + R_{s_i,s_i} \\
+    &= 1.
     \end{align}
     \]
   </p>
