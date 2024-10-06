@@ -161,6 +161,17 @@
     &= 0.
     \end{align}
     \]
+    For the other case, where \(i>j\), we can know that
+    \[
+    \begin{align}
+    \langle D_i, D_j\rangle &= \langle a_1s_1 + a_2s_2 + \dots + s_i,  D_j\rangle \\
+    &= \sum_{k=1}^{j-1} a_{k}\langle s_k, D_j\rangle + \langle s_i, D_j\rangle \\
+    &= \sum_{k=1}^{j-1} a_{k}R_{s_k, s_j} + R_{s_i, D_j} \\
+    &= a_jR_{s_j, s_j} + R_{s_i, D_j} \\
+    &= R_{s_i, D_j} \\
+    &= 0.
+    \end{align}
+    \]
   </p>
 <br>
 
