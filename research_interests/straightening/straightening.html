@@ -131,7 +131,7 @@
     Moreover, we have \(a_{i_t} = b_{i_t}\) for all \(t < l\) because of our assumption.
     Then, for the definition of semistandard tableaux, we can know that \(a_{i_l} \leq a_{i_{l'}\) and \(b_{i_l} \leq b_{i_{l'}\) for all \(l' > l\).
     In that case, we can know that \(s_i^c\) does not contain an entry of \(b_k\). Thus, there exists no group action can set \(s_i\) to be equivalent to \(s_j\).
-    Therefore, we can know that \(R_{s_i, s_j} = 0\).
+    Therefore, we can know that \(\mathcal{R}_{s_i, s_j} = 0\).
   </p>
 
   <p>
@@ -146,9 +146,9 @@
     \[
     \begin{align}
     D_{s_1} & = s_1, \\
-    D_{s_2} & = s_2 - R_{s_2, s_1}D_{s_1} \\
+    D_{s_2} & = s_2 - \mathcal{R}_{s_2, s_1}D_{s_1} \\
     & \vdots \\
-    D_{s_n} & = s_n - \sum_{k=1}^{n-1} R_{s_n, s_k}D_{s_k}.
+    D_{s_n} & = s_n - \sum_{k=1}^{n-1} \mathcal{R}_{s_n, s_k}D_{s_k}.
     \end{align}
     \]
     By substitution, we have \(D_i = a_1s_1 + a_2s_2 + \dots + s_i\).
@@ -157,7 +157,7 @@
     \begin{align}
     \langle D_{s_i}, D_{s_j}\rangle &= \langle a_1s_1 + a_2s_2 + \dots + s_i,  D_{s_j}\rangle \\
     &= \sum_{k=1}^{i-1} a_{k}\langle s_k, D_j\rangle + \langle s_i, D_{s_j}\rangle \\
-    &= \sum_{k=1}^{i-1} a_{k}R_{s_k, s_j} + R_{s_i,s_j} \\
+    &= \sum_{k=1}^{i-1} a_{k}\mathcal{R}_{s_k, s_j} + \mathcal{R}_{s_i,s_j} \\
     &= 0.
     \end{align}
     \]
@@ -167,13 +167,13 @@
     <b>Lemma.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle D_{s_i}, D_{s_i}\rangle = 1\).
   </p>
   <p>
-    <b>Proof.</b> For random \(i\), we can know that \(D_{s_i} = s_i - \sum_{k=1}^{i-1} R_{s_i, s_k}D_{s_k}\).
+    <b>Proof.</b> For random \(i\), we can know that \(D_{s_i} = s_i - \sum_{k=1}^{i-1} \mathcal{R}_{s_i, s_k}D_{s_k}\).
     Then we can know that
     \[
     \begin{align}
-    \langle D_{s_i}, D_{s_i}\rangle &= \langle s_i - \sum_{k=1}^{i-1} R_{s_i, s_k}D_{s_k}, D_{s_i}\rangle \\
-    &= \langle s_i, D_{s_i}\rangle - \sum_{k=1}^{i-1} R_{s_i, s_k}\langle D_{s_k}, D_{s_i}\rangle \\
-    &= 1 - \sum_{k=1}^{i-1} R_{s_i, s_k}R_{s_k, s_i} \\
+    \langle D_{s_i}, D_{s_i}\rangle &= \langle s_i - \sum_{k=1}^{i-1} \mathcal{R}_{s_i, s_k}D_{s_k}, D_{s_i}\rangle \\
+    &= \langle s_i, D_{s_i}\rangle - \sum_{k=1}^{i-1} \mathcal{R}_{s_i, s_k}\langle D_{s_k}, D_{s_i}\rangle \\
+    &= 1 - \sum_{k=1}^{i-1} \mathcal{R}_{s_i, s_k}\mathcal{R}_{s_k, s_i} \\
     &= 1. \text{by the previous lemma}
     \end{align}
     \]
@@ -184,12 +184,12 @@
   </p>
   <p>
     <b>Proof.</b> We will prove it by strong induction. Fix \(j\) and we want to show the base case, \(\langle D_{s_{j+1}}, D_{s_j}\rangle = 0\).
-    Since \(D_{s_{j+1}} = s_{j+1} - \sum_{k=1}^{j} R_{s_{j+1}, s_k}D_{s_k}\), we can know that
+    Since \(D_{s_{j+1}} = s_{j+1} - \sum_{k=1}^{j} \mathcal{R}_{s_{j+1}, s_k}D_{s_k}\), we can know that
     \[
     \begin{align}
-    \langle D_{s_{j+1}}, D_{s_j}\rangle &= \langle s_{j+1} - \sum_{k=1}^{j} R_{s_{j+1}, s_k}D_{s_k}, D_{s_j}\rangle \\
-    &= \langle s_{j+1}, D_{s_j}\rangle - \sum_{k=1}^{j} R_{s_{j+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
-    &= \langle s_{j+1}, D_{s_j}\rangle - \sum_{k=1}^{j-1} R_{s_{j+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle - R_{s_{j+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle.
+    \langle D_{s_{j+1}}, D_{s_j}\rangle &= \langle s_{j+1} - \sum_{k=1}^{j} \mathcal{R}_{s_{j+1}, s_k}D_{s_k}, D_{s_j}\rangle \\
+    &= \langle s_{j+1}, D_{s_j}\rangle - \sum_{k=1}^{j} \mathcal{R}_{s_{j+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
+    &= \langle s_{j+1}, D_{s_j}\rangle - \sum_{k=1}^{j-1} \mathcal{R}_{s_{j+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle - \mathcal{R}_{s_{j+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle.
     \end{align}
     \]
     According to the previous lemma, we can know that \(\langle D_{s_k}, D_{s_j}\rangle = 0\) when \(k < j\).
@@ -197,18 +197,18 @@
     Then we can know that
     \[
     \begin{align}
-    \langle D_{s_{j+1}}, D_{s_j}\rangle &= \langle s_{j+1}, D_{s_j}\rangle - R_{s_{j+1}, s_j} \\
+    \langle D_{s_{j+1}}, D_{s_j}\rangle &= \langle s_{j+1}, D_{s_j}\rangle - \mathcal{R}_{s_{j+1}, s_j} \\
     &= 0.
     \end{align}
     \]
     Then we can know that the base case is true. Now, suppose that it is true for all \(i > j\) and we want to show that it is true for \(i + 1\).
-    Since \(D_{s_{i+1}} = s_{i+1} - \sum_{k=1}^{i} R_{s_{i+1}, s_k}D_{s_k}\), we can know that
+    Since \(D_{s_{i+1}} = s_{i+1} - \sum_{k=1}^{i} \mathcal{R}_{s_{i+1}, s_k}D_{s_k}\), we can know that
     \[
     \begin{align}
-    \langle D_{s_{i+1}}, D_{s_j}\rangle &= \langle s_{i+1} - \sum_{k=1}^{i} R_{s_{i+1}, s_k}D_{s_k}, D_{s_j}\rangle \\
-    &= \langle s_{i+1}, D_{s_j}\rangle - \sum_{k=1}^{i} R_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
-    &= \langle s_{i+1}, D_{s_j}\rangle - \sum_{k=1}^{j-1} R_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle - R_{s_{i+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle - \sum_{k=j+1}^{i} R_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
-    &= \langle s_{i+1}, D_{s_j}\rangle - 0 - R_{s_{i+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle - 0 \text{ by the induction hypothesis} \\
+    \langle D_{s_{i+1}}, D_{s_j}\rangle &= \langle s_{i+1} - \sum_{k=1}^{i} \mathcal{R}_{s_{i+1}, s_k}D_{s_k}, D_{s_j}\rangle \\
+    &= \langle s_{i+1}, D_{s_j}\rangle - \sum_{k=1}^{i} \mathcal{R}_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
+    &= \langle s_{i+1}, D_{s_j}\rangle - \sum_{k=1}^{j-1} \mathcal{R}_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle - \mathcal{R}_{s_{i+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle - \sum_{k=j+1}^{i} \mathcal{R}_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
+    &= \langle s_{i+1}, D_{s_j}\rangle - 0 - \mathcal{R}_{s_{i+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle - 0 \text{ by the induction hypothesis} \\
     &= 0.
     \end{align}
     \]
@@ -223,14 +223,14 @@
     <b>Proposition.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle s_i, D_{s_j}\rangle = \langle D_{s_j}, s_i\rangle\).
   </p>
   <p>
-    <b>Proof.</b> Firstly, we know that \(D_{s_j} = s_j - \sum_{k=1}^{j-1} R_{s_j, s_k}D_{s_k}\) and \(s_i = \sum_{k=1}^{i} R_{s_i, s_k}D_{s_k} = R_{s_i, s_1}D_{s_1} + \dots + R_{s_i, s_{i-1}}D_{s_{i-1}} + D_{s_i}\).
+    <b>Proof.</b> Firstly, we know that \(D_{s_j} = s_j - \sum_{k=1}^{j-1} \mathcal{R}_{s_j, s_k}D_{s_k}\) and \(s_i = \sum_{k=1}^{i} \mathcal{R}_{s_i, s_k}D_{s_k} = \mathcal{R}_{s_i, s_1}D_{s_1} + \dots + \mathcal{R}_{s_i, s_{i-1}}D_{s_{i-1}} + D_{s_i}\).
     Then we can know that
     \[
     \begin{align}
-    \langle D_{s_j}, s_i\rangle &= \langle D_{s_j}, R_{s_i, s_1}D_{s_1} + \dots + R_{s_i, s_{i-1}}D_{s_{i-1}} + D_{s_i}\rangle \\
-    &= \sum_{k=1}^{j-1} R_{s_i, s_k}\langle D_{s_j}, D_{s_k}\rangle + R_{s_i, s_j}\langle D_{s_j}, D_{s_j}\rangle + \sum_{k=j+1}^{i-1} R_{s_i, s_k}\langle D_{s_j}, D_{s_k}\rangle + \langle D_{s_j}, D_{s_i}\rangle \\
-    &= R_{s_i, s_j}\langle D_{s_j}, D_{s_j}\rangle \\
-    &= R_{s_i, s_j} \\
+    \langle D_{s_j}, s_i\rangle &= \langle D_{s_j}, \mathcal{R}_{s_i, s_1}D_{s_1} + \dots + \mathcal{R}_{s_i, s_{i-1}}D_{s_{i-1}} + D_{s_i}\rangle \\
+    &= \sum_{k=1}^{j-1} \mathcal{R}_{s_i, s_k}\langle D_{s_j}, D_{s_k}\rangle + \mathcal{R}_{s_i, s_j}\langle D_{s_j}, D_{s_j}\rangle + \sum_{k=j+1}^{i-1} \mathcal{R}_{s_i, s_k}\langle D_{s_j}, D_{s_k}\rangle + \langle D_{s_j}, D_{s_i}\rangle \\
+    &= \mathcal{R}_{s_i, s_j}\langle D_{s_j}, D_{s_j}\rangle \\
+    &= \mathcal{R}_{s_i, s_j} \\
     &= \langle s_i, D_{s_j}\rangle.
     \end{align}
     \]

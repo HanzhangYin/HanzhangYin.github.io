@@ -19,12 +19,12 @@
     &quot;assignee&quot;: &quot;HanzhangYin&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/HanzhangYin/HanzhangYin.github.io.git",
-    "accountId": "eda1f9c9-9d3d-4a5c-aa6b-f6d650736203"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HanzhangYin/HanzhangYin.github.io.git&quot;,
+    &quot;accountId&quot;: &quot;eda1f9c9-9d3d-4a5c-aa6b-f6d650736203&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/research_interests/straightening/straightening.html" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -40,19 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/hanzhangyin/Documents/GitHub/HanzhangYin.github.io",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hanzhangyin/Documents/GitHub/HanzhangYin.github.io&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/elseworlds" />
@@ -103,22 +103,7 @@
       <workItem from="1728233354822" duration="19000" />
       <workItem from="1728233397861" duration="5478000" />
       <workItem from="1728244935258" duration="21000" />
-    </task>
-    <task id="LOCAL-00033" summary="update">
-      <option name="closed" value="true" />
-      <created>1718563897379</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1718563897379</updated>
-    </task>
-    <task id="LOCAL-00034" summary="update">
-      <option name="closed" value="true" />
-      <created>1718578095139</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1718578095139</updated>
+      <workItem from="1728244960958" duration="541000" />
     </task>
     <task id="LOCAL-00035" summary="update">
       <option name="closed" value="true" />
@@ -496,7 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728242903602</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="update the title">
+      <option name="closed" value="true" />
+      <created>1728245009673</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1728245009673</updated>
+    </task>
+    <task id="LOCAL-00083" summary="update the proof">
+      <option name="closed" value="true" />
+      <created>1728245201887</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1728245201887</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,6 +518,7 @@
     <MESSAGE value="add new file" />
     <MESSAGE value="update" />
     <MESSAGE value="update the reference" />
+    <MESSAGE value="update the title" />
     <MESSAGE value="update the proof" />
     <option name="LAST_COMMIT_MESSAGE" value="update the proof" />
   </component>
