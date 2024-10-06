@@ -227,20 +227,13 @@
     Then we can know that
     \[
     \begin{align}
-    \langle s_i, D_{s_j}\rangle &= \langle R_{s_i, s_1}D_{s_1} + \dots + R_{s_i, s_{i-1}}D_{s_{i-1}} + D_{s_i}, D_{s_j}\rangle \\
-    &= \sum_{k=1}^{i-1} R_{s_i, s_k}\langle D_{s_k}, D_{s_j}\rangle + \langle D_{s_i}, D_{s_j}\rangle \\
-    &= \sum_{k=1}^{i-1} R_{s_i, s_k}R_{s_k, s_j} + \langle D_{s_i}, D_{s_j}\rangle.
-    \end{align}
-    \]
-    Then we can know that
-    \[
-    \begin{align}
     \langle D_{s_j}, s_i\rangle &= \langle D_{s_j}, R_{s_i, s_1}D_{s_1} + \dots + R_{s_i, s_{i-1}}D_{s_{i-1}} + D_{s_i}\rangle \\
-    &= \sum_{k=1}^{i-1} R_{s_i, s_k}\langle D_{s_j}, D_{s_k}\rangle + \langle D_{s_j}, D_{s_i}\rangle \\
-    &= \sum_{k=1}^{i-1} R_{s_i, s_k}R_{s_k, s_j} + \langle D_{s_j}, D_{s_i}\rangle.
+    &= \sum_{k=1}^{j-1} R_{s_i, s_k}\langle D_{s_j}, D_{s_k}\rangle + R_{s_i, s_k}\langle D_{s_j}, D_{s_j}\rangle + \sum_{k=j+1}^{i-1} R_{s_i, s_k}\langle D_{s_j}, D_{s_k}\rangle \\
+    &= R_{s_i, s_k}\langle D_{s_j}, D_{s_j}\rangle \\
+    &= R_{s_i, s_j} \\
+    &= \langle s_i, D_{s_j}\rangle.
     \end{align}
     \]
-    Then we can know that \(\langle s_i, D_{s_j}\rangle = \langle D_{s_j}, s_i\rangle\).
   </p>
 <br>
 
