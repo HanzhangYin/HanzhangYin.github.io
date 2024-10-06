@@ -207,11 +207,16 @@
     \begin{align}
     \langle D_{s_{i+1}}, D_{s_j}\rangle &= \langle s_{i+1} - \sum_{k=1}^{i} R_{s_{i+1}, s_k}D_{s_k}, D_{s_j}\rangle \\
     &= \langle s_{i+1}, D_{s_j}\rangle - \sum_{k=1}^{i} R_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
-    &= \langle s_{i+1}, D_{s_j}\rangle - \sum_{k=1}^{j-1} R_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle - R_{s_{i+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle - \sum_{k=j+1}^{i} R_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle.
+    &= \langle s_{i+1}, D_{s_j}\rangle - \sum_{k=1}^{j-1} R_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle - R_{s_{i+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle - \sum_{k=j+1}^{i} R_{s_{i+1}, s_k}\langle D_{s_k}, D_{s_j}\rangle \\
     &= \langle s_{i+1}, D_{s_j}\rangle - 0 - R_{s_{i+1}, s_j}\langle D_{s_j}, D_{s_j}\rangle - 0 \text{ by the induction hypothesis} \\
     &= 0.
     \end{align}
     \]
+    Thus, we can know that the lemma is true.
+  </p>
+
+  <p>
+    <b>Corollary.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle D_{s_i}, D_{s_j}\rangle = 0\) when \(i \neq j\).
   </p>
 <br>
 
