@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the proof" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the letter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,14 +104,7 @@
       <workItem from="1728233397861" duration="5478000" />
       <workItem from="1728244935258" duration="21000" />
       <workItem from="1728244960958" duration="541000" />
-    </task>
-    <task id="LOCAL-00035" summary="update">
-      <option name="closed" value="true" />
-      <created>1718579138495</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1718579138495</updated>
+      <workItem from="1728247156140" duration="225000" />
     </task>
     <task id="LOCAL-00036" summary="update">
       <option name="closed" value="true" />
@@ -497,7 +490,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728245201887</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="update the letter">
+      <option name="closed" value="true" />
+      <created>1728247252875</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1728247252876</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,6 +521,7 @@
     <MESSAGE value="update the reference" />
     <MESSAGE value="update the title" />
     <MESSAGE value="update the proof" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the proof" />
+    <MESSAGE value="update the letter" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the letter" />
   </component>
 </project>
