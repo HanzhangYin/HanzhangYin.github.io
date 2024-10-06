@@ -143,6 +143,15 @@
   </p>
   <p>
     Suppose that \(D_i = \sum_{k=1}^n a_{k}s_k\) where \(i < j\).
+    Given that
+    \[
+    \begin{align}
+    D_{s_1} & = s_1, \\
+    D_{s_2} & = s_2 - R_{s_2, s_1}D_{s_1} \\
+    & \vdots \\
+    D_{s_n} & = s_n - \sum_{k=1}^{n-1} R_{s_n, s_k}D_{s_k}.
+    \end{align}
+    \]
     Then we can know that
     \[
     \begin{align}
