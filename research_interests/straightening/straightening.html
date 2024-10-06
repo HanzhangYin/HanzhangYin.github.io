@@ -139,7 +139,7 @@
   </p>
 
   <p>
-    <b>Lemma.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle D_i, D_j\rangle = 0\) if \(i\neq j\).
+    <b>Lemma.</b> Suppose that there exists a basis \(\{s_1, \dots, s_n\}\). We have that \(\langle D_{s_i}, D_{s_j}\rangle = 0\) if \(i\neq j\).
   </p>
   <p>
     Given that
@@ -155,9 +155,9 @@
     Then we can know that
     \[
     \begin{align}
-    \langle D_i, D_j\rangle &= \langle a_1s_1 + a_2s_2 + \dots + s_i,  D_j\rangle \\
-    &= \sum_{k=1}^{i-1} a_{k}\langle s_k, D_j\rangle + \langle s_i, D_j\rangle \\
-    &= \sum_{k=1}^{i-1} a_{k}R_{s_k, s_j} + R_{s_i, D_j} \\
+    \langle D_{s_i}, D_{s_j}\rangle &= \langle a_1s_1 + a_2s_2 + \dots + s_i,  D_{s_j}\rangle \\
+    &= \sum_{k=1}^{i-1} a_{k}\langle s_k, D_j\rangle + \langle s_i, D_{s_j}\rangle \\
+    &= \sum_{k=1}^{i-1} a_{k}R_{s_k, s_j} + R_{s_i,s_j} \\
     &= 0.
     \end{align}
     \]
@@ -166,9 +166,9 @@
     \begin{align}
     \langle D_i, D_j\rangle &= \langle a_1s_1 + a_2s_2 + \dots + s_i,  D_j\rangle \\
     &= \sum_{k=1}^{j-1} a_{k}\langle s_k, D_j\rangle + \langle s_i, D_j\rangle \\
-    &= \sum_{k=1}^{j-1} a_{k}R_{s_k, s_j} + R_{s_i, D_j} \\
-    &= a_jR_{s_j, s_j} + R_{s_i, D_j} \\
-    &= R_{s_i, D_j} \\
+    &= \sum_{k=1}^{j-1} a_{k}R_{s_k, s_j} + R_{s_i, s_j} \\
+    &= a_jR_{s_j, s_j} + R_{s_i, s_j} \\
+    &= R_{s_i, s_j} \\
     &= 0.
     \end{align}
     \]
