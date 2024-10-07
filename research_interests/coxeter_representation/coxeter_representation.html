@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script
+            type="text/javascript"
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+        ></script>
+        <!--It is a link for MathJax-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <!--link for the font-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!--link for the font-->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap"
+            rel="stylesheet"
+        />
+        <!--link for the font-->
+        <link rel="stylesheet" type="text/css" href="research_style.css" />
+        <!--It is a link for CSS structure-->
+        <title>Coxeter Relation</title>
+    </head>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+        >
+        <a href="#coxeter_system">Coxeter systems</a>
+        <a href="#bruhat_order">Bruhat order</a>
+        <a href="#References">References</a>
+    </div>
+    <script src="click.js"></script>
+    <!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+    <script src="highlight.js"></script>
+    <!--It is a link for highlight.js-->
+    <script src="mathjax_config.js"></script>
+    <!--It is a link for mathjax_configuration-->
+
+    <body>
+        <div class="top-bar">
+            <div class="top-left-button">
+                <span
+                    style="font-size: 20px; cursor: pointer"
+                    onclick="openNav()"
+                    >&#9776; Menu</span
+                >
+                <script src="opennav.js"></script>
+            </div>
+        </div>
+
+        <section id="coxeter_system">
+            <h2>Coxeter systems</h2>
+            <p>
+                <b>Definition.</b> \( S \) be a set. A matrix \( m : S \times S
+                \to \{1, 2, \ldots, \infty \} \) is called a Coxeter matrix if
+                it satisfies \[ m(s, s') = m(s', s); \tag{1.1} \] \[ m(s, s') =
+                1 \iff s = s'. \tag{1.2} \]
+            </p>
+        </section>
+
+        <br />
+
+        <section id="bruhat_order">
+            <h2>Bruhat order</h2>
+            <p>
+                <b>Definition</b>. Let \( (W, S) \) be a Coxeter system and \( T
+                = \{ wsw^{-1} : w \in W, s \in S \} \) its set of reflections.
+                \textbf{Definition 2.1.1} Let \( u, w \in W \). Then \[ (i)
+                \quad u \xrightarrow{t} w \quad \text{means that} \quad u^{-1}w
+                = t \in T \quad \text{and} \quad \ell(u) < \ell(w). \] \[ (ii)
+                \quad u \to w \quad \text{means that} \quad u \xrightarrow{t} w
+                \quad \text{for some} \quad t \in T. \] \[ (iii) \quad u \leq w
+                \quad \text{means that there exist} \quad w_i \in W \quad
+                \text{such that} \] \[ u = u_0 \to u_1 \to \cdots \to u_{k-1}
+                \to u_k = w. \]
+            </p>
+            <p>
+                <b>Definition.</b> Let \( W \) be a Coxeter group with a set of
+                simple reflections \( S \). The Bruhat order on \( W \) is
+                defined by \[ w \leq w' \iff l(w') - l(w) = \# \{ s \in S : w' <
+                ws \}. \tag{2.1} \]
+            </p>
+
+            <b>Proposition.</b> The Bruhat order is a partial order on \( W \).
+        </section>
+
+        <p>
+            \(\textbf{Proposition 10.10 (Deodhar)}\) If \( a_1, \ldots, a_K \)
+            is a word comprised of integers, write \( a_1, \ldots, a_K \uparrow
+            \) for the word rewritten in increasing order. For two words \( a_1,
+            \ldots, a_K \) and \( b_1, \ldots, b_K \), write \( a_1, \ldots, a_K
+            \preceq b_1, \ldots, b_K \) if \( a_i \leq b_i \) for all \( i \).
+            Then \( u \leq v \) in \( S_n \) if and only if \( w(1) \cdots w(K)
+            \preceq v(1) \cdots v(K) \) for \( K \in [n] \).
+        </p>
+
+        <br />
+
+        <section id="character">
+            <h2>Character</h2>
+            <p>
+                \(\textbf{Definition 13.6.}\) Let \( (\rho, V) \) be a representation
+                of \( G \). Its character is the function \( \chi_{\rho} : G \to
+                \mathbb{K} \) given by \[ \chi_{\rho}(g) = \text{tr}(\rho(g)).
+                \]
+            </p>
+            <h3>Hermitian Inner Product</h3>
+            <p>
+                We define a Hermitian inner product on \(\mathbb{C}_{\text{class}}(G)\) by
+
+                \[
+                (\alpha, \beta) = \frac{1}{|G|} \sum_{g \in G} \overline{\alpha(g)} \beta(g).
+                \]
+            </p>
+            <p>
+                <i>Representation Theory: A first class</i> Page. 16
+            </p>
+            <p>
+                \(\textbf{Corollary 2.15.}\) A representation \( V \) is irreducible if and only if \( (\chi_V, \chi_V) = 1 \).
+            </p>
+            <p>
+                \(\textbf{Remark.}\) In fact, if \( V \cong V_1^{\oplus a_1} \oplus \cdots \oplus V_k^{\oplus a_k} \) as above, then \( (\chi_V, \chi_V) = \sum a_i^2 \).
+
+                The multiplicities \( a_i \) can be calculated via
+            </p>
+            <p>
+                <i>Representation Theory: A first class</i> Page. 17
+            </p>
+        </section>
+
+
+        <section id="References">
+            <h2>References</h2>
+            <ul>
+                <li>
+                    William Fulton, Joe Harris, <i>Representation Theory: A
+                        First Course</i>, Springer, 1991.
+                </li>
+                <li>
+                    J. E. Humphreys, <i>Reflection Groups and Coxeter Groups</i>,
+                    Cambridge University Press, 1990.
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>
