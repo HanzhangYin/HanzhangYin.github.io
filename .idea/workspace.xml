@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="fix the typo" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the proof" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -514,11 +514,11 @@
     <MESSAGE value="add new file" />
     <MESSAGE value="update" />
     <MESSAGE value="update the title" />
-    <MESSAGE value="update the proof" />
     <MESSAGE value="update the letter" />
     <MESSAGE value="update the link" />
     <MESSAGE value="update the reference" />
     <MESSAGE value="fix the typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the typo" />
+    <MESSAGE value="update the proof" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the proof" />
   </component>
 </project>
