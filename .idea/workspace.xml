@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the proof" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="fix the template" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,22 +102,6 @@
       <workItem from="1728162517205" duration="6103000" />
       <workItem from="1728233354822" duration="19000" />
       <workItem from="1728233397861" duration="6000000" />
-    </task>
-    <task id="LOCAL-00036" summary="update">
-      <option name="closed" value="true" />
-      <created>1718581187567</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1718581187567</updated>
-    </task>
-    <task id="LOCAL-00037" summary="update">
-      <option name="closed" value="true" />
-      <created>1722264640418</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1722264640418</updated>
     </task>
     <task id="LOCAL-00038" summary="update">
       <option name="closed" value="true" />
@@ -495,7 +479,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728243640731</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="fix the template">
+      <option name="closed" value="true" />
+      <created>1728262898006</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1728262898006</updated>
+    </task>
+    <task id="LOCAL-00086" summary="fix the template">
+      <option name="closed" value="true" />
+      <created>1728263015991</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1728263015991</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,6 +519,7 @@
     <MESSAGE value="update the reference" />
     <MESSAGE value="fix the typo" />
     <MESSAGE value="update the proof" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the proof" />
+    <MESSAGE value="fix the template" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the template" />
   </component>
 </project>
