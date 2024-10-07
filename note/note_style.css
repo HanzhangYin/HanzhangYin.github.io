@@ -197,12 +197,13 @@
   }
 
   body {
-    /* margin: 0 auto; */
-    max-width: 50em;
-    padding-left: 350px;  /*push all body content to the right by the width of the navbar */
-    padding-right: 30px;  
+    margin: 0 auto;
+    max-width: calc(50em + 180px + 30px); /* Content width + padding-left + padding-right */
+    padding-left: 180px;  /* Width of .sidenav */
+    padding-right: 30px;
     padding-top: 30px;
-    padding-bottom: 30px; 
+    padding-bottom: 30px;
+    box-sizing: border-box;
     overflow-wrap: break-word;
     text-rendering: optimizeLegibility;
     font-kerning: normal;

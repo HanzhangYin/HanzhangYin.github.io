@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the contents" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="delete a file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,11 +101,7 @@
       <workItem from="1727361405813" duration="670000" />
       <workItem from="1728162517205" duration="6103000" />
       <workItem from="1728233354822" duration="19000" />
-      <workItem from="1728233397861" duration="5478000" />
-      <workItem from="1728244935258" duration="21000" />
-      <workItem from="1728244960958" duration="541000" />
-      <workItem from="1728247156140" duration="225000" />
-      <workItem from="1728250196522" duration="871000" />
+      <workItem from="1728233397861" duration="6000000" />
     </task>
     <task id="LOCAL-00040" summary="update the proof">
       <option name="closed" value="true" />
@@ -443,61 +439,61 @@
       <option name="project" value="LOCAL" />
       <updated>1728242903602</updated>
     </task>
-    <task id="LOCAL-00082" summary="update the title">
+    <task id="LOCAL-00082" summary="update the proof">
       <option name="closed" value="true" />
-      <created>1728245009673</created>
+      <created>1728243298854</created>
       <option name="number" value="00082" />
       <option name="presentableId" value="LOCAL-00082" />
       <option name="project" value="LOCAL" />
-      <updated>1728245009673</updated>
+      <updated>1728243298854</updated>
     </task>
     <task id="LOCAL-00083" summary="update the proof">
       <option name="closed" value="true" />
-      <created>1728245201887</created>
+      <created>1728243351716</created>
       <option name="number" value="00083" />
       <option name="presentableId" value="LOCAL-00083" />
       <option name="project" value="LOCAL" />
-      <updated>1728245201887</updated>
+      <updated>1728243351716</updated>
     </task>
-    <task id="LOCAL-00084" summary="update the letter">
+    <task id="LOCAL-00084" summary="update the proof">
       <option name="closed" value="true" />
-      <created>1728247252875</created>
+      <created>1728243640731</created>
       <option name="number" value="00084" />
       <option name="presentableId" value="LOCAL-00084" />
       <option name="project" value="LOCAL" />
-      <updated>1728247252876</updated>
+      <updated>1728243640731</updated>
     </task>
-    <task id="LOCAL-00085" summary="update the link">
+    <task id="LOCAL-00085" summary="fix the template">
       <option name="closed" value="true" />
-      <created>1728250312738</created>
+      <created>1728262898006</created>
       <option name="number" value="00085" />
       <option name="presentableId" value="LOCAL-00085" />
       <option name="project" value="LOCAL" />
-      <updated>1728250312738</updated>
+      <updated>1728262898006</updated>
     </task>
-    <task id="LOCAL-00086" summary="update the reference">
+    <task id="LOCAL-00086" summary="fix the template">
       <option name="closed" value="true" />
-      <created>1728250429755</created>
+      <created>1728263015991</created>
       <option name="number" value="00086" />
       <option name="presentableId" value="LOCAL-00086" />
       <option name="project" value="LOCAL" />
-      <updated>1728250429755</updated>
+      <updated>1728263015991</updated>
     </task>
-    <task id="LOCAL-00087" summary="fix the typo">
+    <task id="LOCAL-00087" summary="fix the template">
       <option name="closed" value="true" />
-      <created>1728250452824</created>
+      <created>1728263170403</created>
       <option name="number" value="00087" />
       <option name="presentableId" value="LOCAL-00087" />
       <option name="project" value="LOCAL" />
-      <updated>1728250452824</updated>
+      <updated>1728263170403</updated>
     </task>
-    <task id="LOCAL-00088" summary="update the contents">
+    <task id="LOCAL-00088" summary="delete a file">
       <option name="closed" value="true" />
-      <created>1728250915493</created>
+      <created>1728263221676</created>
       <option name="number" value="00088" />
       <option name="presentableId" value="LOCAL-00088" />
       <option name="project" value="LOCAL" />
-      <updated>1728250915493</updated>
+      <updated>1728263221676</updated>
     </task>
     <option name="localTasksCounter" value="89" />
     <servers />
@@ -518,12 +514,13 @@
     <MESSAGE value="add new file" />
     <MESSAGE value="update" />
     <MESSAGE value="update the title" />
-    <MESSAGE value="update the proof" />
     <MESSAGE value="update the letter" />
     <MESSAGE value="update the link" />
     <MESSAGE value="update the reference" />
     <MESSAGE value="fix the typo" />
-    <MESSAGE value="update the contents" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the contents" />
+    <MESSAGE value="update the proof" />
+    <MESSAGE value="fix the template" />
+    <MESSAGE value="delete a file" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete a file" />
   </component>
 </project>
