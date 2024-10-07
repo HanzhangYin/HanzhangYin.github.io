@@ -108,6 +108,27 @@
                 \mathbb{K} \) given by \[ \chi_{\rho}(g) = \text{tr}(\rho(g)).
                 \]
             </p>
+            <p>
+                \(\textbf{Lemma 2.7.}\) Any representation \( V \) of a finite group \( G \) can be given a \( G \)-invariant inner product, meaning that for any \( h \) in \( G \) and for any \( v_1, v_2 \) in \( V \), \( \langle hv_1, hv_2 \rangle = \langle v_1, v_2 \rangle \).
+            </p>
+            <p>
+                \(\textit{Proof.}\) Let \( \langle \cdot, \cdot \rangle_* \) be any positive-definite Hermitian inner product on \( V \). Define a new Hermitian inner product on \( V \) in the following way:
+
+                \[
+                \langle v_1, v_2 \rangle = \frac{1}{|G|} \sum_{g \in G} \langle gv_1, gv_2 \rangle_* \quad \text{for any } v_1, v_2 \in V.
+                \]
+
+                Now see that for any \( h \) in \( G \) and for any \( v_1, v_2 \) in \( V \), we have:
+
+                \[
+                \begin{align}
+                \langle hv_1, hv_2 \rangle = \frac{1}{|G|} \sum_{g \in G} \langle g(hv_1), g(hv_2) \rangle_*
+                = \frac{1}{|G|} \sum_{g \in G} \langle (gh)v_1, (gh)v_2 \rangle_*
+                = \frac{1}{|G|} \sum_{g \in G} \langle gv_1, gv_2 \rangle_* \quad \text{because for every } g \in G, \; gh \text{ is in } G \text{ also}
+                = \langle v_1, v_2 \rangle.
+                \end{align}
+                \]
+            </p>
             <h3>Hermitian Inner Product</h3>
             <p>
                 We define a Hermitian inner product on \(\mathbb{C}_{\text{class}}(G)\) by
