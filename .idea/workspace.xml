@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="fix the code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the contents" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,15 +103,7 @@
       <workItem from="1728233354822" duration="19000" />
       <workItem from="1728233397861" duration="6000000" />
       <workItem from="1728326043660" duration="930000" />
-      <workItem from="1728531732287" duration="6063000" />
-    </task>
-    <task id="LOCAL-00047" summary="update the link">
-      <option name="closed" value="true" />
-      <created>1725285678791</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1725285678792</updated>
+      <workItem from="1728531732287" duration="6989000" />
     </task>
     <task id="LOCAL-00048" summary="update">
       <option name="closed" value="true" />
@@ -499,7 +489,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728532319548</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="update the contents">
+      <option name="closed" value="true" />
+      <created>1728584993491</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1728584993491</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,9 +523,9 @@
     <MESSAGE value="update the proof" />
     <MESSAGE value="fix the template" />
     <MESSAGE value="delete a file" />
-    <MESSAGE value="update the contents" />
     <MESSAGE value="add more spaces" />
     <MESSAGE value="fix the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the code" />
+    <MESSAGE value="update the contents" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the contents" />
   </component>
 </project>
