@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the contents" />
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the contents">
+      <change beforePath="$PROJECT_DIR$/research_interests/coxeter_representation/coxeter_representation.html" beforeDir="false" afterPath="$PROJECT_DIR$/research_interests/coxeter_representation/coxeter_representation.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,23 +106,7 @@
       <workItem from="1728233354822" duration="19000" />
       <workItem from="1728233397861" duration="6000000" />
       <workItem from="1728326043660" duration="930000" />
-      <workItem from="1728531732287" duration="18951000" />
-    </task>
-    <task id="LOCAL-00072" summary="update the proof">
-      <option name="closed" value="true" />
-      <created>1728239981259</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1728239981259</updated>
-    </task>
-    <task id="LOCAL-00073" summary="update the proof">
-      <option name="closed" value="true" />
-      <created>1728240049870</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1728240049870</updated>
+      <workItem from="1728531732287" duration="19342000" />
     </task>
     <task id="LOCAL-00074" summary="update the proof">
       <option name="closed" value="true" />
@@ -498,7 +484,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728666213856</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="update the contents">
+      <option name="closed" value="true" />
+      <created>1728666297700</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1728666297700</updated>
+    </task>
+    <task id="LOCAL-00122" summary="update the contents">
+      <option name="closed" value="true" />
+      <created>1728666369419</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1728666369420</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
