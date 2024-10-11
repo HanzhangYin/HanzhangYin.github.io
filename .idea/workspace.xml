@@ -103,23 +103,7 @@
       <workItem from="1728233354822" duration="19000" />
       <workItem from="1728233397861" duration="6000000" />
       <workItem from="1728326043660" duration="930000" />
-      <workItem from="1728531732287" duration="12326000" />
-    </task>
-    <task id="LOCAL-00056" summary="update the reference">
-      <option name="closed" value="true" />
-      <created>1728164115710</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1728164115710</updated>
-    </task>
-    <task id="LOCAL-00057" summary="update the reference">
-      <option name="closed" value="true" />
-      <created>1728164207199</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1728164207200</updated>
+      <workItem from="1728531732287" duration="12711000" />
     </task>
     <task id="LOCAL-00058" summary="update the proof">
       <option name="closed" value="true" />
@@ -497,7 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728606780780</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="update the contents">
+      <option name="closed" value="true" />
+      <created>1728606969089</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1728606969089</updated>
+    </task>
+    <task id="LOCAL-00106" summary="update the contents">
+      <option name="closed" value="true" />
+      <created>1728607110165</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1728607110165</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
