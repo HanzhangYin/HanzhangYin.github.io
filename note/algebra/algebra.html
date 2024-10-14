@@ -11,6 +11,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
   <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
   <!--link for the font-->
+  <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+      template:       sagecell.templates.minimal,
+      evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+      evalButtonText: 'Evaluate'});
+  </script>
   <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for CSS structure-->
   <title>Algebra</title>
 </head>
@@ -545,6 +555,15 @@
         </pre>
       </div>
     </div>
+
+    <div class="compute"><script type="text/x-sage">
+        print(SymmetricGroup(3))
+    </script></div>
+
+    <div class="compute"><script type="text/x-sage">
+        print(AbelianGroup([2, 2, 2]))
+    </script></div>
+
   </section>
 
   <br>
@@ -1458,6 +1477,24 @@
               <span class='outcome'>Remainder: 2</span>
           </code></pre>
       </div>
+    </div>
+
+    <div id="mycell">
+      <script type="text/x-sage">
+# Define the polynomial ring over QQ
+R.<x> = QQ['x']
+
+# Define the polynomials
+f = x^3 + 2*x^2 + 3*x + 4
+g = x + 1
+
+# Perform the division to get quotient and remainder
+quotient, remainder = f.quo_rem(g)
+
+# Display the results
+print("Quotient:", quotient)
+print("Remainder:", remainder)
+      </script>
     </div>
   </section>
 

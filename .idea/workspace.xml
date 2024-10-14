@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the contents">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/algebra/algebra.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/algebra/algebra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research_interests/straightening/straightening.html" beforeDir="false" afterPath="$PROJECT_DIR$/research_interests/straightening/straightening.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +110,8 @@
       <workItem from="1728326043660" duration="930000" />
       <workItem from="1728531732287" duration="31438000" />
       <workItem from="1728749501393" duration="667000" />
-      <workItem from="1728766110378" duration="1694000" />
+      <workItem from="1728766110378" duration="5761000" />
+      <workItem from="1728862660933" duration="7960000" />
     </task>
     <task id="LOCAL-00080" summary="update the proof">
       <option name="closed" value="true" />
