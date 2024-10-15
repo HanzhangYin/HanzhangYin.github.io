@@ -100,6 +100,24 @@
 
         <br />
 
+        <section id = 'standard_representation'>
+            <p>
+                \(\textbf{Example 3.1.4 (Standard representation of \( S_n \)).}\) Define \( \varphi : S_n \to GL_n(\mathbb{C}) \) on basis elements by \( \varphi_{\sigma}(e_i) = e_{\sigma(i)} \). One obtains the matrix for \( \varphi_{\sigma} \) by permuting the rows of the identity matrix according to \( \sigma \). So, for instance, when \( n = 3 \) we have
+
+                \[
+                \varphi_{(1 \; 2)} = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}, \quad \varphi_{(1 \; 2 \; 3)} = \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}.
+                \]
+
+                Notice in Example 3.1.4 that
+
+                \[
+                \varphi_{\sigma}(e_1 + e_2 + \cdots + e_n) = e_{\sigma(1)} + e_{\sigma(2)} + \cdots + e_{\sigma(n)} = e_1 + e_2 + \cdots + e_n
+                \]
+
+                where the last equality holds since \( \sigma \) is a permutation and addition is commutative. Thus \( \mathbb{C}(e_1 + \cdots + e_n) \) is invariant under all the \( \varphi_{\sigma} \) with \( \sigma \in S_3 \). This leads to the following definition.
+            </p>
+        </section>
+
         <section id="character">
             <h2>Character</h2>
             <p>
