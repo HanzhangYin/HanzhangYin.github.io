@@ -128,7 +128,7 @@
       \]
     </p>
     <p>
-      \(\textbf{Remark. }\)We use \( \operatorname{Sym}\left(U^{\times m}, V\right) \) to denote the set of symmetric multilinear functions from \( U^{\times m} \) to \( V \).
+      \(\textbf{Remark. }\)We use \( \text{Sym}\left(U^{\times m}, V\right) \) to denote the set of symmetric multilinear functions from \( U^{\times m} \) to \( V \).
     </p>
     <p>
       \(\textbf{Definition (Symmetric Power). }\)
@@ -161,20 +161,20 @@
       Since linear functionals on \( V^{\otimes n} \) are determined by their values on a basis, we can easily define a linear functional on \( \text{Sym}^n(V) \) with the required property by considering the linear functional on \( V^{\otimes n} \) which takes value \(1\) on the equivalence class corresponding to our vector and takes value \(0\) on all other equivalence classes. \(\square\)
     </p>
     <p>
-      \(\textbf{Theorem. }\)For \(\operatorname{Sym}^2 V\), we have that
+      \(\textbf{Theorem. }\)For \(\text{Sym}^2 V\), we have that
       \[
       \chi_{\text{Sym}^2 V}(g)=\frac{1}{2}\left[\chi_V(g)^2+\chi_V\left(g^2\right)\right] .
       \]
       Note that this is compatible with the decomposition
       \[
-      V \otimes V=\operatorname{Sym}^2 V \oplus \wedge^2 V .
+      V \otimes V=\text{Sym}^2 V \oplus \wedge^2 V .
       \]
     </p>
     <p>
       \(\textbf{Reference. }\) <i>Representation Theory : A First Course</i> Page 13.
     </p>
     <p>
-      \(\textbf{Remark. }\)When \( \lambda = (n) \), \( E^\lambda \) will be the symmetric product \( \operatorname{Sym}^n E \), and when \( \lambda = \left(1^n\right) \), \( E^\lambda \) will be the exterior product \( \wedge^n E \).
+      \(\textbf{Remark. }\)When \( \lambda = (n) \), \( E^\lambda \) will be the symmetric product \( \text{Sym}^n E \), and when \( \lambda = \left(1^n\right) \), \( E^\lambda \) will be the exterior product \( \wedge^n E \).
     </p>
     <p>
         \(\textbf{Reference. }\)<i>Young Tableaux : With Applications to Representation Theory and Geometry</i>. Page 104.
@@ -187,7 +187,13 @@
     <h2>Schur Module</h2>
     <p>
       Consider maps \( \varphi: E^{\times \lambda} \rightarrow F \) from \( E^{\times \lambda} \) to an \( R \)-module \( F \), satisfying the following three properties:
-
+    </p>
+      <ol type="1">
+      <li>\( \varphi \) is \( R \)-multilinear.</li>
+        <li>\( \varphi \) is alternating in the entries of any column of \( \lambda \).</li>
+        <li>For any \( \mathbf{v} \) in \( E^{\times \lambda} \), \( \varphi(\mathbf{v}) = \sum \varphi(\mathbf{w}) \), where the sum is over all \( \mathbf{w} \) obtained from \( \mathbf{v} \) by an exchange between two given columns, with a given subset of boxes in the right chosen column.</li>
+      </ol>
+    <p>
       1. \( \varphi \) is \( R \)-multilinear.
 
       This means that if all the entries but one are fixed, then \( \varphi \) is \( R \)-linear in that entry.
@@ -206,9 +212,9 @@
   <br>
 
   <section id = 'foulkes_conjecture'>
-  <h1>Foulkes Conjecture</h1>
+  <h1>Foulke's Conjecture</h1>
   <p>
-    \(\textbf{Foulkes Conjecture.}\) Let \(a, b \in \mathbb{N}_{>0}\) with \(a \leq b\).
+    \(\textbf{Foulke's Conjecture.}\) Let \(a, b \in \mathbb{N}_{>0}\) with \(a \leq b\).
     Then for every partition \(\lambda\)
     the multiplicity of the irreducible \(\text{GL}(V)\) representation \(\{\lambda\}\) in the plethysm
     \(\text{Sym}^a \text{Sym}^b V\) is at most as large as
@@ -251,11 +257,11 @@
       <!--                    Carleton University, December 15, 2009-->
       <!--                </li>-->
       <li>
-        Björner, Anders, and Francesco Brenti. 2005. Combinatorics of Coxeter Groups. New York, NY: Springer. http://site.ebrary.com/id/10229375.
+        Björner, Anders, and Francesco Brenti. 2005. Combinatorics of Coxeter Groups. New York, NY: Springer.
       </li>
       <li>
-        GAY, DAVID A. “CHARACTERS OF THE WEYL GROUP OF SU(n) ON ZERO WEIGHT SPACES AND CENTRALIZERS OF PERMUTATION REPRESENTATIONS.” The Rocky Mountain Journal of Mathematics 6, no. 3 (1976): 449–55. http://www.jstor.org/stable/44236121.
-      </li>
+        GAY, DAVID A. “CHARACTERS OF THE WEYL GROUP OF SU(n) ON ZERO WEIGHT SPACES AND CENTRALIZERS OF PERMUTATION REPRESENTATIONS.” The Rocky Mountain Journal of Mathematics 6, no. 3 (1976): 449–55.
+        </li>
       <li>
         Fulton, William, and Joe Harris. 1991. <i>Representation Theory : A First Course</i>. New York: Springer-Verlag.
       </li>
