@@ -52,148 +52,15 @@
             </div>
         </div>
 
-        <section id="coxeter_system">
-            <h2>Coxeter systems</h2>
-            <p>
-                <b>Definition.</b> \( S \) be a set. A matrix \( m : S \times S
-                \to \{1, 2, \ldots, \infty \} \) is called a Coxeter matrix if
-                it satisfies \[ m(s, s') = m(s', s); \tag{1.1} \] \[ m(s, s') =
-                1 \iff s = s'. \tag{1.2} \]
-            </p>
-        </section>
-
-        <br />
-
-        <section id="bruhat_order">
-            <h2>Bruhat order</h2>
-            <p>
-                \(\textbf{Definition. }\). Let \( (W, S) \) be a Coxeter system and \( T
-                = \{ wsw^{-1} : w \in W, s \in S \} \) its set of reflections.
-                \textbf{Definition 2.1.1} Let \( u, w \in W \). Then \[ (i)
-                \quad u \xrightarrow{t} w \quad \text{means that} \quad u^{-1}w
-                = t \in T \quad \text{and} \quad \ell(u) < \ell(w). \] \[ (ii)
-                \quad u \to w \quad \text{means that} \quad u \xrightarrow{t} w
-                \quad \text{for some} \quad t \in T. \] \[ (iii) \quad u \leq w
-                \quad \text{means that there exist} \quad w_i \in W \quad
-                \text{such that} \] \[ u = u_0 \to u_1 \to \cdots \to u_{k-1}
-                \to u_k = w. \]
-            </p>
-            <p>
-                <b>Definition.</b> Let \( W \) be a Coxeter group with a set of
-                simple reflections \( S \). The Bruhat order on \( W \) is
-                defined by \[ w \leq w' \iff l(w') - l(w) = \# \{ s \in S : w' <
-                ws \}. \tag{2.1} \]
-            </p>
-
-            <b>Proposition.</b> The Bruhat order is a partial order on \( W \).
-        </section>
-
+        <h1>Foulkes Conjecture</h1>
         <p>
-            \(\textbf{Proposition 10.10 (Deodhar)}\) If \( a_1, \ldots, a_K \)
-            is a word comprised of integers, write \( a_1, \ldots, a_K \uparrow
-            \) for the word rewritten in increasing order. For two words \( a_1,
-            \ldots, a_K \) and \( b_1, \ldots, b_K \), write \( a_1, \ldots, a_K
-            \preceq b_1, \ldots, b_K \) if \( a_i \leq b_i \) for all \( i \).
-            Then \( u \leq v \) in \( S_n \) if and only if \( w(1) \cdots w(K)
-            \preceq v(1) \cdots v(K) \) for \( K \in [n] \).
+        <b>Foulkes conjecture</b>
+            Let \(a, b \in \IN_{>0}\) with \(a \leq b\).
+            Then for every partition \(\lambda\)
+            the multiplicity of the irreducible \(\GL(V)\) representation \(\{\lambda\}\) in the plethysm
+            \(\Sym^a \Sym^b V\) is at most as large as
+            the multiplicity of \(\{\lambda\}\) in \(\Sym^b \Sym^a V\).
         </p>
-
-        <br />
-
-        <h2>Representation Theory</h2>
-
-        <section id = 'trivial_representation'>
-            <p>
-                \(\textbf{Definition (Trivial representation)}.\) The trivial representation of a group \( G \) is the homomorphism \( \varphi : G \to \mathbb{C}^* \) given by \( \varphi(g) = 1 \) for all \( g \in G \).
-            </p>
-            <p>
-                <i>Representation Theory of Finite Groups</i>, Page 11
-            </p>
-        </section>
-        <br>
-        <section id = 'standard_representation'>
-            <p>
-                \(\textbf{Definition (Standard representation of \( S_n \)).}\) Define \( \varphi : S_n \to GL_n(\mathbb{C}) \) on basis elements by \( \varphi_{\sigma}(e_i) = e_{\sigma(i)} \). One obtains the matrix for \( \varphi_{\sigma} \) by permuting the rows of the identity matrix according to \( \sigma \). So, for instance, when \( n = 3 \) we have
-
-                \[
-                \varphi_{(1 \; 2)} = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}, \quad \varphi_{(1 \; 2 \; 3)} = \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}.
-                \]
-
-                Notice in Example 3.1.4 that
-
-                \[
-                \varphi_{\sigma}(e_1 + e_2 + \cdots + e_n) = e_{\sigma(1)} + e_{\sigma(2)} + \cdots + e_{\sigma(n)} = e_1 + e_2 + \cdots + e_n
-                \]
-
-                where the last equality holds since \( \sigma \) is a permutation and addition is commutative. Thus \( \mathbb{C}(e_1 + \cdots + e_n) \) is invariant under all the \( \varphi_{\sigma} \) with \( \sigma \in S_3 \). This leads to the following definition.
-            </p>
-
-            <p>
-                <i>Representation Theory of Finite Groups</i>, Page 10
-            </p>
-        </section>
-
-        <section id="character">
-            <h2>Character</h2>
-            <p>
-                \(\textbf{Definition 13.6.}\) Let \( (\rho, V) \) be a representation
-                of \( G \). Its character is the function \( \chi_{\rho} : G \to
-                \mathbb{K} \) given by \[ \chi_{\rho}(g) = \text{tr}(\rho(g)).
-                \]
-            </p>
-            <p>
-                \(\textbf{Lemma 2.7.}\) Any representation \( V \) of a finite group \( G \) can be given a \( G \)-invariant inner product, meaning that for any \( h \) in \( G \) and for any \( v_1, v_2 \) in \( V \), \( \langle hv_1, hv_2 \rangle = \langle v_1, v_2 \rangle \).
-            </p>
-            <p>
-                \(\textbf{Proof.}\) Let \( \langle \cdot, \cdot \rangle_* \) be any positive-definite Hermitian inner product on \( V \). Define a new Hermitian inner product on \( V \) in the following way:
-
-                \[
-                \langle v_1, v_2 \rangle = \frac{1}{|G|} \sum_{g \in G} \langle gv_1, gv_2 \rangle_* \quad \text{for any } v_1, v_2 \in V.
-                \]
-
-                Now see that for any \( h \) in \( G \) and for any \( v_1, v_2 \) in \( V \), we have:
-
-                \[
-                \begin{align}
-                \langle hv_1, hv_2 \rangle &= \frac{1}{|G|} \sum_{g \in G} \langle g(hv_1), g(hv_2) \rangle_* \\
-                &= \frac{1}{|G|} \sum_{g \in G} \langle (gh)v_1, (gh)v_2 \rangle_* \\
-                &= \frac{1}{|G|} \sum_{g \in G} \langle gv_1, gv_2 \rangle_* \quad \text{because for every } g \in G, \; gh \text{ is in } G \text{ also} \\
-                &= \langle v_1, v_2 \rangle.
-                \end{align}
-                \]
-            </p>
-            <p>
-                <i>Representations of the Symmetric Group</i>
-            </p>
-            <p>
-                \(\textbf{Theorem 13.3 (Maschke's Theorem)}\) Let \( G \) be a finite group, and \( \mathbb{K} \) a field such that \( \text{char} \, \mathbb{K} \) does not divide the order of \( G \). Let \( (\rho, V) \) be a representation of \( G \). Then every \( G \)-invariant subspace has a \( G \)-invariant complement. In particular, \( (\rho, V) \) is semisimple.
-            </p>
-            <p>
-                <i>From the Class Notes.</i>
-            </p>
-            <h3>Hermitian Inner Product</h3>
-            <p>
-                We define a Hermitian inner product on \(\mathbb{C}_{\text{class}}(G)\) by
-
-                \[
-                (\alpha, \beta) = \frac{1}{|G|} \sum_{g \in G} \overline{\alpha(g)} \beta(g).
-                \]
-            </p>
-            <p>
-                <i>Representation Theory: A first class</i> Page. 16
-            </p>
-            <p>
-                \(\textbf{Corollary 2.15.}\) A representation \( V \) is irreducible if and only if \( (\chi_V, \chi_V) = 1 \).
-            </p>
-            <p>
-                \(\textbf{Remark.}\) In fact, if \( V \cong V_1^{\oplus a_1} \oplus \cdots \oplus V_k^{\oplus a_k} \) as above, then \( (\chi_V, \chi_V) = \sum a_i^2 \).
-
-                The multiplicities \( a_i \) can be calculated via
-            </p>
-            <p>
-                <i>Representation Theory: A first class</i> Page. 17
-            </p>
-        </section>
 
 
         <section id="References">
