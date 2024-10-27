@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the contents">
+    <list default="true" id="efc9d8e3-56d1-4af7-844a-b70c1648549c" name="Changes" comment="update the .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research_interests/Foulkes_conjecture/Foulkes_conjecture.html" beforeDir="false" afterPath="$PROJECT_DIR$/research_interests/Foulkes_conjecture/Foulkes_conjecture.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/HanzhangYin/HanzhangYin.github.io.git&quot;,
-    &quot;accountId&quot;: &quot;e5b773df-a675-4f5d-b028-e7de16257521&quot;
+    &quot;accountId&quot;: &quot;eda1f9c9-9d3d-4a5c-aa6b-f6d650736203&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -39,23 +40,28 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2hCWRbGGgaix2MoOqq79DLrvN7Z" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/han/Documents/GitHub/HanzhangYin.github.io&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/hanzhangyin/Documents/GitHub/HanzhangYin.github.io",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/elseworlds" />
@@ -64,7 +70,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19072.23" />
       </set>
     </attachedChunks>
   </component>
@@ -110,46 +116,9 @@
       <workItem from="1728749501393" duration="667000" />
       <workItem from="1728766110378" duration="5761000" />
       <workItem from="1728862660933" duration="8027000" />
-    </task>
-    <task id="LOCAL-00081" summary="update the proof">
-      <option name="closed" value="true" />
-      <created>1728242903602</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1728242903602</updated>
-    </task>
-    <task id="LOCAL-00082" summary="update the proof">
-      <option name="closed" value="true" />
-      <created>1728243298854</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1728243298854</updated>
-    </task>
-    <task id="LOCAL-00083" summary="update the proof">
-      <option name="closed" value="true" />
-      <created>1728243351716</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1728243351716</updated>
-    </task>
-    <task id="LOCAL-00084" summary="update the proof">
-      <option name="closed" value="true" />
-      <created>1728243640731</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1728243640731</updated>
-    </task>
-    <task id="LOCAL-00085" summary="fix the template">
-      <option name="closed" value="true" />
-      <created>1728262898006</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1728262898006</updated>
+      <workItem from="1729787007561" duration="194000" />
+      <workItem from="1729787210722" duration="73000" />
+      <workItem from="1729997024978" duration="1371000" />
     </task>
     <task id="LOCAL-00086" summary="fix the template">
       <option name="closed" value="true" />
@@ -503,14 +472,54 @@
       <option name="project" value="LOCAL" />
       <updated>1728916413883</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="add new files">
+      <option name="closed" value="true" />
+      <created>1729787140026</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1729787140026</updated>
+    </task>
+    <task id="LOCAL-00131" summary="change the name">
+      <option name="closed" value="true" />
+      <created>1729787175071</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1729787175071</updated>
+    </task>
+    <task id="LOCAL-00132" summary="add a new link">
+      <option name="closed" value="true" />
+      <created>1729997153089</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1729997153089</updated>
+    </task>
+    <task id="LOCAL-00133" summary="update the .gitignore">
+      <option name="closed" value="true" />
+      <created>1729997320941</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1729997320941</updated>
+    </task>
+    <task id="LOCAL-00134" summary="update the .gitignore">
+      <option name="closed" value="true" />
+      <created>1729998023368</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1729998023368</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add new files and update the contents" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add new content" />
     <MESSAGE value="fix the typo and add new contents" />
     <MESSAGE value="add new contents" />
@@ -532,6 +541,10 @@
     <MESSAGE value="add more spaces" />
     <MESSAGE value="fix the code" />
     <MESSAGE value="update the contents" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the contents" />
+    <MESSAGE value="add new files" />
+    <MESSAGE value="change the name" />
+    <MESSAGE value="add a new link" />
+    <MESSAGE value="update the .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the .gitignore" />
   </component>
 </project>
