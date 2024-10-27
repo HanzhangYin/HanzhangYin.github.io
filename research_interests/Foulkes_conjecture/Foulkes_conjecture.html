@@ -111,6 +111,22 @@
       where \( i \) and \( j \) and the vectors \( \vec{v}_k \) are arbitrary.
     </p>
     <p>
+      \(\textbf{Theorem 1. }\)Let \(\{ \vec{v}_1, \ldots, \vec{v}_m \} \) be a basis for \( V \). Then
+
+      \[
+      \{ \vec{v}_{i_1} \cdots \vec{v}_{i_n} \mid i_1 \leq \cdots \leq i_n \}
+      \]
+
+      is a basis for \( \text{Sym}^n(V) \).
+    </p>
+    <p>
+      \(\textit{Proof. }\)We first show the set spans. Since \( \{ \vec{v}_{i_1} \otimes \cdots \otimes \vec{v}_{i_n} \} \) with no restrictions on the subscripts form a basis for \( V^{\otimes n} \), the image of these elements spans \( S^n(V) \) (this is equivalent to surjectivity). In the quotient \( S^n(V) \), we can rearrange terms arbitrarily. This lets us rearrange any element of the form \( \vec{v}_{i_1} \cdots \vec{v}_{i_n} \) into one in which the subscripts are in the desired order.
+
+      For linear independence, we show that there are linear functionals which are non-zero on a chosen \( \vec{v}_{i_1} \cdots \vec{v}_{i_n} \) and zero on all others. This will show that these are linearly independent, by our usual arguments.
+
+      We can define an equivalence relation on the basis for \( V^{\otimes n} \) by saying that two vectors are equivalent if their subscripts are just permutations of each other.
+    </p>
+    <p>
       For \(\operatorname{Sym}^2 V\), we have that
       \[
       \chi_{\text{Sym}^2 V}(g)=\frac{1}{2}\left[\chi_V(g)^2+\chi_V\left(g^2\right)\right] .
