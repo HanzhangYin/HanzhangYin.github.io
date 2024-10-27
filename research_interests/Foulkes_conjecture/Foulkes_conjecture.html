@@ -90,11 +90,14 @@
   <section id = 'symmetric_power'>
     <h2>Symmetric Power</h2>
     <p>
-      \(\textbf{Definition. }\)A multilinear function \( f: U^{\times m} \rightarrow V \) is symmetric if
+      \(\textbf{Definition (Symmetric Multilinear Function). }\)A multilinear function \( f: U^{\times m} \rightarrow V \) is symmetric if
       \[
       f\left(\vec{v}_1, \ldots, \vec{v}_i, \ldots, \vec{v}_j, \ldots, \vec{v}_m\right) = f\left(\vec{v}_1, \ldots, \vec{v}_j, \ldots, \vec{v}_i, \ldots, \vec{v}_m\right)
       \]
-      for any \( i \) and \( j \), and for any vectors \( \vec{v}_k \).
+      for any \( i \) and \( j \), and for any vectors \( \vec{v}_k \). In other words, for any \(\sigma\in S_m\), we have
+      \[
+      f\left(\vec{v}_{\sigma(1)}, \ldots, \vec{v}_{\sigma(m)}\right) = f\left(\vec{v}_1, \ldots, \vec{v}_m\right).
+      \]
       Just as with the exterior product, we can get the universal object associated to symmetric multilinear functions by forming various quotients of the tensor powers.
     </p>
     <p>
