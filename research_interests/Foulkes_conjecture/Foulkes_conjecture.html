@@ -126,6 +126,11 @@
       For linear independence, we show that there are linear functionals which are non-zero on a chosen \( \vec{v}_{i_1} \cdots \vec{v}_{i_n} \) and zero on all others. This will show that these are linearly independent, by our usual arguments.
 
       We can define an equivalence relation on the basis for \( V^{\otimes n} \) by saying that two vectors are equivalent if their subscripts are just permutations of each other.
+
+      In other words, two basis vectors are equivalent if they map to the same vector in \( \text{Sym}^n(V) \).
+      The equivalence classes form a partition of the basis.
+      It's also clear that a linear functional on \( V^{\otimes n} \) (so a multilinear functional) is symmetric if it takes the same value on equivalent vectors.
+      Since linear functionals on \( V^{\otimes n} \) are determined by their values on a basis, we can easily define a linear functional on \( \text{Sym}^n(V) \) with the required property by considering the linear functional on \( V^{\otimes n} \) which takes value \(1\) on the equivalence class corresponding to our vector and takes value \(0\) on all other equivalence classes. \(\square\)
     </p>
     <p>
       \(\textbf{Theorem. }\)For \(\operatorname{Sym}^2 V\), we have that
