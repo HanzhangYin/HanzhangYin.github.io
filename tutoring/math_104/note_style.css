@@ -2,6 +2,11 @@
 .nav-toggle {
   display: none; /* hide the checkbox */
 }
+.unit-circle {
+  max-width: 300px;
+  margin: auto;
+  display: block;
+}
 
 /* define styles for smaller screens */
 @media screen and (max-width: 600px) {
