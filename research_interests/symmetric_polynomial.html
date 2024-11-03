@@ -205,9 +205,13 @@ $$m(x,y) = 1\text{ implies }x=y$$ -->
   <p>
   \(\textbf{Definition 17.1}\) Let \( R \) be an integral domain, typically \( \mathbb{Q} \) or \( \mathbb{Z} \).
   A symmetric polynomial is a polynomial in \( R[x_{1}, \dots, x_{n}] \) that is invariant under permuting the variables.
+  </p>
 
+  <p>
   The homogeneous degree \( d \) symmetric polynomials form a finitely generated, free \( R \)-module \( \Lambda_{d}(R) \).
+  </p>
 
+  <p>
   \(\textbf{Example 17.2}\) If \( n=3 \), then up to scalar multiplication, the only symmetric polynomial of degree one in \( x, y, z \) is \( x+y+z \). In degree two, we have \( x^{2}+y^{2}+z^{2} \) and \( xy+yz+xz \). Every other symmetric polynomial in \( \Lambda_{2}(R) \) is an \( R \)-linear combination of these two because the coefficients of \( x^{2}+xy \) determine all other coefficients.
 
   Similarly,
@@ -218,9 +222,15 @@ $$m(x,y) = 1\text{ implies }x=y$$ -->
   & m_{111}(x, y, z) = xyz
   \end{align}
   \]
-  form a basis for \( \Lambda_{3}(R) \). Note that each symmetric polynomial above is a sum of monomials in a single orbit of \( S_{3} \) (for the natural action), and is indexed by an integer partition whose parts are the exponents of any of its monomials.
+  form a basis for \( \Lambda_{3}(R) \).
+  </p>
 
-  In general, for \( \lambda = (\lambda_{1}, \ldots, \lambda_{l}) \), the monomial symmetric polynomial is defined by
+  <p>
+    Note that each symmetric polynomial above is a sum of monomials in a single orbit of \( S_{3} \) (for the natural action), and is indexed by an integer partition whose parts are the exponents of its monomials.
+  <p>
+
+  <p>
+  \(\textbf{Definition.}\) In general, for \( \lambda = (\lambda_{1}, \ldots, \lambda_{l}) \), the monomial symmetric polynomial is defined by
   \[
   m_{\lambda}(x_{1}, \dots, x_{n}) = \sum_{\{a_{1}, \ldots, a_{l}\} \subseteq [n]} x_{a_{1}}^{\lambda_{1}} x_{a_{2}}^{\lambda_{2}} \cdots x_{a_{l}}^{\lambda_{l}}.
   \]
@@ -238,15 +248,19 @@ $$m(x,y) = 1\text{ implies }x=y$$ -->
   \left(\sum_{\alpha} c_{\alpha} x^{\alpha}\right) \left(\sum_{\beta} d_{\beta} x^{\beta}\right) = \sum_{\gamma} \left(\sum_{\alpha+\beta=\gamma} c_{\alpha} d_{\beta}\right) x^{\gamma},
   \]
   where each sum has finitely many nonzero terms.
+  </p>
 
-  \(	extbf{Note:}\) We are generally unconcerned with whether (or even where) a formal power series converges in the analytic sense. All that matters is that any operation we define produces well-defined powers and coefficients given by a finite computation in the base ring. For example, even though \( \sum_{n \geq 0} x^{n} \) has well-behaved coefficients, squaring this element would not be well-defined.
+  <p>
+  \(\textbf{Note:}\) We are generally unconcerned with whether (or even where) a formal power series converges in the analytic sense. All that matters is that any operation we define produces well-defined powers and coefficients given by a finite computation in the base ring. For example, even though \( \sum_{n \geq 0} x^{n} \) has well-behaved coefficients, squaring this element would not be well-defined.
 
   Familiar functions from analysis, like \(\exp\) and \(\log\), can be regarded as formal power series via their Taylor series. But they are studied using combinatorial methods. For example, \( 1/(1-x) \) is equal to the power series \( 1 + x + x^{2} + \dots \) not by calculating derivatives of \( 1/(1-x) \), but by observing that \( (1 - x)(1 + x + x^{2} + \dots) = 1 \) in \( \mathbb{Z}[[x]] \).
 
   Combinatorialists often use differential operators, but we treat them formally as linear transformations that map monomials to monomials.
 
   We can now properly define symmetric functions as elements of \( R[[x]] \).
+  </p>
 
+  <p>
   \(\textbf{Definition 17.3}\) Let \( \lambda \vdash n \). The monomial symmetric function \( m_{\lambda} \) is the power series
   \[
   m_{\lambda} = \sum_{\alpha : \lambda(\alpha) = \lambda} x^{\alpha}
@@ -261,14 +275,20 @@ $$m(x,y) = 1\text{ implies }x=y$$ -->
   m_{111} &= x_{1}x_{2}x_{3} + x_{1}x_{2}x_{4} + \cdots = \sum_{1 \leq i < j < k} x_{i}x_{j}x_{k}.
   \end{aligned}
   \]
+  </p>
 
+  <p>
   \(\textbf{Definition 17.4}\) The ring of symmetric functions over \( R \) is
   \[
   \Lambda = \Lambda_{R}(x) = \bigoplus_{d \geq 0} \Lambda_{d},
   \]
   where \( \Lambda_{d}(x) = \{ \text{degree } d \text{ homogeneous symmetric functions in indeterminates } x \text{ with coefficients in } R \} \).
 
-  Each \( \Lambda_{d} \) is a finitely generated, free \( R \)-module with basis \( \{m_{\lambda} \mid \lambda \vdash d\} \), and their direct sum \( \Lambda \) is a graded \( R \)-algebra. If \( S_{\infty} \) is the group of permutations of \( \{x_{1}, x_{2}, x_{3}, \dots\} \) with finitely many fixed points, then \( \Lambda \) is the ring of formal power series that have bounded degree and are invariant under the action of \( S_{\infty} \).
+  Each \( \Lambda_{d} \) is a finitely generated, free \( R \)-module with basis \( \{m_{\lambda} \mid \lambda \vdash d\} \), and their direct sum \( \Lambda \) is a graded \( R \)-algebra.
+  </p>
+
+  <p>
+    If \( S_{\infty} \) is the group of permutations of \( \{x_{1}, x_{2}, x_{3}, \dots\} \) with finitely many fixed points, then \( \Lambda \) is the ring of formal power series that have bounded degree and are invariant under the action of \( S_{\infty} \).
 
   The monomial symmetric functions \( m_{\lambda} \) provide a natural basis for \( \Lambda \) from an algebraic perspective, as each \( m_{\lambda} \) represents an \( S_{\infty} \)-orbit. However, there are many other bases, and understanding symmetric functions requires understanding these bases and their interactions.
 
