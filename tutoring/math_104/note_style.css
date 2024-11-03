@@ -2,11 +2,13 @@
 .nav-toggle {
   display: none; /* hide the checkbox */
 }
-.unit-circle {
-  max-width: 300px;
-  margin: auto;
-  display: block;
-}
+
+#unit_circle {
+   display: flex;
+   justify-content: center; /* Centers horizontally */
+   align-items: center;    /* Centers vertically */
+   height: 100vh;          /* Full viewport height for vertical centering */
+ }
 
 /* define styles for smaller screens */
 @media screen and (max-width: 600px) {
