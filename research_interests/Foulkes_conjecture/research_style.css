@@ -117,7 +117,7 @@
       background-color: #555;
       color: #fff;
       text-align: left;
-      border-radius: 10px;
+      border-radius: 30px;
       padding: 10px 10px;
 
       /* Position the tooltip */
@@ -129,7 +129,7 @@
     
       /* Fade-in effect */
       opacity: 1;
-      transition: opacity 0.2s;
+      transition: opacity 0.1s;
     }
 
   .tooltip-text {
@@ -248,7 +248,7 @@
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 180px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 2; /* Stay on top */
+    z-index: 100; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #202020; /* Black */
