@@ -2,6 +2,31 @@
   display: none; /* hide the checkbox */
 }
 
+/* Basic styling for the table */
+
+.table-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  min-height: 10vh; /* Full viewport height */
+}
+
+/* Basic styling for the table */
+table {
+  border-collapse: collapse;
+  width: 80%; /* Set a wider width */
+  font-size: 1.2em; /* Increase font size for readability */
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 15px; /* Add more padding */
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
 /* define styles for smaller screens */
 @media screen and (max-width: 600px) {
   html {
