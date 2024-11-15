@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider-container label {
+    margin-right: 10px;
+}
+
+#difficulty-label {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#problem-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#hint-container, #solution-container, #concept-reminder {
+    background-color: #e9f5ff;
+    padding: 15px;
+    border-left: 4px solid #007BFF;
+    margin-bottom: 20px;
+}
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+    border: 1px solid #ccc;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
