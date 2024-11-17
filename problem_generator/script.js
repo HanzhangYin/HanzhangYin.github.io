@@ -47,8 +47,8 @@ function generateProblem() {
       // Basic problem: Solve a linear equation
       const a = Math.floor(Math.random() * 10) + 1;
       const b = Math.floor(Math.random() * 10) + 1;
-      currentProblem.text = `Find the value of \\x in the equation \\${a}x + ${b} = 0.`;
-      currentSolution = `\$begin:math:display$ x = \\\\frac{-${b}}{${a}} = ${-b / a} \\$end:math:display$`;
+      currentProblem.text = `Find the value of \\( x \\) in the equation \\( ${a}x + ${b} = 0 \\).`;
+      currentSolution = `\\( x = \\frac{-${b}}{${a}} = ${-b / a} \\)`;
       currentHints = [
           'Isolate the variable \\( x \\) by subtracting \\( ' + b + ' \\) from both sides.',
           'Now divide both sides by \\( ' + a + ' \\) to solve for \\( x \\).'
@@ -58,21 +58,21 @@ function generateProblem() {
       const a = Math.floor(Math.random() * 5) + 1;
       const b = Math.floor(Math.random() * 10) - 5;
       const c = Math.floor(Math.random() * 10) + 1;
-      currentProblem.text = `Solve for \( x \) the quadratic equation \$begin:math:text$ ${a}x^2 + ${b}x + ${c} = 0 \\$end:math:text$.`;
+      currentProblem.text = `Solve for \( x \) the quadratic equation \\( ${a}\\cdot x^2 + ${b}\\cdot x + ${c} = 0 \\).`;
       const discriminant = b * b - 4 * a * c;
       if (discriminant < 0) {
-          currentSolution = `The equation has no real solutions because the discriminant \$begin:math:text$ b^2 - 4ac = ${discriminant} \\$end:math:text$ is negative.`;
+          currentSolution = `The equation has no real solutions because the discriminant \\( b^2 - 4ac = ${discriminant} \\) is negative.`;
           currentHints = [
               'Calculate the discriminant \\( D = b^2 - 4ac \\).',
-              `Since \$begin:math:text$ D = ${discriminant} \\$end:math:text$, the equation has no real solutions.`
+              `Since \\( D = ${discriminant} \\), the equation has no real solutions.`
           ];
       } else {
           const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
           const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-          currentSolution = `\$begin:math:display$ x = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a} \\$end:math:display$
-\$begin:math:display$ x = \\\\frac{-(${b}) \\\\pm \\\\sqrt{${b}^2 - 4 \\\\times ${a} \\\\times ${c}}}{2 \\\\times ${a}} \\$end:math:display$
-\$begin:math:display$ x = \\\\frac{${-b} \\\\pm \\\\sqrt{${discriminant}}}{${2 * a}} \\$end:math:display$
-\$begin:math:display$ x = ${root1} \\\\text{ or } x = ${root2} \\$end:math:display$`;
+          currentSolution = `\\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\)
+\\( x = \\frac{-(${b}) \\pm \\sqrt{${b}^2 - 4 \\times ${a} \\times ${c}}}{2 \\times ${a}} \\)
+\\( = \\frac{${-b} \\pm \\sqrt{${discriminant}}}{${2 * a}} \\)
+\\( x = ${root1} \\text{ or } x = ${root2} \\)`;
           currentHints = [
               'Use the quadratic formula \\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\).',
               `Calculate the discriminant \$begin:math:text$ D = ${b}^2 - 4 \\\\times ${a} \\\\times ${c} = ${discriminant} \\$end:math:text$.`,
@@ -85,8 +85,8 @@ function generateProblem() {
       const angleMultipliers = [1, 2, 3];
       const k = angleMultipliers[Math.floor(Math.random() * angleMultipliers.length)];
       const c = Math.floor(Math.random() * 2) + 1;
-      currentProblem.text = `Solve for \$begin:math:text$ x \\$end:math:text$ in the equation \$begin:math:text$ \\\\sin(${k}x) = ${c}/2 \\$end:math:text$ where \$begin:math:text$ 0 \\\\leq x \\\\leq 2\\\\pi \\$end:math:text$.`;
-      currentSolution = `\$begin:math:display$ ${k}x = \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) \\$end:math:display$
+      currentProblem.text = `Solve for \\( x \\) in the equation \\( \\sin(${k}x) = ${c}/2 \\) where \\( 0 \\leq x \\leq 2\\pi \\).`;
+      currentSolution = `\\( ${k}x = \\sin^{-1}\\left(\\frac{${c}}{2}\\right) \\)
 \$begin:math:display$ x = \\\\frac{1}{${k}} \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) \\$end:math:display$ (Include all solutions in the given interval.)`;
       currentHints = [
           'Apply the inverse sine function to both sides.',
