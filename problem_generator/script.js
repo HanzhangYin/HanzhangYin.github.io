@@ -87,7 +87,7 @@ function generateProblem() {
       const c = Math.floor(Math.random() * 2) + 1;
       currentProblem.text = `Solve for \\( x \\) in the equation \\( \\sin(${k}x) = ${c}/2 \\) where \\( 0 \\leq x \\leq 2\\pi \\).`;
       currentSolution = `\\( ${k}x = \\sin^{-1}\\left(\\frac{${c}}{2}\\right) \\)
-\$begin:math:display$ x = \\\\frac{1}{${k}} \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) \\$end:math:display$ (Include all solutions in the given interval.)`;
+\\( x = \\frac{1}{${k}} \\sin^{-1}\\left(\\frac{${c}}{2}\\right) \\) (Include all solutions in the given interval.)`;
       currentHints = [
           'Apply the inverse sine function to both sides.',
           'Divide both sides by \\( ' + k + ' \\) to solve for \\( x \\).',
