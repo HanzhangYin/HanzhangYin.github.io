@@ -109,6 +109,50 @@
     <img src="skew_diagram.svg" alt="skew_diagram" style="width: 25%;">
   </p>
 
+  <section id = "bialgebra">
+    <h2>Coalgebra</h2>
+    <p>
+      \(\textbf{Definition.}\) A bialgebra is a vector space \( B \) over a field \( K \), equipped with both an algebra structure and a coalgebra structure such that the operations are compatible.
+
+      The \(\textbf{comultiplication}\) is a linear map:
+      \[
+      \Delta: B \to B \otimes B
+      \]
+      satisfying the following properties:
+
+      1. **Coassociativity**:
+      \[
+      (\mathrm{id}_B \otimes \Delta) \circ \Delta = (\Delta \otimes \mathrm{id}_B) \circ \Delta,
+      \]
+      where \( \mathrm{id}_B \) denotes the identity map on \( B \).
+
+      2. **Counit**:
+      There exists a linear map \( \epsilon: B \to K \), called the counit, such that:
+      \[
+      (\mathrm{id}_B \otimes \epsilon) \circ \Delta = \mathrm{id}_B = (\epsilon \otimes \mathrm{id}_B) \circ \Delta.
+      \]
+
+      \textbf{Compatibility Conditions in a Bialgebra:}
+
+      In a bialgebra, the comultiplication \( \Delta \) and counit \( \epsilon \) must be algebra homomorphisms:
+
+      - **Compatibility with Multiplication**:
+      \[
+      \Delta(xy) = \Delta(x) \Delta(y), \quad \forall x, y \in B,
+      \]
+      where \( xy \) denotes the product in the algebra \( B \).
+
+      - **Compatibility with Unit**:
+      \[
+      \Delta(1_B) = 1_B \otimes 1_B,
+      \]
+      where \( 1_B \) is the unit element in \( B \).
+
+      \textbf{Remark:}
+      The dual space \( B^* \) of a finite-dimensional bialgebra \( B \) also forms a bialgebra, reflecting the self-dual nature of the structure.
+    </p>
+  </section>
+
 <section id = "References">
 <h2>References</h2>
   <ul>
