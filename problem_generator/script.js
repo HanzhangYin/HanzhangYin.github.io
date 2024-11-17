@@ -47,7 +47,7 @@ function generateProblem() {
       // Basic problem: Solve a linear equation
       const a = Math.floor(Math.random() * 10) + 1;
       const b = Math.floor(Math.random() * 10) + 1;
-      currentProblem.text = `Find the value of \$begin:math:text$ x \\$end:math:text$ in the equation \$begin:math:text$ ${a}x + ${b} = 0 \\$end:math:text$.`;
+      currentProblem.text = `Find the value of \\x in the equation \\${a}x + ${b} = 0.`;
       currentSolution = `\$begin:math:display$ x = \\\\frac{-${b}}{${a}} = ${-b / a} \\$end:math:display$`;
       currentHints = [
           'Isolate the variable \\( x \\) by subtracting \\( ' + b + ' \\) from both sides.',
@@ -58,7 +58,7 @@ function generateProblem() {
       const a = Math.floor(Math.random() * 5) + 1;
       const b = Math.floor(Math.random() * 10) - 5;
       const c = Math.floor(Math.random() * 10) + 1;
-      currentProblem.text = `Solve for \$begin:math:text$ x \\$end:math:text$ in the quadratic equation \$begin:math:text$ ${a}x^2 + ${b}x + ${c} = 0 \\$end:math:text$.`;
+      currentProblem.text = `Solve for \( x \) the quadratic equation \$begin:math:text$ ${a}x^2 + ${b}x + ${c} = 0 \\$end:math:text$.`;
       const discriminant = b * b - 4 * a * c;
       if (discriminant < 0) {
           currentSolution = `The equation has no real solutions because the discriminant \$begin:math:text$ b^2 - 4ac = ${discriminant} \\$end:math:text$ is negative.`;
@@ -99,7 +99,7 @@ function generateProblem() {
   problemContainer.innerHTML = currentProblem.text;
 
   // Render mathematical expressions
-  renderMathInElement(problemContainer);
+    renderMathInElement(document.body);
 }
 
 // Function to show hints
