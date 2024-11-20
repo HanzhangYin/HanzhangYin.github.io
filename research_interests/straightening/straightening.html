@@ -3,9 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+<!--    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>-->
+<!--    <script type="text/javascript" id="MathJax-script" async-->
+<!--      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>&lt;!&ndash;It is a link for MathJax&ndash;&gt;-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
@@ -185,7 +193,10 @@
       \(\textbf{Definition II.2.12.}\) For partitions \(\mu \subset \lambda\), define \(\bar{L}_{\lambda / \mu}(F)\) to be the cokernel of the map \(\square_{\lambda / \mu}\).
     </p>
     <p>
-      <i>Schur Functions and Schur Complexes</i>
+      Reference. <i>Schur Functions and Schur Complexes</i> Page.230
+    </p>
+    <p>
+      \(\textbf{Theorem II 2.16.}\) Let \( \lambda = (\lambda_1, \ldots, \lambda_q) \), \( \mu = (\mu_1, \ldots, \mu_q) \) be partitions with \( \mu \subset \lambda \), and let \( F \) be a free module with ordered basis \( \{x_1, \ldots, x_n\} \). Then \( \{d_{\lambda / \mu}(X_T) \mid T \text{ is a standard tableau in } \operatorname{Tab}_{\lambda / \mu} \{x_1, \ldots, x_n\}\} \) is a free basis for \( L_{\lambda / \mu}(F) \), and the map \( \theta_{\lambda / \mu} : \overline{L}_{\lambda / \mu}(F) \rightarrow L_{\lambda / \mu}(F) \) is an isomorphism. Hence \( L_{\lambda / \mu}(F) \) is universally free.
     </p>
   </section>
 
