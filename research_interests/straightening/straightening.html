@@ -180,6 +180,12 @@
 
   <section>
     <p>
+      If \(\lambda, \mu \in \mathbb{N}^{\infty}\), we say \(\mu \subseteq \lambda\) if \(\mu_{i} \leqslant \lambda_{i}\) for all \(i \geqslant 1\). Clearly this is equivalent to stating that the diagram of \(\mu\) is contained in that of \(\lambda\). If \(\mu \subseteq \lambda\), we define the skew-shape, \(\Delta_{\lambda / \mu}\), to be \(\Delta_{\mathcal{\lambda}}-\Delta_{\mu}\). Since the sequence \(\lambda-\mu=\) \(\left(\lambda_{1}-\mu_{1}, \lambda_{2}-\mu_{2}, \ldots\right)\) is in \(\mathbb{N}^{\infty}\),
+    </p>
+    <p>
+      \(\textbf{Definition II.1.4.}\) The image of \(d_{\lambda / \mu}: \Lambda_{\lambda / \mu} F \rightarrow S_{\lambda / \mu} F\) is called the Schur functor of \(F\) with respect to the skew-shape \(\lambda / \mu\), and is denoted by \(L_{\lambda / \mu} F\). The image of \(D_{\lambda / \mu}^{\prime}: D_{\lambda / \mu} F \rightarrow \Lambda_{\lambda / \mu} F\) is called the coSchur functor of \(F\) with respect to the skew-shape \(\lambda / \mu\), and is denoted by \(K_{\lambda / \mu} F\).
+    </p>
+    <p>
       \(\textbf{Definition II.2.1.}\) Let \(S\) be a totally ordered set, let \(\lambda\) and \(\mu\) be partitions with \(\mu \subseteq \lambda\), and let \(\Delta_{\lambda / \mu}\) be the skew-shape associated to this pair. A tableau of shape \(\lambda / \mu\) with values in the set \(S\) is a function from \(\Delta_{\lambda / \mu}\) to \(S\). The set of all such tableaux is denoted by \(\operatorname{Tab}_{\lambda / \mu}(S)\).
     </p>
     <p>
@@ -197,6 +203,10 @@
     </p>
     <p>
       \(\textbf{Theorem II 2.16.}\) Let \( \lambda = (\lambda_1, \ldots, \lambda_q) \), \( \mu = (\mu_1, \ldots, \mu_q) \) be partitions with \( \mu \subset \lambda \), and let \( F \) be a free module with ordered basis \( \{x_1, \ldots, x_n\} \). Then \( \{d_{\lambda / \mu}(X_T) \mid T \text{ is a standard tableau in } \operatorname{Tab}_{\lambda / \mu} \{x_1, \ldots, x_n\}\} \) is a free basis for \( L_{\lambda / \mu}(F) \), and the map \( \theta_{\lambda / \mu} : \overline{L}_{\lambda / \mu}(F) \rightarrow L_{\lambda / \mu}(F) \) is an isomorphism. Hence \( L_{\lambda / \mu}(F) \) is universally free.
+    </p>
+    <p>
+      \(\textbf{Theorem II.3.16.}\) Let \(\lambda=\left(\lambda_{1}, \ldots, \lambda_{q}\right), \mu=\left(\mu_{1}, \ldots, \mu_{q}\right)\) be partitions with \(\mu \subseteq \lambda\), and let \(F\) be a free module with ordered basis \(\left\{x_{1}, \ldots, x_{n}\right\}\). Then \(\left\{d_{\lambda / \mu}^{\prime}\left(X_{T}\right) / T\right.\) is a co-standard tableau in \(\left.\mathrm{Tab}_{\lambda / \mu}\left\{x_{1}, \ldots, x_{n}\right\}\right\}\) is a free basis for \(K_{\lambda / \mu}(F)\), and the map \(\theta_{\lambda / \mu}^{\prime}: \bar{K}_{\lambda / \mu}(F) \rightarrow K_{\lambda / \mu}(F)\) is an isomorphism. Hence, \(K_{\lambda / \mu}(F)\) is universally free.\\
+      (In this statement, \(X_{T}\) is the basis element of \(D_{\lambda / \mu} F\) that corresponds to the co-standard tableau \(T\) under the obvious extension of the correspondence described in the paragraph immediately following Definition II.3.2.)
     </p>
   </section>
 
