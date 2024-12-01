@@ -2,95 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Calculus Practice Problems</title>
     <link rel="stylesheet" href="style.css">
     <!-- Include KaTeX for rendering mathematical expressions -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
-            onload="renderMathInElement(document.body);"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
 </head>
 <body>
 <h1>Pre-Calculus Practice Problems</h1>
-    <div class="container">
+<div class="container">
 
+    <!-- Problem Section 1 -->
+    <div class="problem-section">
         <!-- Difficulty Slider -->
         <div class="slider-container">
-            <label for="difficulty">Difficulty Level:</label>
-            <input type="range" id="difficulty" name="difficulty" min="1" max="3" value="1">
-            <span id="difficulty-label">Basic</span>
+            <label for="difficulty-1">Difficulty Level:</label>
+            <input type="range" class="difficulty" id="difficulty-1" name="difficulty" min="1" max="3" value="1">
+            <span class="difficulty-label">Basic</span>
         </div>
 
         <!-- Problem Display -->
-        <div id="problem-container">
+        <div class="problem-container">
             <!-- Problem will be generated here -->
         </div>
 
         <!-- Buttons -->
         <div class="button-container">
-            <button id="generate-problem" aria-label="Generate a similar problem">Generate Similar Problem</button>
-            <button id="show-hint" aria-label="Show hint">Show Hint</button>
-            <button id="show-solution" aria-label="Show solution">Show Solution</button>
+            <button class="generate-problem" aria-label="Generate a similar problem">Generate Similar Problem</button>
+            <button class="show-hint" aria-label="Show hint">Show Hint</button>
+            <button class="show-solution" aria-label="Show solution">Show Solution</button>
         </div>
 
         <!-- Hint and Solution Sections -->
-        <div id="hint-container" style="display: none;">
+        <div class="hint-container" style="display: none;">
             <!-- Hints will be displayed here -->
         </div>
-        <div id="solution-container" style="display: none;">
+        <div class="solution-container" style="display: none;">
             <!-- Solution will be displayed here -->
         </div>
-
-        <!-- Key Concept Reminders -->
-        <div id="concept-reminder" style="display: none;">
-            <!-- Key concepts will be displayed here -->
-        </div>
-        <script src="script.js"></script>
-        <!-- Include the script file -->
     </div>
 
-
-    <div class="container">
-
+    <!-- Problem Section 2 -->
+    <div class="problem-section">
         <!-- Difficulty Slider -->
         <div class="slider-container">
-            <label for="difficulty">Difficulty Level:</label>
-            <input type="range" id="difficulty" name="difficulty" min="1" max="3" value="1">
-            <span id="difficulty-label">Basic</span>
+            <label for="difficulty-2">Difficulty Level:</label>
+            <input type="range" class="difficulty" id="difficulty-2" name="difficulty" min="1" max="3" value="1">
+            <span class="difficulty-label">Basic</span>
         </div>
 
         <!-- Problem Display -->
-        <div id="problem-container">
+        <div class="problem-container">
             <!-- Problem will be generated here -->
         </div>
 
         <!-- Buttons -->
         <div class="button-container">
-            <button id="generate-problem" aria-label="Generate a similar problem">Generate Similar Problem</button>
-            <button id="show-hint" aria-label="Show hint">Show Hint</button>
-            <button id="show-solution" aria-label="Show solution">Show Solution</button>
+            <button class="generate-problem" aria-label="Generate a similar problem">Generate Similar Problem</button>
+            <button class="show-hint" aria-label="Show hint">Show Hint</button>
+            <button class="show-solution" aria-label="Show solution">Show Solution</button>
         </div>
 
         <!-- Hint and Solution Sections -->
-        <div id="hint-container" style="display: none;">
+        <div class="hint-container" style="display: none;">
             <!-- Hints will be displayed here -->
         </div>
-        <div id="solution-container" style="display: none;">
+        <div class="solution-container" style="display: none;">
             <!-- Solution will be displayed here -->
         </div>
-
-        <!-- Key Concept Reminders -->
-        <div id="concept-reminder" style="display: none;">
-            <!-- Key concepts will be displayed here -->
-        </div>
-        <script src="prob_2.js"></script>
     </div>
 
     <!-- Include the script file -->
+    <script src="prob_2.js"></script>
+</div>
 </body>
 </html>

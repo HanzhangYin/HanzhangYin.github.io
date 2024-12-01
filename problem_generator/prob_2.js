@@ -1,135 +1,154 @@
-// Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function() {
-  // Initialize the problem
-  generateProblem();
+    // Select all problem sections
+    const problemSections = document.querySelectorAll('.problem-section');
 
-  // Add event listeners
-  document.getElementById('generate-problem').addEventListener('click', generateProblem);
-  document.getElementById('show-hint').addEventListener('click', showHint);
-  document.getElementById('show-solution').addEventListener('click', showSolution);
-  document.getElementById('difficulty').addEventListener('input', updateDifficultyLabel);
+    problemSections.forEach(function(section) {
+        // Initialize the problem data for each section
+        section.currentProblem = {};
+        section.currentHints = [];
+        section.currentSolution = '';
+
+        // Initialize the problem
+        generateProblem(section);
+
+        // Add event listeners
+        const generateButton = section.querySelector('.generate-problem');
+        const showHintButton = section.querySelector('.show-hint');
+        const showSolutionButton = section.querySelector('.show-solution');
+        const difficultySlider = section.querySelector('.difficulty');
+        const difficultyLabel = section.querySelector('.difficulty-label');
+
+        generateButton.addEventListener('click', function() {
+            generateProblem(section);
+        });
+
+        showHintButton.addEventListener('click', function() {
+            toggleHint(section);
+        });
+
+        showSolutionButton.addEventListener('click', function() {
+            toggleSolution(section);
+        });
+
+        difficultySlider.addEventListener('input', function() {
+            updateDifficultyLabel(section);
+            generateProblem(section);
+        });
+    });
 });
 
-// Global variables to store the current problem and hints
-let currentProblem = {};
-let currentHints = [];
-let currentSolution = '';
-
-// Function to update difficulty label
-function updateDifficultyLabel() {
-  const difficulty = document.getElementById('difficulty').value;
-  const label = document.getElementById('difficulty-label');
-  if (difficulty == 1) {
-      label.innerText = 'Easy';
-  } else if (difficulty == 2) {
-      label.innerText = 'Intermediate';
-  } else {
-      label.innerText = 'Hard';
-  }
-  // Generate a new problem when the difficulty changes
-  generateProblem();
+function updateDifficultyLabel(section) {
+    const difficulty = section.querySelector('.difficulty').value;
+    const label = section.querySelector('.difficulty-label');
+    if (difficulty == 1) {
+        label.innerText = 'Basic';
+    } else if (difficulty == 2) {
+        label.innerText = 'Intermediate';
+    } else {
+        label.innerText = 'Advanced';
+    }
 }
 
-// Function to generate a new problem
-function generateProblem() {
-  const difficulty = document.getElementById('difficulty').value;
-  const problemContainer = document.getElementById('problem-container');
-  const hintContainer = document.getElementById('hint-container');
-  const solutionContainer = document.getElementById('solution-container');
-  const conceptReminder = document.getElementById('concept-reminder');
+function generateProblem(section) {
+    const difficulty = section.querySelector('.difficulty').value;
+    const problemContainer = section.querySelector('.problem-container');
+    const hintContainer = section.querySelector('.hint-container');
+    const solutionContainer = section.querySelector('.solution-container');
 
-  // Clear previous hints and solutions
-  hintContainer.style.display = 'none';
-  solutionContainer.style.display = 'none';
-  conceptReminder.style.display = 'none';
+    // Clear previous hints and solutions
+    hintContainer.style.display = 'none';
+    solutionContainer.style.display = 'none';
 
-  if (difficulty == 1) {
-      // Basic problem: Solve a linear equation
-      const a = Math.floor(Math.random() * 10) + 1;
-      const b = Math.floor(Math.random() * 10) + 1;
-      currentProblem.text = `Find the value of \\( x \\) in the equation \\( ${a}x + ${b} = 0 \\).`;
-      currentSolution = `\\( x = \\frac{-${b}}{${a}} = ${-b / a} \\)`;
-      currentHints = [
-          'Isolate the variable \\( x \\) by subtracting \\( ' + b + ' \\) from both sides.',
-          'Now divide both sides by \\( ' + a + ' \\) to solve for \\( x \\).'
-      ];
-  } else if (difficulty == 2) {
-      // Intermediate problem: Solve a quadratic equation
-      const a = Math.floor(Math.random() * 5) + 1;
-      const b = Math.floor(Math.random() * 10) - 5;
-      const c = Math.floor(Math.random() * 10) + 1;
-      currentProblem.text = `Solve for \( x \) the quadratic equation \\( ${a}\\cdot x^2 + ${b}\\cdot x + ${c} = 0 \\).`;
-      const discriminant = b * b - 4 * a * c;
-      if (discriminant < 0) {
-          currentSolution = `The equation has no real solutions because the discriminant \\( b^2 - 4ac = ${discriminant} \\) is negative.`;
-          currentHints = [
-              'Calculate the discriminant \\( D = b^2 - 4ac \\).',
-              `Since \\( D = ${discriminant} \\), the equation has no real solutions.`
-          ];
-      } else {
-          const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-          const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-          currentSolution = `\\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\)
-\\( x = \\frac{-(${b}) \\pm \\sqrt{${b}^2 - 4 \\times ${a} \\times ${c}}}{2 \\times ${a}} \\)
-\\( = \\frac{${-b} \\pm \\sqrt{${discriminant}}}{${2 * a}} \\)
-\\( x = ${root1} \\text{ or } x = ${root2} \\)`;
-          currentHints = [
-              'Use the quadratic formula \\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\).',
-              `Calculate the discriminant \$begin:math:text$ D = ${b}^2 - 4 \\\\times ${a} \\\\times ${c} = ${discriminant} \\$end:math:text$.`,
-              `Compute the square root of the discriminant: \$begin:math:text$ \\\\sqrt{${discriminant}} \\$end:math:text$.`,
-              'Find the two solutions by plugging the values back into the formula.'
-          ];
-      }
-  } else {
-      // Advanced problem: Solve a trigonometric equation
-      const angleMultipliers = [1, 2, 3];
-      const k = angleMultipliers[Math.floor(Math.random() * angleMultipliers.length)];
-      const c = Math.floor(Math.random() * 2) + 1;
-      currentProblem.text = `Solve for \\( x \\) in the equation \\( \\sin(${k}x) = ${c}/2 \\) where \\( 0 \\leq x \\leq 2\\pi \\).`;
-      currentSolution = `\\( ${k}x = \\sin^{-1}\\left(\\frac{${c}}{2}\\right) \\)
-\\( x = \\frac{1}{${k}} \\sin^{-1}\\left(\\frac{${c}}{2}\\right) \\) (Include all solutions in the given interval.)`;
-      currentHints = [
-          'Apply the inverse sine function to both sides.',
-          'Divide both sides by \\( ' + k + ' \\) to solve for \\( x \\).',
-          'Consider all angles that satisfy the equation within the given interval.'
-      ];
-  }
+    let currentProblem = {};
+    let currentHints = [];
+    let currentSolution = '';
 
-  // Display the problem
-  problemContainer.innerHTML = currentProblem.text;
+    if (difficulty == 1) {
+        // Basic problem: Solve a linear equation
+        const a = Math.floor(Math.random() * 10) + 1;
+        const b = Math.floor(Math.random() * 10) + 1;
+        currentProblem.text = `Find the value of \$begin:math:text$ x \\$end:math:text$ in the equation \$begin:math:text$ ${a}x + ${b} = 0 \\$end:math:text$.`;
+        currentSolution = `\$begin:math:display$ x = \\\\frac{-${b}}{${a}} = ${(-b / a).toFixed(2)} \\$end:math:display$`;
+        currentHints = [
+            `Subtract \$begin:math:text$ ${b} \\$end:math:text$ from both sides: \$begin:math:text$ ${a}x = -${b} \\$end:math:text$.`,
+            `Divide both sides by \$begin:math:text$ ${a} \\$end:math:text$: \$begin:math:text$ x = \\\\frac{-${b}}{${a}} \\$end:math:text$.`
+        ];
+    } else if (difficulty == 2) {
+        // Intermediate problem: Solve a quadratic equation
+        const a = Math.floor(Math.random() * 5) + 1;
+        const b = Math.floor(Math.random() * 10) - 5;
+        const c = Math.floor(Math.random() * 10) + 1;
+        currentProblem.text = `Solve for \$begin:math:text$ x \\$end:math:text$ in the quadratic equation \$begin:math:text$ ${a}x^2 + ${b}x + ${c} = 0 \\$end:math:text$.`;
+        const discriminant = b * b - 4 * a * c;
+        if (discriminant < 0) {
+            currentSolution = `The equation has no real solutions because the discriminant \$begin:math:text$ D = b^2 - 4ac = ${discriminant} \\$end:math:text$ is negative.`;
+            currentHints = [
+                `Calculate the discriminant: \$begin:math:text$ D = ${b}^2 - 4 \\\\times ${a} \\\\times ${c} = ${discriminant} \\$end:math:text$.`,
+                `Since \$begin:math:text$ D < 0 \\$end:math:text$, there are no real solutions.`
+            ];
+        } else {
+            const sqrtDiscriminant = Math.sqrt(discriminant).toFixed(2);
+            const root1 = ((-b + Math.sqrt(discriminant)) / (2 * a)).toFixed(2);
+            const root2 = ((-b - Math.sqrt(discriminant)) / (2 * a)).toFixed(2);
+            currentSolution = `\$begin:math:display$ x = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a} \\$end:math:display$
+\$begin:math:display$ x = \\\\frac{-(${b}) \\\\pm \\\\sqrt{${b}^2 - 4 \\\\times ${a} \\\\times ${c}}}{2 \\\\times ${a}} \\$end:math:display$
+\$begin:math:display$ x = \\\\frac{${-b} \\\\pm ${sqrtDiscriminant}}{${2 * a}} \\$end:math:display$
+\$begin:math:display$ x = ${root1} \\\\text{ or } x = ${root2} \\$end:math:display$`;
+            currentHints = [
+                `Use the quadratic formula: \$begin:math:text$ x = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a} \\$end:math:text$.`,
+                `Calculate the discriminant: \$begin:math:text$ D = ${b}^2 - 4 \\\\times ${a} \\\\times ${c} = ${discriminant} \\$end:math:text$.`,
+                `Compute the square root: \$begin:math:text$ \\\\sqrt{${discriminant}} = ${sqrtDiscriminant} \\$end:math:text$.`,
+                `Find the solutions: \$begin:math:text$ x = ${root1} \\$end:math:text$ and \$begin:math:text$ x = ${root2} \\$end:math:text$.`
+            ];
+        }
+    } else {
+        // Advanced problem: Solve a trigonometric equation
+        const k = [1, 2, 3][Math.floor(Math.random() * 3)];
+        const c = Math.floor(Math.random() * 2) + 1;
+        currentProblem.text = `Solve for \$begin:math:text$ x \\$end:math:text$ in the equation \$begin:math:text$ \\\\sin(${k}x) = ${c}/2 \\$end:math:text$ where \$begin:math:text$ 0 \\\\leq x \\\\leq 2\\\\pi \\$end:math:text$.`;
+        currentSolution = `\$begin:math:display$ ${k}x = \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\quad \\\\text{or} \\\\quad ${k}x = \\\\pi - \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\$end:math:display$
+\$begin:math:display$ x = \\\\frac{1}{${k}} \\\\left( \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\right) \\$end:math:display$
+\$begin:math:display$ x = \\\\frac{1}{${k}} \\\\left( \\\\pi - \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\right) \\$end:math:display$
+(\\text{for all integers } n \\text{ such that } x \\in [0, 2\\pi])`;
+        currentHints = [
+            `Apply the inverse sine function to both sides.`,
+            `Divide both sides by \$begin:math:text$ ${k} \\$end:math:text$ to solve for \$begin:math:text$ x \\$end:math:text$.`,
+            `Consider all solutions within the interval \$begin:math:text$ 0 \\\\leq x \\\\leq 2\\\\pi \\$end:math:text$.`
+        ];
+    }
 
-  // Render mathematical expressions
-    renderMathInElement(document.body);
+    // Display the problem
+    problemContainer.innerHTML = currentProblem.text;
+
+    // Store the problem data in the section's dataset
+    section.currentProblem = currentProblem;
+    section.currentHints = currentHints;
+    section.currentSolution = currentSolution;
+
+    // Render mathematical expressions
+    renderMathInElement(problemContainer);
 }
 
-// Function to show hints
-function showHint() {
-  const hintContainer = document.getElementById('hint-container');
-  if (hintContainer.style.display === 'none') {
-      hintContainer.style.display = 'block';
-      hintContainer.innerHTML = currentHints.map(hint => `<p>${hint}</p>`).join('');
-      renderMathInElement(hintContainer);
-  } else {
-      hintContainer.style.display = 'none';
-  }
+function toggleHint(section) {
+    const hintContainer = section.querySelector('.hint-container');
+    if (hintContainer.style.display === 'none') {
+        hintContainer.style.display = 'block';
+        const currentHints = section.currentHints;
+        hintContainer.innerHTML = currentHints.map(hint => `<p>${hint}</p>`).join('');
+        renderMathInElement(hintContainer);
+    } else {
+        hintContainer.style.display = 'none';
+    }
 }
 
-// Function to show the solution
-function showSolution() {
-  const solutionContainer = document.getElementById('solution-container');
-  if (solutionContainer.style.display === 'none') {
-      solutionContainer.style.display = 'block';
-      solutionContainer.innerHTML = currentSolution;
-      renderMathInElement(solutionContainer);
-  } else {
-      solutionContainer.style.display = 'none';
-  }
-}
-
-// Function to display key concept reminders
-function showConceptReminder(concept) {
-  const conceptReminder = document.getElementById('concept-reminder');
-  conceptReminder.style.display = 'block';
-  conceptReminder.innerHTML = `<p>${concept}</p>`;
-  renderMathInElement(conceptReminder);
+function toggleSolution(section) {
+    const solutionContainer = section.querySelector('.solution-container');
+    if (solutionContainer.style.display === 'none') {
+        solutionContainer.style.display = 'block';
+        const currentSolution = section.currentSolution;
+        solutionContainer.innerHTML = currentSolution;
+        renderMathInElement(solutionContainer);
+    } else {
+        solutionContainer.style.display = 'none';
+    }
 }
