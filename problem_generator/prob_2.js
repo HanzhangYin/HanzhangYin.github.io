@@ -113,16 +113,16 @@ function generateQuadraticProblem(section) {
     const b = Math.floor(Math.random() * 10) - 5;
     const c = Math.floor(Math.random() * 10) + 1;
     const currentProblem = {
-        text: `Solve for \$begin:math:text$ x \\$end:math:text$ in the quadratic equation \$begin:math:text$ ${a}x^2 + ${b}x + ${c} = 0 \\$end:math:text$.`
+        text: `Solve for \\( x \\) in the quadratic equation \\( ax^2 + bx + c = 0 \\).`
     };
     const discriminant = b * b - 4 * a * c;
     let currentSolution = '';
     let currentHints = [];
 
     if (discriminant < 0) {
-        currentSolution = `The equation has no real solutions because the discriminant \$begin:math:text$ D = b^2 - 4ac = ${discriminant} \\$end:math:text$ is negative.`;
+        currentSolution = `The equation has no real solutions because the discriminant \(begin:math:text$ D = b^2 - 4ac = ${discriminant} \\$end:math:text$ is negative.`;
         currentHints = [
-            `Calculate the discriminant: \$begin:math:text$ D = ${b}^2 - 4 \\\\times ${a} \\\\times ${c} = ${discriminant} \\$end:math:text$.`,
+            `Calculate the discriminant: \\( D = b^2 - 4 \\times a \\times c = \\text{discriminant} \\).`,
             `Since \$begin:math:text$ D < 0 \\$end:math:text$, there are no real solutions.`
         ];
     } else {
