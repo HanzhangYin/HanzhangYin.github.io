@@ -79,12 +79,12 @@ function generateLinearProblem(section) {
     const a = Math.floor(Math.random() * 10) + 1;
     const b = Math.floor(Math.random() * 10) + 1;
     const currentProblem = {
-        text: `Find the value of \$begin:math:text$ x \\$end:math:text$ in the equation \$begin:math:text$ ${a}x + ${b} = 0 \\$end:math:text$.`
+        text: `Find the value of \\( x \\) in the equation \\( ${a}x + ${b} = 0 \\).`
     };
-    const currentSolution = `\$begin:math:display$ x = \\\\frac{-${b}}{${a}} = ${(-b / a).toFixed(2)} \\$end:math:display$`;
+    const currentSolution = `\\( x = \\frac{-${b}}{${a}} = ${(-b / a).toFixed(2)} \\)`;
     const currentHints = [
-        `Subtract \$begin:math:text$ ${b} \\$end:math:text$ from both sides: \$begin:math:text$ ${a}x = -${b} \\$end:math:text$.`,
-        `Divide both sides by \$begin:math:text$ ${a} \\$end:math:text$: \$begin:math:text$ x = \\\\frac{-${b}}{${a}} \\$end:math:text$.`
+        `Subtract \\( ${b} \\) from both sides: \\( ${a}x = -${b} \\).`,
+        `Divide both sides by \\( ${a} \\): \\( x = \\frac{-${b}}{${a}} \\).`
     ];
 
     // Display the problem
@@ -113,7 +113,7 @@ function generateQuadraticProblem(section) {
     const b = Math.floor(Math.random() * 10) - 5;
     const c = Math.floor(Math.random() * 10) + 1;
     const currentProblem = {
-        text: `Solve for \\( x \\) in the quadratic equation \\( ax^2 + bx + c = 0 \\).`
+        text: `Solve for \\( x \\) in the quadratic equation \\( ${a}\\cdot x^2 + ${b}x + ${c} = 0 \\).`
     };
     const discriminant = b * b - 4 * a * c;
     let currentSolution = '';
@@ -129,10 +129,10 @@ function generateQuadraticProblem(section) {
         const sqrtDiscriminant = Math.sqrt(discriminant).toFixed(2);
         const root1 = ((-b + Math.sqrt(discriminant)) / (2 * a)).toFixed(2);
         const root2 = ((-b - Math.sqrt(discriminant)) / (2 * a)).toFixed(2);
-        currentSolution = `\$begin:math:display$ x = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a} \\$end:math:display$
-\$begin:math:display$ x = \\\\frac{-(${b}) \\\\pm \\\\sqrt{${b}^2 - 4 \\\\times ${a} \\\\times ${c}}}{2 \\\\times ${a}} \\$end:math:display$
-\$begin:math:display$ x = \\\\frac{${-b} \\\\pm ${sqrtDiscriminant}}{${2 * a}} \\$end:math:display$
-\$begin:math:display$ x = ${root1} \\\\text{ or } x = ${root2} \\$end:math:display$`;
+        currentSolution = `\\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\)
+\\( x = \\\\frac{-(${b}) \\\\pm \\\\sqrt{${b}^2 - 4 \\\\times ${a} \\\\times ${c}}}{2 \\\\times ${a}} \\)
+\\( x = \\\\frac{${-b} \\\\pm ${sqrtDiscriminant}}{${2 * a}} \\)
+\\( x = ${root1} \\\\text{ or } x = ${root2} \\)`;
         currentHints = [
             `Use the quadratic formula: \$begin:math:text$ x = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a} \\$end:math:text$.`,
             `Calculate the discriminant: \$begin:math:text$ D = ${b}^2 - 4 \\\\times ${a} \\\\times ${c} = ${discriminant} \\$end:math:text$.`,
@@ -168,9 +168,9 @@ function generateTrigonometricProblem(section) {
     const currentProblem = {
         text: `Solve for \$begin:math:text$ x \\$end:math:text$ in the equation \$begin:math:text$ \\\\sin(${k}x) = ${c}/2 \\$end:math:text$ where \$begin:math:text$ 0 \\\\leq x \\\\leq 2\\\\pi \\$end:math:text$.`
     };
-    const currentSolution = `\$begin:math:display$ ${k}x = \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\quad \\\\text{or} \\\\quad ${k}x = \\\\pi - \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\$end:math:display$
-\$begin:math:display$ x = \\\\frac{1}{${k}} \\\\left( \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\right) \\$end:math:display$
-\$begin:math:display$ x = \\\\frac{1}{${k}} \\\\left( \\\\pi - \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\right) \\$end:math:display$
+    const currentSolution = `\\( ${k}x = \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\quad \\\\text{or} \\\\quad ${k}x = \\\\pi - \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\)
+\\( x = \\\\frac{1}{${k}} \\\\left( \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\right) \\)
+\\( x = \\\\frac{1}{${k}} \\\\left( \\\\pi - \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\right) \\)
 (\\text{for all integers } n \\text{ such that } x \\in [0, 2\\pi])`;
     const currentHints = [
         `Apply the inverse sine function to both sides.`,
