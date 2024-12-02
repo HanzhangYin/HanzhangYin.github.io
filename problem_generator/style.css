@@ -24,12 +24,12 @@ h1 {
     margin-right: 10px;
 }
 
-#difficulty-label {
+.difficulty-label {
     margin-left: 10px;
     font-weight: bold;
 }
 
-#problem-container {
+.problem-container {
     background-color: #f9f9f9;
     padding: 20px;
     border: 1px solid #ccc;
@@ -57,7 +57,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-#hint-container, #solution-container, #concept-reminder {
+.hint-container, .solution-container, .concept-reminder {
     background-color: #e9f5ff;
     padding: 15px;
     border-left: 4px solid #007BFF;
