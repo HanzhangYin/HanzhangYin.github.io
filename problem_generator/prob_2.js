@@ -120,24 +120,24 @@ function generateQuadraticProblem(section) {
     let currentHints = [];
 
     if (discriminant < 0) {
-        currentSolution = `The equation has no real solutions because the discriminant \(begin:math:text$ D = b^2 - 4ac = ${discriminant} \\$end:math:text$ is negative.`;
+        currentSolution = `The equation has no real solutions because the discriminant \(begin:math:text$ D = b^2 - 4ac = ${discriminant} \\) is negative.`;
         currentHints = [
             `Calculate the discriminant: \\( D = b^2 - 4 \\times a \\times c = \\text{discriminant} \\).`,
-            `Since \$begin:math:text$ D < 0 \\$end:math:text$, there are no real solutions.`
+            `Since \\(D < 0 \\), there are no real solutions.`
         ];
     } else {
         const sqrtDiscriminant = Math.sqrt(discriminant).toFixed(2);
         const root1 = ((-b + Math.sqrt(discriminant)) / (2 * a)).toFixed(2);
         const root2 = ((-b - Math.sqrt(discriminant)) / (2 * a)).toFixed(2);
         currentSolution = `\\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\)
-\\( x = \\\\frac{-(${b}) \\\\pm \\\\sqrt{${b}^2 - 4 \\\\times ${a} \\\\times ${c}}}{2 \\\\times ${a}} \\)
-\\( x = \\\\frac{${-b} \\\\pm ${sqrtDiscriminant}}{${2 * a}} \\)
-\\( x = ${root1} \\\\text{ or } x = ${root2} \\)`;
+\\( x = \\frac{-(${b}) \\pm \\sqrt{${b}^2 - 4 \\times ${a} \\times ${c}}}{2 \\times ${a}} \\)
+\\( x = \\frac{${-b} \\pm ${sqrtDiscriminant}}{${2 * a}} \\)
+\\( x = ${root1} \\text{ or } x = ${root2} \\)`;
         currentHints = [
-            `Use the quadratic formula: \$begin:math:text$ x = \\\\frac{-b \\\\pm \\\\sqrt{b^2 - 4ac}}{2a} \\$end:math:text$.`,
-            `Calculate the discriminant: \$begin:math:text$ D = ${b}^2 - 4 \\\\times ${a} \\\\times ${c} = ${discriminant} \\$end:math:text$.`,
-            `Compute the square root: \$begin:math:text$ \\\\sqrt{${discriminant}} = ${sqrtDiscriminant} \\$end:math:text$.`,
-            `Find the solutions: \$begin:math:text$ x = ${root1} \\$end:math:text$ and \$begin:math:text$ x = ${root2} \\$end:math:text$.`
+            `Use the quadratic formula: \\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\).`,
+            `Calculate the discriminant: \\(D = ${b}^2 - 4 \\times ${a} \\times ${c} = ${discriminant} \\).`,
+            `Compute the square root: \\(\\sqrt{${discriminant}} = ${sqrtDiscriminant} \\).`,
+            `Find the solutions: \\(x = ${root1} \\) and \\(x = ${root2} \\).`
         ];
     }
 
@@ -166,16 +166,16 @@ function generateTrigonometricProblem(section) {
     const k = [1, 2, 3][Math.floor(Math.random() * 3)];
     const c = Math.floor(Math.random() * 2) + 1;
     const currentProblem = {
-        text: `Solve for \$begin:math:text$ x \\$end:math:text$ in the equation \$begin:math:text$ \\\\sin(${k}x) = ${c}/2 \\$end:math:text$ where \$begin:math:text$ 0 \\\\leq x \\\\leq 2\\\\pi \\$end:math:text$.`
+        text: `Solve for \\(x \\) in the equation \\(\\sin(${k}x) = ${c}/2 \\) where \\(0 \\leq x \\leq 2\\pi \\).`
     };
-    const currentSolution = `\\( ${k}x = \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\quad \\\\text{or} \\\\quad ${k}x = \\\\pi - \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\)
-\\( x = \\\\frac{1}{${k}} \\\\left( \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\right) \\)
-\\( x = \\\\frac{1}{${k}} \\\\left( \\\\pi - \\\\sin^{-1}\\\\left(\\\\frac{${c}}{2}\\\\right) + 2\\\\pi n \\\\right) \\)
+    const currentSolution = `\\( ${k}x = \\sin^{-1}\\left(\\frac{${c}}{2}\\right) + 2\\pi n \\quad \\text{or} \\quad ${k}x = \\pi - \\sin^{-1}\\left(\\frac{${c}}{2}\\right) + 2\\pi n \\)
+\\( x = \\frac{1}{${k}} \\left( \\sin^{-1}\\left(\\frac{${c}}{2}\\right) + 2\\pi n \\right) \\)
+\\( x = \\frac{1}{${k}} \\left( \\pi - \\sin^{-1}\\left(\\frac{${c}}{2}\\right) + 2\\pi n \\right) \\)
 (\\text{for all integers } n \\text{ such that } x \\in [0, 2\\pi])`;
     const currentHints = [
         `Apply the inverse sine function to both sides.`,
-        `Divide both sides by \$begin:math:text$ ${k} \\$end:math:text$ to solve for \$begin:math:text$ x \\$end:math:text$.`,
-        `Consider all solutions within the interval \$begin:math:text$ 0 \\\\leq x \\\\leq 2\\\\pi \\$end:math:text$.`
+        `Divide both sides by \\(${k} \\) to solve for \\(x \\).`,
+        `Consider all solutions within the interval \\(0 \\leq x \\leq 2\\pi \\).`
     ];
 
     // Display the problem
