@@ -54,6 +54,7 @@ function generateProblem(section) {
     const problemContainer = section.querySelector('.problem-container');
     const hintContainer = section.querySelector('.hint-container');
     const solutionContainer = section.querySelector('.solution-container');
+    const problemType = section.getAttribute('data-problem-type');
 
     // Clear previous hints and solutions
     hintContainer.style.display = 'none';
@@ -63,7 +64,7 @@ function generateProblem(section) {
     let currentHints = [];
     let currentSolution = '';
 
-    if (difficulty == 1) {
+    if (problemType === 'linear') {
         // Basic problem: Solve a linear equation
         const a = Math.floor(Math.random() * 10) + 1;
         const b = Math.floor(Math.random() * 10) + 1;
@@ -73,7 +74,7 @@ function generateProblem(section) {
             `Subtract \$begin:math:text$ ${b} \\$end:math:text$ from both sides: \$begin:math:text$ ${a}x = -${b} \\$end:math:text$.`,
             `Divide both sides by \$begin:math:text$ ${a} \\$end:math:text$: \$begin:math:text$ x = \\\\frac{-${b}}{${a}} \\$end:math:text$.`
         ];
-    } else if (difficulty == 2) {
+    } else if (problemType === 'quadratic') {
         // Intermediate problem: Solve a quadratic equation
         const a = Math.floor(Math.random() * 5) + 1;
         const b = Math.floor(Math.random() * 10) - 5;
@@ -101,7 +102,7 @@ function generateProblem(section) {
                 `Find the solutions: \$begin:math:text$ x = ${root1} \\$end:math:text$ and \$begin:math:text$ x = ${root2} \\$end:math:text$.`
             ];
         }
-    } else {
+    } else if (problemType === 'trigonometric') {
         // Advanced problem: Solve a trigonometric equation
         const k = [1, 2, 3][Math.floor(Math.random() * 3)];
         const c = Math.floor(Math.random() * 2) + 1;
