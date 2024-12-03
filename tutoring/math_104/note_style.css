@@ -27,6 +27,16 @@ th {
   font-weight: bold;
 }
 
+.desmos-graph {
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+}
+
 /* define styles for smaller screens */
 @media screen and (max-width: 600px) {
   html {
