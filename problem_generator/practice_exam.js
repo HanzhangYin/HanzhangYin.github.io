@@ -52,7 +52,8 @@ function updateDifficultyLabel(section) {
 const problemGenerators = {
     linear: generateLinearProblem,
     quadratic: generateQuadraticProblem,
-    trigonometric: generateTrigonometricProblem
+    trigonometric: generateTrigonometricProblem,
+    multiple: generateMultipleChoiceProblem
 };
 
 function generateProblem(section) {
@@ -212,4 +213,44 @@ function toggleSolution(section) {
     } else {
         solutionContainer.style.display = 'none';
     }
+}
+
+function generateMultipleChoiceProblem(section) {
+    const problems = [
+        {
+            text: "What is the domain of \\(f(x) = \\arcsin(x)\\)?",
+            options: ["\\([0, \\pi]\\)", "\\((-\\frac{\\pi}{2}, \\frac{\\pi}{2})\\)", "\\([-1,1]\\)", "\\((-1,1)\\)"],
+            correct: 2,
+            hints: ["The domain of \\(\\arcsin(x)\\) is the set of values for which it is defined.", "\\(\\arcsin(x)\\) is only defined for inputs between \\(-1\\) and \\(1\\)."]
+        },
+        {
+            text: "What is the domain of \\(f(x) = \\arctan(x)\\)?",
+            options: ["\\([-\\frac{\\pi}{2}, \\frac{\\pi}{2}]\\)", "\\((-\\frac{\\pi}{2}, \\frac{\\pi}{2})\\)", "\\([-1,1]\\)", "\\((-\\infty, \\infty)\\)"],
+            correct: 3,
+            hints: ["\\(\\arctan(x)\\) is defined for all real numbers."]
+        }
+    ];
+
+    const problemContainer = section.querySelector('.problem-container');
+    const hintContainer = section.querySelector('.hint-container');
+    const solutionContainer = section.querySelector('.solution-container');
+
+    // Clear previous hints and solutions
+    hintContainer.style.display = 'none';
+    solutionContainer.style.display = 'none';
+
+    const problem = problems[Math.floor(Math.random() * problems.length)];
+
+    // Display the problem
+    const optionsHtml = problem.options.map(
+        (option, index) => `<label><input type="radio" name="mcq" value="${index}"> ${option}</label><br>`
+    ).join('');
+    problemContainer.innerHTML = `${problem.text}<br>${optionsHtml}`;
+
+    // Store the problem data
+    section.currentProblem = problem;
+    section.currentHints = problem.hints;
+    section.currentSolution = `Correct answer: ${problem.options[problem.correct]}`;
+
+    renderMathInElement(problemContainer);
 }

@@ -105,6 +105,37 @@
         </div>
     </div>
 
+    <!-- Problem Section 4 -->
+    <div class="problem-section" data-problem-type="multiple">
+        <!-- Difficulty Slider -->
+        <div class="slider-container">
+            <label for="difficulty-3">Difficulty Level:</label>
+            <input type="range" class="difficulty" id="difficulty-3" name="difficulty" min="1" max="3" value="1">
+            <span class="difficulty-label">Basic</span>
+        </div>
+
+        <!-- Problem Display -->
+        <div class="problem-container">
+            <!-- Problem will be generated here -->
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <button class="generate-problem" aria-label="Generate a similar problem">Generate Similar Problem</button>
+            <button class="show-hint" aria-label="Show hint">Show Hint</button>
+            <button class="show-solution" aria-label="Show solution">Show Solution</button>
+        </div>
+
+        <!-- Hint and Solution Sections -->
+        <div class="hint-container" style="display: none;">
+            <!-- Hints will be displayed here -->
+        </div>
+
+        <div class="solution-container" style="display: none;">
+            <!-- Solution will be displayed here -->
+        </div>
+    </div>
+
     <!-- Include the script file -->
     <script src="practice_exam.js"></script>
 </div>
