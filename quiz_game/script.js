@@ -41,6 +41,7 @@ function showQuestion(question) {
 
 function resetState() {
     nextButton.classList.add('hide');
+    clearStatusClass(document.body);
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -48,11 +49,22 @@ function resetState() {
 
 function selectAnswer(e) {
     const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct;
+    const correct = selectedButton.dataset.correct === "true";
+
+    // Show feedback message
+    const feedback = document.createElement('div');
+    feedback.textContent = correct ? "Correct! 🎉" : "Wrong! ❌";
+    feedback.classList.add('feedback');
+    answerButtonsElement.appendChild(feedback);
+
     setStatusClass(selectedButton, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct);
+        if (button.tagName === "BUTTON") {
+            setStatusClass(button, button.dataset.correct === "true");
+            button.disabled = true; // Disable buttons after selection
+        }
     });
+
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
