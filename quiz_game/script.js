@@ -110,7 +110,7 @@ question: '\\(y = \\pm \\pi/2\\) are the only horizontal asymptotes of the graph
         ]
     },
     {
-question: 'Consider \\(p(x) = 3 - 3e^x\\). The right-end behavior of \\(p(x)\\) as \\(x \\to \\infity\\) is \\(p(x) \\to 3\\).',
+question: 'Consider \\(p(x) = 3 - 3e^x\\). The right-end behavior of \\(p(x)\\) as \\(x \\to \\infty\\) is \\(p(x) \\to 3\\).',
         answers: [
             { text: 'True', correct: true },
             { text: 'False', correct: false }
