@@ -93,35 +93,27 @@ const questions = [
         answers: [
             { text: 'True', correct: true },
             { text: 'False', correct: false }
-            // { text: '5', correct: false },
-            // { text: '3', correct: false }
         ]
     },
     {
-        question: 'What is \\(\\frac{dx^2}{dx}\\)?',
+question: 'The graph of the hyperbola \\(4x^2 - 9y^2 = 1\\) has two \\(x\\)-intercepts \\((\\pm \\frac{1}{2} , 0)\\).',
         answers: [
-            { text: '\\(2x\\)', correct: true },
-            { text: '\\(x\\)', correct: false },
-            { text: '\\(2\\)', correct: false },
-            { text: '\\(1\\)', correct: false }
+            { text: 'True', correct: true },
+            { text: 'False', correct: false }
         ]
     },
     {
-        question: 'What is the capital of France?',
+question: '\\(y = \\pm \\pi/2\\) are the only horizontal asymptotes of the graph of \\(h(x) = \\arctan(x)\\).',
         answers: [
-            { text: 'Paris', correct: true },
-            { text: 'Berlin', correct: false },
-            { text: 'Madrid', correct: false },
-            { text: 'Rome', correct: false }
+            { text: 'True', correct: true },
+            { text: 'False', correct: false }
         ]
     },
     {
-        question: 'Who wrote "To be, or not to be"?',
+question: 'Consider \\(p(x) = 3 - 3e^x\\). The right-end behavior of \\(p(x)\\) as \\(x \\to \\infity\\) is \\(p(x) \\to 3\\).',
         answers: [
-            { text: 'Shakespeare', correct: true },
-            { text: 'Hemingway', correct: false },
-            { text: 'Frost', correct: false },
-            { text: 'Dickens', correct: false }
+            { text: 'True', correct: true },
+            { text: 'False', correct: false }
         ]
     }
 ];
