@@ -48,3 +48,18 @@ body {
 .controls {
     margin-top: 20px;
 }
+
+.feedback {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.wrong {
+    background-color: #dc3545;
+    color: white;
+}
