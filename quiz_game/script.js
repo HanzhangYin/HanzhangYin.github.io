@@ -89,12 +89,12 @@ function clearStatusClass(element) {
 
 const questions = [
     {
-        question: 'What is 2 + 2?',
+        question: 'Given the polynomial \\(f(z) = z^2 + 4z + 2\\), there exists a real number \\(a\\) such that \\(f(a) = 0\\)?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false },
-            { text: '5', correct: false },
-            { text: '3', correct: false }
+            { text: 'True', correct: true },
+            { text: 'False', correct: false }
+            // { text: '5', correct: false },
+            // { text: '3', correct: false }
         ]
     },
     {
