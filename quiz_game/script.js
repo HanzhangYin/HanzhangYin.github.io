@@ -115,5 +115,12 @@ question: 'Consider \\(p(x) = 3 - 3e^x\\). The right-end behavior of \\(p(x)\\) 
             { text: 'True', correct: true },
             { text: 'False', correct: false }
         ]
-    }
+    },
+    {
+question: 'The graph of \\(y = \\tan(x)\\) has infinitely many vertical asymptotes.',
+        answers: [
+        { text: 'True', correct: true },
+        { text: 'False', correct: false }
+    ]
+}
 ];
