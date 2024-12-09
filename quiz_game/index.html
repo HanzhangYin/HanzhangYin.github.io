@@ -22,5 +22,31 @@
     </div>
 </div>
 <script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "\\(", right: "\\)", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+
+    function showQuestion(question) {
+        questionElement.textContent = question.question;
+        renderMathInElement(questionElement); // Render LaTeX in question
+        question.answers.forEach(answer => {
+            const button = document.createElement('button');
+            button.textContent = answer.text;
+            button.classList.add('btn');
+            if (answer.correct) {
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener('click', selectAnswer);
+            answerButtonsElement.appendChild(button);
+            renderMathInElement(button); // Render LaTeX in answers
+        });
+    }
+</script>
 </body>
 </html>
