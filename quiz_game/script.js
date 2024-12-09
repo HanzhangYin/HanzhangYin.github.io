@@ -98,6 +98,15 @@ const questions = [
         ]
     },
     {
+        question: 'What is \\(\\frac{dx^2}{dx}\\)?',
+        answers: [
+            { text: '2x', correct: true },
+            { text: 'x', correct: false },
+            { text: '2', correct: false },
+            { text: '1', correct: false }
+        ]
+    },
+    {
         question: 'What is the capital of France?',
         answers: [
             { text: 'Paris', correct: true },
