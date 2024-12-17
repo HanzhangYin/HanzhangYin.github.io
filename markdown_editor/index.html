@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Editor</title>
+    <title>Markdown Editor with LaTeX</title>
     <style>
-        /* General styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -49,84 +48,49 @@
             border-left: 2px solid #ddd;
             overflow-y: auto;
         }
-
-        .buttons {
-            margin: 10px 0;
-            display: flex;
-            gap: 10px;
-        }
-
-        button {
-            padding: 10px 15px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
 <h1>Markdown Editor</h1>
-<div class="buttons">
-    <button id="export-pdf">Export as PDF</button>
-    <button id="export-html">Export as HTML</button>
-</div>
 <div class="container">
-    <!-- Markdown Input -->
-    <textarea id="markdown-input" placeholder="Write your Markdown here..."></textarea>
-
-    <!-- Live Preview -->
+    <textarea id="markdown-input" placeholder="Write your Markdown and LaTeX here..."></textarea>
     <div id="markdown-preview" class="preview"></div>
 </div>
 
 <!-- Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>-->
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <script>
-    // References to the elements
+    // Configure MathJax for $...$ and $$...$$ delimiters
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$', '$$']]
+        }
+    };
+
     const input = document.getElementById("markdown-input");
     const preview = document.getElementById("markdown-preview");
-    const exportPDF = document.getElementById("export-pdf");
-    const exportHTML = document.getElementById("export-html");
 
-    // Event listener to render Markdown live
-    input.addEventListener("input", () => {
+    // Function to render Markdown with LaTeX
+    function renderMarkdown() {
         const markdownText = input.value;
+
+        // Convert Markdown to HTML using marked.js
         preview.innerHTML = marked.parse(markdownText);
-    });
 
-    // Export as PDF
-    exportPDF.addEventListener("click", () => {
-        const element = preview;
-        const opt = {
-            margin: 0.5,
-            filename: "markdown_preview.pdf",
-            image: { type: "jpeg", quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-        };
-        html2pdf().from(element).set(opt).save();
-    });
+        // Trigger MathJax to process LaTeX content
+        MathJax.typesetPromise()
+            .then(() => console.log("MathJax rendering complete"))
+            .catch(err => console.error("MathJax rendering error: ", err));
+    }
 
-    // Export as HTML
-    exportHTML.addEventListener("click", () => {
-        const blob = new Blob([preview.innerHTML], { type: "text/html" });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = "markdown_preview.html";
-        link.click();
-    });
+    // Event listener for real-time updates
+    input.addEventListener("input", renderMarkdown);
 
-    // Initialize the preview on page load
-    preview.innerHTML = marked.parse("");
+    // Initial render on page load
+    renderMarkdown();
 </script>
 </body>
 </html>
