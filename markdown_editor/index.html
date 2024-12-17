@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
+            height: 80vh;
+        }
+
+        textarea, .preview {
+            width: 48%;
+            height: 100%;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            background-color: #fff;
+            overflow: auto;
+        }
+
+        textarea {
+            font-size: 16px;
+            resize: none;
+            outline: none;
+        }
+
+        .preview {
+            border-left: 2px solid #ddd;
+            overflow-y: auto;
+        }
+
+        .buttons {
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<h1>Markdown Editor</h1>
+<div class="buttons">
+    <button id="export-pdf">Export as PDF</button>
+    <button id="export-html">Export as HTML</button>
+</div>
+<div class="container">
+    <!-- Markdown Input -->
+    <textarea id="markdown-input" placeholder="Write your Markdown here..."></textarea>
+
+    <!-- Live Preview -->
+    <div id="markdown-preview" class="preview"></div>
+</div>
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>-->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script>
+    // References to the elements
+    const input = document.getElementById("markdown-input");
+    const preview = document.getElementById("markdown-preview");
+    const exportPDF = document.getElementById("export-pdf");
+    const exportHTML = document.getElementById("export-html");
+
+    // Event listener to render Markdown live
+    input.addEventListener("input", () => {
+        const markdownText = input.value;
+        preview.innerHTML = marked.parse(markdownText);
+    });
+
+    // Export as PDF
+    exportPDF.addEventListener("click", () => {
+        const element = preview;
+        const opt = {
+            margin: 0.5,
+            filename: "markdown_preview.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+        };
+        html2pdf().from(element).set(opt).save();
+    });
+
+    // Export as HTML
+    exportHTML.addEventListener("click", () => {
+        const blob = new Blob([preview.innerHTML], { type: "text/html" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "markdown_preview.html";
+        link.click();
+    });
+
+    // Initialize the preview on page load
+    preview.innerHTML = marked.parse("");
+</script>
+</body>
+</html>
