@@ -12,16 +12,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="elseworlds_style.css">
 
+<!--    <script>-->
+<!--        function copyCode(blockId) {-->
+<!--            const code = document.getElementById(blockId);-->
+<!--            const textarea = document.createElement("textarea");-->
+<!--            textarea.value = code.textContent;-->
+<!--            document.body.appendChild(textarea);-->
+<!--            textarea.select();-->
+<!--            document.execCommand("copy");-->
+<!--            textarea.remove();-->
+<!--        }-->
+<!--    </script>-->
     <script>
-        function copyCode(blockId) {
-            const code = document.getElementById(blockId);
-            const textarea = document.createElement("textarea");
-            textarea.value = code.textContent;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand("copy");
-            textarea.remove();
-        }
+    function copyCombinedCode() {
+    const codeBlock = document.getElementById("combined-code").textContent;
+
+    // Use the Clipboard API to copy text to the clipboard
+    navigator.clipboard.writeText(codeBlock).then(() => {
+    alert("All steps copied to clipboard with the updated repository URL.");
+    }).catch((err) => {
+    console.error("Failed to copy text: ", err);
+    alert("Failed to copy text. Please try again.");
+    });
+    }
     </script>
 </head>
 <body>
@@ -80,14 +93,13 @@
         const repoUrl = document.getElementById("repo-url-placeholder").textContent; // Updated URL
         const fullCommand = `${codeBlock}${repoUrl}`;
 
-        const textarea = document.createElement("textarea");
-        textarea.value = fullCommand;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        textarea.remove();
-
-        alert("Command copied: " + fullCommand);
+        // Use the Clipboard API to copy text to the clipboard
+        navigator.clipboard.writeText(fullCommand).then(() => {
+            alert("Command copied: " + fullCommand);
+        }).catch((err) => {
+            console.error("Failed to copy text: ", err);
+            alert("Failed to copy text. Please try again.");
+        });
     }
 </script>
 <h3>5. Add all the files to the staging area.</h3>
@@ -123,27 +135,42 @@ git branch -M main
 # Push the changes to GitHub.
 git push -u origin main
 </code></pre>
-<button onclick="updateCombineCode()">Apply URL</button>
+<button onclick="updateCombinedCodeBlock()">Update URL</button>
 <button onclick="copyCombinedCode()">Copy All Steps</button>
 
 <script>
-    function copyCombinedCode() {
+    function updateCombinedCodeBlock() {
         const inputField = document.getElementById("github-url");
         const repoUrl = inputField.value.trim() || "https://github.com/username/repository.git";
 
-        // Get the combined steps and replace the placeholder with the updated URL
-        let codeBlock = document.getElementById("combined-code").textContent;
-        codeBlock = codeBlock.replace("[REPOSITORY_URL]", repoUrl);
+        // Update the code block content dynamically
+        const codeBlock = document.getElementById("combined-code");
+        codeBlock.textContent = `
+# Initialize Git in the directory.
+git init
+# Add the remote repository as the origin.
+git remote add origin ${repoUrl}
+# Add all the files to the staging area.
+git add --all
+# Commit the changes.
+git commit -m "First commit"
+# Choose the branch.
+git branch -M main
+# Push the changes to GitHub.
+git push -u origin main
+        `.trim();
+    }
 
-        // Copy the updated content to clipboard
-        const textarea = document.createElement("textarea");
-        textarea.value = codeBlock;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        textarea.remove();
+    function copyCombinedCode() {
+        const codeBlock = document.getElementById("combined-code").textContent;
 
-        alert("All steps copied to clipboard with the updated repository URL.");
+        // Use the Clipboard API to copy text to the clipboard
+        navigator.clipboard.writeText(fullCommand).then(() => {
+            alert("Command copied: " + fullCommand);
+        }).catch((err) => {
+            console.error("Failed to copy text: ", err);
+            alert("Failed to copy text. Please try again.");
+        });
     }
 </script>
 </body>
