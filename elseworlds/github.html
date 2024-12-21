@@ -114,7 +114,7 @@
 # Initialize Git in the directory.
 git init
 # Add the remote repository as the origin.
-git remote add origin https://github.com/username/repository.git
+git remote add origin [REPOSITORY_URL]
 # Add all the files to the staging area.
 git add --all
 # Commit the changes.
@@ -128,7 +128,14 @@ git push -u origin main
 
 <script>
     function copyCombinedCode() {
-        const codeBlock = document.getElementById("combined-code").textContent;
+        const inputField = document.getElementById("github-url");
+        const repoUrl = inputField.value.trim() || "https://github.com/username/repository.git";
+
+        // Get the combined steps and replace the placeholder with the updated URL
+        let codeBlock = document.getElementById("combined-code").textContent;
+        codeBlock = codeBlock.replace("[REPOSITORY_URL]", repoUrl);
+
+        // Copy the updated content to clipboard
         const textarea = document.createElement("textarea");
         textarea.value = codeBlock;
         document.body.appendChild(textarea);
@@ -136,7 +143,7 @@ git push -u origin main
         document.execCommand("copy");
         textarea.remove();
 
-        alert("All steps copied to clipboard.");
+        alert("All steps copied to clipboard with the updated repository URL.");
     }
 </script>
 </body>
