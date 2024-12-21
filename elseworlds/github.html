@@ -158,15 +158,15 @@ git commit -m "First commit"
 git branch -M main
 # Push the changes to GitHub.
 git push -u origin main
-        `.trim();
+    `.trim();
     }
 
     function copyCombinedCode() {
         const codeBlock = document.getElementById("combined-code").textContent;
 
         // Use the Clipboard API to copy text to the clipboard
-        navigator.clipboard.writeText(fullCommand).then(() => {
-            alert("Command copied: " + fullCommand);
+        navigator.clipboard.writeText(codeBlock).then(() => {
+            alert("Command copied to clipboard:\n" + codeBlock);
         }).catch((err) => {
             console.error("Failed to copy text: ", err);
             alert("Failed to copy text. Please try again.");
