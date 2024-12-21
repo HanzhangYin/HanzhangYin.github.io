@@ -1,4 +1,15 @@
 /* define styles for smaller screens */
+blockquote {
+  margin: 1em 0 1em 1.7em;
+  padding-left: 1em;
+  border-left: 2px solid #e6e6e6;
+  color: #606060;
+}
+code {
+font-family: 'Fira Code', monospace;
+font-size: 85%;
+white-space: pre-wrap;
+}
 @media screen and (max-width: 600px) {
     html {
       color: #1a1a1a;
@@ -17,7 +28,7 @@
     }
     
     .navbar {
-      overflow: hidden;  
+      /*overflow: hidden;  */
       background-color: #ededed;
       padding-top: 60px; /* Height of the hamburger menu */
       font-family: 'Spectral', serif;
@@ -62,7 +73,7 @@
       text-align: center;
       padding: 11px 10px;
       display: block;
-      padding: 20px;
+      /*padding: 20px;*/
       text-decoration: none;
     }
     
