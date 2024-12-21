@@ -37,7 +37,13 @@
     <li>A GitHub account</li>
     <li>Git installed on your computer</li>
     <li>A directory on your computer that you want to add to GitHub</li>
+
 </ul>
+<!-- Input Field for GitHub Repository URL -->
+<p>
+    Enter the GitHub repository URL:
+    <input type="text" id="github-url" placeholder="https://github.com/username/repository" style="width: 100%; padding: 5px; margin-top: 10px;" />
+</p>
 <h2>Steps</h2>
 <h3>1. Navigate to the directory you want to add to GitHub using the terminal.</h3>
 <pre><code>cd /path/to/directory</code></pre>
@@ -51,10 +57,39 @@
     <li>Choose whether the repository should be public or private.</li>
     <li>Do not select the option to initialize the repository with a README file, since you already have existing files to add.</li>
 </ul>
+<!-- Step 4: Add the remote repository as the origin -->
 <h3>4. Add the remote repository as the origin.</h3>
-<pre><code id="code-block2">git remote add origin https://github.com/username/repository.git</code></pre>
-<button onclick="copyCode('code-block2')">Copy</button>
-<p>Replace <em>username</em> with your GitHub username and <em>repository</em> with the name of the repository you just created.</p>
+<pre><code id="code-block2">git remote add origin </code><span id="repo-url-placeholder">https://github.com/username/repository.git</span></pre>
+<button onclick="updateCodeBlock()">Apply URL</button>
+<button onclick="copyUpdatedCode()">Copy</button>
+<script>
+    function updateCodeBlock() {
+        const inputField = document.getElementById("github-url");
+        const urlPlaceholder = document.getElementById("repo-url-placeholder");
+        const newUrl = inputField.value.trim();
+
+        if (newUrl) {
+            urlPlaceholder.textContent = newUrl;
+        } else {
+            alert("Please enter a valid GitHub repository URL.");
+        }
+    }
+
+    function copyUpdatedCode() {
+        const codeBlock = document.getElementById("code-block2").textContent; // Static part
+        const repoUrl = document.getElementById("repo-url-placeholder").textContent; // Updated URL
+        const fullCommand = `${codeBlock}${repoUrl}`;
+
+        const textarea = document.createElement("textarea");
+        textarea.value = fullCommand;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+
+        alert("Command copied: " + fullCommand);
+    }
+</script>
 <h3>5. Add all the files to the staging area.</h3>
 <pre><code id="code-block3">git add --all</code></pre>
 <button onclick="copyCode('code-block3')">Copy</button>
@@ -72,5 +107,47 @@
 <h3>Un-track Files on Git</h3>
 <p>If you want to un-track files on Git, use the following command:</p>
 <pre><code>git rm --cached filename</code></pre>
+
+<h3>All Steps</h3>
+<pre><code id="combined-code">
+# Step 1: Navigate to the directory you want to add to GitHub using the terminal.
+cd /path/to/directory
+
+# Step 2: Initialize Git in the directory.
+git init
+
+# Step 3: Create a new repository on GitHub.
+# Log in to your GitHub account, create a new repository, and note the URL.
+
+# Step 4: Add the remote repository as the origin.
+git remote add origin https://github.com/username/repository.git
+
+# Step 5: Add all the files to the staging area.
+git add --all
+
+# Step 6: Commit the changes.
+git commit -m "First commit"
+
+# Step 7: Choose the branch.
+git branch -M main
+
+# Step 8: Push the changes to GitHub.
+git push -u origin main
+</code></pre>
+<button onclick="copyCombinedCode()">Copy All Steps</button>
+
+<script>
+    function copyCombinedCode() {
+        const codeBlock = document.getElementById("combined-code").textContent;
+        const textarea = document.createElement("textarea");
+        textarea.value = codeBlock;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+
+        alert("All steps copied to clipboard.");
+    }
+</script>
 </body>
 </html>
