@@ -75,10 +75,10 @@
     <section>
       <h2>Hyperplane</h2>
       <p>
-        \(\textbf{Definition 1. }\)A hyperplane in a vector space \( V \) is a subspace of codimension 1. In other words, a hyperplane is a linear variety of the form \( \{ v \in V : f(v) = 0 \} \) where \( f \) is a linear functional on \( V \).
+        \(\textbf{Definition 1.}\) A hyperplane in a vector space \( V \) is a subspace of codimension 1. In other words, a hyperplane is a linear variety of the form \( \{ v \in V : f(v) = 0 \} \) where \( f \) is a linear functional on \( V \).
       </p>
       <p>
-        \(\textbf{Definition 2. }\)The ambient space is \(n\)-dimensional Euclidean space, in which case the hyperplanes are the \((n-1)\)-dimensional flats, each of which separates the space into two half spaces.
+        \(\textbf{Definition 2.}\) The ambient space is \(n\)-dimensional Euclidean space, in which case the hyperplanes are the \((n-1)\)-dimensional flats, each of which separates the space into two half spaces.
       </p>
       <p>
         \(\textbf{Example. }\)More generally, a hyperplane in \(\mathbb{P}_n\) is given by an equation 
@@ -270,9 +270,8 @@
       <p>
         An affine subspace of a vector space \( V \) is a subset of \( V \) of the form \( v + W \) where \( v \in V \) and \( W \) is a subspace of \( V \).
       </p>
-      <h2>Affine Space</h2>
+      <h2>The affine space \(\mathbb{A}^n\)</h2>
       <p>
-        The affine space \(\mathbb{A}^n\)
         We shall denote by \(\mathbb{A}_K^n\) or just \(\mathbb{A}^n\), the affine \(n\)-space, consisting of \((a_1, \ldots, a_n), a_i \in K\).
       </p>
       <p>
@@ -309,6 +308,24 @@
     </section>
 
     <br>
+
+    <section>
+      <h2>Zariski Topology on \(\mathbb{A}^n\)</h2>
+      <p>
+        Define a topology on \(\mathbb{A}^n\) by declaring \(\{V(I) \mid I\) an ideal in \(K[x_1, \ldots, x_n]\}\) as the set of closed sets. We now check that this defines a topology on \(\mathbb{A}^n\). We have:
+      </p>
+      <ol>
+        <li>\(\mathbb{A}^n = V((0)), \emptyset = V(K[x_1, \ldots, x_n])\).</li>
+        <li>\(V(I) \cup V(J) = V(I \cap J)\).</li>
+        <li>\(\bigcap_\alpha V(I_\alpha) = V\left(\sum_\alpha I_\alpha\right)\).</li>
+      </ol>
+      <p>
+        Statements (1) and (3) are clear. For (2): The inclusion \(V(I) \cup V(J) \subset V(I \cap J)\) is clear. To see the reverse inclusion, let \(a \in V(I \cap J)\). If possible, let us assume that \(a \notin V(I)\) and \(a \notin V(J)\). This assumption implies that there exist \(f \in I\) and \(g \in J\) such that \(f(a) \neq 0\) and \(g(a) \neq 0\). Since \(fg \in I \cap J\), we have \(f(a)g(a) = 0\), which is a contradiction.
+      </p>
+      <p>
+        Hence, our assumption is wrong, and the reverse inclusion follows.
+      </p>
+    </section>
 
     <section>
       <p>
