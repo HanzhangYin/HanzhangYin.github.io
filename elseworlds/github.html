@@ -57,6 +57,60 @@
     Enter the GitHub repository URL:
     <label for="github-url"></label><input type="text" id="github-url" placeholder="https://github.com/username/repository" style="width: 100%; padding: 5px; margin-top: 10px;" />
 </p>
+<h3>All Steps</h3>
+<pre><code id="combined-code">
+# Initialize Git in the directory.
+git init
+# Add the remote repository as the origin.
+git remote add origin [REPOSITORY_URL]
+# Add all the files to the staging area.
+git add --all
+# Commit the changes.
+git commit -m "First commit"
+# Choose the branch.
+git branch -M main
+# Push the changes to GitHub.
+git push -u origin main
+</code></pre>
+<button onclick="updateCombinedCodeBlock()">Update URL</button>
+<!-- Link the copyCombinedCode function to this button -->
+<button onclick="copyCombinedCode()">Copy All Steps</button>
+
+<script>
+    function updateCombinedCodeBlock() {
+        const inputField = document.getElementById("github-url");
+        const repoUrl = inputField.value.trim() || "https://github.com/username/repository.git";
+
+        // Update the code block content dynamically
+        const codeBlock = document.getElementById("combined-code");
+        codeBlock.textContent = `
+# Initialize Git in the directory.
+git init
+# Add the remote repository as the origin.
+git remote add origin ${repoUrl}
+# Add all the files to the staging area.
+git add --all
+# Commit the changes.
+git commit -m "First commit"
+# Choose the branch.
+git branch -M main
+# Push the changes to GitHub.
+git push -u origin main
+    `.trim();
+    }
+
+    function copyCombinedCode() {
+        const codeBlock = document.getElementById("combined-code").textContent;
+
+        // Use the Clipboard API to copy text to the clipboard
+        navigator.clipboard.writeText(codeBlock).then(() => {
+            alert("Command copied to clipboard:\n" + codeBlock);
+        }).catch((err) => {
+            console.error("Failed to copy text: ", err);
+            alert("Failed to copy text. Please try again.");
+        });
+    }
+</script>
 <h2>Steps</h2>
 <h3>1. Navigate to the directory you want to add to GitHub using the terminal.</h3>
 <pre><code>cd /path/to/directory</code></pre>
@@ -116,62 +170,6 @@
 <pre><code id="code-block6">git push -u origin main</code></pre>
 <button onclick="copyCode('code-block6')">Copy</button>
 <p>Note: If your branch name is “master” or something else, change “main” to your branch name.</p>
-
-
-<h3>All Steps</h3>
-<pre><code id="combined-code">
-# Initialize Git in the directory.
-git init
-# Add the remote repository as the origin.
-git remote add origin [REPOSITORY_URL]
-# Add all the files to the staging area.
-git add --all
-# Commit the changes.
-git commit -m "First commit"
-# Choose the branch.
-git branch -M main
-# Push the changes to GitHub.
-git push -u origin main
-</code></pre>
-<button onclick="updateCombinedCodeBlock()">Update URL</button>
-<!-- Link the copyCombinedCode function to this button -->
-<button onclick="copyCombinedCode()">Copy All Steps</button>
-
-<script>
-    function updateCombinedCodeBlock() {
-        const inputField = document.getElementById("github-url");
-        const repoUrl = inputField.value.trim() || "https://github.com/username/repository.git";
-
-        // Update the code block content dynamically
-        const codeBlock = document.getElementById("combined-code");
-        codeBlock.textContent = `
-# Initialize Git in the directory.
-git init
-# Add the remote repository as the origin.
-git remote add origin ${repoUrl}
-# Add all the files to the staging area.
-git add --all
-# Commit the changes.
-git commit -m "First commit"
-# Choose the branch.
-git branch -M main
-# Push the changes to GitHub.
-git push -u origin main
-    `.trim();
-    }
-
-    function copyCombinedCode() {
-        const codeBlock = document.getElementById("combined-code").textContent;
-
-        // Use the Clipboard API to copy text to the clipboard
-        navigator.clipboard.writeText(codeBlock).then(() => {
-            alert("Command copied to clipboard:\n" + codeBlock);
-        }).catch((err) => {
-            console.error("Failed to copy text: ", err);
-            alert("Failed to copy text. Please try again.");
-        });
-    }
-</script>
 
 
 <h3>Un-track Files on Git</h3>
