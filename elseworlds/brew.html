@@ -10,16 +10,25 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <link rel="stylesheet" type="text/css" href="elseworlds_style.css">
     <script>
-        function copyCode() {
-            const codeBlock = document.getElementById("combined-code").textContent;
+        function copyCode(blockId) {
+            const codeBlock = document.getElementById(blockId);
+
+            if (!codeBlock) {
+                alert("Code block not found. Please check the code block ID.");
+                return;
+            }
+
+            const codeText = codeBlock.textContent;
 
             // Use the Clipboard API to copy text to the clipboard
-            navigator.clipboard.writeText(codeBlock).then(() => {
-                alert("All steps copied to clipboard with the updated repository URL.");
-            }).catch((err) => {
-                console.error("Failed to copy text: ", err);
-                alert("Failed to copy text. Please try again.");
-            });
+            navigator.clipboard.writeText(codeText)
+                .then(() => {
+                    alert("Code copied to clipboard!");
+                })
+                .catch((err) => {
+                    console.error("Failed to copy text: ", err);
+                    alert("Failed to copy text. Please try again.");
+                });
         }
     </script>
 </head>
