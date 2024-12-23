@@ -1,15 +1,29 @@
+.code-container {
+  position: relative;            /* needed for button absolute positioning */
+  margin-bottom: 1em;           /* some space below each code block */
+}
+
+.code-container pre {
+  margin: 0;
+  padding: 16px;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* The button itself */
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
 /* define styles for smaller screens */
-blockquote {
-  margin: 1em 0 1em 1.7em;
-  padding-left: 1em;
-  border-left: 2px solid #e6e6e6;
-  color: #606060;
-}
-code {
-font-family: 'Fira Code', monospace;
-font-size: 85%;
-white-space: pre-wrap;
-}
 @media screen and (max-width: 600px) {
     html {
       color: #1a1a1a;

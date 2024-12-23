@@ -15,18 +15,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="elseworlds_style.css">
-    <script>
-        function copyCombinedCode() {
-        const codeBlock = document.getElementById("combined-code").textContent;
+<!--    <script>-->
+<!--        function copyCombinedCode() {-->
+<!--        const codeBlock = document.getElementById("combined-code").textContent;-->
 
-        // Use the Clipboard API to copy text to the clipboard
-        navigator.clipboard.writeText(codeBlock).then(() => {
-        alert("All steps copied to clipboard with the updated repository URL.");
-        }).catch((err) => {
-        console.error("Failed to copy text: ", err);
-        alert("Failed to copy text. Please try again.");
+<!--        // Use the Clipboard API to copy text to the clipboard-->
+<!--        navigator.clipboard.writeText(codeBlock).then(() => {-->
+<!--        alert("All steps copied to clipboard with the updated repository URL.");-->
+<!--        }).catch((err) => {-->
+<!--        console.error("Failed to copy text: ", err);-->
+<!--        alert("Failed to copy text. Please try again.");-->
+<!--        });-->
+<!--        }-->
+<!--    </script>-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all copy buttons
+            const copyButtons = document.querySelectorAll('.copy-button');
+
+            copyButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Get the parent container
+                    const container = button.closest('.code-container');
+                    // Get the <code> element
+                    const codeBlock = container.querySelector('code');
+
+                    // Get the code text
+                    const codeText = codeBlock.innerText;
+
+                    // Copy to clipboard using the Clipboard API
+                    navigator.clipboard.writeText(codeText)
+                        .then(() => {
+                            // Optionally, you can show a "Copied!" tooltip or change the button text briefly
+                            button.textContent = 'Copied!';
+                            setTimeout(() => {
+                                button.textContent = 'Copy';
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy code: ', err);
+                        });
+                });
+            });
         });
-        }
     </script>
 </head>
 <body>
@@ -107,8 +138,11 @@ git push -u origin main
 <h3>1. Navigate to the directory you want to add to GitHub using the terminal.</h3>
 <pre><code>cd /path/to/directory</code></pre>
 <h3>2. Initialize Git in the directory.</h3>
-<pre><code class = "language-bash" id="code-block1">git init</code></pre>
-<button onclick="copyCode('code-block1')">Copy</button>
+<div class="code-container">
+    <button class="copy-button">Copy</button>
+    <pre><code class="language-bash">git init</code></pre>
+</div>
+
 <h3>3. Create a new repository on GitHub.</h3>
 <ul>
     <li>Log in to your GitHub account and navigate to the repository creation page.</li>
@@ -149,8 +183,12 @@ git push -u origin main
     }
 </script>
 <h3>5. Add all the files to the staging area.</h3>
-<pre><code class = "language-bash" id="code-block3">git add --all</code></pre>
-<button onclick="copyCode('code-block3')">Copy</button>
+<div class="code-container">
+    <button class="copy-button">Copy</button>
+    <pre><code class="language-bash">
+git add --all
+  </code></pre>
+</div>
 <h3>6. Commit the changes.</h3>
 <pre><code class = "language-bash" id="code-block4">git commit -m "First commit"</code></pre>
 <button onclick="copyCode('code-block4')">Copy</button>
