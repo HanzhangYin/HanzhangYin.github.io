@@ -16,17 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="elseworlds_style.css">
 
-<!--    <script>-->
-<!--        function copyCode(blockId) {-->
-<!--            const code = document.getElementById(blockId);-->
-<!--            const textarea = document.createElement("textarea");-->
-<!--            textarea.value = code.textContent;-->
-<!--            document.body.appendChild(textarea);-->
-<!--            textarea.select();-->
-<!--            document.execCommand("copy");-->
-<!--            textarea.remove();-->
-<!--        }-->
-<!--    </script>-->
     <script>
     function copyCombinedCode() {
     const codeBlock = document.getElementById("combined-code").textContent;
@@ -62,7 +51,7 @@
     <label for="github-url"></label><input type="text" id="github-url" placeholder="https://github.com/username/repository" style="width: 100%; padding: 5px; margin-top: 10px;" />
 </p>
 <h3>All Steps</h3>
-<pre><code id="combined-code">
+<pre><code class = "language-bash" id="combined-code">
 # Initialize Git in the directory.
 git init
 # Add the remote repository as the origin.
