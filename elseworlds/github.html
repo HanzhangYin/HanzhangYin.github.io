@@ -7,6 +7,10 @@
     <title>Add Existing Directory to GitHub</title>
 
     <!-- External Resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
@@ -115,7 +119,7 @@ git push -u origin main
 <h3>1. Navigate to the directory you want to add to GitHub using the terminal.</h3>
 <pre><code>cd /path/to/directory</code></pre>
 <h3>2. Initialize Git in the directory.</h3>
-<pre><code id="code-block1">git init</code></pre>
+<pre><code class = "language-bash" id="code-block1">git init</code></pre>
 <button onclick="copyCode('code-block1')">Copy</button>
 <h3>3. Create a new repository on GitHub.</h3>
 <ul>
@@ -126,7 +130,7 @@ git push -u origin main
 </ul>
 <!-- Step 4: Add the remote repository as the origin -->
 <h3>4. Add the remote repository as the origin.</h3>
-<pre><code id="code-block2">git remote add origin </code><span id="repo-url-placeholder">https://github.com/username/repository.git</span></pre>
+<pre><code class = "language-bash" id="code-block2">git remote add origin </code><span id="repo-url-placeholder">https://github.com/username/repository.git</span></pre>
 <button onclick="updateCodeBlock()">Apply URL</button>
 <button onclick="copyUpdatedCode()">Copy</button>
 <script>
@@ -157,23 +161,23 @@ git push -u origin main
     }
 </script>
 <h3>5. Add all the files to the staging area.</h3>
-<pre><code id="code-block3">git add --all</code></pre>
+<pre><code class = "language-bash" id="code-block3">git add --all</code></pre>
 <button onclick="copyCode('code-block3')">Copy</button>
 <h3>6. Commit the changes.</h3>
-<pre><code id="code-block4">git commit -m "First commit"</code></pre>
+<pre><code class = "language-bash" id="code-block4">git commit -m "First commit"</code></pre>
 <button onclick="copyCode('code-block4')">Copy</button>
 <h3>7. Choose the branch.</h3>
 <p>Here I chose the branch named “main”; some people might use “master”.</p>
-<pre><code id="code-block5">git branch -M main</code></pre>
+<pre><code class = "language-bash" id="code-block5">git branch -M main</code></pre>
 <button onclick="copyCode('code-block5')">Copy</button>
 <h3>8. Push the changes to GitHub.</h3>
-<pre><code id="code-block6">git push -u origin main</code></pre>
+<pre><code class = "language-bash" id="code-block6">git push -u origin main</code></pre>
 <button onclick="copyCode('code-block6')">Copy</button>
 <p>Note: If your branch name is “master” or something else, change “main” to your branch name.</p>
 
 
 <h3>Un-track Files on Git</h3>
 <p>If you want to un-track files on Git, use the following command:</p>
-<pre><code>git rm --cached filename</code></pre>
+<pre><code class = "language-bash">git rm --cached filename</code></pre>
 </body>
 </html>
