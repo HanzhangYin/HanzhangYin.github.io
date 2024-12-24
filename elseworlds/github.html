@@ -152,7 +152,10 @@ git push -u origin main
 </ul>
 <!-- Step 4: Add the remote repository as the origin -->
 <h3>4. Add the remote repository as the origin.</h3>
+<div class="code-container">
+    <button class="copy-button">Copy</button>
 <pre><code class = "language-bash" id="code-block2">git remote add origin </code><span id="repo-url-placeholder">https://github.com/username/repository.git</span></pre>
+</div>
 <button onclick="updateCodeBlock()">Apply URL</button>
 <button onclick="copyUpdatedCode()">Copy</button>
 <script>
@@ -182,6 +185,8 @@ git push -u origin main
         });
     }
 </script>
+
+
 <h3>5. Add all the files to the staging area.</h3>
 <div class="code-container">
     <button class="copy-button">Copy</button>
@@ -190,8 +195,12 @@ git add --all
   </code></pre>
 </div>
 <h3>6. Commit the changes.</h3>
+<div class="code-container">
+    <button class="copy-button">Copy</button>
 <pre><code class = "language-bash" id="code-block4">git commit -m "First commit"</code></pre>
-<button onclick="copyCode('code-block4')">Copy</button>
+</div>
+
+
 <h3>7. Choose the branch.</h3>
 <p>Here I chose the branch named “main”; some people might use “master”.</p>
 <pre><code class = "language-bash" id="code-block5">git branch -M main</code></pre>
