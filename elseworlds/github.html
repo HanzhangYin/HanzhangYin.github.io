@@ -190,9 +190,7 @@ git push -u origin main
 <h3>5. Add all the files to the staging area.</h3>
 <div class="code-container">
     <button class="copy-button">Copy</button>
-    <pre><code class="language-bash">
-git add --all
-  </code></pre>
+    <pre><code class="language-bash">git add --all</code></pre>
 </div>
 <h3>6. Commit the changes.</h3>
 <div class="code-container">
@@ -200,19 +198,26 @@ git add --all
 <pre><code class = "language-bash" id="code-block4">git commit -m "First commit"</code></pre>
 </div>
 
-
 <h3>7. Choose the branch.</h3>
 <p>Here I chose the branch named “main”; some people might use “master”.</p>
+<div class="code-container">
+    <button class="copy-button">Copy</button>
 <pre><code class = "language-bash" id="code-block5">git branch -M main</code></pre>
-<button onclick="copyCode('code-block5')">Copy</button>
+</div>
+
 <h3>8. Push the changes to GitHub.</h3>
+<div class="code-container">
+    <button class="copy-button">Copy</button>
 <pre><code class = "language-bash" id="code-block6">git push -u origin main</code></pre>
-<button onclick="copyCode('code-block6')">Copy</button>
+</div>
 <p>Note: If your branch name is “master” or something else, change “main” to your branch name.</p>
 
 
 <h3>Un-track Files on Git</h3>
 <p>If you want to un-track files on Git, use the following command:</p>
+<div class="code-container">
+    <button class="copy-button">Copy</button>
 <pre><code class = "language-bash">git rm --cached filename</code></pre>
+</div>
 </body>
 </html>
