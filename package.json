@@ -1,0 +1,24 @@
+{
+  "name": "hanzhangyin.github.io",
+  "version": "1.0.0",
+  "description": "<!DOCTYPE html> <html lang=\"en\"> <!-- <html data-n-head-ssr lang=\"en\"> --> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><!--It is for the responsive website--> <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"favicon_io/favicon.ico\"><!--Add a favicon--> <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script><!--Allow the horizontal bar works--> <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"> <!--link for the font--> <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin> <!--link for the font--> <link href=\"https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap\" rel=\"stylesheet\"> <!--link for the font-->",
+  "main": "click.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HanzhangYin/HanzhangYin.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HanzhangYin/HanzhangYin.github.io/issues"
+  },
+  "homepage": "https://github.com/HanzhangYin/HanzhangYin.github.io#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "^4.77.0"
+  }
+}
