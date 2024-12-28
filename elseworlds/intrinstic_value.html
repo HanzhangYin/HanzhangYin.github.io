@@ -89,7 +89,7 @@
         const nonoperatingasset = long_term_investments + goodwill;
 
         document.getElementById('nonoperatingasset').textContent =
-            `The book value of equity is: $${nonoperatingasset.toFixed(2)}`;
+            `The Non-operating asset is: $${nonoperatingasset.toFixed(2)}`;
     }
 </script>
 
@@ -101,7 +101,7 @@
     <label for="revenue">Revenue (in millions $):</label>
     <input type="number" id="revenue" placeholder="Enter revenue" required>
 
-    <button type="button" onclick="calculateNonoperatingAsset()">Calculate Operating Margin</button>
+    <button type="button" onclick="calculateOperatingMargin()">Calculate Operating Margin</button>
 </form>
 <p>
     Here, the long term investments are investments that the company plans to hold for more than one year. It can include stocks, bonds, real estate and others.
@@ -122,7 +122,7 @@
         const operating_margin = (operating_income / revenue) * 100;
 
         document.getElementById('operatingMargin').textContent =
-            `The book value of equity is: $${operating_margin.toFixed(2)}`;
+            `The Operating Margin is: $${operating_margin.toFixed(2)}`;
     }
 </script>
 </body>
