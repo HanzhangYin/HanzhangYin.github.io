@@ -31,17 +31,17 @@
 </head>
 <body>
 <h1>Book Value of Equity Calculator</h1>
-<form id="calculator-form">
-    <label for="total-assets">Total Assets ($):</label>
+<form id="book-value-of-equity">
+    <label for="total-assets">Total Assets (in millions $):</label>
     <input type="number" id="total-assets" placeholder="Enter total assets" required>
 
-    <label for="total-liabilities">Total Liabilities ($):</label>
+    <label for="total-liabilities">Total Liabilities (in millions $):</label>
     <input type="number" id="total-liabilities" placeholder="Enter total liabilities" required>
 
     <button type="button" onclick="calculateBookValue()">Calculate Book Value</button>
 </form>
 
-<div class="result" id="result"></div>
+<div class="result" id="bookValue"></div>
 
 <script>
     function calculateBookValue() {
@@ -55,8 +55,41 @@
 
         const bookValue = assets - liabilities;
 
-        document.getElementById('result').textContent =
+        document.getElementById('bookValue').textContent =
             `The book value of equity is: $${bookValue.toFixed(2)}`;
+    }
+</script>
+
+<h1>Non-operating Asset</h1>
+<form id="non-operating-asset">
+    <label for="long-term-investments">Long-Term Investments (in millions $):</label>
+    <input type="number" id="long-term-investments" placeholder="It can include stocks, bonds, real estate and others." required>
+
+    <label for="goodwill">Goodwill (in millions $):</label>
+    <input type="number" id="goodwill" placeholder="Enter goodwill" required>
+
+    <button type="button" onclick="calculateNonoperatingAsset()">Calculate Non-Operating Asset</button>
+</form>
+<p>
+    Here, the long term investments are investments that the company plans to hold for more than one year. It can include stocks, bonds, real estate and others.
+</p>
+
+<div class="result" id="nonoperatingasset"></div>
+
+<script>
+    function calculateNonoperatingAsset() {
+        const long_term_investments = parseFloat(document.getElementById('long-term-investments').value);
+        const goodwill = parseFloat(document.getElementById('goodwill').value);
+
+        if (isNaN(long_term_investments) || isNaN(goodwill)) {
+            alert("Please enter valid numbers for both fields.");
+            return;
+        }
+
+        const nonoperatingasset = long_term_investments + goodwill;
+
+        document.getElementById('nonoperatingasset').textContent =
+            `The book value of equity is: $${nonoperatingasset.toFixed(2)}`;
     }
 </script>
 </body>
