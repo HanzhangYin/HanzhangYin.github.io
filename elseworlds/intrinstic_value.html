@@ -92,5 +92,38 @@
             `The book value of equity is: $${nonoperatingasset.toFixed(2)}`;
     }
 </script>
+
+<h1>Operating Margin</h1>
+<form id="operating-margin">
+    <label for="operating-income">Operating Income (in millions $):</label>
+    <input type="number" id="operating-income" placeholder="Enter Operating Income." required>
+
+    <label for="revenue">Revenue (in millions $):</label>
+    <input type="number" id="revenue" placeholder="Enter revenue" required>
+
+    <button type="button" onclick="calculateNonoperatingAsset()">Calculate Operating Margin</button>
+</form>
+<p>
+    Here, the long term investments are investments that the company plans to hold for more than one year. It can include stocks, bonds, real estate and others.
+</p>
+
+<div class="result" id="operatingMargin"></div>
+
+<script>
+    function calculateOperatingMargin() {
+        const operating_income = parseFloat(document.getElementById('operating-income').value);
+        const revenue = parseFloat(document.getElementById('revenue').value);
+
+        if (isNaN(operating_income) || isNaN(revenue)) {
+            alert("Please enter valid numbers for both fields.");
+            return;
+        }
+
+        const operating_margin = (operating_income / revenue) * 100;
+
+        document.getElementById('operatingMargin').textContent =
+            `The book value of equity is: $${operating_margin.toFixed(2)}`;
+    }
+</script>
 </body>
 </html>
