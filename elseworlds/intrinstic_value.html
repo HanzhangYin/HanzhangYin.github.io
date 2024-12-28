@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Value Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+            max-width: 600px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 8px;
+            width: 100%;
+            font-size: 1rem;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .result {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<h1>Book Value of Equity Calculator</h1>
+<form id="calculator-form">
+    <label for="total-assets">Total Assets ($):</label>
+    <input type="number" id="total-assets" placeholder="Enter total assets" required>
+
+    <label for="total-liabilities">Total Liabilities ($):</label>
+    <input type="number" id="total-liabilities" placeholder="Enter total liabilities" required>
+
+    <button type="button" onclick="calculateBookValue()">Calculate Book Value</button>
+</form>
+
+<div class="result" id="result"></div>
+
+<script>
+    function calculateBookValue() {
+        const assets = parseFloat(document.getElementById('total-assets').value);
+        const liabilities = parseFloat(document.getElementById('total-liabilities').value);
+
+        if (isNaN(assets) || isNaN(liabilities)) {
+            alert("Please enter valid numbers for both fields.");
+            return;
+        }
+
+        const bookValue = assets - liabilities;
+
+        document.getElementById('result').textContent =
+            `The book value of equity is: $${bookValue.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
