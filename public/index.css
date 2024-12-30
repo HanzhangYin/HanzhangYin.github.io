@@ -2,46 +2,46 @@
 @media screen and (min-width: 600px) {
     .material-symbols-outlined {
         font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
+            "FILL" 0,
+            "wght" 400,
+            "GRAD" 0,
+            "opsz" 48;
     }
     body {
-        background-color: #ededed ;
+        background-color: #ededed;
         margin: 0 15%;
-        font-family: 'Spectral', serif; 
+        font-family: "Spectral", serif;
     }
     header {
         padding-top: 30px;
         /*padding: 20px;*/
         text-align: center;
-        font-family: 'Spectral', serif; 
+        font-family: "Spectral", serif;
     }
     a:link {
-      color: #3498DB ; /* light blue color */
-      background-color: transparent;
-      text-decoration: none;
+        color: #3498db; /* light blue color */
+        background-color: transparent;
+        text-decoration: none;
     }
     a:visited {
-      color: blueviolet ; /* light blue color */
-      background-color: transparent;
-      text-decoration: none;
+        color: blueviolet; /* light blue color */
+        background-color: transparent;
+        text-decoration: none;
     }
     a:hover {
-    color: #EB984E;
-    background-color: transparent;
-    text-decoration: none;
+        color: #eb984e;
+        background-color: transparent;
+        text-decoration: none;
     }
 
     .top-bar {
-      background: #565656;  /* Change this to grey color */
-      height: 50px;  /* Adjust this to change the height of the bar */
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1;  /* This ensures the bar stays on top of other elements */
+        background: #565656; /* Change this to grey color */
+        height: 50px; /* Adjust this to change the height of the bar */
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1; /* This ensures the bar stays on top of other elements */
     }
 
     .navbar {
@@ -55,11 +55,11 @@
         background-color: transparent;
         left: 0;
         /* background-color: transparent; */
-        font-family: 'Spectral', serif;
+        font-family: "Spectral", serif;
         z-index: 2; /* make the navigation bar always on top of the content  */
     }
     .navbar a {
-        font-family: 'Spectral', serif;
+        font-family: "Spectral", serif;
         float: left;
         display: block;
         color: #ededed; /* Grey color */
@@ -78,253 +78,260 @@
     section {
         margin: 20px;
         display: none;
-    }                        
+    }
     #about-me {
         display: block; /*Let about me section automatically show up when the page loads*/
     }
-
     h1 {
         text-align: right;
-        font-family: 'Spectral', serif;
+        font-family: "Spectral", serif;
         font-weight: bold;
         /* text-transform: uppercase; It makes all letters of the title uppercase*/
         border-bottom: 1px solid #646060;
-        margin-top: 50px; 
+        margin-top: 50px;
     }
     h2 {
-        font-family: 'Spectral', serif;
+        font-family: "Spectral", serif;
         color: #565656;
         font-size: 1.5em;
         margin-bottom: 30px;
     }
     h3 {
-        font-family: 'Spectral', serif;
+        font-family: "Spectral", serif;
         color: #565656;
-        font-size: 1em; 
+        font-size: 1em;
     }
     h4 {
-        font-family: 'Spectral', serif;
+        font-family: "Spectral", serif;
         text-align: right;
         color: #565656;
-        font-size: 0.9em; 
+        font-size: 0.9em;
     }
     img {
         float: left;
         margin-right: 30px;
     }
     p {
-        font-family: 'Spectral', serif;
+        font-family: "Spectral", serif;
         color: #565656;
         font-size: 1.2em;
     }
     footer {
-      bottom: 0;
-      margin-top: auto;
-      background-color: transparent;
-      color: #fff;
-      text-align: left;
-      padding: 5px;
+        bottom: 0;
+        margin-top: auto;
+        background-color: transparent;
+        color: #fff;
+        text-align: left;
+        padding: 5px;
     }
 }
 
 /* define styles for smaller screens (phone screen)*/
 @media screen and (max-width: 600px) {
-  body {
-    background-color: #ededed;
-    margin: 0 auto;
-    width: 100%;
-    font-size: 1em;
-    padding: 12px;
-    /* hyphens: auto; */
-    overflow-wrap: break-word;
-    text-rendering: optimizeLegibility;
-    font-kerning: normal;
-    font-family:  'Spectral', serif;
-  }
-  /* make sure that not all sections are displayed at the same time */
-  section {
-    margin: 20px;
-    display: none;
-  }
+    body {
+        background-color: #ededed;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 1em;
+        padding: 12px;
+        /* hyphens: auto; */
+        overflow-wrap: break-word;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+        font-family: "Spectral", serif;
+    }
+    /* make sure that not all sections are displayed at the same time */
+    section {
+        margin: 20px;
+        display: none;
+    }
 
-  header {
-    padding: 20px;
-    padding-top: 60px;
-    text-align: center;
-  }
+    header {
+        padding: 20px;
+        padding-top: 60px;
+        text-align: center;
+    }
 
-  .top-bar {
-    background: #ededed;  /* Change this to grey color */
-    height: 65px;  /* Adjust this to change the height of the bar */
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;  /* This ensures the bar stays on top of other elements */
-  }
-    
-  .navbar {
-    overflow: hidden;  
-    background-color: #ededed;
-    padding-top: 60px; /* Height of the hamburger menu */
-    font-family: 'Spectral', serif;
-    left: 0; /* set the navbar to the left side of the screen */
-    width: 100%; /* set a full width  */
-    height: 100%; /* make it full height */
-    position: fixed; /* Enable the navbar to remain in view when scrolling */
-    box-sizing: border-box;
-    display: flex;  
-    flex-direction: column; /* make the navbar elements appear in a column */
-    z-index: 1;
-    transform: translateX(-100%);  /* Initially move the navbar off the screen. */
-    transition: transform 0.2s ease-in-out;  /* Animate the movement. */  
-  }  
+    .top-bar {
+        background: #ededed; /* Change this to grey color */
+        height: 65px; /* Adjust this to change the height of the bar */
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1; /* This ensures the bar stays on top of other elements */
+    }
 
-  .navbar a {
-    font-family: 'Spectral', serif;
-    color: #565656;
-    text-align: center;
-    padding: 11px 10px;
-    text-decoration: none;
-  }
+    .navbar {
+        overflow: hidden;
+        background-color: #ededed;
+        padding-top: 60px; /* Height of the hamburger menu */
+        font-family: "Spectral", serif;
+        left: 0; /* set the navbar to the left side of the screen */
+        width: 100%; /* set a full width  */
+        height: 100%; /* make it full height */
+        position: fixed; /* Enable the navbar to remain in view when scrolling */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column; /* make the navbar elements appear in a column */
+        z-index: 1;
+        transform: translateX(
+            -100%
+        ); /* Initially move the navbar off the screen. */
+        transition: transform 0.2s ease-in-out; /* Animate the movement. */
+    }
 
-  .nav-toggle:checked ~ .navbar {
-      transform: translateX(0);  /* When checkbox is checked, move navbar back on screen. */
+    .navbar a {
+        font-family: "Spectral", serif;
+        color: #565656;
+        text-align: center;
+        padding: 11px 10px;
+        text-decoration: none;
+    }
+
+    .nav-toggle:checked ~ .navbar {
+        transform: translateX(
+            0
+        ); /* When checkbox is checked, move navbar back on screen. */
     }
 
     .nav-toggle {
-      display: none;
+        display: none;
     }
-    
-    
+
     .navbar ul {
-      list-style-type: none;
-      padding: 0;
+        list-style-type: none;
+        padding: 0;
     }
-    
+
     .navbar ul li a {
-      font-family: 'Spectral', serif;
-      color: #565656;
-      text-align: center;
-      padding: 11px 10px;
-      display: block;
-      /*padding: 20px;*/
-      text-decoration: none;
+        font-family: "Spectral", serif;
+        color: #565656;
+        text-align: center;
+        padding: 11px 10px;
+        display: block;
+        /*padding: 20px;*/
+        text-decoration: none;
     }
-    
+
     .navbar ul li a:hover {
-      background: #EB984E;
+        background: #eb984e;
     }
-    
 
     .nav-toggle:checked + .icon-burger,
     .icon-burger {
-      display: block;
-      cursor: pointer;
-      position: fixed;
-      left: 20px;
-      top: 20px;
-      z-index: 2;
+        display: block;
+        cursor: pointer;
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        z-index: 2;
     }
 
     .icon-burger .line {
-      width: 40px;
-      height: 3px;
-      background-color: #333;
-      margin: 6px 0;
+        width: 40px;
+        height: 3px;
+        background-color: #333;
+        margin: 6px 0;
     }
 
-  #about-me {
-      display: block; /*Let about me section automatically show up when the page loads*/
+    #about-me {
+        display: block; /*Let about me section automatically show up when the page loads*/
     }
 
-  p {
-    font-family: 'Spectral', serif;
-    margin: 1em 0;
+    p {
+        font-family: "Spectral", serif;
+        margin: 1em 0;
     }
 
-  h1 {
-      font-size: 1.8em;
-      font-family: 'Spectral', serif;
+    h1 {
+        font-size: 1.8em;
+        font-family: "Spectral", serif;
     }
-
 }
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0; /* Light text */
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
 }
 
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
-  color: #e0e0e0; /* Light text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #e0e0e0; /* Light text */
 }
 
 body.dark-mode p {
-  color: #bdbdbd; /* Not too light text */
+    color: #bdbdbd; /* Not too light text */
 }
 
 body.dark-mode img {
-  filter: brightness(0.8); /* Decrease brightness of images */
+    filter: brightness(0.8); /* Decrease brightness of images */
 }
 
 body.dark-mode .material-symbols-outlined {
-  font-variation-settings: 'FILL' 100, 'wght' 400, 'GRAD' 100, 'opsz' 48;
+    font-variation-settings:
+        "FILL" 100,
+        "wght" 400,
+        "GRAD" 100,
+        "opsz" 48;
 }
 
 #dark-mode-label {
-  cursor: pointer;
-  font-size: 2em;
+    cursor: pointer;
+    font-size: 2em;
 }
 
 body.dark-mode #dark-mode-label {
-  content: "🌙";
+    content: "🌙";
 }
 
 body.dark-mode a:link {
-  color: #81CCEC; /* light blue color for dark mode */
-  background-color: transparent;
-  text-decoration: none;
+    color: #81ccec; /* light blue color for dark mode */
+    background-color: transparent;
+    text-decoration: none;
 }
 
 body.dark-mode a:visited {
-  color: #a365ec; /* purple-ish color for visited links in dark mode */
-  background-color: transparent;
-  text-decoration: none;
+    color: #a365ec; /* purple-ish color for visited links in dark mode */
+    background-color: transparent;
+    text-decoration: none;
 }
 
 body.dark-mode a:hover {
-  color: #EB9D6E; /* light orange color for hover state in dark mode */
-  background-color: transparent;
-  text-decoration: none;
+    color: #eb9d6e; /* light orange color for hover state in dark mode */
+    background-color: transparent;
+    text-decoration: none;
 }
 
 /* we place the following code here is for it will not be influenced by link styles above */
 
-body.dark-mode header, body.dark-mode .top-bar, body.dark-mode .navbar {
-  background-color: #121212; /* Slightly lighter than body */
+body.dark-mode header,
+body.dark-mode .top-bar,
+body.dark-mode .navbar {
+    background-color: #121212; /* Slightly lighter than body */
 }
 
-body.dark-mode a, body.dark-mode .navbar a {
-  color: #e0e0e0; /* Light text */
+body.dark-mode a,
+body.dark-mode .navbar a {
+    color: #e0e0e0; /* Light text */
 }
 
-body.dark-mode a:hover, body.dark-mode .navbar a:hover {
-  background-color: #e0e0e0; /* Light blue background */
-  color: #121212; /* Dark text */
+body.dark-mode a:hover,
+body.dark-mode .navbar a:hover {
+    background-color: #e0e0e0; /* Light blue background */
+    color: #121212; /* Dark text */
 }
-
-
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
-
-    
