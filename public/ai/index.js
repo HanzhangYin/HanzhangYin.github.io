@@ -1,3 +1,10 @@
+import OpenAI from "openai";
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+
 // Constants
 const feedbackDisplayTime = 3000;
 
@@ -30,11 +37,39 @@ textInputArea.addEventListener("input", scrollTextAreaToTopAndEnableControls);
 summaryLengthInput.addEventListener("input", updateSummaryLengthText);
 
 // Button Event Handlers
-function summarize() {
+async function summarize() {
+  startLoading();
   // ***********
   // CHALLENGE:
   // ***********
   // Call the startLoading() function
+  const text = textInputArea.value
+
+
+  const response = await openai.chat.completions.create({
+    model: "gpt-4o",
+    messages: [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": `Summarize the following prompt:\n\n ${text}`
+          }
+        ]
+      }
+    ],
+    response_format: {
+      "type": "text"
+    },
+    temperature: 1,
+    max_completion_tokens: 300,
+    top_p: 1,
+    frequency_penalty: 0,
+    presence_penalty: 0
+  });
+  endLoading();
+  console.log("Summarizing...");
 }
 
 async function copy() {
