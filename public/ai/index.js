@@ -4,273 +4,260 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Constants
+  const feedbackDisplayTime = 3000;
 
-// Constants
-const feedbackDisplayTime = 3000;
+  // Element Selectors
+  const textInputArea = document.getElementById("text-input-area");
+  const summaryLengthContainer = document.getElementById("summary-length-container");
+  const summaryLengthInput = document.getElementById("summary-length-input");
+  const summaryLengthText = document.getElementById("summary-length-text");
+  const summarizeButton = document.getElementById("summarize-button");
+  const summaryContent = document.getElementById("summary-content");
+  const summaryOutputArea = document.getElementById("summary-output-area");
+  const copyButton = document.getElementById("copy-button");
+  const clearButton = document.getElementById("clear-button");
+  const loadingSection = document.getElementById("loading-section");
+  const errorSection = document.getElementById("error-section");
+  const errorMessage = document.getElementById("error-message");
+  const dismissErrorButton = document.getElementById("dismiss-error-button");
 
-// Element Selectors
-const textInputArea = document.getElementById("text-input-area");
-const summaryLengthContainer = document.getElementById(
-  "summary-length-container",
-);
-const summaryLengthInput = document.getElementById("summary-length-input");
-const summaryLengthText = document.getElementById("summary-length-text");
-const summarizeButton = document.getElementById("summarize-button");
-const summaryContent = document.getElementById("summary-content");
-const summaryOutputArea = document.getElementById("summary-output-area");
-const copyButton = document.getElementById("copy-button");
-const clearButton = document.getElementById("clear-button");
-const loadingSection = document.getElementById("loading-section");
-const errorSection = document.getElementById("error-section");
-const errorMessage = document.getElementById("error-message");
-const dismissErrorButton = document.getElementById("dismiss-error-button");
+  // Button Event Listeners
+  summarizeButton.addEventListener("click", summarize);
+  copyButton.addEventListener("click", copy);
+  clearButton.addEventListener("click", clear);
+  dismissErrorButton.addEventListener("click", dismissError);
 
-// Button Event Listeners
-summarizeButton.addEventListener("click", summarize);
-copyButton.addEventListener("click", copy);
-clearButton.addEventListener("click", clear);
-dismissErrorButton.addEventListener("click", dismissError);
+  // Other Event Listeners
+  document.addEventListener("DOMContentLoaded", focusOnTextInputArea);
+  textInputArea.addEventListener("input", scrollTextAreaToTopAndEnableControls);
+  summaryLengthInput.addEventListener("input", updateSummaryLengthText);
 
-// Other Event Listeners
-document.addEventListener("DOMContentLoaded", focusOnTextInputArea);
-textInputArea.addEventListener("input", scrollTextAreaToTopAndEnableControls);
-summaryLengthInput.addEventListener("input", updateSummaryLengthText);
+  // Button Event Handlers
+  async function summarize() {
+    startLoading();
+    const text = textInputArea.value;
 
-// Button Event Handlers
-async function summarize() {
-  startLoading();
-  // ***********
-  // CHALLENGE:
-  // ***********
-  // Call the startLoading() function
-  const text = textInputArea.value
-
-
-  const response = await openai.chat.completions.create({
-    model: "gpt-4o",
-    messages: [
-      {
-        "role": "user",
-        "content": [
-          {
-            "type": "text",
-            "text": `Summarize the following prompt:\n\n ${text}`
-          }
-        ]
-      }
-    ],
-    response_format: {
-      "type": "text"
-    },
-    temperature: 1,
-    max_completion_tokens: 300,
-    top_p: 1,
-    frequency_penalty: 0,
-    presence_penalty: 0
-  });
-  endLoading();
-  console.log("Summarizing...");
-}
-
-async function copy() {
-  try {
-    await navigator.clipboard.writeText(summaryOutputArea.value);
-    showCopyFeedback("😄 Copied", "success");
-  } catch (err) {
-    showCopyFeedback("😔 Failed", "failure");
+    const response = await openai.chat.completions.create({
+      model: "gpt-4o",
+      messages: [
+        {
+          "role": "user",
+          "content": `Summarize the following prompt:\n\n ${text}`
+        }
+      ],
+      response_format: {
+        "type": "text"
+      },
+      temperature: 1,
+      max_completion_tokens: 300,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0
+    });
+    endLoading();
+    console.log("Summarizing...");
   }
-}
 
-function clear() {
-  clearTextInputArea();
-  clearSummaryOutputArea();
-  enableTextInputArea();
-  focusOnTextInputArea();
-  disableAllControls();
-}
+  async function copy() {
+    try {
+      await navigator.clipboard.writeText(summaryOutputArea.value);
+      showCopyFeedback("😄 Copied", "success");
+    } catch (err) {
+      showCopyFeedback("😔 Failed", "failure");
+    }
+  }
 
-function dismissError() {
-  hideErrorSection();
-  displaySummaryContent();
-  clear();
-}
-
-// Other Event Handlers
-function focusOnTextInputArea() {
-  textInputArea.focus();
-}
-
-function scrollTextAreaToTopAndEnableControls() {
-  scrollTextAreaToTop();
-  enableControls();
-}
-
-function updateSummaryLengthText() {
-  summaryLengthText.textContent = `Summary Length: ${summaryLengthInput.value} Words`;
-}
-
-// Helper Functions
-function scrollTextAreaToTop() {
-  setTimeout(() => {
-    textInputArea.scrollTop = 0;
-  }, 0);
-}
-
-function enableControls() {
-  if (textInputArea.value.trim() !== "") {
-    enableSummaryLengthContainer();
-    enableSummaryLengthInput();
-    enableSummarizeButton();
-    enableClearButton();
-  } else {
+  function clear() {
+    clearTextInputArea();
+    clearSummaryOutputArea();
+    enableTextInputArea();
+    focusOnTextInputArea();
     disableAllControls();
   }
-}
 
-function disableAllControls() {
-  disableSummaryLengthContainer();
-  disableSummaryLengthInput();
-  disableSummarizeButton();
-  disableSummaryOutputArea();
-  disbaleClearButton();
-  disableCopyButton();
-}
+  function dismissError() {
+    hideErrorSection();
+    displaySummaryContent();
+    clear();
+  }
 
-function startLoading() {
-  hideSummaryContent();
-  displayLoadingSection();
-}
+  // Other Event Handlers
+  function focusOnTextInputArea() {
+    textInputArea.focus();
+  }
 
-function endLoading() {
-  hideLoadingSection();
-  displaySummaryContent();
-}
+  function scrollTextAreaToTopAndEnableControls() {
+    scrollTextAreaToTop();
+    enableControls();
+  }
 
-function handleError(error) {
-  endLoading();
-  disableTextInputArea();
-  disableAllControls();
-  hideSummaryContent();
-  setErrorMessageText(
-    `There was an error processing the text: ${error.message}`,
-  );
-  displayErrorSection();
-}
+  function updateSummaryLengthText() {
+    summaryLengthText.textContent = `Summary Length: ${summaryLengthInput.value} Words`;
+  }
 
-function showCopyFeedback(message, status) {
-  const feedbackClass = status === "success" ? "copied" : "failed";
-  addClassToCopyButton(feedbackClass);
-  setCopyButtonText(message);
-  setTimeout(() => {
-    removeClassFromCopyButton(feedbackClass);
-    setCopyButtonText("Copy");
-  }, feedbackDisplayTime);
-}
+  // Helper Functions
+  function scrollTextAreaToTop() {
+    setTimeout(() => {
+      textInputArea.scrollTop = 0;
+    }, 0);
+  }
 
-function focusOnCopyButton() {
-  copyButton.focus();
-}
+  function enableControls() {
+    if (textInputArea.value.trim() !== "") {
+      enableSummaryLengthContainer();
+      enableSummaryLengthInput();
+      enableSummarizeButton();
+      enableClearButton();
+    } else {
+      disableAllControls();
+    }
+  }
 
-function displaySummaryContent() {
-  summaryContent.style.display = "flex";
-}
+  function disableAllControls() {
+    disableSummaryLengthContainer();
+    disableSummaryLengthInput();
+    disableSummarizeButton();
+    disableSummaryOutputArea();
+    disbaleClearButton();
+    disableCopyButton();
+  }
 
-function displayLoadingSection() {
-  loadingSection.style.display = "flex";
-}
+  function startLoading() {
+    hideSummaryContent();
+    displayLoadingSection();
+  }
 
-function displayErrorSection() {
-  errorSection.style.display = "flex";
-}
+  function endLoading() {
+    hideLoadingSection();
+    displaySummaryContent();
+  }
 
-function hideLoadingSection() {
-  loadingSection.style.display = "none";
-}
+  function handleError(error) {
+    endLoading();
+    disableTextInputArea();
+    disableAllControls();
+    hideSummaryContent();
+    setErrorMessageText(`There was an error processing the text: ${error.message}`);
+    displayErrorSection();
+  }
 
-function hideErrorSection() {
-  errorSection.style.display = "none";
-}
+  function showCopyFeedback(message, status) {
+    const feedbackClass = status === "success" ? "copied" : "failed";
+    addClassToCopyButton(feedbackClass);
+    setCopyButtonText(message);
+    setTimeout(() => {
+      removeClassFromCopyButton(feedbackClass);
+      setCopyButtonText("Copy");
+    }, feedbackDisplayTime);
+  }
 
-function hideSummaryContent() {
-  summaryContent.style.display = "none";
-}
+  function focusOnCopyButton() {
+    copyButton.focus();
+  }
 
-function enableTextInputArea() {
-  textInputArea.disabled = false;
-}
+  function displaySummaryContent() {
+    summaryContent.style.display = "flex";
+  }
 
-function enableSummaryLengthContainer() {
-  summaryLengthContainer.classList.remove("disabled");
-}
+  function displayLoadingSection() {
+    loadingSection.style.display = "flex";
+  }
 
-function enableClearButton() {
-  clearButton.disabled = false;
-}
+  function displayErrorSection() {
+    errorSection.style.display = "flex";
+  }
 
-function enableSummarizeButton() {
-  summarizeButton.disabled = false;
-}
+  function hideLoadingSection() {
+    loadingSection.style.display = "none";
+  }
 
-function enableSummaryLengthInput() {
-  summaryLengthInput.disabled = false;
-}
+  function hideErrorSection() {
+    errorSection.style.display = "none";
+  }
 
-function enableCopyButton() {
-  copyButton.disabled = false;
-}
+  function hideSummaryContent() {
+    summaryContent.style.display = "none";
+  }
 
-function enableSummayOutputArea() {
-  summaryOutputArea.disabled = false;
-}
+  function enableTextInputArea() {
+    textInputArea.disabled = false;
+  }
 
-function disableCopyButton() {
-  copyButton.disabled = true;
-}
+  function enableSummaryLengthContainer() {
+    summaryLengthContainer.classList.remove("disabled");
+  }
 
-function disbaleClearButton() {
-  clearButton.disabled = true;
-}
+  function enableClearButton() {
+    clearButton.disabled = false;
+  }
 
-function disableSummaryOutputArea() {
-  summaryOutputArea.disabled = true;
-}
+  function enableSummarizeButton() {
+    summarizeButton.disabled = false;
+  }
 
-function disableSummarizeButton() {
-  summarizeButton.disabled = true;
-}
+  function enableSummaryLengthInput() {
+    summaryLengthInput.disabled = false;
+  }
 
-function disableSummaryLengthInput() {
-  summaryLengthInput.disabled = true;
-}
+  function enableCopyButton() {
+    copyButton.disabled = false;
+  }
 
-function disableSummaryLengthContainer() {
-  summaryLengthContainer.classList.add("disabled");
-}
+  function enableSummayOutputArea() {
+    summaryOutputArea.disabled = false;
+  }
 
-function disableTextInputArea() {
-  textInputArea.disabled = true;
-}
+  function disableCopyButton() {
+    copyButton.disabled = true;
+  }
 
-function setErrorMessageText(text) {
-  errorMessage.textContent = text;
-}
+  function disbaleClearButton() {
+    clearButton.disabled = true;
+  }
 
-function setCopyButtonText(text) {
-  copyButton.textContent = text;
-}
+  function disableSummaryOutputArea() {
+    summaryOutputArea.disabled = true;
+  }
 
-function clearTextInputArea() {
-  textInputArea.value = "";
-}
+  function disableSummarizeButton() {
+    summarizeButton.disabled = true;
+  }
 
-function clearSummaryOutputArea() {
-  summaryOutputArea.value = "";
-}
+  function disableSummaryLengthInput() {
+    summaryLengthInput.disabled = true;
+  }
 
-function removeClassFromCopyButton(className) {
-  copyButton.classList.remove(className);
-}
+  function disableSummaryLengthContainer() {
+    summaryLengthContainer.classList.add("disabled");
+  }
 
-function addClassToCopyButton(className) {
-  copyButton.classList.add(className);
-}
+  function disableTextInputArea() {
+    textInputArea.disabled = true;
+  }
+
+  function setErrorMessageText(text) {
+    errorMessage.textContent = text;
+  }
+
+  function setCopyButtonText(text) {
+    copyButton.textContent = text;
+  }
+
+  function clearTextInputArea() {
+    textInputArea.value = "";
+  }
+
+  function clearSummaryOutputArea() {
+    summaryOutputArea.value = "";
+  }
+
+  function removeClassFromCopyButton(className) {
+    copyButton.classList.remove(className);
+  }
+
+  function addClassToCopyButton(className) {
+    copyButton.classList.add(className);
+  }
+});
