@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#app {
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#text-input-area {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#summary-length-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#summary-length-input {
+    margin-right: 10px;
+}
+
+#summarize-button, #copy-button, #clear-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#summarize-button:hover, #copy-button:hover, #clear-button:hover {
+    background-color: #0056b3;
+}
+
+#summary-output-area {
+    margin-bottom: 10px;
+}
+
+#summary-content {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+#loading-section, #error-section {
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#error-section {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+#error-section button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f5c6cb;
+    color: #721c24;
+    cursor: pointer;
+}
