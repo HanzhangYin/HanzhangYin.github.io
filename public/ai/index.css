@@ -1,0 +1,304 @@
+/* Root Variables */
+:root {
+  --font-family: "Orbitron", sans-serif;
+  --text-color: #0f0000;
+  --background-color: #83b0bd;
+  --input-background-color: #fcd9d3;
+  --button-background-color: #f9b759;
+  --copied-background-color: #83f5bc;
+  --failed-background-color: #ffa3a3;
+  --hover-color: #fba122;
+  --focus-color: #9f570a;
+  --slider-thumb-color: #9f570a;
+  --disabled-color: #b38443;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+/* Utility Classes */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout Containers */
+.container {
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  padding: 0.8em;
+  gap: 0.8em;
+}
+
+section {
+  width: 100%;
+}
+
+/* Header Styles */
+header {
+  position: relative;
+  width: 100%;
+}
+
+.header-image {
+  width: 100%;
+  display: block;
+}
+
+.header-title {
+  position: absolute;
+  top: 0.5vh;
+  left: 5.5vw;
+  font-weight: bold;
+}
+
+.header-title-line-1 {
+  font-size: clamp(0.6rem, 5vw, 5rem);
+  line-height: 1.6;
+  display: block;
+}
+
+.header-title-line-2 {
+  font-size: clamp(1.8rem, 8vw, 8rem);
+  line-height: 1.2;
+}
+
+/* Form Elements */
+textarea {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 8.75em;
+  resize: none;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--input-background-color);
+  padding: 0.8em 0.6em;
+  margin-bottom: 0.8em;
+  font-family: sans-serif;
+}
+
+textarea::placeholder {
+  color: var(--text-color);
+}
+
+/* Controls Section */
+.controls {
+  justify-content: space-between;
+  gap: 0.8em;
+  width: 100%;
+}
+
+/* Summary Length Controls */
+.summary-length-container {
+  flex-grow: 0.8;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.summary-length-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  width: 100%;
+}
+
+.summary-length-input {
+  flex-grow: 1;
+  appearance: none;
+  height: 0.8em;
+  border-radius: 15px;
+  background-color: var(--button-background-color);
+}
+
+.summary-length-text {
+  font-size: 0.7rem;
+}
+
+/* Buttons */
+.button {
+  font-family: inherit;
+  font-weight: bold;
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.875em 0.65em;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-full-width {
+  width: 100%;
+}
+
+.summarize-button {
+  flex-basis: 40%;
+  padding: 0.875em 1em;
+}
+
+/* Focus States */
+textarea:focus,
+input[type="range"]:focus,
+.button:focus {
+  outline: 2px solid var(--focus-color);
+}
+
+/* Hover States */
+.button:not(:disabled):hover,
+.summary-length-input:not(:disabled):hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+/* Disabled States */
+.disabled,
+:disabled {
+  color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+textarea:disabled::placeholder {
+  color: var(--disabled-color);
+}
+
+/* Copy States */
+.copied {
+  background-color: var(--copied-background-color) !important;
+}
+
+.failed {
+  background-color: var(--failed-background-color) !important;
+}
+
+/* Slider Thumb Styles */
+/* WebKit (Chrome, Safari, newer versions of Edge) */
+.summary-length-input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: var(--slider-thumb-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.summary-length-input:disabled::-webkit-slider-thumb {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+/* Firefox */
+.summary-length-input::-moz-range-thumb {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: var(--slider-thumb-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.summary-length-input:disabled::-moz-range-thumb {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+/* Microsoft Edge (older versions) */
+.summary-length-input::-ms-thumb {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: var(--slider-thumb-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.summary-length-input:disabled::-ms-thumb {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+/* Summary Output, Loading, and Error Sections */
+.summary-output-section {
+  position: relative;
+}
+
+.summary-content,
+.loading-section,
+.error-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.summary-content {
+  z-index: 1;
+}
+
+.loading-section,
+.error-section {
+  display: none;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.loading-section img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+.loading-message,
+.error-message {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.error-message {
+  width: 100%;
+  word-wrap: break-word;
+  margin-bottom: 1em;
+}
+
+/* Media Queries */
+@media screen and (min-width: 360px) {
+  .controls {
+    flex-direction: row;
+  }
+
+  .summary-length-container {
+    align-items: stretch;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    grid-template: 1fr / 1fr 1fr;
+    align-items: stretch;
+  }
+}

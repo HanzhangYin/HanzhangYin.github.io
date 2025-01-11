@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summarizer</title>
+  <meta name="description" content="Summarize your text effortlessly with the Summarizer.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="flex-column container">
+    <header>
+      <img class="header-image" src="images/cool-dog.webp" alt="Cool dog with sunglasses on">
+      <h1 class="header-title">
+        <span class="header-title-line-1">The</span>
+        <span class="header-title-line-2">Summarizer</span>
+      </h1>
+    </header>
+    <main>
+      <section class="flex-column text-input-area-section">
+        <textarea id="text-input-area" placeholder="Paste text here"
+          aria-label="Paste text here to summarize"></textarea>
+        <div class="flex-column controls">
+          <div id="summary-length-container" class="flex-column summary-length-container disabled">
+            <div class="summary-length-group">
+              <span class="summary-length-min-label">1</span>
+              <input type="range" id="summary-length-input" class="summary-length-input" min="1" max="100" value="10"
+                aria-labelledby="summary-length-text" disabled>
+              <span class="summary-length-max-label">100</span>
+            </div>
+            <span id="summary-length-text" class="summary-length-text">Summary Length: 10 Words</span>
+          </div>
+          <button id="summarize-button" class="button summarize-button" disabled>Summarize</button>
+        </div>
+      </section>
+      <section id="summary-output-section" class="flex-column summary-output-section">
+        <div id="summary-content" class="flex-column summary-content">
+          <textarea id="summary-output-area" placeholder="See summary here" aria-label="Summary of text"
+            disabled></textarea>
+          <div class="flex-column controls">
+            <button id="copy-button" class="button button-full-width" disabled>Copy</button>
+            <button id="clear-button" class="button button-full-width" disabled>Clear</button>
+          </div>
+        </div>
+        <div id="loading-section" class="flex-column loading-section" aria-live="polite">
+          <img src="images/loading-spinner.svg" alt="Loading spinner">
+          <div id="loading-message" class="loading-message">Summarizing...</div>
+        </div>
+        <div id="error-section" class="flex-column error-section" aria-live="assertive">
+          <div id="error-message" class="error-message"></div>
+          <button id="dismiss-error-button" class="button button-full-width">Dismiss Error</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>
