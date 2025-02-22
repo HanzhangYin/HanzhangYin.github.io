@@ -20,6 +20,7 @@
   "homepage": "https://github.com/HanzhangYin/HanzhangYin.github.io#readme",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.33.1",
+    "@tailwindcss/cli": "^4.0.8",
     "@tailwindcss/vite": "^4.0.8",
     "dotenv": "^16.4.7",
     "openai": "^4.78.1",
