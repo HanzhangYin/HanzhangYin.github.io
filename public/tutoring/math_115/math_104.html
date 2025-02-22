@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--It is a link for MathJax-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--link for the font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--link for the font-->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+  <!--link for the font-->
+
+  <!--It is a link for sagecell structure-->
+  <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+      template:       sagecell.templates.minimal,
+      evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+      evalButtonText: 'Evaluate'});
+  </script>
+  <link rel="stylesheet" type="text/css" href="note_style.css"><!--It is a link for CSS structure-->
+  <title>Note for MATH 115</title>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#product_rule">Product Rule</a>
+
+<!--    <a href="#References">References</a>-->
+  </div>
+  <script src="click.js"></script>
+  <!--It is a link for click.js, which is clicking the link the hamburger menu will disappear-->
+  <script src="highlight.js"></script><!--It is a link for highlight.js-->
+<!--  <script src="mathjax_config.js"></script>&lt;!&ndash;It is a link for mathjax_configuration&ndash;&gt;-->
+
+  <div class="top-bar">
+    <div class="top-left-button">
+      <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+      <script src="opennav.js"></script>
+    </div>
+  </div>
+
+
+  <section>
+    <p>
+      My name is Han Yin, and I have developed this website as a resource to facilitate the review of key concepts
+      and it is not fully completed.
+      Feel free to email me at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions
+      for improvement.
+    </p>
+  </section>
+
+  <section id="product_rule">
+    <h2>Product Rule</h2>
+    <p>
+      The product rule is a formula used to find the derivative of the product of two functions. If u and v are
+      functions of x, then the derivative of their product is given by:
+    </p>
+    <p>
+      \[ \frac{d}{dx}(uv) = u'v + uv' \]
+    </p>
+    <p>
+      This means that to differentiate the product of two functions, you take the derivative of the first function
+      (u'), multiply it by the second function (v), and then add it to the first function (u) multiplied by the
+      derivative of the second function (v').
+    </p>
+  </section>
+
+
+
+
+  <footer>
+    <p>&copy; 2024 sitehan.com. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
