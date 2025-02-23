@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Polyfill -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
-  
-  <!-- MathJax -->
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <!-- Polyfill and MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,187 +14,151 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
   
   <!-- SageCell -->
-  <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function() {
-      sagecell.makeSagecell({
-        inputLocation: '#mycell',
-        template: sagecell.templates.minimal,
-        evalButtonText: 'Activate'
-      });
-      sagecell.makeSagecell({
-        inputLocation: 'div.compute',
-        evalButtonText: 'Evaluate'
-      });
+  <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({
+      inputLocation: '#mycell',
+      template: sagecell.templates.minimal,
+      evalButtonText: 'Activate'
+    });
+    // Make any div with class 'compute' a Sage cell
+    sagecell.makeSagecell({
+      inputLocation: 'div.compute',
+      evalButtonText: 'Evaluate'
     });
   </script>
   
-  <!-- Tailwind CSS -->
-  <!-- <link rel="stylesheet" href="output.css"> -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Supplement missing Tailwind utilities -->
-  <style>
-    /* Background and text colors */
-    .bg-white { background-color: white; }
-    .bg-gray { background-color: #f7fafc; }
-    .text-gray { color: #1a202c; }
-    .text-indigo { color: #5a67d8; }
-    /* Shadows */
-    .shadow { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    .shadow-lg { box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-    /* Spacing */
-    .p-4 { padding: 1rem; }
-    .p-8 { padding: 2rem; }
-    .m-4 { margin: 1rem; }
-    .mt-4 { margin-top: 1rem; }
-    .mb-4 { margin-bottom: 1rem; }
-    .mb-8 { margin-bottom: 2rem; }
-    /* Width */
-    .w-full { width: 100%; }
-    /* Text alignment */
-    .text-center { text-align: center; }
-    /* Transitions */
-    .transition-all { transition: all 0.3s ease; }
-    /* Transforms */
-    .translate-x-full { transform: translateX(100%); }
-    .-translate-x-full { transform: translateX(-100%); }
-  </style>
+  <!-- Use your new output.css file -->
+  <link rel="stylesheet" type="text/css" href="output.css">
   
   <title>Note for MATH 115</title>
 </head>
-<body class="container text-gray">
+<body>
   <!-- Side Navigation -->
-  <nav id="mySidenav" class="fixed bg-white shadow transform -translate-x-full transition-all" style="top:0; bottom:0; left:0;">
-    <button id="closeNav" class="absolute" style="top:1rem; right:1rem;" aria-label="Close Menu">&times;</button>
-    <ul class="block" style="margin-top: 4rem; padding: 1rem;">
-      <li><a href="#product_rule">Product Rule</a></li>
-      <!-- <li><a href="#References">References</a></li> -->
-    </ul>
-  </nav>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#product_rule">Product Rule</a>
+  </div>
+  <script src="click.js"></script>
+  <script src="highlight.js"></script>
   
   <!-- Top Bar -->
-  <header class="bg-white shadow p-4">
-    <div class="flex items-center" style="justify-content: space-between;">
-      <button id="openNav" class="text-xl" aria-label="Open Menu">&#9776; Menu</button>
+  <div class="top-bar">
+    <div class="top-left-button">
+      <span style="font-size:20px; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+      <script src="opennav.js"></script>
     </div>
-  </header>
+  </div>
   
-  <!-- Main Content -->
-  <main class="p-8">
-    <!-- Introduction Section -->
-    <section class="mb-8">
-      <p>
-        My name is Han Yin, and I have developed this website as a resource to facilitate the review of key concepts and it is not fully completed.
-        Feel free to email me at <a href="mailto:hanyin@ku.edu" class="text-indigo">hanyin@ku.edu</a> if there are any errors or suggestions for improvement.
-      </p>
-    </section>
-    
-    <!-- Applicant Information Section -->
-    <section class="mb-8">
-      <div>
-        <h3>Applicant Information</h3>
-        <p>Personal details and application.</p>
-      </div>
-      <div class="border" style="border-top: 1px solid #e2e8f0;">
-        <dl class="divide-y">
-          <div class="p-4">
-            <dt>Full name</dt>
-            <dd>Margot Foster</dd>
-          </div>
-          <div class="p-4">
-            <dt>Application for</dt>
-            <dd>Backend Developer</dd>
-          </div>
-          <div class="p-4">
-            <dt>Email address</dt>
-            <dd>margotfoster@example.com</dd>
-          </div>
-          <div class="p-4">
-            <dt>Salary expectation</dt>
-            <dd>$120,000</dd>
-          </div>
-          <div class="p-4">
-            <dt>About</dt>
-            <dd>
-              Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
-            </dd>
-          </div>
-          <div class="p-4">
-            <dt>Attachments</dt>
-            <dd>
-              <ul class="divide-y border">
-                <li class="p-4 flex" style="justify-content: space-between; align-items: center;">
-                  <div class="flex items-center">
-                    <svg class="shrink-0" width="20" height="20" fill="currentColor" aria-hidden="true">
-                      <path d="M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z"/>
-                    </svg>
-                    <span style="margin-left: 1rem;">resume_back_end_developer.pdf</span>
+  <!-- Introduction Section -->
+  <section>
+    <p>
+      My name is Han Yin, and I have developed this website as a resource to facilitate the review of key concepts
+      and it is not fully completed.
+      Feel free to email me at <a href="mailto:hanyin@ku.edu">hanyin@ku.edu</a> if there are any errors or suggestions
+      for improvement.
+    </p>
+  </section>
+  
+  <!-- Applicant Information Section -->
+  <div>
+    <div class="px-4">
+      <h3 class="text-base font-semibold text-gray-900">Applicant Information</h3>
+      <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p>
+    </div>
+    <div class="mt-6 border-t border-gray-100">
+      <dl class="divide-y">
+        <div class="px-4 py-6">
+          <dt class="text-sm font-medium text-gray-900">Full name</dt>
+          <dd class="mt-1 text-sm text-gray-700">Margot Foster</dd>
+        </div>
+        <div class="px-4 py-6">
+          <dt class="text-sm font-medium text-gray-900">Application for</dt>
+          <dd class="mt-1 text-sm text-gray-700">Backend Developer</dd>
+        </div>
+        <div class="px-4 py-6">
+          <dt class="text-sm font-medium text-gray-900">Email address</dt>
+          <dd class="mt-1 text-sm text-gray-700">margotfoster@example.com</dd>
+        </div>
+        <div class="px-4 py-6">
+          <dt class="text-sm font-medium text-gray-900">Salary expectation</dt>
+          <dd class="mt-1 text-sm text-gray-700">$120,000</dd>
+        </div>
+        <div class="px-4 py-6">
+          <dt class="text-sm font-medium text-gray-900">About</dt>
+          <dd class="mt-1 text-sm text-gray-700">
+            Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
+          </dd>
+        </div>
+        <div class="px-4 py-6">
+          <dt class="text-sm font-medium text-gray-900">Attachments</dt>
+          <dd class="mt-2 text-sm text-gray-900">
+            <ul class="divide-y rounded-md border border-gray-200">
+              <li class="flex items-center justify-between py-4 pr-5 pl-4">
+                <div class="flex w-0 flex-1 items-center">
+                  <svg class="size-5 shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z" clip-rule="evenodd"/>
+                  </svg>
+                  <div class="ml-4 flex min-w-0 flex-1 gap-2">
+                    <span class="truncate font-medium">resume_back_end_developer.pdf</span>
+                    <span class="shrink-0 text-gray-400">2.4mb</span>
                   </div>
-                  <a href="#" class="text-indigo">Download</a>
-                </li>
-                <li class="p-4 flex" style="justify-content: space-between; align-items: center;">
-                  <div class="flex items-center">
-                    <svg class="shrink-0" width="20" height="20" fill="currentColor" aria-hidden="true">
-                      <path d="M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z"/>
-                    </svg>
-                    <span style="margin-left: 1rem;">coverletter_back_end_developer.pdf</span>
+                </div>
+                <div class="ml-4 shrink-0">
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                </div>
+              </li>
+              <li class="flex items-center justify-between py-4 pr-5 pl-4">
+                <div class="flex w-0 flex-1 items-center">
+                  <svg class="size-5 shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z" clip-rule="evenodd"/>
+                  </svg>
+                  <div class="ml-4 flex min-w-0 flex-1 gap-2">
+                    <span class="truncate font-medium">coverletter_back_end_developer.pdf</span>
+                    <span class="shrink-0 text-gray-400">4.5mb</span>
                   </div>
-                  <a href="#" class="text-indigo">Download</a>
-                </li>
-              </ul>
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-    
-    <!-- Lecture Problems Section -->
-    <section class="mb-8">
-      <h2>Lecture Problems</h2>
-      <p>
-        The following problems are from the lecture notes. They are a good way to be familiar with the concepts.
-        <a href="https://calculus-app-sigma.vercel.app/">Lecture Notes</a>
-      </p>
-    </section>
-    
-    <!-- Product Rule Section -->
-    <section id="product_rule" class="mb-8">
-      <h2>Product Rule</h2>
-      <p>
-        The product rule is a formula used to find the derivative of the product of two functions. If u and v are functions of x, then the derivative of their product is given by:
-      </p>
-      <p>
-        \[ \frac{d}{dx}(uv) = u'v + uv' \]
-      </p>
-      <p>
-        This means that to differentiate the product of two functions, you take the derivative of the first function (u'), multiply it by the second function (v), and then add it to the first function (u) multiplied by the derivative of the second function (v').
-      </p>
-    </section>
-  </main>
+                </div>
+                <div class="ml-4 shrink-0">
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                </div>
+              </li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+  
+  <!-- Lecture Problems Section -->
+  <section id="lecture_problems">
+    <h2>Lecture Problems</h2>
+    <p>
+      The following problems are from the lecture notes. They are a good way to be familiar with the concepts.
+      <a href="https://calculus-app-sigma.vercel.app/">Lecture Notes</a>
+    </p>
+  </section>
+  
+  <!-- Product Rule Section -->
+  <section id="product_rule">
+    <h2>Product Rule</h2>
+    <p>
+      The product rule is a formula used to find the derivative of the product of two functions. If u and v are
+      functions of x, then the derivative of their product is given by:
+    </p>
+    <p>
+      \[ \frac{d}{dx}(uv) = u'v + uv' \]
+    </p>
+    <p>
+      This means that to differentiate the product of two functions, you take the derivative of the first function
+      (u'), multiply it by the second function (v), and then add it to the first function (u) multiplied by the
+      derivative of the second function (v').
+    </p>
+  </section>
   
   <!-- Footer -->
-  <footer class="bg-gray p-4">
-    <p class="text-center">© 2024 sitehan.com. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2024 sitehan.com. All rights reserved.</p>
   </footer>
-  
-  <!-- External Scripts -->
-  <script src="click.js" defer></script>
-  <script src="highlight.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function() {
-      var openNav = document.getElementById('openNav');
-      var closeNav = document.getElementById('closeNav');
-      var sidenav = document.getElementById('mySidenav');
-      
-      openNav.addEventListener('click', function() {
-        sidenav.classList.remove("-translate-x-full");
-      });
-      
-      closeNav.addEventListener('click', function() {
-        sidenav.classList.add("-translate-x-full");
-      });
-    });
-  </script>
 </body>
 </html>

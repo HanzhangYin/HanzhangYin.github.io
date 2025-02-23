@@ -4,6 +4,11 @@
 
 /* Custom styles converted using @apply where possible */
 
+.table-container {
+    @apply flex justify-center items-center;
+    min-height: 10vh;
+  }
+
 /* Hide nav toggle */
 .nav-toggle {
   @apply hidden;
@@ -22,7 +27,7 @@ table {
 }
 th,
 td {
-  @apply border p-4 text-center;
+  @apply border text-center;
 }
 th {
   background-color: #f2f2f2;
